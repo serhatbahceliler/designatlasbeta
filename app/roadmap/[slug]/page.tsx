@@ -1218,11 +1218,152 @@ const roadmaps: Record<string, Roadmap> = {
         title: "9. Interaction Design",
         description: "Akışları, durumları ve ekran davranışlarını doğru kurgulamak.",
         topics: [
-          { title: "Task Flows & User Flows" },
-          { title: "State Design (empty, loading, error, success)" },
-          { title: "Microinteractions" },
-          { title: "Form Design Basics" },
-          { title: "Error Prevention & Recovery" },
+          {
+            title: "Task Flows & User Flows",
+            description: "Task flow: Kullanıcının bir görevi tamamlamak için attığı adımlar. User flow: Kullanıcının ürün içinde izlediği yol (karar noktaları dahil). Junior'ların en sık hatası: flow'u ekran listesi sanmak.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "User Flows vs Task Flows", url: "https://www.nngroup.com/articles/user-flows-vs-task-flows/" },
+                  { title: "When to Use Which UX Deliverables", url: "https://www.nngroup.com/articles/ux-deliverables/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "User Flows Explained – NNGroup", url: "https://www.youtube.com/results?search_query=user+flows+explained+nngroup" },
+                  { title: "Task Flows vs User Flows – NNGroup", url: "https://www.youtube.com/results?search_query=task+flows+vs+user+flows+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir görevi seç: 'Şifre sıfırla'",
+                "Şimdi task flow çiz: Adımlar neler?",
+                "User flow'a çevir: Karar noktaları nerede?",
+              ],
+            },
+          },
+          {
+            title: "State Design (Empty, Loading, Error, Success)",
+            description: "Ekranın her durumu için tasarım gerekir: Empty (içerik yok), Loading (veri yükleniyor), Error (hata oluştu), Success (başarılı). Bu durumlar tasarlanmazsa: kullanıcı ne olduğunu anlamaz.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Empty States Best Practices", url: "https://www.nngroup.com/articles/empty-states/" },
+                  { title: "Loading Indicators", url: "https://www.nngroup.com/articles/progress-indicators/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI States Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ui+states+explained+nngroup" },
+                  { title: "Empty State Design – NNGroup", url: "https://www.youtube.com/results?search_query=empty+state+design+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran düşün: 'Favori ürünler listesi'",
+                "Empty state nasıl görünür?",
+                "Loading state?",
+                "Error state?",
+                "Her biri kullanıcıya ne diyor?",
+              ],
+            },
+          },
+          {
+            title: "Microinteractions",
+            description: "Microinteraction: Küçük, tek amaçlı etkileşimler (beğen butonu, toggle, hover feedback). Bunlar göze çarpmaz ama eksikse: sistem cansız hissedilir.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Microinteractions in UX", url: "https://www.nngroup.com/articles/microinteractions/" },
+                  { title: "Animation in UX", url: "https://www.nngroup.com/articles/animation-usability/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Microinteractions Explained – NNGroup", url: "https://www.youtube.com/results?search_query=microinteractions+explained+nngroup" },
+                  { title: "UX Animation Best Practices – NNGroup", url: "https://www.youtube.com/results?search_query=ux+animation+best+practices+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir butona tıkladığını düşün",
+                "Tıklama anında ne olur?",
+                "Kullanıcı feedback alıyor mu?",
+                "Almazsa ne hisseder?",
+              ],
+            },
+          },
+          {
+            title: "Form Design Basics",
+            description: "Form tasarımı: kullanıcının 'ne yapacağını bildiği' ama 'yapmaktan hoşlanmadığı' bir deneyimdir. Bu yüzden: hata toleransı, netlik ve kolaylık kritiktir.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Form Design Best Practices", url: "https://www.nngroup.com/articles/web-form-design/" },
+                  { title: "Form Field Usability", url: "https://www.nngroup.com/articles/form-design-usability/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Form Design UX – NNGroup", url: "https://www.youtube.com/results?search_query=form+design+ux+nngroup" },
+                  { title: "Form Usability Best Practices – NNGroup", url: "https://www.youtube.com/results?search_query=form+usability+best+practices+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir form düşün: kayıt formu",
+                "Kaç alan var?",
+                "Hepsi gerçekten gerekli mi?",
+                "Kullanıcı hata yaptığında ne olur?",
+              ],
+            },
+          },
+          {
+            title: "Error Prevention & Recovery",
+            description: "Hata önleme: Kullanıcının hata yapmasını zorlaştırmak. Error recovery: Hata yaptığında kolayca düzeltebilmesini sağlamak. Kötü tasarım: hata mesajını gösterir ama çözüm sunmaz.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Error Prevention in UX", url: "https://www.nngroup.com/articles/slips/" },
+                  { title: "Error Messages Design", url: "https://www.nngroup.com/articles/error-message-guidelines/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Error Prevention UX – NNGroup", url: "https://www.youtube.com/results?search_query=error+prevention+ux+nngroup" },
+                  { title: "Error Message Best Practices – NNGroup", url: "https://www.youtube.com/results?search_query=error+message+best+practices+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir hata mesajı yaz: 'Geçersiz giriş'",
+                "Şimdi düzelt:",
+                "Ne yanlış?",
+                "Nasıl düzeltilir?",
+                "Kullanıcıya rehberlik ediyor mu?",
+              ],
+            },
+          },
         ],
       },
       {
