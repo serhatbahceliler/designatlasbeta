@@ -479,12 +479,12 @@ export default function Home() {
           </p>
 
           {/* Roller (Job-based learning) */}
-          <div className="mb-16">
+          <div className="mb-12">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-2">Roller</h3>
               <p className="text-gray-400 text-sm">Belirli bir tasarım rolü için uçtan uca öğrenme yolculukları.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {roadmaps.filter(r => ['ux-designer', 'ui-designer', 'product-designer'].includes(r.id)).map((roadmap, index) => (
                 <Link
                   key={roadmap.id}
@@ -519,18 +519,46 @@ export default function Home() {
                   </div>
                 </Link>
               ))}
+
+              {/* Quiz Card */}
+              <button
+                onClick={() => setIsQuizOpen(true)}
+                className="group relative overflow-hidden rounded-2xl bg-zinc-900/30 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm text-left"
+                style={{
+                  animation: `slideUp 0.6s ease-out 0.3s both`,
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
+
+                <div className="relative p-8">
+                  {/* Icon */}
+                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                    ❓
+                  </div>
+
+                  <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-gray-300 transition-colors duration-300">
+                    Karar veremediysen, yardımcı olalım.
+                  </h3>
+
+                  <p className="text-gray-400 mb-6 leading-relaxed text-sm">
+                    1 dakikalık kısa bir quiz ile sana en uygun başlangıç yolunu önerelim.
+                  </p>
+
+                  <div className="flex items-center text-gray-400 font-medium group-hover:translate-x-2 transition-transform duration-300 text-sm">
+                    Quiz'i Başlat
+                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
+                </div>
+              </button>
             </div>
           </div>
 
-          {/* Separator */}
-          <div className="mb-16">
-            <div className="h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
-          </div>
-
-          {/* Tasarım Disiplinleri (Skill/framework based learning) */}
+          {/* Tasarım Becerileri (Skill/framework based learning) */}
           <div className="mb-16">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-2">Tasarım Disiplinleri</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">Tasarım Becerileri</h3>
               <p className="text-gray-400 text-sm">Rolünden bağımsız olarak, tasarım becerilerini derinleştirebileceğin alanlar.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
@@ -569,32 +597,6 @@ export default function Home() {
                 </Link>
               ))}
             </div>
-          </div>
-
-          {/* Separator */}
-          <div className="mb-16">
-            <div className="h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
-          </div>
-
-          {/* Quiz Helper (Secondary) */}
-          <div id="quiz-helper" className="max-w-2xl mx-auto p-8 bg-zinc-900/30 border border-zinc-800 rounded-xl text-center">
-            <h3 className="text-xl font-semibold text-white mb-3">
-              Karar veremediysen, yardımcı olalım.
-            </h3>
-            <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-              Rolleri inceledin ama hangisinin sana daha uygun olduğundan emin olamadın mı?
-              <br />
-              1 dakikalık kısa bir quiz ile sana en uygun başlangıç yolunu önerelim.
-            </p>
-            <button
-              onClick={() => setIsQuizOpen(true)}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-zinc-800 hover:bg-zinc-700 text-white font-medium rounded-lg transition-all duration-300"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-              </svg>
-              8 Soruluk Quiz'i Başlat
-            </button>
           </div>
         </div>
       </section>
