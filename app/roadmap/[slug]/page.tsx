@@ -3546,14 +3546,171 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "5. Iconography & Imagery",
-        description: "İkon tasarımı, görsel tutarlılık ve görsel içerik yönetimi.",
+        title: "5. 🖼️ Iconography & Imagery",
+        description: "Iconography ve imagery, bir arayüzde anlamı hızla iletmek, metin yükünü azaltmak ve görsel tutarlılık sağlamak için kullanılan güçlü UI araçlarıdır. Bir ikon kelimelerden önce algılanır, görseller bilişsel yükü azaltır ve tutarlı görsel dil marka tutarlılığını artırır.",
         topics: [
-          { title: "Icon Basics (Meaning, Consistency, Grid, Stroke)" },
-          { title: "Icon Styles (Filled/Outline) & When to Use" },
-          { title: "Illustrations (When they help, when they distract)" },
-          { title: "Images & Thumbnails (Cropping, aspect ratios, quality)" },
-          { title: "Common Mistakes (Ambiguous icons, inconsistent style)" },
+          {
+            title: "Icon Basics (Meaning & Clarity)",
+            description: "UI'da ikonlar sadece estetik değil, anlam taşıyan fonksiyonel unsurlardır. Bir ikon iyi sayılabilmesi için: anlaşılır olmalı (kullanıcı ikonu görmeden önce ne yaptığını tahmin edebilmeli), bağlamsal olmalı (hep aynı anlamı taşımalı), grid tabanlı olmalı (görsel tutarlılık için), ve stroke (çizgi) tutarlı olmalı (aynı kalınlık & stil kuralları). Kafa karıştıran ikonlar kullanıcının akışını bozar ve hata riskini artırır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Icon Usability", url: "https://www.nngroup.com/articles/icon-usability/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Designing App Icons (Apple)", url: "https://www.youtube.com/watch?v=z7mF8sAI7Ts" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Systematic Icon Design (Sketch)", url: "https://medium.com/sketch-app-sources/systematic-icon-design-b9ff0e79a54a" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir app aç ve 5 ikona bak",
+                "Hangisinin ne yaptığını ilk bakışta anladın?",
+                "Hangisi kafa karıştırdı? Neden?",
+              ],
+            },
+          },
+          {
+            title: "Icon Grids & Visual Consistency",
+            description: "Tutarlı bir icon set için, tüm ikonları aynı grid (örn. 24×24 pixel kare) ve stroke (çizgi kalınlığı) sistemine göre tasarlamak gerekir. Icon set tutarlılığı: grid size (24px, 32px, 48px), padding/safe area (ikonun kenarından boşluk), stroke weight (tüm çizgiler aynı kalınlık), corner radius (köşelerin yuvarlaklığı), ve optik hizalama (görsel ağırlık ve denge) gerektirir. Tutarsız icon set tasarımın kalitesini düşürür ve amatör görünmesine neden olur.",
+            resources: [
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing Perfect Icon Sets", url: "https://medium.com/@minoraxis/designing-perfect-icon-sets-515d2e7b4ef6" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Icon Design for Beginners (Figma Community)", url: "https://www.youtube.com/results?search_query=icon+design+tutorial+figma" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir design system (Material, Feather, Heroicons) aç",
+                "İkonları yan yana koy: hepsi aynı stroke kalınlığında mı?",
+                "Görsel ağırlıkları eşit mi?",
+              ],
+            },
+          },
+          {
+            title: "Icon Styles (Outline vs Filled)",
+            description: "İkonların iki ana stili vardır: outline (çizgi tabanlı - minimal, modern, daha az yoğun UI'larda tercih edilir) ve filled (dolu - bold, dikkat çekici, vurgulamak için kullanılır). Outline web ve mobilde popüler (Feather, Heroicons), filled mobilde sık kullanılır (Material Icons). UI minimse outline kullan, aktif durum/seçili öğe/önemli action için filled kullan. Karışık kullanma: outline kullanıyorsan, filled sadece vurgu için kullan (örn: selected tab filled, rest outline).",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Filled vs Outline Icons", url: "https://www.nngroup.com/articles/icon-usability/" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How to Choose Icon Style", url: "https://uxdesign.cc/how-to-choose-icon-style-in-ui-design-8bf4d4c6e7f8" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir navigation bar tasarla",
+                "Active tab → filled icon, Inactive tabs → outline icon",
+                "Fark ne kadar belirgin?",
+              ],
+            },
+          },
+          {
+            title: "Illustrations in UI",
+            description: "İllüstrasyonlar UI'da boş durumları, onboarding akışlarını veya brand hikayesini anlatmak için kullanılır. Empty state (hiç içerik yokken), onboarding (adım adım tanıtım), error state (404, 500, offline sayfaları), ve brand storytelling için idealdir. İyi bir UI illüstrasyonu minimal (çok detaylı olmamalı), bağlamsal (içerikle uyumlu), marka ile uyumlu (tone & style kurallarına uygun), ve kullanılabilirliğe katkı sağlayan (sadece süs olmamalı) olmalıdır. Yanlış illustrasyon UI'yı karıştırır, doğru kullanım deneyimi zenginleştirir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Illustrations in UX", url: "https://www.nngroup.com/articles/illustration-ux/" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "When to Use Illustrations in UI", url: "https://uxdesign.cc/when-to-use-illustrations-in-ui-design-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir app'in empty state'ini incele",
+                "İllüstrasyon var mı?",
+                "Varsa UI'ya yardımcı mı, yoksa dikkat dağıtıcı mı?",
+              ],
+            },
+          },
+          {
+            title: "Images & Thumbnails",
+            description: "UI'da kullanılan görsellerin (fotoğraflar, thumbnails) doğru crop edilmesi, aspect ratio'su ve kalitesi deneyimi etkiler. İyi image/thumbnail kullanımı: aspect ratio tutarlılığı (tüm kartlar aynı orana sahip olmalı: 16:9, 4:3, 1:1), cropping stratejisi (otomatik crop yaparken önemli içerik kesilmemeli), placeholder usage (görsel yüklenene kadar skeleton ya da LQIP göster), ve lazy loading (performans için ekrana gelince yükle) gerektirir. Kötü crop edilmiş, farklı oranlar, düşük kalite tasarımı kalitesiz gösterir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Image Guidelines for UX", url: "https://www.nngroup.com/articles/image-guidelines/" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing with Images in UI", url: "https://uxdesign.cc/designing-with-images-in-ui-37e5c3a8c6f2" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir e-commerce sitesi aç (örn. listing page)",
+                "Ürün görselleri: hepsi aynı aspect ratio'da mı?",
+                "Crop stratejisi tutarlı mı?",
+              ],
+            },
+          },
+          {
+            title: "Common Icon & Imagery Mistakes",
+            description: "Icon ve imagery kullanımında sık yapılan hatalar: Ambiguous (belirsiz) iconlar (kullanıcı anlamını tahmin edemiyor), tutarsız stroke & style (farklı icon set'lerden rastgele ikonlar), çok detaylı illustrasyon (dikkat dağıtıcı, load time artışı), farklı aspect ratio'lar (görsel düzensizlik), yanlış crop (önemli içerik kesiliyor), ve gereksiz decorative görseller (UI'ya katma değer sağlamayan 'dolgu' illustrasyon). Bu hatalar UI'nın kalitesini düşürür ve kullanıcıyı kafa karıştırır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Icon Usability", url: "https://www.nngroup.com/articles/icon-usability/" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Common Icon Design Mistakes", url: "https://uxdesign.cc/icon-design-mistakes-ec3f8b6e4c8e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir web/app UI'ında: İkonlar tutarlı mı (aynı style, stroke)?",
+                "Görsellerden herhangi biri gereksiz mi?",
+                "Crop sorunlu olan var mı?",
+              ],
+            },
+          },
         ],
       },
       {
