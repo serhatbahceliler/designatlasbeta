@@ -2095,10 +2095,142 @@ const roadmaps: Record<string, Roadmap> = {
         title: "14. UX Writing & Content (Basics)",
         description: "Mikro metinlerle anlaşılabilirliği ve güveni artırmak.",
         topics: [
-          { title: "Microcopy Principles" },
-          { title: "Error Messages & Empty States" },
-          { title: "Tone & Consistency" },
-          { title: "Information Clarity (labels, buttons)" },
+          {
+            title: "Microcopy Principles",
+            description: "Microcopy: butonlar, hata mesajları, boş durumlar, ipuçları gibi küçük ama kritik metinlerdir. İyi microcopy: kısa, net ve aksiyon odaklıdır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX Writing: Definition and Principles", url: "https://www.nngroup.com/articles/ux-writing/" },
+                  { title: "Microcopy in UX", url: "https://www.nngroup.com/articles/microcopy/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Writing Basics – NNGroup", url: "https://www.youtube.com/results?search_query=ux+writing+basics+nngroup" },
+                  { title: "Microcopy Explained – NNGroup", url: "https://www.youtube.com/results?search_query=microcopy+explained+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Microcopy: Small Text, Big Impact", url: "https://medium.com/search?q=microcopy+small+text+big+impact" },
+                  { title: "UX Writing for Beginners", url: "https://medium.com/search?q=ux+writing+for+beginners" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir buton metni seç: 'Gönder'",
+                "Bunu daha net ve daha aksiyon odaklı hale getir",
+              ],
+            },
+          },
+          {
+            title: "Error Messages & Empty States",
+            description: "Hata ve boş durum metinleri: kullanıcıyı suçlamamalı, ne olduğunu açıklamalı ve bir sonraki adımı göstermelidir. Kötü metin, iyi tasarımı bile bozar.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Error Message Guidelines", url: "https://www.nngroup.com/articles/error-message-guidelines/" },
+                  { title: "Empty States", url: "https://www.nngroup.com/articles/empty-state/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Writing Better Error Messages – NNGroup", url: "https://www.youtube.com/results?search_query=writing+better+error+messages+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How to Write Helpful Error Messages", url: "https://medium.com/search?q=how+to+write+helpful+error+messages" },
+                  { title: "Designing Empty States That Guide Users", url: "https://medium.com/search?q=designing+empty+states+guide+users" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bu metni iyileştir: 'Bir hata oluştu.'",
+                "→ Kullanıcı ne yapmalı?",
+              ],
+            },
+          },
+          {
+            title: "Tone, Voice & Consistency",
+            description: "Voice: Ürünün kişiliği. Tone: Bağlama göre değişen ifade şekli. UX writing'de tutarsız ton: güveni zedeler ve ürünü 'parça parça' hissettirir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Tone of Voice in UX", url: "https://www.nngroup.com/articles/tone-of-voice/" },
+                  { title: "Writing Consistent UX Copy", url: "https://www.nngroup.com/articles/consistent-ux-writing/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Tone & Voice in UX Writing – NNGroup", url: "https://www.youtube.com/results?search_query=tone+voice+ux+writing+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "UX Voice and Tone Explained", url: "https://medium.com/search?q=ux+voice+tone+explained" },
+                  { title: "Why Consistent UX Copy Matters", url: "https://medium.com/search?q=why+consistent+ux+copy+matters" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Aynı aksiyon için iki metin yaz:",
+                "• Resmi ton",
+                "• Samimi ton",
+                "Hangisi ürünün bağlamına uygun?",
+              ],
+            },
+          },
+          {
+            title: "Information Clarity (Labels, Buttons, Help Text)",
+            description: "Kullanıcılar metni okumaz, tarar. Bu yüzden: etiketler net, butonlar anlamlı ve yardım metinleri kısa olmalıdır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Labeling & UX Writing", url: "https://www.nngroup.com/articles/labeling-systems/" },
+                  { title: "Writing for Scannability", url: "https://www.nngroup.com/articles/scannability/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Writing Clear UX Copy – NNGroup", url: "https://www.youtube.com/results?search_query=writing+clear+ux+copy+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Clear Labels Make Better UX", url: "https://medium.com/search?q=clear+labels+better+ux" },
+                  { title: "Designing UX Copy for Scanning", url: "https://medium.com/search?q=designing+ux+copy+scanning" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir label seç: 'Bilgiler'",
+                "Bu label kullanıcıya ne vaat ediyor?",
+                "Yeterince net mi?",
+              ],
+            },
+          },
         ],
       },
       {
