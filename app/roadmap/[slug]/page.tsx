@@ -193,11 +193,149 @@ const roadmaps: Record<string, Roadmap> = {
         title: "2. Product & Design Process",
         description: "UX'in ürün geliştirme sürecindeki yerini ve çalışma biçimini anlamak.",
         topics: [
-          { title: "Product Lifecycle (Discovery → Delivery)" },
-          { title: "Double Diamond / Design Thinking Overview" },
-          { title: "Agile & Lean Basics for Designers" },
-          { title: "Problem Framing (problem statements, assumptions, hypotheses)" },
-          { title: "Stakeholder Alignment Basics" },
+          {
+            title: "Product Lifecycle (Discovery → Delivery)",
+            description: "Ürün geliştirme süreci iki ana fazda ilerler: Discovery (Doğru problemi bulmak) ve Delivery (Bulduğun problemi doğru çözmek). UX'in asıl gücü discovery aşamasında ortaya çıkar.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Discovery vs Delivery in UX", url: "https://www.nngroup.com/articles/discovery-delivery/" },
+                  { title: "UX Activities in the Product Lifecycle", url: "https://www.nngroup.com/articles/ux-product-lifecycle/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Discovery vs Delivery Explained – NNGroup", url: "https://www.youtube.com/results?search_query=discovery+vs+delivery+nngroup" },
+                  { title: "Product Discovery Explained – Teresa Torres", url: "https://www.youtube.com/results?search_query=product+discovery+teresa+torres" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Kullandığın bir ürün düşün",
+                "Bu ürün sence gerçek bir problemi çözüyor mu?",
+                "Bu problem discovery'de yakalanmış gibi mi duruyor?",
+                "Yoksa sonradan 'eklenmiş' mi?",
+              ],
+            },
+          },
+          {
+            title: "Double Diamond & Design Thinking Overview",
+            description: "Double Diamond, tasarım sürecini genişlet → daralt mantığıyla açıklar: 1) Discover (Problemi keşfet), 2) Define (Doğru problemi tanımla), 3) Develop (Çözümler üret), 4) Deliver (Test et ve iyileştir). Bu model, 'ilk akla gelen çözümü' yapmamayı öğretir.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Design Thinking 101", url: "https://www.nngroup.com/articles/design-thinking/" },
+                  { title: "The Double Diamond Model", url: "https://www.nngroup.com/articles/double-diamond/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Double Diamond Explained – NNGroup", url: "https://www.youtube.com/results?search_query=double+diamond+nngroup" },
+                  { title: "Design Thinking in 5 Minutes – AJ&Smart", url: "https://www.youtube.com/results?search_query=design+thinking+5+minutes+aj+smart" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir problem cümlesi yaz: '__________ uygulamasında kullanıcılar __________ yaparken zorlanıyor.'",
+                "Şimdi sor: Bu gerçekten problem mi, yoksa çözüm mü?",
+                "'Define' aşamasında net mi?",
+              ],
+            },
+          },
+          {
+            title: "Agile & Lean Basics for Designers",
+            description: "Agile ve Lean: UX'i hızlandırmak için değil, yanlış şeyi hızlı yapmamak için vardır. UX Designer için önemli olan: Sprint mantığını bilmek ve UX'in sprint'ten önce ve sonra da var olduğunu anlamak.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Agile UX Basics", url: "https://www.nngroup.com/articles/agile-ux/" },
+                  { title: "Lean UX Principles", url: "https://www.nngroup.com/articles/lean-ux/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Agile UX Explained – NNGroup", url: "https://www.youtube.com/results?search_query=agile+ux+nngroup" },
+                  { title: "Lean UX Overview – Jeff Gothelf", url: "https://www.youtube.com/results?search_query=lean+ux+jeff+gothelf" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir sprint düşün (2 hafta)",
+                "UX bu sprint'in neresinde olmalı?",
+                "Sence UX sadece 'ticket' mı üretir?",
+              ],
+            },
+          },
+          {
+            title: "Problem Framing",
+            description: "Problem framing: 'Ne yapalım?'dan önce 'Asıl sorun ne?'yi netleştirme sürecidir. Yanlış çerçevelenen problem, ne kadar iyi tasarlanırsa tasarlansın başarısız olur.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Problem Statements in UX", url: "https://www.nngroup.com/articles/problem-statements/" },
+                  { title: "Framing UX Problems", url: "https://www.nngroup.com/articles/framing-problems/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "How to Frame UX Problems – NNGroup", url: "https://www.youtube.com/results?search_query=frame+ux+problems+nngroup" },
+                  { title: "Problem Statements Explained – AJ&Smart", url: "https://www.youtube.com/results?search_query=problem+statements+aj+smart" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Şu cümleyi doldur: 'Bu ürün, __________ kullanıcılarının __________ problemini çözmeyi amaçlıyor.'",
+                "Şimdi sor: Bu cümlede çözüm var mı?",
+                "Yoksa sadece problem mi?",
+              ],
+            },
+          },
+          {
+            title: "Stakeholder Alignment Basics",
+            description: "UX Designer yalnız çalışmaz. PM, developer, business ve stakeholder'larla aynı problemi aynı şekilde anlamak zorundadır. Bu hizalanma olmazsa: UX kararları 'kişisel fikir' gibi görünür ve güven azalır.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Stakeholder Management for UX", url: "https://www.nngroup.com/articles/stakeholder-management/" },
+                  { title: "Presenting UX Work", url: "https://www.nngroup.com/articles/presenting-ux/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Communicating UX Decisions – NNGroup", url: "https://www.youtube.com/results?search_query=communicating+ux+decisions+nngroup" },
+                  { title: "How to Defend UX Decisions – DesignCourse", url: "https://www.youtube.com/results?search_query=defend+ux+decisions+designcourse" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir UX kararını anlatmayı dene:",
+                "Kararı neden aldın?",
+                "Hangi kullanıcı problemiyle ilişkili?",
+                "Kanıtın ne?",
+                "('Bence böyle daha iyi' demeden anlatmaya çalış)",
+              ],
+            },
+          },
         ],
       },
       {
