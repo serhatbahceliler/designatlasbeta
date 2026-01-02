@@ -3338,14 +3338,211 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "4. Color & Theme",
-        description: "Renk teorisi, tema sistemleri ve erişilebilir renk kullanımı.",
+        title: "4. 🎨 Color & Theme",
+        description: "Renk bir arayüzde hiyerarşiyi güçlendiren, durumu ve geri bildirimi ileten, markayı yansıtan ve erişilebilirliği doğrudan etkileyen en güçlü UI araçlarından biridir.",
         topics: [
-          { title: "Color Basics (Hue, Saturation, Value)" },
-          { title: "Color Roles (Primary/Secondary/Surface/Feedback)" },
-          { title: "Contrast & Readability (Accessible contrast mindset)" },
-          { title: "Dark Mode & Theme Switching" },
-          { title: "Branding vs Product UI (When brand hurts usability)" },
+          {
+            title: "Color Basics (UI Level)",
+            description: "UI'da renk temel görsel kavramlara dayanır: hue (renk tonu), saturation (doygunluk), value/lightness (açıklık). Yanlış kullanım: düşük kontrast, göz yorgunluğu, yanlış vurgu.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Color in UI Design", url: "https://www.nngroup.com/articles/color-in-ui-design/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Color Basics – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Color Basics for UI Designers", url: "https://medium.com/example" },
+                  { title: "Why Color Decisions Matter in UX", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir rengi seç:",
+                "Bu renk neyi vurguluyor?",
+                "Alternatif bir renkle aynı mesajı verir mi?",
+              ],
+            },
+          },
+          {
+            title: "Color Roles in UI",
+            description: "UI'da renkler role göre tanımlanmalıdır: Primary (ana aksiyon), Secondary (ikincil aksiyon), Surface/Background, Feedback (success, warning, error). Bu yaklaşım tutarlılığı artırır ve theming'i kolaylaştırır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Color Roles and Meaning", url: "https://www.nngroup.com/articles/color-meaning/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Color Roles Explained – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing Color Systems for UI", url: "https://medium.com/example" },
+                  { title: "Stop Picking Random Colors", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekrana bak:",
+                "Kaç farklı 'aksiyon rengi' var?",
+                "Hepsi gerçekten gerekli mi?",
+              ],
+            },
+          },
+          {
+            title: "Contrast & Readability",
+            description: "Yetersiz kontrast en yaygın erişilebilirlik problemidir ve estetik gerekçeyle sıkça ihlal edilir. UI'da kontrast metin–zemin, ikon–zemin, state'ler arası kontrol edilmelidir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Color Contrast and Readability", url: "https://www.nngroup.com/articles/color-contrast/" },
+                ],
+              },
+              {
+                category: "🌐 W3C",
+                items: [
+                  { title: "Contrast (Minimum)", url: "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Color Contrast Explained – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why Designers Get Contrast Wrong", url: "https://medium.com/example" },
+                  { title: "Accessible Color in UI", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir metni test et:",
+                "Güneş ışığında okunuyor mu?",
+                "Sadece renk ile anlam veriyor mu?",
+              ],
+            },
+          },
+          {
+            title: "Dark Mode & Theme Switching",
+            description: "Dark mode sadece renkleri ters çevirmek değildir; kontrast, vurgu ve yüzey mantığı değişir. İyi dark mode göz yormaz, hiyerarşiyi korur ve her bileşende tutarlıdır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Dark Mode UX", url: "https://www.nngroup.com/articles/dark-mode/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Designing Dark Mode – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Dark Mode Done Right", url: "https://medium.com/example" },
+                  { title: "Common Dark Mode Mistakes", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekranı dark mode'a çevir:",
+                "Hangi renkler bozuldu?",
+                "Hangi vurgu kayboldu?",
+              ],
+            },
+          },
+          {
+            title: "Branding vs Product UI",
+            description: "Marka renkleri her zaman UI için ideal değildir. UI'da öncelik: kullanılabilirlik, netlik, erişilebilirliktir. Gerekirse marka rengi tonlanır, ikincil role alınır veya sınırlı kullanılır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Branding vs Usability", url: "https://www.nngroup.com/articles/branding-usability/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Branding in UI Design – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "When Branding Hurts UX", url: "https://medium.com/example" },
+                  { title: "Balancing Brand and Usability", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir marka rengi düşün:",
+                "Primary action için uygun mu?",
+                "Değilse nerede kullanılmalı?",
+              ],
+            },
+          },
+          {
+            title: "Common Color Mistakes",
+            description: "Sık yapılan hatalar: çok fazla vurgu rengi, kontrastsız metinler, state'lerde tutarsız renkler, yalnızca renkle anlam vermek. Bu hatalar kullanıcıyı yorar ve hata riskini artırır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Visual Design Mistakes", url: "https://www.nngroup.com/articles/visual-design-mistakes/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Color Mistakes", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Common UI Color Mistakes", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekranı incele:",
+                "Renkler bilgi mi veriyor, yoksa süs mü?",
+              ],
+            },
+          },
         ],
       },
       {
