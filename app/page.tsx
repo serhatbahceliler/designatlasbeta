@@ -243,19 +243,13 @@ export default function Home() {
               <br />
               <span className="text-[#DEFF37]">DesignAtlas yolunu gösterir.</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               UX, UI ve Product Design için hazırlanmış,
               <br />
               tamamı Türkçe ve ücretsiz kaynaklara dayanan öğrenme roadmap'leri.
               <br />
               <span className="text-gray-400">Ne öğreneceğini, ne zaman öğreneceğini ve neden öğrendiğini netleştirir.</span>
             </p>
-            <a
-              href="#roadmaps"
-              className="inline-block px-8 py-4 bg-[#DEFF37] text-black font-bold rounded-lg hover:bg-[#DEFF37]/90 hover:shadow-[0_0_30px_rgba(222,255,55,0.3)] hover:scale-105 transition-all duration-300 animate-scale-in"
-            >
-              Roadmap'leri Keşfet
-            </a>
           </div>
         </div>
 
@@ -350,18 +344,9 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <p className="text-sm text-gray-500 mb-4">
+            <p className="text-sm text-gray-500">
               🔒 Tüm geri bildirimler anonimdir.
             </p>
-            <Link
-              href="/survey"
-              className="inline-flex items-center gap-2 text-[#DEFF37] hover:text-[#DEFF37]/80 transition-colors font-medium"
-            >
-              Anonim anketi görüntüle
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
           </div>
         </div>
       </section>
@@ -431,8 +416,8 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
             Öğrenme yolunu seç
           </h2>
-          <p className="text-center text-gray-400 mb-8 text-lg">
-            5 farklı tasarım disiplini için hazırlanmış roadmap'ler
+          <p className="text-center text-gray-400 mb-12 text-lg">
+            Rolüne mi odaklanmak istiyorsun, yoksa tasarım becerilerini derinleştirmek mi?
           </p>
 
           {/* Quiz Trigger */}
@@ -451,41 +436,92 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {roadmaps.map((roadmap, index) => (
-              <Link
-                key={roadmap.id}
-                href={`/roadmap/${roadmap.id}`}
-                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-[#DEFF37]/50 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm"
-                style={{
-                  animation: `slideUp 0.6s ease-out ${index * 0.1}s both`,
-                }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#DEFF37]/0 to-[#DEFF37]/0 group-hover:from-[#DEFF37]/5 group-hover:to-transparent transition-all duration-500"></div>
+          {/* Roller (Job-based learning) */}
+          <div className="mb-20">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-2">Roller</h3>
+              <p className="text-gray-400 text-sm">Belirli bir tasarım rolü için uçtan uca öğrenme yolculukları.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {roadmaps.filter(r => ['ux-designer', 'ui-designer', 'product-designer'].includes(r.id)).map((roadmap, index) => (
+                <Link
+                  key={roadmap.id}
+                  href={`/roadmap/${roadmap.id}`}
+                  className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-[#DEFF37]/50 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm"
+                  style={{
+                    animation: `slideUp 0.6s ease-out ${index * 0.1}s both`,
+                  }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#DEFF37]/0 to-[#DEFF37]/0 group-hover:from-[#DEFF37]/5 group-hover:to-transparent transition-all duration-500"></div>
 
-                <div className="relative p-8">
-                  {/* Icon */}
-                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                    {roadmap.icon}
+                  <div className="relative p-8">
+                    {/* Icon */}
+                    <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                      {roadmap.icon}
+                    </div>
+
+                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-[#DEFF37] transition-colors duration-300">
+                      {roadmap.title}
+                    </h3>
+
+                    <p className="text-gray-400 mb-6 leading-relaxed text-sm">
+                      {roadmap.description}
+                    </p>
+
+                    <div className="flex items-center text-[#DEFF37] font-semibold group-hover:translate-x-2 transition-transform duration-300 text-sm">
+                      Roadmap'i Gör
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
                   </div>
+                </Link>
+              ))}
+            </div>
+          </div>
 
-                  <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-[#DEFF37] transition-colors duration-300">
-                    {roadmap.title}
-                  </h3>
+          {/* Tasarım Disiplinleri (Skill/framework based learning) */}
+          <div>
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-2">Tasarım Disiplinleri</h3>
+              <p className="text-gray-400 text-sm">Rol fark etmeksizin, uzun vadede geliştirilen temel tasarım yaklaşımları.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+              {roadmaps.filter(r => ['design-system', 'design-thinking'].includes(r.id)).map((roadmap, index) => (
+                <Link
+                  key={roadmap.id}
+                  href={`/roadmap/${roadmap.id}`}
+                  className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-[#DEFF37]/50 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm"
+                  style={{
+                    animation: `slideUp 0.6s ease-out ${(index + 3) * 0.1}s both`,
+                  }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#DEFF37]/0 to-[#DEFF37]/0 group-hover:from-[#DEFF37]/5 group-hover:to-transparent transition-all duration-500"></div>
 
-                  <p className="text-gray-400 mb-6 leading-relaxed text-sm">
-                    {roadmap.description}
-                  </p>
+                  <div className="relative p-8">
+                    {/* Icon */}
+                    <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                      {roadmap.icon}
+                    </div>
 
-                  <div className="flex items-center text-[#DEFF37] font-semibold group-hover:translate-x-2 transition-transform duration-300 text-sm">
-                    Roadmap'i Gör
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-[#DEFF37] transition-colors duration-300">
+                      {roadmap.title}
+                    </h3>
+
+                    <p className="text-gray-400 mb-6 leading-relaxed text-sm">
+                      {roadmap.description}
+                    </p>
+
+                    <div className="flex items-center text-[#DEFF37] font-semibold group-hover:translate-x-2 transition-transform duration-300 text-sm">
+                      Roadmap'i Gör
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
