@@ -3714,14 +3714,200 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "6. UI Components & Patterns",
-        description: "Temel UI component'leri ve kullanım desenleri.",
+        title: "6. 🧩 UI Components & Patterns",
+        description: "UI component'leri ve pattern'lar arayüzün tekrar eden yapı taşlarıdır. Tutarlılığı sağlar ve tasarım/geliştirme sürecini hızlandırır. Amaç: her ekranı sıfırdan tasarlamamak, kullanıcıya tanıdık deneyimler sunmak ve ölçeklenebilir UI sistemleri kurmak.",
         topics: [
-          { title: "What is a UI Component?" },
-          { title: "Core Components (Buttons, Inputs, Selects, Tabs, Cards, Modals)" },
-          { title: "Component Anatomy (Label, helper, prefix/suffix)" },
-          { title: "Pattern Selection (Modal vs Page, Tabs vs Steps, etc.)" },
-          { title: "Component Consistency & Reuse" },
+          {
+            title: "What is a UI Component?",
+            description: "UI component tek başına anlamı olan, tekrar kullanılabilen ve belirli bir davranışı olan arayüz parçasıdır. Örnekler: button, input, card, modal. Component'ler tutarlı davranmalı ve aynı kuralları izlemelidir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UI Components and Patterns", url: "https://www.nngroup.com/articles/ui-components/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Components Explained – NNGroup", url: "https://www.youtube.com/results?search_query=nngroup+ui+components" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "What Makes a Good UI Component", url: "https://uxdesign.cc/what-makes-a-good-ui-component-6a1e9b8b0c8f" },
+                  { title: "Thinking in Components", url: "https://medium.com/thinking-in-components" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarıma bak: Hangi elementler tekrar ediyor?",
+                "Bunlar component olabilir mi?",
+              ],
+            },
+          },
+          {
+            title: "Core Components (Buttons, Inputs, etc.)",
+            description: "Her UI sisteminde bazı temel component'ler vardır: buttons, inputs, selects, checkboxes, radio buttons, cards. Bu component'ler tutarlı davranmalı ve aynı kuralları izlemelidir. Her component'in tıklanabilirliği net olmalı ve birbirleriyle karışmamalıdır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Button Design Guidelines", url: "https://www.nngroup.com/articles/buttons/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Buttons Best Practices – NNGroup", url: "https://www.youtube.com/results?search_query=nngroup+button+design" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing Buttons for UI", url: "https://uxdesign.cc/designing-buttons-for-ui-2c1e8e9c3f3e" },
+                  { title: "Input Fields in UI Design", url: "https://uxdesign.cc/input-fields-in-ui-design-7c8b6e4c6f8e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir butona bak: Tıklanabilir olduğu net mi?",
+                "İkincil butonla karışıyor mu?",
+              ],
+            },
+          },
+          {
+            title: "Component Anatomy",
+            description: "Bir component yalnızca 'kutudan' ibaret değildir. Örnek bir input: label, helper text, placeholder, error state, prefix/suffix içerir. Bu parçalar birlikte çalışır. Placeholder kaybolunca kullanıcı ne yapacak? Label yeterince net mi? Bu sorular component anatomy'sini anlamak için önemlidir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Form Design Anatomy", url: "https://www.nngroup.com/articles/form-design-placeholders/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Input Anatomy Explained – NNGroup", url: "https://www.youtube.com/results?search_query=input+anatomy+ui+design" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Component Anatomy in UI", url: "https://uxdesign.cc/component-anatomy-in-ui-3c8b6e4c6f8e" },
+                  { title: "Why Inputs Fail in Forms", url: "https://uxdesign.cc/why-inputs-fail-in-forms-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir input incele: Placeholder kaybolunca kullanıcı ne yapacak?",
+                "Label yeterince net mi?",
+              ],
+            },
+          },
+          {
+            title: "UI Patterns (When to Use What)",
+            description: "UI pattern'ları sık karşılaşılan problemler için kanıtlanmış çözümler sunar. Örnek kararlar: modal mı sayfa mı? tabs mi stepper mı? dropdown mı radio mı? Bir problem düşün: Bu problem daha önce çözülmüş mü? Var olan bir pattern işini görür mü?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UI Patterns", url: "https://www.nngroup.com/articles/ui-patterns/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Patterns Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ui+patterns+explained" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Choosing the Right UI Pattern", url: "https://uxdesign.cc/choosing-the-right-ui-pattern-7c8b6e4c6f8e" },
+                  { title: "UI Patterns That Work", url: "https://uxdesign.cc/ui-patterns-that-work-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir problem düşün: Bu problem daha önce çözülmüş mü?",
+                "Var olan bir pattern işini görür mü?",
+              ],
+            },
+          },
+          {
+            title: "Component Consistency & Reusability",
+            description: "Component'ler tek bir yerde tanımlanmalı ve her yerde aynı davranmalıdır. Tutarsız component kullanıcıyı şaşırtır ve bakım maliyetini artırır. Bir projede aynı isimle kaç farklı buton var? Neden farklılar? Bu sorular tutarlılığı kontrol etmek için önemlidir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Consistency Heuristic", url: "https://www.nngroup.com/articles/consistency-heuristic/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Component Reusability – NNGroup", url: "https://www.youtube.com/results?search_query=component+reusability+ui" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why Reusable Components Matter", url: "https://uxdesign.cc/why-reusable-components-matter-3c8b6e4c6f8e" },
+                  { title: "Scaling UI with Components", url: "https://uxdesign.cc/scaling-ui-with-components-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir projede: Aynı isimle kaç farklı buton var?",
+                "Neden farklılar?",
+              ],
+            },
+          },
+          {
+            title: "Common Component Mistakes",
+            description: "Sık yapılan hatalar: her varyasyonu yeni component yapmak, davranışları dokümante etmemek, state'leri atlamak. Bu hatalar teknik borç yaratır ve UI kalitesini düşürür. Bir component düşün: Hangi state'leri eksik? Gerçekte nasıl davranmalı?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Design System Mistakes", url: "https://www.nngroup.com/articles/design-system-mistakes/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Component Mistakes", url: "https://www.youtube.com/results?search_query=ui+component+mistakes" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Common UI Component Mistakes", url: "https://uxdesign.cc/common-ui-component-mistakes-7c8b6e4c6f8e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir component düşün: Hangi state'leri eksik?",
+                "Gerçekte nasıl davranmalı?",
+              ],
+            },
+          },
         ],
       },
       {
