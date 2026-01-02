@@ -487,11 +487,143 @@ const roadmaps: Record<string, Roadmap> = {
         title: "4. User Interviews",
         description: "Görüşmeyi 'sohbet' değil, 'kanıt üretme' aracına çevirmek.",
         topics: [
-          { title: "Writing a Discussion Guide" },
-          { title: "Asking Better Questions (avoid leading questions)" },
-          { title: "Moderation Skills" },
-          { title: "Note Taking & Recording" },
-          { title: "Post-Interview Synthesis Basics" },
+          {
+            title: "Planning User Interviews",
+            description: "İyi bir interview, görüşme sırasında değil öncesinde kazanılır. Planlama aşamasında net değilse: sorular dağılır ve sonuçlar belirsiz olur. Interview planı, neyi öğrenmek istediğini netleştirir.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "User Interviews: How to Conduct Them", url: "https://www.nngroup.com/articles/user-interviews/" },
+                  { title: "Planning User Interviews", url: "https://www.nngroup.com/articles/interview-planning/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "How to Plan User Interviews – NNGroup", url: "https://www.youtube.com/results?search_query=plan+user+interviews+nngroup" },
+                  { title: "User Interview Planning – UX Mastery", url: "https://www.youtube.com/results?search_query=user+interview+planning+ux+mastery" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Şu soruya cevap yaz: 'Bu interview sonunda neyi öğrenmiş olmak istiyorum?'",
+                "Cevabın net değilse interview da net değildir.",
+              ],
+            },
+          },
+          {
+            title: "Writing Interview Questions",
+            description: "İyi soru: yönlendirmez, varsayım içermez, 'neden'i açığa çıkarır. Kötü soru, kullanıcıdan onay almaya çalışır.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Writing Good UX Interview Questions", url: "https://www.nngroup.com/articles/interview-questions/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "How to Ask Better UX Interview Questions – NNGroup", url: "https://www.youtube.com/results?search_query=ask+better+ux+interview+questions+nngroup" },
+                  { title: "Avoid Leading Questions in UX Research – NNGroup", url: "https://www.youtube.com/results?search_query=avoid+leading+questions+ux+research+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bu soruyu düzelt: 'Bu özelliği beğendiniz mi?'",
+                "Daha iyi bir soru nasıl olur?",
+              ],
+            },
+          },
+          {
+            title: "Conducting Interviews (Moderation)",
+            description: "Interview sırasında UX Designer: konuşmaz, yönlendirmez, savunmaya geçmez. Rolün: dinlemek, derinleştirmek, sessizliği tolere etmek.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Moderating User Interviews", url: "https://www.nngroup.com/articles/moderating-user-interviews/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "How to Moderate User Interviews – NNGroup", url: "https://www.youtube.com/results?search_query=moderate+user+interviews+nngroup" },
+                  { title: "UX Interview Moderation Tips – AJ&Smart", url: "https://www.youtube.com/results?search_query=ux+interview+moderation+tips+aj+smart" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir kullanıcı bir şey söyledi ve sustu. Ne yaparsın?",
+                "Hemen başka soruya mı geçersin?",
+                "Yoksa sessizliği biraz daha mı beklersin?",
+                "Neden?",
+              ],
+            },
+          },
+          {
+            title: "Note Taking & Recording",
+            description: "Interview sırasında her şeyi hatırlamak mümkün değildir. Ama doğru not almak mümkündür. Amaç: kelime kelime yazmak değil, anlamlı parçaları yakalamaktır.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Taking Notes in UX Research", url: "https://www.nngroup.com/articles/taking-notes-ux/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Research Note Taking – NNGroup", url: "https://www.youtube.com/results?search_query=ux+research+note+taking+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir interview notu düşün: 'User confused'",
+                "Bunu daha iyi bir not haline getir:",
+                "Ne oldu?",
+                "Ne yapmaya çalışıyordu?",
+                "Nerede takıldı?",
+              ],
+            },
+          },
+          {
+            title: "Post-Interview Synthesis (Intro Level)",
+            description: "Interview bittiğinde iş bitmez. Asıl değer sonrasında ortaya çıkar. Amaç: tekil cümlelerden tekrar eden desenler çıkarmaktır.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Synthesis in UX Research", url: "https://www.nngroup.com/articles/synthesis/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "How to Synthesize UX Research – NNGroup", url: "https://www.youtube.com/results?search_query=synthesize+ux+research+nngroup" },
+                  { title: "Affinity Mapping Explained – AJ&Smart", url: "https://www.youtube.com/results?search_query=affinity+mapping+explained+aj+smart" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "3 farklı kullanıcı aynı noktada zorlandıysa:",
+                "Bu: tekil bir görüş mü?",
+                "Yoksa bir pattern mi?",
+                "Ne zaman 'insight' dersin?",
+              ],
+            },
+          },
         ],
       },
       {
