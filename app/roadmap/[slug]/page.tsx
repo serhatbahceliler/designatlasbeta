@@ -342,11 +342,145 @@ const roadmaps: Record<string, Roadmap> = {
         title: "3. User Research Fundamentals",
         description: "Doğru soruyu sorma ve doğru yöntemi seçme kasını geliştirmek.",
         topics: [
-          { title: "Research Mindset (questions, bias, ethics)" },
-          { title: "Qualitative vs Quantitative Research" },
-          { title: "Attitudinal vs Behavioral Data" },
-          { title: "Choosing the Right Method" },
-          { title: "Research Planning (goals, participants, recruitment)" },
+          {
+            title: "Research Mindset (questions, bias, ethics)",
+            description: "UX Research bir teknik değil, zihniyet meselesidir. İyi research: Cevap aramaz, soru sorar. Kendi fikrini doğrulamaya çalışmaz. Kullanıcıyı yönlendirmez.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "UX Research: What It Is and Why It Matters", url: "https://www.nngroup.com/articles/ux-research/" },
+                  { title: "Bias in UX Research", url: "https://www.nngroup.com/articles/research-bias/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Research Basics – NNGroup", url: "https://www.youtube.com/results?search_query=ux+research+basics+nngroup" },
+                  { title: "Avoiding Bias in User Research – NNGroup", url: "https://www.youtube.com/results?search_query=avoiding+bias+user+research+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ürünle ilgili varsayım yaz: 'Kullanıcılar __________ istiyor.'",
+                "Şimdi sor: Bunu nereden biliyorum?",
+                "Bu bir varsayım mı, kanıt mı?",
+              ],
+            },
+          },
+          {
+            title: "Qualitative vs Quantitative Research",
+            description: "Qualitative: 'Neden?' sorusuna cevap verir. Quantitative: 'Ne kadar?' sorusuna cevap verir. UX'te bu ikisi rakip değil, birlikte çalışır.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Qualitative vs Quantitative Research", url: "https://www.nngroup.com/articles/quant-vs-qual/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Qual vs Quant UX Research – NNGroup", url: "https://www.youtube.com/results?search_query=qual+vs+quant+ux+research+nngroup" },
+                  { title: "UX Research Methods Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ux+research+methods+explained+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Şu sorular için yöntemi seç:",
+                "'Kullanıcılar neden bu ekranı terk ediyor?'",
+                "'Kaç kişi bu özelliği kullanıyor?'",
+                "(Hangisi qual, hangisi quant?)",
+              ],
+            },
+          },
+          {
+            title: "Attitudinal vs Behavioral Data",
+            description: "Attitudinal: Kullanıcının ne söylediği. Behavioral: Kullanıcının ne yaptığı. İnsanlar çoğu zaman söylediklerini yapmaz. UX Research'te bu fark kritiktir.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Attitudinal vs Behavioral Research", url: "https://www.nngroup.com/articles/attitudinal-behavioral/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Attitudinal vs Behavioral UX Research – NNGroup", url: "https://www.youtube.com/results?search_query=attitudinal+behavioral+ux+research+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir örnek yaz:",
+                "Kullanıcı ne söyledi?",
+                "Kullanıcı ne yaptı?",
+                "Bu ikisi aynı mı?",
+              ],
+            },
+          },
+          {
+            title: "Choosing the Right Research Method",
+            description: "Her sorunun tek bir doğru yöntemi yoktur. Yanlış yöntemle yapılan research: zaman kaybıdır ve yanlış güven oluşturur. Önemli olan: Soruyla yöntemi eşleştirmek.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "When to Use Which UX Research Methods", url: "https://www.nngroup.com/articles/which-ux-research-methods/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Choosing the Right UX Research Method – NNGroup", url: "https://www.youtube.com/results?search_query=choosing+right+ux+research+method+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Şu soruya yöntem seç: 'Kullanıcılar onboarding'i nerede terk ediyor?'",
+                "Interview mi?",
+                "Usability test mi?",
+                "Analytics mi?",
+                "Neden?",
+              ],
+            },
+          },
+          {
+            title: "Research Planning (goals, participants, recruitment)",
+            description: "İyi research: başlamadan önce planlanır ve 'Bir bakalım' diye yapılmaz. Research planı; hedefi, katılımcıyı ve yöntemi netleştirir.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "UX Research Plan Template", url: "https://www.nngroup.com/articles/ux-research-plan/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "How to Create a UX Research Plan – NNGroup", url: "https://www.youtube.com/results?search_query=create+ux+research+plan+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Mini bir research plan yaz:",
+                "Amaç:",
+                "Katılımcı:",
+                "Yöntem:",
+                "(3 madde yeterli)",
+              ],
+            },
+          },
         ],
       },
       {
