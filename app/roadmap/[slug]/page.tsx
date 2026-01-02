@@ -770,11 +770,138 @@ const roadmaps: Record<string, Roadmap> = {
         title: "6. Synthesis & Insight",
         description: "Dağınık veriyi karar aldıran içgörüye dönüştürmek.",
         topics: [
-          { title: "Affinity Mapping" },
-          { title: "Themes & Patterns" },
-          { title: "User Needs & Jobs-to-be-Done (intro level)" },
-          { title: "Pain Points → Opportunities" },
-          { title: "Prioritization Basics (impact/effort)" },
+          {
+            title: "Affinity Mapping (Affinity Diagramming)",
+            description: "Affinity mapping, araştırma notlarını benzerliklerine göre gruplayarak tema çıkarmanın en pratik yollarından biridir. Özellikle interview sonrası 'kaosu düzene' çevirir.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Affinity Diagramming (Article)", url: "https://www.nngroup.com/articles/affinity-diagram/" },
+                  { title: "Affinity Diagramming Pitfalls", url: "https://www.nngroup.com/articles/affinity-diagramming-pitfalls/" },
+                  { title: "Affinity Diagramming (NNG Video Page)", url: "https://www.nngroup.com/videos/affinity-diagramming/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "NNGroup — Affinity Diagramming (YouTube)", url: "https://www.youtube.com/watch?v=C4nYxZxteJY" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How to do affinity mapping that doesn't suck", url: "https://medium.com/design-bridges/how-to-do-affinity-mapping-that-doesnt-suck-b0b9faddccfb" },
+                  { title: "(TR) İlişki Haritası (Affinity Mapping)", url: "https://medium.com/uxit%C3%BC/i%CC%87li%C5%9Fki-haritas%C4%B1-affinity-mapping-d4a6e1c1153b" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Elinde 10–15 interview notu olduğunu varsay",
+                "Her notu tek cümle olacak şekilde yaz",
+                "Benzer olanları grupla (3–5 grup hedefle)",
+                "Her gruba bir tema adı ver (ör. 'Güven eksikliği', 'Bulunabilirlik sorunu')",
+                "Her tema için 1 adet 'bu ne anlama geliyor?' cümlesi yaz",
+              ],
+            },
+          },
+          {
+            title: "Thematic Analysis (Coding → Themes)",
+            description: "Thematic analysis; veriyi kodlayıp (tag'leyip) tekrar eden örüntülerden tema üretme yaklaşımıdır. 'Affinity mapping' daha hızlı, thematic analysis daha sistematik ilerler.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Thematic Analysis (Article)", url: "https://www.nngroup.com/articles/thematic-analysis/" },
+                  { title: "Thematic Analysis (NNG Video Page)", url: "https://www.nngroup.com/videos/thematic-analysis-qualitative-user-research-data/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Thematic Analysis (video)", url: "https://www.youtube.com/watch?v=KUZ6iGvJlGI" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How to Do a Thematic Analysis of User Interviews", url: "https://medium.com/the-interaction-design-foundation/how-to-do-a-thematic-analysis-of-user-interviews-9eb4a1ced06e" },
+                  { title: "Thematic Analysis in depth & UX Research — Part I", url: "https://medium.com/%40alaaMHussein/thematic-analysis-in-depth-ux-research-part-%E2%85%B0-6cbeca890aaa" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "3 adımda mini coding:",
+                "10 cümlelik not seç",
+                "Her cümleye 1–2 'kod' yaz (ör. confusion, trust, time pressure)",
+                "Kodları gruplayıp 2–3 tema çıkar ve tema başına 1 örnek alıntı ekle",
+              ],
+            },
+          },
+          {
+            title: "Turning Findings into Insights (So What?)",
+            description: "Bulgu (finding) ≠ içgörü (insight). Finding: 'Kullanıcılar X ekranında zorlandı.' Insight: 'Zorlanma nedeni Y; çünkü Z; bu da şu aksiyonu gerektiriyor.'",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Analyzing Qualitative Data with Spreadsheet", url: "https://www.nngroup.com/videos/analyzing-qualitative-data-spreadsheet/" },
+                  { title: "UX Research Workshops", url: "https://www.nngroup.com/articles/ux-research-workshops/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "NNGroup User Research Playlist", url: "https://www.youtube.com/playlist?list=PLcBMBldR5P3Qi00ZkeotwxPctgsKLIzn4" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Introduction to UX research analysis techniques", url: "https://medium.com/%40jjknowles/introduction-to-ux-research-analysis-techniques-32192cfe0139" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Şu Insight template'ini doldur:",
+                "Observation: Kullanıcılar … yaparken … yaşıyor",
+                "Because: Çünkü …",
+                "Impact: Bu yüzden … (hedef/iş/deneyim etkisi)",
+                "Opportunity: Bu problemi azaltmak için …",
+              ],
+            },
+          },
+          {
+            title: "Prioritization Basics (Impact / Effort)",
+            description: "Her bulgu aynı önemde değildir. Junior'lar genelde 'en çok duyduğum'u seçer. Doğrusu: etki + maliyet + risk + hedef uyumu.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "UX Research Workshops", url: "https://www.nngroup.com/articles/ux-research-workshops/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Forced Ranking / Prioritization Workshop", url: "https://www.youtube.com/watch?v=yJwzRJvDIkM" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "3 bulgu seç ve tablo yap:",
+                "Bulgu | Etki (1–5) | Efor (1–5) | Öncelik (kısa gerekçe)",
+              ],
+            },
+          },
         ],
       },
       {
