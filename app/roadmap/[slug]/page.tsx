@@ -1545,11 +1545,205 @@ const roadmaps: Record<string, Roadmap> = {
         title: "11. Usability Testing",
         description: "Tasarımın 'çalışıp çalışmadığını' kanıtlamak.",
         topics: [
-          { title: "Test Types (moderated / unmoderated)" },
-          { title: "Task Writing & Scenarios" },
-          { title: "Success Criteria & Metrics (task success, time, errors)" },
-          { title: "Observation & Note Taking" },
-          { title: "Reporting Findings & Recommendations" },
+          {
+            title: "What is Usability Testing?",
+            description: "Usability testing, kullanıcıların belirli görevleri: yardım almadan, kendi başlarına yapıp yapamadığını gözlemlemektir. Önemli olan: ne söyledikleri değil, ne yaptıklarıdır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Usability Testing 101", url: "https://www.nngroup.com/articles/usability-testing-101/" },
+                  { title: "Why You Only Need to Test with 5 Users", url: "https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Usability Testing Explained – NNGroup", url: "https://www.youtube.com/results?search_query=usability+testing+explained+nngroup" },
+                  { title: "5-User Testing – NNGroup", url: "https://www.youtube.com/results?search_query=5+user+testing+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Usability Testing for Beginners", url: "https://medium.com/search?q=usability+testing+beginners" },
+                  { title: "Why Usability Testing Matters More Than You Think", url: "https://medium.com/search?q=why+usability+testing+matters" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir görev yaz: 'Kullanıcı X işlemini yapabilmeli.'",
+                "Şimdi sor: Bu görevin başarılı olduğunu nasıl anlarsın?",
+              ],
+            },
+          },
+          {
+            title: "Moderated vs Unmoderated Testing",
+            description: "Moderated Test: Canlı, derinlemesine gözlem. Unmoderated Test: Daha hızlı, daha geniş örneklem. Her problem için doğru yöntem farklıdır.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Moderated vs Unmoderated Testing", url: "https://www.nngroup.com/articles/moderated-remote-usability-testing/" },
+                  { title: "Remote Usability Testing", url: "https://www.nngroup.com/articles/remote-usability-testing/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Moderated vs Unmoderated UX Tests – NNGroup", url: "https://www.youtube.com/results?search_query=moderated+vs+unmoderated+ux+tests+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Moderated vs Unmoderated Usability Testing", url: "https://medium.com/search?q=moderated+vs+unmoderated+usability+testing" },
+                  { title: "Choosing the Right Usability Test", url: "https://medium.com/search?q=choosing+right+usability+test" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Şu problem için yöntem seç: 'Kullanıcılar neden onboarding'i terk ediyor?'",
+                "Moderated mı? Unmoderated mı?",
+                "Neden?",
+              ],
+            },
+          },
+          {
+            title: "Writing Tasks & Scenarios",
+            description: "Kötü yazılmış task: kullanıcıyı yönlendirir, gerçekçi değildir, test sonucunu bozar. İyi task: bağlam verir, çözümü söylemez.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Writing Tasks for Usability Studies", url: "https://www.nngroup.com/articles/task-scenarios-usability-testing/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Writing Better UX Test Tasks – NNGroup", url: "https://www.youtube.com/results?search_query=writing+better+ux+test+tasks+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How to Write Better Usability Test Tasks", url: "https://medium.com/search?q=write+better+usability+test+tasks" },
+                  { title: "Task Design Mistakes in UX Testing", url: "https://medium.com/search?q=task+design+mistakes+ux+testing" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bu task'ı düzelt: 'Sepete ürün ekle.'",
+                "→ Daha bağlamsal bir task yaz.",
+              ],
+            },
+          },
+          {
+            title: "Success Criteria & Metrics",
+            description: "Test 'hissi' değil, sonucu ölçer. Temel usability metrikleri: Task success, Time on task, Errors, User confidence (self-reported).",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Usability Metrics", url: "https://www.nngroup.com/articles/usability-metrics/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Metrics Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ux+metrics+explained+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "UX Metrics for Usability Testing", url: "https://medium.com/search?q=ux+metrics+usability+testing" },
+                  { title: "Measuring Usability Without Overthinking", url: "https://medium.com/search?q=measuring+usability+without+overthinking" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir task için ölçüm belirle:",
+                "Başarılı / başarısız",
+                "Ne kadar sürede?",
+                "Kaç hata?",
+              ],
+            },
+          },
+          {
+            title: "Observation, Note Taking & Analysis",
+            description: "Usability test sırasında: kullanıcıyı düzeltmezsin, ipucu vermezsin, savunmaya geçmezsin. Ama her şeyi not alırsın.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Observing Users: The Right Way", url: "https://www.nngroup.com/articles/observing-users/" },
+                  { title: "Analyzing Usability Test Results", url: "https://www.nngroup.com/articles/analyzing-usability-test-results/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Observing Usability Tests – NNGroup", url: "https://www.youtube.com/results?search_query=observing+usability+tests+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How to Analyze Usability Test Results", url: "https://medium.com/search?q=analyze+usability+test+results" },
+                  { title: "From Usability Test Notes to Insights", url: "https://medium.com/search?q=usability+test+notes+insights" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir gözlem yaz: 'Kullanıcı durdu, ekrana baktı, geri döndü.'",
+                "Bu neyin sinyali olabilir?",
+              ],
+            },
+          },
+          {
+            title: "Reporting Findings & Recommendations",
+            description: "Testin değeri: raporda, aksiyonda, değişimde ortaya çıkar. İyi rapor: problem → kanıt → öneri zinciri kurar, suçlamaz, çözüm sunar.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Reporting Usability Test Results", url: "https://www.nngroup.com/articles/reporting-usability-test-results/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "How to Present Usability Findings – NNGroup", url: "https://www.youtube.com/results?search_query=present+usability+findings+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How to Turn Usability Findings into Action", url: "https://medium.com/search?q=turn+usability+findings+action" },
+                  { title: "Writing UX Reports People Actually Read", url: "https://medium.com/search?q=writing+ux+reports+people+read" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir bulgu yaz: 'Kullanıcılar ödeme adımında durdu.'",
+                "Bunu bir öneriye çevir.",
+              ],
+            },
+          },
         ],
       },
       {
