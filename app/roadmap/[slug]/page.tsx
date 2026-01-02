@@ -3161,14 +3161,180 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "3. Typography",
-        description: "Tipografi temelleri, hiyerarşi ve okunabilirlik.",
+        title: "3. ✍️ Typography",
+        description: "Arayüzdeki metinlerin okunabilirliğini, hiyerarşisini, tonunu ve algılanan kalitesini belirleyen kritik UI bileşenleri.",
         topics: [
-          { title: "Typography Basics (Font, Size, Weight, Line-height)" },
-          { title: "Type Scale & Hierarchy (Headings, Body, Caption)" },
-          { title: "Readability (Line length, Spacing, Contrast)" },
-          { title: "Accessibility for Type (Dynamic Type mindset, legibility)" },
-          { title: "Common Typography Mistakes (Too many styles, weak hierarchy)" },
+          {
+            title: "Typography Basics",
+            description: "Typography yalnızca font seçmek değildir. Font ailesi, font boyutu, satır aralığı (line-height), harf aralığı (letter-spacing) ve ağırlık (font-weight) kararlarının tamamını kapsar. Yanlış kombinasyonlar metni okunamaz hale getirir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Typography for UX", url: "https://www.nngroup.com/articles/typography/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Typography Basics for UI – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Typography in UI Design", url: "https://medium.com/example" },
+                  { title: "Why Typography Is UX", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir metni incele:",
+                "Okumak mı zor, taramak mı?",
+                "Gözün nerede yoruluyor?",
+              ],
+            },
+          },
+          {
+            title: "Type Scale & Hierarchy",
+            description: "Type scale başlıklar, alt başlıklar, gövde metni ve yardımcı metinler arasında net bir hiyerarşi kurar. İyi bir scale az sayıda seviye içerir ve tutarlı artışlarla ilerler.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Visual Hierarchy", url: "https://www.nngroup.com/articles/visual-hierarchy-ux/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Type Scale Explained – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Type Scales for UI Designers", url: "https://medium.com/example" },
+                  { title: "How Typography Creates Hierarchy", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekranı seç:",
+                "Kaç farklı font boyutu var?",
+                "Hepsi gerçekten gerekli mi?",
+              ],
+            },
+          },
+          {
+            title: "Readability & Scannability",
+            description: "Kullanıcılar metni okumaz, tarar. Okunabilirliği etkileyen faktörler: satır uzunluğu, satır aralığı, paragraf yapısı, kontrast. İyi typography hızlı taranır ve anlamı bölmez.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Readability and Legibility", url: "https://www.nngroup.com/articles/readability-legibility/" },
+                  { title: "Writing for Scannability", url: "https://www.nngroup.com/articles/scannability/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Readable UI Text – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing Readable Interfaces", url: "https://medium.com/example" },
+                  { title: "Why Scannability Matters in UI", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir paragrafı incele:",
+                "Satırlar çok mu uzun?",
+                "Metni bölmek mümkün mü?",
+              ],
+            },
+          },
+          {
+            title: "Accessibility for Typography",
+            description: "Erişilebilir typography yeterli kontrast, yeterli boyut ve zoom/dynamic type uyumu sağlar. Küçük ve düşük kontrastlı metin en yaygın UI hatalarından biridir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Accessibility and Typography", url: "https://www.nngroup.com/articles/color-contrast/" },
+                ],
+              },
+              {
+                category: "🌐 W3C",
+                items: [
+                  { title: "Text Accessibility", url: "https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Accessible Typography – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Accessible Typography in UI", url: "https://medium.com/example" },
+                  { title: "Why Small Text Breaks UX", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir metni büyüt:",
+                "%200 zoom'da hâlâ okunuyor mu?",
+                "Satırlar kopuyor mu?",
+              ],
+            },
+          },
+          {
+            title: "Common Typography Mistakes",
+            description: "Sık yapılan hatalar: çok fazla font ailesi, çok fazla font boyutu, yetersiz line-height, sadece estetik için küçük metinler. Bu hatalar UI kalitesini düşürür.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Visual Design Mistakes", url: "https://www.nngroup.com/articles/visual-design-mistakes/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Typography Mistakes in UI", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Typography Mistakes UI Designers Make", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarımı eleştir:",
+                "En gereksiz typographic karar hangisi?",
+                "Kaldırsan ne olur?",
+              ],
+            },
+          },
         ],
       },
       {
