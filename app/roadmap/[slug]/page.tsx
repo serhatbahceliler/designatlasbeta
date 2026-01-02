@@ -2237,10 +2237,173 @@ const roadmaps: Record<string, Roadmap> = {
         title: "15. Measurement & Iteration (Basics)",
         description: "UX'in etkisini anlamak ve iterasyon kültürü.",
         topics: [
-          { title: "UX Metrics (basic set: conversion, drop-off, task success)" },
-          { title: "Qual Signals vs Quant Signals" },
-          { title: "Experiment Mindset (A/B basics, guardrails)" },
-          { title: "Continuous Improvement Loops" },
+          {
+            title: "UX Metrics Basics",
+            description: "UX metrikleri, deneyimin performansını ölçmek için kullanılır. Ama her şey ölçülemez, her ölçüm de anlamlı değildir. Temel metrik grupları: Davranış metrikleri (task completion, drop-off), Verimlilik metrikleri (time on task), Hata metrikleri (error rate), Algısal metrikler (confidence, satisfaction).",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX Metrics and Measurement", url: "https://www.nngroup.com/articles/ux-metrics/" },
+                  { title: "Measuring UX", url: "https://www.nngroup.com/articles/measuring-ux/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Metrics Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ux+metrics+explained+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "UX Metrics for Beginners", url: "https://medium.com/search?q=ux+metrics+for+beginners" },
+                  { title: "Which UX Metrics Actually Matter", url: "https://medium.com/search?q=which+ux+metrics+actually+matter" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran seç:",
+                "Kullanıcı burada ne yapmalı?",
+                "Başarılı olduğunu nasıl anlarsın? (Bir metrik yaz)",
+              ],
+            },
+          },
+          {
+            title: "Qualitative vs Quantitative Signals",
+            description: "UX kararları tek bir sinyale dayanmaz. Qualitative → neden oluyor? Quantitative → ne kadar oluyor? En güçlü içgörüler, bu iki sinyalin birlikte okunmasıyla çıkar.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Qualitative vs Quantitative Research", url: "https://www.nngroup.com/articles/quant-vs-qual/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Combining Qual & Quant UX – NNGroup", url: "https://www.youtube.com/results?search_query=combining+qual+quant+ux+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why UX Needs Both Qual and Quant", url: "https://medium.com/search?q=why+ux+needs+both+qual+quant" },
+                  { title: "Reading UX Signals Together", url: "https://medium.com/search?q=reading+ux+signals+together" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Şu sinyalleri düşün:",
+                "Interview: 'Kafa karıştırıcı'",
+                "Analytics: Drop-off yüksek",
+                "Bunlar birlikte sana ne söylüyor?",
+              ],
+            },
+          },
+          {
+            title: "Validating Design Decisions",
+            description: "Her tasarım kararı doğrulanmak zorunda değildir. Ama riskli kararlar mutlaka doğrulanmalıdır. Doğrulama yöntemleri: usability test, A/B test, öncesi / sonrası karşılaştırma.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Validating Design Decisions", url: "https://www.nngroup.com/articles/design-validation/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Validation Methods – NNGroup", url: "https://www.youtube.com/results?search_query=ux+validation+methods+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How to Validate UX Decisions", url: "https://medium.com/search?q=how+to+validate+ux+decisions" },
+                  { title: "Design Validation Without Overtesting", url: "https://medium.com/search?q=design+validation+without+overtesting" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir karar seç:",
+                "Bu karar yanlış olursa ne olur?",
+                "Bu riski doğrulamak için en basit yol ne?",
+              ],
+            },
+          },
+          {
+            title: "Iteration & Continuous Improvement",
+            description: "UX tek seferlik bir iş değildir. Her tasarım: test edilir, öğrenilir, iyileştirilir. Iteration, başarısızlık değil ilerleme göstergesidir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Iterative Design", url: "https://www.nngroup.com/articles/iterative-design/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Iterative UX Design – NNGroup", url: "https://www.youtube.com/results?search_query=iterative+ux+design+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Iteration Is the Real UX Skill", url: "https://medium.com/search?q=iteration+real+ux+skill" },
+                  { title: "Why Good UX Is Never Finished", url: "https://medium.com/search?q=why+good+ux+never+finished" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarım düşün:",
+                "İlk versiyonda neyi öğrenmek isterdin?",
+                "İkinci versiyonda neyi değiştirirdin?",
+              ],
+            },
+          },
+          {
+            title: "Closing the Feedback Loop",
+            description: "Feedback loop: kullanıcıdan öğren, ürünü geliştir, tekrar ölç. Bu döngü koparsa UX kararları sezgiye döner.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Closing the UX Feedback Loop", url: "https://www.nngroup.com/articles/feedback-loops/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Feedback Loops Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ux+feedback+loops+explained+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Closing the UX Feedback Loop", url: "https://medium.com/search?q=closing+ux+feedback+loop" },
+                  { title: "From Feedback to Action in UX", url: "https://medium.com/search?q=from+feedback+action+ux" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir geri bildirim düşün:",
+                "Nereden geliyor?",
+                "Aksiyona dönüşüyor mu, yoksa kayboluyor mu?",
+              ],
+            },
+          },
         ],
       },
       {
