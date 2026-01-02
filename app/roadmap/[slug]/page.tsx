@@ -1370,10 +1370,175 @@ const roadmaps: Record<string, Roadmap> = {
         title: "10. Wireframing & Prototyping",
         description: "Çözümü hızlı doğrulamak ve öğrenmeyi hızlandırmak.",
         topics: [
-          { title: "Low-Fidelity Wireframes" },
-          { title: "Mid-Fidelity Screens" },
-          { title: "Prototyping for Testing (what to prototype / what not)" },
-          { title: "Prototype Hygiene (naming, components, flow clarity)" },
+          {
+            title: "Low-Fidelity Wireframes",
+            description: "Low-fi wireframe'ler: hızlıdır, ucuzdur, tartışmaya açıktır. Bu yüzden discovery ve erken çözüm aşamasında idealdir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Low-Fidelity Wireframes", url: "https://www.nngroup.com/articles/low-fidelity-wireframes/" },
+                  { title: "Why Sketches and Wireframes Matter", url: "https://www.nngroup.com/articles/sketches-wireframes/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Low-Fidelity Wireframes Explained – NNGroup", url: "https://www.youtube.com/results?search_query=low+fidelity+wireframes+explained+nngroup" },
+                  { title: "Sketching & Wireframing for UX – NNGroup", url: "https://www.youtube.com/results?search_query=sketching+wireframing+ux+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why Low-Fidelity Wireframes Save Time", url: "https://medium.com/search?q=why+low+fidelity+wireframes+save+time" },
+                  { title: "Stop Polishing Too Early in UX", url: "https://medium.com/search?q=stop+polishing+too+early+ux" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran düşün",
+                "5 dakikada kâğıt üstüne çiz",
+                "UI detayı eklemeden sadece yapıyı göster",
+                "Birine göster ve ne anladığını sor",
+              ],
+            },
+          },
+          {
+            title: "Mid-Fidelity Screens",
+            description: "Mid-fi tasarımlar: yapıyı, içerik hiyerarşisini, etkileşimleri daha net test etmek için kullanılır. Ama hâlâ 'görsel şov' değildir.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Wireframe Fidelity Levels", url: "https://www.nngroup.com/articles/wireframe-fidelity/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Mid-Fidelity Prototyping – NNGroup", url: "https://www.youtube.com/results?search_query=mid+fidelity+prototyping+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Choosing the Right Fidelity Level", url: "https://medium.com/search?q=choosing+right+fidelity+level" },
+                  { title: "Mid-Fi Is the Sweet Spot", url: "https://medium.com/search?q=mid+fi+sweet+spot" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Mid-fi bir ekran için sor:",
+                "Kullanıcı burada ne yapmalı?",
+                "Gözünü ilk çeken yer doğru mu?",
+              ],
+            },
+          },
+          {
+            title: "Prototyping for Testing",
+            description: "Prototype: sunum için değil, test için yapılır. İyi prototype: sadece test edilecek akışı içerir, her detayı kapsamaz.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Prototyping for UX Testing", url: "https://www.nngroup.com/articles/prototyping-ux/" },
+                  { title: "Paper Prototyping", url: "https://www.nngroup.com/articles/paper-prototyping/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Prototyping Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ux+prototyping+explained+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Prototype Only What You Need", url: "https://medium.com/search?q=prototype+only+what+you+need" },
+                  { title: "Prototyping Mistakes in UX", url: "https://medium.com/search?q=prototyping+mistakes+ux" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir usability test yapacağını düşün",
+                "Hangi ekranlar gerçekten gerekli?",
+                "Hangileri test dışında kalabilir?",
+              ],
+            },
+          },
+          {
+            title: "What to Prototype / What Not to Prototype",
+            description: "Her şeyi prototype etmek: zaman kaybı, yanlış odaklanma, gereksiz detay demektir. Odak: riskli, belirsiz, kullanıcıyı durduran noktalar.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Deciding What to Prototype", url: "https://www.nngroup.com/articles/prototype-fidelity/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "What to Prototype in UX – NNGroup", url: "https://www.youtube.com/results?search_query=what+to+prototype+ux+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Don't Prototype Everything", url: "https://medium.com/search?q=don't+prototype+everything" },
+                  { title: "Strategic Prototyping for UX", url: "https://medium.com/search?q=strategic+prototyping+ux" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir feature seç",
+                "En riskli adımı işaretle",
+                "Sadece o adımı prototype et",
+              ],
+            },
+          },
+          {
+            title: "Prototype Hygiene (Naming, Flow Clarity)",
+            description: "Kötü hazırlanmış prototype: yanlış test sonuçları üretir, kullanıcıyı değil tasarımcıyı test eder. Basit ama kritik konular: ekran isimleri, bağlantıların tutarlılığı, gereksiz dallanmaların temizlenmesi.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Preparing Prototypes for Testing", url: "https://www.nngroup.com/articles/usability-testing-prototypes/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Prototype Preparation Tips – NNGroup", url: "https://www.youtube.com/results?search_query=ux+prototype+preparation+tips+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Prototype Hygiene: Small Things That Matter", url: "https://medium.com/search?q=prototype+hygiene+small+things+matter" },
+                  { title: "Why Your Usability Test Failed", url: "https://medium.com/search?q=why+usability+test+failed" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir prototype aç:",
+                "Kırık link var mı?",
+                "Kullanıcıyı çıkmaz sokağa sokuyor mu?",
+              ],
+            },
+          },
         ],
       },
       {
