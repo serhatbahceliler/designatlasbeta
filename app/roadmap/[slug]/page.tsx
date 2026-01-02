@@ -2958,14 +2958,206 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "2. Layout & Composition",
-        description: "Layout sistemleri, grid yapıları ve düzen prensipleri.",
+        title: "2. 🧱 Layout & Composition",
+        description: "Arayüzdeki içeriklerin nerede konumlandığını, birbirleriyle nasıl ilişkilendiğini ve hangi sırayla algılandığını belirleyen yapısal kararlar.",
         topics: [
-          { title: "Layout Basics (Density, Rhythm, White Space)" },
-          { title: "Grid Systems (Columns, Baseline, Modular Grids)" },
-          { title: "Spacing Systems (4pt/8pt Logic)" },
-          { title: "Responsive Layout Thinking (Breakpoints & Constraints)" },
-          { title: "Content-First Layout (Real Content, Not Lorem Ipsum)" },
+          {
+            title: "Layout Basics",
+            description: "Layout, yalnızca 'kutuları dizmek' değildir. İyi bir layout boşlukları bilinçli kullanır, yoğunluğu dengeler ve içeriği nefes aldırır. Temel kavramlar: yoğunluk (density), ritim, white space.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Page Layouts", url: "https://www.nngroup.com/articles/page-layouts/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Layout Basics – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "White Space Is Not Empty Space", url: "https://medium.com/example" },
+                  { title: "Layout Mistakes in UI Design", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran seç:",
+                "İçerik sıkışık mı?",
+                "Hangi alanlara nefes aldırılabilir?",
+              ],
+            },
+          },
+          {
+            title: "Grid Systems",
+            description: "Grid'ler hizalamayı kolaylaştırır, tutarlılık sağlar ve responsive tasarımın temelini oluşturur. Yaygın grid türleri: column grid, baseline grid, modular grid.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Grid Systems in UX", url: "https://www.nngroup.com/articles/grid-systems/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Grid Systems Explained – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why UI Designers Should Use Grids", url: "https://medium.com/example" },
+                  { title: "Grid Systems in Modern UI", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarım aç:",
+                "Grid var mı?",
+                "Yoksa elemanlar göz kararı mı dizilmiş?",
+              ],
+            },
+          },
+          {
+            title: "Spacing Systems (4pt / 8pt)",
+            description: "Spacing system rastgele boşlukları sistematik aralıklara dönüştürür. 4pt / 8pt sistemi: karar sayısını azaltır, tutarlılığı artırır, dev–designer iletişimini kolaylaştırır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Spacing and Alignment", url: "https://www.nngroup.com/articles/spacing-alignment/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "8pt Grid System Explained", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why the 8pt Grid Works", url: "https://medium.com/example" },
+                  { title: "Spacing Systems for UI Designers", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran ölç:",
+                "Boşluklar aynı artışlarla mı ilerliyor?",
+                "Yoksa rastgele mi?",
+              ],
+            },
+          },
+          {
+            title: "Responsive Layout Thinking",
+            description: "Responsive layout ekran küçülünce 'sığdırmak' değildir, öncelikleri yeniden düşünmektir. Önemli noktalar: içerik önceliği, kırılım noktaları (breakpoints), esnek container'lar.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Responsive Web Design", url: "https://www.nngroup.com/articles/responsive-web-design/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Responsive UI Design Basics – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing Responsive Layouts", url: "https://medium.com/example" },
+                  { title: "Mobile First UI Thinking", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir masaüstü ekranı düşün:",
+                "Mobilde ilk ne kalmalı?",
+                "İlk ne gitmeli?",
+              ],
+            },
+          },
+          {
+            title: "Content-First Layout",
+            description: "İyi UI lorem ipsum'a göre değil, gerçek içeriğe göre tasarlanır. Content-first yaklaşım: metin uzunluklarını, gerçek veri varyasyonlarını ve edge durumları erken görmeni sağlar.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Content-First Design", url: "https://www.nngroup.com/articles/content-first-design/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Content First UI – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing with Real Content", url: "https://medium.com/example" },
+                  { title: "Why Lorem Ipsum Breaks UI", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarımda:",
+                "Tüm metinleri uzat",
+                "Hâlâ çalışıyor mu?",
+              ],
+            },
+          },
+          {
+            title: "Common Layout Mistakes",
+            description: "Sık yapılan hatalar: gereksiz hizalama kırıkları, aşırı yoğun ekranlar, her şeyi aynı önemde göstermek. Bu hatalar kullanıcıyı yorar ve görsel kaliteyi düşürür.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Visual Design Mistakes", url: "https://www.nngroup.com/articles/visual-design-mistakes/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Layout Mistakes – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Common UI Layout Mistakes", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekranı eleştir:",
+                "Neresi fazla?",
+                "Neresi eksik?",
+              ],
+            },
+          },
         ],
       },
       {
