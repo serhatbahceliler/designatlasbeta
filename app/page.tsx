@@ -8,31 +8,31 @@ const roadmaps = [
   {
     id: "ux-designer",
     title: "UX Designer",
-    description: "Araştırma, akış, test ve temel UX pratikleri.",
+    description: "Araştırma yöntemleri, kullanıcı akışları, test süreçleri ve temel UX pratiklerini öğren. Problemi doğru tanımlamayı ve kullanıcı odaklı çözüm üretmeyi hedefler.",
     icon: "🎯",
   },
   {
     id: "ui-designer",
     title: "UI Designer",
-    description: "Görsel hiyerarşi, layout, component düşüncesi.",
+    description: "Görsel hiyerarşi, layout sistemleri ve component mantığını kavra. Tutarlı, ölçeklenebilir ve geliştiriciyle uyumlu arayüzler tasarlamaya odaklanır.",
     icon: "🎨",
   },
   {
     id: "product-designer",
     title: "Product Designer",
-    description: "Problem çözme, ürün düşüncesi, tasarım süreci.",
+    description: "Problem çözme, ürün düşüncesi ve uçtan uca tasarım sürecini kapsar. İş hedefleriyle kullanıcı ihtiyaçlarını dengeleyen kararlar almayı öğretir.",
     icon: "💡",
   },
   {
     id: "design-system",
     title: "Design Systems",
-    description: "Bileşenler, token mantığı, ölçeklenebilir UI.",
+    description: "Component yapıları, token mantığı ve tasarım sistemlerinin nasıl kurulduğunu öğren. Büyük ürünlerde tutarlılık ve sürdürülebilirlik sağlamaya odaklanır.",
     icon: "🧩",
   },
   {
     id: "design-thinking",
     title: "Design Thinking",
-    description: "Problem keşfi, fikir üretimi, prototipleme, test.",
+    description: "Problem keşfi, fikir üretimi, prototipleme ve test adımlarını kapsar. Belirsiz problemleri yapılandırılmış şekilde çözme yaklaşımını öğretir.",
     icon: "💭",
   },
 ];
@@ -250,6 +250,11 @@ export default function Home() {
               <br />
               <span className="text-gray-400">Ne öğreneceğini, ne zaman öğreneceğini ve neden öğrendiğini netleştirir.</span>
             </p>
+
+            {/* Micro-motivation */}
+            <p className="text-sm text-gray-500 mt-6 max-w-2xl mx-auto animate-text-reveal" style={{ animationDelay: '450ms' }}>
+              Günde 15–20 dakika ayırarak ilerleyebileceğin şekilde tasarlandı.
+            </p>
           </div>
         </div>
 
@@ -258,6 +263,15 @@ export default function Home() {
           <svg className="w-6 h-6 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
+        </div>
+      </section>
+
+      {/* Trust & Value Section */}
+      <section className="py-12 px-6 bg-zinc-950 border-t border-[#DEFF37]/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-lg text-gray-300 leading-relaxed">
+            Tüm roadmap'ler, gerçek kaynaklara dayanır ve öğrenme belirsizliğini azaltmak için hazırlanır.
+          </p>
         </div>
       </section>
 
@@ -410,6 +424,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Beta / Early Access Section */}
+      <section className="py-16 px-6 bg-zinc-950 border-t border-[#DEFF37]/20">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="inline-block px-4 py-2 mb-4 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-full">
+            <span className="text-[#DEFF37] font-semibold text-sm">ERKİN ERİŞİM</span>
+          </div>
+          <h3 className="text-2xl font-bold mb-4 text-white">
+            DesignAtlas erken erişimde
+          </h3>
+          <p className="text-gray-400">
+            Roadmap'ler sürekli güncellenir ve geri bildirimlerle gelişir. Öğrenme yolculuğunda her zaman yanında.
+          </p>
+        </div>
+      </section>
+
       {/* Roadmap Preview Section */}
       <section id="roadmaps" className="py-24 px-6 bg-zinc-950 border-t border-[#DEFF37]/20">
         <div className="max-w-7xl mx-auto">
@@ -422,8 +451,11 @@ export default function Home() {
 
           {/* Quiz Trigger */}
           <div className="max-w-2xl mx-auto mb-16 p-6 bg-zinc-900/50 border border-[#DEFF37]/30 rounded-xl text-center">
-            <p className="text-gray-300 mb-4">
-              Hangi alana meraklı olduğunu bilemiyor musun?
+            <p className="text-white font-medium mb-2">
+              Rolünü netleştiremiyor musun?
+            </p>
+            <p className="text-gray-400 text-sm mb-4">
+              1 dakikalık kısa bir quiz ile sana uygun öğrenme yolunu bul.
             </p>
             <button
               onClick={() => setIsQuizOpen(true)}
@@ -434,6 +466,19 @@ export default function Home() {
               </svg>
               10 Soruluk Quiz'i Başlat
             </button>
+          </div>
+
+          {/* Secondary CTA - Direct to roadmaps */}
+          <div className="max-w-2xl mx-auto mb-16 text-center">
+            <p className="text-gray-400 mb-4">
+              veya doğrudan roadmap'lere göz at
+            </p>
+            <div className="flex items-center justify-center gap-2 text-[#DEFF37] font-medium">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+              <span className="text-sm">Aşağıda tüm roadmap'leri keşfet</span>
+            </div>
           </div>
 
           {/* Roller (Job-based learning) */}
@@ -539,21 +584,6 @@ export default function Home() {
           </h2>
           <p className="text-lg text-gray-400 leading-relaxed">
             DesignAtlas'ta mail bırakman gerekmez. Hesap oluşturman gerekmez. Sadece öğrenirsin.
-          </p>
-        </div>
-      </section>
-
-      {/* Beta Disclaimer Section */}
-      <section className="py-16 px-6 bg-zinc-950 border-t border-[#DEFF37]/20">
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="inline-block px-4 py-2 mb-4 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-full">
-            <span className="text-[#DEFF37] font-semibold text-sm">BETA</span>
-          </div>
-          <h3 className="text-2xl font-bold mb-4 text-white">
-            Bu bir beta sürüm
-          </h3>
-          <p className="text-gray-400">
-            DesignAtlas erken aşamada. İçerikler geri bildirimlerle gelişecek.
           </p>
         </div>
       </section>
