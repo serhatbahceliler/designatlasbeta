@@ -1048,12 +1048,170 @@ const roadmaps: Record<string, Roadmap> = {
         title: "8. Information Architecture",
         description: "İçeriği ve navigasyonu kullanıcıların zihnine göre düzenlemek.",
         topics: [
-          { title: "IA Basics" },
-          { title: "Sitemaps & Structure" },
-          { title: "Navigation Patterns" },
-          { title: "Labeling & Terminology" },
-          { title: "Card Sorting (open/closed)" },
-          { title: "Tree Testing (intro)" },
+          {
+            title: "IA Basics (Mental Models & Structure)",
+            description: "IA'nın temeli, kullanıcıların: bilgiyi nasıl grupladığını, kavramları nasıl adlandırdığını anlamaktır. Bu yüzden IA kararları 'iç ekip dili' ile değil, kullanıcı dili ile alınır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Information Architecture: Definition", url: "https://www.nngroup.com/articles/information-architecture/" },
+                  { title: "Mental Models in UX", url: "https://www.nngroup.com/articles/mental-models/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Information Architecture Explained – NNGroup", url: "https://www.youtube.com/results?search_query=information+architecture+explained+nngroup" },
+                  { title: "Mental Models in UX – NNGroup", url: "https://www.youtube.com/results?search_query=mental+models+ux+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ürün seç",
+                "Menü başlıklarını oku",
+                "Kullanıcı olmayan biri bu başlıklardan ne beklerdi?",
+                "Beklenti ile içerik örtüşüyor mu?",
+              ],
+            },
+          },
+          {
+            title: "Sitemaps & Content Structure",
+            description: "Sitemap: sayfaların listesinden ibaret değildir, öncelik ve hiyerarşi gösterir. Yanlış sitemap: kullanıcıyı derinlere iter, önemli içeriği gizler.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Sitemaps: UX Best Practices", url: "https://www.nngroup.com/articles/sitemaps/" },
+                  { title: "Content Hierarchy in UX", url: "https://www.nngroup.com/articles/visual-hierarchy/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "How to Create UX Sitemaps – NNGroup", url: "https://www.youtube.com/results?search_query=create+ux+sitemaps+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "10 sayfalık hayali bir ürün düşün",
+                "En önemli 3 sayfa hangisi?",
+                "Bunlar sitemap'te en üstte mi?",
+              ],
+            },
+          },
+          {
+            title: "Navigation Design",
+            description: "Navigasyon: kullanıcıya 'neredeyim?' ve 'buradan nereye gidebilirim?' sorularının cevabını verir. İyi navigasyon düşünmeden kullanılır.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Navigation Design Basics", url: "https://www.nngroup.com/articles/navigation-design/" },
+                  { title: "Menu Design Best Practices", url: "https://www.nngroup.com/articles/menu-design/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Navigation UX Explained – NNGroup", url: "https://www.youtube.com/results?search_query=navigation+ux+explained+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir navigasyon düşün:",
+                "İlk bakışta kaç seçenek var?",
+                "Hepsi gerçekten gerekli mi?",
+              ],
+            },
+          },
+          {
+            title: "Labeling & Terminology",
+            description: "Kullanıcılar menüyü okuyarak değil, tahmin ederek kullanır. Bu yüzden: jargon ve iç ekip terimleri IA'yı bozar.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Labeling Systems in IA", url: "https://www.nngroup.com/articles/labeling-systems/" },
+                  { title: "Terminology & UX Writing", url: "https://www.nngroup.com/articles/ux-writing-terminology/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Labeling in Information Architecture – NNGroup", url: "https://www.youtube.com/results?search_query=labeling+information+architecture+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir menü başlığı seç:",
+                "Bu başlık kullanıcıya ne vaat ediyor?",
+                "İçerik bu vaadi karşılıyor mu?",
+              ],
+            },
+          },
+          {
+            title: "Card Sorting (Open / Closed)",
+            description: "Card sorting, kullanıcıların bilgiyi nasıl grupladığını görmenin en pratik yoludur. Open card sorting: keşif, Closed card sorting: doğrulama.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Card Sorting: A Definitive Guide", url: "https://www.nngroup.com/articles/card-sorting/" },
+                  { title: "Open vs Closed Card Sorting", url: "https://www.nngroup.com/articles/open-closed-card-sorting/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Card Sorting Explained – NNGroup", url: "https://www.youtube.com/results?search_query=card+sorting+explained+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "8–10 içerik başlığı yaz",
+                "Bunları kullanıcı gözüyle grupla",
+                "Kendi grubun ile kullanıcının grubu aynı mı?",
+              ],
+            },
+          },
+          {
+            title: "Tree Testing (Intro)",
+            description: "Tree testing: IA'yı arayüz olmadan test etmeyi sağlar ve 'Bulabiliyor mu?' sorusuna net cevap verir.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Tree Testing 101", url: "https://www.nngroup.com/articles/tree-testing/" },
+                  { title: "Evaluating Navigation with Tree Tests", url: "https://www.nngroup.com/articles/tree-testing-navigation/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Tree Testing Explained – NNGroup", url: "https://www.youtube.com/results?search_query=tree+testing+explained+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir kullanıcıdan şunu iste: 'X içeriğini bul.'",
+                "Kaç adımda buldu?",
+                "Nerede şaşırdı?",
+              ],
+            },
+          },
         ],
       },
       {
