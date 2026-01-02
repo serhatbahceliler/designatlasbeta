@@ -353,12 +353,12 @@ export default function Home() {
 
       {/* Solution Section */}
       <section className="py-24 px-6 bg-black border-t border-[#DEFF37]/20">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             DesignAtlas tam olarak bu noktada devreye giriyor
           </h2>
 
-          <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex items-start gap-4 p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl">
               <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37] rounded-lg flex items-center justify-center">
                 <svg className="w-4 h-4 text-[#DEFF37]" fill="currentColor" viewBox="0 0 20 20">
