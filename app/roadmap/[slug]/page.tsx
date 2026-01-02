@@ -3,11 +3,19 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import RoadmapClient from "./RoadmapClient";
 
+interface Resource {
+  category: string;
+  items: { title: string; url: string }[];
+}
+
 interface Topic {
   title: string;
   description?: string;
-  resources?: { title: string; url: string }[];
-  keyPoints?: string[];
+  resources?: Resource[];
+  practice?: {
+    title: string;
+    tasks: string[];
+  };
 }
 
 interface Section {
@@ -35,11 +43,150 @@ const roadmaps: Record<string, Roadmap> = {
         title: "1. UX Foundations",
         description: "UX'in ne olduğunu, problem çözme yaklaşımını ve temel kavramları oturtmak.",
         topics: [
-          { title: "What is UX Design?" },
-          { title: "UX vs UI vs Product Design" },
-          { title: "User-Centered Design" },
-          { title: "Human-Centered Thinking & Empathy" },
-          { title: "Basic Design Principles (hierarchy, consistency, feedback)" },
+          {
+            title: "What is UX Design?",
+            description: "UX Design, bir ürünün kullanıcı için ne kadar anlaşılır, verimli ve tatmin edici olduğunu tasarlama sürecidir. Sadece ekran çizmek değil; problemi anlamak, çözümü test etmek ve iyileştirmektir.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "What Is User Experience (UX) Design?", url: "https://www.nngroup.com/articles/definition-user-experience/" },
+                  { title: "UX 101: Introduction to User Experience", url: "https://www.nngroup.com/articles/ux-101-introduction-user-experience/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "What is UX Design? – AJ&Smart", url: "https://www.youtube.com/results?search_query=what+is+ux+design+aj+smart" },
+                  { title: "UX Design in 5 Minutes – NNGroup", url: "https://www.youtube.com/results?search_query=ux+design+in+5+minutes+nngroup" },
+                  { title: "UX Design Explained for Beginners – DesignCourse", url: "https://www.youtube.com/results?search_query=ux+design+explained+beginners+designcourse" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Kullandığın bir uygulamayı düşün (ör. banka app'i)",
+                "Bu uygulamada seni zorlayan bir an var mı?",
+                "O an neden zorladı?",
+                "Sence bu bir UX problemi mi, neden?",
+              ],
+            },
+          },
+          {
+            title: "UX vs UI vs Product Design",
+            description: "UX Design: Problemi anlar ve çözümün kullanıcı için çalışıp çalışmadığını test eder. UI Design: Görsel dili ve arayüzü tasarlar. Product Design: UX + UI + iş hedeflerini birlikte ele alır. Bu roller çoğu şirkette örtüşebilir, ama bakış açıları farklıdır.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "UX vs UI vs Product Design", url: "https://www.nngroup.com/articles/ux-vs-ui/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX vs UI vs Product Design Explained – Jesse Showalter", url: "https://www.youtube.com/results?search_query=ux+vs+ui+vs+product+design+jesse+showalter" },
+                  { title: "UX, UI and Product Design Differences – AJ&Smart", url: "https://www.youtube.com/results?search_query=ux+ui+product+design+differences+aj+smart" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir mobil uygulama seç",
+                "UX problemi örneği yaz",
+                "UI problemi örneği yaz",
+                "Product kararıyla ilgili bir problem yaz",
+                "(Birbiriyle karıştırmamaya çalış)",
+              ],
+            },
+          },
+          {
+            title: "User-Centered Design",
+            description: "User-Centered Design (UCD), kararların kişisel fikirlere değil, kullanıcı ihtiyaçlarına ve kanıtlara dayanmasını savunur. \"Ben böyle hissediyorum\" değil, \"Kullanıcı bunu yapamıyor\" demektir.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "User-Centered Design Basics", url: "https://www.nngroup.com/articles/user-centered-design/" },
+                  { title: "Empathy in UX Design", url: "https://www.nngroup.com/articles/empathy-ux-design/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "User-Centered Design Explained – NNGroup", url: "https://www.youtube.com/results?search_query=user+centered+design+explained+nngroup" },
+                  { title: "What Is User-Centered Design? – UX Mastery", url: "https://www.youtube.com/results?search_query=user+centered+design+ux+mastery" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Tasarladığın hayali bir ürün düşün",
+                "Şu cümleyi doldur: \"Kullanıcı şu problemi yaşıyor çünkü …\"",
+                "Bu problem nasıl doğrulanabilir? (Interview, test, gözlem?)",
+              ],
+            },
+          },
+          {
+            title: "Human-Centered Thinking & Empathy",
+            description: "Empati, kullanıcıyı anlamak, sempati ise kullanıcıya acımaktır. UX'te empati: kullanıcıyı suçlamamayı, sistemin neden hata yaptığını sorgulamayı sağlar.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Empathy vs Sympathy in UX", url: "https://www.nngroup.com/articles/empathy-vs-sympathy/" },
+                  { title: "Building Empathy Through Research", url: "https://www.nngroup.com/articles/building-empathy/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Empathy in UX Design – NNGroup", url: "https://www.youtube.com/results?search_query=empathy+ux+design+nngroup" },
+                  { title: "How to Build Empathy as a Designer – AJ&Smart", url: "https://www.youtube.com/results?search_query=build+empathy+designer+aj+smart" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Son kullandığın bir uygulamada hata aldığını düşün",
+                "Hata mesajı kullanıcıyı suçluyor mu?",
+                "Mesaj daha empatik nasıl yazılabilirdi?",
+              ],
+            },
+          },
+          {
+            title: "Basic Design Principles",
+            description: "Bu prensipler, tüm UX kararlarının temelidir: Görsel hiyerarşi, Tutarlılık, Geri bildirim, Basitlik. Bunlar yoksa kullanıcı düşünmek zorunda kalır.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Visual Hierarchy in UX", url: "https://www.nngroup.com/articles/visual-hierarchy/" },
+                  { title: "Consistency in UX Design", url: "https://www.nngroup.com/articles/consistency-heuristic/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Design Principles for UX Designers – NNGroup", url: "https://www.youtube.com/results?search_query=design+principles+ux+designers+nngroup" },
+                  { title: "Visual Hierarchy Explained – DesignCourse", url: "https://www.youtube.com/results?search_query=visual+hierarchy+explained+designcourse" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekranı gözünün önüne getir",
+                "İlk baktığında gözün nereye gidiyor?",
+                "Bu bilinçli mi, rastgele mi?",
+                "Kullanıcıdan beklenen aksiyon net mi?",
+              ],
+            },
+          },
         ],
       },
       {

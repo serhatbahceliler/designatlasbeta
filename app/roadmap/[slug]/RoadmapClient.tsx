@@ -2,11 +2,19 @@
 
 import { useState } from "react";
 
+interface Resource {
+  category: string;
+  items: { title: string; url: string }[];
+}
+
 interface Topic {
   title: string;
   description?: string;
-  resources?: { title: string; url: string }[];
-  keyPoints?: string[];
+  resources?: Resource[];
+  practice?: {
+    title: string;
+    tasks: string[];
+  };
 }
 
 interface Section {
@@ -115,45 +123,110 @@ export default function RoadmapClient({ sections }: RoadmapClientProps) {
                 </button>
               </div>
 
-              {/* Content - Şimdilik placeholder */}
+              {/* Content */}
               <div className="space-y-6">
-                <div className="p-6 bg-zinc-800/50 border border-zinc-700 rounded-xl">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center">
-                      <svg className="w-5 h-5 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                {/* Description */}
+                {selectedTopic.description && (
+                  <div className="p-6 bg-zinc-800/50 border border-zinc-700 rounded-xl">
+                    <div className="flex items-start gap-3 mb-3">
+                      <div className="w-10 h-10 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-2">Konu Hakkında</h3>
+                        <p className="text-gray-300 leading-relaxed">
+                          {selectedTopic.description}
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="text-lg font-semibold text-white">İçerik Yakında</h3>
                   </div>
-                  <p className="text-gray-400">
-                    Bu konu için detaylı içerik, kaynaklar ve örnekler hazırlanıyor.
-                    <br />
-                    Beta sürecinde içerikler adım adım eklenecek.
-                  </p>
-                </div>
+                )}
 
-                <div className="p-6 bg-zinc-800/30 border border-zinc-700/50 rounded-xl">
-                  <h4 className="text-sm font-semibold text-gray-400 mb-3">Ne Bekleyebilirsin?</h4>
-                  <ul className="space-y-2 text-gray-400 text-sm">
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#DEFF37] mt-1">•</span>
-                      <span>Konunun detaylı açıklaması</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#DEFF37] mt-1">•</span>
-                      <span>Öğrenme kaynakları ve linkler</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#DEFF37] mt-1">•</span>
-                      <span>Pratik örnekler ve ipuçları</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#DEFF37] mt-1">•</span>
-                      <span>İlgili araçlar ve metodlar</span>
-                    </li>
-                  </ul>
-                </div>
+                {/* Resources */}
+                {selectedTopic.resources && selectedTopic.resources.length > 0 && (
+                  <div className="p-6 bg-zinc-800/50 border border-zinc-700 rounded-xl">
+                    <div className="flex items-start gap-3 mb-4">
+                      <div className="w-10 h-10 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold text-white mb-4">Öğrenme Kaynakları</h3>
+                        <div className="space-y-5">
+                          {selectedTopic.resources.map((resourceGroup, idx) => (
+                            <div key={idx}>
+                              <h4 className="text-sm font-semibold text-gray-400 mb-2">{resourceGroup.category}</h4>
+                              <ul className="space-y-2">
+                                {resourceGroup.items.map((item, itemIdx) => (
+                                  <li key={itemIdx}>
+                                    <a
+                                      href={item.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="group flex items-center gap-2 text-gray-300 hover:text-[#DEFF37] transition-colors"
+                                    >
+                                      <span className="text-[#DEFF37]/50 group-hover:text-[#DEFF37]">→</span>
+                                      <span className="text-sm">{item.title}</span>
+                                      <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                      </svg>
+                                    </a>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Practice */}
+                {selectedTopic.practice && (
+                  <div className="p-6 bg-gradient-to-br from-[#DEFF37]/10 to-[#DEFF37]/5 border border-[#DEFF37]/20 rounded-xl">
+                    <div className="flex items-start gap-3 mb-4">
+                      <div className="w-10 h-10 bg-[#DEFF37]/20 border border-[#DEFF37]/40 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold text-white mb-3">{selectedTopic.practice.title}</h3>
+                        <ul className="space-y-2">
+                          {selectedTopic.practice.tasks.map((task, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="text-[#DEFF37] mt-1 font-bold">•</span>
+                              <span className="text-gray-300 text-sm">{task}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Fallback if no content */}
+                {!selectedTopic.description && !selectedTopic.resources && !selectedTopic.practice && (
+                  <div className="p-6 bg-zinc-800/50 border border-zinc-700 rounded-xl">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center">
+                        <svg className="w-5 h-5 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <h3 className="text-lg font-semibold text-white">İçerik Yakında</h3>
+                    </div>
+                    <p className="text-gray-400">
+                      Bu konu için detaylı içerik, kaynaklar ve örnekler hazırlanıyor.
+                      <br />
+                      Beta sürecinde içerikler adım adım eklenecek.
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
