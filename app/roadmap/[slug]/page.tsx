@@ -3911,14 +3911,201 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "7. States, Feedback & System Status",
-        description: "Component durumları, geri bildirim ve sistem durumu gösterimleri.",
+        title: "7. 🔄 States, Feedback & System Status",
+        description: "Bu bölüm, bir arayüzün kullanıcı aksiyonlarına nasıl tepki verdiğini, sistemin o anda ne yaptığını ve kullanıcının nerede olduğunu net şekilde anlatmasını sağlar. Amaç: belirsizliği azaltmak, kullanıcıyı kontrol altında hissettirmek ve hata/bekleme anlarını yönetmek.",
         topics: [
-          { title: "Component States (Default, Hover, Focus, Active, Disabled)" },
-          { title: "Validation & Errors (Inline, summaries, tone)" },
-          { title: "Empty / Loading / Success States" },
-          { title: "Affordance & Feedback (What's clickable?)" },
-          { title: "Microcopy for UI States (Short, clear, actionable)" },
+          {
+            title: "Component States (Default, Hover, Focus, etc.)",
+            description: "Her UI component'i birden fazla state'e sahiptir: default, hover, focus, active, disabled. Eksik state'ler kullanıcıyı kararsız bırakır ve arayüzü 'bozuk' hissettirir. Bir butona bak: Hover yoksa ne hissediyorsun? Disabled hali yeterince farklı mı?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UI States", url: "https://www.nngroup.com/articles/ui-states/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Component States Explained – NNGroup", url: "https://www.youtube.com/results?search_query=component+states+ui+design" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing UI States", url: "https://uxdesign.cc/designing-ui-states-3c8b6e4c6f8e" },
+                  { title: "Why Disabled States Matter", url: "https://uxdesign.cc/why-disabled-states-matter-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir butona bak: Hover yoksa ne hissediyorsun?",
+                "Disabled hali yeterince farklı mı?",
+              ],
+            },
+          },
+          {
+            title: "Validation & Error Handling",
+            description: "Hata mesajları kullanıcıyı suçlamamalı, net ve yönlendirici olmalı, mümkünse anında gösterilmelidir. İyi hata mesajı ne oldu, neden oldu, nasıl düzeltilir sorularını cevaplar. Bir hata mesajını oku: Ne yapman gerektiği net mi? Tekrar denemek kolay mı?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Error Message Guidelines", url: "https://www.nngroup.com/articles/error-message-guidelines/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Error Messages – NNGroup", url: "https://www.youtube.com/results?search_query=error+messages+ux" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing Helpful Error Messages", url: "https://uxdesign.cc/designing-helpful-error-messages-7c8b6e4c6f8e" },
+                  { title: "Inline Validation in Forms", url: "https://uxdesign.cc/inline-validation-in-forms-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir hata mesajını oku: Ne yapman gerektiği net mi?",
+                "Tekrar denemek kolay mı?",
+              ],
+            },
+          },
+          {
+            title: "Loading, Empty & Success States",
+            description: "Bu state'ler genelde ihmal edilir ama deneyimin en kırılgan anlarıdır. Boş state yönlendirmeli, loading beklenti yönetmeli, success güven vermelidir. Bir boş ekran düşün: Kullanıcı ne yapmalı? UI bunu söylüyor mu?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Empty States", url: "https://www.nngroup.com/articles/empty-states/" },
+                  { title: "Progress Indicators", url: "https://www.nngroup.com/articles/progress-indicators/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Designing Empty & Loading States – NNGroup", url: "https://www.youtube.com/results?search_query=empty+states+loading+ui" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing Empty States That Work", url: "https://uxdesign.cc/designing-empty-states-that-work-7c8b6e4c6f8e" },
+                  { title: "Loading States in UI", url: "https://uxdesign.cc/loading-states-in-ui-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir boş ekran düşün: Kullanıcı ne yapmalı?",
+                "UI bunu söylüyor mu?",
+              ],
+            },
+          },
+          {
+            title: "Affordance & Visual Feedback",
+            description: "Affordance bir şeyin ne yapılabileceğini görsel olarak anlatmasıdır. Örnek: buton buton gibi görünmeli, link link gibi davranmalı. Bir ekrana bak: Nereler tıklanabilir? Bunu sadece bakarak anlayabiliyor musun?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Affordances", url: "https://www.nngroup.com/articles/affordances/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Affordance in UI Design – NNGroup", url: "https://www.youtube.com/results?search_query=affordance+ui+design" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Affordance in Interface Design", url: "https://uxdesign.cc/affordance-in-interface-design-7c8b6e4c6f8e" },
+                  { title: "Why Users Don't Click", url: "https://uxdesign.cc/why-users-dont-click-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekrana bak: Nereler tıklanabilir?",
+                "Bunu sadece bakarak anlayabiliyor musun?",
+              ],
+            },
+          },
+          {
+            title: "Microcopy for UI States",
+            description: "Microcopy küçük metinlerdir ama büyük fark yaratır. Özellikle hata, boş ve loading state'lerinde kritik rol oynar. Bir microcopy düşün: Daha kısa olabilir mi? Daha net bir fiil var mı?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Microcopy in UX", url: "https://www.nngroup.com/articles/microcopy/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Writing Microcopy for UI – NNGroup", url: "https://www.youtube.com/results?search_query=microcopy+ui+design" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Microcopy That Improves UX", url: "https://uxdesign.cc/microcopy-that-improves-ux-7c8b6e4c6f8e" },
+                  { title: "UI Text That Guides Users", url: "https://uxdesign.cc/ui-text-that-guides-users-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir microcopy düşün: Daha kısa olabilir mi?",
+                "Daha net bir fiil var mı?",
+              ],
+            },
+          },
+          {
+            title: "Common State & Feedback Mistakes",
+            description: "Sık yapılan hatalar: sessiz butonlar, belirsiz loading'ler, suçlayıcı hata mesajları, success state'i göstermemek. Bu hatalar kullanıcı güvenini azaltır. Bir etkileşimi incele: Tıkladıktan sonra ne oluyor? Kullanıcı bunu fark ediyor mu?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX Feedback Mistakes", url: "https://www.nngroup.com/articles/usability-heuristics/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Feedback Mistakes", url: "https://www.youtube.com/results?search_query=ui+feedback+mistakes" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why Feedback Is a UX Principle", url: "https://uxdesign.cc/why-feedback-is-a-ux-principle-7c8b6e4c6f8e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir etkileşimi incele: Tıkladıktan sonra ne oluyor?",
+                "Kullanıcı bunu fark ediyor mu?",
+              ],
+            },
+          },
         ],
       },
       {
