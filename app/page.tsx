@@ -236,6 +236,10 @@ export default function Home() {
               <span className="px-4 py-2 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-full text-[#DEFF37] font-semibold text-sm">
                 Ücretsiz Kaynaklar
               </span>
+              <span className="text-gray-500">·</span>
+              <span className="px-4 py-2 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-full text-[#DEFF37] font-semibold text-sm">
+                Erken Erişim
+              </span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight animate-text-reveal" style={{ animationDelay: '150ms' }}>
@@ -428,7 +432,7 @@ export default function Home() {
       <section className="py-16 px-6 bg-zinc-950 border-t border-[#DEFF37]/20">
         <div className="max-w-2xl mx-auto text-center">
           <div className="inline-block px-4 py-2 mb-4 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-full">
-            <span className="text-[#DEFF37] font-semibold text-sm">ERKİN ERİŞİM</span>
+            <span className="text-[#DEFF37] font-semibold text-sm">ERKEN ERİŞİM</span>
           </div>
           <h3 className="text-2xl font-bold mb-4 text-white">
             DesignAtlas erken erişimde
@@ -466,19 +470,6 @@ export default function Home() {
               </svg>
               10 Soruluk Quiz'i Başlat
             </button>
-          </div>
-
-          {/* Secondary CTA - Direct to roadmaps */}
-          <div className="max-w-2xl mx-auto mb-16 text-center">
-            <p className="text-gray-400 mb-4">
-              veya doğrudan roadmap'lere göz at
-            </p>
-            <div className="flex items-center justify-center gap-2 text-[#DEFF37] font-medium">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-              <span className="text-sm">Aşağıda tüm roadmap'leri keşfet</span>
-            </div>
           </div>
 
           {/* Roller (Job-based learning) */}
