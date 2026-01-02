@@ -630,10 +630,140 @@ const roadmaps: Record<string, Roadmap> = {
         title: "5. Surveys & Quant Basics (Light)",
         description: "Junior seviyede 'temel nicel okuryazarlık' ve doğru kullanım.",
         topics: [
-          { title: "When to Use Surveys" },
-          { title: "Question Design (scales, wording pitfalls)" },
-          { title: "Basic Data Reading (counts, percentages)" },
-          { title: "Combining Qual + Quant (triangulation)" },
+          {
+            title: "When to Use Surveys (and When Not To)",
+            description: "Survey'ler: davranışı keşfetmek için değil, davranışın yaygınlığını ölçmek için kullanılır. Yanlış yerde kullanılan survey: yanlış güven üretir ve 'kullanıcılar böyle istiyor' yanılgısı yaratır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "When to Use Surveys", url: "https://www.nngroup.com/articles/surveys/" },
+                  { title: "Survey vs User Interviews", url: "https://www.nngroup.com/articles/survey-vs-interviews/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Surveys Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ux+surveys+explained+nngroup" },
+                  { title: "When NOT to Use Surveys – NNGroup", url: "https://www.youtube.com/results?search_query=when+not+use+surveys+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Şu soruya cevap ver: 'Kullanıcılar bu özelliği neden kullanmıyor?'",
+                "Survey uygun mu?",
+                "Değilse neden?",
+              ],
+            },
+          },
+          {
+            title: "Question Design Basics",
+            description: "Survey'de en kritik şey: sorunun kendisidir. Kötü yazılmış sorular: kullanıcıyı yönlendirir, sonuçları çarpıtır ve yanlış kararlar aldırır.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Writing Survey Questions", url: "https://www.nngroup.com/articles/survey-questions/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Writing Better Survey Questions – NNGroup", url: "https://www.youtube.com/results?search_query=writing+better+survey+questions+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bu soruyu düzelt: 'Bu özelliği ne kadar beğendiniz?'",
+                "Daha tarafsız bir versiyonunu yaz.",
+              ],
+            },
+          },
+          {
+            title: "Scales, Ratings & Common Pitfalls",
+            description: "Likert scale, rating ve score'lar: doğru kullanılırsa anlamlı, yanlış kullanılırsa gürültü üretir. Junior'ların en sık yaptığı hata: sonuçları bağlamdan koparmak.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Likert Scales in UX", url: "https://www.nngroup.com/articles/likert-scale/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Survey Scales Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ux+survey+scales+explained+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "1–5 scale kullandığını düşün.",
+                "3 ne anlama geliyor?",
+                "Kullanıcı için net mi?",
+              ],
+            },
+          },
+          {
+            title: "Basic Data Reading (Counts, Percentages)",
+            description: "Nicel veri: tek başına karar verdirmez, yön gösterir. Ama: %5 mi %50 mi olduğunu ayırt edemeyen UX Designer veriyi yanlış yorumlar.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Interpreting Quantitative UX Data", url: "https://www.nngroup.com/articles/quantitative-data/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Reading UX Metrics – NNGroup", url: "https://www.youtube.com/results?search_query=reading+ux+metrics+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "100 kişiden 5'i bir problem yaşadıysa:",
+                "Bu önemsiz mi?",
+                "Yoksa kritik mi?",
+                "Ne zaman önemlidir?",
+              ],
+            },
+          },
+          {
+            title: "Combining Qual + Quant (Triangulation)",
+            description: "En güçlü UX kararları: tek bir kaynaktan değil, birden fazla sinyalden gelir. Bu yaklaşıma triangulation denir.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Triangulation in UX Research", url: "https://www.nngroup.com/articles/triangulation/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Combining Qual and Quant UX Research – NNGroup", url: "https://www.youtube.com/results?search_query=combining+qual+quant+ux+research+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Şu sinyalleri birleştir:",
+                "Interview: 'Bulmak zor'",
+                "Analytics: Drop-off yüksek",
+                "Survey: 'Kafa karıştırıcı'",
+                "Bunlar birlikte sana ne söylüyor?",
+              ],
+            },
+          },
         ],
       },
       {
