@@ -394,9 +394,12 @@ export default function Home() {
       {/* Solution Section */}
       <section className="py-24 px-6 bg-black border-t border-[#DEFF37]/20">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-            DesignAtlas tam olarak bu noktada devreye giriyor
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
+            designatlas.io bu belirsizliği ortadan kaldırır.
           </h2>
+          <p className="text-center text-gray-400 mb-12 text-lg">
+            Ne öğreneceğini, hangi sırayla ilerleyeceğini ve hangi kaynağa güveneceğini netleştirir.
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex items-start gap-4 p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl">
@@ -406,8 +409,8 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <p className="text-white font-medium mb-1">UX, UI ve Product Designer'lar için adım adım roadmap'ler</p>
-                <p className="text-gray-400 text-sm">Her rolde ne öğrenmen gerektiğini, hangi sırayla ilerlemen gerektiğini göster.</p>
+                <p className="text-white font-medium mb-1">Rolüne göre adım adım roadmap'ler</p>
+                <p className="text-gray-400 text-sm">UX, UI ve Product Designer rolleri için neyi, ne zaman öğrenmen gerektiğini net bir sırayla gösterir.</p>
               </div>
             </div>
 
@@ -418,8 +421,8 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <p className="text-white font-medium mb-1">Güvenilir kaynaklardan kürasyonlu içerikler</p>
-                <p className="text-gray-400 text-sm">Nielsen Norman Group, Interaction Design Foundation gibi güvenilir kaynaklara yönlendirme.</p>
+                <p className="text-white font-medium mb-1">Güvenilir kaynaklara dayalı içerikler</p>
+                <p className="text-gray-400 text-sm">Nielsen Norman Group, Interaction Design Foundation gibi güvenilir ve doğrulanmış kaynaklara yönlendirir.</p>
               </div>
             </div>
 
@@ -430,8 +433,8 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <p className="text-white font-medium mb-1">Temel konulara odaklanan sade yapı</p>
-                <p className="text-gray-400 text-sm">Gereksiz detaylar yok. Sadece öğrenmen gereken temel konular.</p>
+                <p className="text-white font-medium mb-1">Temel olanı öğren, detayda kaybolma</p>
+                <p className="text-gray-400 text-sm">Gereksiz konu yok. Sadece gerçekten işine yarayacak temel bilgileri öğrenirsin.</p>
               </div>
             </div>
 
@@ -442,8 +445,8 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <p className="text-white font-medium mb-1">Hesap oluşturmadan, baskı olmadan öğrenme</p>
-                <p className="text-gray-400 text-sm">Hemen başla. Mail adresi yok, üyelik yok, sadece öğren.</p>
+                <p className="text-white font-medium mb-1">Hesapsız, baskısız öğrenme</p>
+                <p className="text-gray-400 text-sm">Kayıt yok, mail yok, üyelik yok. Hemen başla, kendi hızında ilerle.</p>
               </div>
             </div>
           </div>
