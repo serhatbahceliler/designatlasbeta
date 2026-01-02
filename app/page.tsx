@@ -562,40 +562,125 @@ export default function Home() {
               <p className="text-gray-400 text-sm">Rolünden bağımsız olarak, tasarım becerilerini derinleştirebileceğin alanlar.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-              {roadmaps.filter(r => ['design-system', 'design-thinking'].includes(r.id)).map((roadmap, index) => (
-                <Link
-                  key={roadmap.id}
-                  href={`/roadmap/${roadmap.id}`}
-                  className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-[#DEFF37]/50 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm"
-                  style={{
-                    animation: `slideUp 0.6s ease-out ${(index + 3) * 0.1}s both`,
-                  }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#DEFF37]/0 to-[#DEFF37]/0 group-hover:from-[#DEFF37]/5 group-hover:to-transparent transition-all duration-500"></div>
+              {/* Design Systems - Yakında */}
+              <div
+                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
+                style={{
+                  animation: `slideUp 0.6s ease-out 0.3s both`,
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
 
-                  <div className="relative p-8">
-                    {/* Icon */}
-                    <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                      {roadmap.icon}
-                    </div>
-
-                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-[#DEFF37] transition-colors duration-300">
-                      {roadmap.title}
-                    </h3>
-
-                    <p className="text-gray-400 mb-6 leading-relaxed text-sm">
-                      {roadmap.description}
-                    </p>
-
-                    <div className="flex items-center text-[#DEFF37] font-semibold group-hover:translate-x-2 transition-transform duration-300 text-sm">
-                      Roadmap'i Gör
-                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </div>
+                <div className="relative p-8">
+                  {/* Icon */}
+                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                    🧩
                   </div>
-                </Link>
-              ))}
+
+                  <div className="flex items-center gap-2 mb-3">
+                    <h3 className="text-2xl font-bold text-white">
+                      Design Systems
+                    </h3>
+                    <span className="px-2 py-1 text-xs font-medium bg-zinc-800 text-gray-400 rounded-md">
+                      Yakında
+                    </span>
+                  </div>
+
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    Ölçeklenebilir tasarım sistemleri, component kütüphaneleri ve tasarım yönetişimi oluştur ve sürdür.
+                  </p>
+                </div>
+              </div>
+
+              {/* Design Thinking - Yakında */}
+              <div
+                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
+                style={{
+                  animation: `slideUp 0.6s ease-out 0.4s both`,
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
+
+                <div className="relative p-8">
+                  {/* Icon */}
+                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                    💭
+                  </div>
+
+                  <div className="flex items-center gap-2 mb-3">
+                    <h3 className="text-2xl font-bold text-white">
+                      Design Thinking
+                    </h3>
+                    <span className="px-2 py-1 text-xs font-medium bg-zinc-800 text-gray-400 rounded-md">
+                      Yakında
+                    </span>
+                  </div>
+
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    Karmaşık problemleri yaratıcı bir şekilde çözmek için design thinking metodolojisi ve çerçevelerini uygula.
+                  </p>
+                </div>
+              </div>
+
+              {/* UX Research - Yakında */}
+              <div
+                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
+                style={{
+                  animation: `slideUp 0.6s ease-out 0.5s both`,
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
+
+                <div className="relative p-8">
+                  {/* Icon */}
+                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                    🔍
+                  </div>
+
+                  <div className="flex items-center gap-2 mb-3">
+                    <h3 className="text-2xl font-bold text-white">
+                      UX Research
+                    </h3>
+                    <span className="px-2 py-1 text-xs font-medium bg-zinc-800 text-gray-400 rounded-md">
+                      Yakında
+                    </span>
+                  </div>
+
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    Kullanıcıyı daha derinlemesine anlamaya odaklanan araştırma ve test süreçleri. Görüşmeler, testler ve içgörü üretimi üzerine kapsamlı bir öğrenme yolu.
+                  </p>
+                </div>
+              </div>
+
+              {/* Interaction Design - Yakında */}
+              <div
+                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
+                style={{
+                  animation: `slideUp 0.6s ease-out 0.6s both`,
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
+
+                <div className="relative p-8">
+                  {/* Icon */}
+                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                    ⚡
+                  </div>
+
+                  <div className="flex items-center gap-2 mb-3">
+                    <h3 className="text-2xl font-bold text-white">
+                      Interaction Design
+                    </h3>
+                    <span className="px-2 py-1 text-xs font-medium bg-zinc-800 text-gray-400 rounded-md">
+                      Yakında
+                    </span>
+                  </div>
+
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    Kullanıcı akışları, etkileşimler ve ekranlar arası davranış tasarımı. Daha akıcı ve sezgisel deneyimler oluşturmayı hedefleyen bir disiplin.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
