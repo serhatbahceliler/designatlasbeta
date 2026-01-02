@@ -4271,14 +4271,178 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "9. Accessibility for UI Designers",
-        description: "UI tasarımında erişilebilirlik prensipleri ve uygulamaları.",
+        title: "9. ♿ Accessibility for UI Designers",
+        description: "Accessibility (erişilebilirlik), arayüzlerin farklı yetilere sahip kullanıcılar, farklı cihazlar ve farklı çevresel koşullar altında da kullanılabilir olmasını sağlar. Amaç: erişilebilirliği 'opsiyonel' değil varsayılan görmek, UI kararlarının herkesi kapsamasını sağlamak ve yasal/etik riskleri azaltmak.",
         topics: [
-          { title: "Accessibility Mindset (Inclusive UI)" },
-          { title: "Color & Contrast Checks" },
-          { title: "Focus Visibility & Keyboard (Web awareness)" },
-          { title: "Typography Legibility (Scale, spacing)" },
-          { title: "Accessible UI Checklist (Quick audit)" },
+          {
+            title: "Accessibility Mindset (UI Focused)",
+            description: "Erişilebilirlik sadece engelli kullanıcılar için değildir, herkes için daha iyi UI üretir. UI Designer 'herkes görebilir' varsayımını bırakır ve en zor koşulu baz alarak tasarlar. Bir ekran düşün: Tek el, güneş ışığı, düşük dikkat - hâlâ kullanılabilir mi?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Accessibility Basics", url: "https://www.nngroup.com/articles/accessibility-basics/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Accessibility for Designers – NNGroup", url: "https://www.youtube.com/results?search_query=accessibility+for+designers" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Accessibility Is UX", url: "https://uxdesign.cc/accessibility-is-ux-7c8b6e4c6f8e" },
+                  { title: "Designing for Everyone", url: "https://uxdesign.cc/designing-for-everyone-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran düşün: Tek el, güneş ışığı, düşük dikkat",
+                "Hâlâ kullanılabilir mi?",
+              ],
+            },
+          },
+          {
+            title: "Color & Contrast Accessibility",
+            description: "Renk körlüğü ve düşük görüş çok yaygındır ve çoğu UI tasarımında göz ardı edilir. Kurallar: sadece renkle anlam verme, yeterli kontrast sağla, feedback'i çoklu sinyallerle destekle. Bir hata state'i düşün: Renk kapalı olsa da anlaşılır mı?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Color Contrast", url: "https://www.nngroup.com/articles/color-contrast/" },
+                ],
+              },
+              {
+                category: "🌐 W3C",
+                items: [
+                  { title: "Contrast Requirements", url: "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Color Accessibility – NNGroup", url: "https://www.youtube.com/results?search_query=color+accessibility+ui" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing for Color Blindness", url: "https://uxdesign.cc/designing-for-color-blindness-7c8b6e4c6f8e" },
+                  { title: "Accessible Color in UI", url: "https://uxdesign.cc/accessible-color-in-ui-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir hata state'i düşün: Renk kapalı olsa da anlaşılır mı?",
+              ],
+            },
+          },
+          {
+            title: "Focus, Keyboard & Visibility",
+            description: "Web arayüzlerinde klavye ile gezinme ve focus state'leri hayati önemdedir. Focus olmayan UI klavye kullanıcıları için kullanılamaz hale gelir. Bir formu düşün: Sadece Tab ile tamamlanabiliyor mu? Focus net mi?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Keyboard Accessibility", url: "https://www.nngroup.com/articles/keyboard-accessibility/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Focus States Explained – NNGroup", url: "https://www.youtube.com/results?search_query=focus+states+accessibility" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why Focus States Matter", url: "https://uxdesign.cc/why-focus-states-matter-7c8b6e4c6f8e" },
+                  { title: "Designing Keyboard-Friendly UI", url: "https://uxdesign.cc/keyboard-friendly-ui-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir formu düşün: Sadece Tab ile tamamlanabiliyor mu?",
+                "Focus net mi?",
+              ],
+            },
+          },
+          {
+            title: "Typography & Legibility",
+            description: "Erişilebilir typography yeterli font boyutu, yeterli satır aralığı ve zoom uyumu sağlar. Küçük ve sık metinler en yaygın erişilebilirlik ihlallerindendir. Bir metni %200 büyüt: Bozuluyor mu? Taşıyor mu?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Readability and Accessibility", url: "https://www.nngroup.com/articles/readability-legibility/" },
+                ],
+              },
+              {
+                category: "🌐 W3C",
+                items: [
+                  { title: "Text Spacing", url: "https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Accessible Typography – NNGroup", url: "https://www.youtube.com/results?search_query=accessible+typography" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Readable UI Typography", url: "https://uxdesign.cc/readable-ui-typography-7c8b6e4c6f8e" },
+                  { title: "Why Small Text Is a UX Smell", url: "https://uxdesign.cc/small-text-ux-smell-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir metni %200 büyüt: Bozuluyor mu?",
+                "Taşıyor mu?",
+              ],
+            },
+          },
+          {
+            title: "Accessible UI Checklist",
+            description: "Her UI tasarımı için hızlı kontrol listesi: Kontrast yeterli mi? Renk tek başına anlam taşıyor mu? Focus state'leri net mi? Metinler okunabilir mi? Boş ve hata state'leri açıklayıcı mı? Bir ekranı checklist ile tara: İlk bulduğun problem ne?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Accessibility Checklist", url: "https://www.nngroup.com/articles/accessibility-checklist/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Accessibility Checklist for Designers", url: "https://www.youtube.com/results?search_query=accessibility+checklist+designers" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "UI Accessibility Checklist", url: "https://uxdesign.cc/ui-accessibility-checklist-7c8b6e4c6f8e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekranı checklist ile tara: İlk bulduğun problem ne?",
+              ],
+            },
+          },
         ],
       },
       {
