@@ -48,92 +48,74 @@ const anonymousQuotes = [
 const quizQuestions = [
   {
     id: 1,
-    question: "Bir tasarım projesinde seni en çok heyecanlandıran şey ne?",
+    question: "Bir ürünü kullanırken seni en çok hangisi düşündürür?",
     options: [
-      { text: "Kullanıcıların davranışlarını anlamak ve problemlerini çözmek", scores: { ux: 3, ui: 0, product: 1 } },
-      { text: "Güzel, estetik ve tutarlı arayüzler oluşturmak", scores: { ux: 0, ui: 3, product: 1 } },
-      { text: "İş hedeflerini kullanıcı ihtiyaçları ile dengelemek", scores: { ux: 1, ui: 0, product: 3 } },
+      { text: "Kullanıcı neden burada takıldı, neyi anlamadı?", scores: { ux: 3, ui: 0, product: 0 } },
+      { text: "Bu ekran daha düzenli ve estetik olabilir.", scores: { ux: 0, ui: 3, product: 0 } },
+      { text: "Bu özellik gerçekten gerekli mi, problemi çözüyor mu?", scores: { ux: 0, ui: 0, product: 3 } },
     ],
   },
   {
     id: 2,
-    question: "Boş zamanında genellikle ne yaparsın?",
+    question: "Bir problem verildiğinde ilk refleksin hangisi olur?",
     options: [
-      { text: "İnsanları gözlemlerim, davranışlarını analiz ederim", scores: { ux: 3, ui: 0, product: 1 } },
-      { text: "Dribbble/Behance'de tasarımlar incelerim, renk paletleri oluştururum", scores: { ux: 0, ui: 3, product: 0 } },
-      { text: "Startup haberleri okur, ürün stratejileri hakkında düşünürüm", scores: { ux: 0, ui: 0, product: 3 } },
+      { text: "Önce kullanıcıyı anlamaya çalışırım.", scores: { ux: 3, ui: 0, product: 0 } },
+      { text: "Nasıl bir arayüzle çözerim diye düşünürüm.", scores: { ux: 0, ui: 3, product: 0 } },
+      { text: "Problemin köküne ve etkisine bakarım.", scores: { ux: 0, ui: 0, product: 3 } },
     ],
   },
   {
     id: 3,
-    question: "Bir uygulama kullanırken en çok neye dikkat edersin?",
+    question: "Aşağıdakilerden hangisi sana daha keyifli gelir?",
     options: [
-      { text: "Ne kadar kolay ve mantıklı kullanılabildiğine", scores: { ux: 3, ui: 1, product: 1 } },
-      { text: "Görsel tutarlılığına, renk ve tipografi seçimlerine", scores: { ux: 0, ui: 3, product: 0 } },
-      { text: "Çözdüğü probleme ve iş modelinin mantığına", scores: { ux: 1, ui: 0, product: 3 } },
+      { text: "Kullanıcı testlerinden çıkan içgörüleri yorumlamak.", scores: { ux: 3, ui: 0, product: 0 } },
+      { text: "Renk, boşluk ve düzenle ekranı iyileştirmek.", scores: { ux: 0, ui: 3, product: 0 } },
+      { text: "Hangi çözümün daha anlamlı olduğuna karar vermek.", scores: { ux: 0, ui: 0, product: 3 } },
     ],
   },
   {
     id: 4,
-    question: "Hangi tür araçlarla çalışmayı daha çok seversin?",
+    question: "Bir tasarımda seni en çok ne tatmin eder?",
     options: [
-      { text: "Kullanıcı araştırması ve test araçları (anketler, analytics)", scores: { ux: 3, ui: 0, product: 2 } },
-      { text: "Tasarım araçları (Figma, Sketch) ve stil kılavuzları", scores: { ux: 0, ui: 3, product: 1 } },
-      { text: "Her ikisi de - ama önce veriye bakarım", scores: { ux: 2, ui: 1, product: 3 } },
+      { text: "Kullanıcının daha az zorlanması.", scores: { ux: 3, ui: 0, product: 0 } },
+      { text: "Görsel olarak temiz ve tutarlı olması.", scores: { ux: 0, ui: 3, product: 0 } },
+      { text: "Ürünün doğru problemi çözmesi.", scores: { ux: 0, ui: 0, product: 3 } },
     ],
   },
   {
     id: 5,
-    question: "Bir problem ile karşılaştığında ilk tepkin ne olur?",
+    question: "Bir ekip toplantısında sen daha çok ne yaparsın?",
     options: [
-      { text: "Kullanıcılarla konuşurum, onların yaşadığı zorluğu anlamaya çalışırım", scores: { ux: 3, ui: 0, product: 1 } },
-      { text: "Benzer problemlerin çözümlerini araştırır, görsel referanslar toplarım", scores: { ux: 0, ui: 3, product: 0 } },
-      { text: "Problemi iş hedefleriyle eşleştirir, önceliklendiririm", scores: { ux: 1, ui: 0, product: 3 } },
+      { text: "Kullanıcı perspektifini hatırlatırım.", scores: { ux: 3, ui: 0, product: 0 } },
+      { text: "Tasarım kalitesiyle ilgili yorum yaparım.", scores: { ux: 0, ui: 3, product: 0 } },
+      { text: "Öncelik ve kapsam üzerine düşünürüm.", scores: { ux: 0, ui: 0, product: 3 } },
     ],
   },
   {
     id: 6,
-    question: "Ekip toplantılarında genellikle hangi konulara odaklanırsın?",
+    question: "Bir ekranı eleştirirken ilk baktığın şey nedir?",
     options: [
-      { text: "Kullanıcı deneyiminin akışına, kullanılabilirlik sorunlarına", scores: { ux: 3, ui: 1, product: 1 } },
-      { text: "Tasarım tutarlılığına, görsel detaylara", scores: { ux: 0, ui: 3, product: 0 } },
-      { text: "Ürünün genel stratejisine, KPI'lara, iş sonuçlarına", scores: { ux: 1, ui: 1, product: 3 } },
+      { text: "Kullanıcı bu akışı anlayabilir mi?", scores: { ux: 3, ui: 0, product: 0 } },
+      { text: "Görsel hiyerarşi doğru mu?", scores: { ux: 0, ui: 3, product: 0 } },
+      { text: "Bu ekranın üründeki rolü ne?", scores: { ux: 0, ui: 0, product: 3 } },
     ],
   },
   {
     id: 7,
-    question: "Başarılı bir tasarım projesi için en önemli şey nedir?",
+    question: "Aşağıdaki cümlelerden hangisi sana daha yakın?",
     options: [
-      { text: "Kullanıcı ihtiyaçlarını tam olarak karşılaması", scores: { ux: 3, ui: 1, product: 2 } },
-      { text: "Görsel olarak etkileyici ve tutarlı olması", scores: { ux: 0, ui: 3, product: 0 } },
-      { text: "İş hedeflerine ulaşması ve ölçülebilir sonuçlar yaratması", scores: { ux: 1, ui: 0, product: 3 } },
+      { text: "Kullanıcıyı anlamadan çözüm olmaz.", scores: { ux: 3, ui: 0, product: 0 } },
+      { text: "İyi bir arayüz her şeyi değiştirir.", scores: { ux: 0, ui: 3, product: 0 } },
+      { text: "Doğru problem çözülmüyorsa tasarım anlamsızdır.", scores: { ux: 0, ui: 0, product: 3 } },
     ],
   },
   {
     id: 8,
-    question: "Hangi tür feedback almaktan en çok hoşlanırsın?",
+    question: "Bu alanda öğrenmeye başlarken seni en çok ne motive eder?",
     options: [
-      { text: "Kullanılabilirlik testi sonuçları ve kullanıcı geri bildirimleri", scores: { ux: 3, ui: 0, product: 1 } },
-      { text: "Görsel tasarımın kalitesi ve estetik tercihleri hakkında", scores: { ux: 0, ui: 3, product: 0 } },
-      { text: "Ürünün iş etkisi ve kullanıcı metriklerindeki değişim", scores: { ux: 1, ui: 0, product: 3 } },
-    ],
-  },
-  {
-    id: 9,
-    question: "Bir projede en çok hangi aşamada olmaktan keyif alırsın?",
-    options: [
-      { text: "Araştırma ve keşif aşamasında - kullanıcıları anlamak", scores: { ux: 3, ui: 0, product: 2 } },
-      { text: "Görsel tasarım aşamasında - mockup ve prototype oluşturmak", scores: { ux: 0, ui: 3, product: 1 } },
-      { text: "Strateji ve planlama aşamasında - ürünün yönünü belirlemek", scores: { ux: 1, ui: 0, product: 3 } },
-    ],
-  },
-  {
-    id: 10,
-    question: "Kendini tanımlarken hangi ifadeyi kullanırsın?",
-    options: [
-      { text: "Empatik, araştırmacı, kullanıcı odaklı", scores: { ux: 3, ui: 0, product: 1 } },
-      { text: "Yaratıcı, detaycı, estetik düşkünü", scores: { ux: 0, ui: 3, product: 0 } },
-      { text: "Stratejik, analitik, problem çözücü", scores: { ux: 1, ui: 0, product: 3 } },
+      { text: "İnsan davranışlarını anlamak.", scores: { ux: 3, ui: 0, product: 0 } },
+      { text: "Görsel tasarım becerilerini geliştirmek.", scores: { ux: 0, ui: 3, product: 0 } },
+      { text: "Ürün kararlarının arkasındaki mantığı öğrenmek.", scores: { ux: 0, ui: 0, product: 3 } },
     ],
   },
 ];
@@ -142,19 +124,19 @@ const resultDescriptions = {
   ux: {
     title: "UX Designer",
     icon: "🎯",
-    description: "Kullanıcı araştırması, davranış analizi ve kullanılabilirlik konularına odaklanıyorsun. Kullanıcıların ihtiyaçlarını anlamak ve sorunlarını çözmek senin için en önemli.",
+    description: "Yanıtlarına göre, UX Designer yoluyla başlaman senin için daha uygun görünüyor. Kullanıcıyı anlama, problem keşfi ve deneyimi iyileştirme tarafına daha yatkınsın. Bu bir sınav değil; ilerledikçe farklı alanlara da geçebilirsin.",
     roadmapLink: "/roadmap/ux-designer",
   },
   ui: {
     title: "UI Designer",
     icon: "🎨",
-    description: "Görsel tasarım, estetik ve arayüz detaylarına önem veriyorsun. Güzel, tutarlı ve etkileyici kullanıcı arayüzleri oluşturmak senin uzmanlık alanın.",
+    description: "Yanıtlarına göre, UI Designer yoluyla başlaman senin için daha uygun görünüyor. Görsel düzen, estetik ve arayüz detaylarına daha yatkınsın. Bu bir sınav değil; ilerledikçe farklı alanlara da geçebilirsin.",
     roadmapLink: "/roadmap/ui-designer",
   },
   product: {
     title: "Product Designer",
     icon: "💡",
-    description: "İş hedefleri ile kullanıcı ihtiyaçlarını dengelemek, stratejik düşünmek ve ürün başarısını ölçmek senin için önemli. Hem UX hem UI'ı birleştirerek bütünsel çözümler üretiyorsun.",
+    description: "Yanıtlarına göre, Product Designer yoluyla başlaman senin için daha uygun görünüyor. Ürün düşüncesi, önceliklendirme ve stratejik karar alma tarafına daha yatkınsın. Bu bir sınav değil; ilerledikçe farklı alanlara da geçebilirsin.",
     roadmapLink: "/roadmap/product-designer",
   },
 };
@@ -468,7 +450,7 @@ export default function Home() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
               </svg>
-              10 Soruluk Quiz'i Başlat
+              8 Soruluk Quiz'i Başlat
             </button>
           </div>
 
