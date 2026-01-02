@@ -479,7 +479,7 @@ export default function Home() {
           </p>
 
           {/* Roller (Job-based learning) */}
-          <div className="mb-8">
+          <div className="mb-16">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-2">Roller</h3>
               <p className="text-gray-400 text-sm">Belirli bir tasarım rolü için uçtan uca öğrenme yolculukları.</p>
@@ -522,46 +522,16 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Helper Link to Quiz */}
-          <div className="text-center mb-16">
-            <a
-              href="#quiz-helper"
-              className="text-gray-400 hover:text-[#DEFF37] text-sm transition-colors duration-200 inline-flex items-center gap-2"
-            >
-              Karar veremiyorsan
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-              quiz'i çöz
-            </a>
-          </div>
-
-          {/* Quiz Helper (Secondary) */}
-          <div id="quiz-helper" className="max-w-2xl mx-auto mb-20 p-8 bg-zinc-900/30 border border-zinc-800 rounded-xl text-center">
-            <h3 className="text-xl font-semibold text-white mb-3">
-              Karar veremediysen, yardımcı olalım.
-            </h3>
-            <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-              Rolleri inceledin ama hangisinin sana daha uygun olduğundan emin olamadın mı?
-              <br />
-              1 dakikalık kısa bir quiz ile sana en uygun başlangıç yolunu önerelim.
-            </p>
-            <button
-              onClick={() => setIsQuizOpen(true)}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-zinc-800 hover:bg-zinc-700 text-white font-medium rounded-lg transition-all duration-300"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-              </svg>
-              8 Soruluk Quiz'i Başlat
-            </button>
+          {/* Separator */}
+          <div className="mb-16">
+            <div className="h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
           </div>
 
           {/* Tasarım Disiplinleri (Skill/framework based learning) */}
-          <div>
+          <div className="mb-16">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-2">Tasarım Disiplinleri</h3>
-              <p className="text-gray-400 text-sm">Rol fark etmeksizin, uzun vadede geliştirilen temel tasarım yaklaşımları.</p>
+              <p className="text-gray-400 text-sm">Rolünden bağımsız olarak, tasarım becerilerini derinleştirebileceğin alanlar.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               {roadmaps.filter(r => ['design-system', 'design-thinking'].includes(r.id)).map((roadmap, index) => (
@@ -599,6 +569,46 @@ export default function Home() {
                 </Link>
               ))}
             </div>
+          </div>
+
+          {/* Separator */}
+          <div className="mb-12">
+            <div className="h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
+          </div>
+
+          {/* Helper Link to Quiz */}
+          <div className="text-center mb-6">
+            <a
+              href="#quiz-helper"
+              className="text-gray-400 hover:text-[#DEFF37] text-sm transition-colors duration-200 inline-flex items-center gap-2"
+            >
+              Karar veremiyorsan
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+              quiz'i çöz
+            </a>
+          </div>
+
+          {/* Quiz Helper (Secondary) */}
+          <div id="quiz-helper" className="max-w-2xl mx-auto p-8 bg-zinc-900/30 border border-zinc-800 rounded-xl text-center">
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Karar veremediysen, yardımcı olalım.
+            </h3>
+            <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+              Rolleri inceledin ama hangisinin sana daha uygun olduğundan emin olamadın mı?
+              <br />
+              1 dakikalık kısa bir quiz ile sana en uygun başlangıç yolunu önerelim.
+            </p>
+            <button
+              onClick={() => setIsQuizOpen(true)}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-zinc-800 hover:bg-zinc-700 text-white font-medium rounded-lg transition-all duration-300"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+              8 Soruluk Quiz'i Başlat
+            </button>
           </div>
         </div>
       </section>
