@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "DesignAtlas - Learn Design. Step by Step.",
-  description: "Clear roadmaps for UX, UI and Product Designers. No login. No fluff. Clear learning paths.",
+  title: "DesignAtlas - Tasarımı Öğren. Adım Adım.",
+  description: "UX, UI ve Product Designer'lar için net, açık roadmap'ler. Kayıt yok. Boş laf yok. Net öğrenme yolları.",
 };
 
 export default function RootLayout({

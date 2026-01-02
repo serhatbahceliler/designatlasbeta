@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
 interface Topic {
@@ -15,7 +16,7 @@ interface Roadmap {
   id: string;
   title: string;
   description: string;
-  gradient: string;
+  icon: string;
   sections: Section[];
 }
 
@@ -23,75 +24,75 @@ const roadmaps: Record<string, Roadmap> = {
   "ux-designer": {
     id: "ux-designer",
     title: "UX Designer",
-    description: "Master user research, wireframing, and user-centered design principles to create meaningful user experiences.",
-    gradient: "from-purple-500 to-pink-500",
+    description: "Kullanıcı araştırması, wireframe ve kullanıcı odaklı tasarım prensiplerinde ustalaşarak anlamlı kullanıcı deneyimleri oluştur.",
+    icon: "🎯",
     sections: [
       {
-        title: "Foundations",
+        title: "Temeller",
         topics: [
-          { title: "What is UX Design?", link: "https://www.interaction-design.org/literature/topics/ux-design" },
-          { title: "User-Centered Design", link: "https://www.nngroup.com/articles/user-centered-design/" },
-          { title: "Design Thinking Process", link: "https://www.interaction-design.org/literature/article/5-stages-in-the-design-thinking-process" },
+          { title: "UX Design Nedir?", link: "https://www.interaction-design.org/literature/topics/ux-design" },
+          { title: "Kullanıcı Odaklı Tasarım", link: "https://www.nngroup.com/articles/user-centered-design/" },
+          { title: "Design Thinking Süreci", link: "https://www.interaction-design.org/literature/article/5-stages-in-the-design-thinking-process" },
           { title: "UX vs UI vs Product Design" },
-          { title: "The Role of a UX Designer" },
+          { title: "UX Designer'ın Rolü" },
         ],
       },
       {
-        title: "Research",
+        title: "Araştırma",
         topics: [
-          { title: "User Interviews", link: "https://www.nngroup.com/articles/user-interviews/" },
-          { title: "Surveys & Questionnaires" },
-          { title: "Usability Testing", link: "https://www.nngroup.com/articles/usability-testing-101/" },
-          { title: "A/B Testing" },
-          { title: "Card Sorting" },
-          { title: "Personas & User Journey Maps" },
-          { title: "Competitive Analysis" },
+          { title: "Kullanıcı Görüşmeleri", link: "https://www.nngroup.com/articles/user-interviews/" },
+          { title: "Anketler & Soru Formları" },
+          { title: "Kullanılabilirlik Testleri", link: "https://www.nngroup.com/articles/usability-testing-101/" },
+          { title: "A/B Testleri" },
+          { title: "Kart Sıralama" },
+          { title: "Persona & Kullanıcı Yolculuk Haritaları" },
+          { title: "Rakip Analizi" },
         ],
       },
       {
-        title: "Information Architecture",
+        title: "Bilgi Mimarisi",
         topics: [
-          { title: "Site Maps & User Flows" },
-          { title: "Navigation Design" },
-          { title: "Content Strategy" },
-          { title: "Taxonomy & Labeling" },
+          { title: "Site Haritaları & Kullanıcı Akışları" },
+          { title: "Navigasyon Tasarımı" },
+          { title: "İçerik Stratejisi" },
+          { title: "Taksonomi & Etiketleme" },
         ],
       },
       {
-        title: "Wireframing & Prototyping",
+        title: "Wireframe & Prototipleme",
         topics: [
-          { title: "Low-Fidelity Wireframes" },
-          { title: "High-Fidelity Mockups" },
-          { title: "Interactive Prototypes" },
-          { title: "Figma Basics", link: "https://www.figma.com/resources/learn-design/" },
+          { title: "Düşük Çözünürlüklü Wireframe'ler" },
+          { title: "Yüksek Çözünürlüklü Mockup'lar" },
+          { title: "İnteraktif Prototipler" },
+          { title: "Figma Temelleri", link: "https://www.figma.com/resources/learn-design/" },
           { title: "Sketch / Adobe XD" },
         ],
       },
       {
-        title: "Interaction Design",
+        title: "Etkileşim Tasarımı",
         topics: [
-          { title: "Microinteractions" },
-          { title: "Animation Principles" },
-          { title: "Gestures & Touch Patterns" },
-          { title: "Feedback & Affordances" },
+          { title: "Mikro-etkileşimler" },
+          { title: "Animasyon Prensipleri" },
+          { title: "Jestler & Dokunma Desenleri" },
+          { title: "Geri Bildirim & Affordances" },
         ],
       },
       {
-        title: "Usability & Heuristics",
+        title: "Kullanılabilirlik & Heuristikler",
         topics: [
-          { title: "Nielsen's 10 Usability Heuristics", link: "https://www.nngroup.com/articles/ten-usability-heuristics/" },
-          { title: "Accessibility (WCAG)", link: "https://www.w3.org/WAI/standards-guidelines/wcag/" },
-          { title: "Inclusive Design" },
-          { title: "Error Prevention" },
+          { title: "Nielsen'in 10 Kullanılabilirlik Heuristiği", link: "https://www.nngroup.com/articles/ten-usability-heuristics/" },
+          { title: "Erişilebilirlik (WCAG)", link: "https://www.w3.org/WAI/standards-guidelines/wcag/" },
+          { title: "Kapsayıcı Tasarım" },
+          { title: "Hata Önleme" },
         ],
       },
       {
-        title: "Metrics & Validation",
+        title: "Metrikler & Doğrulama",
         topics: [
-          { title: "UX Metrics (NPS, SUS, CSAT)" },
-          { title: "Analytics & Heatmaps" },
-          { title: "Iterative Design" },
-          { title: "Presenting & Communicating Research" },
+          { title: "UX Metrikleri (NPS, SUS, CSAT)" },
+          { title: "Analitik & Isı Haritaları" },
+          { title: "İteratif Tasarım" },
+          { title: "Araştırma Sunumu & İletişimi" },
         ],
       },
     ],
@@ -99,76 +100,76 @@ const roadmaps: Record<string, Roadmap> = {
   "ui-designer": {
     id: "ui-designer",
     title: "UI Designer",
-    description: "Learn visual design principles, typography, color theory, and interface aesthetics to create beautiful user interfaces.",
-    gradient: "from-blue-500 to-cyan-500",
+    description: "Görsel tasarım prensiplerini, tipoğrafiyi, renk teorisini ve arayüz estetiğini öğrenerek güzel kullanıcı arayüzleri oluştur.",
+    icon: "🎨",
     sections: [
       {
-        title: "Foundations",
+        title: "Temeller",
         topics: [
-          { title: "What is UI Design?" },
-          { title: "Visual Hierarchy" },
-          { title: "Grid Systems & Layout" },
-          { title: "Spacing & Alignment" },
-          { title: "The Role of a UI Designer" },
+          { title: "UI Design Nedir?" },
+          { title: "Görsel Hiyerarşi" },
+          { title: "Grid Sistemleri & Layout" },
+          { title: "Boşluk & Hizalama" },
+          { title: "UI Designer'ın Rolü" },
         ],
       },
       {
-        title: "Color Theory",
+        title: "Renk Teorisi",
         topics: [
-          { title: "Color Psychology" },
-          { title: "Color Models (RGB, HSL, CMYK)" },
-          { title: "Color Palettes & Schemes" },
-          { title: "Contrast & Accessibility", link: "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" },
-          { title: "Dark Mode Design" },
+          { title: "Renk Psikolojisi" },
+          { title: "Renk Modelleri (RGB, HSL, CMYK)" },
+          { title: "Renk Paletleri & Şemalar" },
+          { title: "Kontrast & Erişilebilirlik", link: "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" },
+          { title: "Karanlık Mod Tasarımı" },
         ],
       },
       {
-        title: "Typography",
+        title: "Tipoğrafi",
         topics: [
-          { title: "Type Anatomy & Classification" },
-          { title: "Font Pairing", link: "https://fonts.google.com/" },
-          { title: "Hierarchy & Scale" },
-          { title: "Line Height & Letter Spacing" },
-          { title: "Responsive Typography" },
+          { title: "Yazı Anatomisi & Sınıflandırması" },
+          { title: "Font Eşleştirme", link: "https://fonts.google.com/" },
+          { title: "Hiyerarşi & Ölçek" },
+          { title: "Satır Yüksekliği & Harf Aralığı" },
+          { title: "Responsive Tipoğrafi" },
         ],
       },
       {
-        title: "Visual Design",
+        title: "Görsel Tasarım",
         topics: [
-          { title: "Icons & Iconography" },
-          { title: "Imagery & Photography" },
-          { title: "Illustrations" },
-          { title: "Shadows & Depth" },
-          { title: "Borders & Dividers" },
+          { title: "İkonlar & İkonografi" },
+          { title: "Görseller & Fotoğrafçılık" },
+          { title: "İlüstrasyonlar" },
+          { title: "Gölgeler & Derinlik" },
+          { title: "Kenarlıklar & Ayırıcılar" },
         ],
       },
       {
-        title: "Components & Patterns",
+        title: "Componentler & Desenler",
         topics: [
-          { title: "Buttons & CTAs" },
-          { title: "Forms & Input Fields" },
-          { title: "Navigation Patterns" },
-          { title: "Cards & Lists" },
-          { title: "Modals & Overlays" },
-          { title: "Tables & Data Display" },
+          { title: "Butonlar & CTA'lar" },
+          { title: "Formlar & Input Alanları" },
+          { title: "Navigasyon Desenleri" },
+          { title: "Kartlar & Listeler" },
+          { title: "Modal'lar & Overlay'ler" },
+          { title: "Tablolar & Veri Gösterimi" },
         ],
       },
       {
-        title: "Design Tools",
+        title: "Tasarım Araçları",
         topics: [
-          { title: "Figma Advanced", link: "https://www.figma.com/resources/learn-design/" },
+          { title: "Figma İleri Seviye", link: "https://www.figma.com/resources/learn-design/" },
           { title: "Auto Layout & Constraints" },
-          { title: "Components & Variants" },
-          { title: "Plugins & Workflows" },
+          { title: "Componentler & Varyantlar" },
+          { title: "Plugin'ler & İş Akışları" },
         ],
       },
       {
-        title: "Handoff & Collaboration",
+        title: "Handoff & İşbirliği",
         topics: [
-          { title: "Design Specs & Redlines" },
-          { title: "Design Tokens" },
-          { title: "Working with Developers" },
-          { title: "Version Control for Designers" },
+          { title: "Tasarım Spesifikasyonları & Redline'lar" },
+          { title: "Design Token'lar" },
+          { title: "Developer'larla Çalışma" },
+          { title: "Tasarımcılar için Versiyon Kontrolü" },
         ],
       },
     ],
@@ -176,71 +177,71 @@ const roadmaps: Record<string, Roadmap> = {
   "product-designer": {
     id: "product-designer",
     title: "Product Designer",
-    description: "Combine UX research, UI design, and product strategy to create holistic product experiences.",
-    gradient: "from-orange-500 to-red-500",
+    description: "UX araştırmasını, UI tasarımını ve ürün stratejisini birleştirerek bütünsel ürün deneyimleri oluştur.",
+    icon: "💡",
     sections: [
       {
-        title: "Product Fundamentals",
+        title: "Ürün Temelleri",
         topics: [
-          { title: "What is Product Design?" },
-          { title: "Product Thinking" },
-          { title: "Product Lifecycle" },
-          { title: "The Role of a Product Designer" },
+          { title: "Product Design Nedir?" },
+          { title: "Ürün Düşüncesi" },
+          { title: "Ürün Yaşam Döngüsü" },
+          { title: "Product Designer'ın Rolü" },
         ],
       },
       {
-        title: "UX & UI Skills",
+        title: "UX & UI Yetenekleri",
         topics: [
-          { title: "User Research Methods" },
-          { title: "Wireframing & Prototyping" },
-          { title: "Visual Design Principles" },
-          { title: "Interaction Design" },
+          { title: "Kullanıcı Araştırma Yöntemleri" },
+          { title: "Wireframe & Prototipleme" },
+          { title: "Görsel Tasarım Prensipleri" },
+          { title: "Etkileşim Tasarımı" },
         ],
       },
       {
-        title: "Product Strategy",
+        title: "Ürün Stratejisi",
         topics: [
-          { title: "Business Goals & KPIs" },
-          { title: "Value Propositions" },
-          { title: "Competitive Analysis" },
-          { title: "Market Research" },
+          { title: "İş Hedefleri & KPI'lar" },
+          { title: "Değer Önerileri" },
+          { title: "Rakip Analizi" },
+          { title: "Pazar Araştırması" },
         ],
       },
       {
-        title: "User & Problem Discovery",
+        title: "Kullanıcı & Problem Keşfi",
         topics: [
           { title: "Jobs to be Done (JTBD)", link: "https://jtbd.info/" },
-          { title: "Problem Framing" },
-          { title: "Opportunity Mapping" },
-          { title: "User Needs vs Business Needs" },
+          { title: "Problem Çerçeveleme" },
+          { title: "Fırsat Haritalama" },
+          { title: "Kullanıcı İhtiyaçları vs İş İhtiyaçları" },
         ],
       },
       {
-        title: "Collaboration & Communication",
+        title: "İşbirliği & İletişim",
         topics: [
-          { title: "Working with Product Managers" },
-          { title: "Collaborating with Engineers" },
-          { title: "Stakeholder Management" },
-          { title: "Design Critiques" },
-          { title: "Presenting Your Work" },
+          { title: "Product Manager'larla Çalışma" },
+          { title: "Mühendislerle İşbirliği" },
+          { title: "Paydaş Yönetimi" },
+          { title: "Tasarım Kritiği" },
+          { title: "Çalışmalarınızı Sunma" },
         ],
       },
       {
-        title: "Metrics & Iteration",
+        title: "Metrikler & İterasyon",
         topics: [
-          { title: "Product Analytics" },
-          { title: "Feature Adoption" },
-          { title: "Conversion Funnels" },
-          { title: "Iterative Design & A/B Testing" },
+          { title: "Ürün Analitiği" },
+          { title: "Özellik Benimsenmesi" },
+          { title: "Dönüşüm Hunileri" },
+          { title: "İteratif Tasarım & A/B Testleri" },
         ],
       },
       {
-        title: "Advanced Topics",
+        title: "İleri Konular",
         topics: [
-          { title: "Growth Design" },
-          { title: "Monetization & Pricing UI" },
-          { title: "Onboarding Flows" },
-          { title: "Empty States & Error Handling" },
+          { title: "Büyüme Tasarımı" },
+          { title: "Monetizasyon & Fiyatlandırma UI" },
+          { title: "Onboarding Akışları" },
+          { title: "Boş Durumlar & Hata Yönetimi" },
         ],
       },
     ],
@@ -248,72 +249,72 @@ const roadmaps: Record<string, Roadmap> = {
   "design-system": {
     id: "design-system",
     title: "Design System",
-    description: "Build and maintain scalable design systems, component libraries, and design governance.",
-    gradient: "from-green-500 to-teal-500",
+    description: "Ölçeklenebilir tasarım sistemleri, component kütüphaneleri ve tasarım yönetişimi oluştur ve sürdür.",
+    icon: "🧩",
     sections: [
       {
-        title: "Foundations",
+        title: "Temeller",
         topics: [
-          { title: "What is a Design System?" },
-          { title: "Design System vs Component Library" },
-          { title: "Benefits & Use Cases" },
-          { title: "When to Build a Design System" },
+          { title: "Design System Nedir?" },
+          { title: "Design System vs Component Kütüphanesi" },
+          { title: "Faydalar & Kullanım Alanları" },
+          { title: "Ne Zaman Design System Oluşturulmalı" },
         ],
       },
       {
-        title: "Design Tokens",
+        title: "Design Token'lar",
         topics: [
-          { title: "What are Design Tokens?", link: "https://designtokens.org/" },
-          { title: "Color Tokens" },
-          { title: "Typography Tokens" },
-          { title: "Spacing & Sizing Tokens" },
-          { title: "Token Management" },
+          { title: "Design Token Nedir?", link: "https://designtokens.org/" },
+          { title: "Renk Token'ları" },
+          { title: "Tipoğrafi Token'ları" },
+          { title: "Boşluk & Boyutlandırma Token'ları" },
+          { title: "Token Yönetimi" },
         ],
       },
       {
-        title: "Component Design",
+        title: "Component Tasarımı",
         topics: [
-          { title: "Atomic Design Methodology", link: "https://bradfrost.com/blog/post/atomic-web-design/" },
-          { title: "Component API Design" },
-          { title: "Variants & States" },
-          { title: "Composition Patterns" },
+          { title: "Atomic Design Metodolojisi", link: "https://bradfrost.com/blog/post/atomic-web-design/" },
+          { title: "Component API Tasarımı" },
+          { title: "Varyantlar & Durumlar" },
+          { title: "Kompozisyon Desenleri" },
         ],
       },
       {
-        title: "Documentation",
+        title: "Dokümantasyon",
         topics: [
-          { title: "Component Documentation" },
-          { title: "Usage Guidelines" },
-          { title: "Do's and Don'ts" },
-          { title: "Code Examples" },
+          { title: "Component Dokümantasyonu" },
+          { title: "Kullanım Kılavuzları" },
+          { title: "Yapılması & Yapılmaması Gerekenler" },
+          { title: "Kod Örnekleri" },
           { title: "Storybook", link: "https://storybook.js.org/" },
         ],
       },
       {
-        title: "Governance & Contribution",
+        title: "Yönetişim & Katkı",
         topics: [
-          { title: "Design System Team Structure" },
-          { title: "Contribution Models" },
-          { title: "Version Control" },
-          { title: "Deprecation Strategy" },
+          { title: "Design System Ekip Yapısı" },
+          { title: "Katkı Modelleri" },
+          { title: "Versiyon Kontrolü" },
+          { title: "Deprecation Stratejisi" },
         ],
       },
       {
-        title: "Implementation",
+        title: "Uygulama",
         topics: [
-          { title: "Design-to-Code Workflow" },
-          { title: "Component Libraries (React, Vue, etc.)" },
-          { title: "CSS Architecture" },
-          { title: "Theming & Customization" },
+          { title: "Tasarımdan Koda İş Akışı" },
+          { title: "Component Kütüphaneleri (React, Vue, vb.)" },
+          { title: "CSS Mimarisi" },
+          { title: "Temalama & Özelleştirme" },
         ],
       },
       {
-        title: "Adoption & Scale",
+        title: "Benimseme & Ölçekleme",
         topics: [
-          { title: "Measuring Adoption" },
-          { title: "Training & Onboarding" },
-          { title: "Multi-Brand Support" },
-          { title: "Accessibility in Design Systems" },
+          { title: "Benimsemeyi Ölçme" },
+          { title: "Eğitim & Onboarding" },
+          { title: "Çoklu Marka Desteği" },
+          { title: "Design System'lerde Erişilebilirlik" },
         ],
       },
     ],
@@ -321,81 +322,81 @@ const roadmaps: Record<string, Roadmap> = {
   "design-thinking": {
     id: "design-thinking",
     title: "Design Thinking",
-    description: "Apply design thinking methodology and frameworks to solve complex problems creatively.",
-    gradient: "from-indigo-500 to-purple-500",
+    description: "Karmaşık problemleri yaratıcı bir şekilde çözmek için design thinking metodolojisi ve çerçevelerini uygula.",
+    icon: "💭",
     sections: [
       {
-        title: "Introduction",
+        title: "Giriş",
         topics: [
-          { title: "What is Design Thinking?", link: "https://www.interaction-design.org/literature/article/what-is-design-thinking-and-why-is-it-so-popular" },
-          { title: "History & Origins" },
-          { title: "Mindsets of a Design Thinker" },
-          { title: "When to Use Design Thinking" },
+          { title: "Design Thinking Nedir?", link: "https://www.interaction-design.org/literature/article/what-is-design-thinking-and-why-is-it-so-popular" },
+          { title: "Tarihçe & Kökenleri" },
+          { title: "Bir Design Thinker'ın Zihin Yapısı" },
+          { title: "Design Thinking Ne Zaman Kullanılır" },
         ],
       },
       {
-        title: "The 5 Stages",
+        title: "5 Aşama",
         topics: [
-          { title: "1. Empathize", link: "https://www.interaction-design.org/literature/article/stage-1-in-the-design-thinking-process-empathise-with-your-users" },
-          { title: "2. Define" },
-          { title: "3. Ideate" },
-          { title: "4. Prototype" },
-          { title: "5. Test" },
+          { title: "1. Empati Kurma", link: "https://www.interaction-design.org/literature/article/stage-1-in-the-design-thinking-process-empathise-with-your-users" },
+          { title: "2. Tanımlama" },
+          { title: "3. Fikir Üretme" },
+          { title: "4. Prototipleme" },
+          { title: "5. Test Etme" },
         ],
       },
       {
-        title: "Empathy & Research",
+        title: "Empati & Araştırma",
         topics: [
-          { title: "Empathy Mapping" },
-          { title: "User Interviews" },
-          { title: "Observation & Ethnography" },
-          { title: "Stakeholder Interviews" },
+          { title: "Empati Haritalama" },
+          { title: "Kullanıcı Görüşmeleri" },
+          { title: "Gözlem & Etnografi" },
+          { title: "Paydaş Görüşmeleri" },
         ],
       },
       {
-        title: "Problem Definition",
+        title: "Problem Tanımlama",
         topics: [
-          { title: "Point of View (POV) Statements" },
-          { title: "How Might We (HMW) Questions", link: "https://www.designkit.org/methods/how-might-we" },
-          { title: "Problem Framing" },
-          { title: "Insights Synthesis" },
+          { title: "Bakış Açısı (POV) İfadeleri" },
+          { title: "Nasıl Yapabiliriz (HMW) Soruları", link: "https://www.designkit.org/methods/how-might-we" },
+          { title: "Problem Çerçeveleme" },
+          { title: "İçgörü Sentezi" },
         ],
       },
       {
-        title: "Ideation Techniques",
+        title: "Fikir Üretme Teknikleri",
         topics: [
-          { title: "Brainstorming" },
+          { title: "Beyin Fırtınası" },
           { title: "Crazy 8's" },
           { title: "SCAMPER" },
-          { title: "Mind Mapping" },
-          { title: "Worst Possible Idea" },
+          { title: "Zihin Haritalama" },
+          { title: "En Kötü Fikir" },
         ],
       },
       {
-        title: "Prototyping",
+        title: "Prototipleme",
         topics: [
-          { title: "Paper Prototyping" },
-          { title: "Digital Prototyping" },
-          { title: "Role Playing" },
-          { title: "Storyboarding" },
+          { title: "Kağıt Prototipleme" },
+          { title: "Dijital Prototipleme" },
+          { title: "Rol Oynama" },
+          { title: "Hikaye Tahtası (Storyboard)" },
         ],
       },
       {
-        title: "Testing & Iteration",
+        title: "Test & İterasyon",
         topics: [
-          { title: "Usability Testing" },
-          { title: "Feedback Loops" },
-          { title: "Iteration Cycles" },
-          { title: "Pivoting vs Persevering" },
+          { title: "Kullanılabilirlik Testleri" },
+          { title: "Geri Bildirim Döngüleri" },
+          { title: "İterasyon Döngüleri" },
+          { title: "Pivot vs Sebat Etme" },
         ],
       },
       {
-        title: "Facilitation",
+        title: "Fasilitasyon",
         topics: [
-          { title: "Running Design Sprints", link: "https://www.gv.com/sprint/" },
-          { title: "Workshop Facilitation" },
-          { title: "Remote Design Thinking" },
-          { title: "Stakeholder Buy-in" },
+          { title: "Design Sprint'leri Yönetme", link: "https://www.gv.com/sprint/" },
+          { title: "Workshop Fasilitasyonu" },
+          { title: "Uzaktan Design Thinking" },
+          { title: "Paydaş Desteği Alma" },
         ],
       },
     ],
@@ -417,35 +418,50 @@ export default async function RoadmapPage({ params }: { params: Promise<{ slug: 
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <main className="min-h-screen bg-black">
       {/* Header */}
-      <header className="sticky top-0 z-50 glass border-b border-gray-200">
+      <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-lg border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent hover:scale-105 transition-transform">
-            DesignAtlas
+          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <Image
+              src="https://r.resimlink.com/rN7xge0jUDZ1.png"
+              alt="DesignAtlas"
+              width={150}
+              height={40}
+              className="h-10 w-auto"
+              unoptimized
+            />
           </Link>
-          <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors">
-            ← Back to Roadmaps
+          <Link
+            href="/"
+            className="text-gray-400 hover:text-[#DEFF37] transition-colors flex items-center gap-2"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Roadmap'lere Dön
           </Link>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br opacity-30" style={{
-          backgroundImage: `linear-gradient(to bottom right, var(--tw-gradient-stops))`,
-        }}></div>
+      <section className="relative py-20 px-6 overflow-hidden border-b border-zinc-800">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#DEFF37]/5 to-transparent"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className={`inline-block px-6 py-3 mb-6 rounded-full bg-gradient-to-r ${roadmap.gradient} text-white font-semibold animate-scale-in`}>
+          <div className="text-6xl mb-6 animate-scale-in">
+            {roadmap.icon}
+          </div>
+
+          <div className="inline-block px-6 py-2 mb-6 rounded-full bg-[#DEFF37]/10 border border-[#DEFF37]/30 text-[#DEFF37] font-semibold animate-fade-in">
             Roadmap
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white animate-fade-in">
             {roadmap.title}
           </h1>
 
-          <p className="text-xl text-gray-700 animate-slide-up">
+          <p className="text-xl text-gray-400 animate-slide-up">
             {roadmap.description}
           </p>
         </div>
@@ -456,7 +472,7 @@ export default async function RoadmapPage({ params }: { params: Promise<{ slug: 
         <div className="max-w-5xl mx-auto">
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 via-pink-500 to-blue-500 rounded-full hidden md:block"></div>
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#DEFF37] via-[#DEFF37]/50 to-transparent rounded-full hidden md:block"></div>
 
             {/* Sections */}
             <div className="space-y-12">
@@ -467,13 +483,13 @@ export default async function RoadmapPage({ params }: { params: Promise<{ slug: 
                   style={{ animationDelay: `${sectionIndex * 0.1}s` }}
                 >
                   {/* Section marker */}
-                  <div className="absolute left-0 w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg hidden md:flex">
-                    <span className="text-white font-bold text-xl">{sectionIndex + 1}</span>
+                  <div className="absolute left-0 w-16 h-16 bg-[#DEFF37] rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(222,255,55,0.3)] hidden md:flex">
+                    <span className="text-black font-bold text-xl">{sectionIndex + 1}</span>
                   </div>
 
                   {/* Section content */}
                   <div className="md:ml-24">
-                    <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                    <h2 className="text-3xl font-bold mb-6 text-white">
                       {section.title}
                     </h2>
 
@@ -488,21 +504,21 @@ export default async function RoadmapPage({ params }: { params: Promise<{ slug: 
                               href={topic.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 glass"
+                              className="flex items-center justify-between p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-[#DEFF37]/50 hover:bg-zinc-900 transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm"
                             >
-                              <span className="font-medium text-gray-900 group-hover:text-purple-600 transition-colors">
+                              <span className="font-medium text-white group-hover:text-[#DEFF37] transition-colors">
                                 {topic.title}
                               </span>
-                              <svg className="w-5 h-5 text-gray-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <svg className="w-5 h-5 text-gray-600 group-hover:text-[#DEFF37] group-hover:translate-x-1 transition-all flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                               </svg>
                             </a>
                           ) : (
-                            <div className="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm glass">
-                              <span className="font-medium text-gray-700">
+                            <div className="flex items-center justify-between p-4 bg-zinc-900/30 border border-zinc-800/50 rounded-xl backdrop-blur-sm">
+                              <span className="font-medium text-gray-400">
                                 {topic.title}
                               </span>
-                              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                              <div className="w-2 h-2 bg-zinc-700 rounded-full flex-shrink-0"></div>
                             </div>
                           )}
                         </div>
@@ -515,26 +531,26 @@ export default async function RoadmapPage({ params }: { params: Promise<{ slug: 
           </div>
 
           {/* CTA */}
-          <div className="mt-20 text-center p-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-3xl shadow-2xl">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to explore more?
+          <div className="mt-20 text-center p-12 bg-gradient-to-br from-[#DEFF37] to-[#DEFF37]/80 rounded-3xl shadow-[0_0_50px_rgba(222,255,55,0.2)]">
+            <h3 className="text-3xl font-bold text-black mb-4">
+              Daha fazlasını keşfetmeye hazır mısın?
             </h3>
-            <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-              Check out other roadmaps to expand your design knowledge and skills.
+            <p className="text-black/80 mb-8 max-w-2xl mx-auto">
+              Tasarım bilgi ve becerilerini genişletmek için diğer roadmap'lere göz at.
             </p>
             <Link
               href="/"
-              className="inline-block px-8 py-4 bg-white text-purple-600 font-semibold rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              className="inline-block px-8 py-4 bg-black text-[#DEFF37] font-bold rounded-lg hover:bg-zinc-900 hover:scale-105 transition-all duration-300"
             >
-              View All Roadmaps
+              Tüm Roadmap'leri Gör
             </Link>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 bg-gray-900 text-gray-400 text-center">
-        <p>DesignAtlas BETA &copy; 2024 - Learn Design. Step by Step.</p>
+      <footer className="py-8 px-6 bg-black border-t border-zinc-900 text-gray-500 text-center">
+        <p>DesignAtlas BETA &copy; 2024 - Tasarımı Öğren. Adım Adım.</p>
       </footer>
     </main>
   );
