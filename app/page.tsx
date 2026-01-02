@@ -5,33 +5,40 @@ const roadmaps = [
   {
     id: "ux-designer",
     title: "UX Designer",
-    description: "Kullanıcı araştırması, wireframe ve kullanıcı odaklı tasarımda ustalaş",
+    description: "Araştırma, akış, test ve temel UX pratikleri.",
     icon: "🎯",
   },
   {
     id: "ui-designer",
     title: "UI Designer",
-    description: "Görsel tasarım, tipografi ve arayüz estetiğini öğren",
+    description: "Görsel hiyerarşi, layout, component düşüncesi.",
     icon: "🎨",
   },
   {
     id: "product-designer",
     title: "Product Designer",
-    description: "UX ve UI'ı ürün stratejisi ve düşüncesi ile birleştir",
+    description: "Problem çözme, ürün düşüncesi, tasarım süreci.",
     icon: "💡",
   },
   {
     id: "design-system",
-    title: "Design System",
-    description: "Ölçeklenebilir tasarım sistemleri ve component kütüphaneleri oluştur",
+    title: "Design Systems",
+    description: "Bileşenler, token mantığı, ölçeklenebilir UI.",
     icon: "🧩",
   },
   {
     id: "design-thinking",
     title: "Design Thinking",
-    description: "Karmaşık problemleri çözmek için design thinking metodolojisini uygula",
+    description: "Problem keşfi, fikir üretimi, prototipleme, test.",
     icon: "💭",
   },
+];
+
+const anonymousQuotes = [
+  "YouTube izliyorum ama doğru sırada mı öğreniyorum bilmiyorum.",
+  "UX mi UI mı Product mı seçmem gerektiğine karar veremiyorum.",
+  "Bir şeyler öğreniyorum ama ilerlediğimi hissetmiyorum.",
+  "Her kaynak farklı bir şey söylüyor, hangisine güveneceğimi bilmiyorum.",
 ];
 
 export default function Home() {
@@ -57,7 +64,7 @@ export default function Home() {
           {/* Logo */}
           <div className="mb-12 animate-fade-in flex justify-center">
             <Image
-              src="https://r.resimlink.com/rN7xge0jUDZ1.png"
+              src="https://r.resimlink.com/9ezfkr.png"
               alt="DesignAtlas"
               width={200}
               height={60}
@@ -67,13 +74,15 @@ export default function Home() {
           </div>
 
           <div className="animate-slide-up">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-white">
-              Tasarımı Öğren.
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
+              Tasarımı öğrenmek
               <br />
-              <span className="text-[#DEFF37]">Adım Adım.</span>
+              <span className="text-[#DEFF37]">zor olmamalı.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto">
-              UX, UI ve Product Designer'lar için net, açık roadmap'ler.
+            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              DesignAtlas, UX, UI ve Product Design öğrenme sürecindeki belirsizliği azaltmak için oluşturulmuş, adım adım öğrenme yol haritaları sunar.
+              <br />
+              <span className="text-gray-400">Neyi, ne zaman ve neden öğrenmen gerektiğini netleştirir.</span>
             </p>
             <a
               href="#roadmaps"
@@ -92,14 +101,172 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Roadmap Categories Section */}
-      <section id="roadmaps" className="py-24 px-6 bg-black border-t border-[#DEFF37]/20">
+      {/* Problem Section */}
+      <section className="py-24 px-6 bg-black border-t border-[#DEFF37]/20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-white">
+            Sorun içerik eksikliği değil, yön eksikliği
+          </h2>
+          <p className="text-center text-gray-400 mb-12 text-lg max-w-2xl mx-auto">
+            YouTube'da videolar, Medium'da makaleler, onlarca kurs platformu... İçerik her yerde. Ama doğru sırada, doğru zamanda neyi öğrenmen gerektiğini söyleyen yok.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center">
+                  <svg className="w-4 h-4 text-[#DEFF37]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <p className="text-gray-300">Nereden başlayacağını bilememek</p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center">
+                  <svg className="w-4 h-4 text-[#DEFF37]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <p className="text-gray-300">Hangi konunun gerçekten önemli olduğunu ayırt edememek</p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center">
+                  <svg className="w-4 h-4 text-[#DEFF37]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <p className="text-gray-300">Doğru sırada ilerleyip ilerlemediğinden emin olamamak</p>
+              </div>
+            </div>
+
+            <div className="p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center">
+                  <svg className="w-4 h-4 text-[#DEFF37]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <p className="text-gray-300">Öğrendiğini ilerleme hissine çevirememek</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Evidence / Real Voices Section */}
+      <section className="py-24 px-6 bg-zinc-950 border-t border-[#DEFF37]/20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
+            Tasarımcılar bize ne söyledi?
+          </h2>
+          <p className="text-center text-gray-400 mb-12 text-lg">
+            Aşağıdaki yorumlar, daha önce yaptığımız anonim bir anketten alınmıştır.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {anonymousQuotes.map((quote, index) => (
+              <div
+                key={index}
+                className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-[#DEFF37]/30 transition-colors"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 text-2xl">💬</div>
+                  <p className="text-gray-300 italic leading-relaxed">"{quote}"</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <p className="text-sm text-gray-500 mb-4">
+              🔒 Tüm geri bildirimler anonimdir.
+            </p>
+            <Link
+              href="/survey"
+              className="inline-flex items-center gap-2 text-[#DEFF37] hover:text-[#DEFF37]/80 transition-colors font-medium"
+            >
+              Anonim anketi görüntüle
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Section */}
+      <section className="py-24 px-6 bg-black border-t border-[#DEFF37]/20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+            DesignAtlas tam olarak bu noktada devreye giriyor
+          </h2>
+
+          <div className="space-y-6">
+            <div className="flex items-start gap-4 p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl">
+              <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37] rounded-lg flex items-center justify-center">
+                <svg className="w-4 h-4 text-[#DEFF37]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-white font-medium mb-1">UX, UI ve Product Designer'lar için adım adım roadmap'ler</p>
+                <p className="text-gray-400 text-sm">Her rolde ne öğrenmen gerektiğini, hangi sırayla ilerlemen gerektiğini göster.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl">
+              <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37] rounded-lg flex items-center justify-center">
+                <svg className="w-4 h-4 text-[#DEFF37]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-white font-medium mb-1">Güvenilir kaynaklardan kürasyonlu içerikler</p>
+                <p className="text-gray-400 text-sm">Nielsen Norman Group, Interaction Design Foundation gibi güvenilir kaynaklara yönlendirme.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl">
+              <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37] rounded-lg flex items-center justify-center">
+                <svg className="w-4 h-4 text-[#DEFF37]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-white font-medium mb-1">Temel konulara odaklanan sade yapı</p>
+                <p className="text-gray-400 text-sm">Gereksiz detaylar yok. Sadece öğrenmen gereken temel konular.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl">
+              <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37] rounded-lg flex items-center justify-center">
+                <svg className="w-4 h-4 text-[#DEFF37]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-white font-medium mb-1">Hesap oluşturmadan, baskı olmadan öğrenme</p>
+                <p className="text-gray-400 text-sm">Hemen başla. Mail adresi yok, üyelik yok, sadece öğren.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Roadmap Preview Section */}
+      <section id="roadmaps" className="py-24 px-6 bg-zinc-950 border-t border-[#DEFF37]/20">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
-            Yolunu Seç
+            Öğrenme yolunu seç
           </h2>
           <p className="text-center text-gray-400 mb-16 text-lg">
-            Senin için hazırladığımız 5 farklı tasarım yolu
+            5 farklı tasarım disiplini için hazırlanmış roadmap'ler
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -124,13 +291,13 @@ export default function Home() {
                     {roadmap.title}
                   </h3>
 
-                  <p className="text-gray-400 mb-6 leading-relaxed">
+                  <p className="text-gray-400 mb-6 leading-relaxed text-sm">
                     {roadmap.description}
                   </p>
 
-                  <div className="flex items-center text-[#DEFF37] font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                  <div className="flex items-center text-[#DEFF37] font-semibold group-hover:translate-x-2 transition-transform duration-300 text-sm">
                     Roadmap'i Gör
-                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </div>
@@ -141,61 +308,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why DesignAtlas Section */}
-      <section className="py-24 px-6 bg-zinc-950 border-t border-[#DEFF37]/20 relative overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, #DEFF37 1px, transparent 0)',
-            backgroundSize: '40px 40px',
-          }}></div>
-        </div>
-
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
-            Neden DesignAtlas?
-          </h2>
-          <p className="text-center text-gray-400 mb-16 text-lg">
-            Türkçe, ücretsiz ve sade öğrenme yolları
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-[#DEFF37]/50 transition-all duration-300 group backdrop-blur-sm">
-              <div className="w-16 h-16 mx-auto mb-6 bg-[#DEFF37]/10 border-2 border-[#DEFF37] rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                <svg className="w-8 h-8 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-white">Kayıt Yok</h3>
-              <p className="text-gray-400">
-                Direkt başla. Hesap yok, engel yok, sürtünme yok.
-              </p>
-            </div>
-
-            <div className="text-center p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-[#DEFF37]/50 transition-all duration-300 group backdrop-blur-sm">
-              <div className="w-16 h-16 mx-auto mb-6 bg-[#DEFF37]/10 border-2 border-[#DEFF37] rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                <svg className="w-8 h-8 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-white">Boş Laf Yok</h3>
-              <p className="text-gray-400">
-                Sadece önemli olanlar. Net, uygulanabilir içerik.
-              </p>
-            </div>
-
-            <div className="text-center p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-[#DEFF37]/50 transition-all duration-300 group backdrop-blur-sm">
-              <div className="w-16 h-16 mx-auto mb-6 bg-[#DEFF37]/10 border-2 border-[#DEFF37] rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                <svg className="w-8 h-8 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-white">Net Öğrenme Yolları</h3>
-              <p className="text-gray-400">
-                Sırada ne olduğunu tam olarak bil. Tahmin yok, sadece ilerleme.
-              </p>
-            </div>
+      {/* No Sign-Up Section */}
+      <section className="py-24 px-6 bg-black border-t border-[#DEFF37]/20">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="w-16 h-16 mx-auto mb-6 bg-[#DEFF37]/10 border-2 border-[#DEFF37] rounded-2xl flex items-center justify-center">
+            <svg className="w-8 h-8 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
           </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            Çünkü öğrenmek için hesap açmak zorunda değilsin
+          </h2>
+          <p className="text-lg text-gray-400 leading-relaxed">
+            DesignAtlas'ta mail bırakman gerekmez. Hesap oluşturman gerekmez. Sadece öğrenirsin.
+          </p>
+        </div>
+      </section>
+
+      {/* Beta Disclaimer Section */}
+      <section className="py-16 px-6 bg-zinc-950 border-t border-[#DEFF37]/20">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="inline-block px-4 py-2 mb-4 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-full">
+            <span className="text-[#DEFF37] font-semibold text-sm">BETA</span>
+          </div>
+          <h3 className="text-2xl font-bold mb-4 text-white">
+            Bu bir beta sürüm
+          </h3>
+          <p className="text-gray-400">
+            DesignAtlas erken aşamada. İçerikler geri bildirimlerle gelişecek.
+          </p>
+        </div>
+      </section>
+
+      {/* Footer CTA */}
+      <section className="py-20 px-6 bg-black border-t border-[#DEFF37]/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Bir roadmap ile başla.
+            <br />
+            <span className="text-[#DEFF37]">Adım adım ilerle.</span>
+          </h2>
+          <a
+            href="#roadmaps"
+            className="inline-block px-8 py-4 bg-[#DEFF37] text-black font-bold rounded-lg hover:bg-[#DEFF37]/90 hover:shadow-[0_0_30px_rgba(222,255,55,0.3)] hover:scale-105 transition-all duration-300"
+          >
+            Roadmap'leri Keşfet
+          </a>
         </div>
       </section>
 
