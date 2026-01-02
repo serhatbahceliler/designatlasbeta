@@ -4109,14 +4109,165 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "8. Interaction & Motion (UI Perspective)",
-        description: "Mikroetkileşimler, animasyonlar ve hareket prensipleri.",
+        title: "8. 🎞️ Interaction & Motion (UI Perspective)",
+        description: "Motion ve etkileşim, bir arayüzün nasıl 'tepki verdiğini', geçişlerin nasıl algılandığını ve kullanıcının nerede olduğunu anlatan görsel ipuçlarıdır. Amaç: dikkat yönlendirmek, durumu açıklamak ve deneyimi akıcı hale getirmek. Motion amaçlı olmalıdır; süs değildir.",
         topics: [
-          { title: "Microinteractions (Feedback, confirmation, delight)" },
-          { title: "Motion Principles (Purpose, timing, easing)" },
-          { title: "Motion for Hierarchy & Focus (Guiding attention)" },
-          { title: "Motion Pitfalls (Overuse, nausea, performance)" },
-          { title: "Motion in Components (Transitions, overlays, toasts)" },
+          {
+            title: "Microinteractions",
+            description: "Microinteraction tek bir aksiyona verilen küçük tepkidir. Örnekler: butona basıldığında renk değişimi, favoriye ekleme animasyonu, toggle geçişi. İyi microinteraction hızlı, doğal ve dikkat dağıtmayan olmalıdır. Bir microinteraction düşün: Olmazsa ne kaybolur? Varsa kullanıcı ne hisseder?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Microinteractions", url: "https://www.nngroup.com/articles/microinteractions/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Microinteractions Explained – NNGroup", url: "https://www.youtube.com/results?search_query=microinteractions+ui+design" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing Microinteractions", url: "https://uxdesign.cc/designing-microinteractions-7c8b6e4c6f8e" },
+                  { title: "Why Microinteractions Matter", url: "https://uxdesign.cc/why-microinteractions-matter-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir microinteraction düşün: Olmazsa ne kaybolur?",
+                "Varsa kullanıcı ne hisseder?",
+              ],
+            },
+          },
+          {
+            title: "Motion Principles (Timing & Easing)",
+            description: "Motion kararları hız, gecikme ve easing üzerinden algılanır. Yanlış motion yavaşlatır, mide bulandırır ve profesyonellik hissini düşürür. Bir animasyonu izle: Çok mu yavaş? Gereğinden uzun mu?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Animation and Motion", url: "https://www.nngroup.com/articles/animation/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Motion Design Basics – NNGroup", url: "https://www.youtube.com/results?search_query=motion+design+basics" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "UI Motion Principles", url: "https://uxdesign.cc/ui-motion-principles-7c8b6e4c6f8e" },
+                  { title: "Timing & Easing Explained", url: "https://uxdesign.cc/timing-easing-explained-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir animasyonu izle: Çok mu yavaş?",
+                "Gereğinden uzun mu?",
+              ],
+            },
+          },
+          {
+            title: "Motion for Hierarchy & Focus",
+            description: "Motion dikkati yönlendirebilir ve önceliği gösterebilir. Örnek: modal açılırken arka planın geri çekilmesi, focus olan alanın öne çıkması. Bir geçiş düşün: Motion olmasa kullanıcı nerede olduğunu anlar mı?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Animation for Attention", url: "https://www.nngroup.com/articles/animation-attention/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Using Motion to Guide Attention", url: "https://www.youtube.com/results?search_query=motion+guide+attention+ui" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Motion as a UX Tool", url: "https://uxdesign.cc/motion-as-a-ux-tool-7c8b6e4c6f8e" },
+                  { title: "Guiding Users with Motion", url: "https://uxdesign.cc/guiding-users-with-motion-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir geçiş düşün: Motion olmasa kullanıcı nerede olduğunu anlar mı?",
+              ],
+            },
+          },
+          {
+            title: "Motion Pitfalls",
+            description: "Sık yapılan hatalar: her şeyi hareketlendirmek, gereksiz bounce'lar, uzun animasyonlar, performansı düşüren motion. Motion görünmez olmalı, baskın değil. Bir ekranı düşün: Motion kapalı olsa hâlâ anlaşılır mı?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Animation Pitfalls", url: "https://www.nngroup.com/articles/animation-pitfalls/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Motion Mistakes in UI", url: "https://www.youtube.com/results?search_query=motion+mistakes+ui" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why Too Much Animation Hurts UX", url: "https://uxdesign.cc/too-much-animation-hurts-ux-7c8b6e4c6f8e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekranı düşün: Motion kapalı olsa hâlâ anlaşılır mı?",
+              ],
+            },
+          },
+          {
+            title: "Motion in Components",
+            description: "Component bazlı motion state değişimlerini netleştirir ve geçişleri yumuşatır. Örnek: accordion açılıp kapanması, toast mesajlarının girişi. Bir component seç: State değişimi motion ile daha mı anlaşılır?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Animated UI Components", url: "https://www.nngroup.com/articles/animated-components/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Motion in UI Components", url: "https://www.youtube.com/results?search_query=motion+ui+components" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Animating UI Components", url: "https://uxdesign.cc/animating-ui-components-7c8b6e4c6f8e" },
+                  { title: "Motion and State Transitions", url: "https://uxdesign.cc/motion-state-transitions-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir component seç: State değişimi motion ile daha mı anlaşılır?",
+              ],
+            },
+          },
         ],
       },
       {
