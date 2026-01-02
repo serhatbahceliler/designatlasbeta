@@ -2410,11 +2410,171 @@ const roadmaps: Record<string, Roadmap> = {
         title: "16. Collaboration & Delivery",
         description: "UX çıktısını ekip içinde 'işe dönüştürmek'.",
         topics: [
-          { title: "Working with PM & Engineering" },
-          { title: "Presenting Design Decisions" },
-          { title: "Design Reviews" },
-          { title: "Handoff Basics (what dev needs)" },
-          { title: "Documentation Basics" },
+          {
+            title: "Working with Product Managers",
+            description: "UX ve PM aynı problemi farklı açılardan ele alır. Sağlıklı iş birliği: problem tanımında başlar, çözümde değil, öncelikte hizalanır. UX'in rolü: kullanıcı perspektifini masaya getirmek, kararı sahiplenmek değil.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX and Product Management Collaboration", url: "https://www.nngroup.com/articles/ux-product-management/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX & PM Collaboration – NNGroup", url: "https://www.youtube.com/results?search_query=ux+pm+collaboration+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How UX Designers Should Work with PMs", url: "https://medium.com/search?q=how+ux+designers+work+with+pms" },
+                  { title: "UX vs PM Is the Wrong Question", url: "https://medium.com/search?q=ux+vs+pm+wrong+question" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir feature düşün:",
+                "Problem tanımı kimden geldi?",
+                "UX bu tanımı nasıl güçlendirebilir?",
+              ],
+            },
+          },
+          {
+            title: "Working with Developers",
+            description: "Developer'lar tasarımı değil: davranışı, kuralları, öncelikleri uygular. İyi UX–Dev ilişkisi: erken başlar, sürekli devam eder, 'sonradan açıklama'ya kalmaz.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX Designers and Developers", url: "https://www.nngroup.com/articles/designers-developers/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX & Developer Collaboration – NNGroup", url: "https://www.youtube.com/results?search_query=ux+developer+collaboration+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How Designers Can Work Better with Developers", url: "https://medium.com/search?q=designers+work+better+with+developers" },
+                  { title: "Why UX Fails at Handoff", url: "https://medium.com/search?q=why+ux+fails+handoff" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran seç:",
+                "Bu ekranın en kritik davranış kuralı ne?",
+                "Developer bunu nereden anlayacak?",
+              ],
+            },
+          },
+          {
+            title: "Design Handoff Basics",
+            description: "Handoff: dosya paylaşımı değil, bilgi aktarımıdır. İyi handoff: belirsizliği azaltır, yorum farkını minimize eder, geri dönüşleri hızlandırır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Design Handoff Best Practices", url: "https://www.nngroup.com/articles/design-handoff/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Design Handoff Explained – NNGroup", url: "https://www.youtube.com/results?search_query=design+handoff+explained+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Design Handoff Is a Conversation", url: "https://medium.com/search?q=design+handoff+conversation" },
+                  { title: "What Developers Actually Need from Designers", url: "https://medium.com/search?q=what+developers+actually+need+designers" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarım düşün:",
+                "Developer'ın en çok soru soracağı yer neresi?",
+                "Bunu önceden nasıl netleştirirsin?",
+              ],
+            },
+          },
+          {
+            title: "Specs, Annotations & Documentation",
+            description: "Her şey yazılmaz ama: kritik kurallar, edge durumlar, davranış farkları net olmalıdır. Amaç: gereksiz dokümantasyon değil, doğru yerde açıklama.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Documenting UX Designs", url: "https://www.nngroup.com/articles/documenting-designs/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Documentation Tips – NNGroup", url: "https://www.youtube.com/results?search_query=ux+documentation+tips+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "UX Specs Without Overdoing It", url: "https://medium.com/search?q=ux+specs+without+overdoing" },
+                  { title: "How Much Documentation Is Enough?", url: "https://medium.com/search?q=how+much+documentation+enough" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir component seç:",
+                "Hangi durumda farklı davranıyor?",
+                "Bu bilgi nerede yazmalı?",
+              ],
+            },
+          },
+          {
+            title: "Feedback, Iteration & Design QA",
+            description: "Tasarım geliştirmeye girdikten sonra UX bitmez. Gerekli olanlar: tasarım QA, küçük düzeltmeler, gerçek ürüne bakarak öğrenme.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX QA and Design Reviews", url: "https://www.nngroup.com/articles/design-reviews/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Design QA – NNGroup", url: "https://www.youtube.com/results?search_query=ux+design+qa+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Design QA Is a UX Responsibility", url: "https://medium.com/search?q=design+qa+ux+responsibility" },
+                  { title: "Why Shipped UX Is Not Final UX", url: "https://medium.com/search?q=shipped+ux+not+final" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Canlı bir ürün düşün:",
+                "Tasarımdan farklı olan ne var?",
+                "Bu fark bilinçli mi, kazara mı?",
+              ],
+            },
+          },
         ],
       },
       {
