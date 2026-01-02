@@ -2758,14 +2758,203 @@ const roadmaps: Record<string, Roadmap> = {
     icon: "🎨",
     sections: [
       {
-        title: "1. UI Foundations",
-        description: "UI tasarımının temel prensipleri ve görsel tasarım kuralları.",
+        title: "1. 🎨 UI Foundations",
+        description: "UI Designer'ın görsel kararları bilinçli alması, estetik ile kullanılabilirlik arasında denge kurması ve tutarlı, ölçeklenebilir arayüzler tasarlaması.",
         topics: [
-          { title: "What is UI Design?" },
-          { title: "UI vs UX vs Product Design (Scope & Deliverables)" },
-          { title: "Principles of Good Visual Design (Scale, Balance, Contrast, Gestalt)" },
-          { title: "Visual Hierarchy (Attention & Scannability)" },
-          { title: "Consistency & Predictability (Patterns)" },
+          {
+            title: "What is UI Design?",
+            description: "UI Design, kullanıcı ile sistem arasındaki görsel ve etkileşimsel katmanı tasarlamaktır. UI Designer bilgiyi görsel olarak organize eder, etkileşimleri anlaşılır hale getirir ve kullanıcıyı yönlendirir. UI, UX'in görünen yüzüdür; ama UX'in tamamı değildir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Visual Design in UX", url: "https://www.nngroup.com/articles/visual-design/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI vs UX Explained – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "What UI Design Really Is", url: "https://medium.com/example" },
+                  { title: "UI Design Is Not Just Making Things Pretty", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran düşün:",
+                "Bu ekran kullanıcıya ne yapması gerektiğini görsel olarak söylüyor mu?",
+                "Yoksa sadece güzel mi?",
+              ],
+            },
+          },
+          {
+            title: "UI vs UX vs Product Design",
+            description: "UX Design problemi ve akışı çözer, UI Design çözümü görsel olarak netleştirir, Product Design ise UX + UI + iş hedeflerini birleştirir. UI Designer'ın rolü: UX kararlarını bozmadan görsel netlik ve kalite kazandırmaktır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX vs UI vs Product Design", url: "https://www.nngroup.com/articles/ux-vs-ui/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX vs UI Roles – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "UX vs UI vs Product Design Explained", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir UI kararı düşün:",
+                "Bu karar kullanıcı akışını destekliyor mu?",
+                "Yoksa sadece görsel bir tercih mi?",
+              ],
+            },
+          },
+          {
+            title: "Principles of Good Visual Design",
+            description: "İyi UI evrensel görsel prensiplere dayanır: Hiyerarşi, Kontrast, Denge, Yakınlık (Gestalt), Tutarlılık. Bu prensipler ihlal edildiğinde kullanıcı yavaşlar, hata yapar ve arayüz karmaşık hissedilir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Visual Design Principles", url: "https://www.nngroup.com/articles/principles-visual-design/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Visual Design Principles – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Gestalt Principles in UI Design", url: "https://medium.com/example" },
+                  { title: "Why Visual Hierarchy Matters", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran seç:",
+                "Gözün ilk nereye gidiyor?",
+                "Orası gerçekten en önemli yer mi?",
+              ],
+            },
+          },
+          {
+            title: "Visual Hierarchy",
+            description: "Visual hierarchy, kullanıcının ekrana nereden baktığını, neyi önce gördüğünü ve neyi sonra fark ettiğini belirler. Araçlar: boyut, renk, boşluk, kontrast.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Visual Hierarchy", url: "https://www.nngroup.com/articles/visual-hierarchy-ux/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Visual Hierarchy Explained – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing with Visual Hierarchy", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekranı 5 saniye incele:",
+                "Hatırladığın ilk 3 şey ne?",
+                "Tasarım bunu hedefliyor muydu?",
+              ],
+            },
+          },
+          {
+            title: "Consistency & Predictability",
+            description: "Tutarlılık öğrenme maliyetini düşürür, kullanıcıyı rahatlatır ve güven oluşturur. UI'da tutarlılık: aynı renk = aynı anlam, aynı component = aynı davranış. Tutarsız UI, kullanıcıyı her seferinde yeniden düşünmeye zorlar.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Consistency in UI Design", url: "https://www.nngroup.com/articles/consistency-heuristic/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Consistency in UX/UI – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why Consistency Is Critical in UI Design", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir üründe:",
+                "Aynı işlevi yapan iki farklı buton bul",
+                "Neden farklı görünüyor olabilir?",
+              ],
+            },
+          },
+          {
+            title: "UI Design Mindset",
+            description: "UI Designer her pikselin bir nedeni olduğunu bilir, estetik ile kullanılabilirlik arasında seçim yapar ve 'beğenmedim' yerine nedenini açıklar. İyi UI sessizdir, dikkat çekmez ve işini yapar.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX Visual Design Mindset", url: "https://www.nngroup.com/articles/visual-design-mindset/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Thinking Like a UI Designer", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "UI Design Is Decision Making", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir UI kararını kendine açıkla:",
+                "'Bunu neden böyle yaptım?'",
+                "Cevabın sadece 'daha güzel' mi?",
+              ],
+            },
+          },
         ],
       },
       {
