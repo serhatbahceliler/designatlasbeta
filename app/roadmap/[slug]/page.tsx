@@ -1889,11 +1889,206 @@ const roadmaps: Record<string, Roadmap> = {
         title: "13. Accessibility & Inclusive Design",
         description: "Herkes için kullanılabilir deneyim tasarlamak (temel seviye).",
         topics: [
-          { title: "Accessibility Basics" },
-          { title: "WCAG Overview (intro)" },
-          { title: "Color Contrast & Typography" },
-          { title: "Keyboard & Focus (web)" },
-          { title: "Accessible Forms & Errors" },
+          {
+            title: "Accessibility Basics (Why It Matters)",
+            description: "Erişilebilirlik: sadece engelli kullanıcılar için değildir, geçici durumları (kırık kol, güneş ışığı, yavaş internet) da kapsar. İyi erişilebilirlik, herkes için daha iyi UX demektir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Accessibility 101", url: "https://www.nngroup.com/articles/accessibility-101/" },
+                  { title: "Inclusive Design", url: "https://www.nngroup.com/articles/inclusive-design/" },
+                ],
+              },
+              {
+                category: "🌐 W3C / WAI",
+                items: [
+                  { title: "Introduction to Web Accessibility", url: "https://www.w3.org/WAI/fundamentals/accessibility-intro/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Accessibility Basics for UX – NNGroup", url: "https://www.youtube.com/results?search_query=accessibility+basics+ux+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Accessibility Is Not a Feature", url: "https://medium.com/search?q=accessibility+is+not+feature" },
+                  { title: "Why Inclusive Design Makes Products Better", url: "https://medium.com/search?q=inclusive+design+makes+products+better" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Kullandığın bir ürünü düşün",
+                "Tek elle kullanabilir misin?",
+                "Ses kapalıyken anlaşılır mı?",
+              ],
+            },
+          },
+          {
+            title: "WCAG Overview (Intro Level)",
+            description: "WCAG (Web Content Accessibility Guidelines), erişilebilirlik için uluslararası standarttır. Temel 4 ilke: Perceivable (Algılanabilir), Operable (Kullanılabilir), Understandable (Anlaşılabilir), Robust (Sağlam). Junior seviyede amaç: kuralları ezberlemek değil, neyi kontrol etmen gerektiğini bilmek.",
+            resources: [
+              {
+                category: "🌐 W3C / WAI",
+                items: [
+                  { title: "WCAG Overview", url: "https://www.w3.org/WAI/standards-guidelines/wcag/" },
+                  { title: "WCAG at a Glance", url: "https://www.w3.org/WAI/standards-guidelines/wcag/glance/" },
+                ],
+              },
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "WCAG 2 Overview for UX Designers", url: "https://www.nngroup.com/articles/wcag/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "WCAG Explained Simply – NNGroup", url: "https://www.youtube.com/results?search_query=wcag+explained+simply+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "WCAG Explained for Designers", url: "https://medium.com/search?q=wcag+explained+designers" },
+                  { title: "You Don't Need to Memorize WCAG", url: "https://medium.com/search?q=don't+need+memorize+wcag" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran için sor:",
+                "Bu ekran algılanabilir mi?",
+                "Klavye ile kullanılabilir mi?",
+              ],
+            },
+          },
+          {
+            title: "Color Contrast & Typography",
+            description: "Düşük kontrast: en yaygın erişilebilirlik hatasıdır, çoğu zaman 'estetik' gerekçesiyle yapılır. Ama: okunamayan metin, kullanılamayan metindir.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Color Contrast and Readability", url: "https://www.nngroup.com/articles/color-contrast/" },
+                  { title: "Typography for UX", url: "https://www.nngroup.com/articles/typography/" },
+                ],
+              },
+              {
+                category: "🌐 W3C / WAI",
+                items: [
+                  { title: "Contrast (Minimum)", url: "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Color Contrast Explained – NNGroup", url: "https://www.youtube.com/results?search_query=color+contrast+explained+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why Designers Get Contrast Wrong", url: "https://medium.com/search?q=designers+get+contrast+wrong" },
+                  { title: "Accessible Typography Basics", url: "https://medium.com/search?q=accessible+typography+basics" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir metni kontrol et:",
+                "Açık tema + güneş ışığında okunuyor mu?",
+                "Kontrast sadece 'güzel' mi, yeterli mi?",
+              ],
+            },
+          },
+          {
+            title: "Keyboard & Focus (Web)",
+            description: "Bir kullanıcı: mouse kullanamayabilir, sadece klavye ile gezebilir. Bu yüzden: focus state'ler, tab sırası UX'in parçasıdır.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Keyboard Accessibility", url: "https://www.nngroup.com/articles/keyboard-accessibility/" },
+                  { title: "Focus Indicators", url: "https://www.nngroup.com/articles/focus-indicators/" },
+                ],
+              },
+              {
+                category: "🌐 W3C / WAI",
+                items: [
+                  { title: "Keyboard Accessibility", url: "https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Keyboard Accessibility in UX – NNGroup", url: "https://www.youtube.com/results?search_query=keyboard+accessibility+ux+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing for Keyboard Navigation", url: "https://medium.com/search?q=designing+keyboard+navigation" },
+                  { title: "Why Focus States Matter", url: "https://medium.com/search?q=why+focus+states+matter" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir web sayfasında:",
+                "Sadece Tab ile gez",
+                "Nerede kayboluyorsun?",
+              ],
+            },
+          },
+          {
+            title: "Accessible Forms & Errors",
+            description: "Formlar, erişilebilirliğin en kırılgan noktalarındandır. Sık yapılan hatalar: label yok, hata mesajı belirsiz, sadece renkle hata göstermek.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Accessible Forms", url: "https://www.nngroup.com/articles/form-accessibility/" },
+                  { title: "Error Messages and Accessibility", url: "https://www.nngroup.com/articles/error-message-guidelines/" },
+                ],
+              },
+              {
+                category: "🌐 W3C / WAI",
+                items: [
+                  { title: "Forms Accessibility", url: "https://www.w3.org/WAI/tutorials/forms/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Accessible Form Design – NNGroup", url: "https://www.youtube.com/results?search_query=accessible+form+design+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Accessible Forms Explained", url: "https://medium.com/search?q=accessible+forms+explained" },
+                  { title: "Why Error Messages Fail Accessibility", url: "https://medium.com/search?q=error+messages+fail+accessibility" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir hata mesajına bak:",
+                "Sadece kırmızı renk mi var?",
+                "Kullanıcı ne yapacağını anlıyor mu?",
+              ],
+            },
+          },
         ],
       },
       {
