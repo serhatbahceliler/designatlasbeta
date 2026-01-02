@@ -226,9 +226,9 @@ export default function Home() {
             />
           </div>
 
-          <div className="animate-slide-up">
+          <div>
             {/* Badges */}
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+            <div className="flex flex-wrap items-center justify-center gap-3 mb-8 animate-text-reveal" style={{ animationDelay: '0ms' }}>
               <span className="px-4 py-2 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-full text-[#DEFF37] font-semibold text-sm">
                 %100 Türkçe İçerik
               </span>
@@ -238,12 +238,12 @@ export default function Home() {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight animate-text-reveal" style={{ animationDelay: '150ms' }}>
               Tasarımı öğrenirken kaybolma.
               <br />
               <span className="text-[#DEFF37]">DesignAtlas yolunu gösterir.</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-text-reveal" style={{ animationDelay: '300ms' }}>
               UX, UI ve Product Design için hazırlanmış,
               <br />
               tamamı Türkçe ve ücretsiz kaynaklara dayanan öğrenme roadmap'leri.
@@ -692,6 +692,21 @@ export default function Home() {
         }
         .animate-slide-in-right {
           animation: slide-in-right 0.3s ease-out;
+        }
+
+        @keyframes text-reveal {
+          from {
+            opacity: 0;
+            filter: blur(8px);
+          }
+          to {
+            opacity: 1;
+            filter: blur(0);
+          }
+        }
+        .animate-text-reveal {
+          opacity: 0;
+          animation: text-reveal 0.8s ease-out forwards;
         }
       `}</style>
     </main>
