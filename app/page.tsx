@@ -227,15 +227,28 @@ export default function Home() {
           </div>
 
           <div className="animate-slide-up">
+            {/* Badges */}
+            <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+              <span className="px-4 py-2 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-full text-[#DEFF37] font-semibold text-sm">
+                %100 Türkçe İçerik
+              </span>
+              <span className="text-gray-500">·</span>
+              <span className="px-4 py-2 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-full text-[#DEFF37] font-semibold text-sm">
+                Ücretsiz Kaynaklar
+              </span>
+            </div>
+
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-              Tasarımı öğrenmek
+              Tasarımı öğrenirken kaybolma.
               <br />
-              <span className="text-[#DEFF37]">zor olmamalı.</span>
+              <span className="text-[#DEFF37]">DesignAtlas yolunu gösterir.</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              DesignAtlas, UX, UI ve Product Design öğrenme sürecindeki belirsizliği azaltmak için oluşturulmuş, adım adım öğrenme yol haritaları sunar.
+              UX, UI ve Product Design için hazırlanmış,
               <br />
-              <span className="text-gray-400">Neyi, ne zaman ve neden öğrenmen gerektiğini netleştirir.</span>
+              tamamı Türkçe ve ücretsiz kaynaklara dayanan öğrenme roadmap'leri.
+              <br />
+              <span className="text-gray-400">Ne öğreneceğini, ne zaman öğreneceğini ve neden öğrendiğini netleştirir.</span>
             </p>
             <a
               href="#roadmaps"
