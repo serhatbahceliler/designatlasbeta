@@ -908,11 +908,140 @@ const roadmaps: Record<string, Roadmap> = {
         title: "7. Personas & Journey Mapping",
         description: "Kullanıcıyı 'temsil edilebilir' hale getirip yolculuğu görünür kılmak.",
         topics: [
-          { title: "Proto Personas vs Data-Driven Personas" },
-          { title: "User Journeys vs Service Journeys" },
-          { title: "Mapping Touchpoints & Emotions" },
-          { title: "Identifying Moments of Truth" },
-          { title: "Turning Journeys into Design Requirements" },
+          {
+            title: "Proto Personas vs Data-Driven Personas",
+            description: "Proto Persona: Hızlı varsayım, discovery başlangıcı. Data-Driven Persona: Research ile doğrulanmış, karar destekleyici. Junior'ların en sık hatası: persona'yı kurgusal karakter sanmak.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Personas: Why and How You Should Use Them", url: "https://www.nngroup.com/articles/personas/" },
+                  { title: "Personas vs. Proto-Personas", url: "https://www.nngroup.com/articles/proto-personas/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Personas Explained – NNGroup", url: "https://www.youtube.com/results?search_query=personas+explained+nngroup" },
+                  { title: "Proto Personas vs Personas – NNGroup", url: "https://www.youtube.com/results?search_query=proto+personas+vs+personas+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Şu soruya cevap yaz: Bu persona:",
+                "Varsayım mı?",
+                "Yoksa research'e mi dayanıyor?",
+                "Eğer varsayımsa, nasıl doğrulanabilir?",
+              ],
+            },
+          },
+          {
+            title: "User Journeys vs Customer Journeys",
+            description: "User Journey: Tek bir ürün içindeki deneyim. Customer Journey: Ürün + temas noktaları + zaman. UX kararları çoğu zaman journey görülmeden alınır.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Journey Mapping 101", url: "https://www.nngroup.com/articles/journey-mapping-101/" },
+                  { title: "User Journey vs Customer Journey", url: "https://www.nngroup.com/articles/user-journey-vs-customer-journey/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Journey Mapping Explained – NNGroup", url: "https://www.youtube.com/results?search_query=journey+mapping+explained+nngroup" },
+                  { title: "Customer Journey Mapping – NNGroup", url: "https://www.youtube.com/results?search_query=customer+journey+mapping+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Seçtiğin bir ürün için:",
+                "Journey nerede başlıyor?",
+                "Gerçekten ilk ekran mı?",
+              ],
+            },
+          },
+          {
+            title: "Mapping Touchpoints & Emotions",
+            description: "Journey map sadece adımlardan oluşmaz. Kullanıcının: ne hissettiği, nerede gerildiği, nerede rahatladığı tasarım kararları için kritik sinyaldir.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Experience Mapping", url: "https://www.nngroup.com/articles/experience-mapping/" },
+                  { title: "Emotional Journey Mapping", url: "https://www.nngroup.com/articles/emotional-journeys/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Mapping Emotions in UX – NNGroup", url: "https://www.youtube.com/results?search_query=mapping+emotions+ux+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir journey adımı seç:",
+                "Kullanıcı burada ne hissediyor?",
+                "Bu duygu tasarımla nasıl değiştirilebilir?",
+              ],
+            },
+          },
+          {
+            title: "Identifying Moments of Truth",
+            description: "Moment of Truth, kullanıcının: ürüne güvenip güvenmemeye, devam edip etmemeye karar verdiği anlardır. Bu anlar kaçırılırsa: küçük UX hataları büyük kayıplara dönüşür.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Moments of Truth in UX", url: "https://www.nngroup.com/articles/moments-of-truth/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Moments of Truth Explained – NNGroup", url: "https://www.youtube.com/results?search_query=moments+truth+explained+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Journey'de şu soruyu sor:",
+                "'Kullanıcı bu adımda neden vazgeçebilir?'",
+              ],
+            },
+          },
+          {
+            title: "Turning Journeys into Design Requirements",
+            description: "Journey map bir çıktı değil, araçtır. Asıl değer: journey'den tasarım gereksinimi çıkarmakta.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Using Journey Maps to Drive Design", url: "https://www.nngroup.com/articles/journey-maps-drive-design/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "From Journey Map to Design Decisions – NNGroup", url: "https://www.youtube.com/results?search_query=journey+map+design+decisions+nngroup" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir journey adımından şunu çıkar:",
+                "'Bu adımda tasarım şunu yapmalı çünkü …'",
+              ],
+            },
+          },
         ],
       },
       {
