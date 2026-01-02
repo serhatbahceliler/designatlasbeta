@@ -572,22 +572,8 @@ export default function Home() {
           </div>
 
           {/* Separator */}
-          <div className="mb-12">
+          <div className="mb-16">
             <div className="h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
-          </div>
-
-          {/* Helper Link to Quiz */}
-          <div className="text-center mb-6">
-            <a
-              href="#quiz-helper"
-              className="text-gray-400 hover:text-[#DEFF37] text-sm transition-colors duration-200 inline-flex items-center gap-2"
-            >
-              Karar veremiyorsan
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-              quiz'i çöz
-            </a>
           </div>
 
           {/* Quiz Helper (Secondary) */}
