@@ -2578,14 +2578,174 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "17. Portfolio & Career",
-        description: "Öğrendiklerini işe dönüştüren sunum.",
+        title: "17. 🚀 Career, Growth & UX Mindset (Junior Focused)",
+        description: "Junior UX Designer'ların kariyere gerçekçi beklentilerle başlaması, sürdürülebilir şekilde gelişmesi ve doğru zihniyeti erken kazanması.",
         topics: [
-          { title: "Case Study Structure" },
-          { title: "Showing Process (not only UI)" },
-          { title: "Evidence & Outcomes" },
-          { title: "Common Junior Mistakes" },
-          { title: "Interview Prep Basics" },
+          {
+            title: "UX Mindset (Thinking Like a UX Designer)",
+            description: "UX mindset: çözümden önce problemi düşünmek, varsayımı sorgulamak ve kullanıcıyı savunabilmektir. UX Designer her şeyi bilen değil, doğru soruları sorabilen kişidir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX Mindset", url: "https://www.nngroup.com/articles/ux-mindset/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Thinking Like a UX Designer – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "What UX Mindset Really Means", url: "https://medium.com/example" },
+                  { title: "UX Is a Way of Thinking", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir problem seç:",
+                "Çözüm düşünmeden önce",
+                "'Bu gerçekten problem mi?' diye sor",
+              ],
+            },
+          },
+          {
+            title: "Learning UX Effectively (What to Learn & What Not)",
+            description: "UX öğrenirken en büyük hata: her aracı öğrenmeye çalışmak ve temeli atlamaktır. Öncelik sırası: 1) Problem anlayışı, 2) Research & düşünme, 3) Etkileşim & akış, 4) Araçlar (en son).",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "How to Learn UX", url: "https://www.nngroup.com/articles/learning-ux/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Learning UX the Right Way – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Stop Learning Tools First", url: "https://medium.com/example" },
+                  { title: "How Junior Designers Should Learn UX", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Kendine sor:",
+                "Şu an öğrendiğim şey problem çözmeme yardım ediyor mu?",
+                "Yoksa sadece araç mı?",
+              ],
+            },
+          },
+          {
+            title: "Portfolio Basics (Junior Level)",
+            description: "Junior portfolyo görsel şov değil, düşünce süreci gösterir. İyi bir case: problem → süreç → karar → öğrenme şeklinde ilerler.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX Portfolio Tips", url: "https://www.nngroup.com/articles/ux-portfolio/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX Portfolio for Juniors – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "What Makes a Good Junior UX Portfolio", url: "https://medium.com/example" },
+                  { title: "Stop Making Dribbble-Style Case Studies", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir case için yaz:",
+                "En zor karar neydi?",
+                "Neyi yanlış yaptın, ne öğrendin?",
+              ],
+            },
+          },
+          {
+            title: "Junior UX Roles & Expectations",
+            description: "Junior UX Designer her şeyi kusursuz yapmaz, soru sorar ve öğrenmeye açıktır. Yanlış beklentiler: 'Her şeyi tek başıma yapmalıyım' ve 'Hata yapmamalıyım'.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Junior UX Designer Expectations", url: "https://www.nngroup.com/articles/junior-ux-designer/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Junior UX Roles Explained – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "What Is Expected from a Junior UX Designer", url: "https://medium.com/example" },
+                  { title: "You're Not Supposed to Know Everything", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir iş ilanı oku:",
+                "Gerçekten junior mu?",
+                "Yoksa senior beklentisi mi var?",
+              ],
+            },
+          },
+          {
+            title: "Feedback, Mentorship & Growth",
+            description: "UX'te gelişim tek başına olmaz, geri bildirimle hızlanır. Mentorluk cevap değil, yön kazandırır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Giving and Receiving UX Feedback", url: "https://www.nngroup.com/articles/ux-feedback/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Growing as a UX Designer – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How Junior Designers Should Ask for Feedback", url: "https://medium.com/example" },
+                  { title: "Why Feedback Is a UX Skill", url: "https://medium.com/example" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir işini düşün:",
+                "Kime feedback sorabilirsin?",
+                "Ne hakkında feedback istersin?",
+              ],
+            },
+          },
         ],
       },
     ],
