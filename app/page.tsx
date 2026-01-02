@@ -42,6 +42,10 @@ const anonymousQuotes = [
   "UX mi UI mı Product mı seçmem gerektiğine karar veremiyorum.",
   "Bir şeyler öğreniyorum ama ilerlediğimi hissetmiyorum.",
   "Her kaynak farklı bir şey söylüyor, hangisine güveneceğimi bilmiyorum.",
+  "Ne öğrenmem gerektiğini biliyorum ama nereden başlayacağımı bilmiyorum.",
+  "Bir roadmap olsa da adım adım ilerlesem diye düşünüyorum.",
+  "Kaynak çok ama hepsi dağınık; düzenli bir yol istiyorum.",
+  "Öğreniyorum ama portfolyoya nasıl çevireceğimi bilmiyorum.",
 ];
 
 // Quiz questions
@@ -320,32 +324,68 @@ export default function Home() {
       </section>
 
       {/* Evidence / Real Voices Section */}
-      <section className="py-24 px-6 bg-zinc-950 border-t border-[#DEFF37]/20">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 px-6 bg-zinc-950 border-t border-[#DEFF37]/20 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
             Tasarımcılar bize ne söyledi?
           </h2>
-          <p className="text-center text-gray-400 mb-12 text-lg">
+          <p className="text-center text-gray-400 mb-16 text-lg">
             Aşağıdaki yorumlar, daha önce yaptığımız anonim bir anketten alınmıştır.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            {anonymousQuotes.map((quote, index) => (
-              <div
-                key={index}
-                className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-[#DEFF37]/30 transition-colors"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 text-2xl">💬</div>
-                  <p className="text-gray-300 italic leading-relaxed">"{quote}"</p>
-                </div>
+          {/* First Row - Scrolling Right to Left */}
+          <div className="relative mb-8">
+            <div className="marquee-container">
+              <div className="marquee-content marquee-scroll-left">
+                {[...anonymousQuotes.slice(0, 4), ...anonymousQuotes.slice(0, 4)].map((quote, index) => (
+                  <div
+                    key={index}
+                    className="glassmorphism-card group"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center">
+                        <svg className="w-4 h-4 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                      </div>
+                      <p className="text-gray-200 text-sm leading-relaxed line-clamp-3">
+                        "{quote}"
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
 
-          <div className="text-center">
-            <p className="text-sm text-gray-500">
-              🔒 Tüm geri bildirimler anonimdir.
+          {/* Second Row - Scrolling Left to Right */}
+          <div className="relative mb-12">
+            <div className="marquee-container">
+              <div className="marquee-content marquee-scroll-right">
+                {[...anonymousQuotes.slice(4, 8), ...anonymousQuotes.slice(4, 8)].map((quote, index) => (
+                  <div
+                    key={index}
+                    className="glassmorphism-card group"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center">
+                        <svg className="w-4 h-4 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                      </div>
+                      <p className="text-gray-200 text-sm leading-relaxed line-clamp-3">
+                        "{quote}"
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-xs text-gray-500 opacity-70">
+              🔒 Tüm geri bildirimler anonimdir
             </p>
           </div>
         </div>
@@ -710,6 +750,115 @@ export default function Home() {
         .animate-text-reveal {
           opacity: 0;
           animation: text-reveal 0.8s ease-out forwards;
+        }
+
+        /* Glassmorphism Card Styles */
+        .glassmorphism-card {
+          position: relative;
+          width: 380px;
+          flex-shrink: 0;
+          padding: 1.25rem;
+          background: rgba(24, 24, 27, 0.6);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          border: 1px solid rgba(222, 255, 55, 0.12);
+          border-radius: 1rem;
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4),
+                      inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+          transition: all 0.3s ease;
+        }
+
+        .glassmorphism-card:hover {
+          background: rgba(24, 24, 27, 0.7);
+          border-color: rgba(222, 255, 55, 0.25);
+          box-shadow: 0 12px 40px 0 rgba(222, 255, 55, 0.08),
+                      inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+          transform: translateY(-2px);
+        }
+
+        /* Marquee Container */
+        .marquee-container {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+          mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent
+          );
+          -webkit-mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent
+          );
+        }
+
+        .marquee-content {
+          display: flex;
+          gap: 1.5rem;
+          width: fit-content;
+        }
+
+        /* Marquee Animations */
+        @keyframes scroll-left {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+
+        @keyframes scroll-right {
+          from {
+            transform: translateX(-50%);
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
+
+        .marquee-scroll-left {
+          animation: scroll-left 40s linear infinite;
+        }
+
+        .marquee-scroll-right {
+          animation: scroll-right 40s linear infinite;
+        }
+
+        /* Hover Pause */
+        .marquee-container:hover .marquee-scroll-left,
+        .marquee-container:hover .marquee-scroll-right {
+          animation-play-state: paused;
+        }
+
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+          .marquee-scroll-left,
+          .marquee-scroll-right {
+            animation: none;
+          }
+
+          .marquee-content {
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+
+          .glassmorphism-card {
+            width: 100%;
+            max-width: 380px;
+          }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+          .glassmorphism-card {
+            width: 320px;
+          }
         }
       `}</style>
     </main>
