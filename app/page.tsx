@@ -478,27 +478,8 @@ export default function Home() {
             Rolüne mi odaklanmak istiyorsun, yoksa tasarım becerilerini derinleştirmek mi?
           </p>
 
-          {/* Quiz Trigger */}
-          <div className="max-w-2xl mx-auto mb-16 p-6 bg-zinc-900/50 border border-[#DEFF37]/30 rounded-xl text-center">
-            <p className="text-white font-medium mb-2">
-              Rolünü netleştiremiyor musun?
-            </p>
-            <p className="text-gray-400 text-sm mb-4">
-              1 dakikalık kısa bir quiz ile sana uygun öğrenme yolunu bul.
-            </p>
-            <button
-              onClick={() => setIsQuizOpen(true)}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#DEFF37] text-black font-bold rounded-lg hover:bg-[#DEFF37]/90 hover:scale-105 transition-all duration-300"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-              </svg>
-              8 Soruluk Quiz'i Başlat
-            </button>
-          </div>
-
           {/* Roller (Job-based learning) */}
-          <div className="mb-20">
+          <div className="mb-8">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-2">Roller</h3>
               <p className="text-gray-400 text-sm">Belirli bir tasarım rolü için uçtan uca öğrenme yolculukları.</p>
@@ -539,6 +520,41 @@ export default function Home() {
                 </Link>
               ))}
             </div>
+          </div>
+
+          {/* Helper Link to Quiz */}
+          <div className="text-center mb-16">
+            <a
+              href="#quiz-helper"
+              className="text-gray-400 hover:text-[#DEFF37] text-sm transition-colors duration-200 inline-flex items-center gap-2"
+            >
+              Karar veremiyorsan
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+              quiz'i çöz
+            </a>
+          </div>
+
+          {/* Quiz Helper (Secondary) */}
+          <div id="quiz-helper" className="max-w-2xl mx-auto mb-20 p-8 bg-zinc-900/30 border border-zinc-800 rounded-xl text-center">
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Karar veremediysen, yardımcı olalım.
+            </h3>
+            <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+              Rolleri inceledin ama hangisinin sana daha uygun olduğundan emin olamadın mı?
+              <br />
+              1 dakikalık kısa bir quiz ile sana en uygun başlangıç yolunu önerelim.
+            </p>
+            <button
+              onClick={() => setIsQuizOpen(true)}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-zinc-800 hover:bg-zinc-700 text-white font-medium rounded-lg transition-all duration-300"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+              8 Soruluk Quiz'i Başlat
+            </button>
           </div>
 
           {/* Tasarım Disiplinleri (Skill/framework based learning) */}
