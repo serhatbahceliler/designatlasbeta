@@ -1750,10 +1750,139 @@ const roadmaps: Record<string, Roadmap> = {
         title: "12. Heuristics & UX Principles",
         description: "Tasarımı hızlı değerlendirme ve sorunları diline dökebilme.",
         topics: [
-          { title: "Nielsen's 10 Usability Heuristics" },
-          { title: "Heuristic Evaluation Process" },
-          { title: "Severity Ratings" },
-          { title: "Turning Issues into Actionable Fixes" },
+          {
+            title: "Nielsen's 10 Usability Heuristics",
+            description: "Jakob Nielsen'ın 10 usability heuristic'i, en yaygın UX problemlerini kapsayan evrensel prensiplerdir. Junior'lar için kritik nokta: Heuristic'leri ezberlemek değil, ne zaman hangisi ihlal ediliyor görebilmek.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "10 Usability Heuristics for User Interface Design", url: "https://www.nngroup.com/articles/ten-usability-heuristics/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Nielsen's 10 Heuristics Explained – NNGroup", url: "https://www.youtube.com/results?search_query=nielsen+10+heuristics+explained+nngroup" },
+                  { title: "Usability Heuristics Overview – NNGroup", url: "https://www.youtube.com/results?search_query=usability+heuristics+overview+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Nielsen's Heuristics Explained with Examples", url: "https://medium.com/search?q=nielsen+heuristics+explained+examples" },
+                  { title: "How to Actually Use UX Heuristics", url: "https://medium.com/search?q=how+actually+use+ux+heuristics" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran seç",
+                "En az 1 heuristic ihlali bul",
+                "Hangi heuristic?",
+                "Kullanıcıyı nasıl etkiliyor?",
+              ],
+            },
+          },
+          {
+            title: "Heuristic Evaluation (Process)",
+            description: "Heuristic evaluation: kullanıcıya ihtiyaç duymadan, uzman gözüyle yapılan hızlı bir UX değerlendirme yöntemidir. Ama kullanıcı testinin yerine geçmez.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "How to Conduct a Heuristic Evaluation", url: "https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Heuristic Evaluation Step by Step – NNGroup", url: "https://www.youtube.com/results?search_query=heuristic+evaluation+step+by+step+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Heuristic Evaluation for UX Designers", url: "https://medium.com/search?q=heuristic+evaluation+ux+designers" },
+                  { title: "When to Use Heuristic Evaluation", url: "https://medium.com/search?q=when+use+heuristic+evaluation" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir feature seç",
+                "3 heuristic üzerinden değerlendir",
+                "Her biri için 1 problem yaz",
+              ],
+            },
+          },
+          {
+            title: "Severity Ratings",
+            description: "Her UX problemi aynı önemde değildir. Severity rating, problemleri: küçük rahatsızlık, ciddi engel olarak ayırmayı sağlar. Yanlış yapılan en büyük hata: her problemi 'kritik' görmek.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Severity Ratings for Usability Problems", url: "https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Severity Ratings Explained – NNGroup", url: "https://www.youtube.com/results?search_query=severity+ratings+explained+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Severity Ratings in UX: Explained Simply", url: "https://medium.com/search?q=severity+ratings+ux+explained" },
+                  { title: "Stop Calling Every UX Issue Critical", url: "https://medium.com/search?q=stop+calling+every+ux+issue+critical" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "3 UX problemi yaz",
+                "Hangisi gerçekten kullanıcıyı durduruyor?",
+                "Hangisi sadece rahatsız edici?",
+              ],
+            },
+          },
+          {
+            title: "Translating Issues into Actionable Fixes",
+            description: "Heuristic evaluation'ın değeri: problem listesinden aksiyon üretebilmekte yatar. 'Kafa karıştırıcı' demek yetmez. Neyi değiştireceğini söylemelisin.",
+            resources: [
+              {
+                category: "📘 NNGroup",
+                items: [
+                  { title: "Turning UX Findings into Action", url: "https://www.nngroup.com/articles/actionable-ux-findings/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "From UX Issues to Design Actions – NNGroup", url: "https://www.youtube.com/results?search_query=ux+issues+design+actions+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Writing Actionable UX Findings", url: "https://medium.com/search?q=writing+actionable+ux+findings" },
+                  { title: "UX Feedback That Leads to Change", url: "https://medium.com/search?q=ux+feedback+leads+change" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Şu bulguyu aksiyona çevir: 'Kullanıcılar bu ekranda kararsız kalıyor.'",
+                "→ Ne değişmeli?",
+              ],
+            },
+          },
         ],
       },
       {
