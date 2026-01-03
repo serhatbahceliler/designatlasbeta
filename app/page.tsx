@@ -228,9 +228,9 @@ export default function Home() {
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-text-reveal" style={{ animationDelay: '300ms' }}>
               UX, UI ve Product Design için hazırlanmış,
               <br />
-              tamamı Türkçe ve ücretsiz kaynaklara dayanan öğrenme roadmap'leri.
+              tamamı Türkçe anlatımlarla sunulan öğrenme roadmap'leri.
               <br />
-              <span className="text-gray-400">Ne öğreneceğini, ne zaman öğreneceğini ve neden öğrendiğini netleştirir.</span>
+              <span className="text-gray-400">Güvenilir kaynaklarla neyi, ne zaman ve neden öğrenmen gerektiğini netleştirir.</span>
             </p>
 
             {/* Micro-motivation */}
@@ -564,19 +564,19 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
 
                 <div className="relative p-8">
+                  {/* Badge - Sağ Üst */}
+                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
+                    Yakında
+                  </span>
+
                   {/* Icon */}
                   <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
                     🧩
                   </div>
 
-                  <div className="flex items-baseline gap-3 mb-3">
-                    <h3 className="text-2xl font-bold text-white">
-                      Design Systems
-                    </h3>
-                    <span className="px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
-                      Yakında
-                    </span>
-                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    Design Systems
+                  </h3>
 
                   <p className="text-gray-400 leading-relaxed text-sm">
                     Ölçeklenebilir tasarım sistemleri, component kütüphaneleri ve tasarım yönetişimi oluştur ve sürdür.
@@ -594,19 +594,19 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
 
                 <div className="relative p-8">
+                  {/* Badge - Sağ Üst */}
+                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
+                    Yakında
+                  </span>
+
                   {/* Icon */}
                   <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
                     💭
                   </div>
 
-                  <div className="flex items-baseline gap-3 mb-3">
-                    <h3 className="text-2xl font-bold text-white">
-                      Design Thinking
-                    </h3>
-                    <span className="px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
-                      Yakında
-                    </span>
-                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    Design Thinking
+                  </h3>
 
                   <p className="text-gray-400 leading-relaxed text-sm">
                     Karmaşık problemleri yaratıcı bir şekilde çözmek için design thinking metodolojisi ve çerçevelerini uygula.
@@ -624,19 +624,19 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
 
                 <div className="relative p-8">
+                  {/* Badge - Sağ Üst */}
+                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
+                    Yakında
+                  </span>
+
                   {/* Icon */}
                   <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
                     🔍
                   </div>
 
-                  <div className="flex items-baseline gap-3 mb-3">
-                    <h3 className="text-2xl font-bold text-white">
-                      UX Research
-                    </h3>
-                    <span className="px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
-                      Yakında
-                    </span>
-                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    UX Research
+                  </h3>
 
                   <p className="text-gray-400 leading-relaxed text-sm">
                     Kullanıcıyı daha derinlemesine anlamaya odaklanan araştırma ve test süreçleri. Görüşmeler, testler ve içgörü üretimi üzerine kapsamlı bir öğrenme yolu.
@@ -654,19 +654,19 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
 
                 <div className="relative p-8">
+                  {/* Badge - Sağ Üst */}
+                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
+                    Yakında
+                  </span>
+
                   {/* Icon */}
                   <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
                     ⚡
                   </div>
 
-                  <div className="flex items-baseline gap-3 mb-3">
-                    <h3 className="text-2xl font-bold text-white">
-                      Interaction Design
-                    </h3>
-                    <span className="px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
-                      Yakında
-                    </span>
-                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    Interaction Design
+                  </h3>
 
                   <p className="text-gray-400 leading-relaxed text-sm">
                     Kullanıcı akışları, etkileşimler ve ekranlar arası davranış tasarımı. Daha akıcı ve sezgisel deneyimler oluşturmayı hedefleyen bir disiplin.
