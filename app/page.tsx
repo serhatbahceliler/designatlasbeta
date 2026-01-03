@@ -553,7 +553,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-white mb-2">Tasarım Becerileri</h3>
               <p className="text-gray-400 text-sm">Rolünden bağımsız olarak, tasarım becerilerini derinleştirebileceğin alanlar.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Design Systems - Yakında */}
               <div
                 className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
@@ -569,11 +569,11 @@ export default function Home() {
                     🧩
                   </div>
 
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-baseline gap-3 mb-3">
                     <h3 className="text-2xl font-bold text-white">
                       Design Systems
                     </h3>
-                    <span className="px-2 py-1 text-xs font-medium bg-zinc-800 text-gray-400 rounded-md">
+                    <span className="px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
                       Yakında
                     </span>
                   </div>
@@ -599,11 +599,11 @@ export default function Home() {
                     💭
                   </div>
 
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-baseline gap-3 mb-3">
                     <h3 className="text-2xl font-bold text-white">
                       Design Thinking
                     </h3>
-                    <span className="px-2 py-1 text-xs font-medium bg-zinc-800 text-gray-400 rounded-md">
+                    <span className="px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
                       Yakında
                     </span>
                   </div>
@@ -629,11 +629,11 @@ export default function Home() {
                     🔍
                   </div>
 
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-baseline gap-3 mb-3">
                     <h3 className="text-2xl font-bold text-white">
                       UX Research
                     </h3>
-                    <span className="px-2 py-1 text-xs font-medium bg-zinc-800 text-gray-400 rounded-md">
+                    <span className="px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
                       Yakında
                     </span>
                   </div>
@@ -659,11 +659,11 @@ export default function Home() {
                     ⚡
                   </div>
 
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-baseline gap-3 mb-3">
                     <h3 className="text-2xl font-bold text-white">
                       Interaction Design
                     </h3>
-                    <span className="px-2 py-1 text-xs font-medium bg-zinc-800 text-gray-400 rounded-md">
+                    <span className="px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
                       Yakında
                     </span>
                   </div>
