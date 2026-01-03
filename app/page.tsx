@@ -561,7 +561,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-white mb-2">Tasarım Becerileri</h3>
               <p className="text-gray-400 text-sm">Rolünden bağımsız olarak, tasarım becerilerini derinleştirebileceğin alanlar.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {/* Design Systems - Yakında */}
               <div
                 className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
