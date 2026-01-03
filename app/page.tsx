@@ -565,7 +565,7 @@ export default function Home() {
 
                 <div className="relative p-8">
                   {/* Badge - Sağ Üst */}
-                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
+                  <span className="absolute top-4 right-4 px-3 py-1.5 text-xs font-semibold bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-md text-[#DEFF37]">
                     Yakında
                   </span>
 
@@ -595,7 +595,7 @@ export default function Home() {
 
                 <div className="relative p-8">
                   {/* Badge - Sağ Üst */}
-                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
+                  <span className="absolute top-4 right-4 px-3 py-1.5 text-xs font-semibold bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-md text-[#DEFF37]">
                     Yakında
                   </span>
 
@@ -625,7 +625,7 @@ export default function Home() {
 
                 <div className="relative p-8">
                   {/* Badge - Sağ Üst */}
-                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
+                  <span className="absolute top-4 right-4 px-3 py-1.5 text-xs font-semibold bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-md text-[#DEFF37]">
                     Yakında
                   </span>
 
@@ -655,7 +655,7 @@ export default function Home() {
 
                 <div className="relative p-8">
                   {/* Badge - Sağ Üst */}
-                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
+                  <span className="absolute top-4 right-4 px-3 py-1.5 text-xs font-semibold bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-md text-[#DEFF37]">
                     Yakında
                   </span>
 
@@ -685,7 +685,7 @@ export default function Home() {
 
                 <div className="relative p-8">
                   {/* Badge - Sağ Üst */}
-                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
+                  <span className="absolute top-4 right-4 px-3 py-1.5 text-xs font-semibold bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-md text-[#DEFF37]">
                     Yakında
                   </span>
 
@@ -715,7 +715,7 @@ export default function Home() {
 
                 <div className="relative p-8">
                   {/* Badge - Sağ Üst */}
-                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
+                  <span className="absolute top-4 right-4 px-3 py-1.5 text-xs font-semibold bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-md text-[#DEFF37]">
                     Yakında
                   </span>
 
@@ -725,7 +725,7 @@ export default function Home() {
                   </div>
 
                   <h3 className="text-2xl font-bold text-white mb-3">
-                    Interaction Design
+                    Interaction Design (IxD)
                   </h3>
 
                   <p className="text-gray-400 leading-relaxed text-sm">
