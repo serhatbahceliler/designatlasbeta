@@ -6166,17 +6166,129 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "6. Metrics, Impact & Iteration",
-        description: "Metrikler, etki ölçümü ve sürekli iyileştirme.",
+        title: "6. 📊 Metrics, Impact & Iteration",
+        description: "Metrics, tasarımın işe yarayıp yaramadığını, hangi davranışı değiştirdiğini, ürün hedeflerine nasıl katkı sağladığını görmemizi sağlar. Product Designer için metrikler tasarımı kanıtlamak için değil, daha iyi karar vermek için kullanılır.",
         topics: [
-          { title: "Success Metrics Tanımlama" },
-          { title: "UX & Product Metrics" },
-          { title: "Funnel & Davranış Analizi" },
-          { title: "Qual + Quant Sinyalleri Birlikte Okuma" },
-          { title: "Deney & A/B Test Mantığı (Temel)" },
-          { title: "Post-Launch Analiz" },
-          { title: "Iteration & Continuous Improvement" },
-          { title: "UX / UI Debt Farkındalığı" },
+          {
+            title: "Success Metrics Tanımlama",
+            description: "Her tasarım kararı bir başarı tanımına sahip olmalıdır. Başarı 'ekran yayına alındı' değildir, 'kullanıcı şu işi daha kolay yaptı'dır. İyi bir success metric net, ölçülebilir, davranışa bağlıdır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX Metrics", url: "https://www.nngroup.com/articles/ux-metrics/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarım için yaz: Bu tasarım başarılı olursa ne değişir?",
+                "Bunu hangi sinyalle anlarsın?",
+              ],
+            },
+          },
+          {
+            title: "UX & Product Metrics",
+            description: "UX ve Product metrikleri birlikte okunur. Örnek UX metrikleri: görev tamamlama süresi, hata oranı, kullanıcı memnuniyeti. Örnek Product metrikleri: activation, adoption, retention. Tek başına biri yeterli değildir.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir feature seç: UX tarafında neyi ölçerdin?",
+                "Product tarafında neyi izlerdin?",
+              ],
+            },
+          },
+          {
+            title: "Funnel & Davranış Analizi",
+            description: "Funnel kullanıcının adım adım ilerleyişini gösterir. Düşüş olan noktalar genelde UX problemine işaret eder, bazen de yanlış beklentiye. Funnel okumak 'nerede' sorusunu, UX araştırma 'neden' ile tamamlar.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Funnel Analysis", url: "https://www.nngroup.com/articles/funnel-analysis/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir funnel düşün: En büyük düşüş nerede?",
+                "UX orada ne yapıyor?",
+              ],
+            },
+          },
+          {
+            title: "Qualitative & Quantitative Sinyalleri Birlikte Okuma",
+            description: "Quant ne oluyor?, Qual neden oluyor? sorusunu cevaplar. Product Designer bu iki sinyali birleştirir. Sadece veri bağlamı kaçırır, sadece görüş genellenemez.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir sayı düşün: Bu sayı neden böyle olabilir?",
+                "Bunu kiminle konuşarak anlarsın?",
+              ],
+            },
+          },
+          {
+            title: "Deney & A/B Test Mantığı",
+            description: "A/B test her problem için uygun değildir, küçük, net değişikliklerde işe yarar. Yanlış kullanım: belirsiz hipotez, çok fazla değişken. Doğru kullanım: tek varsayım, net başarı kriteri.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "A/B Testing", url: "https://www.nngroup.com/articles/ab-testing/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir fikir düşün: Bu A/B test için uygun mu?",
+                "Yoksa önce UX araştırma mı gerekir?",
+              ],
+            },
+          },
+          {
+            title: "Post-Launch Analiz",
+            description: "Yayına almak son değil, başlangıçtır. Post-launch beklenen etki oldu mu?, kullanıcı nerede zorlanıyor?, yeni problemler doğdu mu? sorularını sorar. Bu analiz yapılmazsa aynı hatalar tekrar eder.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Son yayını düşün: Beklediğiniz etki oldu mu?",
+                "Olmadıysa neden?",
+              ],
+            },
+          },
+          {
+            title: "Iteration & Continuous Improvement",
+            description: "İyi ürünler tek seferde 'mükemmel' olmaz, iterasyonla gelişir. Iteration geri adım değil, öğrenmenin sonucudur.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarım için sor: Bugün yeniden yapsan neyi değiştirirdin?",
+                "Neden?",
+              ],
+            },
+          },
+          {
+            title: "UX / UI Debt Farkındalığı",
+            description: "UX / UI debt kısa vadede alınan kararların uzun vadede deneyimi zorlaştırmasıdır. Debt birikir, ama fark edilmezse büyür. Product Designer bu debt'i görünür kılar.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX Debt", url: "https://www.nngroup.com/articles/ux-debt/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ürünü düşün: En çok 'idare eden' kısım neresi?",
+                "Bunun bedeli ne?",
+              ],
+            },
+          },
         ],
       },
       {
