@@ -6021,19 +6021,148 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "5. Communication & Collaboration",
-        description: "Ekip içi işbirliği, iletişim ve tasarım kararlarını savunma.",
+        title: "5. 🤝 Communication & Collaboration",
+        description: "Product Designer tek başına tasarlamaz, ekip içinde karar üretir, tasarımın etkisini anlatır. İyi iletişim tasarımı savunmak değil, ortak anlayış oluşturmaktır. Amaç: 'benim tasarımım' değil, 'ekibin kararı' hissini yaratmak.",
         topics: [
-          { title: "Product Manager ile Çalışma" },
-          { title: "Developer'larla Çalışma" },
-          { title: "Stakeholder Yönetimi" },
-          { title: "Design Critique Alma & Verme" },
-          { title: "Design Decision'ları Anlatma" },
-          { title: "Handoff & Dokümantasyon" },
-          { title: "Design QA & Canlı Ürün Takibi" },
-          { title: "Feedback Loop Kurma" },
-          { title: "Ürün İçi ve Ürün Sonrası Öğrenme" },
-          { title: "Tasarımın Etkisini İfade Etme" },
+          {
+            title: "Product Manager ile Çalışma",
+            description: "PM ürün hedeflerini, öncelikleri, iş etkisini temsil eder. Product Designer kullanıcı perspektifini, deneyim kalitesini, riskleri ortaya koyar. Sağlıklı ilişki: erken konuşmak, birlikte problem tanımlamak, çözümü birlikte şekillendirmek.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Designers & Product Managers", url: "https://www.nngroup.com/articles/designers-product-managers/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir PM konuşmasını düşün: Problem net miydi?",
+                "Yoksa sadece çözüm mü konuşuldu?",
+              ],
+            },
+          },
+          {
+            title: "Developer'larla Çalışma",
+            description: "Developer'lar tasarımı değil, davranışı uygular. İyi iletişim niyeti açıklar, edge-case yerine temel mantığı anlatır, 'neden böyle'yi paylaşır. Amaç tasarımın canlıda bozulmamasıdır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Designers & Developers", url: "https://www.nngroup.com/articles/designers-developers/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarımı düşün: Developer'a sadece 'nasıl göründüğünü' mü anlattın?",
+                "Yoksa 'nasıl çalıştığını' mı?",
+              ],
+            },
+          },
+          {
+            title: "Stakeholder Yönetimi",
+            description: "Stakeholder'lar karar vericidir, ama her zaman kullanıcıyı temsil etmez. Product Designer feedback'i filtreler, kişisel görüş ile kullanıcı ihtiyacını ayırır, kararı veriye bağlar.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Stakeholder Feedback", url: "https://www.nngroup.com/articles/stakeholder-feedback/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir feedback düşün: Bu kişisel mi?",
+                "Yoksa kullanıcıdan gelen bir sinyal mi?",
+              ],
+            },
+          },
+          {
+            title: "Design Critique Alma & Verme",
+            description: "Design critique beğeni toplamak değildir, tasarımı geliştirmektir. İyi critique probleme odaklanır, kişisel olmaz, gerekçelidir. Kötü critique: 'bence böyle', 'daha güzel olur'.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Design Critiques", url: "https://www.nngroup.com/articles/design-critique/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir feedback cümlesi yaz: 'Bence güzel değil' yerine",
+                "Nasıl daha yapıcı olur?",
+              ],
+            },
+          },
+          {
+            title: "Design Decision'ları Anlatma",
+            description: "Tasarımcı sadece çizen değil, karar anlatan kişidir. İyi anlatım problemi hatırlatır, alternatifleri açıklar, neden bu kararın alındığını söyler.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarım kararını yaz: Alternatif neydi?",
+                "Neden bunu seçtin?",
+              ],
+            },
+          },
+          {
+            title: "Handoff & Dokümantasyon",
+            description: "Handoff dosya teslimi değil, bilgi aktarımıdır. İyi handoff belirsizliği azaltır, yorum ihtiyacını düşürür, geliştirme sürecini hızlandırır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Design Handoff", url: "https://www.nngroup.com/articles/design-handoff/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir handoff düşün: Developer hangi soruyu sordu?",
+                "Bunu önceden çözebilir miydin?",
+              ],
+            },
+          },
+          {
+            title: "Design QA & Canlı Ürün Takibi",
+            description: "Geliştirme bittiğinde iş bitmez. Design QA küçük farkları yakalar, deneyim kalitesini korur, kullanıcıyı savunur.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Canlı ürüne bak: Tasarımdan farklı olan ne?",
+                "Bu fark kullanıcıyı etkiliyor mu?",
+              ],
+            },
+          },
+          {
+            title: "Feedback Loop Kurma",
+            description: "İyi ekipler feedback'i tek seferlik almaz, döngü kurar. Feedback loop öğrenmeyi hızlandırır, aynı hatanın tekrarlanmasını önler.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir karar sonrası sor: Bundan ne öğrendik?",
+                "Bir dahaki sefere neyi farklı yaparız?",
+              ],
+            },
+          },
+          {
+            title: "Tasarımın Etkisini İfade Etme",
+            description: "Product Designer yaptığı işin etkisini söyleyebilmelidir. Bu etki kullanıcı memnuniyeti, hız, hata oranı, benimsenme gibi sinyallerle anlatılır.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir işin için yaz: Bu tasarım neyi iyileştirdi?",
+                "Bunu nasıl fark ettin?",
+              ],
+            },
+          },
         ],
       },
       {
