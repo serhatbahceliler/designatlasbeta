@@ -5310,19 +5310,167 @@ const roadmaps: Record<string, Roadmap> = {
     icon: "💡",
     sections: [
       {
-        title: "1. Product Thinking",
-        description: "Ürün düşüncesi, problem çözme ve değer odaklı tasarım yaklaşımları.",
+        title: "1. 🧠 Product Thinking",
+        description: "Product Thinking, tasarımcının ekrana değil probleme odaklanmasını, çözümden önce değeri sorgulamasını, kullanıcı, iş ve teknik gerçekliği birlikte düşünmesini sağlayan düşünme biçimidir. Amaç: feature üretmek değil, anlamlı ve etkisi ölçülebilen çözümler üretmek.",
         topics: [
-          { title: "Product Designer Rolü & Sorumlulukları" },
-          { title: "Problem vs Solution Thinking" },
-          { title: "Outcome Odaklı Tasarım" },
-          { title: "Ürün Vizyonu & Değer Önerisi" },
-          { title: "Kullanıcı Değeri vs İş Hedefleri" },
-          { title: "Varsayım Kurma & Hipotez Düşüncesi" },
-          { title: "Önceliklendirme Mantığı (Impact vs Effort)" },
-          { title: "Ürün Kararlarında Trade-off'lar" },
-          { title: "MVP & Iteratif Ürün Geliştirme" },
-          { title: "Product Sense Geliştirme" },
+          {
+            title: "Product Designer Rolü & Sorumlulukları",
+            description: "Product Designer sadece UX veya UI yapan kişi değildir, ürün kararlarının tasarım tarafındaki ortağıdır. Sorumluluk alanı: problemi doğru tanımlamak, çözüm alternatiflerini düşünmek, kullanıcıyı temsil etmek, kararların etkisini sorgulamak. Product Designer karar veren değil, kararı şekillendiren kişidir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX Roles & Responsibilities", url: "https://www.nngroup.com/articles/ux-roles/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir feature düşün: Bu feature olmasa ürün çöker mi?",
+                "Yoksa sadece 'nice to have' mi?",
+              ],
+            },
+          },
+          {
+            title: "Problem Thinking vs Solution Thinking",
+            description: "En yaygın hata: problemi dinler dinlemez çözüm düşünmek. Problem thinking: neden bu sorun var? kim için sorun? gerçekten çözülmeli mi? Solution thinking: nasıl çözeriz? hangi ekran? hangi buton? Product Thinking = önce problem, sonra çözüm.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Problem vs Solution", url: "https://www.nngroup.com/articles/problem-definition/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "'Kullanıcı X istiyor' cümlesini şuna çevir:",
+                "'Kullanıcı aslında neyi başarmaya çalışıyor?'",
+              ],
+            },
+          },
+          {
+            title: "Outcome Odaklı Düşünme",
+            description: "Product Thinking output değil, outcome üretir. Output: Yeni ekran. Outcome: Kullanıcı daha hızlı işini tamamladı. Tasarımın başarısı kaç ekran çizildiğiyle değil, hangi davranış değiştiğiyle ölçülür.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Outcomes vs Outputs", url: "https://www.nngroup.com/articles/outcomes-vs-outputs/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarım kararı için sor: Kullanıcının hangi davranışı değişmeli?",
+                "Bunu nasıl anlayacaksın?",
+              ],
+            },
+          },
+          {
+            title: "Ürün Değeri (Value) Nedir?",
+            description: "Bir ürün kararı ancak şu üçü kesişiyorsa değerlidir: Kullanıcı için anlamlı, İş için mantıklı, Teknik olarak yapılabilir. Bu üçlüden biri yoksa risk vardır, sürdürülebilirlik düşer.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Value Proposition in UX", url: "https://www.nngroup.com/articles/value-proposition/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir fikir düşün: Kullanıcı için neden değerli?",
+                "İş tarafında hangi probleme hizmet ediyor?",
+              ],
+            },
+          },
+          {
+            title: "Kullanıcı Değeri vs İş Hedefleri",
+            description: "Gerçek ürünlerde kullanıcı her istediğini alamaz, iş her istediğini yaptıramaz. Product Designer iki taraf arasında denge kurar, kör savunma yapmaz. İyi Product Thinking ortak noktayı arar.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir çatışma düşün: Kullanıcıyı mutlu eden ama iş için riskli olan ne?",
+                "Bunun orta yolu ne olabilir?",
+              ],
+            },
+          },
+          {
+            title: "Varsayım (Assumption) ile Düşünmek",
+            description: "Birçok ürün kararı veri değil varsayım içerir. Örnek varsayımlar: 'Kullanıcı bunu anlar', 'Bu daha hızlıdır', 'Bu daha kolaydır'. Product Thinking varsayımı fark eder, test edilebilir hale getirir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Assumptions in UX", url: "https://www.nngroup.com/articles/assumptions/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir karar yaz: Bu karar hangi varsayıma dayanıyor?",
+                "Bu varsayımı nasıl doğrularsın?",
+              ],
+            },
+          },
+          {
+            title: "Önceliklendirme Mantığı",
+            description: "Her şey önemliyse, hiçbir şey önemli değildir. Product Thinking etki (impact), çaba (effort), risk üzerinden öncelik düşünür.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Üç iş yaz: En çok etki hangisinde?",
+                "En az çaba hangisinde?",
+              ],
+            },
+          },
+          {
+            title: "Trade-off'ları Kabul Etmek",
+            description: "Her ürün kararı bir şeyden vazgeçmektir. Hız vs kalite, esneklik vs sadelik, kısa vade vs uzun vade. Product Designer 'en iyisi'ni değil, şartlara göre en mantıklıyı savunur.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir karar düşün: Bunun bedeli ne?",
+                "Neyi feda ediyorsun?",
+              ],
+            },
+          },
+          {
+            title: "MVP & Iteratif Düşünce",
+            description: "MVP en küçük çözüm değil, en çok öğrenme sağlayan çözümdür. Amaç kusursuzluk değil, öğrenme hızıdır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Minimum Viable Product", url: "https://www.nngroup.com/articles/minimum-viable-product/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir fikir için sor: En küçük ama anlamlı hali ne?",
+                "Ne öğrenmek istiyoruz?",
+              ],
+            },
+          },
+          {
+            title: "Product Sense Geliştirme",
+            description: "Product Sense doğru soruları sorabilme yetisidir, zamanla gelişir, deneyimle güçlenir. Geliştirmek için: iyi ürünleri incele, kötü deneyimleri sorgula, 'neden böyle?' demekten vazgeçme.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Günlük kullandığın bir ürünü seç: En sevdiğin özellik neden iyi?",
+                "En sinir olduğun şey neden kötü?",
+              ],
+            },
+          },
         ],
       },
       {
