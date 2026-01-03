@@ -4811,14 +4811,166 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "12. UI QA, Critique & Iteration",
-        description: "UI kalite kontrolü, tasarım eleştirisi ve iterasyon süreçleri.",
+        title: "12. 🔍 UI QA, Critique & Iteration",
+        description: "Bu bölüm, tasarlanan UI'ın gerçekten doğru uygulanıp uygulanmadığını, görsel ve etkileşimsel kaliteyi, zaman içinde bozulup bozulmadığını kontrol etmeyi kapsar. Amaç: 'tasarımı verdik bitti' yaklaşımını kırmak, kaliteyi sürdürülebilir hale getirmek, UI'ı canlı bir sistem olarak ele almak.",
         topics: [
-          { title: "UI Critique Framework (Objective critique)" },
-          { title: "Visual QA Checklist (Spacing, alignment, contrast, states)" },
-          { title: "Design Regression Thinking (What breaks over time)" },
-          { title: "Iteration Loops (Feedback → refine)" },
-          { title: "Common UI Quality Issues (Inconsistency, density drift)" },
+          {
+            title: "UI Quality Assurance (QA) Basics",
+            description: "UI QA tasarım ile canlı ürün arasındaki farkları kontrol eder, görsel hataları erken yakalar, küçük sorunların büyümesini engeller. UI QA, bug avı değil deneyim korumadır. Bir canlı ürüne bak: Tasarımla birebir mi? Fark varsa neden?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Design QA and Reviews", url: "https://www.nngroup.com/articles/design-reviews/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI QA Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ui+qa+explained+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why UI QA Matters", url: "https://uxdesign.cc/why-ui-qa-matters-7c8b6e4c6f8e" },
+                  { title: "Design QA for UI Designers", url: "https://uxdesign.cc/design-qa-for-ui-designers-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir canlı ürüne bak: Tasarımla birebir mi?",
+                "Fark varsa neden?",
+              ],
+            },
+          },
+          {
+            title: "UI Critique Framework",
+            description: "UI critique beğeni üzerinden değil, prensip ve hedefler üzerinden yapılır. İyi critique problemi tanımlar, etkiyi açıklar, alternatif önerir. Bir UI eleştir: 'Beğenmedim' yerine 'Şu yüzden çalışmıyor' de.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "How to Give Design Feedback", url: "https://www.nngroup.com/articles/design-critique/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Design Critique Basics – NNGroup", url: "https://www.youtube.com/results?search_query=design+critique+basics+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How to Critique UI Designs", url: "https://uxdesign.cc/how-to-critique-ui-designs-7c8b6e4c6f8e" },
+                  { title: "Design Feedback Without Ego", url: "https://uxdesign.cc/design-feedback-without-ego-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir UI eleştir: 'Beğenmedim' yerine",
+                "'Şu yüzden çalışmıyor' de",
+              ],
+            },
+          },
+          {
+            title: "Visual QA Checklist",
+            description: "UI QA sırasında kontrol edilecekler: spacing tutarlılığı, hizalamalar, renk ve kontrast, typography scale, state'lerin varlığı. Checklist, kaliteyi kişiden bağımsız hale getirir. Bir ekranı checklist ile tara: İlk yakaladığın hata ne?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Visual Design Heuristics", url: "https://www.nngroup.com/articles/visual-design/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI QA Checklist", url: "https://www.youtube.com/results?search_query=ui+qa+checklist" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "UI QA Checklist for Designers", url: "https://uxdesign.cc/ui-qa-checklist-for-designers-7c8b6e4c6f8e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekranı checklist ile tara: İlk yakaladığın hata ne?",
+              ],
+            },
+          },
+          {
+            title: "Iteration Loops",
+            description: "Iteration hatayı kabul etmek değil, öğrenmeyi sahiplenmektir. İyi iteration küçük adımlarla ilerler, geri bildirimle beslenir, kaliteyi artırır. Bir tasarımı düşün: İlk versiyon ne öğretti? İkinci versiyon neyi düzeltti?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Iterative Design", url: "https://www.nngroup.com/articles/iterative-design/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Iterative UI Design – NNGroup", url: "https://www.youtube.com/results?search_query=iterative+ui+design+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Iteration Is Not Rework", url: "https://uxdesign.cc/iteration-is-not-rework-7c8b6e4c6f8e" },
+                  { title: "Designing in Small Improvements", url: "https://uxdesign.cc/designing-in-small-improvements-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarımı düşün: İlk versiyon ne öğretti?",
+                "İkinci versiyon neyi düzeltti?",
+              ],
+            },
+          },
+          {
+            title: "Common UI Quality Issues",
+            description: "Sık karşılaşılan sorunlar: zamanla bozulan spacing, yeni feature'larla kırılan hiyerarşi, tutarsız state'ler, kontrolsüz varyantlar. Bu sorunlar ürün büyüdükçe artar. Bir ürün düşün: İlk versiyon ile şimdiki hali arasında kalite farkı var mı?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Design Consistency Issues", url: "https://www.nngroup.com/articles/consistency-heuristic/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Quality Issues Explained", url: "https://www.youtube.com/results?search_query=ui+quality+issues+explained" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why UI Quality Degrades Over Time", url: "https://uxdesign.cc/why-ui-quality-degrades-over-time-7c8b6e4c6f8e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ürün düşün: İlk versiyon ile şimdiki hali arasında",
+                "kalite farkı var mı?",
+              ],
+            },
+          },
         ],
       },
       {
