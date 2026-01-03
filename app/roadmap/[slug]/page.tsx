@@ -5137,14 +5137,168 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "14. UI Portfolio & Career (Junior Focused)",
-        description: "UI Designer portfolyosu ve kariyer gelişimi.",
+        title: "14. 🎯 UI Portfolio & Career (Junior Focused)",
+        description: "Bu bölüm, Junior UI Designer'ların portfolyosunu doğru kurgulamasını, sektöre gerçekçi beklentilerle girmesini, sürdürülebilir şekilde gelişmesini amaçlar. Amaç: 'güzel ekranlar' yerine UI düşüncesini göstermek, işe alım süreçlerinde net ve anlaşılır olmak, kariyerin erken aşamasında doğru alışkanlıklar kazanmak.",
         topics: [
-          { title: "What Makes a Strong UI Portfolio" },
-          { title: "Showing UI Thinking (Rationale, constraints, decisions)" },
-          { title: "Before/After & UI Improvements (Case format)" },
-          { title: "Common Junior UI Portfolio Mistakes" },
-          { title: "Growing as a UI Designer (Learning plan)" },
+          {
+            title: "What Makes a Strong UI Portfolio",
+            description: "İyi bir UI portfolyosu az ama net iş gösterir, görsel kararların nedenlerini açıklar, tutarlılığı ve kaliteyi yansıtır. Junior seviyede 3–5 sağlam case yeterlidir, quantity değil clarity önemlidir. Portfolyondaki bir işi seç: Bu işi neden ekledin? Seni hangi açıdan temsil ediyor?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX & UI Portfolios", url: "https://www.nngroup.com/articles/ux-portfolio/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Portfolio Tips – NNGroup", url: "https://www.youtube.com/results?search_query=ui+portfolio+tips+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "What Recruiters Look for in UI Portfolios", url: "https://uxdesign.cc/what-recruiters-look-for-in-ui-portfolios-7c8b6e4c6f8e" },
+                  { title: "How to Build a UI Portfolio", url: "https://uxdesign.cc/how-to-build-a-ui-portfolio-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Portfolyondaki bir işi seç: Bu işi neden ekledin?",
+                "Seni hangi açıdan temsil ediyor?",
+              ],
+            },
+          },
+          {
+            title: "Showing UI Thinking (Not Just Screens)",
+            description: "UI portfolyosu sadece ekran göstermez: hiyerarşi kararlarını, renk ve typography tercihlerini, component mantığını anlatır. 'Nasıl görünüyor?' kadar 'Neden böyle?' sorusu önemlidir. Bir ekran için yaz: En kritik UI kararın neydi? Alternatif neydi?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Explaining Design Decisions", url: "https://www.nngroup.com/articles/design-decisions/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Showing Design Thinking in Portfolios", url: "https://www.youtube.com/results?search_query=showing+design+thinking+in+portfolios" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How to Explain UI Decisions", url: "https://uxdesign.cc/how-to-explain-ui-decisions-7c8b6e4c6f8e" },
+                  { title: "From Screens to Reasoning", url: "https://uxdesign.cc/from-screens-to-reasoning-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran için yaz: En kritik UI kararın neydi?",
+                "Alternatif neydi?",
+              ],
+            },
+          },
+          {
+            title: "Before / After & UI Improvements",
+            description: "UI Designer'lar için before / after çalışmaları, iyileştirme örnekleri çok değerlidir. Bu format gözlem yeteneğini, kalite farkını, UI hassasiyetini gösterir. Bir ekran seç: Ne çalışmıyordu? UI bunu nasıl çözdü?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Redesign Case Studies", url: "https://www.nngroup.com/articles/redesign/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Redesign Case Studies", url: "https://www.youtube.com/results?search_query=ui+redesign+case+studies" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How to Present UI Improvements", url: "https://uxdesign.cc/how-to-present-ui-improvements-7c8b6e4c6f8e" },
+                  { title: "Before & After UI Done Right", url: "https://uxdesign.cc/before-after-ui-done-right-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran seç: Ne çalışmıyordu?",
+                "UI bunu nasıl çözdü?",
+              ],
+            },
+          },
+          {
+            title: "Common Junior UI Portfolio Mistakes",
+            description: "Sık yapılan hatalar: sadece Dribbble tarzı ekranlar, aşırı süslü ama temelsiz UI, aynı tarzda çok fazla iş, açıklama eksikliği. Bu hatalar potansiyeli gizler, değerlendirmeyi zorlaştırır. Portfolyonu gözden geçir: En zayıf iş hangisi? Çıkarsan daha mı iyi olur?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Portfolio Mistakes", url: "https://www.nngroup.com/articles/ux-portfolio-mistakes/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Portfolio Mistakes", url: "https://www.youtube.com/results?search_query=ui+portfolio+mistakes" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why UI Portfolios Get Rejected", url: "https://uxdesign.cc/why-ui-portfolios-get-rejected-7c8b6e4c6f8e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Portfolyonu gözden geçir: En zayıf iş hangisi?",
+                "Çıkarsan daha mı iyi olur?",
+              ],
+            },
+          },
+          {
+            title: "Growing as a UI Designer",
+            description: "UI kariyeri tek sıçrama değil, kademeli gelişimdir. Gelişim için: iyi UI'ları incele, sistem düşün, feedback iste, sabırlı ol. Junior'luk geçici, alışkanlıklar kalıcıdır. Kendine sor: Son 3 ayda UI olarak ne öğrendin? Bir sonraki adımın ne?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Growing UX Careers", url: "https://www.nngroup.com/articles/ux-career/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Growing as a UI Designer", url: "https://www.youtube.com/results?search_query=growing+as+a+ui+designer" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How Junior UI Designers Grow", url: "https://uxdesign.cc/how-junior-ui-designers-grow-7c8b6e4c6f8e" },
+                  { title: "Building a Long-Term UI Career", url: "https://uxdesign.cc/building-a-long-term-ui-career-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Kendine sor: Son 3 ayda UI olarak ne öğrendin?",
+                "Bir sonraki adımın ne?",
+              ],
+            },
+          },
         ],
       },
     ],
