@@ -5846,20 +5846,178 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "4. Interface (UI & Interaction)",
-        description: "Arayüz tasarımı, UI sistemleri ve etkileşim detayları.",
+        title: "4. 🎨 Interface (UI & Interaction)",
+        description: "User Interface (UI), kullanıcının sistemle doğrudan temas ettiği, gördüğü, tıkladığı, etkileşime girdiği tüm görsel ve etkileşimsel katmandır. UI UX'in görünür halidir, ama tek başına UX değildir. İyi UI dikkat çekmez, karar vermeyi hızlandırır, hatayı azaltır.",
         topics: [
-          { title: "UI Design Temelleri" },
-          { title: "Layout, Grid & Spacing Sistemleri" },
-          { title: "Typography & Readability" },
-          { title: "Color, Contrast & Theme" },
-          { title: "UI Components & Patterns" },
-          { title: "Component States & Variants" },
-          { title: "Interaction Design & Feedback" },
-          { title: "Microinteractions & Motion" },
-          { title: "Responsive & Platform-Aware UI" },
-          { title: "Design Systems (UI Seviyesi)" },
-          { title: "Visual QA & UI Kalite Kontrolü" },
+          {
+            title: "UI Design Temelleri",
+            description: "UI tasarımı estetikten önce anlaşılırlık ister, süslemekten önce hiyerarşi kurar. Temel prensipler: görsel hiyerarşi, tutarlılık, sadelik, okunabilirlik.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Visual Design Basics", url: "https://www.nngroup.com/articles/visual-design/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran düşün: Kullanıcı ilk nereye bakıyor?",
+                "Bu bilinçli mi, rastlantı mı?",
+              ],
+            },
+          },
+          {
+            title: "Layout, Grid & Spacing",
+            description: "Layout içeriğin nasıl hizalandığıdır. Grid tasarımı tutarlı kılar, geliştirilebilir hale getirir. Spacing görsel nefes alanı yaratır, hiyerarşiyi güçlendirir.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekranı incele: Aynı tür öğeler aynı hizaya mı sahip?",
+                "Boşluklar bilinçli mi?",
+              ],
+            },
+          },
+          {
+            title: "Typography & Readability",
+            description: "Typography sadece font seçimi değildir, okuma deneyiminin temelidir. İyi typography göz yormaz, hiyerarşi kurar, içerik türlerini ayırır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Typography for UX", url: "https://www.nngroup.com/articles/typography/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir metni düşün: Başlık mı, açıklama mı?",
+                "Bu fark net mi?",
+              ],
+            },
+          },
+          {
+            title: "Color, Contrast & Theme",
+            description: "Renk dekorasyon değil, iletişim aracıdır. Renk ile durum bildirilir, öncelik verilir, geri bildirim sağlanır. Yanlış renk kullanımı erişilebilirliği, okunabilirliği bozar.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Color & Accessibility", url: "https://www.nngroup.com/articles/color-accessibility/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir buton düşün: Neden bu renk?",
+                "Başka bir renkle anlamı değişir mi?",
+              ],
+            },
+          },
+          {
+            title: "UI Components & Patterns",
+            description: "Component tekrar eden, tek sorumluluğu olan, farklı durumlara uyum sağlayan UI yapı taşıdır. Pattern kullanıcıya tanıdık gelen, öğrenme maliyetini düşüren çözümlerdir.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir component seç: Tek bir amacı var mı?",
+                "Yoksa fazla sorumluluk mu taşıyor?",
+              ],
+            },
+          },
+          {
+            title: "Component States & Variants",
+            description: "Her component default, hover, active, disabled, error gibi durumlara sahiptir. Eksik state UX problemlerine, geliştirici yorumuna yol açar.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UI States", url: "https://www.nngroup.com/articles/ui-states/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir input düşün: Hata durumunda ne oluyor?",
+                "Kullanıcı ne yapacağını anlıyor mu?",
+              ],
+            },
+          },
+          {
+            title: "Interaction Design & Feedback",
+            description: "Interaction kullanıcının yaptığı aksiyona sistemin verdiği tepkidir. Feedback 'bir şey oldu mu?' sorusunun cevabıdır. Feedback yoksa kullanıcı güvensiz hisseder.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Feedback & System Status", url: "https://www.nngroup.com/articles/visibility-system-status/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir aksiyon düşün: Tıklayınca ne oluyor?",
+                "Bu anlaşılıyor mu?",
+              ],
+            },
+          },
+          {
+            title: "Microinteractions & Motion",
+            description: "Microinteraction küçük ama anlamlı hareketlerdir. Amaç: yönlendirmek, durum bildirmek, deneyimi akıcı hale getirmek. Motion dikkat çekmek için değil, anlam katmak için kullanılır.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir animasyon düşün: Bilgi mi veriyor?",
+                "Yoksa sadece süs mü?",
+              ],
+            },
+          },
+          {
+            title: "Responsive & Platform-Aware UI",
+            description: "UI farklı ekranlarda, farklı platformlarda aynı hissi vermelidir. Responsive tasarım küçültmek değil, yeniden düşünmektir.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir mobil ekran düşün: Bu masaüstünden birebir mi geldi?",
+                "Yoksa gerçekten mobil için mi düşünülmüş?",
+              ],
+            },
+          },
+          {
+            title: "Design Systems (UI Seviyesi)",
+            description: "Design system UI kararlarını merkezileştirir, tutarlılığı korur, ölçeklenmeyi sağlar. UI açısından component, pattern, style kurallarını içerir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Design Systems", url: "https://www.nngroup.com/articles/design-systems/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir UI kararını düşün: Bu karar tek seferlik mi?",
+                "Yoksa sistemleşmeli mi?",
+              ],
+            },
+          },
+          {
+            title: "Visual QA & UI Kalite Kontrolü",
+            description: "UI QA tasarımın canlıda bozulmamasını sağlar, küçük farkları yakalar. Örnek kontroller: spacing tutarlılığı, font boyutları, state'lerin çalışması.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Canlı bir ürüne bak: Tasarımdan farklı olan ne?",
+                "Bu fark deneyimi etkiliyor mu?",
+              ],
+            },
+          },
         ],
       },
       {
