@@ -609,7 +609,7 @@ export default function Home() {
                   </h3>
 
                   <p className="text-gray-400 leading-relaxed text-sm">
-                    Kullanıcı deneyimini destekleyen, açık ve anlaşılır metinler yazma sanatı. Mikro-kopylar, error mesajları ve arayüz dilini kullanıcı odaklı şekillendirme.
+                    Kullanıcı deneyimini destekleyen, açık ve anlaşılır metinler yazma sanatı. Mikro-copyler, error mesajları ve arayüz dilini kullanıcı odaklı şekillendirme.
                   </p>
                 </div>
               </div>
