@@ -4446,14 +4446,173 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "10. Platform Awareness (Web & Mobile)",
-        description: "Web ve mobil platformlar için UI tasarım farklılıkları.",
+        title: "10. 📱💻 Platform Awareness (Web & Mobile)",
+        description: "Platform awareness, bir UI Designer'ın tasarımın çalışacağı platformu anlamasını, her platformun kendi kurallarını dikkate almasını ve 'tek tasarım her yere uyar' yanılgısından kaçınmasını sağlar. Amaç: platforma doğal hissettiren arayüzler tasarlamak, kullanıcı alışkanlıklarını bozmamak ve teknik/deneyimsel hataları azaltmak.",
         topics: [
-          { title: "Web UI Basics (Navigation, density, hover/focus)" },
-          { title: "Mobile UI Basics (Thumb reach, gestures, safe areas)" },
-          { title: "Design Guidelines Awareness (Material / iOS HIG)" },
-          { title: "Responsive vs Adaptive UI" },
-          { title: "Platform-Specific Pitfalls (Same UI everywhere)" },
+          {
+            title: "Web UI Basics",
+            description: "Web arayüzleri mouse + klavye kullanımına dayanır, hover ve focus gibi state'leri yoğun kullanır ve genellikle daha yüksek bilgi yoğunluğuna sahiptir. Web UI'da önemli noktalar: hover affordance, link davranışları, scroll algısı. Bir web ekranına bak: Hover olmadan anlaşılır mı? Linkler net mi?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Web UX Design", url: "https://www.nngroup.com/articles/web-design/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Web UI Design Basics – NNGroup", url: "https://www.youtube.com/results?search_query=web+ui+design+basics" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing Effective Web Interfaces", url: "https://uxdesign.cc/designing-effective-web-interfaces-7c8b6e4c6f8e" },
+                  { title: "Common Web UI Mistakes", url: "https://uxdesign.cc/common-web-ui-mistakes-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir web ekranına bak: Hover olmadan anlaşılır mı?",
+                "Linkler net mi?",
+              ],
+            },
+          },
+          {
+            title: "Mobile UI Basics",
+            description: "Mobil UI dokunma odaklıdır, tek el kullanımını hesaba katar ve daha sınırlı alanla çalışır. Mobilde kritik noktalar: dokunma alanı boyutları, thumb reach, safe area'lar. Bir mobil ekran düşün: En sık kullanılan aksiyon nereye yakın? Tek elle erişilebilir mi?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Mobile UX Design", url: "https://www.nngroup.com/articles/mobile-ux/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Mobile UI Design Basics – NNGroup", url: "https://www.youtube.com/results?search_query=mobile+ui+design+basics" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing for Mobile First", url: "https://uxdesign.cc/designing-for-mobile-first-7c8b6e4c6f8e" },
+                  { title: "Thumb-Friendly UI Design", url: "https://uxdesign.cc/thumb-friendly-ui-design-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir mobil ekran düşün: En sık kullanılan aksiyon nereye yakın?",
+                "Tek elle erişilebilir mi?",
+              ],
+            },
+          },
+          {
+            title: "Platform Guidelines Awareness",
+            description: "Her platformun kendi beklentileri vardır: Web → tarayıcı alışkanlıkları, iOS → Human Interface Guidelines, Android → Material Design. Amaç guideline'ları kopyalamak değil, mantığını anlamaktır. Bir iOS ve Android ekranı karşılaştır: Aynı davranış neden farklı görünüyor?",
+            resources: [
+              {
+                category: "📘 Apple",
+                items: [
+                  { title: "Human Interface Guidelines", url: "https://developer.apple.com/design/human-interface-guidelines/" },
+                ],
+              },
+              {
+                category: "📘 Google",
+                items: [
+                  { title: "Material Design", url: "https://m3.material.io/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "iOS vs Android UI Differences", url: "https://www.youtube.com/results?search_query=ios+vs+android+ui+differences" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why Platform Guidelines Matter", url: "https://uxdesign.cc/why-platform-guidelines-matter-7c8b6e4c6f8e" },
+                  { title: "Designing Cross-Platform UI", url: "https://uxdesign.cc/designing-cross-platform-ui-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir iOS ve Android ekranı karşılaştır: Aynı davranış neden farklı görünüyor?",
+              ],
+            },
+          },
+          {
+            title: "Responsive vs Adaptive UI",
+            description: "Responsive UI ekran boyutuna göre esner. Adaptive UI belirli breakpoint'lerde farklı tasarlanır. Hangisi? Ürün türüne, içerik yoğunluğuna ve teknik kısıtlara bağlıdır. Bir ekran düşün: Sadece küçülse yeterli mi? Yoksa farklı davranmalı mı?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Responsive vs Adaptive Design", url: "https://www.nngroup.com/articles/responsive-vs-adaptive/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Responsive Design Explained – NNGroup", url: "https://www.youtube.com/results?search_query=responsive+design+explained" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Responsive vs Adaptive UI", url: "https://uxdesign.cc/responsive-vs-adaptive-ui-7c8b6e4c6f8e" },
+                  { title: "Choosing the Right Layout Strategy", url: "https://uxdesign.cc/choosing-the-right-layout-strategy-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran düşün: Sadece küçülse yeterli mi?",
+                "Yoksa farklı davranmalı mı?",
+              ],
+            },
+          },
+          {
+            title: "Platform-Specific Pitfalls",
+            description: "Sık yapılan hatalar: web mantığını mobile taşımak, hover'a güvenmek, küçük dokunma alanları, platforma aykırı navigation. Bu hatalar öğrenme maliyetini artırır ve ürünü yabancı hissettirir. Bir tasarımı düşün: Bu ekran hangi platformda daha zor? Neden?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Cross-Platform UX Issues", url: "https://www.nngroup.com/articles/cross-platform/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Cross-Platform UI Mistakes", url: "https://www.youtube.com/results?search_query=cross+platform+ui+mistakes" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why One UI Doesn't Fit All", url: "https://uxdesign.cc/why-one-ui-doesnt-fit-all-7c8b6e4c6f8e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarımı düşün: Bu ekran hangi platformda daha zor?",
+                "Neden?",
+              ],
+            },
+          },
         ],
       },
       {
