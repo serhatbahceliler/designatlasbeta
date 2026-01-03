@@ -4974,14 +4974,166 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "13. Handoff & Working with Developers (UI Angle)",
-        description: "UI tasarımlarının geliştiricilere teslimi ve işbirliği.",
+        title: "13. 🤝 Handoff & Working with Developers (UI Angle)",
+        description: "Bu bölüm, UI tasarımının doğru anlaşılmasını, eksiksiz uygulanmasını, canlı üründe bozulmamasını sağlayan iletişim ve aktarım pratiklerini kapsar. Amaç: 'dosyayı attım bitti' yaklaşımını bırakmak, UI kararlarını geliştirilebilir hale getirmek, tasarım–geliştirme arasında ortak dil kurmak.",
         topics: [
-          { title: "UI Specs Basics (What matters, what doesn't)" },
-          { title: "File Organization & Naming (Clean handoff)" },
-          { title: "Component Behavior Notes (States, transitions)" },
-          { title: "Developer-Friendly UI (Constraints, responsive rules)" },
-          { title: "UI Design QA in Build (Compare, adjust)" },
+          {
+            title: "UI Handoff Basics",
+            description: "UI handoff sadece Figma linki paylaşmak değildir, tasarımın nasıl çalıştığını anlatmaktır. İyi bir handoff belirsizliği azaltır, tekrar soru ihtiyacını düşürür, geliştirme süresini hızlandırır. Bir tasarımı düşün: Developer ilk hangi soruyu sorar? Bunu önceden nasıl netleştirirsin?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Design Handoff Best Practices", url: "https://www.nngroup.com/articles/design-handoff/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Handoff Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ui+handoff+explained+nngroup" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Design Handoff Is Communication", url: "https://uxdesign.cc/design-handoff-is-communication-7c8b6e4c6f8e" },
+                  { title: "Why UI Breaks After Handoff", url: "https://uxdesign.cc/why-ui-breaks-after-handoff-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarımı düşün: Developer ilk hangi soruyu sorar?",
+                "Bunu önceden nasıl netleştirirsin?",
+              ],
+            },
+          },
+          {
+            title: "File Organization & Naming",
+            description: "Düzenli dosyalar geliştiricinin işi anlamasını kolaylaştırır, yanlış ekran uygulanma riskini azaltır. İyi organizasyon: net sayfa isimleri, component bazlı yapı, gereksiz frame'lerden arınmış dosya. Bir dosyana bak: İlk kez açan biri neyin nerede olduğunu anlar mı?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Organizing Design Files", url: "https://www.nngroup.com/articles/design-documentation/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Organizing UI Files for Handoff", url: "https://www.youtube.com/results?search_query=organizing+ui+files+for+handoff" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "How to Organize Figma Files", url: "https://uxdesign.cc/how-to-organize-figma-files-7c8b6e4c6f8e" },
+                  { title: "Clean Files, Better Handoff", url: "https://uxdesign.cc/clean-files-better-handoff-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir dosyana bak: İlk kez açan biri neyin nerede olduğunu anlar mı?",
+              ],
+            },
+          },
+          {
+            title: "Component Behavior & States",
+            description: "Developer'lar görünümü değil, davranışı uygular. Bu yüzden state'ler, varyantlar, responsive kurallar net olmalıdır. Bir component seç: Hover yoksa ne olur? Disabled ne zaman kullanılır?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UI States and Behavior", url: "https://www.nngroup.com/articles/ui-states/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Explaining UI States to Developers", url: "https://www.youtube.com/results?search_query=explaining+ui+states+to+developers" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing States Developers Understand", url: "https://uxdesign.cc/designing-states-developers-understand-7c8b6e4c6f8e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir component seç: Hover yoksa ne olur?",
+                "Disabled ne zaman kullanılır?",
+              ],
+            },
+          },
+          {
+            title: "Developer-Friendly UI Decisions",
+            description: "İyi UI geliştirilebilir UI'dır. Dikkat edilmesi gerekenler: aşırı özel spacing'ler, tek seferlik varyantlar, mantıksız kırılımlar. Basit kurallar daha hızlı, daha stabil, daha tutarlı ürünler sağlar. Bir UI kararını düşün: Bu gerçekten gerekli mi? Yoksa görsel tercih mi?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Collaboration with Developers", url: "https://www.nngroup.com/articles/designers-developers/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Designing for Developers", url: "https://www.youtube.com/results?search_query=designing+for+developers" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Designing UI Developers Can Build", url: "https://uxdesign.cc/designing-ui-developers-can-build-7c8b6e4c6f8e" },
+                  { title: "Why Simple UI Wins", url: "https://uxdesign.cc/why-simple-ui-wins-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir UI kararını düşün: Bu gerçekten gerekli mi?",
+                "Yoksa görsel tercih mi?",
+              ],
+            },
+          },
+          {
+            title: "UI QA After Development",
+            description: "Geliştirme sonrası UI mutlaka kontrol edilmelidir, küçük farklar büyük etki yaratır. UI QA suçlama değil, kalite korumadır. Canlı ürüne bak: Tasarımdan farklı olan ne? Bu fark deneyimi etkiliyor mu?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Design QA", url: "https://www.nngroup.com/articles/design-reviews/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI QA After Build", url: "https://www.youtube.com/results?search_query=ui+qa+after+build" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why Designers Should QA Their UI", url: "https://uxdesign.cc/why-designers-should-qa-their-ui-7c8b6e4c6f8e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Canlı ürüne bak: Tasarımdan farklı olan ne?",
+                "Bu fark deneyimi etkiliyor mu?",
+              ],
+            },
+          },
         ],
       },
       {
