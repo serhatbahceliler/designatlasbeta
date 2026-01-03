@@ -547,78 +547,18 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Tasarım Becerileri (Skill/framework based learning) */}
+          {/* Tasarım Disiplinleri (Skill/framework based learning) */}
           <div className="mb-16">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-2">Tasarım Becerileri</h3>
-              <p className="text-gray-400 text-sm">Rolünden bağımsız olarak, tasarım becerilerini derinleştirebileceğin alanlar.</p>
+              <h3 className="text-2xl font-bold text-white mb-2">Tasarım Disiplinleri</h3>
+              <p className="text-gray-400 text-sm">Rolünden bağımsız olarak, tasarım disiplinlerini derinleştirebileceğin alanlar.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {/* Design Systems - Yakında */}
-              <div
-                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
-                style={{
-                  animation: `slideUp 0.6s ease-out 0.3s both`,
-                }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
-
-                <div className="relative p-8">
-                  {/* Badge - Sağ Üst */}
-                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
-                    Yakında
-                  </span>
-
-                  {/* Icon */}
-                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                    🧩
-                  </div>
-
-                  <h3 className="text-2xl font-bold text-white mb-3">
-                    Design Systems
-                  </h3>
-
-                  <p className="text-gray-400 leading-relaxed text-sm">
-                    Ölçeklenebilir tasarım sistemleri, component kütüphaneleri ve tasarım yönetişimi oluştur ve sürdür.
-                  </p>
-                </div>
-              </div>
-
-              {/* Design Thinking - Yakında */}
-              <div
-                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
-                style={{
-                  animation: `slideUp 0.6s ease-out 0.4s both`,
-                }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
-
-                <div className="relative p-8">
-                  {/* Badge - Sağ Üst */}
-                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
-                    Yakında
-                  </span>
-
-                  {/* Icon */}
-                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                    💭
-                  </div>
-
-                  <h3 className="text-2xl font-bold text-white mb-3">
-                    Design Thinking
-                  </h3>
-
-                  <p className="text-gray-400 leading-relaxed text-sm">
-                    Karmaşık problemleri yaratıcı bir şekilde çözmek için design thinking metodolojisi ve çerçevelerini uygula.
-                  </p>
-                </div>
-              </div>
-
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* UX Research - Yakında */}
               <div
                 className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
                 style={{
-                  animation: `slideUp 0.6s ease-out 0.5s both`,
+                  animation: `slideUp 0.6s ease-out 0.1s both`,
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
@@ -640,6 +580,126 @@ export default function Home() {
 
                   <p className="text-gray-400 leading-relaxed text-sm">
                     Kullanıcıyı daha derinlemesine anlamaya odaklanan araştırma ve test süreçleri. Görüşmeler, testler ve içgörü üretimi üzerine kapsamlı bir öğrenme yolu.
+                  </p>
+                </div>
+              </div>
+
+              {/* UX Writing - Yakında */}
+              <div
+                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
+                style={{
+                  animation: `slideUp 0.6s ease-out 0.2s both`,
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
+
+                <div className="relative p-8">
+                  {/* Badge - Sağ Üst */}
+                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
+                    Yakında
+                  </span>
+
+                  {/* Icon */}
+                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                    ✍️
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    UX Writing
+                  </h3>
+
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    Kullanıcı deneyimini destekleyen, açık ve anlaşılır metinler yazma sanatı. Mikro-kopylar, error mesajları ve arayüz dilini kullanıcı odaklı şekillendirme.
+                  </p>
+                </div>
+              </div>
+
+              {/* UX Strategy - Yakında */}
+              <div
+                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
+                style={{
+                  animation: `slideUp 0.6s ease-out 0.3s both`,
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
+
+                <div className="relative p-8">
+                  {/* Badge - Sağ Üst */}
+                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
+                    Yakında
+                  </span>
+
+                  {/* Icon */}
+                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                    🎯
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    UX Strategy
+                  </h3>
+
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    Kullanıcı deneyimini iş hedefleriyle birleştiren strateji oluşturma. Ürün vizyonu, roadmap planlama ve deneyim hedeflerini belirleme.
+                  </p>
+                </div>
+              </div>
+
+              {/* DesignOps - Yakında */}
+              <div
+                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
+                style={{
+                  animation: `slideUp 0.6s ease-out 0.4s both`,
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
+
+                <div className="relative p-8">
+                  {/* Badge - Sağ Üst */}
+                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
+                    Yakında
+                  </span>
+
+                  {/* Icon */}
+                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                    ⚙️
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    DesignOps
+                  </h3>
+
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    Tasarım ekiplerinin verimli çalışmasını sağlayan süreç ve sistemler. Workflow optimizasyonu, araç yönetimi ve ekip koordinasyonu.
+                  </p>
+                </div>
+              </div>
+
+              {/* Design System - Yakında */}
+              <div
+                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
+                style={{
+                  animation: `slideUp 0.6s ease-out 0.5s both`,
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
+
+                <div className="relative p-8">
+                  {/* Badge - Sağ Üst */}
+                  <span className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-zinc-800 text-gray-400 rounded-md">
+                    Yakında
+                  </span>
+
+                  {/* Icon */}
+                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                    🧩
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    Design System
+                  </h3>
+
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    Ölçeklenebilir tasarım sistemleri, component kütüphaneleri ve tasarım yönetişimi oluşturma ve sürdürme.
                   </p>
                 </div>
               </div>
