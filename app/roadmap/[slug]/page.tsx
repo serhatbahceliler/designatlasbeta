@@ -4616,14 +4616,198 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "11. Design Systems (UI-Focused, Intro → Practical)",
-        description: "Tasarım sistemleri temelleri ve component kütüphaneleri.",
+        title: "11. 🧬 Design Systems (UI-Focused)",
+        description: "Design System, bir ürün ailesinde görsel tutarlılığı, tekrar kullanılabilirliği ve ölçeklenebilirliği sağlayan canlı bir UI altyapısıdır. Amaç: her ekranı yeniden tasarlamamak, UI kararlarını kişiye değil sisteme bağlamak ve tasarım/geliştirme hızını artırmak.",
         topics: [
-          { title: "Why Design Systems Exist (Consistency & Scale)" },
-          { title: "Foundations (Color, Type, Spacing, Radius)" },
-          { title: "Design Tokens (Intro: roles, naming, theming)" },
-          { title: "Component Libraries (Structure & governance basics)" },
-          { title: "Theming & Variants (Light/Dark, brand themes)" },
+          {
+            title: "Why Design Systems Exist",
+            description: "Design system'ler büyüyen ürünlerde dağılmayı önler, tutarsız UI kararlarını azaltır ve ekipler arası ortak dil oluşturur. Design system ≠ component listesi. Design system = kurallar + bileşenler + prensipler. Bir ürün düşün: Aynı şey kaç farklı şekilde tasarlanmış? Neden?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Design Systems 101", url: "https://www.nngroup.com/articles/design-systems-101/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Why Design Systems Matter – NNGroup", url: "https://www.youtube.com/results?search_query=why+design+systems+matter" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Design Systems Are About People", url: "https://uxdesign.cc/design-systems-are-about-people-7c8b6e4c6f8e" },
+                  { title: "Why Products Without Design Systems Break", url: "https://uxdesign.cc/products-without-design-systems-break-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ürün düşün: Aynı şey kaç farklı şekilde tasarlanmış?",
+                "Neden?",
+              ],
+            },
+          },
+          {
+            title: "Foundations (Color, Type, Spacing, Radius)",
+            description: "Foundations tüm UI'ın temelidir ve component'lerden önce gelir. Genellikle şunları içerir: renk rolleri, typography scale, spacing sistemi, radius/elevation. Bir component'e bak: Hangi foundation'lara dayanıyor?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Design System Foundations", url: "https://www.nngroup.com/articles/design-system-foundations/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Design System Foundations Explained", url: "https://www.youtube.com/results?search_query=design+system+foundations" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Building UI Foundations", url: "https://uxdesign.cc/building-ui-foundations-7c8b6e4c6f8e" },
+                  { title: "Why Foundations Come First", url: "https://uxdesign.cc/why-foundations-come-first-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir component'e bak: Hangi foundation'lara dayanıyor?",
+              ],
+            },
+          },
+          {
+            title: "Design Tokens (Intro Level)",
+            description: "Design token tasarım kararlarının adlandırılmış halidir. Örnek: primary.color, spacing.sm, radius.md. Token'lar theming'i kolaylaştırır ve tasarım–dev uyumunu artırır. Bir rengi düşün: Hex yerine rol adıyla çağırabilir misin?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Design Tokens", url: "https://www.nngroup.com/articles/design-tokens/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Design Tokens Explained", url: "https://www.youtube.com/results?search_query=design+tokens+explained" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Design Tokens for UI Designers", url: "https://uxdesign.cc/design-tokens-for-ui-designers-7c8b6e4c6f8e" },
+                  { title: "Why Tokens Matter", url: "https://uxdesign.cc/why-tokens-matter-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir rengi düşün: Hex yerine rol adıyla çağırabilir misin?",
+              ],
+            },
+          },
+          {
+            title: "Component Libraries",
+            description: "Component library sistemin görünen yüzüdür. İyi bir library varyantları net tanımlar, state'leri kapsar ve kullanım kurallarını belirtir. Bir component düşün: Kaç varyantı var? Hangileri gerçekten gerekli?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Component Libraries", url: "https://www.nngroup.com/articles/component-libraries/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Building Component Libraries", url: "https://www.youtube.com/results?search_query=building+component+libraries" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Scaling UI with Component Libraries", url: "https://uxdesign.cc/scaling-ui-with-component-libraries-7c8b6e4c6f8e" },
+                  { title: "Component Libraries Done Right", url: "https://uxdesign.cc/component-libraries-done-right-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir component düşün: Kaç varyantı var?",
+                "Hangileri gerçekten gerekli?",
+              ],
+            },
+          },
+          {
+            title: "Theming & Variants",
+            description: "Theming light/dark, brand varyantları ve ürün bazlı farklılaşmalar için kullanılır. Ama kontrolsüz theme sayısı sistemi kırar. Bir theme düşün: Hangi foundation'lar değişiyor? Hangileri sabit kalmalı?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Theming in Design Systems", url: "https://www.nngroup.com/articles/theming-design-systems/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UI Theming Explained", url: "https://www.youtube.com/results?search_query=ui+theming+explained" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Design System Theming", url: "https://uxdesign.cc/design-system-theming-7c8b6e4c6f8e" },
+                  { title: "Managing Variants in UI", url: "https://uxdesign.cc/managing-variants-in-ui-2c1e8e9c3f3e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir theme düşün: Hangi foundation'lar değişiyor?",
+                "Hangileri sabit kalmalı?",
+              ],
+            },
+          },
+          {
+            title: "Common Design System Mistakes",
+            description: "Sık yapılan hatalar: her şeyi component yapmak, esnekliği öldürmek, dokümantasyonu ihmal etmek, sistem yerine vitrin yapmak. Bu hatalar design system'in terk edilmesine yol açar. Bir sistem düşün: Kullanımı zor mu? Neden?",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Design System Mistakes", url: "https://www.nngroup.com/articles/design-system-mistakes/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Design System Pitfalls", url: "https://www.youtube.com/results?search_query=design+system+pitfalls" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why Design Systems Fail", url: "https://uxdesign.cc/why-design-systems-fail-7c8b6e4c6f8e" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir sistem düşün: Kullanımı zor mu?",
+                "Neden?",
+              ],
+            },
+          },
         ],
       },
       {
