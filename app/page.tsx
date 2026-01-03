@@ -216,7 +216,7 @@ export default function Home() {
             {/* Badges */}
             <div className="flex flex-wrap items-center justify-center gap-3 mb-8 animate-text-reveal" style={{ animationDelay: '0ms' }}>
               <span className="px-4 py-2 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-full text-[#DEFF37] font-semibold text-sm">
-                Erken Erişim
+                BETA
               </span>
             </div>
 
