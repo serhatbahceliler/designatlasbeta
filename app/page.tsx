@@ -269,7 +269,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl">
-              <div className="flex items-start gap-4">
+              <div className="flex items-center gap-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center">
                   <svg className="w-4 h-4 text-[#DEFF37]" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
@@ -280,7 +280,7 @@ export default function Home() {
             </div>
 
             <div className="p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl">
-              <div className="flex items-start gap-4">
+              <div className="flex items-center gap-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center">
                   <svg className="w-4 h-4 text-[#DEFF37]" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
@@ -291,7 +291,7 @@ export default function Home() {
             </div>
 
             <div className="p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl">
-              <div className="flex items-start gap-4">
+              <div className="flex items-center gap-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center">
                   <svg className="w-4 h-4 text-[#DEFF37]" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
@@ -302,7 +302,7 @@ export default function Home() {
             </div>
 
             <div className="p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl">
-              <div className="flex items-start gap-4">
+              <div className="flex items-center gap-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center">
                   <svg className="w-4 h-4 text-[#DEFF37]" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
