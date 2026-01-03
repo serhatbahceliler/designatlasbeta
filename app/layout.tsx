@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "DesignAtlas - Tasarımı Öğren. Adım Adım.",
+  title: "DesignAtlas – UX, UI ve Product Design için Öğrenme Roadmap'leri",
   description: "UX, UI ve Product Designer'lar için net, açık roadmap'ler. Kayıt yok. Boş laf yok. Net öğrenme yolları.",
   icons: {
     icon: "https://r.resimlink.com/Tp-aXNqbWR.png",
