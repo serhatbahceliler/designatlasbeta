@@ -5,7 +5,7 @@ import RoadmapClient from "./RoadmapClient";
 
 interface Resource {
   category: string;
-  items: { title: string; url: string }[];
+  items: { title: string }[];
 }
 
 interface Topic {
@@ -50,16 +50,16 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "What Is User Experience (UX) Design?", url: "https://www.nngroup.com/articles/definition-user-experience/" },
-                  { title: "UX 101: Introduction to User Experience", url: "https://www.nngroup.com/articles/ux-101-introduction-user-experience/" },
+                  { title: "What Is User Experience (UX) Design?" },
+                  { title: "UX 101: Introduction to User Experience" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "What is UX Design? – AJ&Smart", url: "https://www.youtube.com/results?search_query=what+is+ux+design+aj+smart" },
-                  { title: "UX Design in 5 Minutes – NNGroup", url: "https://www.youtube.com/results?search_query=ux+design+in+5+minutes+nngroup" },
-                  { title: "UX Design Explained for Beginners – DesignCourse", url: "https://www.youtube.com/results?search_query=ux+design+explained+beginners+designcourse" },
+                  { title: "What is UX Design? – AJ&Smart" },
+                  { title: "UX Design in 5 Minutes – NNGroup" },
+                  { title: "UX Design Explained for Beginners – DesignCourse" },
                 ],
               },
             ],
@@ -80,14 +80,14 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "UX vs UI vs Product Design", url: "https://www.nngroup.com/articles/ux-vs-ui/" },
+                  { title: "UX vs UI vs Product Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX vs UI vs Product Design Explained – Jesse Showalter", url: "https://www.youtube.com/results?search_query=ux+vs+ui+vs+product+design+jesse+showalter" },
-                  { title: "UX, UI and Product Design Differences – AJ&Smart", url: "https://www.youtube.com/results?search_query=ux+ui+product+design+differences+aj+smart" },
+                  { title: "UX vs UI vs Product Design Explained – Jesse Showalter" },
+                  { title: "UX, UI and Product Design Differences – AJ&Smart" },
                 ],
               },
             ],
@@ -109,15 +109,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "User-Centered Design Basics", url: "https://www.nngroup.com/articles/user-centered-design/" },
-                  { title: "Empathy in UX Design", url: "https://www.nngroup.com/articles/empathy-ux-design/" },
+                  { title: "User-Centered Design Basics" },
+                  { title: "Empathy in UX Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "User-Centered Design Explained – NNGroup", url: "https://www.youtube.com/results?search_query=user+centered+design+explained+nngroup" },
-                  { title: "What Is User-Centered Design? – UX Mastery", url: "https://www.youtube.com/results?search_query=user+centered+design+ux+mastery" },
+                  { title: "User-Centered Design Explained – NNGroup" },
+                  { title: "What Is User-Centered Design? – UX Mastery" },
                 ],
               },
             ],
@@ -137,15 +137,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Empathy vs Sympathy in UX", url: "https://www.nngroup.com/articles/empathy-vs-sympathy/" },
-                  { title: "Building Empathy Through Research", url: "https://www.nngroup.com/articles/building-empathy/" },
+                  { title: "Empathy vs Sympathy in UX" },
+                  { title: "Building Empathy Through Research" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Empathy in UX Design – NNGroup", url: "https://www.youtube.com/results?search_query=empathy+ux+design+nngroup" },
-                  { title: "How to Build Empathy as a Designer – AJ&Smart", url: "https://www.youtube.com/results?search_query=build+empathy+designer+aj+smart" },
+                  { title: "Empathy in UX Design – NNGroup" },
+                  { title: "How to Build Empathy as a Designer – AJ&Smart" },
                 ],
               },
             ],
@@ -165,15 +165,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Visual Hierarchy in UX", url: "https://www.nngroup.com/articles/visual-hierarchy/" },
-                  { title: "Consistency in UX Design", url: "https://www.nngroup.com/articles/consistency-heuristic/" },
+                  { title: "Visual Hierarchy in UX" },
+                  { title: "Consistency in UX Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Design Principles for UX Designers – NNGroup", url: "https://www.youtube.com/results?search_query=design+principles+ux+designers+nngroup" },
-                  { title: "Visual Hierarchy Explained – DesignCourse", url: "https://www.youtube.com/results?search_query=visual+hierarchy+explained+designcourse" },
+                  { title: "Design Principles for UX Designers – NNGroup" },
+                  { title: "Visual Hierarchy Explained – DesignCourse" },
                 ],
               },
             ],
@@ -200,15 +200,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Discovery vs Delivery in UX", url: "https://www.nngroup.com/articles/discovery-delivery/" },
-                  { title: "UX Activities in the Product Lifecycle", url: "https://www.nngroup.com/articles/ux-product-lifecycle/" },
+                  { title: "Discovery vs Delivery in UX" },
+                  { title: "UX Activities in the Product Lifecycle" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Discovery vs Delivery Explained – NNGroup", url: "https://www.youtube.com/results?search_query=discovery+vs+delivery+nngroup" },
-                  { title: "Product Discovery Explained – Teresa Torres", url: "https://www.youtube.com/results?search_query=product+discovery+teresa+torres" },
+                  { title: "Discovery vs Delivery Explained – NNGroup" },
+                  { title: "Product Discovery Explained – Teresa Torres" },
                 ],
               },
             ],
@@ -229,15 +229,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Design Thinking 101", url: "https://www.nngroup.com/articles/design-thinking/" },
-                  { title: "The Double Diamond Model", url: "https://www.nngroup.com/articles/double-diamond/" },
+                  { title: "Design Thinking 101" },
+                  { title: "The Double Diamond Model" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Double Diamond Explained – NNGroup", url: "https://www.youtube.com/results?search_query=double+diamond+nngroup" },
-                  { title: "Design Thinking in 5 Minutes – AJ&Smart", url: "https://www.youtube.com/results?search_query=design+thinking+5+minutes+aj+smart" },
+                  { title: "Double Diamond Explained – NNGroup" },
+                  { title: "Design Thinking in 5 Minutes – AJ&Smart" },
                 ],
               },
             ],
@@ -257,15 +257,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Agile UX Basics", url: "https://www.nngroup.com/articles/agile-ux/" },
-                  { title: "Lean UX Principles", url: "https://www.nngroup.com/articles/lean-ux/" },
+                  { title: "Agile UX Basics" },
+                  { title: "Lean UX Principles" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Agile UX Explained – NNGroup", url: "https://www.youtube.com/results?search_query=agile+ux+nngroup" },
-                  { title: "Lean UX Overview – Jeff Gothelf", url: "https://www.youtube.com/results?search_query=lean+ux+jeff+gothelf" },
+                  { title: "Agile UX Explained – NNGroup" },
+                  { title: "Lean UX Overview – Jeff Gothelf" },
                 ],
               },
             ],
@@ -285,15 +285,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Problem Statements in UX", url: "https://www.nngroup.com/articles/problem-statements/" },
-                  { title: "Framing UX Problems", url: "https://www.nngroup.com/articles/framing-problems/" },
+                  { title: "Problem Statements in UX" },
+                  { title: "Framing UX Problems" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "How to Frame UX Problems – NNGroup", url: "https://www.youtube.com/results?search_query=frame+ux+problems+nngroup" },
-                  { title: "Problem Statements Explained – AJ&Smart", url: "https://www.youtube.com/results?search_query=problem+statements+aj+smart" },
+                  { title: "How to Frame UX Problems – NNGroup" },
+                  { title: "Problem Statements Explained – AJ&Smart" },
                 ],
               },
             ],
@@ -313,15 +313,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Stakeholder Management for UX", url: "https://www.nngroup.com/articles/stakeholder-management/" },
-                  { title: "Presenting UX Work", url: "https://www.nngroup.com/articles/presenting-ux/" },
+                  { title: "Stakeholder Management for UX" },
+                  { title: "Presenting UX Work" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Communicating UX Decisions – NNGroup", url: "https://www.youtube.com/results?search_query=communicating+ux+decisions+nngroup" },
-                  { title: "How to Defend UX Decisions – DesignCourse", url: "https://www.youtube.com/results?search_query=defend+ux+decisions+designcourse" },
+                  { title: "Communicating UX Decisions – NNGroup" },
+                  { title: "How to Defend UX Decisions – DesignCourse" },
                 ],
               },
             ],
@@ -349,15 +349,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "UX Research: What It Is and Why It Matters", url: "https://www.nngroup.com/articles/ux-research/" },
-                  { title: "Bias in UX Research", url: "https://www.nngroup.com/articles/research-bias/" },
+                  { title: "UX Research: What It Is and Why It Matters" },
+                  { title: "Bias in UX Research" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Research Basics – NNGroup", url: "https://www.youtube.com/results?search_query=ux+research+basics+nngroup" },
-                  { title: "Avoiding Bias in User Research – NNGroup", url: "https://www.youtube.com/results?search_query=avoiding+bias+user+research+nngroup" },
+                  { title: "UX Research Basics – NNGroup" },
+                  { title: "Avoiding Bias in User Research – NNGroup" },
                 ],
               },
             ],
@@ -377,14 +377,14 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Qualitative vs Quantitative Research", url: "https://www.nngroup.com/articles/quant-vs-qual/" },
+                  { title: "Qualitative vs Quantitative Research" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Qual vs Quant UX Research – NNGroup", url: "https://www.youtube.com/results?search_query=qual+vs+quant+ux+research+nngroup" },
-                  { title: "UX Research Methods Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ux+research+methods+explained+nngroup" },
+                  { title: "Qual vs Quant UX Research – NNGroup" },
+                  { title: "UX Research Methods Explained – NNGroup" },
                 ],
               },
             ],
@@ -405,13 +405,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Attitudinal vs Behavioral Research", url: "https://www.nngroup.com/articles/attitudinal-behavioral/" },
+                  { title: "Attitudinal vs Behavioral Research" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Attitudinal vs Behavioral UX Research – NNGroup", url: "https://www.youtube.com/results?search_query=attitudinal+behavioral+ux+research+nngroup" },
+                  { title: "Attitudinal vs Behavioral UX Research – NNGroup" },
                 ],
               },
             ],
@@ -432,13 +432,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "When to Use Which UX Research Methods", url: "https://www.nngroup.com/articles/which-ux-research-methods/" },
+                  { title: "When to Use Which UX Research Methods" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Choosing the Right UX Research Method – NNGroup", url: "https://www.youtube.com/results?search_query=choosing+right+ux+research+method+nngroup" },
+                  { title: "Choosing the Right UX Research Method – NNGroup" },
                 ],
               },
             ],
@@ -460,13 +460,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "UX Research Plan Template", url: "https://www.nngroup.com/articles/ux-research-plan/" },
+                  { title: "UX Research Plan Template" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "How to Create a UX Research Plan – NNGroup", url: "https://www.youtube.com/results?search_query=create+ux+research+plan+nngroup" },
+                  { title: "How to Create a UX Research Plan – NNGroup" },
                 ],
               },
             ],
@@ -494,15 +494,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "User Interviews: How to Conduct Them", url: "https://www.nngroup.com/articles/user-interviews/" },
-                  { title: "Planning User Interviews", url: "https://www.nngroup.com/articles/interview-planning/" },
+                  { title: "User Interviews: How to Conduct Them" },
+                  { title: "Planning User Interviews" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "How to Plan User Interviews – NNGroup", url: "https://www.youtube.com/results?search_query=plan+user+interviews+nngroup" },
-                  { title: "User Interview Planning – UX Mastery", url: "https://www.youtube.com/results?search_query=user+interview+planning+ux+mastery" },
+                  { title: "How to Plan User Interviews – NNGroup" },
+                  { title: "User Interview Planning – UX Mastery" },
                 ],
               },
             ],
@@ -521,14 +521,14 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Writing Good UX Interview Questions", url: "https://www.nngroup.com/articles/interview-questions/" },
+                  { title: "Writing Good UX Interview Questions" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "How to Ask Better UX Interview Questions – NNGroup", url: "https://www.youtube.com/results?search_query=ask+better+ux+interview+questions+nngroup" },
-                  { title: "Avoid Leading Questions in UX Research – NNGroup", url: "https://www.youtube.com/results?search_query=avoid+leading+questions+ux+research+nngroup" },
+                  { title: "How to Ask Better UX Interview Questions – NNGroup" },
+                  { title: "Avoid Leading Questions in UX Research – NNGroup" },
                 ],
               },
             ],
@@ -547,14 +547,14 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Moderating User Interviews", url: "https://www.nngroup.com/articles/moderating-user-interviews/" },
+                  { title: "Moderating User Interviews" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "How to Moderate User Interviews – NNGroup", url: "https://www.youtube.com/results?search_query=moderate+user+interviews+nngroup" },
-                  { title: "UX Interview Moderation Tips – AJ&Smart", url: "https://www.youtube.com/results?search_query=ux+interview+moderation+tips+aj+smart" },
+                  { title: "How to Moderate User Interviews – NNGroup" },
+                  { title: "UX Interview Moderation Tips – AJ&Smart" },
                 ],
               },
             ],
@@ -575,13 +575,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Taking Notes in UX Research", url: "https://www.nngroup.com/articles/taking-notes-ux/" },
+                  { title: "Taking Notes in UX Research" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Research Note Taking – NNGroup", url: "https://www.youtube.com/results?search_query=ux+research+note+taking+nngroup" },
+                  { title: "UX Research Note Taking – NNGroup" },
                 ],
               },
             ],
@@ -603,14 +603,14 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Synthesis in UX Research", url: "https://www.nngroup.com/articles/synthesis/" },
+                  { title: "Synthesis in UX Research" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "How to Synthesize UX Research – NNGroup", url: "https://www.youtube.com/results?search_query=synthesize+ux+research+nngroup" },
-                  { title: "Affinity Mapping Explained – AJ&Smart", url: "https://www.youtube.com/results?search_query=affinity+mapping+explained+aj+smart" },
+                  { title: "How to Synthesize UX Research – NNGroup" },
+                  { title: "Affinity Mapping Explained – AJ&Smart" },
                 ],
               },
             ],
@@ -637,15 +637,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "When to Use Surveys", url: "https://www.nngroup.com/articles/surveys/" },
-                  { title: "Survey vs User Interviews", url: "https://www.nngroup.com/articles/survey-vs-interviews/" },
+                  { title: "When to Use Surveys" },
+                  { title: "Survey vs User Interviews" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Surveys Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ux+surveys+explained+nngroup" },
-                  { title: "When NOT to Use Surveys – NNGroup", url: "https://www.youtube.com/results?search_query=when+not+use+surveys+nngroup" },
+                  { title: "UX Surveys Explained – NNGroup" },
+                  { title: "When NOT to Use Surveys – NNGroup" },
                 ],
               },
             ],
@@ -665,13 +665,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Writing Survey Questions", url: "https://www.nngroup.com/articles/survey-questions/" },
+                  { title: "Writing Survey Questions" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Writing Better Survey Questions – NNGroup", url: "https://www.youtube.com/results?search_query=writing+better+survey+questions+nngroup" },
+                  { title: "Writing Better Survey Questions – NNGroup" },
                 ],
               },
             ],
@@ -690,13 +690,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Likert Scales in UX", url: "https://www.nngroup.com/articles/likert-scale/" },
+                  { title: "Likert Scales in UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Survey Scales Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ux+survey+scales+explained+nngroup" },
+                  { title: "UX Survey Scales Explained – NNGroup" },
                 ],
               },
             ],
@@ -716,13 +716,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Interpreting Quantitative UX Data", url: "https://www.nngroup.com/articles/quantitative-data/" },
+                  { title: "Interpreting Quantitative UX Data" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Reading UX Metrics – NNGroup", url: "https://www.youtube.com/results?search_query=reading+ux+metrics+nngroup" },
+                  { title: "Reading UX Metrics – NNGroup" },
                 ],
               },
             ],
@@ -743,13 +743,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Triangulation in UX Research", url: "https://www.nngroup.com/articles/triangulation/" },
+                  { title: "Triangulation in UX Research" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Combining Qual and Quant UX Research – NNGroup", url: "https://www.youtube.com/results?search_query=combining+qual+quant+ux+research+nngroup" },
+                  { title: "Combining Qual and Quant UX Research – NNGroup" },
                 ],
               },
             ],
@@ -777,22 +777,22 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Affinity Diagramming (Article)", url: "https://www.nngroup.com/articles/affinity-diagram/" },
-                  { title: "Affinity Diagramming Pitfalls", url: "https://www.nngroup.com/articles/affinity-diagramming-pitfalls/" },
-                  { title: "Affinity Diagramming (NNG Video Page)", url: "https://www.nngroup.com/videos/affinity-diagramming/" },
+                  { title: "Affinity Diagramming (Article)" },
+                  { title: "Affinity Diagramming Pitfalls" },
+                  { title: "Affinity Diagramming (NNG Video Page)" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "NNGroup — Affinity Diagramming (YouTube)", url: "https://www.youtube.com/watch?v=C4nYxZxteJY" },
+                  { title: "NNGroup — Affinity Diagramming (YouTube)" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How to do affinity mapping that doesn't suck", url: "https://medium.com/design-bridges/how-to-do-affinity-mapping-that-doesnt-suck-b0b9faddccfb" },
-                  { title: "(TR) İlişki Haritası (Affinity Mapping)", url: "https://medium.com/uxit%C3%BC/i%CC%87li%C5%9Fki-haritas%C4%B1-affinity-mapping-d4a6e1c1153b" },
+                  { title: "How to do affinity mapping that doesn't suck" },
+                  { title: "(TR) İlişki Haritası (Affinity Mapping)" },
                 ],
               },
             ],
@@ -814,21 +814,21 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Thematic Analysis (Article)", url: "https://www.nngroup.com/articles/thematic-analysis/" },
-                  { title: "Thematic Analysis (NNG Video Page)", url: "https://www.nngroup.com/videos/thematic-analysis-qualitative-user-research-data/" },
+                  { title: "Thematic Analysis (Article)" },
+                  { title: "Thematic Analysis (NNG Video Page)" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Thematic Analysis (video)", url: "https://www.youtube.com/watch?v=KUZ6iGvJlGI" },
+                  { title: "Thematic Analysis (video)" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How to Do a Thematic Analysis of User Interviews", url: "https://medium.com/the-interaction-design-foundation/how-to-do-a-thematic-analysis-of-user-interviews-9eb4a1ced06e" },
-                  { title: "Thematic Analysis in depth & UX Research — Part I", url: "https://medium.com/%40alaaMHussein/thematic-analysis-in-depth-ux-research-part-%E2%85%B0-6cbeca890aaa" },
+                  { title: "How to Do a Thematic Analysis of User Interviews" },
+                  { title: "Thematic Analysis in depth & UX Research — Part I" },
                 ],
               },
             ],
@@ -849,20 +849,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Analyzing Qualitative Data with Spreadsheet", url: "https://www.nngroup.com/videos/analyzing-qualitative-data-spreadsheet/" },
-                  { title: "UX Research Workshops", url: "https://www.nngroup.com/articles/ux-research-workshops/" },
+                  { title: "Analyzing Qualitative Data with Spreadsheet" },
+                  { title: "UX Research Workshops" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "NNGroup User Research Playlist", url: "https://www.youtube.com/playlist?list=PLcBMBldR5P3Qi00ZkeotwxPctgsKLIzn4" },
+                  { title: "NNGroup User Research Playlist" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Introduction to UX research analysis techniques", url: "https://medium.com/%40jjknowles/introduction-to-ux-research-analysis-techniques-32192cfe0139" },
+                  { title: "Introduction to UX research analysis techniques" },
                 ],
               },
             ],
@@ -884,13 +884,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "UX Research Workshops", url: "https://www.nngroup.com/articles/ux-research-workshops/" },
+                  { title: "UX Research Workshops" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Forced Ranking / Prioritization Workshop", url: "https://www.youtube.com/watch?v=yJwzRJvDIkM" },
+                  { title: "Forced Ranking / Prioritization Workshop" },
                 ],
               },
             ],
@@ -915,15 +915,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Personas: Why and How You Should Use Them", url: "https://www.nngroup.com/articles/personas/" },
-                  { title: "Personas vs. Proto-Personas", url: "https://www.nngroup.com/articles/proto-personas/" },
+                  { title: "Personas: Why and How You Should Use Them" },
+                  { title: "Personas vs. Proto-Personas" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Personas Explained – NNGroup", url: "https://www.youtube.com/results?search_query=personas+explained+nngroup" },
-                  { title: "Proto Personas vs Personas – NNGroup", url: "https://www.youtube.com/results?search_query=proto+personas+vs+personas+nngroup" },
+                  { title: "Personas Explained – NNGroup" },
+                  { title: "Proto Personas vs Personas – NNGroup" },
                 ],
               },
             ],
@@ -944,15 +944,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Journey Mapping 101", url: "https://www.nngroup.com/articles/journey-mapping-101/" },
-                  { title: "User Journey vs Customer Journey", url: "https://www.nngroup.com/articles/user-journey-vs-customer-journey/" },
+                  { title: "Journey Mapping 101" },
+                  { title: "User Journey vs Customer Journey" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Journey Mapping Explained – NNGroup", url: "https://www.youtube.com/results?search_query=journey+mapping+explained+nngroup" },
-                  { title: "Customer Journey Mapping – NNGroup", url: "https://www.youtube.com/results?search_query=customer+journey+mapping+nngroup" },
+                  { title: "Journey Mapping Explained – NNGroup" },
+                  { title: "Customer Journey Mapping – NNGroup" },
                 ],
               },
             ],
@@ -972,14 +972,14 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Experience Mapping", url: "https://www.nngroup.com/articles/experience-mapping/" },
-                  { title: "Emotional Journey Mapping", url: "https://www.nngroup.com/articles/emotional-journeys/" },
+                  { title: "Experience Mapping" },
+                  { title: "Emotional Journey Mapping" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Mapping Emotions in UX – NNGroup", url: "https://www.youtube.com/results?search_query=mapping+emotions+ux+nngroup" },
+                  { title: "Mapping Emotions in UX – NNGroup" },
                 ],
               },
             ],
@@ -999,13 +999,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Moments of Truth in UX", url: "https://www.nngroup.com/articles/moments-of-truth/" },
+                  { title: "Moments of Truth in UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Moments of Truth Explained – NNGroup", url: "https://www.youtube.com/results?search_query=moments+truth+explained+nngroup" },
+                  { title: "Moments of Truth Explained – NNGroup" },
                 ],
               },
             ],
@@ -1024,13 +1024,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Using Journey Maps to Drive Design", url: "https://www.nngroup.com/articles/journey-maps-drive-design/" },
+                  { title: "Using Journey Maps to Drive Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "From Journey Map to Design Decisions – NNGroup", url: "https://www.youtube.com/results?search_query=journey+map+design+decisions+nngroup" },
+                  { title: "From Journey Map to Design Decisions – NNGroup" },
                 ],
               },
             ],
@@ -1055,15 +1055,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Information Architecture: Definition", url: "https://www.nngroup.com/articles/information-architecture/" },
-                  { title: "Mental Models in UX", url: "https://www.nngroup.com/articles/mental-models/" },
+                  { title: "Information Architecture: Definition" },
+                  { title: "Mental Models in UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Information Architecture Explained – NNGroup", url: "https://www.youtube.com/results?search_query=information+architecture+explained+nngroup" },
-                  { title: "Mental Models in UX – NNGroup", url: "https://www.youtube.com/results?search_query=mental+models+ux+nngroup" },
+                  { title: "Information Architecture Explained – NNGroup" },
+                  { title: "Mental Models in UX – NNGroup" },
                 ],
               },
             ],
@@ -1084,14 +1084,14 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Sitemaps: UX Best Practices", url: "https://www.nngroup.com/articles/sitemaps/" },
-                  { title: "Content Hierarchy in UX", url: "https://www.nngroup.com/articles/visual-hierarchy/" },
+                  { title: "Sitemaps: UX Best Practices" },
+                  { title: "Content Hierarchy in UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "How to Create UX Sitemaps – NNGroup", url: "https://www.youtube.com/results?search_query=create+ux+sitemaps+nngroup" },
+                  { title: "How to Create UX Sitemaps – NNGroup" },
                 ],
               },
             ],
@@ -1111,14 +1111,14 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Navigation Design Basics", url: "https://www.nngroup.com/articles/navigation-design/" },
-                  { title: "Menu Design Best Practices", url: "https://www.nngroup.com/articles/menu-design/" },
+                  { title: "Navigation Design Basics" },
+                  { title: "Menu Design Best Practices" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Navigation UX Explained – NNGroup", url: "https://www.youtube.com/results?search_query=navigation+ux+explained+nngroup" },
+                  { title: "Navigation UX Explained – NNGroup" },
                 ],
               },
             ],
@@ -1138,14 +1138,14 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Labeling Systems in IA", url: "https://www.nngroup.com/articles/labeling-systems/" },
-                  { title: "Terminology & UX Writing", url: "https://www.nngroup.com/articles/ux-writing-terminology/" },
+                  { title: "Labeling Systems in IA" },
+                  { title: "Terminology & UX Writing" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Labeling in Information Architecture – NNGroup", url: "https://www.youtube.com/results?search_query=labeling+information+architecture+nngroup" },
+                  { title: "Labeling in Information Architecture – NNGroup" },
                 ],
               },
             ],
@@ -1165,14 +1165,14 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Card Sorting: A Definitive Guide", url: "https://www.nngroup.com/articles/card-sorting/" },
-                  { title: "Open vs Closed Card Sorting", url: "https://www.nngroup.com/articles/open-closed-card-sorting/" },
+                  { title: "Card Sorting: A Definitive Guide" },
+                  { title: "Open vs Closed Card Sorting" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Card Sorting Explained – NNGroup", url: "https://www.youtube.com/results?search_query=card+sorting+explained+nngroup" },
+                  { title: "Card Sorting Explained – NNGroup" },
                 ],
               },
             ],
@@ -1192,14 +1192,14 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Tree Testing 101", url: "https://www.nngroup.com/articles/tree-testing/" },
-                  { title: "Evaluating Navigation with Tree Tests", url: "https://www.nngroup.com/articles/tree-testing-navigation/" },
+                  { title: "Tree Testing 101" },
+                  { title: "Evaluating Navigation with Tree Tests" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Tree Testing Explained – NNGroup", url: "https://www.youtube.com/results?search_query=tree+testing+explained+nngroup" },
+                  { title: "Tree Testing Explained – NNGroup" },
                 ],
               },
             ],
@@ -1225,15 +1225,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "User Flows vs Task Flows", url: "https://www.nngroup.com/articles/user-flows-vs-task-flows/" },
-                  { title: "When to Use Which UX Deliverables", url: "https://www.nngroup.com/articles/ux-deliverables/" },
+                  { title: "User Flows vs Task Flows" },
+                  { title: "When to Use Which UX Deliverables" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "User Flows Explained – NNGroup", url: "https://www.youtube.com/results?search_query=user+flows+explained+nngroup" },
-                  { title: "Task Flows vs User Flows – NNGroup", url: "https://www.youtube.com/results?search_query=task+flows+vs+user+flows+nngroup" },
+                  { title: "User Flows Explained – NNGroup" },
+                  { title: "Task Flows vs User Flows – NNGroup" },
                 ],
               },
             ],
@@ -1253,15 +1253,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Empty States Best Practices", url: "https://www.nngroup.com/articles/empty-states/" },
-                  { title: "Loading Indicators", url: "https://www.nngroup.com/articles/progress-indicators/" },
+                  { title: "Empty States Best Practices" },
+                  { title: "Loading Indicators" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI States Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ui+states+explained+nngroup" },
-                  { title: "Empty State Design – NNGroup", url: "https://www.youtube.com/results?search_query=empty+state+design+nngroup" },
+                  { title: "UI States Explained – NNGroup" },
+                  { title: "Empty State Design – NNGroup" },
                 ],
               },
             ],
@@ -1283,15 +1283,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Microinteractions in UX", url: "https://www.nngroup.com/articles/microinteractions/" },
-                  { title: "Animation in UX", url: "https://www.nngroup.com/articles/animation-usability/" },
+                  { title: "Microinteractions in UX" },
+                  { title: "Animation in UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Microinteractions Explained – NNGroup", url: "https://www.youtube.com/results?search_query=microinteractions+explained+nngroup" },
-                  { title: "UX Animation Best Practices – NNGroup", url: "https://www.youtube.com/results?search_query=ux+animation+best+practices+nngroup" },
+                  { title: "Microinteractions Explained – NNGroup" },
+                  { title: "UX Animation Best Practices – NNGroup" },
                 ],
               },
             ],
@@ -1312,15 +1312,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Form Design Best Practices", url: "https://www.nngroup.com/articles/web-form-design/" },
-                  { title: "Form Field Usability", url: "https://www.nngroup.com/articles/form-design-usability/" },
+                  { title: "Form Design Best Practices" },
+                  { title: "Form Field Usability" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Form Design UX – NNGroup", url: "https://www.youtube.com/results?search_query=form+design+ux+nngroup" },
-                  { title: "Form Usability Best Practices – NNGroup", url: "https://www.youtube.com/results?search_query=form+usability+best+practices+nngroup" },
+                  { title: "Form Design UX – NNGroup" },
+                  { title: "Form Usability Best Practices – NNGroup" },
                 ],
               },
             ],
@@ -1341,15 +1341,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Error Prevention in UX", url: "https://www.nngroup.com/articles/slips/" },
-                  { title: "Error Messages Design", url: "https://www.nngroup.com/articles/error-message-guidelines/" },
+                  { title: "Error Prevention in UX" },
+                  { title: "Error Messages Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Error Prevention UX – NNGroup", url: "https://www.youtube.com/results?search_query=error+prevention+ux+nngroup" },
-                  { title: "Error Message Best Practices – NNGroup", url: "https://www.youtube.com/results?search_query=error+message+best+practices+nngroup" },
+                  { title: "Error Prevention UX – NNGroup" },
+                  { title: "Error Message Best Practices – NNGroup" },
                 ],
               },
             ],
@@ -1377,22 +1377,22 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Low-Fidelity Wireframes", url: "https://www.nngroup.com/articles/low-fidelity-wireframes/" },
-                  { title: "Why Sketches and Wireframes Matter", url: "https://www.nngroup.com/articles/sketches-wireframes/" },
+                  { title: "Low-Fidelity Wireframes" },
+                  { title: "Why Sketches and Wireframes Matter" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Low-Fidelity Wireframes Explained – NNGroup", url: "https://www.youtube.com/results?search_query=low+fidelity+wireframes+explained+nngroup" },
-                  { title: "Sketching & Wireframing for UX – NNGroup", url: "https://www.youtube.com/results?search_query=sketching+wireframing+ux+nngroup" },
+                  { title: "Low-Fidelity Wireframes Explained – NNGroup" },
+                  { title: "Sketching & Wireframing for UX – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why Low-Fidelity Wireframes Save Time", url: "https://medium.com/search?q=why+low+fidelity+wireframes+save+time" },
-                  { title: "Stop Polishing Too Early in UX", url: "https://medium.com/search?q=stop+polishing+too+early+ux" },
+                  { title: "Why Low-Fidelity Wireframes Save Time" },
+                  { title: "Stop Polishing Too Early in UX" },
                 ],
               },
             ],
@@ -1413,20 +1413,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Wireframe Fidelity Levels", url: "https://www.nngroup.com/articles/wireframe-fidelity/" },
+                  { title: "Wireframe Fidelity Levels" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Mid-Fidelity Prototyping – NNGroup", url: "https://www.youtube.com/results?search_query=mid+fidelity+prototyping+nngroup" },
+                  { title: "Mid-Fidelity Prototyping – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Choosing the Right Fidelity Level", url: "https://medium.com/search?q=choosing+right+fidelity+level" },
-                  { title: "Mid-Fi Is the Sweet Spot", url: "https://medium.com/search?q=mid+fi+sweet+spot" },
+                  { title: "Choosing the Right Fidelity Level" },
+                  { title: "Mid-Fi Is the Sweet Spot" },
                 ],
               },
             ],
@@ -1446,21 +1446,21 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Prototyping for UX Testing", url: "https://www.nngroup.com/articles/prototyping-ux/" },
-                  { title: "Paper Prototyping", url: "https://www.nngroup.com/articles/paper-prototyping/" },
+                  { title: "Prototyping for UX Testing" },
+                  { title: "Paper Prototyping" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Prototyping Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ux+prototyping+explained+nngroup" },
+                  { title: "UX Prototyping Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Prototype Only What You Need", url: "https://medium.com/search?q=prototype+only+what+you+need" },
-                  { title: "Prototyping Mistakes in UX", url: "https://medium.com/search?q=prototyping+mistakes+ux" },
+                  { title: "Prototype Only What You Need" },
+                  { title: "Prototyping Mistakes in UX" },
                 ],
               },
             ],
@@ -1480,20 +1480,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Deciding What to Prototype", url: "https://www.nngroup.com/articles/prototype-fidelity/" },
+                  { title: "Deciding What to Prototype" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "What to Prototype in UX – NNGroup", url: "https://www.youtube.com/results?search_query=what+to+prototype+ux+nngroup" },
+                  { title: "What to Prototype in UX – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Don't Prototype Everything", url: "https://medium.com/search?q=don't+prototype+everything" },
-                  { title: "Strategic Prototyping for UX", url: "https://medium.com/search?q=strategic+prototyping+ux" },
+                  { title: "Don't Prototype Everything" },
+                  { title: "Strategic Prototyping for UX" },
                 ],
               },
             ],
@@ -1513,20 +1513,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Preparing Prototypes for Testing", url: "https://www.nngroup.com/articles/usability-testing-prototypes/" },
+                  { title: "Preparing Prototypes for Testing" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Prototype Preparation Tips – NNGroup", url: "https://www.youtube.com/results?search_query=ux+prototype+preparation+tips+nngroup" },
+                  { title: "UX Prototype Preparation Tips – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Prototype Hygiene: Small Things That Matter", url: "https://medium.com/search?q=prototype+hygiene+small+things+matter" },
-                  { title: "Why Your Usability Test Failed", url: "https://medium.com/search?q=why+usability+test+failed" },
+                  { title: "Prototype Hygiene: Small Things That Matter" },
+                  { title: "Why Your Usability Test Failed" },
                 ],
               },
             ],
@@ -1552,22 +1552,22 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Usability Testing 101", url: "https://www.nngroup.com/articles/usability-testing-101/" },
-                  { title: "Why You Only Need to Test with 5 Users", url: "https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/" },
+                  { title: "Usability Testing 101" },
+                  { title: "Why You Only Need to Test with 5 Users" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Usability Testing Explained – NNGroup", url: "https://www.youtube.com/results?search_query=usability+testing+explained+nngroup" },
-                  { title: "5-User Testing – NNGroup", url: "https://www.youtube.com/results?search_query=5+user+testing+nngroup" },
+                  { title: "Usability Testing Explained – NNGroup" },
+                  { title: "5-User Testing – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Usability Testing for Beginners", url: "https://medium.com/search?q=usability+testing+beginners" },
-                  { title: "Why Usability Testing Matters More Than You Think", url: "https://medium.com/search?q=why+usability+testing+matters" },
+                  { title: "Usability Testing for Beginners" },
+                  { title: "Why Usability Testing Matters More Than You Think" },
                 ],
               },
             ],
@@ -1586,21 +1586,21 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Moderated vs Unmoderated Testing", url: "https://www.nngroup.com/articles/moderated-remote-usability-testing/" },
-                  { title: "Remote Usability Testing", url: "https://www.nngroup.com/articles/remote-usability-testing/" },
+                  { title: "Moderated vs Unmoderated Testing" },
+                  { title: "Remote Usability Testing" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Moderated vs Unmoderated UX Tests – NNGroup", url: "https://www.youtube.com/results?search_query=moderated+vs+unmoderated+ux+tests+nngroup" },
+                  { title: "Moderated vs Unmoderated UX Tests – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Moderated vs Unmoderated Usability Testing", url: "https://medium.com/search?q=moderated+vs+unmoderated+usability+testing" },
-                  { title: "Choosing the Right Usability Test", url: "https://medium.com/search?q=choosing+right+usability+test" },
+                  { title: "Moderated vs Unmoderated Usability Testing" },
+                  { title: "Choosing the Right Usability Test" },
                 ],
               },
             ],
@@ -1620,20 +1620,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Writing Tasks for Usability Studies", url: "https://www.nngroup.com/articles/task-scenarios-usability-testing/" },
+                  { title: "Writing Tasks for Usability Studies" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Writing Better UX Test Tasks – NNGroup", url: "https://www.youtube.com/results?search_query=writing+better+ux+test+tasks+nngroup" },
+                  { title: "Writing Better UX Test Tasks – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How to Write Better Usability Test Tasks", url: "https://medium.com/search?q=write+better+usability+test+tasks" },
-                  { title: "Task Design Mistakes in UX Testing", url: "https://medium.com/search?q=task+design+mistakes+ux+testing" },
+                  { title: "How to Write Better Usability Test Tasks" },
+                  { title: "Task Design Mistakes in UX Testing" },
                 ],
               },
             ],
@@ -1652,20 +1652,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Usability Metrics", url: "https://www.nngroup.com/articles/usability-metrics/" },
+                  { title: "Usability Metrics" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Metrics Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ux+metrics+explained+nngroup" },
+                  { title: "UX Metrics Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "UX Metrics for Usability Testing", url: "https://medium.com/search?q=ux+metrics+usability+testing" },
-                  { title: "Measuring Usability Without Overthinking", url: "https://medium.com/search?q=measuring+usability+without+overthinking" },
+                  { title: "UX Metrics for Usability Testing" },
+                  { title: "Measuring Usability Without Overthinking" },
                 ],
               },
             ],
@@ -1686,21 +1686,21 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Observing Users: The Right Way", url: "https://www.nngroup.com/articles/observing-users/" },
-                  { title: "Analyzing Usability Test Results", url: "https://www.nngroup.com/articles/analyzing-usability-test-results/" },
+                  { title: "Observing Users: The Right Way" },
+                  { title: "Analyzing Usability Test Results" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Observing Usability Tests – NNGroup", url: "https://www.youtube.com/results?search_query=observing+usability+tests+nngroup" },
+                  { title: "Observing Usability Tests – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How to Analyze Usability Test Results", url: "https://medium.com/search?q=analyze+usability+test+results" },
-                  { title: "From Usability Test Notes to Insights", url: "https://medium.com/search?q=usability+test+notes+insights" },
+                  { title: "How to Analyze Usability Test Results" },
+                  { title: "From Usability Test Notes to Insights" },
                 ],
               },
             ],
@@ -1719,20 +1719,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Reporting Usability Test Results", url: "https://www.nngroup.com/articles/reporting-usability-test-results/" },
+                  { title: "Reporting Usability Test Results" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "How to Present Usability Findings – NNGroup", url: "https://www.youtube.com/results?search_query=present+usability+findings+nngroup" },
+                  { title: "How to Present Usability Findings – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How to Turn Usability Findings into Action", url: "https://medium.com/search?q=turn+usability+findings+action" },
-                  { title: "Writing UX Reports People Actually Read", url: "https://medium.com/search?q=writing+ux+reports+people+read" },
+                  { title: "How to Turn Usability Findings into Action" },
+                  { title: "Writing UX Reports People Actually Read" },
                 ],
               },
             ],
@@ -1757,21 +1757,21 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "10 Usability Heuristics for User Interface Design", url: "https://www.nngroup.com/articles/ten-usability-heuristics/" },
+                  { title: "10 Usability Heuristics for User Interface Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Nielsen's 10 Heuristics Explained – NNGroup", url: "https://www.youtube.com/results?search_query=nielsen+10+heuristics+explained+nngroup" },
-                  { title: "Usability Heuristics Overview – NNGroup", url: "https://www.youtube.com/results?search_query=usability+heuristics+overview+nngroup" },
+                  { title: "Nielsen's 10 Heuristics Explained – NNGroup" },
+                  { title: "Usability Heuristics Overview – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Nielsen's Heuristics Explained with Examples", url: "https://medium.com/search?q=nielsen+heuristics+explained+examples" },
-                  { title: "How to Actually Use UX Heuristics", url: "https://medium.com/search?q=how+actually+use+ux+heuristics" },
+                  { title: "Nielsen's Heuristics Explained with Examples" },
+                  { title: "How to Actually Use UX Heuristics" },
                 ],
               },
             ],
@@ -1792,20 +1792,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "How to Conduct a Heuristic Evaluation", url: "https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/" },
+                  { title: "How to Conduct a Heuristic Evaluation" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Heuristic Evaluation Step by Step – NNGroup", url: "https://www.youtube.com/results?search_query=heuristic+evaluation+step+by+step+nngroup" },
+                  { title: "Heuristic Evaluation Step by Step – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Heuristic Evaluation for UX Designers", url: "https://medium.com/search?q=heuristic+evaluation+ux+designers" },
-                  { title: "When to Use Heuristic Evaluation", url: "https://medium.com/search?q=when+use+heuristic+evaluation" },
+                  { title: "Heuristic Evaluation for UX Designers" },
+                  { title: "When to Use Heuristic Evaluation" },
                 ],
               },
             ],
@@ -1825,20 +1825,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Severity Ratings for Usability Problems", url: "https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/" },
+                  { title: "Severity Ratings for Usability Problems" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Severity Ratings Explained – NNGroup", url: "https://www.youtube.com/results?search_query=severity+ratings+explained+nngroup" },
+                  { title: "Severity Ratings Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Severity Ratings in UX: Explained Simply", url: "https://medium.com/search?q=severity+ratings+ux+explained" },
-                  { title: "Stop Calling Every UX Issue Critical", url: "https://medium.com/search?q=stop+calling+every+ux+issue+critical" },
+                  { title: "Severity Ratings in UX: Explained Simply" },
+                  { title: "Stop Calling Every UX Issue Critical" },
                 ],
               },
             ],
@@ -1858,20 +1858,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Turning UX Findings into Action", url: "https://www.nngroup.com/articles/actionable-ux-findings/" },
+                  { title: "Turning UX Findings into Action" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "From UX Issues to Design Actions – NNGroup", url: "https://www.youtube.com/results?search_query=ux+issues+design+actions+nngroup" },
+                  { title: "From UX Issues to Design Actions – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Writing Actionable UX Findings", url: "https://medium.com/search?q=writing+actionable+ux+findings" },
-                  { title: "UX Feedback That Leads to Change", url: "https://medium.com/search?q=ux+feedback+leads+change" },
+                  { title: "Writing Actionable UX Findings" },
+                  { title: "UX Feedback That Leads to Change" },
                 ],
               },
             ],
@@ -1896,27 +1896,27 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Accessibility 101", url: "https://www.nngroup.com/articles/accessibility-101/" },
-                  { title: "Inclusive Design", url: "https://www.nngroup.com/articles/inclusive-design/" },
+                  { title: "Accessibility 101" },
+                  { title: "Inclusive Design" },
                 ],
               },
               {
                 category: "🌐 W3C / WAI",
                 items: [
-                  { title: "Introduction to Web Accessibility", url: "https://www.w3.org/WAI/fundamentals/accessibility-intro/" },
+                  { title: "Introduction to Web Accessibility" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Accessibility Basics for UX – NNGroup", url: "https://www.youtube.com/results?search_query=accessibility+basics+ux+nngroup" },
+                  { title: "Accessibility Basics for UX – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Accessibility Is Not a Feature", url: "https://medium.com/search?q=accessibility+is+not+feature" },
-                  { title: "Why Inclusive Design Makes Products Better", url: "https://medium.com/search?q=inclusive+design+makes+products+better" },
+                  { title: "Accessibility Is Not a Feature" },
+                  { title: "Why Inclusive Design Makes Products Better" },
                 ],
               },
             ],
@@ -1936,27 +1936,27 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "🌐 W3C / WAI",
                 items: [
-                  { title: "WCAG Overview", url: "https://www.w3.org/WAI/standards-guidelines/wcag/" },
-                  { title: "WCAG at a Glance", url: "https://www.w3.org/WAI/standards-guidelines/wcag/glance/" },
+                  { title: "WCAG Overview" },
+                  { title: "WCAG at a Glance" },
                 ],
               },
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "WCAG 2 Overview for UX Designers", url: "https://www.nngroup.com/articles/wcag/" },
+                  { title: "WCAG 2 Overview for UX Designers" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "WCAG Explained Simply – NNGroup", url: "https://www.youtube.com/results?search_query=wcag+explained+simply+nngroup" },
+                  { title: "WCAG Explained Simply – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "WCAG Explained for Designers", url: "https://medium.com/search?q=wcag+explained+designers" },
-                  { title: "You Don't Need to Memorize WCAG", url: "https://medium.com/search?q=don't+need+memorize+wcag" },
+                  { title: "WCAG Explained for Designers" },
+                  { title: "You Don't Need to Memorize WCAG" },
                 ],
               },
             ],
@@ -1976,27 +1976,27 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Color Contrast and Readability", url: "https://www.nngroup.com/articles/color-contrast/" },
-                  { title: "Typography for UX", url: "https://www.nngroup.com/articles/typography/" },
+                  { title: "Color Contrast and Readability" },
+                  { title: "Typography for UX" },
                 ],
               },
               {
                 category: "🌐 W3C / WAI",
                 items: [
-                  { title: "Contrast (Minimum)", url: "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" },
+                  { title: "Contrast (Minimum)" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Color Contrast Explained – NNGroup", url: "https://www.youtube.com/results?search_query=color+contrast+explained+nngroup" },
+                  { title: "Color Contrast Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why Designers Get Contrast Wrong", url: "https://medium.com/search?q=designers+get+contrast+wrong" },
-                  { title: "Accessible Typography Basics", url: "https://medium.com/search?q=accessible+typography+basics" },
+                  { title: "Why Designers Get Contrast Wrong" },
+                  { title: "Accessible Typography Basics" },
                 ],
               },
             ],
@@ -2016,27 +2016,27 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Keyboard Accessibility", url: "https://www.nngroup.com/articles/keyboard-accessibility/" },
-                  { title: "Focus Indicators", url: "https://www.nngroup.com/articles/focus-indicators/" },
+                  { title: "Keyboard Accessibility" },
+                  { title: "Focus Indicators" },
                 ],
               },
               {
                 category: "🌐 W3C / WAI",
                 items: [
-                  { title: "Keyboard Accessibility", url: "https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html" },
+                  { title: "Keyboard Accessibility" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Keyboard Accessibility in UX – NNGroup", url: "https://www.youtube.com/results?search_query=keyboard+accessibility+ux+nngroup" },
+                  { title: "Keyboard Accessibility in UX – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing for Keyboard Navigation", url: "https://medium.com/search?q=designing+keyboard+navigation" },
-                  { title: "Why Focus States Matter", url: "https://medium.com/search?q=why+focus+states+matter" },
+                  { title: "Designing for Keyboard Navigation" },
+                  { title: "Why Focus States Matter" },
                 ],
               },
             ],
@@ -2056,27 +2056,27 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Accessible Forms", url: "https://www.nngroup.com/articles/form-accessibility/" },
-                  { title: "Error Messages and Accessibility", url: "https://www.nngroup.com/articles/error-message-guidelines/" },
+                  { title: "Accessible Forms" },
+                  { title: "Error Messages and Accessibility" },
                 ],
               },
               {
                 category: "🌐 W3C / WAI",
                 items: [
-                  { title: "Forms Accessibility", url: "https://www.w3.org/WAI/tutorials/forms/" },
+                  { title: "Forms Accessibility" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Accessible Form Design – NNGroup", url: "https://www.youtube.com/results?search_query=accessible+form+design+nngroup" },
+                  { title: "Accessible Form Design – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Accessible Forms Explained", url: "https://medium.com/search?q=accessible+forms+explained" },
-                  { title: "Why Error Messages Fail Accessibility", url: "https://medium.com/search?q=error+messages+fail+accessibility" },
+                  { title: "Accessible Forms Explained" },
+                  { title: "Why Error Messages Fail Accessibility" },
                 ],
               },
             ],
@@ -2102,22 +2102,22 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Writing: Definition and Principles", url: "https://www.nngroup.com/articles/ux-writing/" },
-                  { title: "Microcopy in UX", url: "https://www.nngroup.com/articles/microcopy/" },
+                  { title: "UX Writing: Definition and Principles" },
+                  { title: "Microcopy in UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Writing Basics – NNGroup", url: "https://www.youtube.com/results?search_query=ux+writing+basics+nngroup" },
-                  { title: "Microcopy Explained – NNGroup", url: "https://www.youtube.com/results?search_query=microcopy+explained+nngroup" },
+                  { title: "UX Writing Basics – NNGroup" },
+                  { title: "Microcopy Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Microcopy: Small Text, Big Impact", url: "https://medium.com/search?q=microcopy+small+text+big+impact" },
-                  { title: "UX Writing for Beginners", url: "https://medium.com/search?q=ux+writing+for+beginners" },
+                  { title: "Microcopy: Small Text, Big Impact" },
+                  { title: "UX Writing for Beginners" },
                 ],
               },
             ],
@@ -2136,21 +2136,21 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Error Message Guidelines", url: "https://www.nngroup.com/articles/error-message-guidelines/" },
-                  { title: "Empty States", url: "https://www.nngroup.com/articles/empty-state/" },
+                  { title: "Error Message Guidelines" },
+                  { title: "Empty States" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Writing Better Error Messages – NNGroup", url: "https://www.youtube.com/results?search_query=writing+better+error+messages+nngroup" },
+                  { title: "Writing Better Error Messages – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How to Write Helpful Error Messages", url: "https://medium.com/search?q=how+to+write+helpful+error+messages" },
-                  { title: "Designing Empty States That Guide Users", url: "https://medium.com/search?q=designing+empty+states+guide+users" },
+                  { title: "How to Write Helpful Error Messages" },
+                  { title: "Designing Empty States That Guide Users" },
                 ],
               },
             ],
@@ -2169,21 +2169,21 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Tone of Voice in UX", url: "https://www.nngroup.com/articles/tone-of-voice/" },
-                  { title: "Writing Consistent UX Copy", url: "https://www.nngroup.com/articles/consistent-ux-writing/" },
+                  { title: "Tone of Voice in UX" },
+                  { title: "Writing Consistent UX Copy" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Tone & Voice in UX Writing – NNGroup", url: "https://www.youtube.com/results?search_query=tone+voice+ux+writing+nngroup" },
+                  { title: "Tone & Voice in UX Writing – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "UX Voice and Tone Explained", url: "https://medium.com/search?q=ux+voice+tone+explained" },
-                  { title: "Why Consistent UX Copy Matters", url: "https://medium.com/search?q=why+consistent+ux+copy+matters" },
+                  { title: "UX Voice and Tone Explained" },
+                  { title: "Why Consistent UX Copy Matters" },
                 ],
               },
             ],
@@ -2204,21 +2204,21 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Labeling & UX Writing", url: "https://www.nngroup.com/articles/labeling-systems/" },
-                  { title: "Writing for Scannability", url: "https://www.nngroup.com/articles/scannability/" },
+                  { title: "Labeling & UX Writing" },
+                  { title: "Writing for Scannability" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Writing Clear UX Copy – NNGroup", url: "https://www.youtube.com/results?search_query=writing+clear+ux+copy+nngroup" },
+                  { title: "Writing Clear UX Copy – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Clear Labels Make Better UX", url: "https://medium.com/search?q=clear+labels+better+ux" },
-                  { title: "Designing UX Copy for Scanning", url: "https://medium.com/search?q=designing+ux+copy+scanning" },
+                  { title: "Clear Labels Make Better UX" },
+                  { title: "Designing UX Copy for Scanning" },
                 ],
               },
             ],
@@ -2244,21 +2244,21 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Metrics and Measurement", url: "https://www.nngroup.com/articles/ux-metrics/" },
-                  { title: "Measuring UX", url: "https://www.nngroup.com/articles/measuring-ux/" },
+                  { title: "UX Metrics and Measurement" },
+                  { title: "Measuring UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Metrics Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ux+metrics+explained+nngroup" },
+                  { title: "UX Metrics Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "UX Metrics for Beginners", url: "https://medium.com/search?q=ux+metrics+for+beginners" },
-                  { title: "Which UX Metrics Actually Matter", url: "https://medium.com/search?q=which+ux+metrics+actually+matter" },
+                  { title: "UX Metrics for Beginners" },
+                  { title: "Which UX Metrics Actually Matter" },
                 ],
               },
             ],
@@ -2278,20 +2278,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Qualitative vs Quantitative Research", url: "https://www.nngroup.com/articles/quant-vs-qual/" },
+                  { title: "Qualitative vs Quantitative Research" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Combining Qual & Quant UX – NNGroup", url: "https://www.youtube.com/results?search_query=combining+qual+quant+ux+nngroup" },
+                  { title: "Combining Qual & Quant UX – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why UX Needs Both Qual and Quant", url: "https://medium.com/search?q=why+ux+needs+both+qual+quant" },
-                  { title: "Reading UX Signals Together", url: "https://medium.com/search?q=reading+ux+signals+together" },
+                  { title: "Why UX Needs Both Qual and Quant" },
+                  { title: "Reading UX Signals Together" },
                 ],
               },
             ],
@@ -2312,20 +2312,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Validating Design Decisions", url: "https://www.nngroup.com/articles/design-validation/" },
+                  { title: "Validating Design Decisions" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Validation Methods – NNGroup", url: "https://www.youtube.com/results?search_query=ux+validation+methods+nngroup" },
+                  { title: "UX Validation Methods – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How to Validate UX Decisions", url: "https://medium.com/search?q=how+to+validate+ux+decisions" },
-                  { title: "Design Validation Without Overtesting", url: "https://medium.com/search?q=design+validation+without+overtesting" },
+                  { title: "How to Validate UX Decisions" },
+                  { title: "Design Validation Without Overtesting" },
                 ],
               },
             ],
@@ -2345,20 +2345,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Iterative Design", url: "https://www.nngroup.com/articles/iterative-design/" },
+                  { title: "Iterative Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Iterative UX Design – NNGroup", url: "https://www.youtube.com/results?search_query=iterative+ux+design+nngroup" },
+                  { title: "Iterative UX Design – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Iteration Is the Real UX Skill", url: "https://medium.com/search?q=iteration+real+ux+skill" },
-                  { title: "Why Good UX Is Never Finished", url: "https://medium.com/search?q=why+good+ux+never+finished" },
+                  { title: "Iteration Is the Real UX Skill" },
+                  { title: "Why Good UX Is Never Finished" },
                 ],
               },
             ],
@@ -2378,20 +2378,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Closing the UX Feedback Loop", url: "https://www.nngroup.com/articles/feedback-loops/" },
+                  { title: "Closing the UX Feedback Loop" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Feedback Loops Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ux+feedback+loops+explained+nngroup" },
+                  { title: "UX Feedback Loops Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Closing the UX Feedback Loop", url: "https://medium.com/search?q=closing+ux+feedback+loop" },
-                  { title: "From Feedback to Action in UX", url: "https://medium.com/search?q=from+feedback+action+ux" },
+                  { title: "Closing the UX Feedback Loop" },
+                  { title: "From Feedback to Action in UX" },
                 ],
               },
             ],
@@ -2417,20 +2417,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX and Product Management Collaboration", url: "https://www.nngroup.com/articles/ux-product-management/" },
+                  { title: "UX and Product Management Collaboration" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX & PM Collaboration – NNGroup", url: "https://www.youtube.com/results?search_query=ux+pm+collaboration+nngroup" },
+                  { title: "UX & PM Collaboration – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How UX Designers Should Work with PMs", url: "https://medium.com/search?q=how+ux+designers+work+with+pms" },
-                  { title: "UX vs PM Is the Wrong Question", url: "https://medium.com/search?q=ux+vs+pm+wrong+question" },
+                  { title: "How UX Designers Should Work with PMs" },
+                  { title: "UX vs PM Is the Wrong Question" },
                 ],
               },
             ],
@@ -2450,20 +2450,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Designers and Developers", url: "https://www.nngroup.com/articles/designers-developers/" },
+                  { title: "UX Designers and Developers" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX & Developer Collaboration – NNGroup", url: "https://www.youtube.com/results?search_query=ux+developer+collaboration+nngroup" },
+                  { title: "UX & Developer Collaboration – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How Designers Can Work Better with Developers", url: "https://medium.com/search?q=designers+work+better+with+developers" },
-                  { title: "Why UX Fails at Handoff", url: "https://medium.com/search?q=why+ux+fails+handoff" },
+                  { title: "How Designers Can Work Better with Developers" },
+                  { title: "Why UX Fails at Handoff" },
                 ],
               },
             ],
@@ -2483,20 +2483,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Design Handoff Best Practices", url: "https://www.nngroup.com/articles/design-handoff/" },
+                  { title: "Design Handoff Best Practices" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Design Handoff Explained – NNGroup", url: "https://www.youtube.com/results?search_query=design+handoff+explained+nngroup" },
+                  { title: "Design Handoff Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Design Handoff Is a Conversation", url: "https://medium.com/search?q=design+handoff+conversation" },
-                  { title: "What Developers Actually Need from Designers", url: "https://medium.com/search?q=what+developers+actually+need+designers" },
+                  { title: "Design Handoff Is a Conversation" },
+                  { title: "What Developers Actually Need from Designers" },
                 ],
               },
             ],
@@ -2516,20 +2516,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Documenting UX Designs", url: "https://www.nngroup.com/articles/documenting-designs/" },
+                  { title: "Documenting UX Designs" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Documentation Tips – NNGroup", url: "https://www.youtube.com/results?search_query=ux+documentation+tips+nngroup" },
+                  { title: "UX Documentation Tips – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "UX Specs Without Overdoing It", url: "https://medium.com/search?q=ux+specs+without+overdoing" },
-                  { title: "How Much Documentation Is Enough?", url: "https://medium.com/search?q=how+much+documentation+enough" },
+                  { title: "UX Specs Without Overdoing It" },
+                  { title: "How Much Documentation Is Enough?" },
                 ],
               },
             ],
@@ -2549,20 +2549,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX QA and Design Reviews", url: "https://www.nngroup.com/articles/design-reviews/" },
+                  { title: "UX QA and Design Reviews" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Design QA – NNGroup", url: "https://www.youtube.com/results?search_query=ux+design+qa+nngroup" },
+                  { title: "UX Design QA – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Design QA Is a UX Responsibility", url: "https://medium.com/search?q=design+qa+ux+responsibility" },
-                  { title: "Why Shipped UX Is Not Final UX", url: "https://medium.com/search?q=shipped+ux+not+final" },
+                  { title: "Design QA Is a UX Responsibility" },
+                  { title: "Why Shipped UX Is Not Final UX" },
                 ],
               },
             ],
@@ -2588,20 +2588,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Mindset", url: "https://www.nngroup.com/articles/ux-mindset/" },
+                  { title: "UX Mindset" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Thinking Like a UX Designer – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Thinking Like a UX Designer – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "What UX Mindset Really Means", url: "https://medium.com/example" },
-                  { title: "UX Is a Way of Thinking", url: "https://medium.com/example" },
+                  { title: "What UX Mindset Really Means" },
+                  { title: "UX Is a Way of Thinking" },
                 ],
               },
             ],
@@ -2621,20 +2621,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "How to Learn UX", url: "https://www.nngroup.com/articles/learning-ux/" },
+                  { title: "How to Learn UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Learning UX the Right Way – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Learning UX the Right Way – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Stop Learning Tools First", url: "https://medium.com/example" },
-                  { title: "How Junior Designers Should Learn UX", url: "https://medium.com/example" },
+                  { title: "Stop Learning Tools First" },
+                  { title: "How Junior Designers Should Learn UX" },
                 ],
               },
             ],
@@ -2654,20 +2654,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Portfolio Tips", url: "https://www.nngroup.com/articles/ux-portfolio/" },
+                  { title: "UX Portfolio Tips" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Portfolio for Juniors – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "UX Portfolio for Juniors – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "What Makes a Good Junior UX Portfolio", url: "https://medium.com/example" },
-                  { title: "Stop Making Dribbble-Style Case Studies", url: "https://medium.com/example" },
+                  { title: "What Makes a Good Junior UX Portfolio" },
+                  { title: "Stop Making Dribbble-Style Case Studies" },
                 ],
               },
             ],
@@ -2687,20 +2687,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Junior UX Designer Expectations", url: "https://www.nngroup.com/articles/junior-ux-designer/" },
+                  { title: "Junior UX Designer Expectations" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Junior UX Roles Explained – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Junior UX Roles Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "What Is Expected from a Junior UX Designer", url: "https://medium.com/example" },
-                  { title: "You're Not Supposed to Know Everything", url: "https://medium.com/example" },
+                  { title: "What Is Expected from a Junior UX Designer" },
+                  { title: "You're Not Supposed to Know Everything" },
                 ],
               },
             ],
@@ -2720,20 +2720,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Giving and Receiving UX Feedback", url: "https://www.nngroup.com/articles/ux-feedback/" },
+                  { title: "Giving and Receiving UX Feedback" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Growing as a UX Designer – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Growing as a UX Designer – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How Junior Designers Should Ask for Feedback", url: "https://medium.com/example" },
-                  { title: "Why Feedback Is a UX Skill", url: "https://medium.com/example" },
+                  { title: "How Junior Designers Should Ask for Feedback" },
+                  { title: "Why Feedback Is a UX Skill" },
                 ],
               },
             ],
@@ -2768,20 +2768,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Visual Design in UX", url: "https://www.nngroup.com/articles/visual-design/" },
+                  { title: "Visual Design in UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI vs UX Explained – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "UI vs UX Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "What UI Design Really Is", url: "https://medium.com/example" },
-                  { title: "UI Design Is Not Just Making Things Pretty", url: "https://medium.com/example" },
+                  { title: "What UI Design Really Is" },
+                  { title: "UI Design Is Not Just Making Things Pretty" },
                 ],
               },
             ],
@@ -2801,19 +2801,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX vs UI vs Product Design", url: "https://www.nngroup.com/articles/ux-vs-ui/" },
+                  { title: "UX vs UI vs Product Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX vs UI Roles – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "UX vs UI Roles – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "UX vs UI vs Product Design Explained", url: "https://medium.com/example" },
+                  { title: "UX vs UI vs Product Design Explained" },
                 ],
               },
             ],
@@ -2833,20 +2833,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Visual Design Principles", url: "https://www.nngroup.com/articles/principles-visual-design/" },
+                  { title: "Visual Design Principles" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Visual Design Principles – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Visual Design Principles – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Gestalt Principles in UI Design", url: "https://medium.com/example" },
-                  { title: "Why Visual Hierarchy Matters", url: "https://medium.com/example" },
+                  { title: "Gestalt Principles in UI Design" },
+                  { title: "Why Visual Hierarchy Matters" },
                 ],
               },
             ],
@@ -2866,19 +2866,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Visual Hierarchy", url: "https://www.nngroup.com/articles/visual-hierarchy-ux/" },
+                  { title: "Visual Hierarchy" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Visual Hierarchy Explained – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Visual Hierarchy Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing with Visual Hierarchy", url: "https://medium.com/example" },
+                  { title: "Designing with Visual Hierarchy" },
                 ],
               },
             ],
@@ -2898,19 +2898,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Consistency in UI Design", url: "https://www.nngroup.com/articles/consistency-heuristic/" },
+                  { title: "Consistency in UI Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Consistency in UX/UI – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Consistency in UX/UI – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why Consistency Is Critical in UI Design", url: "https://medium.com/example" },
+                  { title: "Why Consistency Is Critical in UI Design" },
                 ],
               },
             ],
@@ -2930,19 +2930,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Visual Design Mindset", url: "https://www.nngroup.com/articles/visual-design-mindset/" },
+                  { title: "UX Visual Design Mindset" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Thinking Like a UI Designer", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Thinking Like a UI Designer" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "UI Design Is Decision Making", url: "https://medium.com/example" },
+                  { title: "UI Design Is Decision Making" },
                 ],
               },
             ],
@@ -2968,20 +2968,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Page Layouts", url: "https://www.nngroup.com/articles/page-layouts/" },
+                  { title: "Page Layouts" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Layout Basics – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "UI Layout Basics – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "White Space Is Not Empty Space", url: "https://medium.com/example" },
-                  { title: "Layout Mistakes in UI Design", url: "https://medium.com/example" },
+                  { title: "White Space Is Not Empty Space" },
+                  { title: "Layout Mistakes in UI Design" },
                 ],
               },
             ],
@@ -3001,20 +3001,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Grid Systems in UX", url: "https://www.nngroup.com/articles/grid-systems/" },
+                  { title: "Grid Systems in UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Grid Systems Explained – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Grid Systems Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why UI Designers Should Use Grids", url: "https://medium.com/example" },
-                  { title: "Grid Systems in Modern UI", url: "https://medium.com/example" },
+                  { title: "Why UI Designers Should Use Grids" },
+                  { title: "Grid Systems in Modern UI" },
                 ],
               },
             ],
@@ -3034,20 +3034,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Spacing and Alignment", url: "https://www.nngroup.com/articles/spacing-alignment/" },
+                  { title: "Spacing and Alignment" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "8pt Grid System Explained", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "8pt Grid System Explained" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why the 8pt Grid Works", url: "https://medium.com/example" },
-                  { title: "Spacing Systems for UI Designers", url: "https://medium.com/example" },
+                  { title: "Why the 8pt Grid Works" },
+                  { title: "Spacing Systems for UI Designers" },
                 ],
               },
             ],
@@ -3067,20 +3067,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Responsive Web Design", url: "https://www.nngroup.com/articles/responsive-web-design/" },
+                  { title: "Responsive Web Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Responsive UI Design Basics – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Responsive UI Design Basics – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing Responsive Layouts", url: "https://medium.com/example" },
-                  { title: "Mobile First UI Thinking", url: "https://medium.com/example" },
+                  { title: "Designing Responsive Layouts" },
+                  { title: "Mobile First UI Thinking" },
                 ],
               },
             ],
@@ -3100,20 +3100,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Content-First Design", url: "https://www.nngroup.com/articles/content-first-design/" },
+                  { title: "Content-First Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Content First UI – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Content First UI – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing with Real Content", url: "https://medium.com/example" },
-                  { title: "Why Lorem Ipsum Breaks UI", url: "https://medium.com/example" },
+                  { title: "Designing with Real Content" },
+                  { title: "Why Lorem Ipsum Breaks UI" },
                 ],
               },
             ],
@@ -3133,19 +3133,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Visual Design Mistakes", url: "https://www.nngroup.com/articles/visual-design-mistakes/" },
+                  { title: "Visual Design Mistakes" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Layout Mistakes – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "UI Layout Mistakes – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Common UI Layout Mistakes", url: "https://medium.com/example" },
+                  { title: "Common UI Layout Mistakes" },
                 ],
               },
             ],
@@ -3171,20 +3171,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Typography for UX", url: "https://www.nngroup.com/articles/typography/" },
+                  { title: "Typography for UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Typography Basics for UI – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Typography Basics for UI – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Typography in UI Design", url: "https://medium.com/example" },
-                  { title: "Why Typography Is UX", url: "https://medium.com/example" },
+                  { title: "Typography in UI Design" },
+                  { title: "Why Typography Is UX" },
                 ],
               },
             ],
@@ -3204,20 +3204,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Visual Hierarchy", url: "https://www.nngroup.com/articles/visual-hierarchy-ux/" },
+                  { title: "Visual Hierarchy" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Type Scale Explained – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Type Scale Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Type Scales for UI Designers", url: "https://medium.com/example" },
-                  { title: "How Typography Creates Hierarchy", url: "https://medium.com/example" },
+                  { title: "Type Scales for UI Designers" },
+                  { title: "How Typography Creates Hierarchy" },
                 ],
               },
             ],
@@ -3237,21 +3237,21 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Readability and Legibility", url: "https://www.nngroup.com/articles/readability-legibility/" },
-                  { title: "Writing for Scannability", url: "https://www.nngroup.com/articles/scannability/" },
+                  { title: "Readability and Legibility" },
+                  { title: "Writing for Scannability" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Readable UI Text – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Readable UI Text – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing Readable Interfaces", url: "https://medium.com/example" },
-                  { title: "Why Scannability Matters in UI", url: "https://medium.com/example" },
+                  { title: "Designing Readable Interfaces" },
+                  { title: "Why Scannability Matters in UI" },
                 ],
               },
             ],
@@ -3271,26 +3271,26 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Accessibility and Typography", url: "https://www.nngroup.com/articles/color-contrast/" },
+                  { title: "Accessibility and Typography" },
                 ],
               },
               {
                 category: "🌐 W3C",
                 items: [
-                  { title: "Text Accessibility", url: "https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html" },
+                  { title: "Text Accessibility" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Accessible Typography – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Accessible Typography – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Accessible Typography in UI", url: "https://medium.com/example" },
-                  { title: "Why Small Text Breaks UX", url: "https://medium.com/example" },
+                  { title: "Accessible Typography in UI" },
+                  { title: "Why Small Text Breaks UX" },
                 ],
               },
             ],
@@ -3310,19 +3310,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Visual Design Mistakes", url: "https://www.nngroup.com/articles/visual-design-mistakes/" },
+                  { title: "Visual Design Mistakes" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Typography Mistakes in UI", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Typography Mistakes in UI" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Typography Mistakes UI Designers Make", url: "https://medium.com/example" },
+                  { title: "Typography Mistakes UI Designers Make" },
                 ],
               },
             ],
@@ -3348,20 +3348,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Color in UI Design", url: "https://www.nngroup.com/articles/color-in-ui-design/" },
+                  { title: "Color in UI Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Color Basics – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "UI Color Basics – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Color Basics for UI Designers", url: "https://medium.com/example" },
-                  { title: "Why Color Decisions Matter in UX", url: "https://medium.com/example" },
+                  { title: "Color Basics for UI Designers" },
+                  { title: "Why Color Decisions Matter in UX" },
                 ],
               },
             ],
@@ -3381,20 +3381,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Color Roles and Meaning", url: "https://www.nngroup.com/articles/color-meaning/" },
+                  { title: "Color Roles and Meaning" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Color Roles Explained – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Color Roles Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing Color Systems for UI", url: "https://medium.com/example" },
-                  { title: "Stop Picking Random Colors", url: "https://medium.com/example" },
+                  { title: "Designing Color Systems for UI" },
+                  { title: "Stop Picking Random Colors" },
                 ],
               },
             ],
@@ -3414,26 +3414,26 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Color Contrast and Readability", url: "https://www.nngroup.com/articles/color-contrast/" },
+                  { title: "Color Contrast and Readability" },
                 ],
               },
               {
                 category: "🌐 W3C",
                 items: [
-                  { title: "Contrast (Minimum)", url: "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" },
+                  { title: "Contrast (Minimum)" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Color Contrast Explained – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Color Contrast Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why Designers Get Contrast Wrong", url: "https://medium.com/example" },
-                  { title: "Accessible Color in UI", url: "https://medium.com/example" },
+                  { title: "Why Designers Get Contrast Wrong" },
+                  { title: "Accessible Color in UI" },
                 ],
               },
             ],
@@ -3453,20 +3453,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Dark Mode UX", url: "https://www.nngroup.com/articles/dark-mode/" },
+                  { title: "Dark Mode UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Designing Dark Mode – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Designing Dark Mode – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Dark Mode Done Right", url: "https://medium.com/example" },
-                  { title: "Common Dark Mode Mistakes", url: "https://medium.com/example" },
+                  { title: "Dark Mode Done Right" },
+                  { title: "Common Dark Mode Mistakes" },
                 ],
               },
             ],
@@ -3486,20 +3486,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Branding vs Usability", url: "https://www.nngroup.com/articles/branding-usability/" },
+                  { title: "Branding vs Usability" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Branding in UI Design – NNGroup", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "Branding in UI Design – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "When Branding Hurts UX", url: "https://medium.com/example" },
-                  { title: "Balancing Brand and Usability", url: "https://medium.com/example" },
+                  { title: "When Branding Hurts UX" },
+                  { title: "Balancing Brand and Usability" },
                 ],
               },
             ],
@@ -3519,19 +3519,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Visual Design Mistakes", url: "https://www.nngroup.com/articles/visual-design-mistakes/" },
+                  { title: "Visual Design Mistakes" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Color Mistakes", url: "https://www.youtube.com/watch?v=example" },
+                  { title: "UI Color Mistakes" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Common UI Color Mistakes", url: "https://medium.com/example" },
+                  { title: "Common UI Color Mistakes" },
                 ],
               },
             ],
@@ -3556,19 +3556,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Icon Usability", url: "https://www.nngroup.com/articles/icon-usability/" },
+                  { title: "Icon Usability" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Designing App Icons (Apple)", url: "https://www.youtube.com/watch?v=z7mF8sAI7Ts" },
+                  { title: "Designing App Icons (Apple)" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Systematic Icon Design (Sketch)", url: "https://medium.com/sketch-app-sources/systematic-icon-design-b9ff0e79a54a" },
+                  { title: "Systematic Icon Design (Sketch)" },
                 ],
               },
             ],
@@ -3588,13 +3588,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing Perfect Icon Sets", url: "https://medium.com/@minoraxis/designing-perfect-icon-sets-515d2e7b4ef6" },
+                  { title: "Designing Perfect Icon Sets" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Icon Design for Beginners (Figma Community)", url: "https://www.youtube.com/results?search_query=icon+design+tutorial+figma" },
+                  { title: "Icon Design for Beginners (Figma Community)" },
                 ],
               },
             ],
@@ -3614,13 +3614,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Filled vs Outline Icons", url: "https://www.nngroup.com/articles/icon-usability/" },
+                  { title: "Filled vs Outline Icons" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How to Choose Icon Style", url: "https://uxdesign.cc/how-to-choose-icon-style-in-ui-design-8bf4d4c6e7f8" },
+                  { title: "How to Choose Icon Style" },
                 ],
               },
             ],
@@ -3640,13 +3640,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Illustrations in UX", url: "https://www.nngroup.com/articles/illustration-ux/" },
+                  { title: "Illustrations in UX" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "When to Use Illustrations in UI", url: "https://uxdesign.cc/when-to-use-illustrations-in-ui-design-2c1e8e9c3f3e" },
+                  { title: "When to Use Illustrations in UI" },
                 ],
               },
             ],
@@ -3666,13 +3666,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Image Guidelines for UX", url: "https://www.nngroup.com/articles/image-guidelines/" },
+                  { title: "Image Guidelines for UX" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing with Images in UI", url: "https://uxdesign.cc/designing-with-images-in-ui-37e5c3a8c6f2" },
+                  { title: "Designing with Images in UI" },
                 ],
               },
             ],
@@ -3692,13 +3692,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Icon Usability", url: "https://www.nngroup.com/articles/icon-usability/" },
+                  { title: "Icon Usability" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Common Icon Design Mistakes", url: "https://uxdesign.cc/icon-design-mistakes-ec3f8b6e4c8e" },
+                  { title: "Common Icon Design Mistakes" },
                 ],
               },
             ],
@@ -3724,20 +3724,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UI Components and Patterns", url: "https://www.nngroup.com/articles/ui-components/" },
+                  { title: "UI Components and Patterns" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Components Explained – NNGroup", url: "https://www.youtube.com/results?search_query=nngroup+ui+components" },
+                  { title: "UI Components Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "What Makes a Good UI Component", url: "https://uxdesign.cc/what-makes-a-good-ui-component-6a1e9b8b0c8f" },
-                  { title: "Thinking in Components", url: "https://medium.com/thinking-in-components" },
+                  { title: "What Makes a Good UI Component" },
+                  { title: "Thinking in Components" },
                 ],
               },
             ],
@@ -3756,20 +3756,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Button Design Guidelines", url: "https://www.nngroup.com/articles/buttons/" },
+                  { title: "Button Design Guidelines" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Buttons Best Practices – NNGroup", url: "https://www.youtube.com/results?search_query=nngroup+button+design" },
+                  { title: "UI Buttons Best Practices – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing Buttons for UI", url: "https://uxdesign.cc/designing-buttons-for-ui-2c1e8e9c3f3e" },
-                  { title: "Input Fields in UI Design", url: "https://uxdesign.cc/input-fields-in-ui-design-7c8b6e4c6f8e" },
+                  { title: "Designing Buttons for UI" },
+                  { title: "Input Fields in UI Design" },
                 ],
               },
             ],
@@ -3788,20 +3788,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Form Design Anatomy", url: "https://www.nngroup.com/articles/form-design-placeholders/" },
+                  { title: "Form Design Anatomy" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Input Anatomy Explained – NNGroup", url: "https://www.youtube.com/results?search_query=input+anatomy+ui+design" },
+                  { title: "Input Anatomy Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Component Anatomy in UI", url: "https://uxdesign.cc/component-anatomy-in-ui-3c8b6e4c6f8e" },
-                  { title: "Why Inputs Fail in Forms", url: "https://uxdesign.cc/why-inputs-fail-in-forms-2c1e8e9c3f3e" },
+                  { title: "Component Anatomy in UI" },
+                  { title: "Why Inputs Fail in Forms" },
                 ],
               },
             ],
@@ -3820,20 +3820,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UI Patterns", url: "https://www.nngroup.com/articles/ui-patterns/" },
+                  { title: "UI Patterns" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Patterns Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ui+patterns+explained" },
+                  { title: "UI Patterns Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Choosing the Right UI Pattern", url: "https://uxdesign.cc/choosing-the-right-ui-pattern-7c8b6e4c6f8e" },
-                  { title: "UI Patterns That Work", url: "https://uxdesign.cc/ui-patterns-that-work-2c1e8e9c3f3e" },
+                  { title: "Choosing the Right UI Pattern" },
+                  { title: "UI Patterns That Work" },
                 ],
               },
             ],
@@ -3852,20 +3852,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Consistency Heuristic", url: "https://www.nngroup.com/articles/consistency-heuristic/" },
+                  { title: "Consistency Heuristic" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Component Reusability – NNGroup", url: "https://www.youtube.com/results?search_query=component+reusability+ui" },
+                  { title: "Component Reusability – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why Reusable Components Matter", url: "https://uxdesign.cc/why-reusable-components-matter-3c8b6e4c6f8e" },
-                  { title: "Scaling UI with Components", url: "https://uxdesign.cc/scaling-ui-with-components-2c1e8e9c3f3e" },
+                  { title: "Why Reusable Components Matter" },
+                  { title: "Scaling UI with Components" },
                 ],
               },
             ],
@@ -3884,19 +3884,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Design System Mistakes", url: "https://www.nngroup.com/articles/design-system-mistakes/" },
+                  { title: "Design System Mistakes" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Component Mistakes", url: "https://www.youtube.com/results?search_query=ui+component+mistakes" },
+                  { title: "UI Component Mistakes" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Common UI Component Mistakes", url: "https://uxdesign.cc/common-ui-component-mistakes-7c8b6e4c6f8e" },
+                  { title: "Common UI Component Mistakes" },
                 ],
               },
             ],
@@ -3921,20 +3921,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UI States", url: "https://www.nngroup.com/articles/ui-states/" },
+                  { title: "UI States" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Component States Explained – NNGroup", url: "https://www.youtube.com/results?search_query=component+states+ui+design" },
+                  { title: "Component States Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing UI States", url: "https://uxdesign.cc/designing-ui-states-3c8b6e4c6f8e" },
-                  { title: "Why Disabled States Matter", url: "https://uxdesign.cc/why-disabled-states-matter-2c1e8e9c3f3e" },
+                  { title: "Designing UI States" },
+                  { title: "Why Disabled States Matter" },
                 ],
               },
             ],
@@ -3953,20 +3953,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Error Message Guidelines", url: "https://www.nngroup.com/articles/error-message-guidelines/" },
+                  { title: "Error Message Guidelines" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX Error Messages – NNGroup", url: "https://www.youtube.com/results?search_query=error+messages+ux" },
+                  { title: "UX Error Messages – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing Helpful Error Messages", url: "https://uxdesign.cc/designing-helpful-error-messages-7c8b6e4c6f8e" },
-                  { title: "Inline Validation in Forms", url: "https://uxdesign.cc/inline-validation-in-forms-2c1e8e9c3f3e" },
+                  { title: "Designing Helpful Error Messages" },
+                  { title: "Inline Validation in Forms" },
                 ],
               },
             ],
@@ -3985,21 +3985,21 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Empty States", url: "https://www.nngroup.com/articles/empty-states/" },
-                  { title: "Progress Indicators", url: "https://www.nngroup.com/articles/progress-indicators/" },
+                  { title: "Empty States" },
+                  { title: "Progress Indicators" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Designing Empty & Loading States – NNGroup", url: "https://www.youtube.com/results?search_query=empty+states+loading+ui" },
+                  { title: "Designing Empty & Loading States – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing Empty States That Work", url: "https://uxdesign.cc/designing-empty-states-that-work-7c8b6e4c6f8e" },
-                  { title: "Loading States in UI", url: "https://uxdesign.cc/loading-states-in-ui-2c1e8e9c3f3e" },
+                  { title: "Designing Empty States That Work" },
+                  { title: "Loading States in UI" },
                 ],
               },
             ],
@@ -4018,20 +4018,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Affordances", url: "https://www.nngroup.com/articles/affordances/" },
+                  { title: "Affordances" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Affordance in UI Design – NNGroup", url: "https://www.youtube.com/results?search_query=affordance+ui+design" },
+                  { title: "Affordance in UI Design – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Affordance in Interface Design", url: "https://uxdesign.cc/affordance-in-interface-design-7c8b6e4c6f8e" },
-                  { title: "Why Users Don't Click", url: "https://uxdesign.cc/why-users-dont-click-2c1e8e9c3f3e" },
+                  { title: "Affordance in Interface Design" },
+                  { title: "Why Users Don't Click" },
                 ],
               },
             ],
@@ -4050,20 +4050,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Microcopy in UX", url: "https://www.nngroup.com/articles/microcopy/" },
+                  { title: "Microcopy in UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Writing Microcopy for UI – NNGroup", url: "https://www.youtube.com/results?search_query=microcopy+ui+design" },
+                  { title: "Writing Microcopy for UI – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Microcopy That Improves UX", url: "https://uxdesign.cc/microcopy-that-improves-ux-7c8b6e4c6f8e" },
-                  { title: "UI Text That Guides Users", url: "https://uxdesign.cc/ui-text-that-guides-users-2c1e8e9c3f3e" },
+                  { title: "Microcopy That Improves UX" },
+                  { title: "UI Text That Guides Users" },
                 ],
               },
             ],
@@ -4082,19 +4082,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Feedback Mistakes", url: "https://www.nngroup.com/articles/usability-heuristics/" },
+                  { title: "UX Feedback Mistakes" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Feedback Mistakes", url: "https://www.youtube.com/results?search_query=ui+feedback+mistakes" },
+                  { title: "UI Feedback Mistakes" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why Feedback Is a UX Principle", url: "https://uxdesign.cc/why-feedback-is-a-ux-principle-7c8b6e4c6f8e" },
+                  { title: "Why Feedback Is a UX Principle" },
                 ],
               },
             ],
@@ -4119,20 +4119,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Microinteractions", url: "https://www.nngroup.com/articles/microinteractions/" },
+                  { title: "Microinteractions" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Microinteractions Explained – NNGroup", url: "https://www.youtube.com/results?search_query=microinteractions+ui+design" },
+                  { title: "Microinteractions Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing Microinteractions", url: "https://uxdesign.cc/designing-microinteractions-7c8b6e4c6f8e" },
-                  { title: "Why Microinteractions Matter", url: "https://uxdesign.cc/why-microinteractions-matter-2c1e8e9c3f3e" },
+                  { title: "Designing Microinteractions" },
+                  { title: "Why Microinteractions Matter" },
                 ],
               },
             ],
@@ -4151,20 +4151,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Animation and Motion", url: "https://www.nngroup.com/articles/animation/" },
+                  { title: "Animation and Motion" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Motion Design Basics – NNGroup", url: "https://www.youtube.com/results?search_query=motion+design+basics" },
+                  { title: "Motion Design Basics – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "UI Motion Principles", url: "https://uxdesign.cc/ui-motion-principles-7c8b6e4c6f8e" },
-                  { title: "Timing & Easing Explained", url: "https://uxdesign.cc/timing-easing-explained-2c1e8e9c3f3e" },
+                  { title: "UI Motion Principles" },
+                  { title: "Timing & Easing Explained" },
                 ],
               },
             ],
@@ -4183,20 +4183,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Animation for Attention", url: "https://www.nngroup.com/articles/animation-attention/" },
+                  { title: "Animation for Attention" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Using Motion to Guide Attention", url: "https://www.youtube.com/results?search_query=motion+guide+attention+ui" },
+                  { title: "Using Motion to Guide Attention" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Motion as a UX Tool", url: "https://uxdesign.cc/motion-as-a-ux-tool-7c8b6e4c6f8e" },
-                  { title: "Guiding Users with Motion", url: "https://uxdesign.cc/guiding-users-with-motion-2c1e8e9c3f3e" },
+                  { title: "Motion as a UX Tool" },
+                  { title: "Guiding Users with Motion" },
                 ],
               },
             ],
@@ -4214,19 +4214,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Animation Pitfalls", url: "https://www.nngroup.com/articles/animation-pitfalls/" },
+                  { title: "Animation Pitfalls" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Motion Mistakes in UI", url: "https://www.youtube.com/results?search_query=motion+mistakes+ui" },
+                  { title: "Motion Mistakes in UI" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why Too Much Animation Hurts UX", url: "https://uxdesign.cc/too-much-animation-hurts-ux-7c8b6e4c6f8e" },
+                  { title: "Why Too Much Animation Hurts UX" },
                 ],
               },
             ],
@@ -4244,20 +4244,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Animated UI Components", url: "https://www.nngroup.com/articles/animated-components/" },
+                  { title: "Animated UI Components" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Motion in UI Components", url: "https://www.youtube.com/results?search_query=motion+ui+components" },
+                  { title: "Motion in UI Components" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Animating UI Components", url: "https://uxdesign.cc/animating-ui-components-7c8b6e4c6f8e" },
-                  { title: "Motion and State Transitions", url: "https://uxdesign.cc/motion-state-transitions-2c1e8e9c3f3e" },
+                  { title: "Animating UI Components" },
+                  { title: "Motion and State Transitions" },
                 ],
               },
             ],
@@ -4281,20 +4281,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Accessibility Basics", url: "https://www.nngroup.com/articles/accessibility-basics/" },
+                  { title: "Accessibility Basics" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Accessibility for Designers – NNGroup", url: "https://www.youtube.com/results?search_query=accessibility+for+designers" },
+                  { title: "Accessibility for Designers – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Accessibility Is UX", url: "https://uxdesign.cc/accessibility-is-ux-7c8b6e4c6f8e" },
-                  { title: "Designing for Everyone", url: "https://uxdesign.cc/designing-for-everyone-2c1e8e9c3f3e" },
+                  { title: "Accessibility Is UX" },
+                  { title: "Designing for Everyone" },
                 ],
               },
             ],
@@ -4313,26 +4313,26 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Color Contrast", url: "https://www.nngroup.com/articles/color-contrast/" },
+                  { title: "Color Contrast" },
                 ],
               },
               {
                 category: "🌐 W3C",
                 items: [
-                  { title: "Contrast Requirements", url: "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" },
+                  { title: "Contrast Requirements" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Color Accessibility – NNGroup", url: "https://www.youtube.com/results?search_query=color+accessibility+ui" },
+                  { title: "Color Accessibility – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing for Color Blindness", url: "https://uxdesign.cc/designing-for-color-blindness-7c8b6e4c6f8e" },
-                  { title: "Accessible Color in UI", url: "https://uxdesign.cc/accessible-color-in-ui-2c1e8e9c3f3e" },
+                  { title: "Designing for Color Blindness" },
+                  { title: "Accessible Color in UI" },
                 ],
               },
             ],
@@ -4350,20 +4350,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Keyboard Accessibility", url: "https://www.nngroup.com/articles/keyboard-accessibility/" },
+                  { title: "Keyboard Accessibility" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Focus States Explained – NNGroup", url: "https://www.youtube.com/results?search_query=focus+states+accessibility" },
+                  { title: "Focus States Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why Focus States Matter", url: "https://uxdesign.cc/why-focus-states-matter-7c8b6e4c6f8e" },
-                  { title: "Designing Keyboard-Friendly UI", url: "https://uxdesign.cc/keyboard-friendly-ui-2c1e8e9c3f3e" },
+                  { title: "Why Focus States Matter" },
+                  { title: "Designing Keyboard-Friendly UI" },
                 ],
               },
             ],
@@ -4382,26 +4382,26 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Readability and Accessibility", url: "https://www.nngroup.com/articles/readability-legibility/" },
+                  { title: "Readability and Accessibility" },
                 ],
               },
               {
                 category: "🌐 W3C",
                 items: [
-                  { title: "Text Spacing", url: "https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html" },
+                  { title: "Text Spacing" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Accessible Typography – NNGroup", url: "https://www.youtube.com/results?search_query=accessible+typography" },
+                  { title: "Accessible Typography – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Readable UI Typography", url: "https://uxdesign.cc/readable-ui-typography-7c8b6e4c6f8e" },
-                  { title: "Why Small Text Is a UX Smell", url: "https://uxdesign.cc/small-text-ux-smell-2c1e8e9c3f3e" },
+                  { title: "Readable UI Typography" },
+                  { title: "Why Small Text Is a UX Smell" },
                 ],
               },
             ],
@@ -4420,19 +4420,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Accessibility Checklist", url: "https://www.nngroup.com/articles/accessibility-checklist/" },
+                  { title: "Accessibility Checklist" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Accessibility Checklist for Designers", url: "https://www.youtube.com/results?search_query=accessibility+checklist+designers" },
+                  { title: "Accessibility Checklist for Designers" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "UI Accessibility Checklist", url: "https://uxdesign.cc/ui-accessibility-checklist-7c8b6e4c6f8e" },
+                  { title: "UI Accessibility Checklist" },
                 ],
               },
             ],
@@ -4456,20 +4456,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Web UX Design", url: "https://www.nngroup.com/articles/web-design/" },
+                  { title: "Web UX Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Web UI Design Basics – NNGroup", url: "https://www.youtube.com/results?search_query=web+ui+design+basics" },
+                  { title: "Web UI Design Basics – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing Effective Web Interfaces", url: "https://uxdesign.cc/designing-effective-web-interfaces-7c8b6e4c6f8e" },
-                  { title: "Common Web UI Mistakes", url: "https://uxdesign.cc/common-web-ui-mistakes-2c1e8e9c3f3e" },
+                  { title: "Designing Effective Web Interfaces" },
+                  { title: "Common Web UI Mistakes" },
                 ],
               },
             ],
@@ -4488,20 +4488,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Mobile UX Design", url: "https://www.nngroup.com/articles/mobile-ux/" },
+                  { title: "Mobile UX Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Mobile UI Design Basics – NNGroup", url: "https://www.youtube.com/results?search_query=mobile+ui+design+basics" },
+                  { title: "Mobile UI Design Basics – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing for Mobile First", url: "https://uxdesign.cc/designing-for-mobile-first-7c8b6e4c6f8e" },
-                  { title: "Thumb-Friendly UI Design", url: "https://uxdesign.cc/thumb-friendly-ui-design-2c1e8e9c3f3e" },
+                  { title: "Designing for Mobile First" },
+                  { title: "Thumb-Friendly UI Design" },
                 ],
               },
             ],
@@ -4520,26 +4520,26 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Apple",
                 items: [
-                  { title: "Human Interface Guidelines", url: "https://developer.apple.com/design/human-interface-guidelines/" },
+                  { title: "Human Interface Guidelines" },
                 ],
               },
               {
                 category: "📘 Google",
                 items: [
-                  { title: "Material Design", url: "https://m3.material.io/" },
+                  { title: "Material Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "iOS vs Android UI Differences", url: "https://www.youtube.com/results?search_query=ios+vs+android+ui+differences" },
+                  { title: "iOS vs Android UI Differences" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why Platform Guidelines Matter", url: "https://uxdesign.cc/why-platform-guidelines-matter-7c8b6e4c6f8e" },
-                  { title: "Designing Cross-Platform UI", url: "https://uxdesign.cc/designing-cross-platform-ui-2c1e8e9c3f3e" },
+                  { title: "Why Platform Guidelines Matter" },
+                  { title: "Designing Cross-Platform UI" },
                 ],
               },
             ],
@@ -4557,20 +4557,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Responsive vs Adaptive Design", url: "https://www.nngroup.com/articles/responsive-vs-adaptive/" },
+                  { title: "Responsive vs Adaptive Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Responsive Design Explained – NNGroup", url: "https://www.youtube.com/results?search_query=responsive+design+explained" },
+                  { title: "Responsive Design Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Responsive vs Adaptive UI", url: "https://uxdesign.cc/responsive-vs-adaptive-ui-7c8b6e4c6f8e" },
-                  { title: "Choosing the Right Layout Strategy", url: "https://uxdesign.cc/choosing-the-right-layout-strategy-2c1e8e9c3f3e" },
+                  { title: "Responsive vs Adaptive UI" },
+                  { title: "Choosing the Right Layout Strategy" },
                 ],
               },
             ],
@@ -4589,19 +4589,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Cross-Platform UX Issues", url: "https://www.nngroup.com/articles/cross-platform/" },
+                  { title: "Cross-Platform UX Issues" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Cross-Platform UI Mistakes", url: "https://www.youtube.com/results?search_query=cross+platform+ui+mistakes" },
+                  { title: "Cross-Platform UI Mistakes" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why One UI Doesn't Fit All", url: "https://uxdesign.cc/why-one-ui-doesnt-fit-all-7c8b6e4c6f8e" },
+                  { title: "Why One UI Doesn't Fit All" },
                 ],
               },
             ],
@@ -4626,20 +4626,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Design Systems 101", url: "https://www.nngroup.com/articles/design-systems-101/" },
+                  { title: "Design Systems 101" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Why Design Systems Matter – NNGroup", url: "https://www.youtube.com/results?search_query=why+design+systems+matter" },
+                  { title: "Why Design Systems Matter – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Design Systems Are About People", url: "https://uxdesign.cc/design-systems-are-about-people-7c8b6e4c6f8e" },
-                  { title: "Why Products Without Design Systems Break", url: "https://uxdesign.cc/products-without-design-systems-break-2c1e8e9c3f3e" },
+                  { title: "Design Systems Are About People" },
+                  { title: "Why Products Without Design Systems Break" },
                 ],
               },
             ],
@@ -4658,20 +4658,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Design System Foundations", url: "https://www.nngroup.com/articles/design-system-foundations/" },
+                  { title: "Design System Foundations" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Design System Foundations Explained", url: "https://www.youtube.com/results?search_query=design+system+foundations" },
+                  { title: "Design System Foundations Explained" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Building UI Foundations", url: "https://uxdesign.cc/building-ui-foundations-7c8b6e4c6f8e" },
-                  { title: "Why Foundations Come First", url: "https://uxdesign.cc/why-foundations-come-first-2c1e8e9c3f3e" },
+                  { title: "Building UI Foundations" },
+                  { title: "Why Foundations Come First" },
                 ],
               },
             ],
@@ -4689,20 +4689,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Design Tokens", url: "https://www.nngroup.com/articles/design-tokens/" },
+                  { title: "Design Tokens" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Design Tokens Explained", url: "https://www.youtube.com/results?search_query=design+tokens+explained" },
+                  { title: "Design Tokens Explained" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Design Tokens for UI Designers", url: "https://uxdesign.cc/design-tokens-for-ui-designers-7c8b6e4c6f8e" },
-                  { title: "Why Tokens Matter", url: "https://uxdesign.cc/why-tokens-matter-2c1e8e9c3f3e" },
+                  { title: "Design Tokens for UI Designers" },
+                  { title: "Why Tokens Matter" },
                 ],
               },
             ],
@@ -4720,20 +4720,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Component Libraries", url: "https://www.nngroup.com/articles/component-libraries/" },
+                  { title: "Component Libraries" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Building Component Libraries", url: "https://www.youtube.com/results?search_query=building+component+libraries" },
+                  { title: "Building Component Libraries" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Scaling UI with Component Libraries", url: "https://uxdesign.cc/scaling-ui-with-component-libraries-7c8b6e4c6f8e" },
-                  { title: "Component Libraries Done Right", url: "https://uxdesign.cc/component-libraries-done-right-2c1e8e9c3f3e" },
+                  { title: "Scaling UI with Component Libraries" },
+                  { title: "Component Libraries Done Right" },
                 ],
               },
             ],
@@ -4752,20 +4752,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Theming in Design Systems", url: "https://www.nngroup.com/articles/theming-design-systems/" },
+                  { title: "Theming in Design Systems" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Theming Explained", url: "https://www.youtube.com/results?search_query=ui+theming+explained" },
+                  { title: "UI Theming Explained" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Design System Theming", url: "https://uxdesign.cc/design-system-theming-7c8b6e4c6f8e" },
-                  { title: "Managing Variants in UI", url: "https://uxdesign.cc/managing-variants-in-ui-2c1e8e9c3f3e" },
+                  { title: "Design System Theming" },
+                  { title: "Managing Variants in UI" },
                 ],
               },
             ],
@@ -4784,19 +4784,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Design System Mistakes", url: "https://www.nngroup.com/articles/design-system-mistakes/" },
+                  { title: "Design System Mistakes" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Design System Pitfalls", url: "https://www.youtube.com/results?search_query=design+system+pitfalls" },
+                  { title: "Design System Pitfalls" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why Design Systems Fail", url: "https://uxdesign.cc/why-design-systems-fail-7c8b6e4c6f8e" },
+                  { title: "Why Design Systems Fail" },
                 ],
               },
             ],
@@ -4821,20 +4821,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Design QA and Reviews", url: "https://www.nngroup.com/articles/design-reviews/" },
+                  { title: "Design QA and Reviews" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI QA Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ui+qa+explained+nngroup" },
+                  { title: "UI QA Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why UI QA Matters", url: "https://uxdesign.cc/why-ui-qa-matters-7c8b6e4c6f8e" },
-                  { title: "Design QA for UI Designers", url: "https://uxdesign.cc/design-qa-for-ui-designers-2c1e8e9c3f3e" },
+                  { title: "Why UI QA Matters" },
+                  { title: "Design QA for UI Designers" },
                 ],
               },
             ],
@@ -4853,20 +4853,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "How to Give Design Feedback", url: "https://www.nngroup.com/articles/design-critique/" },
+                  { title: "How to Give Design Feedback" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Design Critique Basics – NNGroup", url: "https://www.youtube.com/results?search_query=design+critique+basics+nngroup" },
+                  { title: "Design Critique Basics – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How to Critique UI Designs", url: "https://uxdesign.cc/how-to-critique-ui-designs-7c8b6e4c6f8e" },
-                  { title: "Design Feedback Without Ego", url: "https://uxdesign.cc/design-feedback-without-ego-2c1e8e9c3f3e" },
+                  { title: "How to Critique UI Designs" },
+                  { title: "Design Feedback Without Ego" },
                 ],
               },
             ],
@@ -4885,19 +4885,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Visual Design Heuristics", url: "https://www.nngroup.com/articles/visual-design/" },
+                  { title: "Visual Design Heuristics" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI QA Checklist", url: "https://www.youtube.com/results?search_query=ui+qa+checklist" },
+                  { title: "UI QA Checklist" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "UI QA Checklist for Designers", url: "https://uxdesign.cc/ui-qa-checklist-for-designers-7c8b6e4c6f8e" },
+                  { title: "UI QA Checklist for Designers" },
                 ],
               },
             ],
@@ -4915,20 +4915,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Iterative Design", url: "https://www.nngroup.com/articles/iterative-design/" },
+                  { title: "Iterative Design" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Iterative UI Design – NNGroup", url: "https://www.youtube.com/results?search_query=iterative+ui+design+nngroup" },
+                  { title: "Iterative UI Design – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Iteration Is Not Rework", url: "https://uxdesign.cc/iteration-is-not-rework-7c8b6e4c6f8e" },
-                  { title: "Designing in Small Improvements", url: "https://uxdesign.cc/designing-in-small-improvements-2c1e8e9c3f3e" },
+                  { title: "Iteration Is Not Rework" },
+                  { title: "Designing in Small Improvements" },
                 ],
               },
             ],
@@ -4947,19 +4947,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Design Consistency Issues", url: "https://www.nngroup.com/articles/consistency-heuristic/" },
+                  { title: "Design Consistency Issues" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Quality Issues Explained", url: "https://www.youtube.com/results?search_query=ui+quality+issues+explained" },
+                  { title: "UI Quality Issues Explained" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why UI Quality Degrades Over Time", url: "https://uxdesign.cc/why-ui-quality-degrades-over-time-7c8b6e4c6f8e" },
+                  { title: "Why UI Quality Degrades Over Time" },
                 ],
               },
             ],
@@ -4984,20 +4984,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Design Handoff Best Practices", url: "https://www.nngroup.com/articles/design-handoff/" },
+                  { title: "Design Handoff Best Practices" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Handoff Explained – NNGroup", url: "https://www.youtube.com/results?search_query=ui+handoff+explained+nngroup" },
+                  { title: "UI Handoff Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Design Handoff Is Communication", url: "https://uxdesign.cc/design-handoff-is-communication-7c8b6e4c6f8e" },
-                  { title: "Why UI Breaks After Handoff", url: "https://uxdesign.cc/why-ui-breaks-after-handoff-2c1e8e9c3f3e" },
+                  { title: "Design Handoff Is Communication" },
+                  { title: "Why UI Breaks After Handoff" },
                 ],
               },
             ],
@@ -5016,20 +5016,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Organizing Design Files", url: "https://www.nngroup.com/articles/design-documentation/" },
+                  { title: "Organizing Design Files" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Organizing UI Files for Handoff", url: "https://www.youtube.com/results?search_query=organizing+ui+files+for+handoff" },
+                  { title: "Organizing UI Files for Handoff" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How to Organize Figma Files", url: "https://uxdesign.cc/how-to-organize-figma-files-7c8b6e4c6f8e" },
-                  { title: "Clean Files, Better Handoff", url: "https://uxdesign.cc/clean-files-better-handoff-2c1e8e9c3f3e" },
+                  { title: "How to Organize Figma Files" },
+                  { title: "Clean Files, Better Handoff" },
                 ],
               },
             ],
@@ -5047,19 +5047,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UI States and Behavior", url: "https://www.nngroup.com/articles/ui-states/" },
+                  { title: "UI States and Behavior" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Explaining UI States to Developers", url: "https://www.youtube.com/results?search_query=explaining+ui+states+to+developers" },
+                  { title: "Explaining UI States to Developers" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing States Developers Understand", url: "https://uxdesign.cc/designing-states-developers-understand-7c8b6e4c6f8e" },
+                  { title: "Designing States Developers Understand" },
                 ],
               },
             ],
@@ -5078,20 +5078,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Collaboration with Developers", url: "https://www.nngroup.com/articles/designers-developers/" },
+                  { title: "Collaboration with Developers" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Designing for Developers", url: "https://www.youtube.com/results?search_query=designing+for+developers" },
+                  { title: "Designing for Developers" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing UI Developers Can Build", url: "https://uxdesign.cc/designing-ui-developers-can-build-7c8b6e4c6f8e" },
-                  { title: "Why Simple UI Wins", url: "https://uxdesign.cc/why-simple-ui-wins-2c1e8e9c3f3e" },
+                  { title: "Designing UI Developers Can Build" },
+                  { title: "Why Simple UI Wins" },
                 ],
               },
             ],
@@ -5110,19 +5110,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Design QA", url: "https://www.nngroup.com/articles/design-reviews/" },
+                  { title: "Design QA" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI QA After Build", url: "https://www.youtube.com/results?search_query=ui+qa+after+build" },
+                  { title: "UI QA After Build" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why Designers Should QA Their UI", url: "https://uxdesign.cc/why-designers-should-qa-their-ui-7c8b6e4c6f8e" },
+                  { title: "Why Designers Should QA Their UI" },
                 ],
               },
             ],
@@ -5147,20 +5147,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX & UI Portfolios", url: "https://www.nngroup.com/articles/ux-portfolio/" },
+                  { title: "UX & UI Portfolios" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Portfolio Tips – NNGroup", url: "https://www.youtube.com/results?search_query=ui+portfolio+tips+nngroup" },
+                  { title: "UI Portfolio Tips – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "What Recruiters Look for in UI Portfolios", url: "https://uxdesign.cc/what-recruiters-look-for-in-ui-portfolios-7c8b6e4c6f8e" },
-                  { title: "How to Build a UI Portfolio", url: "https://uxdesign.cc/how-to-build-a-ui-portfolio-2c1e8e9c3f3e" },
+                  { title: "What Recruiters Look for in UI Portfolios" },
+                  { title: "How to Build a UI Portfolio" },
                 ],
               },
             ],
@@ -5179,20 +5179,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Explaining Design Decisions", url: "https://www.nngroup.com/articles/design-decisions/" },
+                  { title: "Explaining Design Decisions" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Showing Design Thinking in Portfolios", url: "https://www.youtube.com/results?search_query=showing+design+thinking+in+portfolios" },
+                  { title: "Showing Design Thinking in Portfolios" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How to Explain UI Decisions", url: "https://uxdesign.cc/how-to-explain-ui-decisions-7c8b6e4c6f8e" },
-                  { title: "From Screens to Reasoning", url: "https://uxdesign.cc/from-screens-to-reasoning-2c1e8e9c3f3e" },
+                  { title: "How to Explain UI Decisions" },
+                  { title: "From Screens to Reasoning" },
                 ],
               },
             ],
@@ -5211,20 +5211,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Redesign Case Studies", url: "https://www.nngroup.com/articles/redesign/" },
+                  { title: "Redesign Case Studies" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Redesign Case Studies", url: "https://www.youtube.com/results?search_query=ui+redesign+case+studies" },
+                  { title: "UI Redesign Case Studies" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How to Present UI Improvements", url: "https://uxdesign.cc/how-to-present-ui-improvements-7c8b6e4c6f8e" },
-                  { title: "Before & After UI Done Right", url: "https://uxdesign.cc/before-after-ui-done-right-2c1e8e9c3f3e" },
+                  { title: "How to Present UI Improvements" },
+                  { title: "Before & After UI Done Right" },
                 ],
               },
             ],
@@ -5243,19 +5243,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Portfolio Mistakes", url: "https://www.nngroup.com/articles/ux-portfolio-mistakes/" },
+                  { title: "Portfolio Mistakes" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UI Portfolio Mistakes", url: "https://www.youtube.com/results?search_query=ui+portfolio+mistakes" },
+                  { title: "UI Portfolio Mistakes" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Why UI Portfolios Get Rejected", url: "https://uxdesign.cc/why-ui-portfolios-get-rejected-7c8b6e4c6f8e" },
+                  { title: "Why UI Portfolios Get Rejected" },
                 ],
               },
             ],
@@ -5274,20 +5274,20 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Growing UX Careers", url: "https://www.nngroup.com/articles/ux-career/" },
+                  { title: "Growing UX Careers" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Growing as a UI Designer", url: "https://www.youtube.com/results?search_query=growing+as+a+ui+designer" },
+                  { title: "Growing as a UI Designer" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "How Junior UI Designers Grow", url: "https://uxdesign.cc/how-junior-ui-designers-grow-7c8b6e4c6f8e" },
-                  { title: "Building a Long-Term UI Career", url: "https://uxdesign.cc/building-a-long-term-ui-career-2c1e8e9c3f3e" },
+                  { title: "How Junior UI Designers Grow" },
+                  { title: "Building a Long-Term UI Career" },
                 ],
               },
             ],
@@ -5320,7 +5320,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Roles & Responsibilities", url: "https://www.nngroup.com/articles/ux-roles/" },
+                  { title: "UX Roles & Responsibilities" },
                 ],
               },
             ],
@@ -5339,7 +5339,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Problem vs Solution", url: "https://www.nngroup.com/articles/problem-definition/" },
+                  { title: "Problem vs Solution" },
                 ],
               },
             ],
@@ -5358,7 +5358,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Outcomes vs Outputs", url: "https://www.nngroup.com/articles/outcomes-vs-outputs/" },
+                  { title: "Outcomes vs Outputs" },
                 ],
               },
             ],
@@ -5377,7 +5377,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Value Proposition in UX", url: "https://www.nngroup.com/articles/value-proposition/" },
+                  { title: "Value Proposition in UX" },
                 ],
               },
             ],
@@ -5407,7 +5407,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Assumptions in UX", url: "https://www.nngroup.com/articles/assumptions/" },
+                  { title: "Assumptions in UX" },
                 ],
               },
             ],
@@ -5448,7 +5448,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Minimum Viable Product", url: "https://www.nngroup.com/articles/minimum-viable-product/" },
+                  { title: "Minimum Viable Product" },
                 ],
               },
             ],
@@ -5495,7 +5495,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "When to Do User Research", url: "https://www.nngroup.com/articles/when-to-do-user-research/" },
+                  { title: "When to Do User Research" },
                 ],
               },
             ],
@@ -5525,7 +5525,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Assumptions in UX", url: "https://www.nngroup.com/articles/assumptions/" },
+                  { title: "Assumptions in UX" },
                 ],
               },
             ],
@@ -5544,7 +5544,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "User Interviews", url: "https://www.nngroup.com/articles/user-interviews/" },
+                  { title: "User Interviews" },
                 ],
               },
             ],
@@ -5563,7 +5563,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Contextual Inquiry", url: "https://www.nngroup.com/articles/contextual-inquiry/" },
+                  { title: "Contextual Inquiry" },
                 ],
               },
             ],
@@ -5582,7 +5582,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Surveys", url: "https://www.nngroup.com/articles/surveys/" },
+                  { title: "Surveys" },
                 ],
               },
             ],
@@ -5612,7 +5612,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Synthesis", url: "https://www.nngroup.com/articles/synthesis/" },
+                  { title: "Synthesis" },
                 ],
               },
             ],
@@ -5647,7 +5647,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Usability 101", url: "https://www.nngroup.com/articles/usability-101-introduction-to-usability/" },
+                  { title: "Usability 101" },
                 ],
               },
             ],
@@ -5666,7 +5666,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Personas", url: "https://www.nngroup.com/articles/persona/" },
+                  { title: "Personas" },
                 ],
               },
             ],
@@ -5685,7 +5685,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Jobs to Be Done", url: "https://www.nngroup.com/articles/jobs-to-be-done/" },
+                  { title: "Jobs to Be Done" },
                 ],
               },
             ],
@@ -5704,7 +5704,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Journey Mapping", url: "https://www.nngroup.com/articles/journey-mapping/" },
+                  { title: "Journey Mapping" },
                 ],
               },
             ],
@@ -5734,7 +5734,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Information Architecture", url: "https://www.nngroup.com/articles/information-architecture/" },
+                  { title: "Information Architecture" },
                 ],
               },
             ],
@@ -5752,7 +5752,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Navigation Design", url: "https://www.nngroup.com/articles/navigation-design/" },
+                  { title: "Navigation Design" },
                 ],
               },
             ],
@@ -5782,7 +5782,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Error Messages", url: "https://www.nngroup.com/articles/error-message-guidelines/" },
+                  { title: "Error Messages" },
                 ],
               },
             ],
@@ -5801,7 +5801,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Accessibility", url: "https://www.nngroup.com/articles/accessibility/" },
+                  { title: "Accessibility" },
                 ],
               },
             ],
@@ -5831,7 +5831,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Empty States", url: "https://www.nngroup.com/articles/empty-state/" },
+                  { title: "Empty States" },
                 ],
               },
             ],
@@ -5856,7 +5856,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Visual Design Basics", url: "https://www.nngroup.com/articles/visual-design/" },
+                  { title: "Visual Design Basics" },
                 ],
               },
             ],
@@ -5886,7 +5886,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Typography for UX", url: "https://www.nngroup.com/articles/typography/" },
+                  { title: "Typography for UX" },
                 ],
               },
             ],
@@ -5905,7 +5905,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Color & Accessibility", url: "https://www.nngroup.com/articles/color-accessibility/" },
+                  { title: "Color & Accessibility" },
                 ],
               },
             ],
@@ -5935,7 +5935,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UI States", url: "https://www.nngroup.com/articles/ui-states/" },
+                  { title: "UI States" },
                 ],
               },
             ],
@@ -5954,7 +5954,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Feedback & System Status", url: "https://www.nngroup.com/articles/visibility-system-status/" },
+                  { title: "Feedback & System Status" },
                 ],
               },
             ],
@@ -5995,7 +5995,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Design Systems", url: "https://www.nngroup.com/articles/design-systems/" },
+                  { title: "Design Systems" },
                 ],
               },
             ],
@@ -6031,7 +6031,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Designers & Product Managers", url: "https://www.nngroup.com/articles/designers-product-managers/" },
+                  { title: "Designers & Product Managers" },
                 ],
               },
             ],
@@ -6050,7 +6050,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Designers & Developers", url: "https://www.nngroup.com/articles/designers-developers/" },
+                  { title: "Designers & Developers" },
                 ],
               },
             ],
@@ -6069,7 +6069,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Stakeholder Feedback", url: "https://www.nngroup.com/articles/stakeholder-feedback/" },
+                  { title: "Stakeholder Feedback" },
                 ],
               },
             ],
@@ -6088,7 +6088,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Design Critiques", url: "https://www.nngroup.com/articles/design-critique/" },
+                  { title: "Design Critiques" },
                 ],
               },
             ],
@@ -6118,7 +6118,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Design Handoff", url: "https://www.nngroup.com/articles/design-handoff/" },
+                  { title: "Design Handoff" },
                 ],
               },
             ],
@@ -6176,7 +6176,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Metrics", url: "https://www.nngroup.com/articles/ux-metrics/" },
+                  { title: "UX Metrics" },
                 ],
               },
             ],
@@ -6206,7 +6206,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Funnel Analysis", url: "https://www.nngroup.com/articles/funnel-analysis/" },
+                  { title: "Funnel Analysis" },
                 ],
               },
             ],
@@ -6236,7 +6236,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "A/B Testing", url: "https://www.nngroup.com/articles/ab-testing/" },
+                  { title: "A/B Testing" },
                 ],
               },
             ],
@@ -6277,7 +6277,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Debt", url: "https://www.nngroup.com/articles/ux-debt/" },
+                  { title: "UX Debt" },
                 ],
               },
             ],
@@ -6302,7 +6302,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX & Product Design Portfolios", url: "https://www.nngroup.com/articles/ux-portfolio/" },
+                  { title: "UX & Product Design Portfolios" },
                 ],
               },
             ],
@@ -6332,7 +6332,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Case Study Storytelling", url: "https://www.nngroup.com/articles/case-study-storytelling/" },
+                  { title: "Case Study Storytelling" },
                 ],
               },
             ],
@@ -6362,7 +6362,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Interviews", url: "https://www.nngroup.com/articles/ux-interview/" },
+                  { title: "UX Interviews" },
                 ],
               },
             ],
