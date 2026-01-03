@@ -6292,16 +6292,110 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "7. Portfolio & Career Growth",
-        description: "Portfolyo oluşturma, case study yazımı ve kariyer gelişimi.",
+        title: "7. 🎯 Portfolio & Career Growth",
+        description: "Product Designer için portfolyo sadece yapılan işleri göstermez, nasıl düşündüğünü, nasıl karar verdiğini, hangi etkiyi yarattığını anlatır. Kariyer gelişimi title biriktirmek değil, problem çözme olgunluğunu artırmaktır.",
         topics: [
-          { title: "Product Designer Portfolyosu Nedir?" },
-          { title: "Case Study Yapısı (Problem → Süreç → Karar → Sonuç)" },
-          { title: "Research & Impact Gösterimi" },
-          { title: "Trade-off ve Karar Anlatımı" },
-          { title: "Junior → Mid → Senior Beklentileri" },
-          { title: "Interview & Case Challenge Hazırlığı" },
-          { title: "Sürekli Öğrenme & Gelişim Planı" },
+          {
+            title: "Product Designer Portfolyosu Nedir?",
+            description: "Product Designer portfolyosu görsel şovdan çok, karar ve süreç anlatımıdır. İyi bir portfolyo problemi net tanımlar, süreci sade anlatır, sonucu ve etkiyi gösterir. Junior seviyede 3–4 güçlü case yeterlidir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX & Product Design Portfolios", url: "https://www.nngroup.com/articles/ux-portfolio/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir case seç: Bu case seni hangi açıdan temsil ediyor?",
+                "Neden portfolyonda olmalı?",
+              ],
+            },
+          },
+          {
+            title: "Case Study Yapısı (Problem → Süreç → Karar → Sonuç)",
+            description: "Etkili bir case study: 1. Problemi anlatır 2. Süreci gösterir 3. Kritik kararları açıklar 4. Sonucu ve etkiyi paylaşır. Eksik olan şey genelde kararların nedenleridir.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir case için yaz: En zor karar neydi?",
+                "Alternatif neydi?",
+              ],
+            },
+          },
+          {
+            title: "Research & Impact Gösterimi",
+            description: "Product Designer araştırmayı süs olarak değil, karar dayanağı olarak gösterir. Impact 'kullanıcılar beğendi' değil, davranış değişimiyle anlatılır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Case Study Storytelling", url: "https://www.nngroup.com/articles/case-study-storytelling/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir iş için düşün: Bu tasarım neyi değiştirdi?",
+                "Bunu nasıl fark ettiniz?",
+              ],
+            },
+          },
+          {
+            title: "Trade-off ve Karar Anlatımı",
+            description: "Senior'lık göstergesi her şeyi yapabilmek değil, neden bazı şeyleri yapmadığını anlatabilmektir. Trade-off'lar kısıtları, öncelikleri, gerçek hayatı gösterir.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir karar yaz: Neden bunu seçtin?",
+                "Neden diğerini elemedin?",
+              ],
+            },
+          },
+          {
+            title: "Interview & Case Challenge Hazırlığı",
+            description: "Interview'lar ezber cevap değil, düşünme biçimi görmek ister. Case challenge'larda sonuca değil, yaklaşıma bakılır. İyi yaklaşım: sorular sormak, varsayımları dile getirmek, düşünceyi şeffaf paylaşmak.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX Interviews", url: "https://www.nngroup.com/articles/ux-interview/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir case challenge düşün: İlk soracağın soru ne olurdu?",
+                "Neden?",
+              ],
+            },
+          },
+          {
+            title: "Junior → Mid → Senior Beklentileri",
+            description: "Junior öğrenir, uygular, yönlendirme ister. Mid problemi sahiplenir, alternatif üretir, sorumluluk alır. Senior çerçeve çizer, riskleri öngörür, başkalarının kararını güçlendirir.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Kendine sor: Şu an hangi seviyedesin?",
+                "Seni bir üst seviyeye taşıyacak şey ne?",
+              ],
+            },
+          },
+          {
+            title: "Sürekli Öğrenme & Gelişim Planı",
+            description: "İyi Product Designer trend kovalamaz, temelini güçlendirir. Gelişim düzenli gözlem, geri bildirim, bilinçli pratikle olur.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Kendin için yaz: Bu yıl geliştirmek istediğin 1 alan ne?",
+                "Bunun için ne yapacaksın?",
+              ],
+            },
+          },
         ],
       },
     ],
