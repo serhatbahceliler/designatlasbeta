@@ -5474,19 +5474,166 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "2. Design Research",
-        description: "Kullanıcı araştırması, veri toplama ve içgörü sentezi.",
+        title: "2. 🔍 Design Research",
+        description: "Design Research, ürün kararlarının varsayımlara değil, gerçek kullanıcı ihtiyaçlarına, gözlemlenebilir davranışlara dayanmasını sağlayan süreçtir. Amaç: 'kullanıcı ne dedi?'yi değil, 'kullanıcı neden böyle davrandı?'yı anlamaktır. Design Research tasarımı doğrulamak için değil, doğru problemi bulmak için yapılır.",
         topics: [
-          { title: "Research Mindset & Ne Zaman Araştırma Yapılır?" },
-          { title: "Stakeholder Interview & Brief Alma" },
-          { title: "Varsayım Haritalama (Assumption Mapping)" },
-          { title: "Kullanıcı Interview'ları" },
-          { title: "Contextual Inquiry" },
-          { title: "Survey & Anket Tasarımı" },
-          { title: "Qualitative vs Quantitative Research" },
-          { title: "Insight Synthesis (Affinity Mapping)" },
-          { title: "Pain Point & Opportunity Tanımlama" },
-          { title: "Research Sonuçlarını Karara Dönüştürme" },
+          {
+            title: "Research Mindset",
+            description: "Araştırma bir faz değil, bir düşünme biçimidir. Yanlış yaklaşım: 'Tasarım yaptık, şimdi test edelim'. Doğru yaklaşım: 'Henüz emin değiliz, önce anlayalım'. Research mindset emin olmamayı kabul eder, varsayımları görünür kılar, hızlı öğrenmeyi önemser.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ürün kararını düşün: Bu karar hangi bilgiye dayanıyor?",
+                "Bu bilgi gerçekten kullanıcıdan mı geliyor?",
+              ],
+            },
+          },
+          {
+            title: "Ne Zaman Araştırma Yapılır?",
+            description: "Araştırma sadece başta yapılmaz. Araştırma yapılması gereken anlar: Yeni bir problem tanımlanıyorsa, Kullanıcı davranışı beklenenden farklıysa, Ekip 'neden böyle?' diye tartışıyorsa, Aynı sorun tekrar tekrar geliyorsa. Araştırma belirsizlik varsa yapılır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "When to Do User Research", url: "https://www.nngroup.com/articles/when-to-do-user-research/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Son sprinti düşün: Hangi noktada 'emin değiliz' dediniz?",
+                "Orada araştırma yapılsa ne öğrenilirdi?",
+              ],
+            },
+          },
+          {
+            title: "Stakeholder Interview & Brief Alma",
+            description: "Araştırma sadece kullanıcıyla yapılmaz. Stakeholder interview iş hedeflerini, teknik kısıtları, ekip beklentilerini anlamanı sağlar. Amaç: 'benden ne istiyorsunuz?' değil, 'neyi çözmeye çalışıyoruz?' demektir.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir stakeholder konuşmasını düşün: Dile getirilmeyen beklenti neydi?",
+                "Asıl problem ne olabilir?",
+              ],
+            },
+          },
+          {
+            title: "Varsayım Haritalama (Assumption Mapping)",
+            description: "Ürün kararlarının çoğu varsayıma dayanır. Varsayım örnekleri: 'Kullanıcı bunu anlar', 'Bu daha hızlıdır', 'Bu bizim için daha kârlı'. Assumption mapping varsayımları görünür yapar, hangilerinin riskli olduğunu gösterir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Assumptions in UX", url: "https://www.nngroup.com/articles/assumptions/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir feature için yaz: En riskli varsayım hangisi?",
+                "Yanlış çıkarsa ne olur?",
+              ],
+            },
+          },
+          {
+            title: "Kullanıcı Interview'ları",
+            description: "User interview kullanıcıyı ikna etme değil, onu anlama çabasıdır. İyi interview 'neden?' sorusunu derinleştirir, yönlendirme yapmaz, çözüm değil deneyim konuşur.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "User Interviews", url: "https://www.nngroup.com/articles/user-interviews/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir soru yaz: 'Bu özelliği beğendin mi?' yerine",
+                "'Bu noktada ne yapmaya çalışıyordun?'",
+              ],
+            },
+          },
+          {
+            title: "Contextual Inquiry",
+            description: "Kullanıcılar her zaman doğruyu söylemez ama her zaman bir şey yapar. Contextual inquiry kullanıcıyı kendi ortamında gözlemler, gerçek davranışı ortaya çıkarır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Contextual Inquiry", url: "https://www.nngroup.com/articles/contextual-inquiry/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir kullanıcıyı düşün: Söylediğiyle yaptığı çelişiyor mu?",
+                "Hangisi daha değerli?",
+              ],
+            },
+          },
+          {
+            title: "Survey & Anketler",
+            description: "Survey 'neden'i değil, 'ne kadar'ı gösterir. Yanlış kullanım: karar vermek için tek başına survey. Doğru kullanım: eğilimleri görmek, qualitative bulguları desteklemek.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Surveys", url: "https://www.nngroup.com/articles/surveys/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir survey sorusu düşün: Bu soru hangi kararı destekliyor?",
+                "Tek başına yeterli mi?",
+              ],
+            },
+          },
+          {
+            title: "Qualitative vs Quantitative Research",
+            description: "Qualitative: derinlik, neden, bağlam. Quantitative: yaygınlık, trend, karşılaştırma. Product Designer ikisini birlikte okumayı öğrenir.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir problem için sor: Önce hangisi gerekli?",
+                "Neden?",
+              ],
+            },
+          },
+          {
+            title: "Insight Synthesis",
+            description: "Araştırmanın en kritik kısmı veri toplamak değil, anlam çıkarmaktır. Insight tekrar eden davranışlardan, güçlü sinyallerden, bağlamdan doğar.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Synthesis", url: "https://www.nngroup.com/articles/synthesis/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "3 gözlem yaz: Bunlar hangi ortak probleme işaret ediyor?",
+              ],
+            },
+          },
+          {
+            title: "Research'ten Karara Gitmek",
+            description: "Araştırma tek başına değer üretmez. Değer: insight → karar → aksiyon zinciri kurulduğunda oluşur. Product Designer 'kullanıcılar böyle dedi' demez, 'bu yüzden şunu öneriyoruz' der.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir bulgu düşün: Bu bulgu hangi kararı değiştirmeli?",
+                "Değiştirmiyorsa neden?",
+              ],
+            },
+          },
         ],
       },
       {
