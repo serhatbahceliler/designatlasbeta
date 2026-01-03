@@ -733,6 +733,66 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+
+              {/* Service Design - Yakında */}
+              <div
+                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
+                style={{
+                  animation: `slideUp 0.6s ease-out 0.7s both`,
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
+
+                <div className="relative p-8">
+                  {/* Badge - Sağ Üst */}
+                  <span className="absolute top-4 right-4 px-3 py-1.5 text-xs font-semibold bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-md text-[#DEFF37]">
+                    Yakında
+                  </span>
+
+                  {/* Icon */}
+                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                    🎭
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    Service Design
+                  </h3>
+
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    Dijital ve fiziksel temas noktalarını bir bütün olarak ele alarak, uçtan uca servis deneyimleri tasarlama disiplini. Kullanıcı, iş ve operasyon ihtiyaçlarını birlikte düşünerek sürdürülebilir hizmet modelleri oluşturmayı hedefler.
+                  </p>
+                </div>
+              </div>
+
+              {/* Product Discovery - Yakında */}
+              <div
+                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm cursor-not-allowed"
+                style={{
+                  animation: `slideUp 0.6s ease-out 0.8s both`,
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/0 to-zinc-800/0 group-hover:from-zinc-800/10 group-hover:to-transparent transition-all duration-500"></div>
+
+                <div className="relative p-8">
+                  {/* Badge - Sağ Üst */}
+                  <span className="absolute top-4 right-4 px-3 py-1.5 text-xs font-semibold bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-md text-[#DEFF37]">
+                    Yakında
+                  </span>
+
+                  {/* Icon */}
+                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                    🧭
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    Product Discovery (UX Discovery)
+                  </h3>
+
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    Çözmeye değer problemleri keşfetmeye odaklanan araştırma ve erken doğrulama süreci. Varsayımları test ederek, doğru problemin doğru çözümle ele alındığından emin olmayı ve ürün kararlarını sağlam temellere oturtmayı amaçlar.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
