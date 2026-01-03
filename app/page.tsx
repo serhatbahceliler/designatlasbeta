@@ -678,23 +678,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* No Sign-Up Section */}
-      <section className="py-24 px-6 bg-black border-t border-[#DEFF37]/20">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="w-16 h-16 mx-auto mb-6 bg-[#DEFF37]/10 border-2 border-[#DEFF37] rounded-2xl flex items-center justify-center">
-            <svg className="w-8 h-8 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-            </svg>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Çünkü öğrenmek için hesap açmak zorunda değilsin
-          </h2>
-          <p className="text-lg text-gray-400 leading-relaxed">
-            DesignAtlas'ta mail bırakman gerekmez. Hesap oluşturman gerekmez. Sadece öğrenirsin.
-          </p>
-        </div>
-      </section>
-
       {/* Footer CTA */}
       <section className="py-20 px-6 bg-black border-t border-[#DEFF37]/20">
         <div className="max-w-4xl mx-auto text-center">
