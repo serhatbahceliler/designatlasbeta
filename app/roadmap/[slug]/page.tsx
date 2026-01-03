@@ -5637,21 +5637,212 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "3. User Experience (UX)",
-        description: "Kullanıcı deneyimi tasarımı, akışlar ve bilgi mimarisi.",
+        title: "3. 🧭 User Experience (UX)",
+        description: "User Experience (UX), bir kullanıcının bir ürünü kullanırken, bir hedefe ulaşmaya çalışırken, sistemle etkileşime girdiği tüm süreçte yaşadığı algı, duygu ve çaba bütünüdür. UX sadece ekranlardan ibaret değildir, kullanıcının işi ne kadar kolay, hızlı ve hatasız yaptığıyla ilgilidir. Amaç: kullanıcıyı düşündürmek değil, kullanıcının düşünmesine gerek bırakmamaktır.",
         topics: [
-          { title: "UX Temelleri & Kullanılabilirlik" },
-          { title: "Persona & Segment Kavramı" },
-          { title: "Jobs-to-be-Done (JTBD)" },
-          { title: "User Journey Mapping" },
-          { title: "Moments That Matter" },
-          { title: "Information Architecture" },
-          { title: "Navigation & Menü Yapıları" },
-          { title: "Task Flows & User Flows" },
-          { title: "Error Prevention & Recovery" },
-          { title: "Accessibility & Inclusive UX" },
-          { title: "Content-First UX" },
-          { title: "Empty, Loading & Success States (UX Perspektifi)" },
+          {
+            title: "UX Temelleri & Kullanılabilirlik",
+            description: "Kullanılabilirlik (usability) öğrenilebilirlik, verimlilik, hata oranı, memnuniyet gibi kriterlerle ölçülür. İyi UX fark edilmez, kötü UX ise her zaman fark edilir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Usability 101", url: "https://www.nngroup.com/articles/usability-101-introduction-to-usability/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ürün düşün: İlk kez kullanan biri nerede zorlanır?",
+                "Bunun nedeni UX mi, UI mı?",
+              ],
+            },
+          },
+          {
+            title: "Persona & Segment Kavramı",
+            description: "Persona gerçek kullanıcı verilerinden türetilmiş, temsil edici kullanıcı profilleridir. Segment davranış, ihtiyaç veya rol bazlı kullanıcı gruplarıdır. Persona empati kurmayı, Segment karar almayı kolaylaştırır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Personas", url: "https://www.nngroup.com/articles/persona/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir kullanıcı grubunu düşün: Hepsi aynı persona mı?",
+                "Yoksa aynı ürünü farklı amaçlarla mı kullanıyorlar?",
+              ],
+            },
+          },
+          {
+            title: "Jobs-to-be-Done (JTBD)",
+            description: "JTBD yaklaşımı kullanıcıyı değil, kullanıcının yapmak istediği işi merkeze alır. Kullanıcı ürünü değil, bir sonucu 'işe alır'.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Jobs to Be Done", url: "https://www.nngroup.com/articles/jobs-to-be-done/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir özelliği düşün: Kullanıcı bunu neden 'işe alıyor'?",
+                "Hangi işi çözmek için?",
+              ],
+            },
+          },
+          {
+            title: "User Journey Mapping",
+            description: "User Journey kullanıcının hedefe giderken geçtiği adımların haritasıdır. Amaç: sürtünme noktalarını görmek, kritik anları (moments that matter) yakalamak. Journey map tek ekran değil, uçtan uca deneyimi gösterir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Journey Mapping", url: "https://www.nngroup.com/articles/journey-mapping/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir akışı düşün: Kullanıcı en çok nerede duraksıyor?",
+                "Neden?",
+              ],
+            },
+          },
+          {
+            title: "Moments That Matter",
+            description: "Moments that matter kullanıcının karar verdiği, duygusal tepki verdiği, ürünü sevip sevmeyeceğine karar verdiği kritik anlardır. UX tasarımı bu anlara özellikle odaklanır.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir deneyimi düşün: Kullanıcı ürünü bırakmaya en yakın olduğu an ne?",
+                "Orada UX ne yapıyor?",
+              ],
+            },
+          },
+          {
+            title: "Information Architecture (IA)",
+            description: "Information Architecture içeriğin nasıl gruplanacağı, nasıl adlandırılacağı, nasıl bulunacağı ile ilgilenir. İyi IA kullanıcıyı düşündürmez, aradığını sezgisel olarak buldurur.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Information Architecture", url: "https://www.nngroup.com/articles/information-architecture/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir menüyü incele: Bu başlık altında gerçekten bu içerik olmalı mı?",
+              ],
+            },
+          },
+          {
+            title: "Navigation & Menü Yapıları",
+            description: "Navigasyon kullanıcıya 'neredeyim?', 'nereye gidebilirim?', 'buradan nasıl çıkarım?' sorularının cevabını verir. Yanlış navigasyon en iyi içeriği bile görünmez yapar.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Navigation Design", url: "https://www.nngroup.com/articles/navigation-design/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran düşün: Kullanıcı geri dönmek isterse ne yapar?",
+                "Bu net mi?",
+              ],
+            },
+          },
+          {
+            title: "Task Flows & User Flows",
+            description: "Task flow tek bir işi yapma adımları, User flow birden fazla hedefi kapsayan geniş akıştır. UX tasarımı bu akışları sadeleştirmeye çalışır.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir görev seç: Kaç adım var?",
+                "Hangisi gerçekten gerekli?",
+              ],
+            },
+          },
+          {
+            title: "Error Prevention & Recovery",
+            description: "İyi UX hatayı sadece göstermez, hata yapılmasını engeller. Hata olursa kullanıcıyı suçlamaz, nasıl düzelteceğini net anlatır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Error Messages", url: "https://www.nngroup.com/articles/error-message-guidelines/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir hata mesajı düşün: Kullanıcıya ne yapacağını söylüyor mu?",
+                "Yoksa sadece hata mı diyor?",
+              ],
+            },
+          },
+          {
+            title: "Accessibility & Inclusive UX",
+            description: "Accessibility sadece engelli kullanıcılar için değildir, herkes için daha iyi deneyim üretir. Inclusive UX farklı yetenekleri, farklı bağlamları, farklı cihazları düşünür.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Accessibility", url: "https://www.nngroup.com/articles/accessibility/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekranı düşün: Sadece klavye ile kullanılabilir mi?",
+                "Renk körü biri için okunabilir mi?",
+              ],
+            },
+          },
+          {
+            title: "Content-First UX",
+            description: "UX sadece layout değildir. Content-first yaklaşım ne söyleyeceğimizi netleştirir, sonra bunu nasıl göstereceğimize karar verir. İyi içerik UX'in yarısıdır.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekran seç: Bu ekranda en önemli mesaj ne?",
+                "Gerçekten öne çıkıyor mu?",
+              ],
+            },
+          },
+          {
+            title: "Empty, Loading & Success States (UX Perspektifi)",
+            description: "Boş, yüklenen veya başarılı durumlar UX'in en çok unutulan ama en çok hissedilen anlarıdır. Bu anlar kullanıcıyı rahatlatır, güven verir, yönlendirir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Empty States", url: "https://www.nngroup.com/articles/empty-state/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir boş ekran düşün: Kullanıcı burada ne yapmalı?",
+                "Bunu net söylüyor mu?",
+              ],
+            },
+          },
         ],
       },
       {
