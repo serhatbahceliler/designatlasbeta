@@ -24,6 +24,7 @@ const roadmaps = [
     title: "Product Designer",
     description: "Problem çözme, ürün düşüncesi ve uçtan uca tasarım sürecini kapsar. İş hedefleriyle kullanıcı ihtiyaçlarını dengeleyen kararlar almayı öğretir.",
     icon: "💡",
+    verified: true,
   },
   {
     id: "design-system",
@@ -543,8 +544,21 @@ export default function Home() {
                       {roadmap.icon}
                     </div>
 
-                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-[#DEFF37] transition-colors duration-300">
+                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-[#DEFF37] transition-colors duration-300 flex items-center gap-2">
                       {roadmap.title}
+                      {roadmap.verified && (
+                        <div className="relative group/tooltip">
+                          <img
+                            src="https://r.resimlink.com/1Xe7ptjnN0U.png"
+                            alt="Verified"
+                            className="w-5 h-5"
+                          />
+                          <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 px-3 py-2 bg-zinc-800 text-white text-xs rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-lg border border-zinc-700">
+                            Bu roadmap, alanında uzman kişiler tarafından incelenerek onaylanmıştır.
+                            <div className="absolute left-1/2 -translate-x-1/2 top-full w-2 h-2 bg-zinc-800 border-r border-b border-zinc-700 transform rotate-45 -mt-1"></div>
+                          </div>
+                        </div>
+                      )}
                     </h3>
 
                     <p className="text-gray-400 mb-6 leading-relaxed text-sm">
