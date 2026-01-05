@@ -117,33 +117,35 @@ export default function RoadmapClient({ sections, credits }: RoadmapClientProps)
             {/* Credits Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {credits.map((credit, index) => (
-                <div key={index} className="p-10 bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-[#DEFF37]/20 rounded-xl hover:border-[#DEFF37]/40 transition-all duration-300">
-                  <div className="flex items-start gap-8">
+                <div key={index} className="p-6 bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-[#DEFF37]/20 rounded-xl hover:border-[#DEFF37]/40 transition-all duration-300">
+                  <div className="flex items-center gap-6">
                     {/* Photo - Left */}
                     <div className="flex-shrink-0">
                       <img
                         src={credit.photo}
                         alt={credit.name}
-                        className="w-40 h-40 rounded-xl border-2 border-[#DEFF37]/30 object-cover"
+                        className="w-32 h-32 rounded-xl border-2 border-[#DEFF37]/30 object-cover"
                       />
                     </div>
 
                     {/* Info - Right */}
-                    <div className="flex-1">
-                      {/* Name with Verified */}
-                      <div className="flex items-center gap-3 mb-3">
-                        <h3 className="text-3xl font-bold text-white">{credit.name}</h3>
+                    <div className="flex-1 flex flex-col justify-between h-32">
+                      <div>
+                        {/* Name with Verified */}
+                        <h3 className="text-xl font-bold text-white inline">
+                          {credit.name}
+                        </h3>
                         <img
                           src="https://r.resimlink.com/d62aV.png"
                           alt="Verified"
-                          className="w-6 h-6"
+                          className="w-5 h-5 inline ml-2 mb-1"
                         />
-                      </div>
 
-                      {/* Role & Company */}
-                      <p className="text-gray-400 text-xl mb-5">
-                        {credit.role} at {credit.company}
-                      </p>
+                        {/* Role & Company */}
+                        <p className="text-gray-400 text-sm mt-2">
+                          {credit.role} at {credit.company}
+                        </p>
+                      </div>
 
                       {/* LinkedIn Button */}
                       {credit.linkedin && (
@@ -151,9 +153,9 @@ export default function RoadmapClient({ sections, credits }: RoadmapClientProps)
                           href={credit.linkedin}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0A66C2] hover:bg-[#004182] text-white text-base font-semibold rounded-lg transition-colors duration-300"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-[#0A66C2] hover:bg-[#004182] text-white text-sm font-semibold rounded-lg transition-colors duration-300 w-fit"
                         >
-                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                           </svg>
                           LinkedIn
