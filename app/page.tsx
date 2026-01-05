@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import EmailModal from "@/components/EmailModal";
 
 const roadmaps = [
   {
@@ -146,10 +148,37 @@ const resultDescriptions = {
 };
 
 export default function Home() {
+  const router = useRouter();
   const [isQuizOpen, setIsQuizOpen] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [scores, setScores] = useState({ ux: 0, ui: 0, product: 0 });
   const [quizResult, setQuizResult] = useState<"ux" | "ui" | "product" | null>(null);
+
+  // Email modal states
+  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
+  const [selectedRoadmapId, setSelectedRoadmapId] = useState<string>("");
+
+  // Roadmap click handler
+  const handleRoadmapClick = (roadmapId: string) => {
+    // Check if email already submitted
+    const emailSubmitted = localStorage.getItem("designatlas-email-submitted");
+
+    if (emailSubmitted === "true") {
+      // Email already submitted, go directly to roadmap
+      router.push(`/roadmap/${roadmapId}`);
+    } else {
+      // Show email modal
+      setSelectedRoadmapId(roadmapId);
+      setIsEmailModalOpen(true);
+    }
+  };
+
+  // Email modal success handler
+  const handleEmailSuccess = () => {
+    setIsEmailModalOpen(false);
+    // Navigate to roadmap
+    router.push(`/roadmap/${selectedRoadmapId}`);
+  };
 
   const handleAnswerClick = (optionScores: { ux: number; ui: number; product: number }) => {
     const newScores = {
@@ -478,10 +507,10 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {roadmaps.filter(r => ['ux-designer', 'ui-designer', 'product-designer'].includes(r.id)).map((roadmap, index) => (
-                <Link
+                <button
                   key={roadmap.id}
-                  href={`/roadmap/${roadmap.id}`}
-                  className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-[#DEFF37]/50 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm"
+                  onClick={() => handleRoadmapClick(roadmap.id)}
+                  className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-[#DEFF37]/50 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm text-left"
                   style={{
                     animation: `slideUp 0.6s ease-out ${index * 0.1}s both`,
                   }}
@@ -509,7 +538,7 @@ export default function Home() {
                       </svg>
                     </div>
                   </div>
-                </Link>
+                </button>
               ))}
 
               {/* Quiz Card */}
@@ -819,6 +848,14 @@ export default function Home() {
       <footer className="py-8 px-6 bg-black border-t border-zinc-900 text-gray-500 text-center">
         <p>DesignAtlas BETA &copy; 2024 - Tasarımı Öğren. Adım Adım.</p>
       </footer>
+
+      {/* Email Modal */}
+      <EmailModal
+        isOpen={isEmailModalOpen}
+        onClose={() => setIsEmailModalOpen(false)}
+        onSuccess={handleEmailSuccess}
+        roadmapId={selectedRoadmapId}
+      />
 
       {/* Quiz Drawer */}
       {isQuizOpen && (
