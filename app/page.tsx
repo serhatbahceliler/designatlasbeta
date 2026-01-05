@@ -487,8 +487,8 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <p className="text-white font-medium mb-1">Hesapsız, baskısız öğrenme</p>
-                <p className="text-gray-400 text-sm">Kayıt yok, mail yok, üyelik yok. Hemen başla, kendi hızında ilerle.</p>
+                <p className="text-white font-medium mb-1">Uzman onaylı roadmap'ler</p>
+                <p className="text-gray-400 text-sm">İçerikler, alanında uzman kişilerin değerlendirmesiyle şekillendirilir ve güncel kalacak şekilde düzenlenir.</p>
               </div>
             </div>
           </div>
