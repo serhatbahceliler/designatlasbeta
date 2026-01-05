@@ -6409,7 +6409,7 @@ const roadmaps: Record<string, Roadmap> = {
       name: "Serhat Bahçeliler",
       role: "Product Designer",
       company: "iyzico",
-      photo: "https://media.licdn.com/dms/image/v2/D4D03AQEaoFT7d8P4dQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1707775816532?e=1741824000&v=beta&t=KxVLdJGvfE9jE8LPOdD1S-vL7Xy8U8dYs_fVpPVXxYs",
+      photo: "https://r.resimlink.com/hBWVCENUpR.png",
     },
   },
   "design-system": {

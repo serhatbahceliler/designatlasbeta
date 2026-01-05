@@ -108,35 +108,39 @@ export default function RoadmapClient({ sections, credits }: RoadmapClientProps)
       {credits && (
         <section className="py-12 px-6">
           <div className="max-w-5xl mx-auto">
-            <div className="p-8 bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-[#DEFF37]/20 rounded-2xl">
-              <div className="flex items-center gap-6">
-                {/* Photo */}
-                <div className="flex-shrink-0">
+            {/* Section Title */}
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              Onaylayan Uzmanlar
+            </h2>
+
+            {/* Credits Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="p-6 bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-[#DEFF37]/20 rounded-xl hover:border-[#DEFF37]/40 transition-all duration-300">
+                <div className="flex flex-col items-center text-center">
+                  {/* Photo */}
                   <img
                     src={credits.photo}
                     alt={credits.name}
-                    className="w-20 h-20 rounded-full border-2 border-[#DEFF37]/30 object-cover"
+                    className="w-16 h-16 rounded-full border-2 border-[#DEFF37]/30 object-cover mb-4"
                   />
-                </div>
 
-                {/* Info */}
-                <div className="flex-1">
+                  {/* Name with Verified */}
                   <div className="flex items-center gap-2 mb-2">
-                    <h3 className="text-xl font-bold text-white">{credits.name}</h3>
+                    <h3 className="text-lg font-bold text-white">{credits.name}</h3>
                     <img
                       src="https://r.resimlink.com/d62aV.png"
                       alt="Verified"
-                      className="w-5 h-5"
+                      className="w-4 h-4"
                     />
                   </div>
-                  <p className="text-gray-400">
-                    {credits.role} at {credits.company}
-                  </p>
-                </div>
 
-                {/* Label */}
-                <div className="flex-shrink-0 px-4 py-2 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg">
-                  <p className="text-sm font-semibold text-[#DEFF37]">Uzman Onayı</p>
+                  {/* Role & Company */}
+                  <p className="text-gray-400 text-sm mb-3">
+                    {credits.role}
+                  </p>
+                  <p className="text-gray-500 text-xs">
+                    {credits.company}
+                  </p>
                 </div>
               </div>
             </div>
