@@ -549,7 +549,7 @@ export default function Home() {
                       {roadmap.verified && (
                         <div className="relative group/tooltip">
                           <img
-                            src="https://r.resimlink.com/1Xe7ptjnN0U.png"
+                            src="https://r.resimlink.com/d62aV.png"
                             alt="Verified"
                             className="w-5 h-5"
                           />
