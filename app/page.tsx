@@ -547,15 +547,14 @@ export default function Home() {
                     <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-[#DEFF37] transition-colors duration-300 flex items-center gap-2">
                       {roadmap.title}
                       {roadmap.verified && (
-                        <div className="relative group/tooltip">
+                        <div className="relative group/tooltip flex-shrink-0">
                           <img
                             src="https://r.resimlink.com/d62aV.png"
                             alt="Verified"
-                            className="w-5 h-5"
+                            className="w-5 h-5 cursor-help"
                           />
-                          <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-2 bg-zinc-800 text-white text-xs rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-lg border border-zinc-700 z-50">
+                          <div className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-3 bg-zinc-800/95 backdrop-blur-sm text-white text-sm rounded-xl opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none max-w-xs text-center shadow-2xl border border-zinc-700 z-[9999]">
                             Bu roadmap, alanında uzman kişiler tarafından incelenerek onaylanmıştır.
-                            <div className="absolute left-1/2 -translate-x-1/2 bottom-full w-2 h-2 bg-zinc-800 border-l border-t border-zinc-700 transform rotate-45 mb-[-1px]"></div>
                           </div>
                         </div>
                       )}

@@ -23,11 +23,19 @@ interface Section {
   topics: Topic[];
 }
 
-interface RoadmapClientProps {
-  sections: Section[];
+interface Credits {
+  name: string;
+  role: string;
+  company: string;
+  photo: string;
 }
 
-export default function RoadmapClient({ sections }: RoadmapClientProps) {
+interface RoadmapClientProps {
+  sections: Section[];
+  credits?: Credits;
+}
+
+export default function RoadmapClient({ sections, credits }: RoadmapClientProps) {
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -95,6 +103,46 @@ export default function RoadmapClient({ sections }: RoadmapClientProps) {
           </div>
         </div>
       </section>
+
+      {/* Credits Section */}
+      {credits && (
+        <section className="py-12 px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="p-8 bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-[#DEFF37]/20 rounded-2xl">
+              <div className="flex items-center gap-6">
+                {/* Photo */}
+                <div className="flex-shrink-0">
+                  <img
+                    src={credits.photo}
+                    alt={credits.name}
+                    className="w-20 h-20 rounded-full border-2 border-[#DEFF37]/30 object-cover"
+                  />
+                </div>
+
+                {/* Info */}
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="text-xl font-bold text-white">{credits.name}</h3>
+                    <img
+                      src="https://r.resimlink.com/d62aV.png"
+                      alt="Verified"
+                      className="w-5 h-5"
+                    />
+                  </div>
+                  <p className="text-gray-400">
+                    {credits.role} at {credits.company}
+                  </p>
+                </div>
+
+                {/* Label */}
+                <div className="flex-shrink-0 px-4 py-2 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg">
+                  <p className="text-sm font-semibold text-[#DEFF37]">Uzman Onayı</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Topic Detail Drawer */}
       {isDrawerOpen && selectedTopic && (

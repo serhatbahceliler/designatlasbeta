@@ -30,6 +30,12 @@ interface Roadmap {
   description: string;
   icon: string;
   sections: Section[];
+  credits?: {
+    name: string;
+    role: string;
+    company: string;
+    photo: string;
+  };
 }
 
 const roadmaps: Record<string, Roadmap> = {
@@ -6399,6 +6405,12 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
     ],
+    credits: {
+      name: "Serhat Bahçeliler",
+      role: "Product Designer",
+      company: "iyzico",
+      photo: "https://media.licdn.com/dms/image/v2/D4D03AQEaoFT7d8P4dQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1707775816532?e=1741824000&v=beta&t=KxVLdJGvfE9jE8LPOdD1S-vL7Xy8U8dYs_fVpPVXxYs",
+    },
   },
   "design-system": {
     id: "design-system",
@@ -6503,7 +6515,7 @@ export default async function RoadmapPage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* Roadmap Content (Client Component) */}
-      <RoadmapClient sections={roadmap.sections} />
+      <RoadmapClient sections={roadmap.sections} credits={roadmap.credits} />
 
       {/* CTA */}
       <section className="py-12 px-6 pb-24">
