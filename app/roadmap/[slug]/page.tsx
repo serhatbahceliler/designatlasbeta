@@ -35,6 +35,7 @@ interface Roadmap {
     role: string;
     company: string;
     photo: string;
+    linkedin?: string;
   };
 }
 
@@ -6410,6 +6411,7 @@ const roadmaps: Record<string, Roadmap> = {
       role: "Product Designer",
       company: "iyzico",
       photo: "https://r.resimlink.com/hBWVCENUpR.png",
+      linkedin: "https://www.linkedin.com/in/serhatbahceliler/",
     },
   },
   "design-system": {
