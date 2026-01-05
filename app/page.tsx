@@ -553,9 +553,9 @@ export default function Home() {
                             alt="Verified"
                             className="w-5 h-5"
                           />
-                          <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 px-3 py-2 bg-zinc-800 text-white text-xs rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-lg border border-zinc-700">
+                          <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-2 bg-zinc-800 text-white text-xs rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-lg border border-zinc-700 z-50">
                             Bu roadmap, alanında uzman kişiler tarafından incelenerek onaylanmıştır.
-                            <div className="absolute left-1/2 -translate-x-1/2 top-full w-2 h-2 bg-zinc-800 border-r border-b border-zinc-700 transform rotate-45 -mt-1"></div>
+                            <div className="absolute left-1/2 -translate-x-1/2 bottom-full w-2 h-2 bg-zinc-800 border-l border-t border-zinc-700 transform rotate-45 mb-[-1px]"></div>
                           </div>
                         </div>
                       )}
