@@ -117,7 +117,7 @@ export default function RoadmapClient({ sections, credits }: RoadmapClientProps)
             {/* Credits Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="p-10 bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-[#DEFF37]/20 rounded-xl hover:border-[#DEFF37]/40 transition-all duration-300">
-                <div className="flex items-center gap-8">
+                <div className="flex items-start gap-8">
                   {/* Photo */}
                   <img
                     src={credits.photo}
@@ -126,7 +126,7 @@ export default function RoadmapClient({ sections, credits }: RoadmapClientProps)
                   />
 
                   {/* Info */}
-                  <div className="flex-1 min-w-0 flex flex-col justify-center">
+                  <div className="flex-1 min-w-0 flex flex-col pt-2">
                     {/* Name with Verified */}
                     <div className="flex items-center gap-3 mb-3">
                       <h3 className="text-3xl font-bold text-white">{credits.name}</h3>
