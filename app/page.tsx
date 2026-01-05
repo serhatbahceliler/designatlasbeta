@@ -173,11 +173,31 @@ export default function Home() {
     }
   };
 
+  // Quiz click handler
+  const handleQuizClick = () => {
+    const emailSubmitted = localStorage.getItem("designatlas-email-submitted");
+
+    if (emailSubmitted === "true") {
+      // Email already submitted, open quiz directly
+      setIsQuizOpen(true);
+    } else {
+      // Show email modal for quiz
+      setSelectedRoadmapId("quiz");
+      setIsEmailModalOpen(true);
+    }
+  };
+
   // Email modal success handler
   const handleEmailSuccess = () => {
     setIsEmailModalOpen(false);
-    // Navigate to roadmap
-    router.push(`/roadmap/${selectedRoadmapId}`);
+
+    if (selectedRoadmapId === "quiz") {
+      // Open quiz after email submission
+      setIsQuizOpen(true);
+    } else {
+      // Navigate to roadmap
+      router.push(`/roadmap/${selectedRoadmapId}`);
+    }
   };
 
   const handleAnswerClick = (optionScores: { ux: number; ui: number; product: number }) => {
@@ -543,7 +563,7 @@ export default function Home() {
 
               {/* Quiz Card */}
               <button
-                onClick={() => setIsQuizOpen(true)}
+                onClick={handleQuizClick}
                 className="group relative overflow-hidden rounded-2xl bg-zinc-900/30 border border-zinc-800 hover:border-zinc-700 transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm text-left"
                 style={{
                   animation: `slideUp 0.6s ease-out 0.3s both`,
