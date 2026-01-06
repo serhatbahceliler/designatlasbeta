@@ -24,7 +24,7 @@ const roadmaps = [
     title: "Product Designer",
     description: "Problem çözme, ürün düşüncesi ve uçtan uca tasarım sürecini kapsar. İş hedefleriyle kullanıcı ihtiyaçlarını dengeleyen kararlar almayı öğretir.",
     icon: "💡",
-    verified: true,
+    // verified: true, // Geçici olarak kaldırıldı
   },
   {
     id: "design-system",

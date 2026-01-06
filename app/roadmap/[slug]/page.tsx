@@ -6406,22 +6406,23 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
     ],
-    credits: [
-      {
-        name: "Serhat Bahçeliler",
-        role: "Product Designer",
-        company: "iyzico",
-        photo: "https://r.resimlink.com/hBWVCENUpR.png",
-        linkedin: "https://www.linkedin.com/in/serhatbahceliler/",
-      },
-      {
-        name: "Ebrar Kaynar",
-        role: "Product Designer",
-        company: "iyzico",
-        photo: "https://r.resimlink.com/yF42g7mp.png",
-        linkedin: "https://www.linkedin.com/in/ebrarkaynar/",
-      },
-    ],
+    // Geçici olarak kaldırıldı - Daha sonra eklenecek
+    // credits: [
+    //   {
+    //     name: "Serhat Bahçeliler",
+    //     role: "Product Designer",
+    //     company: "iyzico",
+    //     photo: "https://r.resimlink.com/hBWVCENUpR.png",
+    //     linkedin: "https://www.linkedin.com/in/serhatbahceliler/",
+    //   },
+    //   {
+    //     name: "Ebrar Kaynar",
+    //     role: "Product Designer",
+    //     company: "iyzico",
+    //     photo: "https://r.resimlink.com/yF42g7mp.png",
+    //     linkedin: "https://www.linkedin.com/in/ebrarkaynar/",
+    //   },
+    // ],
   },
   "design-system": {
     id: "design-system",
