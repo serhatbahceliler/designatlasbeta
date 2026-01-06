@@ -5,7 +5,7 @@ import RoadmapClient from "./RoadmapClient";
 
 interface Resource {
   category: string;
-  items: { title: string }[];
+  items: { title: string; url: string }[];
 }
 
 interface Topic {
