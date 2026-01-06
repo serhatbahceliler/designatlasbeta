@@ -544,9 +544,10 @@ export default function Home() {
                       {roadmap.icon}
                     </div>
 
-                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-[#DEFF37] transition-colors duration-300 flex items-center gap-2">
+                    <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-[#DEFF37] transition-colors duration-300">
                       {roadmap.title}
-                      {roadmap.verified && (
+                      {/* Geçici olarak kaldırıldı - Verified icon */}
+                      {/* {roadmap.verified && (
                         <div className="relative group/tooltip flex-shrink-0">
                           <img
                             src="https://r.resimlink.com/d62aV.png"
@@ -557,7 +558,7 @@ export default function Home() {
                             Bu roadmap, alanında uzman kişiler tarafından incelenerek onaylanmıştır.
                           </div>
                         </div>
-                      )}
+                      )} */}
                     </h3>
 
                     <p className="text-gray-400 mb-6 leading-relaxed text-sm">
