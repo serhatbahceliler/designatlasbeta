@@ -207,15 +207,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Discovery vs Delivery in UX" },
-                  { title: "UX Activities in the Product Lifecycle" },
+                  { title: "Upfront vs. Continuous Discovery", url: "https://www.nngroup.com/videos/upfront-vs-continuous-discovery/" },
+                  { title: "UX Activities in the Product Lifecycle", url: "https://media.nngroup.com/media/articles/attachments/ux_methods_activities_NNg_A4.pdf" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Discovery vs Delivery Explained – NNGroup" },
-                  { title: "Product Discovery Explained – Teresa Torres" },
+                  { title: "Discovery in Agile – NNGroup", url: "https://www.nngroup.com/videos/discovery-in-agile/" },
+                  { title: "Product Discovery – Teresa Torres", url: "https://www.producttalk.org/" },
                 ],
               },
             ],
@@ -236,15 +236,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Design Thinking 101" },
-                  { title: "The Double Diamond Model" },
+                  { title: "Design Thinking 101", url: "https://www.nngroup.com/articles/design-thinking/" },
+                  { title: "Discovery: Definition (Double Diamond)", url: "https://www.nngroup.com/articles/discovery-phase/" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Double Diamond Explained – NNGroup" },
-                  { title: "Design Thinking in 5 Minutes – AJ&Smart" },
+                  { title: "Design Thinking 101 – NNGroup", url: "https://www.nngroup.com/videos/design-thinking/" },
+                  { title: "AJ&Smart YouTube Channel", url: "https://www.youtube.com/@ajsmart" },
                 ],
               },
             ],
