@@ -4,7 +4,7 @@ import { useState } from "react";
 
 interface Resource {
   category: string;
-  items: { title: string; url: string }[];
+  items: { title: string; url?: string }[];
 }
 
 interface Topic {
@@ -236,15 +236,22 @@ export default function RoadmapClient({ sections, credits }: RoadmapClientProps)
                               <ul className="space-y-2">
                                 {resourceGroup.items.map((item, itemIdx) => (
                                   <li key={itemIdx}>
-                                    <a
-                                      href={item.url}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="flex items-center gap-2 text-gray-300 hover:text-[#DEFF37] transition-colors group"
-                                    >
-                                      <span className="text-[#DEFF37]/50 group-hover:text-[#DEFF37]">→</span>
-                                      <span className="text-sm">{item.title}</span>
-                                    </a>
+                                    {item.url ? (
+                                      <a
+                                        href={item.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2 text-gray-300 hover:text-[#DEFF37] transition-colors group"
+                                      >
+                                        <span className="text-[#DEFF37]/50 group-hover:text-[#DEFF37]">→</span>
+                                        <span className="text-sm">{item.title}</span>
+                                      </a>
+                                    ) : (
+                                      <div className="flex items-center gap-2 text-gray-300">
+                                        <span className="text-[#DEFF37]/50">→</span>
+                                        <span className="text-sm">{item.title}</span>
+                                      </div>
+                                    )}
                                   </li>
                                 ))}
                               </ul>
