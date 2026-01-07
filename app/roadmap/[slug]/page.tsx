@@ -57,16 +57,16 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "What Is User Experience (UX) Design?" },
-                  { title: "UX 101: Introduction to User Experience" },
+                  { title: "What Is User Experience (UX) Design?", url: "https://www.nngroup.com/articles/definition-user-experience/" },
+                  { title: "UX 101: Introduction to User Experience", url: "https://www.nngroup.com/articles/ux-basics-study-guide/" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "What is UX Design? – AJ&Smart" },
-                  { title: "UX Design in 5 Minutes – NNGroup" },
-                  { title: "UX Design Explained for Beginners – DesignCourse" },
+                  { title: "What is UX Design? – AJ&Smart", url: "https://www.youtube.com/@ajsmart" },
+                  { title: "UX Design in 5 Minutes – NNGroup", url: "https://www.youtube.com/@NNgroup" },
+                  { title: "UX Design Explained for Beginners – DesignCourse", url: "https://www.youtube.com/@DesignCourse" },
                 ],
               },
             ],
@@ -87,14 +87,14 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "UX vs UI vs Product Design" },
+                  { title: "UX vs UI vs Product Design", url: "https://www.nngroup.com/videos/ux-vs-ui/" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "UX vs UI vs Product Design Explained – Jesse Showalter" },
-                  { title: "UX, UI and Product Design Differences – AJ&Smart" },
+                  { title: "UX vs UI vs Product Design Explained – Jesse Showalter", url: "https://www.youtube.com/@jesseshowalter" },
+                  { title: "UX, UI and Product Design Differences – AJ&Smart", url: "https://www.youtube.com/@ajsmart" },
                 ],
               },
             ],
@@ -116,15 +116,15 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "User-Centered Design Basics" },
-                  { title: "Empathy in UX Design" },
+                  { title: "User-Centered Design Basics", url: "https://www.nngroup.com/topic/user-centered-design/" },
+                  { title: "Empathy in UX Design", url: "https://www.nngroup.com/articles/sympathy-vs-empathy-ux/" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "User-Centered Design Explained – NNGroup" },
-                  { title: "What Is User-Centered Design? – UX Mastery" },
+                  { title: "User-Centered Design Explained – NNGroup", url: "https://www.nngroup.com/videos/explain-ux-user-centered-design/" },
+                  { title: "What Is User-Centered Design? – UX Mastery", url: "https://www.youtube.com/c/Uxmastery" },
                 ],
               },
             ],
