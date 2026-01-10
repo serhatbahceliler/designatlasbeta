@@ -979,17 +979,13 @@ const roadmaps: Record<string, Roadmap> = {
             description: "IA'nın temeli, kullanıcıların: bilgiyi nasıl grupladığını, kavramları nasıl adlandırdığını anlamaktır. Bu yüzden IA kararları 'iç ekip dili' ile değil, kullanıcı dili ile alınır.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Information Architecture: Definition" },
-                  { title: "Mental Models in UX" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Information Architecture Explained – NNGroup" },
-                  { title: "Mental Models in UX – NNGroup" },
+                  { title: "What is information architecture?", url: "https://www.uxdesigninstitute.com/blog/what-is-information-architecture/" },
+                  { title: "What is information architecture? (IDF)", url: "https://www.interaction-design.org/literature/topics/information-architecture" },
+                  { title: "Mental Models in UX", url: "https://www.nngroup.com/articles/mental-models/" },
+                  { title: "Mental Models in UX (IDF)", url: "https://www.interaction-design.org/literature/topics/mental-models" },
+                  { title: "Mental Model", url: "https://lawsofux.com/mental-model/" },
                 ],
               },
             ],
@@ -1008,16 +1004,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Sitemap: sayfaların listesinden ibaret değildir, öncelik ve hiyerarşi gösterir. Yanlış sitemap: kullanıcıyı derinlere iter, önemli içeriği gizler.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Sitemaps: UX Best Practices" },
-                  { title: "Content Hierarchy in UX" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "How to Create UX Sitemaps – NNGroup" },
+                  { title: "Sitemaps: UX Best Practices", url: "https://www.interaction-design.org/literature/article/ux-sitemap" },
+                  { title: "Content Hierarchy in UX", url: "https://www.nngroup.com/articles/visual-hierarchy-ux-definition/" },
                 ],
               },
             ],
@@ -1035,16 +1025,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Navigasyon: kullanıcıya 'neredeyim?' ve 'buradan nereye gidebilirim?' sorularının cevabını verir. İyi navigasyon düşünmeden kullanılır.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Navigation Design Basics" },
-                  { title: "Menu Design Best Practices" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Navigation UX Explained – NNGroup" },
+                  { title: "Navigation Design Basics", url: "https://www.interaction-design.org/literature/topics/navigation" },
+                  { title: "Menu-Design Checklist: 17 UX Guidelines", url: "https://www.nngroup.com/articles/menu-design/" },
                 ],
               },
             ],
@@ -1062,16 +1046,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Kullanıcılar menüyü okuyarak değil, tahmin ederek kullanır. Bu yüzden: jargon ve iç ekip terimleri IA'yı bozar.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Medium",
                 items: [
-                  { title: "Labeling Systems in IA" },
-                  { title: "Terminology & UX Writing" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Labeling in Information Architecture – NNGroup" },
+                  { title: "Terminology & UX Writing", url: "https://medium.com/@autumnkotsiuba/terminology-in-ux-writing-292c45fdc3c6" },
                 ],
               },
             ],
@@ -1089,16 +1066,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Card sorting, kullanıcıların bilgiyi nasıl grupladığını görmenin en pratik yoludur. Open card sorting: keşif, Closed card sorting: doğrulama.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Card Sorting: A Definitive Guide" },
-                  { title: "Open vs Closed Card Sorting" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Card Sorting Explained – NNGroup" },
+                  { title: "Card Sorting: The Ultimate Guide (in 2025)", url: "https://www.interaction-design.org/literature/article/the-pros-and-cons-of-card-sorting-in-ux-research" },
+                  { title: "Card Sorting: Uncover Users", url: "https://www.nngroup.com/articles/card-sorting-definition/" },
                 ],
               },
             ],
@@ -1116,16 +1087,11 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Tree testing: IA'yı arayüz olmadan test etmeyi sağlar ve 'Bulabiliyor mu?' sorusuna net cevap verir.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Tree Testing 101" },
-                  { title: "Evaluating Navigation with Tree Tests" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Tree Testing Explained – NNGroup" },
+                  { title: "Tree Testing 101", url: "https://www.qualtrics.com/articles/strategy-research/tree-testing-101-elevating-your-user-experience/" },
+                  { title: "Tree Testing: Fast, Iterative Evaluation of Menu Labels and Categories", url: "https://www.nngroup.com/articles/tree-testing/" },
+                  { title: "Tree Testing: A Complete Guide", url: "https://www.interaction-design.org/literature/article/tree-testing-ux" },
                 ],
               },
             ],
