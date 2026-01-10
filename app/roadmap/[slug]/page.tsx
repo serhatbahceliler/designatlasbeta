@@ -1107,7 +1107,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "9. Interaction Design",
+        title: "9. Interaction Design (Basics)",
         description: "Akışları, durumları ve ekran davranışlarını doğru kurgulamak.",
         topics: [
           {
@@ -1115,17 +1115,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Task flow: Kullanıcının bir görevi tamamlamak için attığı adımlar. User flow: Kullanıcının ürün içinde izlediği yol (karar noktaları dahil). Junior'ların en sık hatası: flow'u ekran listesi sanmak.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "User Flows vs Task Flows" },
-                  { title: "When to Use Which UX Deliverables" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "User Flows Explained – NNGroup" },
-                  { title: "Task Flows vs User Flows – NNGroup" },
+                  { title: "User Flows vs Task Flows", url: "https://www.nudgenow.com/blogs/task-flow-vs-user-flow-in-ux-design" },
+                  { title: "When to Use Which UX Deliverables", url: "https://www.interaction-design.org/literature/topics/ux-deliverables" },
                 ],
               },
             ],
@@ -1143,17 +1136,11 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Ekranın her durumu için tasarım gerekir: Empty (içerik yok), Loading (veri yükleniyor), Error (hata oluştu), Success (başarılı). Bu durumlar tasarlanmazsa: kullanıcı ne olduğunu anlamaz.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Empty States Best Practices" },
-                  { title: "Loading Indicators" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI States Explained – NNGroup" },
-                  { title: "Empty State Design – NNGroup" },
+                  { title: "Designing Empty States in Complex Applications: 3 Guidelines", url: "https://www.nngroup.com/articles/empty-state-interface-design/" },
+                  { title: "Empty State UX Examples & Best Practices", url: "https://www.pencilandpaper.io/articles/empty-states" },
+                  { title: "Loading Indicators", url: "https://uxdesign.cc/loading-progress-indicators-ui-components-series-f4b1fc35339a" },
                 ],
               },
             ],
@@ -1175,15 +1162,8 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Microinteractions in UX" },
-                  { title: "Animation in UX" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Microinteractions Explained – NNGroup" },
-                  { title: "UX Animation Best Practices – NNGroup" },
+                  { title: "Microinteractions in UX", url: "https://www.nngroup.com/articles/microinteractions/" },
+                  { title: "Animation in UX", url: "https://www.nngroup.com/articles/animation-purpose-ux/" },
                 ],
               },
             ],
@@ -1202,17 +1182,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Form tasarımı: kullanıcının 'ne yapacağını bildiği' ama 'yapmaktan hoşlanmadığı' bir deneyimdir. Bu yüzden: hata toleransı, netlik ve kolaylık kritiktir.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Form Design Best Practices" },
-                  { title: "Form Field Usability" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Form Design UX – NNGroup" },
-                  { title: "Form Usability Best Practices – NNGroup" },
+                  { title: "Form Design Best Practices", url: "https://cxl.com/blog/form-design-best-practices/" },
+                  { title: "Website Forms Usability: Top 10 Recommendations", url: "https://www.nngroup.com/articles/web-form-design/" },
                 ],
               },
             ],
@@ -1233,15 +1206,8 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Error Prevention in UX" },
-                  { title: "Error Messages Design" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Error Prevention UX – NNGroup" },
-                  { title: "Error Message Best Practices – NNGroup" },
+                  { title: "Preventing User Errors: Avoiding Unconscious Slips", url: "https://www.nngroup.com/articles/slips/" },
+                  { title: "Error-Message Guidelines", url: "https://www.nngroup.com/articles/error-message-guidelines/" },
                 ],
               },
             ],
