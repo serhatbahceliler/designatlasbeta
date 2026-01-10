@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Header from "@/components/Header";
+import { supabase } from "@/lib/supabase";
 
 const roadmaps = [
   {
@@ -154,6 +155,28 @@ export default function Home() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [scores, setScores] = useState({ ux: 0, ui: 0, product: 0 });
   const [quizResult, setQuizResult] = useState<"ux" | "ui" | "product" | null>(null);
+
+  // Handle OAuth callback if hash fragment exists on home page
+  useEffect(() => {
+    const handleOAuthCallback = async () => {
+      // Check if URL has hash fragment with access_token (OAuth callback)
+      if (typeof window !== "undefined" && window.location.hash) {
+        const hash = window.location.hash.substring(1); // Remove #
+        const params = new URLSearchParams(hash);
+        
+        if (params.get("access_token")) {
+          // OAuth callback detected - redirect to callback page
+          const searchParams = new URLSearchParams(window.location.search);
+          const redirectTo = searchParams.get("redirect") || "/";
+          
+          // Redirect to callback page with query params
+          router.push(`/auth/callback?redirect=${encodeURIComponent(redirectTo)}`);
+        }
+      }
+    };
+
+    handleOAuthCallback();
+  }, [router]);
 
   // Roadmap click handler - Roadmaps are public, no auth required
   const handleRoadmapClick = (roadmapId: string) => {
