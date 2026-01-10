@@ -1321,14 +1321,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Moderated Test: Canlı, derinlemesine gözlem. Unmoderated Test: Daha hızlı, daha geniş örneklem. Her problem için doğru yöntem farklıdır.",
             resources: [
               {
-                category: "📘 Maze",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Moderated vs Unmoderated Testing", url: "https://maze.co/guides/usability-testing/moderated-vs-unmoderated/#:~:text=Moderated%20usability%20tests%20need%20a,in%20product%20design%20and%20development." },
-                ],
-              },
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
+                  { title: "Moderated vs Unmoderated Testing", url: "https://maze.co/guides/usability-testing/moderated-vs-unmoderated/" },
                   { title: "Remote Usability Testing", url: "https://www.nngroup.com/articles/remote-usability-testing-study-guide/" },
                 ],
               },
@@ -1368,7 +1363,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Usability metrics", url: "https://www.nngroup.com/articles/usability-metrics/" },
+                  { title: "Usability Metrics", url: "https://www.nngroup.com/articles/usability-metrics/" },
                 ],
               },
             ],
