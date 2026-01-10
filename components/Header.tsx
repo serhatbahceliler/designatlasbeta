@@ -58,6 +58,17 @@ export default function Header({ showBackLink = false }: HeaderProps) {
             />
           </Link>
 
+          <nav className="flex items-center gap-6">
+            {user && (
+              <Link
+                href="/case-atolyesi"
+                className="text-gray-400 hover:text-[#DEFF37] transition-colors font-medium"
+              >
+                Case Atölyesi
+              </Link>
+            )}
+          </nav>
+
           <div className="flex items-center gap-4">
             {showBackLink && (
               <Link
