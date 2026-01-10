@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
 export default function AuthCallbackPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     const handleAuthCallback = async () => {
@@ -18,28 +19,31 @@ export default function AuthCallbackPage() {
 
         if (error) {
           console.error("Auth callback error:", error);
-          router.push("/");
+          const redirectTo = searchParams.get("redirect") || "/";
+          router.push(redirectTo);
           return;
         }
 
         if (data.session) {
-          // User is authenticated, redirect to home
-          // The AuthContext will handle profile creation
-          router.push("/");
+          // User is authenticated, redirect based on redirect parameter or home
+          const redirectTo = searchParams.get("redirect") || "/";
+          router.push(redirectTo);
         } else {
           // No session yet, try waiting a bit more (OAuth might still be processing)
           setTimeout(() => {
-            router.push("/");
+            const redirectTo = searchParams.get("redirect") || "/";
+            router.push(redirectTo);
           }, 1000);
         }
       } catch (err) {
         console.error("Auth callback error:", err);
-        router.push("/");
+        const redirectTo = searchParams.get("redirect") || "/";
+        router.push(redirectTo);
       }
     };
 
     handleAuthCallback();
-  }, [router]);
+  }, [router, searchParams]);
 
   return (
     <div className="min-h-screen bg-black flex items-center justify-center">

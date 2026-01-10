@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useAuth } from "@/lib/auth-context";
-import AuthModal, { AuthIntent } from "./AuthModal";
 
 interface HeaderProps {
   showBackLink?: boolean;
@@ -12,12 +11,7 @@ interface HeaderProps {
 
 export default function Header({ showBackLink = false }: HeaderProps) {
   const { user, profile, signOut } = useAuth();
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
-
-  const handleLogin = () => {
-    setIsAuthModalOpen(true);
-  };
 
   const handleLogout = async () => {
     await signOut();
@@ -108,24 +102,24 @@ export default function Header({ showBackLink = false }: HeaderProps) {
                 )}
               </div>
             ) : (
-              <button
-                onClick={handleLogin}
-                className="px-4 py-2 bg-[#DEFF37] text-black font-semibold rounded-lg hover:bg-[#DEFF37]/90 transition-colors"
-              >
-                Giriş yap
-              </button>
+              <div className="flex items-center gap-3">
+                <Link
+                  href="/auth/login"
+                  className="px-4 py-2 text-white font-semibold rounded-lg hover:text-[#DEFF37] transition-colors"
+                >
+                  Giriş yap
+                </Link>
+                <Link
+                  href="/auth/signup"
+                  className="px-4 py-2 bg-[#DEFF37] text-black font-semibold rounded-lg hover:bg-[#DEFF37]/90 transition-colors"
+                >
+                  Kayıt ol
+                </Link>
+              </div>
             )}
           </div>
         </div>
       </header>
-
-      <AuthModal
-        isOpen={isAuthModalOpen}
-        onClose={() => setIsAuthModalOpen(false)}
-        onSuccess={() => {
-          setIsAuthModalOpen(false);
-        }}
-      />
     </>
   );
 }

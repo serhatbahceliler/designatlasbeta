@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
-import AuthModal, { AuthIntent } from "@/components/AuthModal";
 
 interface Resource {
   category: string;
@@ -39,50 +39,35 @@ interface RoadmapClientProps {
 }
 
 export default function RoadmapClient({ sections, credits }: RoadmapClientProps) {
+  const router = useRouter();
   const { user, loading } = useAuth();
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [pendingTopic, setPendingTopic] = useState<Topic | null>(null);
-  const [authIntent, setAuthIntent] = useState<AuthIntent>("openModuleDetail");
 
-  // When user successfully authenticates, open the pending topic drawer
+  // When user successfully authenticates (returns from auth page), check for pending topic
   useEffect(() => {
-    if (user && !loading && !isAuthModalOpen) {
-      // Check if there's a pending topic from state or sessionStorage (for OAuth redirects)
-      if (pendingTopic) {
-        setSelectedTopic(pendingTopic);
-        setIsDrawerOpen(true);
-        setPendingTopic(null);
-        // Clear sessionStorage intent
-        try {
-          sessionStorage.removeItem("auth-intent");
-        } catch (e) {
-          // Ignore
-        }
-      } else {
-        // Check sessionStorage for OAuth redirect recovery
-        try {
-          const storedIntent = sessionStorage.getItem("auth-intent");
-          if (storedIntent) {
-            const { topicTitle } = JSON.parse(storedIntent);
-            // Find the topic by title and open it
-            for (const section of sections) {
-              const topic = section.topics.find((t) => t.title === topicTitle);
-              if (topic) {
-                setSelectedTopic(topic);
-                setIsDrawerOpen(true);
-                sessionStorage.removeItem("auth-intent");
-                break;
-              }
+    if (user && !loading) {
+      // Check sessionStorage for redirect recovery after auth
+      try {
+        const storedIntent = sessionStorage.getItem("auth-intent");
+        if (storedIntent) {
+          const { topicTitle } = JSON.parse(storedIntent);
+          // Find the topic by title and open it
+          for (const section of sections) {
+            const topic = section.topics.find((t) => t.title === topicTitle);
+            if (topic) {
+              setSelectedTopic(topic);
+              setIsDrawerOpen(true);
+              sessionStorage.removeItem("auth-intent");
+              break;
             }
           }
-        } catch (e) {
-          // Ignore if sessionStorage is not available or parse fails
         }
+      } catch (e) {
+        // Ignore if sessionStorage is not available or parse fails
       }
     }
-  }, [user, loading, pendingTopic, isAuthModalOpen, sections]);
+  }, [user, loading, sections]);
 
   // Close drawer if user logs out while drawer is open
   useEffect(() => {
@@ -99,16 +84,18 @@ export default function RoadmapClient({ sections, credits }: RoadmapClientProps)
     const requiresAuth = topic.description || topic.resources || topic.practice;
 
     if (requiresAuth && !user && !loading) {
-      // User is not logged in, store the topic and show auth modal
-      setPendingTopic(topic);
-      setAuthIntent("openModuleDetail");
-      // Store intent in sessionStorage for OAuth redirect persistence
+      // User is not logged in, redirect to login page with intent
       try {
-        sessionStorage.setItem("auth-intent", JSON.stringify({ intent: "openModuleDetail", topicTitle: topic.title }));
+        sessionStorage.setItem("auth-intent", JSON.stringify({ 
+          intent: "openModuleDetail", 
+          topicTitle: topic.title 
+        }));
       } catch (e) {
         // Ignore if sessionStorage is not available
       }
-      setIsAuthModalOpen(true);
+      // Get current path for redirect after login
+      const currentPath = window.location.pathname;
+      router.push(`/auth/login?redirect=${encodeURIComponent(currentPath)}&intent=openModuleDetail`);
       return;
     }
 
@@ -122,25 +109,8 @@ export default function RoadmapClient({ sections, credits }: RoadmapClientProps)
     setTimeout(() => setSelectedTopic(null), 300);
   };
 
-  const handleAuthSuccess = () => {
-    setIsAuthModalOpen(false);
-    // The useEffect will handle opening the pending topic
-  };
-
   return (
     <>
-      {/* Auth Modal */}
-      <AuthModal
-        isOpen={isAuthModalOpen}
-        onClose={() => {
-          setIsAuthModalOpen(false);
-          setPendingTopic(null);
-        }}
-        onSuccess={handleAuthSuccess}
-        intent={authIntent}
-        intentData={pendingTopic}
-      />
-
       {/* Roadmap Content */}
       <section className="py-12 px-6 pb-24">
         <div className="max-w-5xl mx-auto">
