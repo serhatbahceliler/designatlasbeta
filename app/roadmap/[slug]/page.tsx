@@ -493,14 +493,13 @@ const roadmaps: Record<string, Roadmap> = {
         description: "Görüşmeyi 'sohbet' değil, 'kanıt üretme' aracına çevirmek.",
         topics: [
           {
-            title: "Planning User Interviews",
+            title: "User Interviews 101",
             description: "İyi bir interview, görüşme sırasında değil öncesinde kazanılır. Planlama aşamasında net değilse: sorular dağılır ve sonuçlar belirsiz olur. Interview planı, neyi öğrenmek istediğini netleştirir.",
             resources: [
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "User Interviews: How to Conduct Them" },
-                  { title: "Planning User Interviews" },
+                  { title: "User Interviews 101", url: "https://www.nngroup.com/articles/user-interviews/" },
                 ],
               },
               {
@@ -526,7 +525,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Writing Good UX Interview Questions" },
+                  { title: "Writing an Effective Guide for a UX Interview", url: "https://www.nngroup.com/articles/interview-guide/" },
                 ],
               },
               {
@@ -550,9 +549,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Interview sırasında UX Designer: konuşmaz, yönlendirmez, savunmaya geçmez. Rolün: dinlemek, derinleştirmek, sessizliği tolere etmek.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Moderating User Interviews" },
+                  { title: "Moderating User Interviews", url: "https://www.interaction-design.org/literature/article/how-to-moderate-user-interviews" },
                 ],
               },
               {
@@ -578,9 +577,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Interview sırasında her şeyi hatırlamak mümkün değildir. Ama doğru not almak mümkündür. Amaç: kelime kelime yazmak değil, anlamlı parçaları yakalamaktır.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Medium",
                 items: [
-                  { title: "Taking Notes in UX Research" },
+                  { title: "Taking Notes in UX Research", url: "https://medium.com/@AndrewJHCI/taking-research-notes-for-ux-ea1cb516fb64" },
                 ],
               },
               {
@@ -606,9 +605,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Interview bittiğinde iş bitmez. Asıl değer sonrasında ortaya çıkar. Amaç: tekil cümlelerden tekrar eden desenler çıkarmaktır.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Looppanel",
                 items: [
-                  { title: "Synthesis in UX Research" },
+                  { title: "Synthesis in UX Research", url: "https://www.looppanel.com/blog/ux-research-synthesis" },
                 ],
               },
               {
