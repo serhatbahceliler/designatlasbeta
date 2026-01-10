@@ -239,18 +239,6 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center">
-          {/* Logo */}
-          <div className="mb-12 animate-fade-in flex justify-center">
-            <Image
-              src="https://r.resimlink.com/9ezfkr.png"
-              alt="DesignAtlas"
-              width={200}
-              height={60}
-              className="h-16 w-auto"
-              unoptimized
-            />
-          </div>
-
           <div>
             {/* Badges */}
             <div className="flex flex-wrap items-center justify-center gap-3 mb-8 animate-text-reveal" style={{ animationDelay: '0ms' }}>
