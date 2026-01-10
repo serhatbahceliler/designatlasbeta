@@ -352,10 +352,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "UX Research bir teknik değil, zihniyet meselesidir. İyi research: Cevap aramaz, soru sorar. Kendi fikrini doğrulamaya çalışmaz. Kullanıcıyı yönlendirmez.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Maze",
                 items: [
-                  { title: "UX Research: What It Is and Why It Matters" },
-                  { title: "Bias in UX Research" },
+                  { title: "UX Research: What It Is and Why It Matters", url: "https://maze.co/guides/ux-research/" },
+                  { title: "Bias in UX Research", url: "https://maze.co/guides/ux-cognitive-biases/types/" },
                 ],
               },
               {
@@ -380,9 +380,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Qualitative: 'Neden?' sorusuna cevap verir. Quantitative: 'Ne kadar?' sorusuna cevap verir. UX'te bu ikisi rakip değil, birlikte çalışır.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Maze",
                 items: [
-                  { title: "Qualitative vs Quantitative Research" },
+                  { title: "Qualitative vs Quantitative Research", url: "https://maze.co/guides/ux-research/qualitative-ux-research-methods/" },
                 ],
               },
               {
@@ -410,7 +410,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Attitudinal vs Behavioral Research" },
+                  { title: "Attitudinal vs Behavioral Research", url: "https://www.nngroup.com/articles/attitudinal-behavioral/" },
                 ],
               },
               {
@@ -437,7 +437,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "When to Use Which UX Research Methods" },
+                  { title: "When to Use Which UX Research Methods", url: "https://www.nngroup.com/articles/which-ux-research-methods/" },
                 ],
               },
               {
@@ -465,7 +465,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "UX Research Plan Template" },
+                  { title: "UX Research Plan Template", url: "https://www.nngroup.com/articles/pm-research-plan/" },
                 ],
               },
               {
