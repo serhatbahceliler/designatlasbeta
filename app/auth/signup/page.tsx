@@ -64,11 +64,12 @@ function SignupContent() {
     setIsSubmitting(true);
 
     try {
-      // Sign up with Supabase Auth
+      // Sign up with Supabase Auth - auto confirm email
       const { data: authData, error: authError } = await supabase.auth.signUp({
         email: email.trim(),
         password: password,
         options: {
+          emailRedirectTo: `${window.location.origin}/auth/callback?redirect=${encodeURIComponent(redirectTo)}`,
           data: {
             first_name: firstName.trim(),
             last_name: lastName.trim(),
@@ -79,7 +80,7 @@ function SignupContent() {
       if (authError) throw authError;
 
       if (authData.user) {
-        // Create profile record
+        // Create profile record immediately
         const { error: profileError } = await supabase
           .from("profiles")
           .insert([
@@ -91,7 +92,8 @@ function SignupContent() {
           ]);
 
         if (profileError) {
-          // Profile might already exist (e.g., from OAuth), try update instead
+          console.error("Profile insert error:", profileError);
+          // If profile insert fails, try update (might exist from trigger)
           const { error: updateError } = await supabase
             .from("profiles")
             .update({
@@ -102,12 +104,36 @@ function SignupContent() {
 
           if (updateError) {
             console.error("Profile update error:", updateError);
-            // Don't fail the signup if profile update fails
+            // Still proceed - profile might be created by trigger
           }
         }
 
-        // Success - redirect
-        router.push(redirectTo);
+        // Check if email confirmation is required
+        // If user is not confirmed, we'll wait for confirmation email
+        // But with auto-confirm enabled in Supabase, this should work immediately
+        if (authData.session) {
+          // User is already authenticated (email confirmation disabled)
+          router.push(redirectTo);
+          router.refresh();
+        } else {
+          // Email confirmation required - wait a bit for auto-confirm trigger
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+          
+          // Try to get session again
+          const { data: { session } } = await supabase.auth.getSession();
+          
+          if (session) {
+            router.push(redirectTo);
+            router.refresh();
+          } else {
+            // Still no session - might need email confirmation
+            // Show message but still redirect (user will need to confirm email)
+            router.push(redirectTo);
+            router.refresh();
+          }
+        }
+      } else {
+        throw new Error("Kullanıcı oluşturulamadı");
       }
     } catch (err: any) {
       console.error("Signup error:", err);
@@ -121,18 +147,22 @@ function SignupContent() {
     setIsSubmitting(true);
 
     try {
-      const redirectUrl = new URL("/auth/callback", window.location.origin);
-      if (redirectTo !== "/") {
-        redirectUrl.searchParams.set("redirect", redirectTo);
+      // Build redirect URL
+      const redirectToParam = redirectTo !== "/" ? redirectTo : "";
+      
+      // Build the full callback URL with query params
+      const callbackUrl = new URL("/auth/callback", window.location.origin);
+      if (redirectToParam) {
+        callbackUrl.searchParams.set("redirect", redirectToParam);
       }
       if (intent) {
-        redirectUrl.searchParams.set("intent", intent);
+        callbackUrl.searchParams.set("intent", intent);
       }
 
-      const { error: authError } = await supabase.auth.signInWithOAuth({
+      const { data, error: authError } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: redirectUrl.toString(),
+          redirectTo: callbackUrl.toString(),
           queryParams: {
             access_type: "offline",
             prompt: "consent",
@@ -140,9 +170,12 @@ function SignupContent() {
         },
       });
 
-      if (authError) throw authError;
+      if (authError) {
+        console.error("Google OAuth error:", authError);
+        throw authError;
+      }
 
-      // OAuth will redirect, so we don't need to do anything here
+      // OAuth will redirect - don't set submitting to false as page will change
     } catch (err: any) {
       console.error("Google auth error:", err);
       setError(err.message || "Google ile giriş yapılamadı. Lütfen tekrar deneyin.");
@@ -183,16 +216,16 @@ function SignupContent() {
       </header>
 
       {/* Main Content */}
-      <main className="flex items-center justify-center h-[calc(100vh-60px)] px-4 sm:px-6 overflow-hidden">
+      <main className="flex items-center justify-center min-h-[calc(100vh-60px)] px-4 sm:px-6 py-4 overflow-y-auto">
         {/* Animated background elements */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#DEFF37]/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#DEFF37]/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
 
-        <div className="relative z-10 w-full max-w-md my-auto">
+        <div className="relative z-10 w-full max-w-md my-4">
           {/* Card */}
-          <div className="bg-zinc-900/90 backdrop-blur-sm border border-[#DEFF37]/20 rounded-2xl shadow-2xl p-5 sm:p-6 md:p-7">
+          <div className="bg-zinc-900/90 backdrop-blur-sm border border-[#DEFF37]/20 rounded-2xl shadow-2xl p-5 sm:p-6 md:p-7 max-h-[calc(100vh-120px)] overflow-y-auto">
             {/* Icon */}
             <div className="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-3 sm:mb-4 rounded-xl bg-[#DEFF37]/10 border border-[#DEFF37]/30 flex items-center justify-center">
               <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

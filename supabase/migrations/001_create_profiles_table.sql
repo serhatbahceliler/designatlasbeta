@@ -29,12 +29,17 @@ CREATE POLICY "Users can insert own profile"
 CREATE OR REPLACE FUNCTION public.handle_new_user()
 RETURNS TRIGGER AS $$
 BEGIN
+    -- Insert profile, but if it already exists (from manual insert), update it instead
     INSERT INTO public.profiles (id, first_name, last_name)
     VALUES (
         NEW.id,
         COALESCE(NEW.raw_user_meta_data->>'first_name', 'User'),
         COALESCE(NEW.raw_user_meta_data->>'last_name', '')
-    );
+    )
+    ON CONFLICT (id) DO UPDATE
+    SET 
+        first_name = COALESCE(EXCLUDED.first_name, profiles.first_name),
+        last_name = COALESCE(EXCLUDED.last_name, profiles.last_name);
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;

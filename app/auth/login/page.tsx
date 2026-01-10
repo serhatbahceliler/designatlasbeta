@@ -56,18 +56,23 @@ function LoginContent() {
     setIsSubmitting(true);
 
     try {
-      const redirectUrl = new URL("/auth/callback", window.location.origin);
-      if (redirectTo !== "/") {
-        redirectUrl.searchParams.set("redirect", redirectTo);
+      // Build redirect URL
+      const redirectUrl = `${window.location.origin}/auth/callback`;
+      const redirectToParam = redirectTo !== "/" ? redirectTo : "";
+      
+      // Build the full callback URL with query params
+      const callbackUrl = new URL("/auth/callback", window.location.origin);
+      if (redirectToParam) {
+        callbackUrl.searchParams.set("redirect", redirectToParam);
       }
       if (intent) {
-        redirectUrl.searchParams.set("intent", intent);
+        callbackUrl.searchParams.set("intent", intent);
       }
 
-      const { error: authError } = await supabase.auth.signInWithOAuth({
+      const { data, error: authError } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: redirectUrl.toString(),
+          redirectTo: callbackUrl.toString(),
           queryParams: {
             access_type: "offline",
             prompt: "consent",
@@ -75,9 +80,12 @@ function LoginContent() {
         },
       });
 
-      if (authError) throw authError;
+      if (authError) {
+        console.error("Google OAuth error:", authError);
+        throw authError;
+      }
 
-      // OAuth will redirect, so we don't need to do anything here
+      // OAuth will redirect - don't set submitting to false as page will change
     } catch (err: any) {
       console.error("Google auth error:", err);
       setError(err.message || "Google ile giriş yapılamadı. Lütfen tekrar deneyin.");
@@ -118,7 +126,7 @@ function LoginContent() {
       </header>
 
       {/* Main Content */}
-      <main className="flex items-center justify-center h-[calc(100vh-60px)] px-4 sm:px-6 overflow-hidden">
+      <main className="flex items-center justify-center min-h-[calc(100vh-60px)] px-4 sm:px-6 py-4">
         {/* Animated background elements */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#DEFF37]/10 rounded-full blur-3xl animate-pulse"></div>

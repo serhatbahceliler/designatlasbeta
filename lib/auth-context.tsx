@@ -54,11 +54,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signOut = async () => {
     try {
-      await supabase.auth.signOut();
+      const { error } = await supabase.auth.signOut();
+      if (error) throw error;
+      
       setUser(null);
       setProfile(null);
+      
+      // Force page reload to clear all state
+      if (typeof window !== "undefined") {
+        window.location.href = "/";
+      }
     } catch (error) {
       console.error("Error signing out:", error);
+      // Still clear local state even if signout fails
+      setUser(null);
+      setProfile(null);
+      if (typeof window !== "undefined") {
+        window.location.href = "/";
+      }
     }
   };
 
@@ -80,19 +93,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setUser(session?.user ?? null);
 
       if (session?.user) {
-        // Create profile if it doesn't exist (for OAuth users)
-        const { data: existingProfile } = await supabase
+        // Wait a bit for profile to be created (if signup just happened)
+        await new Promise((resolve) => setTimeout(resolve, 500));
+
+        // Create profile if it doesn't exist (for OAuth users or trigger didn't work)
+        const { data: existingProfile, error: fetchError } = await supabase
           .from("profiles")
           .select("*")
           .eq("id", session.user.id)
           .single();
 
-        if (!existingProfile) {
+        if (fetchError || !existingProfile) {
           // Try to get name from user metadata
           const firstName = session.user.user_metadata?.first_name || 
                            session.user.user_metadata?.full_name?.split(" ")[0] || 
                            session.user.user_metadata?.name?.split(" ")[0] || 
-                           "";
+                           "User";
           const lastName = session.user.user_metadata?.last_name || 
                           session.user.user_metadata?.full_name?.split(" ").slice(1).join(" ") || 
                           session.user.user_metadata?.name?.split(" ").slice(1).join(" ") || 
@@ -103,16 +119,29 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             .insert([
               {
                 id: session.user.id,
-                first_name: firstName || "User",
+                first_name: firstName,
                 last_name: lastName || "",
               },
             ]);
 
           if (insertError) {
             console.error("Error creating profile:", insertError);
+            // Try update in case it was created by trigger in the meantime
+            const { error: updateError } = await supabase
+              .from("profiles")
+              .update({
+                first_name: firstName,
+                last_name: lastName || "",
+              })
+              .eq("id", session.user.id);
+
+            if (updateError) {
+              console.error("Error updating profile:", updateError);
+            }
           }
         }
 
+        // Always refresh profile after creating/checking
         await refreshProfile();
       } else {
         setProfile(null);
@@ -123,6 +152,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       subscription.unsubscribe();
     };
   }, []);
+
+  // Refresh profile when user changes
+  useEffect(() => {
+    if (user) {
+      refreshProfile();
+    } else {
+      setProfile(null);
+    }
+  }, [user]);
 
   return (
     <AuthContext.Provider value={{ user, profile, loading, signOut, refreshProfile }}>

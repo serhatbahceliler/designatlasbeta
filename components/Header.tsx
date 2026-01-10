@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useAuth } from "@/lib/auth-context";
@@ -10,12 +10,19 @@ interface HeaderProps {
 }
 
 export default function Header({ showBackLink = false }: HeaderProps) {
-  const { user, profile, signOut } = useAuth();
+  const { user, profile, signOut, refreshProfile, loading } = useAuth();
   const [userMenuOpen, setUserMenuOpen] = useState(false);
 
+  // Refresh profile when user changes
+  useEffect(() => {
+    if (user && !profile) {
+      refreshProfile();
+    }
+  }, [user, profile, refreshProfile]);
+
   const handleLogout = async () => {
-    await signOut();
     setUserMenuOpen(false);
+    await signOut();
   };
 
   const getInitials = () => {
@@ -26,8 +33,14 @@ export default function Header({ showBackLink = false }: HeaderProps) {
   };
 
   const getDisplayName = () => {
-    if (!profile) return "User";
-    return profile.first_name || "User";
+    if (!profile) {
+      // Fallback to user email if profile not loaded yet
+      if (user?.email) {
+        return user.email.split("@")[0];
+      }
+      return "User";
+    }
+    return profile.first_name || profile.last_name || "User";
   };
 
   return (
