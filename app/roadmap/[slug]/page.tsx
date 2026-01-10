@@ -260,10 +260,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Agile ve Lean: UX'i hızlandırmak için değil, yanlış şeyi hızlı yapmamak için vardır. UX Designer için önemli olan: Sprint mantığını bilmek ve UX'in sprint'ten önce ve sonra da var olduğunu anlamak.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Agile UX Basics" },
-                  { title: "Lean UX Principles" },
+                  { title: "Agile UX Basics", url: "https://www.nngroup.com/articles/lean-ux-agile-study-guide/" },
+                  { title: "Lean UX Principles", url: "https://www.interaction-design.org/literature/topics/lean-ux" },
                 ],
               },
               {
@@ -284,14 +284,14 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Problem Framing",
+            title: "Problem Statements",
             description: "Problem framing: 'Ne yapalım?'dan önce 'Asıl sorun ne?'yi netleştirme sürecidir. Yanlış çerçevelenen problem, ne kadar iyi tasarlanırsa tasarlansın başarısız olur.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Problem Statements in UX" },
-                  { title: "Framing UX Problems" },
+                  { title: "What are Problem Statements?", url: "https://www.interaction-design.org/literature/topics/problem-statements" },
+                  { title: "Problem Statements in UX", url: "https://www.nngroup.com/articles/problem-statements/" },
                 ],
               },
               {
@@ -318,8 +318,8 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Stakeholder Management for UX" },
-                  { title: "Presenting UX Work" },
+                  { title: "Stakeholder Management for UX", url: "https://www.nngroup.com/articles/stakeholder-engagement/" },
+                  { title: "Presenting UX Work", url: "https://www.nngroup.com/articles/presenting-remotely/" },
                 ],
               },
               {
