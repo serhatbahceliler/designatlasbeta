@@ -162,20 +162,20 @@ function SignupContent() {
     <div className="min-h-screen bg-black">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-lg border-b border-zinc-800">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
             <Image
               src="https://r.resimlink.com/9ezfkr.png"
               alt="DesignAtlas"
               width={150}
               height={40}
-              className="h-10 w-auto"
+              className="h-8 w-auto sm:h-10"
               unoptimized
             />
           </Link>
           <Link
             href="/"
-            className="text-gray-400 hover:text-[#DEFF37] transition-colors text-sm"
+            className="text-gray-400 hover:text-[#DEFF37] transition-colors text-xs sm:text-sm"
           >
             Ana Sayfaya Dön
           </Link>
@@ -183,42 +183,42 @@ function SignupContent() {
       </header>
 
       {/* Main Content */}
-      <main className="flex items-center justify-center min-h-[calc(100vh-80px)] px-6 py-12">
+      <main className="flex items-center justify-center h-[calc(100vh-60px)] px-4 sm:px-6 overflow-hidden">
         {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#DEFF37]/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#DEFF37]/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
 
-        <div className="relative z-10 w-full max-w-md">
+        <div className="relative z-10 w-full max-w-md my-auto">
           {/* Card */}
-          <div className="bg-zinc-900/90 backdrop-blur-sm border border-[#DEFF37]/20 rounded-2xl shadow-2xl p-8">
+          <div className="bg-zinc-900/90 backdrop-blur-sm border border-[#DEFF37]/20 rounded-2xl shadow-2xl p-5 sm:p-6 md:p-7">
             {/* Icon */}
-            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-[#DEFF37]/10 border border-[#DEFF37]/30 flex items-center justify-center">
-              <svg className="w-8 h-8 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-3 sm:mb-4 rounded-xl bg-[#DEFF37]/10 border border-[#DEFF37]/30 flex items-center justify-center">
+              <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#DEFF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
               </svg>
             </div>
 
-            <h1 className="text-3xl font-bold text-white text-center mb-2">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center mb-1">
               Hesap oluştur
             </h1>
-            <p className="text-gray-400 text-center text-sm mb-8">
+            <p className="text-gray-400 text-center text-xs sm:text-sm mb-5 sm:mb-6">
               Yeni hesap oluşturarak başlayabilirsin
             </p>
 
             {/* Error Message */}
             {error && (
-              <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
-                <p className="text-red-400 text-sm">{error}</p>
+              <div className="mb-4 p-3 bg-red-500/10 border border-red-500/30 rounded-lg">
+                <p className="text-red-400 text-xs sm:text-sm">{error}</p>
               </div>
             )}
 
             {/* Signup Form */}
-            <form onSubmit={handleSignup} className="space-y-5">
-              <div className="grid grid-cols-2 gap-4">
+            <form onSubmit={handleSignup} className="space-y-3 sm:space-y-3.5">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">
+                  <label htmlFor="firstName" className="block text-xs sm:text-sm font-medium text-white mb-1.5">
                     Ad
                   </label>
                   <input
@@ -229,12 +229,12 @@ function SignupContent() {
                     placeholder="Ahmet"
                     required
                     minLength={2}
-                    className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
+                  <label htmlFor="lastName" className="block text-xs sm:text-sm font-medium text-white mb-1.5">
                     Soyad
                   </label>
                   <input
@@ -245,13 +245,13 @@ function SignupContent() {
                     placeholder="Yılmaz"
                     required
                     minLength={2}
-                    className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-white mb-1.5">
                   Email
                 </label>
                 <input
@@ -261,13 +261,13 @@ function SignupContent() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="ornek@email.com"
                   required
-                  className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors"
                 />
               </div>
 
               <div>
-                <label htmlFor="password" className="block text-sm font-medium text-white mb-2">
-                  Şifre (min 8 karakter)
+                <label htmlFor="password" className="block text-xs sm:text-sm font-medium text-white mb-1.5">
+                  Şifre <span className="text-gray-500">(min 8 karakter)</span>
                 </label>
                 <input
                   type="password"
@@ -277,12 +277,12 @@ function SignupContent() {
                   placeholder="••••••••"
                   required
                   minLength={8}
-                  className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors"
                 />
               </div>
 
               <div>
-                <label htmlFor="confirmPassword" className="block text-sm font-medium text-white mb-2">
+                <label htmlFor="confirmPassword" className="block text-xs sm:text-sm font-medium text-white mb-1.5">
                   Şifre Tekrar
                 </label>
                 <input
@@ -293,20 +293,20 @@ function SignupContent() {
                   placeholder="••••••••"
                   required
                   minLength={8}
-                  className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors"
                 />
               </div>
 
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-2 sm:gap-2.5 pt-1">
                 <input
                   type="checkbox"
                   id="acceptTerms"
                   checked={acceptTerms}
                   onChange={(e) => setAcceptTerms(e.target.checked)}
                   required
-                  className="mt-1 w-4 h-4 text-[#DEFF37] bg-zinc-800 border-zinc-700 rounded focus:ring-[#DEFF37] focus:ring-2"
+                  className="mt-0.5 w-4 h-4 flex-shrink-0 text-[#DEFF37] bg-zinc-800 border-zinc-700 rounded focus:ring-[#DEFF37] focus:ring-2"
                 />
-                <label htmlFor="acceptTerms" className="text-sm text-gray-300 leading-relaxed">
+                <label htmlFor="acceptTerms" className="text-xs sm:text-sm text-gray-300 leading-snug">
                   <span className="text-white">Kullanım Koşulları</span> ve{" "}
                   <span className="text-white">Gizlilik Politikası</span>'nı kabul ediyorum.
                 </label>
@@ -315,19 +315,19 @@ function SignupContent() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-6 py-4 bg-[#DEFF37] text-black font-bold rounded-lg hover:bg-[#DEFF37]/90 hover:shadow-[0_0_30px_rgba(222,255,55,0.3)] hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base bg-[#DEFF37] text-black font-bold rounded-lg hover:bg-[#DEFF37]/90 hover:shadow-[0_0_30px_rgba(222,255,55,0.3)] hover:scale-[1.01] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed mt-1"
               >
                 {isSubmitting ? "Hesap oluşturuluyor..." : "Hesap oluştur"}
               </button>
             </form>
 
             {/* Divider */}
-            <div className="relative my-8">
+            <div className="relative my-4 sm:my-5">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-zinc-700"></div>
               </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="px-3 bg-zinc-900 text-gray-400">veya</span>
+              <div className="relative flex justify-center text-xs sm:text-sm">
+                <span className="px-2 sm:px-3 bg-zinc-900 text-gray-400">veya</span>
               </div>
             </div>
 
@@ -336,9 +336,9 @@ function SignupContent() {
               type="button"
               onClick={handleGoogleAuth}
               disabled={isSubmitting}
-              className="w-full px-6 py-4 bg-zinc-800 border border-zinc-700 text-white font-semibold rounded-lg hover:bg-zinc-700 hover:border-zinc-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+              className="w-full px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base bg-zinc-800 border border-zinc-700 text-white font-semibold rounded-lg hover:bg-zinc-700 hover:border-zinc-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 sm:gap-3"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
                   d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -356,11 +356,11 @@ function SignupContent() {
                   d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
                 />
               </svg>
-              Google ile devam et
+              <span>Google ile devam et</span>
             </button>
 
             {/* Login Link */}
-            <p className="text-center text-sm text-gray-400 mt-6">
+            <p className="text-center text-xs sm:text-sm text-gray-400 mt-4 sm:mt-5">
               Zaten hesabın var mı?{" "}
               <Link
                 href={`/auth/login${redirectTo !== "/" ? `?redirect=${encodeURIComponent(redirectTo)}` : ""}`}
