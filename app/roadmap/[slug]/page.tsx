@@ -871,17 +871,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Proto Persona: Hızlı varsayım, discovery başlangıcı. Data-Driven Persona: Research ile doğrulanmış, karar destekleyici. Junior'ların en sık hatası: persona'yı kurgusal karakter sanmak.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Personas: Why and How You Should Use Them" },
-                  { title: "Personas vs. Proto-Personas" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Personas Explained – NNGroup" },
-                  { title: "Proto Personas vs Personas – NNGroup" },
+                  { title: "Personas – A Simple Introduction", url: "https://www.interaction-design.org/literature/article/personas-why-and-how-you-should-use-them" },
+                  { title: "Personas vs. Proto-Personas", url: "https://medium.com/@karimcmahon/proto-personas-vs-persona-s-db8873a2d2e4" },
                 ],
               },
             ],
@@ -900,17 +893,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "User Journey: Tek bir ürün içindeki deneyim. Customer Journey: Ürün + temas noktaları + zaman. UX kararları çoğu zaman journey görülmeden alınır.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Journey Mapping 101" },
-                  { title: "User Journey vs Customer Journey" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Journey Mapping Explained – NNGroup" },
-                  { title: "Customer Journey Mapping – NNGroup" },
+                  { title: "Journey Mapping 101", url: "https://www.nngroup.com/articles/journey-mapping-101/" },
+                  { title: "User Journey vs Customer Journey: Understanding Key Differences", url: "https://aguayo.co/en/blog-aguayo-user-experience/user-journey-vs-customer-journey/" },
                 ],
               },
             ],
@@ -928,16 +914,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Journey map sadece adımlardan oluşmaz. Kullanıcının: ne hissettiği, nerede gerildiği, nerede rahatladığı tasarım kararları için kritik sinyaldir.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Experience Mapping" },
-                  { title: "Emotional Journey Mapping" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Mapping Emotions in UX – NNGroup" },
+                  { title: "UX Mapping Methods Compared: A Cheat Sheet", url: "https://www.nngroup.com/articles/ux-mapping-cheat-sheet/" },
+                  { title: "Emotional Journey Mapping", url: "https://uxdesign.cc/a-guide-to-emotional-journey-mapping-36725933e99f" },
                 ],
               },
             ],
@@ -955,15 +935,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Moment of Truth, kullanıcının: ürüne güvenip güvenmemeye, devam edip etmemeye karar verdiği anlardır. Bu anlar kaçırılırsa: küçük UX hataları büyük kayıplara dönüşür.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Moments of Truth in UX" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Moments of Truth Explained – NNGroup" },
+                  { title: "Moments of Truth in UX", url: "https://www.interaction-design.org/literature/topics/moment-of-truth" },
                 ],
               },
             ],
@@ -976,19 +950,13 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Turning Journeys into Design Requirements",
+            title: "Top Tips to Create Effective Journey Maps",
             description: "Journey map bir çıktı değil, araçtır. Asıl değer: journey'den tasarım gereksinimi çıkarmakta.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Using Journey Maps to Drive Design" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "From Journey Map to Design Decisions – NNGroup" },
+                  { title: "Top Tips to Create Effective Journey Maps", url: "https://www.interaction-design.org/literature/article/top-things-to-learn-from-ixdf-journey-mapping-course" },
                 ],
               },
             ],
