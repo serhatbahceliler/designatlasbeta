@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import EmailModal from "@/components/EmailModal";
+import Header from "@/components/Header";
 
 const roadmaps = [
   {
@@ -155,50 +155,14 @@ export default function Home() {
   const [scores, setScores] = useState({ ux: 0, ui: 0, product: 0 });
   const [quizResult, setQuizResult] = useState<"ux" | "ui" | "product" | null>(null);
 
-  // Email modal states
-  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
-  const [selectedRoadmapId, setSelectedRoadmapId] = useState<string>("");
-
-  // Roadmap click handler
+  // Roadmap click handler - Roadmaps are public, no auth required
   const handleRoadmapClick = (roadmapId: string) => {
-    // Check if email already submitted
-    const emailSubmitted = localStorage.getItem("designatlas-email-submitted");
-
-    if (emailSubmitted === "true") {
-      // Email already submitted, go directly to roadmap
-      router.push(`/roadmap/${roadmapId}`);
-    } else {
-      // Show email modal
-      setSelectedRoadmapId(roadmapId);
-      setIsEmailModalOpen(true);
-    }
+    router.push(`/roadmap/${roadmapId}`);
   };
 
-  // Quiz click handler
+  // Quiz click handler - Quiz is public, no auth required
   const handleQuizClick = () => {
-    const emailSubmitted = localStorage.getItem("designatlas-email-submitted");
-
-    if (emailSubmitted === "true") {
-      // Email already submitted, open quiz directly
-      setIsQuizOpen(true);
-    } else {
-      // Show email modal for quiz
-      setSelectedRoadmapId("quiz");
-      setIsEmailModalOpen(true);
-    }
-  };
-
-  // Email modal success handler
-  const handleEmailSuccess = () => {
-    setIsEmailModalOpen(false);
-
-    if (selectedRoadmapId === "quiz") {
-      // Open quiz after email submission
-      setIsQuizOpen(true);
-    } else {
-      // Navigate to roadmap
-      router.push(`/roadmap/${selectedRoadmapId}`);
-    }
+    setIsQuizOpen(true);
   };
 
   const handleAnswerClick = (optionScores: { ux: number; ui: number; product: number }) => {
@@ -233,6 +197,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black">
+      <Header />
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated background elements */}
@@ -882,14 +848,6 @@ export default function Home() {
       <footer className="py-8 px-6 bg-black border-t border-zinc-900 text-gray-500 text-center">
         <p>DesignAtlas BETA &copy; 2024 - Tasarımı Öğren. Adım Adım.</p>
       </footer>
-
-      {/* Email Modal */}
-      <EmailModal
-        isOpen={isEmailModalOpen}
-        onClose={() => setIsEmailModalOpen(false)}
-        onSuccess={handleEmailSuccess}
-        roadmapId={selectedRoadmapId}
-      />
 
       {/* Quiz Drawer */}
       {isQuizOpen && (

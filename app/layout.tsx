@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import AuthProviderWrapper from "@/components/AuthProviderWrapper";
 
 export const metadata: Metadata = {
   title: "DesignAtlas – UX, UI ve Product Design için Öğrenme Roadmap'leri",
@@ -36,7 +37,9 @@ export default function RootLayout({
           `}
         </Script>
 
-        {children}
+        <AuthProviderWrapper>
+          {children}
+        </AuthProviderWrapper>
       </body>
     </html>
   );

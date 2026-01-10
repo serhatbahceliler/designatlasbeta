@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useAuth } from "@/lib/auth-context";
+import AuthModal, { AuthIntent } from "@/components/AuthModal";
 
 interface Resource {
   category: string;
@@ -37,10 +39,80 @@ interface RoadmapClientProps {
 }
 
 export default function RoadmapClient({ sections, credits }: RoadmapClientProps) {
+  const { user, loading } = useAuth();
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [pendingTopic, setPendingTopic] = useState<Topic | null>(null);
+  const [authIntent, setAuthIntent] = useState<AuthIntent>("openModuleDetail");
+
+  // When user successfully authenticates, open the pending topic drawer
+  useEffect(() => {
+    if (user && !loading && !isAuthModalOpen) {
+      // Check if there's a pending topic from state or sessionStorage (for OAuth redirects)
+      if (pendingTopic) {
+        setSelectedTopic(pendingTopic);
+        setIsDrawerOpen(true);
+        setPendingTopic(null);
+        // Clear sessionStorage intent
+        try {
+          sessionStorage.removeItem("auth-intent");
+        } catch (e) {
+          // Ignore
+        }
+      } else {
+        // Check sessionStorage for OAuth redirect recovery
+        try {
+          const storedIntent = sessionStorage.getItem("auth-intent");
+          if (storedIntent) {
+            const { topicTitle } = JSON.parse(storedIntent);
+            // Find the topic by title and open it
+            for (const section of sections) {
+              const topic = section.topics.find((t) => t.title === topicTitle);
+              if (topic) {
+                setSelectedTopic(topic);
+                setIsDrawerOpen(true);
+                sessionStorage.removeItem("auth-intent");
+                break;
+              }
+            }
+          }
+        } catch (e) {
+          // Ignore if sessionStorage is not available or parse fails
+        }
+      }
+    }
+  }, [user, loading, pendingTopic, isAuthModalOpen, sections]);
+
+  // Close drawer if user logs out while drawer is open
+  useEffect(() => {
+    if (!user && isDrawerOpen && selectedTopic) {
+      const requiresAuth = selectedTopic.description || selectedTopic.resources || selectedTopic.practice;
+      if (requiresAuth) {
+        closeDrawer();
+      }
+    }
+  }, [user, isDrawerOpen, selectedTopic]);
 
   const openTopicDrawer = (topic: Topic) => {
+    // Module details (resources, descriptions, practice) require login
+    const requiresAuth = topic.description || topic.resources || topic.practice;
+
+    if (requiresAuth && !user && !loading) {
+      // User is not logged in, store the topic and show auth modal
+      setPendingTopic(topic);
+      setAuthIntent("openModuleDetail");
+      // Store intent in sessionStorage for OAuth redirect persistence
+      try {
+        sessionStorage.setItem("auth-intent", JSON.stringify({ intent: "openModuleDetail", topicTitle: topic.title }));
+      } catch (e) {
+        // Ignore if sessionStorage is not available
+      }
+      setIsAuthModalOpen(true);
+      return;
+    }
+
+    // User is logged in or topic doesn't require auth, open drawer directly
     setSelectedTopic(topic);
     setIsDrawerOpen(true);
   };
@@ -50,8 +122,25 @@ export default function RoadmapClient({ sections, credits }: RoadmapClientProps)
     setTimeout(() => setSelectedTopic(null), 300);
   };
 
+  const handleAuthSuccess = () => {
+    setIsAuthModalOpen(false);
+    // The useEffect will handle opening the pending topic
+  };
+
   return (
     <>
+      {/* Auth Modal */}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => {
+          setIsAuthModalOpen(false);
+          setPendingTopic(null);
+        }}
+        onSuccess={handleAuthSuccess}
+        intent={authIntent}
+        intentData={pendingTopic}
+      />
+
       {/* Roadmap Content */}
       <section className="py-12 px-6 pb-24">
         <div className="max-w-5xl mx-auto">
@@ -199,7 +288,7 @@ export default function RoadmapClient({ sections, credits }: RoadmapClientProps)
 
               {/* Content */}
               <div className="space-y-6">
-                {/* Description */}
+                {/* Description - Only show if user is logged in */}
                 {selectedTopic.description && (
                   <div className="p-6 bg-zinc-800/50 border border-zinc-700 rounded-xl">
                     <div className="flex items-start gap-3 mb-3">
@@ -208,17 +297,25 @@ export default function RoadmapClient({ sections, credits }: RoadmapClientProps)
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                       </div>
-                      <div>
+                      <div className="flex-1">
                         <h3 className="text-lg font-semibold text-white mb-2">Konu Hakkında</h3>
-                        <p className="text-gray-300 leading-relaxed">
-                          {selectedTopic.description}
-                        </p>
+                        {user ? (
+                          <p className="text-gray-300 leading-relaxed">
+                            {selectedTopic.description}
+                          </p>
+                        ) : (
+                          <div className="p-4 bg-zinc-900/50 border border-zinc-700 rounded-lg">
+                            <p className="text-gray-400 text-sm">
+                              Detayları görüntülemek için giriş yapmalısınız.
+                            </p>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
                 )}
 
-                {/* Resources */}
+                {/* Resources - Only show if user is logged in */}
                 {selectedTopic.resources && selectedTopic.resources.length > 0 && (
                   <div className="p-6 bg-zinc-800/50 border border-zinc-700 rounded-xl">
                     <div className="flex items-start gap-3 mb-4">
@@ -229,42 +326,50 @@ export default function RoadmapClient({ sections, credits }: RoadmapClientProps)
                       </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold text-white mb-4">Öğrenme Kaynakları</h3>
-                        <div className="space-y-5">
-                          {selectedTopic.resources.map((resourceGroup, idx) => (
-                            <div key={idx}>
-                              <h4 className="text-sm font-semibold text-gray-400 mb-2">{resourceGroup.category}</h4>
-                              <ul className="space-y-2">
-                                {resourceGroup.items.map((item, itemIdx) => (
-                                  <li key={itemIdx}>
-                                    {item.url ? (
-                                      <a
-                                        href={item.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1.5 text-gray-300 hover:text-[#DEFF37] transition-colors"
-                                      >
-                                        <span className="text-sm underline">{item.title}</span>
-                                        <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
-                                      </a>
-                                    ) : (
-                                      <div className="inline-flex items-center gap-2 text-gray-300">
-                                        <span className="text-sm">{item.title}</span>
-                                      </div>
-                                    )}
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          ))}
-                        </div>
+                        {user ? (
+                          <div className="space-y-5">
+                            {selectedTopic.resources.map((resourceGroup, idx) => (
+                              <div key={idx}>
+                                <h4 className="text-sm font-semibold text-gray-400 mb-2">{resourceGroup.category}</h4>
+                                <ul className="space-y-2">
+                                  {resourceGroup.items.map((item, itemIdx) => (
+                                    <li key={itemIdx}>
+                                      {item.url ? (
+                                        <a
+                                          href={item.url}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="inline-flex items-center gap-1.5 text-gray-300 hover:text-[#DEFF37] transition-colors"
+                                        >
+                                          <span className="text-sm underline">{item.title}</span>
+                                          <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                          </svg>
+                                        </a>
+                                      ) : (
+                                        <div className="inline-flex items-center gap-2 text-gray-300">
+                                          <span className="text-sm">{item.title}</span>
+                                        </div>
+                                      )}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <div className="p-4 bg-zinc-900/50 border border-zinc-700 rounded-lg">
+                            <p className="text-gray-400 text-sm">
+                              Kaynakları görüntülemek için giriş yapmalısınız.
+                            </p>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
                 )}
 
-                {/* Practice */}
+                {/* Practice - Only show if user is logged in */}
                 {selectedTopic.practice && (
                   <div className="p-6 bg-gradient-to-br from-[#DEFF37]/10 to-[#DEFF37]/5 border border-[#DEFF37]/20 rounded-xl">
                     <div className="flex items-start gap-3 mb-4">
@@ -275,14 +380,22 @@ export default function RoadmapClient({ sections, credits }: RoadmapClientProps)
                       </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold text-white mb-3">{selectedTopic.practice.title}</h3>
-                        <ul className="space-y-2">
-                          {selectedTopic.practice.tasks.map((task, idx) => (
-                            <li key={idx} className="flex items-start gap-2">
-                              <span className="text-[#DEFF37] mt-1 font-bold">•</span>
-                              <span className="text-gray-300 text-sm">{task}</span>
-                            </li>
-                          ))}
-                        </ul>
+                        {user ? (
+                          <ul className="space-y-2">
+                            {selectedTopic.practice.tasks.map((task, idx) => (
+                              <li key={idx} className="flex items-start gap-2">
+                                <span className="text-[#DEFF37] mt-1 font-bold">•</span>
+                                <span className="text-gray-300 text-sm">{task}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <div className="p-4 bg-zinc-900/50 border border-zinc-700 rounded-lg">
+                            <p className="text-gray-400 text-sm">
+                              Pratik görevlerini görüntülemek için giriş yapmalısınız.
+                            </p>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>

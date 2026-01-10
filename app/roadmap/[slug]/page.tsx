@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import RoadmapClient from "./RoadmapClient";
+import Header from "@/components/Header";
 
 interface Resource {
   category: string;
@@ -5642,30 +5642,7 @@ export default async function RoadmapPage({ params }: { params: Promise<{ slug: 
 
   return (
     <main className="min-h-screen bg-black">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-lg border-b border-zinc-800">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <Image
-              src="https://r.resimlink.com/9ezfkr.png"
-              alt="DesignAtlas"
-              width={150}
-              height={40}
-              className="h-10 w-auto"
-              unoptimized
-            />
-          </Link>
-          <Link
-            href="/"
-            className="text-gray-400 hover:text-[#DEFF37] transition-colors flex items-center gap-2"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Roadmap'lere Dön
-          </Link>
-        </div>
-      </header>
+      <Header showBackLink={true} />
 
       {/* Hero Section */}
       <section className="relative py-20 px-6 overflow-hidden border-b border-zinc-800">
