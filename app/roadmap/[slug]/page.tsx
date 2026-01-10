@@ -639,10 +639,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Survey'ler: davranışı keşfetmek için değil, davranışın yaygınlığını ölçmek için kullanılır. Yanlış yerde kullanılan survey: yanlış güven üretir ve 'kullanıcılar böyle istiyor' yanılgısı yaratır.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Looppanel",
                 items: [
-                  { title: "When to Use Surveys" },
-                  { title: "Survey vs User Interviews" },
+                  { title: "Survey vs User Interviews", url: "https://www.looppanel.com/blog/research-methods-survey-vs-interview" },
                 ],
               },
               {
@@ -667,9 +666,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Survey'de en kritik şey: sorunun kendisidir. Kötü yazılmış sorular: kullanıcıyı yönlendirir, sonuçları çarpıtır ve yanlış kararlar aldırır.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Maze",
                 items: [
-                  { title: "Writing Survey Questions" },
+                  { title: "Writing Survey Questions", url: "https://maze.co/guides/ux-surveys/questions/" },
                 ],
               },
               {
@@ -692,9 +691,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Likert scale, rating ve score'lar: doğru kullanılırsa anlamlı, yanlış kullanılırsa gürültü üretir. Junior'ların en sık yaptığı hata: sonuçları bağlamdan koparmak.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Likert Scales in UX" },
+                  { title: "Rating Scales", url: "https://www.nngroup.com/articles/rating-scales/" },
+                  { title: "Rating Scales 2", url: "https://www.interaction-design.org/literature/article/rating-scales-for-ux-research" },
                 ],
               },
               {
@@ -720,7 +720,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Interpreting Quantitative UX Data" },
+                  { title: "Interpreting Quantitative UX Data", url: "https://www.nngroup.com/articles/quantitative-user-research-methods/" },
                 ],
               },
               {
@@ -747,7 +747,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Triangulation in UX Research" },
+                  { title: "Triangulation in UX Research", url: "https://www.nngroup.com/articles/triangulation-better-research-results-using-multiple-ux-methods/" },
                 ],
               },
               {
