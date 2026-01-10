@@ -1233,24 +1233,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Low-fi wireframe'ler: hızlıdır, ucuzdur, tartışmaya açıktır. Bu yüzden discovery ve erken çözüm aşamasında idealdir.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 UX Pilot",
                 items: [
-                  { title: "Low-Fidelity Wireframes" },
-                  { title: "Why Sketches and Wireframes Matter" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Low-Fidelity Wireframes Explained – NNGroup" },
-                  { title: "Sketching & Wireframing for UX – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why Low-Fidelity Wireframes Save Time" },
-                  { title: "Stop Polishing Too Early in UX" },
+                  { title: "Low-Fidelity Wireframes", url: "https://uxpilot.ai/blogs/low-fidelity-wireframe" },
                 ],
               },
             ],
@@ -1265,60 +1250,14 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Mid-Fidelity Screens",
-            description: "Mid-fi tasarımlar: yapıyı, içerik hiyerarşisini, etkileşimleri daha net test etmek için kullanılır. Ama hâlâ 'görsel şov' değildir.",
-            resources: [
-              {
-                category: "📘 NNGroup",
-                items: [
-                  { title: "Wireframe Fidelity Levels" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Mid-Fidelity Prototyping – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Choosing the Right Fidelity Level" },
-                  { title: "Mid-Fi Is the Sweet Spot" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Mid-fi bir ekran için sor:",
-                "Kullanıcı burada ne yapmalı?",
-                "Gözünü ilk çeken yer doğru mu?",
-              ],
-            },
-          },
-          {
             title: "Prototyping for Testing",
             description: "Prototype: sunum için değil, test için yapılır. İyi prototype: sadece test edilecek akışı içerir, her detayı kapsamaz.",
             resources: [
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Prototyping for UX Testing" },
-                  { title: "Paper Prototyping" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UX Prototyping Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Prototype Only What You Need" },
-                  { title: "Prototyping Mistakes in UX" },
+                  { title: "UX Prototypes: Low Fidelity vs. High Fidelity", url: "https://www.nngroup.com/articles/ux-prototype-hi-lo-fidelity/" },
+                  { title: "Paper Prototyping", url: "https://www.nngroup.com/articles/paper-prototyping-cutout-kit/" },
                 ],
               },
             ],
@@ -1332,59 +1271,13 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "What to Prototype / What Not to Prototype",
-            description: "Her şeyi prototype etmek: zaman kaybı, yanlış odaklanma, gereksiz detay demektir. Odak: riskli, belirsiz, kullanıcıyı durduran noktalar.",
-            resources: [
-              {
-                category: "📘 NNGroup",
-                items: [
-                  { title: "Deciding What to Prototype" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "What to Prototype in UX – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Don't Prototype Everything" },
-                  { title: "Strategic Prototyping for UX" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir feature seç",
-                "En riskli adımı işaretle",
-                "Sadece o adımı prototype et",
-              ],
-            },
-          },
-          {
             title: "Prototype Hygiene (Naming, Flow Clarity)",
             description: "Kötü hazırlanmış prototype: yanlış test sonuçları üretir, kullanıcıyı değil tasarımcıyı test eder. Basit ama kritik konular: ekran isimleri, bağlantıların tutarlılığı, gereksiz dallanmaların temizlenmesi.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Maze",
                 items: [
-                  { title: "Preparing Prototypes for Testing" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UX Prototype Preparation Tips – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Prototype Hygiene: Small Things That Matter" },
-                  { title: "Why Your Usability Test Failed" },
+                  { title: "Preparing Prototypes for Testing", url: "https://maze.co/guides/prototype-testing/" },
                 ],
               },
             ],
