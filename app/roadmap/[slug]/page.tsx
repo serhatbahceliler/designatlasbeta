@@ -47,11 +47,11 @@ const roadmaps: Record<string, Roadmap> = {
     icon: "🎯",
     sections: [
       {
-        title: "1. UX Foundations",
+        title: "1. UX Temelleri (UX Foundations)",
         description: "UX'in ne olduğunu, problem çözme yaklaşımını ve temel kavramları oturtmak.",
         topics: [
           {
-            title: "What is UX Design?",
+            title: "UX Design Nedir?",
             description: "UX Design, bir ürünün kullanıcı için ne kadar anlaşılır, verimli ve tatmin edici olduğunu tasarlama sürecidir. Sadece ekran çizmek değil; problemi anlamak, çözümü test etmek ve iyileştirmektir.",
             resources: [
               {
@@ -164,7 +164,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Basic Design Principles",
+            title: "Temel Tasarım Prensipleri",
             description: "Bu prensipler, tüm UX kararlarının temelidir: Görsel hiyerarşi, Tutarlılık, Geri bildirim, Basitlik. Bunlar yoksa kullanıcı düşünmek zorunda kalır.",
             resources: [
               {
@@ -195,7 +195,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "2. Product & Design Process",
+        title: "2. Ürün & Tasarım Süreci (Product & Design Process)",
         description: "UX'in ürün geliştirme sürecindeki yerini ve çalışma biçimini anlamak.",
         topics: [
           {
@@ -228,7 +228,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Double Diamond & Design Thinking Overview",
+            title: "Double Diamond & Design Thinking'e Genel Bakış",
             description: "Double Diamond, tasarım sürecini genişlet → daralt mantığıyla açıklar: 1) Discover (Problemi keşfet), 2) Define (Doğru problemi tanımla), 3) Develop (Çözümler üret), 4) Deliver (Test et ve iyileştir). Bu model, 'ilk akla gelen çözümü' yapmamayı öğretir.",
             resources: [
               {
@@ -256,7 +256,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Agile & Lean Basics for Designers",
+            title: "Agile & Lean Designer Temelleri",
             description: "Agile ve Lean: UX'i hızlandırmak için değil, yanlış şeyi hızlı yapmamak için vardır. UX Designer için önemli olan: Sprint mantığını bilmek ve UX'in sprint'ten önce ve sonra da var olduğunu anlamak.",
             resources: [
               {
@@ -284,7 +284,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Problem Statements",
+            title: "Problem Tanımları",
             description: "Problem framing: 'Ne yapalım?'dan önce 'Asıl sorun ne?'yi netleştirme sürecidir. Yanlış çerçevelenen problem, ne kadar iyi tasarlanırsa tasarlansın başarısız olur.",
             resources: [
               {
@@ -312,7 +312,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Stakeholder Alignment Basics",
+            title: "Stakeholder Alignment Temelleri",
             description: "UX Designer yalnız çalışmaz. PM, developer, business ve stakeholder'larla aynı problemi aynı şekilde anlamak zorundadır. Bu hizalanma olmazsa: UX kararları 'kişisel fikir' gibi görünür ve güven azalır.",
             resources: [
               {
@@ -344,11 +344,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "3. User Research Fundamentals",
+        title: "3. Kullanıcı Araştırması Temelleri (User Research Fundamentals)",
         description: "Doğru soruyu sorma ve doğru yöntemi seçme kasını geliştirmek.",
         topics: [
           {
-            title: "Research Mindset (questions, bias, ethics)",
+            title: "Research Mindset (soru, bias, etik)",
             description: "UX Research bir teknik değil, zihniyet meselesidir. İyi research: Cevap aramaz, soru sorar. Kendi fikrini doğrulamaya çalışmaz. Kullanıcıyı yönlendirmez.",
             resources: [
               {
@@ -431,7 +431,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Choosing the Right Research Method",
+            title: "Doğru Araştırma Yöntemini Seçmek",
             description: "Her sorunun tek bir doğru yöntemi yoktur. Yanlış yöntemle yapılan research: zaman kaybıdır ve yanlış güven oluşturur. Önemli olan: Soruyla yöntemi eşleştirmek.",
             resources: [
               {
@@ -459,7 +459,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Research Planning (goals, participants, recruitment)",
+            title: "Research Planlama (hedefler, katılımcı, recruitment)",
             description: "İyi research: başlamadan önce planlanır ve 'Bir bakalım' diye yapılmaz. Research planı; hedefi, katılımcıyı ve yöntemi netleştirir.",
             resources: [
               {
@@ -489,7 +489,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "4. User Interviews",
+        title: "4. Kullanıcı Görüşmeleri (User Interviews)",
         description: "Görüşmeyi 'sohbet' değil, 'kanıt üretme' aracına çevirmek.",
         topics: [
           {
@@ -519,7 +519,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Writing Interview Questions",
+            title: "Interview Soruları Yazma",
             description: "İyi soru: yönlendirmez, varsayım içermez, 'neden'i açığa çıkarır. Kötü soru, kullanıcıdan onay almaya çalışır.",
             resources: [
               {
@@ -545,7 +545,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Conducting Interviews (Moderation)",
+            title: "Görüşme Yürütme (Moderasyon)",
             description: "Interview sırasında UX Designer: konuşmaz, yönlendirmez, savunmaya geçmez. Rolün: dinlemek, derinleştirmek, sessizliği tolere etmek.",
             resources: [
               {
@@ -573,7 +573,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Note Taking & Recording",
+            title: "Not Alma & Kayıt",
             description: "Interview sırasında her şeyi hatırlamak mümkün değildir. Ama doğru not almak mümkündür. Amaç: kelime kelime yazmak değil, anlamlı parçaları yakalamaktır.",
             resources: [
               {
@@ -601,7 +601,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Post-Interview Synthesis (Intro Level)",
+            title: "Görüşme Sonrası Sentez (Intro)",
             description: "Interview bittiğinde iş bitmez. Asıl değer sonrasında ortaya çıkar. Amaç: tekil cümlelerden tekrar eden desenler çıkarmaktır.",
             resources: [
               {
@@ -631,11 +631,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "5. Surveys & Quant Basics (Light)",
+        title: "5. Anketler & Nicel Temeller (Light) (Surveys & Quant Basics)",
         description: "Junior seviyede 'temel nicel okuryazarlık' ve doğru kullanım.",
         topics: [
           {
-            title: "When to Use Surveys (and When Not To)",
+            title: "Anketleri Ne Zaman Kullanmalı?",
             description: "Survey'ler: davranışı keşfetmek için değil, davranışın yaygınlığını ölçmek için kullanılır. Yanlış yerde kullanılan survey: yanlış güven üretir ve 'kullanıcılar böyle istiyor' yanılgısı yaratır.",
             resources: [
               {
@@ -662,7 +662,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Question Design Basics",
+            title: "Soru Tasarımı Temelleri",
             description: "Survey'de en kritik şey: sorunun kendisidir. Kötü yazılmış sorular: kullanıcıyı yönlendirir, sonuçları çarpıtır ve yanlış kararlar aldırır.",
             resources: [
               {
@@ -687,7 +687,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Scales, Ratings & Common Pitfalls",
+            title: "Ölçekler, Değerlendirme ve Tuzaklar",
             description: "Likert scale, rating ve score'lar: doğru kullanılırsa anlamlı, yanlış kullanılırsa gürültü üretir. Junior'ların en sık yaptığı hata: sonuçları bağlamdan koparmak.",
             resources: [
               {
@@ -714,7 +714,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Basic Data Reading (Counts, Percentages)",
+            title: "Temel Veri Okuma (Sayılar, Yüzdeler)",
             description: "Nicel veri: tek başına karar verdirmez, yön gösterir. Ama: %5 mi %50 mi olduğunu ayırt edemeyen UX Designer veriyi yanlış yorumlar.",
             resources: [
               {
@@ -741,7 +741,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Combining Qual + Quant (Triangulation)",
+            title: "Nitel + Nicel Birleştirme (Triangulation)",
             description: "En güçlü UX kararları: tek bir kaynaktan değil, birden fazla sinyalden gelir. Bu yaklaşıma triangulation denir.",
             resources: [
               {
@@ -771,11 +771,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "6. Synthesis & Insight",
+        title: "6. Sentez & İçgörü (Synthesis & Insight)",
         description: "Dağınık veriyi karar aldıran içgörüye dönüştürmek.",
         topics: [
           {
-            title: "Affinity Diagrams",
+            title: "Affinity Diagramlar",
             description: "Affinity mapping, araştırma notlarını benzerliklerine göre gruplayarak tema çıkarmanın en pratik yollarından biridir. Özellikle interview sonrası 'kaosu düzene' çevirir.",
             resources: [
               {
@@ -798,7 +798,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Thematic Analysis (Coding → Themes)",
+            title: "Tematik Analiz (Kodlama → Tema)",
             description: "Thematic analysis; veriyi kodlayıp (tag'leyip) tekrar eden örüntülerden tema üretme yaklaşımıdır. 'Affinity mapping' daha hızlı, thematic analysis daha sistematik ilerler.",
             resources: [
               {
@@ -819,7 +819,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Turning Findings into Insights (So What?)",
+            title: "Bulguları İçgörüye Çevirme (So What?)",
             description: "Bulgu (finding) ≠ içgörü (insight). Finding: 'Kullanıcılar X ekranında zorlandı.' Insight: 'Zorlanma nedeni Y; çünkü Z; bu da şu aksiyonu gerektiriyor.'",
             resources: [
               {
@@ -842,7 +842,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Prioritization Basics (Impact / Effort)",
+            title: "Önceliklendirme Temelleri (Impact / Effort)",
             description: "Her bulgu aynı önemde değildir. Junior'lar genelde 'en çok duyduğum'u seçer. Doğrusu: etki + maliyet + risk + hedef uyumu.",
             resources: [
               {
@@ -863,11 +863,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "7. Personas & Journey Mapping",
+        title: "7. Persona & Journey Mapping",
         description: "Kullanıcıyı 'temsil edilebilir' hale getirip yolculuğu görünür kılmak.",
         topics: [
           {
-            title: "Proto Personas vs Data-Driven Personas",
+            title: "Proto Persona vs Data-Driven Persona",
             description: "Proto Persona: Hızlı varsayım, discovery başlangıcı. Data-Driven Persona: Research ile doğrulanmış, karar destekleyici. Junior'ların en sık hatası: persona'yı kurgusal karakter sanmak.",
             resources: [
               {
@@ -889,7 +889,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "User Journeys vs Customer Journeys",
+            title: "User Journey vs Customer Journey",
             description: "User Journey: Tek bir ürün içindeki deneyim. Customer Journey: Ürün + temas noktaları + zaman. UX kararları çoğu zaman journey görülmeden alınır.",
             resources: [
               {
@@ -910,7 +910,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Mapping Touchpoints & Emotions",
+            title: "Touchpoint & Duygu Haritalama",
             description: "Journey map sadece adımlardan oluşmaz. Kullanıcının: ne hissettiği, nerede gerildiği, nerede rahatladığı tasarım kararları için kritik sinyaldir.",
             resources: [
               {
@@ -931,7 +931,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Identifying Moments of Truth",
+            title: "Moments of Truth",
             description: "Moment of Truth, kullanıcının: ürüne güvenip güvenmemeye, devam edip etmemeye karar verdiği anlardır. Bu anlar kaçırılırsa: küçük UX hataları büyük kayıplara dönüşür.",
             resources: [
               {
@@ -950,7 +950,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Top Tips to Create Effective Journey Maps",
+            title: "Etkili Journey Map İpuçları",
             description: "Journey map bir çıktı değil, araçtır. Asıl değer: journey'den tasarım gereksinimi çıkarmakta.",
             resources: [
               {
@@ -971,11 +971,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "8. Information Architecture",
+        title: "8. Bilgi Mimarisi (Information Architecture)",
         description: "İçeriği ve navigasyonu kullanıcıların zihnine göre düzenlemek.",
         topics: [
           {
-            title: "IA Basics (Mental Models & Structure)",
+            title: "IA Temelleri (Mental Models & Structure)",
             description: "IA'nın temeli, kullanıcıların: bilgiyi nasıl grupladığını, kavramları nasıl adlandırdığını anlamaktır. Bu yüzden IA kararları 'iç ekip dili' ile değil, kullanıcı dili ile alınır.",
             resources: [
               {
@@ -1000,7 +1000,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Sitemaps & Content Structure",
+            title: "Site Haritaları & İçerik Yapısı",
             description: "Sitemap: sayfaların listesinden ibaret değildir, öncelik ve hiyerarşi gösterir. Yanlış sitemap: kullanıcıyı derinlere iter, önemli içeriği gizler.",
             resources: [
               {
@@ -1021,7 +1021,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Navigation Design",
+            title: "Navigasyon Tasarımı",
             description: "Navigasyon: kullanıcıya 'neredeyim?' ve 'buradan nereye gidebilirim?' sorularının cevabını verir. İyi navigasyon düşünmeden kullanılır.",
             resources: [
               {
@@ -1042,7 +1042,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Labeling & Terminology",
+            title: "Etiketleme & Terminoloji",
             description: "Kullanıcılar menüyü okuyarak değil, tahmin ederek kullanır. Bu yüzden: jargon ve iç ekip terimleri IA'yı bozar.",
             resources: [
               {
@@ -1107,7 +1107,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "9. Interaction Design (Basics)",
+        title: "9. Etkileşim Tasarımı (Temel) (Interaction Design)",
         description: "Akışları, durumları ve ekran davranışlarını doğru kurgulamak.",
         topics: [
           {
@@ -1132,7 +1132,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "State Design (Empty, Loading, Error, Success)",
+            title: "State Tasarımı (Empty, Loading, Error, Success)",
             description: "Ekranın her durumu için tasarım gerekir: Empty (içerik yok), Loading (veri yükleniyor), Error (hata oluştu), Success (başarılı). Bu durumlar tasarlanmazsa: kullanıcı ne olduğunu anlamaz.",
             resources: [
               {
@@ -1178,7 +1178,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Form Design Basics",
+            title: "Form Tasarımı Temelleri",
             description: "Form tasarımı: kullanıcının 'ne yapacağını bildiği' ama 'yapmaktan hoşlanmadığı' bir deneyimdir. Bu yüzden: hata toleransı, netlik ve kolaylık kritiktir.",
             resources: [
               {
@@ -1200,7 +1200,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Error Prevention & Recovery",
+            title: "Hata Önleme & Recovery",
             description: "Hata önleme: Kullanıcının hata yapmasını zorlaştırmak. Error recovery: Hata yaptığında kolayca düzeltebilmesini sağlamak. Kötü tasarım: hata mesajını gösterir ama çözüm sunmaz.",
             resources: [
               {
@@ -1271,7 +1271,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Prototype Hygiene (Naming, Flow Clarity)",
+            title: "Prototip Temizliği (İsimlendirme, Akış Netliği)",
             description: "Kötü hazırlanmış prototype: yanlış test sonuçları üretir, kullanıcıyı değil tasarımcıyı test eder. Basit ama kritik konular: ekran isimleri, bağlantıların tutarlılığı, gereksiz dallanmaların temizlenmesi.",
             resources: [
               {
@@ -1293,11 +1293,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "11. Usability Testing",
+        title: "11. Kullanılabilirlik Testleri (Usability Testing)",
         description: "Tasarımın 'çalışıp çalışmadığını' kanıtlamak.",
         topics: [
           {
-            title: "What is Usability Testing?",
+            title: "Kullanılabilirlik Testi Nedir?",
             description: "Usability testing, kullanıcıların belirli görevleri: yardım almadan, kendi başlarına yapıp yapamadığını gözlemlemektir. Önemli olan: ne söyledikleri değil, ne yaptıklarıdır.",
             resources: [
               {
@@ -1317,7 +1317,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Moderated vs Unmoderated Testing",
+            title: "Moderasyonlu vs Moderasyonsuz Testler",
             description: "Moderated Test: Canlı, derinlemesine gözlem. Unmoderated Test: Daha hızlı, daha geniş örneklem. Her problem için doğru yöntem farklıdır.",
             resources: [
               {
@@ -1343,7 +1343,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Writing Tasks & Scenarios",
+            title: "Görev & Senaryolar Yazma",
             description: "Kötü yazılmış task: kullanıcıyı yönlendirir, gerçekçi değildir, test sonucunu bozar. İyi task: bağlam verir, çözümü söylemez.",
             resources: [
               {
@@ -1362,7 +1362,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Success Criteria & Metrics",
+            title: "Başarı Kriterleri & Metrikler",
             description: "Test 'hissi' değil, sonucu ölçer. Temel usability metrikleri: Task success, Time on task, Errors, User confidence (self-reported).",
             resources: [
               {
@@ -1383,7 +1383,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Observation, Note Taking & Analysis",
+            title: "Gözlem, Not Alma & Analiz",
             description: "Usability test sırasında: kullanıcıyı düzeltmezsin, ipucu vermezsin, savunmaya geçmezsin. Ama her şeyi not alırsın.",
             resources: [
               {
@@ -1403,7 +1403,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Reporting Findings & Recommendations",
+            title: "Bulguların Raporlanması & Öneriler",
             description: "Testin değeri: raporda, aksiyonda, değişimde ortaya çıkar. İyi rapor: problem → kanıt → öneri zinciri kurar, suçlamaz, çözüm sunar.",
             resources: [
               {
@@ -1424,11 +1424,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "12. Heuristics & UX Principles",
+        title: "12. Heuristics & UX Prensipleri (Heuristics & UX Principles)",
         description: "Tasarımı hızlı değerlendirme ve sorunları diline dökebilme.",
         topics: [
           {
-            title: "Nielsen's 10 Usability Heuristics",
+            title: "Nielsen'in 10 Kullanılabilirlik Heuristiği",
             description: "Jakob Nielsen'ın 10 usability heuristic'i, en yaygın UX problemlerini kapsayan evrensel prensiplerdir. Junior'lar için kritik nokta: Heuristic'leri ezberlemek değil, ne zaman hangisi ihlal ediliyor görebilmek.",
             resources: [
               {
@@ -1449,7 +1449,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Heuristic Evaluation (Process)",
+            title: "Heuristic Evaluation (Süreç)",
             description: "Heuristic evaluation: kullanıcıya ihtiyaç duymadan, uzman gözüyle yapılan hızlı bir UX değerlendirme yöntemidir. Ama kullanıcı testinin yerine geçmez.",
             resources: [
               {
@@ -1472,11 +1472,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "13. Accessibility & Inclusive Design",
+        title: "13. Erişilebilirlik & Kapsayıcı Tasarım (Accessibility & Inclusive Design)",
         description: "Herkes için kullanılabilir deneyim tasarlamak (temel seviye).",
         topics: [
           {
-            title: "Accessibility Basics (Why It Matters)",
+            title: "Accessibility Temelleri (Neden Önemli)",
             description: "Erişilebilirlik: sadece engelli kullanıcılar için değildir, geçici durumları (kırık kol, güneş ışığı, yavaş internet) da kapsar. İyi erişilebilirlik, herkes için daha iyi UX demektir.",
             resources: [
               {
@@ -1502,7 +1502,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "WCAG Overview (Intro Level)",
+            title: "WCAG Genel Bakış",
             description: "WCAG (Web Content Accessibility Guidelines), erişilebilirlik için uluslararası standarttır. Temel 4 ilke: Perceivable (Algılanabilir), Operable (Kullanılabilir), Understandable (Anlaşılabilir), Robust (Sağlam). Junior seviyede amaç: kuralları ezberlemek değil, neyi kontrol etmen gerektiğini bilmek.",
             resources: [
               {
@@ -1523,7 +1523,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Color Contrast & Typography",
+            title: "Renk Kontrastı & Tipografi",
             description: "Düşük kontrast: en yaygın erişilebilirlik hatasıdır, çoğu zaman 'estetik' gerekçesiyle yapılır. Ama: okunamayan metin, kullanılamayan metindir.",
             resources: [
               {
@@ -1555,7 +1555,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Keyboard & Focus (Web)",
+            title: "Klavye & Odak Yönetimi (Web)",
             description: "Bir kullanıcı: mouse kullanamayabilir, sadece klavye ile gezebilir. Bu yüzden: focus state'ler, tab sırası UX'in parçasıdır.",
             resources: [
               {
@@ -1581,7 +1581,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Accessible Forms & Errors",
+            title: "Erişilebilir Formlar & Hatalar",
             description: "Formlar, erişilebilirliğin en kırılgan noktalarındandır. Sık yapılan hatalar: label yok, hata mesajı belirsiz, sadece renkle hata göstermek.",
             resources: [
               {
@@ -1623,11 +1623,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "14. UX Writing & Content (Basics)",
+        title: "14. UX Writing & İçerik (Temel) (UX Writing & Content)",
         description: "Mikro metinlerle anlaşılabilirliği ve güveni artırmak.",
         topics: [
           {
-            title: "What is UX Writing?",
+            title: "UX Writing Nedir?",
             description: "UX Writing, kullanıcı deneyimini iyileştirmek için arayüzlerde kullanılan metinlerin tasarlanmasıdır. Butonlar, etiketler, hata mesajları, yardım metinleri gibi mikro metinler, kullanıcının ürünle etkileşimini yönlendirir.",
             resources: [
               {
@@ -1653,7 +1653,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Error Messages & Empty States",
+            title: "Hata Mesajları & Empty States",
             description: "Hata ve boş durum metinleri: kullanıcıyı suçlamamalı, ne olduğunu açıklamalı ve bir sonraki adımı göstermelidir. Kötü metin, iyi tasarımı bile bozar.",
             resources: [
               {
@@ -1673,7 +1673,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Tone, Voice & Consistency",
+            title: "Ton, Ses & Tutarlılık",
             description: "Voice: Ürünün kişiliği. Tone: Bağlama göre değişen ifade şekli. UX writing'de tutarsız ton: güveni zedeler ve ürünü 'parça parça' hissettirir.",
             resources: [
               {
@@ -1694,7 +1694,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Information Clarity (Labels, Buttons, Help Text)",
+            title: "Bilgi Açıklığı (Etiketler, Butonlar, Yardım Metinleri)",
             description: "Kullanıcılar metni okumaz, tarar. Bu yüzden: etiketler net, butonlar anlamlı ve yardım metinleri kısa olmalıdır.",
             resources: [
               {
@@ -1722,11 +1722,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "15. Collaboration & Delivery",
+        title: "15. Ekip İçinde Çalışma & Teslim (Collaboration & Delivery)",
         description: "UX çıktısını ekip içinde 'işe dönüştürmek'.",
         topics: [
           {
-            title: "Working with Product Managers",
+            title: "Product Manager ile Çalışma",
             description: "UX ve PM aynı problemi farklı açılardan ele alır. Sağlıklı iş birliği: problem tanımında başlar, çözümde değil, öncelikte hizalanır. UX'in rolü: kullanıcı perspektifini masaya getirmek, kararı sahiplenmek değil.",
             resources: [
               {
@@ -1746,7 +1746,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Working with Developers",
+            title: "Developerlarla Çalışma",
             description: "Developer'lar tasarımı değil: davranışı, kuralları, öncelikleri uygular. İyi UX–Dev ilişkisi: erken başlar, sürekli devam eder, 'sonradan açıklama'ya kalmaz.",
             resources: [
               {
@@ -1766,7 +1766,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Design Handoff Basics",
+            title: "Design Handoff Temelleri",
             description: "Handoff: dosya paylaşımı değil, bilgi aktarımıdır. İyi handoff: belirsizliği azaltır, yorum farkını minimize eder, geri dönüşleri hızlandırır.",
             resources: [
               {
@@ -1786,7 +1786,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Specs, Annotations & Documentation",
+            title: "Spesifikasyonlar, Açıklamalar & Dokümantasyon",
             description: "Her şey yazılmaz ama: kritik kurallar, edge durumlar, davranış farkları net olmalıdır. Amaç: gereksiz dokümantasyon değil, doğru yerde açıklama.",
             resources: [
               {
@@ -1812,7 +1812,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Feedback, Iteration & Design QA",
+            title: "Geri Bildirim, Iterasyon & Design QA",
             description: "Tasarım geliştirmeye girdikten sonra UX bitmez. Gerekli olanlar: tasarım QA, küçük düzeltmeler, gerçek ürüne bakarak öğrenme.",
             resources: [
               {
@@ -1834,11 +1834,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "16. 🚀 Career, Growth & UX Mindset (Junior Focused)",
+        title: "16. 🚀 Kariyer, Büyüme & UX Zihniyeti (Junior) (Career, Growth & UX Mindset)",
         description: "Junior UX Designer'ların kariyere gerçekçi beklentilerle başlaması, sürdürülebilir şekilde gelişmesi ve doğru zihniyeti erken kazanması.",
         topics: [
           {
-            title: "UX Mindset (Thinking Like a UX Designer)",
+            title: "UX Zihniyeti (UX Designer gibi düşünmek)",
             description: "UX mindset: çözümden önce problemi düşünmek, varsayımı sorgulamak ve kullanıcıyı savunabilmektir. UX Designer her şeyi bilen değil, doğru soruları sorabilen kişidir.",
             resources: [
               {
@@ -1858,7 +1858,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Learning UX Effectively (What to Learn & What Not)",
+            title: "Etkili UX Öğrenme (Ne Öğrenmeli, Ne Öğrenmemeli)",
             description: "UX öğrenirken en büyük hata: her aracı öğrenmeye çalışmak ve temeli atlamaktır. Öncelik sırası: 1) Problem anlayışı, 2) Research & düşünme, 3) Etkileşim & akış, 4) Araçlar (en son).",
             resources: [
               {
@@ -1878,7 +1878,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Portfolio Basics (Junior Level)",
+            title: "Portfolio Temelleri (Junior)",
             description: "Junior portfolyo görsel şov değil, düşünce süreci gösterir. İyi bir case: problem → süreç → karar → öğrenme şeklinde ilerler.",
             resources: [
               {
@@ -1898,7 +1898,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Junior UX Roles & Expectations",
+            title: "Junior UX Rolleri & Beklentiler",
             description: "Junior UX Designer her şeyi kusursuz yapmaz, soru sorar ve öğrenmeye açıktır. Yanlış beklentiler: 'Her şeyi tek başıma yapmalıyım' ve 'Hata yapmamalıyım'.",
             resources: [
               {
