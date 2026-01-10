@@ -9,35 +9,63 @@ function AuthCallbackContent() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
+    let isRedirecting = false;
+
     const handleAuthCallback = async () => {
       try {
-        // Handle OAuth callback - Supabase client automatically handles the URL hash/fragment
-        // Wait a bit for the session to be processed
-        await new Promise((resolve) => setTimeout(resolve, 500));
+        const redirectTo = searchParams.get("redirect") || "/";
 
-        const { data, error } = await supabase.auth.getSession();
+        // Listen for auth state changes - this will fire when Supabase processes the hash fragment
+        const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+          if (isRedirecting) return;
 
-        if (error) {
-          console.error("Auth callback error:", error);
-          const redirectTo = searchParams.get("redirect") || "/";
-          router.push(redirectTo);
-          return;
-        }
-
-        if (data.session) {
-          // User is authenticated, redirect based on redirect parameter or home
-          const redirectTo = searchParams.get("redirect") || "/";
-          router.push(redirectTo);
-        } else {
-          // No session yet, try waiting a bit more (OAuth might still be processing)
-          setTimeout(() => {
-            const redirectTo = searchParams.get("redirect") || "/";
+          if (event === 'SIGNED_IN' && session) {
+            isRedirecting = true;
+            // Clean up the hash fragment from URL
+            window.history.replaceState(null, '', window.location.pathname + window.location.search);
             router.push(redirectTo);
-          }, 1000);
+            subscription.unsubscribe();
+          } else if (event === 'TOKEN_REFRESHED' && session) {
+            isRedirecting = true;
+            window.history.replaceState(null, '', window.location.pathname + window.location.search);
+            router.push(redirectTo);
+            subscription.unsubscribe();
+          }
+        });
+
+        // Also try to get session immediately (in case it's already processed)
+        const { data: { session } } = await supabase.auth.getSession();
+        
+        if (session && !isRedirecting) {
+          isRedirecting = true;
+          window.history.replaceState(null, '', window.location.pathname + window.location.search);
+          router.push(redirectTo);
+          subscription.unsubscribe();
+        } else {
+          // Wait a bit for hash fragment to be processed
+          setTimeout(() => {
+            if (!isRedirecting) {
+              supabase.auth.getSession().then(({ data: { session } }) => {
+                if (session && !isRedirecting) {
+                  isRedirecting = true;
+                  window.history.replaceState(null, '', window.location.pathname + window.location.search);
+                  router.push(redirectTo);
+                  subscription.unsubscribe();
+                } else if (!isRedirecting) {
+                  // Still no session after waiting, redirect anyway
+                  isRedirecting = true;
+                  window.history.replaceState(null, '', window.location.pathname + window.location.search);
+                  router.push(redirectTo);
+                  subscription.unsubscribe();
+                }
+              });
+            }
+          }, 1500);
         }
       } catch (err) {
         console.error("Auth callback error:", err);
         const redirectTo = searchParams.get("redirect") || "/";
+        window.history.replaceState(null, '', window.location.pathname + window.location.search);
         router.push(redirectTo);
       }
     };
