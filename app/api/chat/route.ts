@@ -4,6 +4,8 @@ import { checkRateLimit } from '@/lib/rate-limit';
 import { generateChatCompletion, generateTitleFromFirstMessage } from '@/lib/openai';
 import { MENTOR_SYSTEM_PROMPT } from '@/lib/mentor-prompt';
 
+export const dynamic = 'force-dynamic';
+
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 
