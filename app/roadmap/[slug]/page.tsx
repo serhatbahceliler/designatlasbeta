@@ -55,10 +55,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "UX Design, bir ürünün kullanıcı için ne kadar anlaşılır, verimli ve tatmin edici olduğunu tasarlama sürecidir. Sadece ekran çizmek değil; problemi anlamak, çözümü test etmek ve iyileştirmektir.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "What Is User Experience (UX) Design?", url: "https://www.nngroup.com/articles/definition-user-experience/" },
-                  { title: "UX 101: Introduction to User Experience", url: "https://www.nngroup.com/articles/ux-basics-study-guide/" },
+                  { title: "What is UX Design?", url: "https://www.interaction-design.org/literature/topics/ux-design" },
                 ],
               },
               {
@@ -114,10 +113,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "User-Centered Design (UCD), kararların kişisel fikirlere değil, kullanıcı ihtiyaçlarına ve kanıtlara dayanmasını savunur. \"Ben böyle hissediyorum\" değil, \"Kullanıcı bunu yapamıyor\" demektir.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "User-Centered Design Basics", url: "https://www.nngroup.com/topic/user-centered-design/" },
-                  { title: "Empathy in UX Design", url: "https://www.nngroup.com/articles/sympathy-vs-empathy-ux/" },
+                  { title: "User-Centered Design Basics", url: "https://www.interaction-design.org/literature/topics/user-centered-design" },
+                  { title: "Empathy in UX Design", url: "https://www.interaction-design.org/literature/topics/empathize" },
                 ],
               },
               {
@@ -144,8 +143,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Empathy vs Sympathy in UX" },
-                  { title: "Building Empathy Through Research" },
+                  { title: "Empathy vs Sympathy in UX", url: "https://www.nngroup.com/articles/sympathy-vs-empathy-ux/" },
                 ],
               },
               {
@@ -170,10 +168,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Bu prensipler, tüm UX kararlarının temelidir: Görsel hiyerarşi, Tutarlılık, Geri bildirim, Basitlik. Bunlar yoksa kullanıcı düşünmek zorunda kalır.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Visual Hierarchy in UX" },
-                  { title: "Consistency in UX Design" },
+                  { title: "Visual Hierarchy in UX", url: "https://www.nngroup.com/articles/visual-hierarchy-ux-definition/" },
+                  { title: "Consistency in UX Design", url: "https://uxmag.com/articles/consistency-in-ui-ux-design-the-key-to-user-satisfaction" },
                 ],
               },
               {
