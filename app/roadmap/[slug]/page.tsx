@@ -775,28 +775,14 @@ const roadmaps: Record<string, Roadmap> = {
         description: "Dağınık veriyi karar aldıran içgörüye dönüştürmek.",
         topics: [
           {
-            title: "Affinity Mapping (Affinity Diagramming)",
+            title: "Affinity Diagrams",
             description: "Affinity mapping, araştırma notlarını benzerliklerine göre gruplayarak tema çıkarmanın en pratik yollarından biridir. Özellikle interview sonrası 'kaosu düzene' çevirir.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Kaynaklar",
                 items: [
-                  { title: "Affinity Diagramming (Article)" },
-                  { title: "Affinity Diagramming Pitfalls" },
-                  { title: "Affinity Diagramming (NNG Video Page)" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "NNGroup — Affinity Diagramming (YouTube)" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How to do affinity mapping that doesn't suck" },
-                  { title: "(TR) İlişki Haritası (Affinity Mapping)" },
+                  { title: "Affinity Diagrams", url: "https://www.interaction-design.org/literature/topics/affinity-diagrams" },
+                  { title: "Affinity Diagramming for Collaboratively Sorting UX Findings and Design Ideas", url: "https://www.nngroup.com/articles/affinity-diagram/" },
                 ],
               },
             ],
@@ -816,23 +802,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Thematic analysis; veriyi kodlayıp (tag'leyip) tekrar eden örüntülerden tema üretme yaklaşımıdır. 'Affinity mapping' daha hızlı, thematic analysis daha sistematik ilerler.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 ScienceDirect",
                 items: [
-                  { title: "Thematic Analysis (Article)" },
-                  { title: "Thematic Analysis (NNG Video Page)" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Thematic Analysis (video)" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How to Do a Thematic Analysis of User Interviews" },
-                  { title: "Thematic Analysis in depth & UX Research — Part I" },
+                  { title: "Thematic Analysis (Article)", url: "https://www.sciencedirect.com/science/article/pii/S2949916X25000222" },
                 ],
               },
             ],
@@ -853,20 +825,8 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "Analyzing Qualitative Data with Spreadsheet" },
-                  { title: "UX Research Workshops" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "NNGroup User Research Playlist" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Introduction to UX research analysis techniques" },
+                  { title: "Analyzing Qualitative Data with Spreadsheet", url: "https://www.nngroup.com/articles/thematic-analysis/" },
+                  { title: "Workshopping UX Research with Stakeholders", url: "https://www.nngroup.com/articles/ux-research-workshops/" },
                 ],
               },
             ],
@@ -888,13 +848,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 NNGroup",
                 items: [
-                  { title: "UX Research Workshops" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Forced Ranking / Prioritization Workshop" },
+                  { title: "UX Research Workshops", url: "https://www.nngroup.com/articles/ux-research-workshops/" },
                 ],
               },
             ],
