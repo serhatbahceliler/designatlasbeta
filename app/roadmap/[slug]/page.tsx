@@ -1303,22 +1303,8 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Usability Testing 101" },
-                  { title: "Why You Only Need to Test with 5 Users" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Usability Testing Explained – NNGroup" },
-                  { title: "5-User Testing – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Usability Testing for Beginners" },
-                  { title: "Why Usability Testing Matters More Than You Think" },
+                  { title: "Usability Testing 101", url: "https://www.nngroup.com/articles/usability-testing-101/" },
+                  { title: "Why You Only Need to Test with 5 Users", url: "https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/" },
                 ],
               },
             ],
@@ -1335,23 +1321,15 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Moderated Test: Canlı, derinlemesine gözlem. Unmoderated Test: Daha hızlı, daha geniş örneklem. Her problem için doğru yöntem farklıdır.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Maze",
                 items: [
-                  { title: "Moderated vs Unmoderated Testing" },
-                  { title: "Remote Usability Testing" },
+                  { title: "Moderated vs Unmoderated Testing", url: "https://maze.co/guides/usability-testing/moderated-vs-unmoderated/#:~:text=Moderated%20usability%20tests%20need%20a,in%20product%20design%20and%20development." },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Moderated vs Unmoderated UX Tests – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Moderated vs Unmoderated Usability Testing" },
-                  { title: "Choosing the Right Usability Test" },
+                  { title: "Remote Usability Testing", url: "https://www.nngroup.com/articles/remote-usability-testing-study-guide/" },
                 ],
               },
             ],
@@ -1369,22 +1347,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Kötü yazılmış task: kullanıcıyı yönlendirir, gerçekçi değildir, test sonucunu bozar. İyi task: bağlam verir, çözümü söylemez.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Writing Tasks for Usability Studies" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Writing Better UX Test Tasks – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How to Write Better Usability Test Tasks" },
-                  { title: "Task Design Mistakes in UX Testing" },
+                  { title: "Writing Tasks for Usability Studies", url: "https://www.nngroup.com/articles/better-usability-tasks/" },
                 ],
               },
             ],
@@ -1401,22 +1366,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Test 'hissi' değil, sonucu ölçer. Temel usability metrikleri: Task success, Time on task, Errors, User confidence (self-reported).",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Usability Metrics" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UX Metrics Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "UX Metrics for Usability Testing" },
-                  { title: "Measuring Usability Without Overthinking" },
+                  { title: "Usability metrics", url: "https://www.nngroup.com/articles/usability-metrics/" },
                 ],
               },
             ],
@@ -1435,23 +1387,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Usability test sırasında: kullanıcıyı düzeltmezsin, ipucu vermezsin, savunmaya geçmezsin. Ama her şeyi not alırsın.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Observing Users: The Right Way" },
-                  { title: "Analyzing Usability Test Results" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Observing Usability Tests – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How to Analyze Usability Test Results" },
-                  { title: "From Usability Test Notes to Insights" },
+                  { title: "Observer Guidelines for Usability Research", url: "https://www.nngroup.com/articles/observer-guidelines/" },
+                  { title: "Analyze Usability Test Data in 4 Steps", url: "https://www.nngroup.com/articles/analyze-usability-data/" },
                 ],
               },
             ],
@@ -1468,22 +1407,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Testin değeri: raporda, aksiyonda, değişimde ortaya çıkar. İyi rapor: problem → kanıt → öneri zinciri kurar, suçlamaz, çözüm sunar.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Maze",
                 items: [
-                  { title: "Reporting Usability Test Results" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "How to Present Usability Findings – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How to Turn Usability Findings into Action" },
-                  { title: "Writing UX Reports People Actually Read" },
+                  { title: "Reporting Usability Test Results", url: "https://maze.co/guides/usability-testing/results/" },
                 ],
               },
             ],
@@ -1508,21 +1434,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "10 Usability Heuristics for User Interface Design" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Nielsen's 10 Heuristics Explained – NNGroup" },
-                  { title: "Usability Heuristics Overview – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Nielsen's Heuristics Explained with Examples" },
-                  { title: "How to Actually Use UX Heuristics" },
+                  { title: "10 Usability Heuristics for User Interface Design", url: "https://www.nngroup.com/articles/ten-usability-heuristics/" },
                 ],
               },
             ],
@@ -1541,22 +1453,10 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Heuristic evaluation: kullanıcıya ihtiyaç duymadan, uzman gözüyle yapılan hızlı bir UX değerlendirme yöntemidir. Ama kullanıcı testinin yerine geçmez.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "How to Conduct a Heuristic Evaluation" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Heuristic Evaluation Step by Step – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Heuristic Evaluation for UX Designers" },
-                  { title: "When to Use Heuristic Evaluation" },
+                  { title: "How to Conduct a Heuristic Evaluation", url: "https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/" },
+                  { title: "Severity Ratings for Usability Problems", url: "https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/" },
                 ],
               },
             ],
@@ -1566,71 +1466,6 @@ const roadmaps: Record<string, Roadmap> = {
                 "Bir feature seç",
                 "3 heuristic üzerinden değerlendir",
                 "Her biri için 1 problem yaz",
-              ],
-            },
-          },
-          {
-            title: "Severity Ratings",
-            description: "Her UX problemi aynı önemde değildir. Severity rating, problemleri: küçük rahatsızlık, ciddi engel olarak ayırmayı sağlar. Yanlış yapılan en büyük hata: her problemi 'kritik' görmek.",
-            resources: [
-              {
-                category: "📘 NNGroup",
-                items: [
-                  { title: "Severity Ratings for Usability Problems" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Severity Ratings Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Severity Ratings in UX: Explained Simply" },
-                  { title: "Stop Calling Every UX Issue Critical" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "3 UX problemi yaz",
-                "Hangisi gerçekten kullanıcıyı durduruyor?",
-                "Hangisi sadece rahatsız edici?",
-              ],
-            },
-          },
-          {
-            title: "Translating Issues into Actionable Fixes",
-            description: "Heuristic evaluation'ın değeri: problem listesinden aksiyon üretebilmekte yatar. 'Kafa karıştırıcı' demek yetmez. Neyi değiştireceğini söylemelisin.",
-            resources: [
-              {
-                category: "📘 NNGroup",
-                items: [
-                  { title: "Turning UX Findings into Action" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "From UX Issues to Design Actions – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Writing Actionable UX Findings" },
-                  { title: "UX Feedback That Leads to Change" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Şu bulguyu aksiyona çevir: 'Kullanıcılar bu ekranda kararsız kalıyor.'",
-                "→ Ne değişmeli?",
               ],
             },
           },
@@ -1647,27 +1482,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Accessibility 101" },
-                  { title: "Inclusive Design" },
+                  { title: "Accessibility 101", url: "https://www.nngroup.com/articles/usability-101-introduction-to-usability/" },
                 ],
               },
               {
-                category: "🌐 W3C / WAI",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Introduction to Web Accessibility" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Accessibility Basics for UX – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Accessibility Is Not a Feature" },
-                  { title: "Why Inclusive Design Makes Products Better" },
+                  { title: "Inclusive Design", url: "https://www.interaction-design.org/literature/topics/inclusive-design?srsltid=AfmBOopIjs2eUxQNqBpRwZbeOPHsJxOiteG0en2smCVyxvVGLddj7lJx" },
                 ],
               },
             ],
@@ -1687,27 +1508,8 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "🌐 W3C / WAI",
                 items: [
-                  { title: "WCAG Overview" },
-                  { title: "WCAG at a Glance" },
-                ],
-              },
-              {
-                category: "📘 NNGroup",
-                items: [
-                  { title: "WCAG 2 Overview for UX Designers" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "WCAG Explained Simply – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "WCAG Explained for Designers" },
-                  { title: "You Don't Need to Memorize WCAG" },
+                  { title: "WCAG Overview", url: "https://www.w3.org/WAI/standards-guidelines/wcag/" },
+                  { title: "WCAG at a Glance", url: "https://www.w3.org/WAI/standards-guidelines/wcag/glance/" },
                 ],
               },
             ],
@@ -1725,29 +1527,21 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Düşük kontrast: en yaygın erişilebilirlik hatasıdır, çoğu zaman 'estetik' gerekçesiyle yapılır. Ama: okunamayan metin, kullanılamayan metindir.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Color Contrast and Readability" },
-                  { title: "Typography for UX" },
+                  { title: "Typography for UX", url: "https://www.nngroup.com/articles/typography-terms-ux/" },
                 ],
               },
               {
-                category: "🌐 W3C / WAI",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Contrast (Minimum)" },
+                  { title: "The UX Designer's Guide to Typography", url: "https://www.interaction-design.org/literature/article/the-ux-designer-s-guide-to-typography?srsltid=AfmBOoryTDRy64DFtSX2n4wsRopUiWRl4X3dUF6vn1INGJtKve_TvBjc" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 A FixT",
                 items: [
-                  { title: "Color Contrast Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why Designers Get Contrast Wrong" },
-                  { title: "Accessible Typography Basics" },
+                  { title: "Color Contrast and Readability", url: "https://afixt.com/color-contrast-and-readability-the-cornerstones-of-accessible-design/" },
                 ],
               },
             ],
@@ -1765,29 +1559,15 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Bir kullanıcı: mouse kullanamayabilir, sadece klavye ile gezebilir. Bu yüzden: focus state'ler, tab sırası UX'in parçasıdır.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "🌐 WebAIM",
                 items: [
-                  { title: "Keyboard Accessibility" },
-                  { title: "Focus Indicators" },
+                  { title: "Keyboard Accessibility", url: "https://webaim.org/techniques/keyboard/" },
                 ],
               },
               {
-                category: "🌐 W3C / WAI",
+                category: "✍️ UX Design CC",
                 items: [
-                  { title: "Keyboard Accessibility" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Keyboard Accessibility in UX – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Designing for Keyboard Navigation" },
-                  { title: "Why Focus States Matter" },
+                  { title: "Accessible Custom Focus Indicators", url: "https://uxdesign.cc/accessible-custom-focus-indicators-da4768d1fb7b" },
                 ],
               },
             ],
@@ -1847,28 +1627,20 @@ const roadmaps: Record<string, Roadmap> = {
         description: "Mikro metinlerle anlaşılabilirliği ve güveni artırmak.",
         topics: [
           {
-            title: "Microcopy Principles",
-            description: "Microcopy: butonlar, hata mesajları, boş durumlar, ipuçları gibi küçük ama kritik metinlerdir. İyi microcopy: kısa, net ve aksiyon odaklıdır.",
+            title: "What is UX Writing?",
+            description: "UX Writing, kullanıcı deneyimini iyileştirmek için arayüzlerde kullanılan metinlerin tasarlanmasıdır. Butonlar, etiketler, hata mesajları, yardım metinleri gibi mikro metinler, kullanıcının ürünle etkileşimini yönlendirir.",
             resources: [
+              {
+                category: "📘 Interaction Design Foundation",
+                items: [
+                  { title: "What is UX Writing?", url: "https://www.interaction-design.org/literature/topics/ux-writing#:~:text=UX%20writing%20is%20the%20practice,%2C%20descriptions%2C%20controls%20and%20warnings." },
+                ],
+              },
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Writing: Definition and Principles" },
-                  { title: "Microcopy in UX" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UX Writing Basics – NNGroup" },
-                  { title: "Microcopy Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Microcopy: Small Text, Big Impact" },
-                  { title: "UX Writing for Beginners" },
+                  { title: "UX Writing: Study Guide", url: "https://www.nngroup.com/articles/ux-writing-study-guide/" },
+                  { title: "UX Copy Sizes: Long, Short, and Micro", url: "https://www.nngroup.com/articles/ux-copy-sizes/" },
                 ],
               },
             ],
@@ -1887,21 +1659,8 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Error Message Guidelines" },
-                  { title: "Empty States" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Writing Better Error Messages – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How to Write Helpful Error Messages" },
-                  { title: "Designing Empty States That Guide Users" },
+                  { title: "Empty States", url: "https://www.nngroup.com/articles/empty-state-interface-design/" },
+                  { title: "Error Message Guidelines", url: "https://www.nngroup.com/articles/error-message-guidelines/" },
                 ],
               },
             ],
@@ -1920,21 +1679,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Tone of Voice in UX" },
-                  { title: "Writing Consistent UX Copy" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Tone & Voice in UX Writing – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "UX Voice and Tone Explained" },
-                  { title: "Why Consistent UX Copy Matters" },
+                  { title: "Tone of Voice in UX", url: "https://www.nngroup.com/articles/tone-of-voice-dimensions/" },
                 ],
               },
             ],
@@ -1953,23 +1698,15 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Kullanıcılar metni okumaz, tarar. Bu yüzden: etiketler net, butonlar anlamlı ve yardım metinleri kısa olmalıdır.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 LogRocket",
                 items: [
-                  { title: "Labeling & UX Writing" },
-                  { title: "Writing for Scannability" },
+                  { title: "Labeling & UX Writing", url: "https://blog.logrocket.com/ux-design/label-ux-definition/" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 CareerFoundry",
                 items: [
-                  { title: "Writing Clear UX Copy – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Clear Labels Make Better UX" },
-                  { title: "Designing UX Copy for Scanning" },
+                  { title: "Writing for Scannability", url: "https://careerfoundry.com/en/blog/ux-design/scannability/" },
                 ],
               },
             ],
@@ -1985,180 +1722,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "15. Measurement & Iteration (Basics)",
-        description: "UX'in etkisini anlamak ve iterasyon kültürü.",
-        topics: [
-          {
-            title: "UX Metrics Basics",
-            description: "UX metrikleri, deneyimin performansını ölçmek için kullanılır. Ama her şey ölçülemez, her ölçüm de anlamlı değildir. Temel metrik grupları: Davranış metrikleri (task completion, drop-off), Verimlilik metrikleri (time on task), Hata metrikleri (error rate), Algısal metrikler (confidence, satisfaction).",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "UX Metrics and Measurement" },
-                  { title: "Measuring UX" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UX Metrics Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "UX Metrics for Beginners" },
-                  { title: "Which UX Metrics Actually Matter" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir ekran seç:",
-                "Kullanıcı burada ne yapmalı?",
-                "Başarılı olduğunu nasıl anlarsın? (Bir metrik yaz)",
-              ],
-            },
-          },
-          {
-            title: "Qualitative vs Quantitative Signals",
-            description: "UX kararları tek bir sinyale dayanmaz. Qualitative → neden oluyor? Quantitative → ne kadar oluyor? En güçlü içgörüler, bu iki sinyalin birlikte okunmasıyla çıkar.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Qualitative vs Quantitative Research" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Combining Qual & Quant UX – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why UX Needs Both Qual and Quant" },
-                  { title: "Reading UX Signals Together" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Şu sinyalleri düşün:",
-                "Interview: 'Kafa karıştırıcı'",
-                "Analytics: Drop-off yüksek",
-                "Bunlar birlikte sana ne söylüyor?",
-              ],
-            },
-          },
-          {
-            title: "Validating Design Decisions",
-            description: "Her tasarım kararı doğrulanmak zorunda değildir. Ama riskli kararlar mutlaka doğrulanmalıdır. Doğrulama yöntemleri: usability test, A/B test, öncesi / sonrası karşılaştırma.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Validating Design Decisions" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UX Validation Methods – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How to Validate UX Decisions" },
-                  { title: "Design Validation Without Overtesting" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir karar seç:",
-                "Bu karar yanlış olursa ne olur?",
-                "Bu riski doğrulamak için en basit yol ne?",
-              ],
-            },
-          },
-          {
-            title: "Iteration & Continuous Improvement",
-            description: "UX tek seferlik bir iş değildir. Her tasarım: test edilir, öğrenilir, iyileştirilir. Iteration, başarısızlık değil ilerleme göstergesidir.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Iterative Design" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Iterative UX Design – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Iteration Is the Real UX Skill" },
-                  { title: "Why Good UX Is Never Finished" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir tasarım düşün:",
-                "İlk versiyonda neyi öğrenmek isterdin?",
-                "İkinci versiyonda neyi değiştirirdin?",
-              ],
-            },
-          },
-          {
-            title: "Closing the Feedback Loop",
-            description: "Feedback loop: kullanıcıdan öğren, ürünü geliştir, tekrar ölç. Bu döngü koparsa UX kararları sezgiye döner.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Closing the UX Feedback Loop" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UX Feedback Loops Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Closing the UX Feedback Loop" },
-                  { title: "From Feedback to Action in UX" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir geri bildirim düşün:",
-                "Nereden geliyor?",
-                "Aksiyona dönüşüyor mu, yoksa kayboluyor mu?",
-              ],
-            },
-          },
-        ],
-      },
-      {
-        title: "16. Collaboration & Delivery",
+        title: "15. Collaboration & Delivery",
         description: "UX çıktısını ekip içinde 'işe dönüştürmek'.",
         topics: [
           {
@@ -2168,20 +1732,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX and Product Management Collaboration" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UX & PM Collaboration – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How UX Designers Should Work with PMs" },
-                  { title: "UX vs PM Is the Wrong Question" },
+                  { title: "UX and Product Management Collaboration", url: "https://www.nngroup.com/articles/product-and-ux-study-guide/" },
                 ],
               },
             ],
@@ -2201,20 +1752,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Designers and Developers" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UX & Developer Collaboration – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How Designers Can Work Better with Developers" },
-                  { title: "Why UX Fails at Handoff" },
+                  { title: "From Confrontation to Collaboration: The Developer-Designer Relationship", url: "https://www.nngroup.com/articles/developer-designer-relationship/" },
                 ],
               },
             ],
@@ -2232,22 +1770,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Handoff: dosya paylaşımı değil, bilgi aktarımıdır. İyi handoff: belirsizliği azaltır, yorum farkını minimize eder, geri dönüşleri hızlandırır.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Design Handoff Best Practices" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Design Handoff Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Design Handoff Is a Conversation" },
-                  { title: "What Developers Actually Need from Designers" },
+                  { title: "Design Handoff Best Practices", url: "https://www.interaction-design.org/literature/article/how-to-ensure-a-smooth-design-handoff?srsltid=AfmBOoq9z_cZO24nGyHgBLtG8oV9ubklHE1focorQWXCH9yXQuixi1Mp" },
                 ],
               },
             ],
@@ -2265,22 +1790,15 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Her şey yazılmaz ama: kritik kurallar, edge durumlar, davranış farkları net olmalıdır. Amaç: gereksiz dokümantasyon değil, doğru yerde açıklama.",
             resources: [
               {
+                category: "📘 Pencil and Paper",
+                items: [
+                  { title: "Documenting UX Designs", url: "https://www.pencilandpaper.io/articles/ux-design-documentation-guide" },
+                ],
+              },
+              {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Documenting UX Designs" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UX Documentation Tips – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "UX Specs Without Overdoing It" },
-                  { title: "How Much Documentation Is Enough?" },
+                  { title: "Lean Agile Documentation", url: "https://www.nngroup.com/articles/lean-agile-documentation/" },
                 ],
               },
             ],
@@ -2300,20 +1818,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX QA and Design Reviews" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UX Design QA – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Design QA Is a UX Responsibility" },
-                  { title: "Why Shipped UX Is Not Final UX" },
+                  { title: "UX QA and Design Reviews", url: "https://www.nngroup.com/articles/quality-assurance-ux/" },
                 ],
               },
             ],
@@ -2329,7 +1834,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "17. 🚀 Career, Growth & UX Mindset (Junior Focused)",
+        title: "16. 🚀 Career, Growth & UX Mindset (Junior Focused)",
         description: "Junior UX Designer'ların kariyere gerçekçi beklentilerle başlaması, sürdürülebilir şekilde gelişmesi ve doğru zihniyeti erken kazanması.",
         topics: [
           {
@@ -2339,20 +1844,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Mindset" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Thinking Like a UX Designer – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "What UX Mindset Really Means" },
-                  { title: "UX Is a Way of Thinking" },
+                  { title: "UX Mindset", url: "https://www.nngroup.com/articles/mindsets-fixed-vs-growth/" },
                 ],
               },
             ],
@@ -2370,22 +1862,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "UX öğrenirken en büyük hata: her aracı öğrenmeye çalışmak ve temeli atlamaktır. Öncelik sırası: 1) Problem anlayışı, 2) Research & düşünme, 3) Etkileşim & akış, 4) Araçlar (en son).",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 CareerFoundry",
                 items: [
-                  { title: "How to Learn UX" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Learning UX the Right Way – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Stop Learning Tools First" },
-                  { title: "How Junior Designers Should Learn UX" },
+                  { title: "How To Learn UX Design (7-Step Guide)", url: "https://careerfoundry.com/en/blog/ux-design/how-to-learn-to-be-a-ux-designer/" },
                 ],
               },
             ],
@@ -2405,20 +1884,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UX Portfolio Tips" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UX Portfolio for Juniors – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "What Makes a Good Junior UX Portfolio" },
-                  { title: "Stop Making Dribbble-Style Case Studies" },
+                  { title: "UX Portfolio Tips", url: "https://www.nngroup.com/articles/ux-design-portfolios/" },
                 ],
               },
             ],
@@ -2436,22 +1902,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Junior UX Designer her şeyi kusursuz yapmaz, soru sorar ve öğrenmeye açıktır. Yanlış beklentiler: 'Her şeyi tek başıma yapmalıyım' ve 'Hata yapmamalıyım'.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 UX Design Institute",
                 items: [
-                  { title: "Junior UX Designer Expectations" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Junior UX Roles Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "What Is Expected from a Junior UX Designer" },
-                  { title: "You're Not Supposed to Know Everything" },
+                  { title: "Junior UX Designer Expectations", url: "https://www.uxdesigninstitute.com/blog/expectations-junior-ux-designer/" },
                 ],
               },
             ],
@@ -2461,39 +1914,6 @@ const roadmaps: Record<string, Roadmap> = {
                 "Bir iş ilanı oku:",
                 "Gerçekten junior mu?",
                 "Yoksa senior beklentisi mi var?",
-              ],
-            },
-          },
-          {
-            title: "Feedback, Mentorship & Growth",
-            description: "UX'te gelişim tek başına olmaz, geri bildirimle hızlanır. Mentorluk cevap değil, yön kazandırır.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Giving and Receiving UX Feedback" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Growing as a UX Designer – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How Junior Designers Should Ask for Feedback" },
-                  { title: "Why Feedback Is a UX Skill" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir işini düşün:",
-                "Kime feedback sorabilirsin?",
-                "Ne hakkında feedback istersin?",
               ],
             },
           },
