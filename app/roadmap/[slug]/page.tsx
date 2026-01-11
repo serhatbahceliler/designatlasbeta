@@ -2557,6 +2557,79 @@ const roadmaps: Record<string, Roadmap> = {
         description: "Grid ve layout sistemleri arayüzdeki içeriklerin nerede konumlandığını, birbirleriyle nasıl ilişkilendiğini ve hangi sırayla algılandığını belirleyen yapısal kararlardır.",
         topics: [
           {
+            title: "Icon Basics (Meaning & Clarity)",
+            description: "Icon'lar görsel iletişimin güçlü araçlarıdır. İyi bir icon anlaşılır, tutarlı ve anlamlı olmalıdır. Icon'lar kullanıcıya ne yapması gerektiğini hızlıca iletir, ancak belirsiz icon'lar kafa karışıklığı yaratır.",
+            resources: [
+              {
+                category: "📘 Interaction Design Foundation",
+                items: [
+                  { title: "What is Iconography?", url: "https://www.interaction-design.org/literature/topics/iconography?srsltid=AfmBOopZKwT1BQfaBXDLLJtZBplRkIrv8v92pknRJRy_u6koZYmLGtuk" },
+                ],
+              },
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Icon Usability", url: "https://www.nngroup.com/articles/icon-usability/" },
+                  { title: "Icon Usability: When and How to Evaluate Digital Icons", url: "https://www.nngroup.com/articles/how-to-test-digital-icons/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir icon set'i incele:",
+                "Her icon'un anlamı net mi?",
+                "Kullanıcılar icon'ları anlayabilir mi?",
+              ],
+            },
+          },
+          {
+            title: "Icon Grids & Visual Consistency",
+            description: "Icon set'leri görsel tutarlılık gerektirir. Aynı stroke width, aynı corner radius, aynı padding ve aynı visual style tüm icon'larda kullanılmalıdır. Icon grid'ler icon'ların tutarlı görünmesini sağlar.",
+            resources: [
+              {
+                category: "📘 UX Design CC",
+                items: [
+                  { title: "Designing Perfect Icon Sets", url: "https://uxdesign.cc/design-principles-for-creating-the-perfect-icon-set-d12570e0bcb1" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir icon set'i incele:",
+                "Tüm icon'lar aynı stroke width'e sahip mi?",
+                "Görsel tutarlılık var mı?",
+              ],
+            },
+          },
+          {
+            title: "Icon Styles (Outline vs Filled)",
+            description: "Icon stilleri (outline vs filled) farklı durumları ve öncelikleri göstermek için kullanılır. Outline icon'lar daha hafif, filled icon'lar daha vurgulu görünür. Active/inactive durumları için farklı stiller kullanılabilir.",
+            resources: [
+              {
+                category: "📘 UX Movement",
+                items: [
+                  { title: "Solid vs Outline Icons: Which are Faster to Recognize?", url: "https://uxmovement.com/mobile/solid-vs-outline-icons-which-are-faster-to-recognize/" },
+                ],
+              },
+              {
+                category: "📘 Radiant Digital",
+                items: [
+                  { title: "Solid vs Outline Icons", url: "https://www.radiant.digital/article/solid-vs-outline-icons" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir navigation bar tasarla",
+                "Active tab → filled icon, Inactive tabs → outline icon",
+                "Fark ne kadar belirgin?",
+              ],
+            },
+          },
+          {
             title: "Grid Sistemleri Nedir?",
             description: "Grid'ler hizalamayı kolaylaştırır, tutarlılık sağlar ve responsive tasarımın temelini oluşturur. Yaygın grid türleri: column grid, baseline grid, modular grid.",
             resources: [
@@ -2629,39 +2702,27 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Filled vs Outline Icons" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How to Choose Icon Style" },
+                  { title: "Responsive Web Design" },
                 ],
               },
             ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir navigation bar tasarla",
-                "Active tab → filled icon, Inactive tabs → outline icon",
-                "Fark ne kadar belirgin?",
+                "Bir layout'u responsive yap:",
+                "Breakpoint'ler nerede olmalı?",
+                "İçerik önceliği nasıl değişiyor?",
               ],
             },
           },
           {
-            title: "Layout Türleri (Fixed, Fluid)",
-            description: "Layout türleri: Fixed (sabit genişlik), Fluid (esnek genişlik), Responsive (breakpoint'lere göre değişen). Her layout türünün kendi kullanım alanı vardır. Fixed layout daha kontrollü, fluid layout daha esnek, responsive layout her ekrana uyum sağlar.",
+            title: "Illustrations in UI",
+            description: "İllüstrasyonlar UI'da kullanıcıya rehberlik eder, duygusal bağ kurar ve boş durumları (empty states) daha anlaşılır hale getirir. İyi bir illüstrasyon basit, anlaşılır ve UI'ya katma değer sağlar. Aşırı detaylı illüstrasyonlar dikkat dağıtır ve yükleme süresini artırır.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Fireart Studio",
                 items: [
-                  { title: "Illustrations in UX" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "When to Use Illustrations in UI" },
+                  { title: "Illustrations in UX", url: "https://fireart.studio/blog/how-ui-illustrations-improve-ux/" },
                 ],
               },
             ],
@@ -2675,19 +2736,33 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Breakpoint Düşüncesi",
-            description: "Breakpoint'ler ekran genişliğine göre layout'un değiştiği noktalardır. Breakpoint'leri düşünürken: içerik önceliği, kullanıcı davranışı, cihaz türleri göz önünde bulundurulmalıdır. Yaygın breakpoint'ler: mobile (320-768px), tablet (768-1024px), desktop (1024px+).",
+            title: "Layout Türleri (Fixed, Fluid)",
+            description: "Layout türleri: Fixed (sabit genişlik), Fluid (esnek genişlik), Responsive (breakpoint'lere göre değişen). Her layout türünün kendi kullanım alanı vardır. Fixed layout daha kontrollü, fluid layout daha esnek, responsive layout her ekrana uyum sağlar.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Image Guidelines for UX" },
+                  { title: "Layout Guidelines" },
                 ],
               },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir layout tasarla:",
+                "Fixed mi, fluid mi, responsive mi?",
+                "Neden bu layout türünü seçtin?",
+              ],
+            },
+          },
+          {
+            title: "Images & Thumbnails",
+            description: "Görseller ve thumbnail'lar UI'da içeriği görselleştirir ve kullanıcıya hızlı bilgi verir. Tutarlı aspect ratio, doğru crop stratejisi ve optimize edilmiş görsel boyutları önemlidir. Farklı aspect ratio'lar görsel düzensizlik yaratır ve kullanıcı deneyimini olumsuz etkiler.",
+            resources: [
               {
-                category: "✍️ Medium",
+                category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Designing with Images in UI" },
+                  { title: "Using Imagery in Visual Design", url: "https://www.nngroup.com/articles/imagery-in-visual-design/" },
                 ],
               },
             ],
@@ -2697,6 +2772,26 @@ const roadmaps: Record<string, Roadmap> = {
                 "Bir e-commerce sitesi aç (örn. listing page)",
                 "Ürün görselleri: hepsi aynı aspect ratio'da mı?",
                 "Crop stratejisi tutarlı mı?",
+              ],
+            },
+          },
+          {
+            title: "Breakpoint Düşüncesi",
+            description: "Breakpoint'ler ekran genişliğine göre layout'un değiştiği noktalardır. Breakpoint'leri düşünürken: içerik önceliği, kullanıcı davranışı, cihaz türleri göz önünde bulundurulmalıdır. Yaygın breakpoint'ler: mobile (320-768px), tablet (768-1024px), desktop (1024px+).",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Responsive Design Guidelines" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir layout'u responsive yap:",
+                "Breakpoint'ler nerede olmalı?",
+                "İçerik önceliği nasıl değişiyor?",
               ],
             },
           },
@@ -2745,20 +2840,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UI Components and Patterns" },
+                  { title: "Design-Pattern Guidelines: Study Guide", url: "https://www.nngroup.com/articles/design-pattern-guidelines/" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "UI Components Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "What Makes a Good UI Component" },
-                  { title: "Thinking in Components" },
+                  { title: "What are User Interface (UI) Design Patterns?", url: "https://www.interaction-design.org/literature/topics/ui-design-patterns?srsltid=AfmBOooiZer8AylyGtFg23C7naU3pwI5Wk2fPCwc9CZ2hQXBrs-Q84iD" },
                 ],
               },
             ],
@@ -2775,22 +2863,21 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Her UI sisteminde bazı temel component'ler vardır: buttons, inputs, selects, checkboxes, radio buttons, cards. Bu component'ler tutarlı davranmalı ve aynı kuralları izlemelidir. Her component'in tıklanabilirliği net olmalı ve birbirleriyle karışmamalıdır.",
             resources: [
               {
+                category: "📘 UXPin",
+                items: [
+                  { title: "User Interface Elements Every Designer Should Know", url: "https://www.uxpin.com/studio/blog/user-interface-elements-every-designer-should-know/" },
+                ],
+              },
+              {
+                category: "📘 UX Design CC",
+                items: [
+                  { title: "Button Design — UI component series", url: "https://uxdesign.cc/button-design-user-interface-components-series-85243b6736c7" },
+                ],
+              },
+              {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Button Design Guidelines" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI Buttons Best Practices – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Designing Buttons for UI" },
-                  { title: "Input Fields in UI Design" },
+                  { title: "Button States: Communicate Interaction", url: "https://www.nngroup.com/articles/button-states-communicate-interaction/" },
                 ],
               },
             ],
@@ -2807,22 +2894,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Bir component yalnızca 'kutudan' ibaret değildir. Örnek bir input: label, helper text, placeholder, error state, prefix/suffix içerir. Bu parçalar birlikte çalışır. Placeholder kaybolunca kullanıcı ne yapacak? Label yeterince net mi? Bu sorular component anatomy'sini anlamak için önemlidir.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Iva Beleva",
                 items: [
-                  { title: "Form Design Anatomy" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Input Anatomy Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Component Anatomy in UI" },
-                  { title: "Why Inputs Fail in Forms" },
+                  { title: "The anatomy of a component in a design system", url: "https://www.ivabeleva.com/article/the-anatomy-of-a-component-in-a-design-system.html" },
                 ],
               },
             ],
@@ -2898,6 +2972,32 @@ const roadmaps: Record<string, Roadmap> = {
               ],
             },
           },
+          {
+            title: "Common Component Mistakes",
+            description: "Component tasarımında sık yapılan hatalar: tutarsız state'ler, belirsiz tıklanabilirlik, aşırı karmaşık component'ler, gereksiz varyasyonlar, zayıf hata mesajları ve erişilebilirlik eksiklikleri. Bu hatalar kullanıcı deneyimini olumsuz etkiler ve bakım maliyetini artırır.",
+            resources: [
+              {
+                category: "📘 Medium",
+                items: [
+                  { title: "5 Common UI Design Mistakes and How to Avoid Them", url: "https://medium.com/design-bootcamp/5-common-ui-design-mistakes-and-how-to-avoid-them-38fb10a9d605" },
+                ],
+              },
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Top 10 Application-Design Mistakes", url: "https://www.nngroup.com/articles/top-10-application-design-mistakes/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir component incele:",
+                "Hangi hataları görüyorsun?",
+                "Nasıl iyileştirebilirsin?",
+              ],
+            },
+          },
         ],
       },
       {
@@ -2911,20 +3011,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "UI States" },
+                  { title: "Design Systems 101", url: "https://www.nngroup.com/articles/design-systems-101/" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Figma",
                 items: [
-                  { title: "Component States Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Designing UI States" },
-                  { title: "Why Disabled States Matter" },
+                  { title: "Design Systems 101: What is a design system?", url: "https://www.figma.com/blog/design-systems-101-what-is-a-design-system/" },
                 ],
               },
             ],
@@ -2943,20 +3036,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Error Message Guidelines" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UX Error Messages – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Designing Helpful Error Messages" },
-                  { title: "Inline Validation in Forms" },
+                  { title: "Error-Message Guidelines", url: "https://www.nngroup.com/articles/error-message-guidelines/" },
                 ],
               },
             ],
@@ -2975,21 +3055,8 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Empty States" },
-                  { title: "Progress Indicators" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Designing Empty & Loading States – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Designing Empty States That Work" },
-                  { title: "Loading States in UI" },
+                  { title: "Designing Empty States in Complex Applications: 3 Guidelines", url: "https://www.nngroup.com/articles/empty-state-interface-design/" },
+                  { title: "Progress Indicators", url: "https://www.nngroup.com/articles/progress-indicators/" },
                 ],
               },
             ],
@@ -3002,34 +3069,49 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
+            title: "Foundations (Color, Type, Spacing, Radius)",
+            description: "Foundations tüm UI'ın temelidir ve component'lerden önce gelir. Genellikle şunları içerir: renk rolleri, typography scale, spacing sistemi, radius/elevation. Bir component'e bak: Hangi foundation'lara dayanıyor?",
+            resources: [],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir component'e bak: Hangi foundation'lara dayanıyor?",
+              ],
+            },
+          },
+          {
             title: "Design Token Mantığı (Intro)",
             description: "Design token tasarım kararlarının adlandırılmış halidir. Örnek: primary.color, spacing.sm, radius.md. Token'lar theming'i kolaylaştırır ve tasarım–dev uyumunu artırır. Bir rengi düşün: Hex yerine rol adıyla çağırabilir misin?",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Martin Fowler",
                 items: [
-                  { title: "Affordances" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Affordance in UI Design – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Affordance in Interface Design" },
-                  { title: "Why Users Don't Click" },
+                  { title: "Design Token-Based UI Architecture", url: "https://martinfowler.com/articles/design-token-based-ui-architecture.html#:~:text=Design%20tokens%20are%20design%20decisions,and%20improved%20consistency%20in%20design." },
                 ],
               },
             ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir ekrana bak: Nereler tıklanabilir?",
-                "Bunu sadece bakarak anlayabiliyor musun?",
+                "Bir rengi düşün: Hex yerine rol adıyla çağırabilir misin?",
+              ],
+            },
+          },
+          {
+            title: "Theming & Variants",
+            description: "Theming bir design system'in farklı görsel kimliklerle (light/dark, brand variations) kullanılabilmesini sağlar. Variants ise aynı component'in farklı durumlarını (size, style, state) tanımlar. Bir component düşün: Kaç farklı tema altında çalışabilir?",
+            resources: [
+              {
+                category: "📘 UXPin",
+                items: [
+                  { title: "Design System Theming", url: "https://www.uxpin.com/studio/blog/design-system-theming/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir component düşün: Kaç farklı tema altında çalışabilir?",
               ],
             },
           },
@@ -3038,22 +3120,21 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Design System ürün büyüdükçe tutarlılığı korur, yeni ekip üyelerinin hızlı adapte olmasını sağlar ve tasarım/geliştirme hızını artırır. İyi bir Design System ölçeklenebilir, dokümante edilmiş ve sürdürülebilirdir.",
             resources: [
               {
+                category: "📘 CareerFoundry",
+                items: [
+                  { title: "Microcopy in UX", url: "https://careerfoundry.com/en/blog/ux-design/what-is-microcopy-ux/" },
+                ],
+              },
+              {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Microcopy in UX" },
+                  { title: "The 3 I's of Microcopy: Inform, Influence, and Interact", url: "https://www.nngroup.com/articles/3-is-of-microcopy/" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 UX Design CC",
                 items: [
-                  { title: "Writing Microcopy for UI – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Microcopy That Improves UX" },
-                  { title: "UI Text That Guides Users" },
+                  { title: "A mini-guide to microcopy", url: "https://uxdesign.cc/a-mini-guide-to-microcopy-55496469f03b" },
                 ],
               },
             ],
@@ -3078,20 +3159,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Microinteractions" },
+                  { title: "Microinteractions in User Experience", url: "https://www.nngroup.com/articles/microinteractions/" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Microinteractions Explained – NNGroup" },
+                  { title: "The Role of Micro-interactions in Modern UX", url: "https://www.interaction-design.org/literature/article/micro-interactions-ux?srsltid=AfmBOopLXu8PHd-Pfyo3g-qFMhp1BbKrZCqgMMTe8uayV4fDF4ryWZDF" },
                 ],
               },
               {
-                category: "✍️ Medium",
+                category: "📘 UX Design CC",
                 items: [
-                  { title: "Designing Microinteractions" },
-                  { title: "Why Microinteractions Matter" },
+                  { title: "Micro-Interactions: Why, When and How to Use Them to Improve the User Experience", url: "https://uxdesign.cc/micro-interactions-why-when-and-how-to-use-them-to-boost-the-ux-17094b3baaa0" },
                 ],
               },
             ],
@@ -3110,20 +3190,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Animation and Motion" },
+                  { title: "The Role of Animation and Motion in UX", url: "https://www.nngroup.com/articles/animation-purpose-ux/" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Adobe",
                 items: [
-                  { title: "Motion Design Basics – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "UI Motion Principles" },
-                  { title: "Timing & Easing Explained" },
+                  { title: "What are motion graphics?", url: "https://www.adobe.com/uk/creativecloud/animation/discover/motion-graphics.html" },
                 ],
               },
             ],
@@ -3142,20 +3215,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Animation for Attention" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Using Motion to Guide Attention" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Motion as a UX Tool" },
-                  { title: "Guiding Users with Motion" },
+                  { title: "Animation for Attention", url: "https://www.nngroup.com/articles/animation-usability/" },
                 ],
               },
             ],
@@ -3173,19 +3233,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Animation Pitfalls" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Motion Mistakes in UI" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why Too Much Animation Hurts UX" },
+                  { title: "Animation for Attention", url: "https://www.nngroup.com/articles/animation-usability/" },
                 ],
               },
             ],
@@ -3201,22 +3249,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Motion kararları hız, gecikme ve easing üzerinden algılanır. Yanlış motion yavaşlatır, mide bulandırır ve profesyonellik hissini düşürür. Motion görünmez olmalı, baskın değil. Bir animasyonu izle: Çok mu yavaş? Gereğinden uzun mu?",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Educational Voice",
                 items: [
-                  { title: "Animated UI Components" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Motion in UI Components" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Animating UI Components" },
-                  { title: "Motion and State Transitions" },
+                  { title: "Animated UI Components", url: "https://educationalvoice.co.uk/animated-ui-elements/" },
                 ],
               },
             ],
@@ -3240,20 +3275,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Accessibility Basics" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Accessibility for Designers – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Accessibility Is UX" },
-                  { title: "Designing for Everyone" },
+                  { title: "Accessibility and Inclusivity: Study Guide", url: "https://www.nngroup.com/articles/accessibility-inclusivity-study-guide/" },
                 ],
               },
             ],
@@ -3270,28 +3292,21 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Renk körlüğü ve düşük görüş çok yaygındır ve çoğu UI tasarımında göz ardı edilir. Kurallar: sadece renkle anlam verme, yeterli kontrast sağla, feedback'i çoklu sinyallerle destekle. Bir hata state'i düşün: Renk kapalı olsa da anlaşılır mı?",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 UX Design CC",
                 items: [
-                  { title: "Color Contrast" },
+                  { title: "Colour contrast in UX", url: "https://uxdesign.cc/colour-contrast-in-ux-design-477011020095" },
                 ],
               },
               {
-                category: "🌐 W3C",
+                category: "📘 Tubik Studio",
                 items: [
-                  { title: "Contrast Requirements" },
+                  { title: "Types of Contrast in User Interface Design", url: "https://blog.tubikstudio.com/contrast-in-user-interface-design/" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Halo Lab",
                 items: [
-                  { title: "Color Accessibility – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Designing for Color Blindness" },
-                  { title: "Accessible Color in UI" },
+                  { title: "How contrast works in user experience design", url: "https://www.halo-lab.com/blog/how-contrast-works-in-user-experience-design" },
                 ],
               },
             ],
@@ -3304,25 +3319,18 @@ const roadmaps: Record<string, Roadmap> = {
           },
           {
             title: "Tipografi & Okunabilirlik",
-            description: "Web arayüzlerinde klavye ile gezinme ve focus state'leri hayati önemdedir. Focus olmayan UI klavye kullanıcıları için kullanılamaz hale gelir. Bir formu düşün: Sadece Tab ile tamamlanabiliyor mu? Focus net mi?",
+            description: "Erişilebilir typography yeterli font boyutu, yeterli satır aralığı ve zoom uyumu sağlar. Küçük ve sık metinler en yaygın erişilebilirlik ihlallerindendir. Bir metni %200 büyüt: Bozuluyor mu? Taşıyor mu?",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Harvard University",
                 items: [
-                  { title: "Keyboard Accessibility" },
+                  { title: "Design Readability", url: "https://accessibility.huit.harvard.edu/design-readability" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Willamette University",
                 items: [
-                  { title: "Focus States Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why Focus States Matter" },
-                  { title: "Designing Keyboard-Friendly UI" },
+                  { title: "Readability Guidelines", url: "https://my.willamette.edu/site/digital-accessibility/guidelines/readability" },
                 ],
               },
             ],
@@ -3336,31 +3344,18 @@ const roadmaps: Record<string, Roadmap> = {
           },
           {
             title: "Tıklanabilir Alanlar",
-            description: "Erişilebilir typography yeterli font boyutu, yeterli satır aralığı ve zoom uyumu sağlar. Küçük ve sık metinler en yaygın erişilebilirlik ihlallerindendir. Bir metni %200 büyüt: Bozuluyor mu? Taşıyor mu?",
+            description: "Web arayüzlerinde klavye ile gezinme ve focus state'leri hayati önemdedir. Focus olmayan UI klavye kullanıcıları için kullanılamaz hale gelir. Bir formu düşün: Sadece Tab ile tamamlanabiliyor mu? Focus net mi?",
             resources: [
+              {
+                category: "📘 WebAIM",
+                items: [
+                  { title: "Keyboard Accessibility", url: "https://webaim.org/techniques/keyboard/" },
+                ],
+              },
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Readability and Accessibility" },
-                ],
-              },
-              {
-                category: "🌐 W3C",
-                items: [
-                  { title: "Text Spacing" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Accessible Typography – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Readable UI Typography" },
-                  { title: "Why Small Text Is a UX Smell" },
+                  { title: "Keyboard-Only Navigation for Improved Accessibility", url: "https://www.nngroup.com/articles/keyboard-accessibility/" },
                 ],
               },
             ],
@@ -3377,21 +3372,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Her UI tasarımı için hızlı kontrol listesi: Kontrast yeterli mi? Renk tek başına anlam taşıyor mu? Focus state'leri net mi? Metinler okunabilir mi? Boş ve hata state'leri açıklayıcı mı? Bir ekranı checklist ile tara: İlk bulduğun problem ne?",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Figma",
                 items: [
-                  { title: "Accessibility Checklist" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Accessibility Checklist for Designers" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "UI Accessibility Checklist" },
+                  { title: "Accessibility Checklist", url: "https://www.figma.com/community/file/1390658349718354530" },
                 ],
               },
             ],
@@ -3415,20 +3398,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Web UX Design" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Web UI Design Basics – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Designing Effective Web Interfaces" },
-                  { title: "Common Web UI Mistakes" },
+                  { title: "Web UX: Study Guide", url: "https://www.nngroup.com/articles/web-ux-study-guide/" },
                 ],
               },
             ],
@@ -3447,20 +3417,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Mobile UX Design" },
+                  { title: "Mobile UX: Study Guide", url: "https://www.nngroup.com/articles/mobile-ux-study-guide/" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Toptal",
                 items: [
-                  { title: "Mobile UI Design Basics – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Designing for Mobile First" },
-                  { title: "Thumb-Friendly UI Design" },
+                  { title: "Mobile UI/UX Design Principles", url: "https://www.toptal.com/designers/ui/mobile-ux-design-principles" },
                 ],
               },
             ],
@@ -3479,26 +3442,13 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Apple",
                 items: [
-                  { title: "Human Interface Guidelines" },
+                  { title: "Human Interface Guidelines", url: "https://developer.apple.com/design/human-interface-guidelines" },
                 ],
               },
               {
-                category: "📘 Google",
+                category: "📘 Google Material Design",
                 items: [
-                  { title: "Material Design" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "iOS vs Android UI Differences" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why Platform Guidelines Matter" },
-                  { title: "Designing Cross-Platform UI" },
+                  { title: "Material Design", url: "https://m3.material.io/" },
                 ],
               },
             ],
@@ -3514,22 +3464,15 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Responsive UI ekran boyutuna göre esner. Adaptive UI belirli breakpoint'lerde farklı tasarlanır. Hangisi? Ürün türüne, içerik yoğunluğuna ve teknik kısıtlara bağlıdır. Bir ekran düşün: Sadece küçülse yeterli mi? Yoksa farklı davranmalı mı?",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Responsive vs Adaptive Design" },
+                  { title: "Adaptive vs. Responsive Design", url: "https://www.interaction-design.org/literature/article/adaptive-vs-responsive-design?srsltid=AfmBOoqJQ5htDkGkmfBjtkZMaUPreLdhubNCFiRiejNbQlnwx_Iza_AZ" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 UXPin",
                 items: [
-                  { title: "Responsive Design Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Responsive vs Adaptive UI" },
-                  { title: "Choosing the Right Layout Strategy" },
+                  { title: "Responsive Design vs. Adaptive Design: Best Choice for Designers", url: "https://www.uxpin.com/studio/blog/responsive-vs-adaptive-design-whats-best-choice-designers/" },
                 ],
               },
             ],
@@ -3546,21 +3489,15 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Sık yapılan hatalar: web mantığını mobile taşımak, hover'a güvenmek, küçük dokunma alanları, platforma aykırı navigation. Bu hatalar öğrenme maliyetini artırır ve ürünü yabancı hissettirir. Bir tasarımı düşün: Bu ekran hangi platformda daha zor? Neden?",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 UXPin",
                 items: [
-                  { title: "Cross-Platform UX Issues" },
+                  { title: "Cross-Platform Experience – An In-Depth Guide for Product Designers", url: "https://www.uxpin.com/studio/blog/cross-platform-experience/" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Medium",
                 items: [
-                  { title: "Cross-Platform UI Mistakes" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why One UI Doesn't Fit All" },
+                  { title: "Cross-Platform UX: Designing Consistency Across Devices", url: "https://medium.com/@harsh.mudgal_27075/cross-platform-ux-designing-consistency-across-devices-42ad853c7e15" },
                 ],
               },
             ],
@@ -3747,22 +3684,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "UI handoff sadece Figma linki paylaşmak değildir, tasarımın nasıl çalıştığını anlatmaktır. İyi bir handoff belirsizliği azaltır, tekrar soru ihtiyacını düşürür, geliştirme süresini hızlandırır. Bir tasarımı düşün: Developer ilk hangi soruyu sorar? Bunu önceden nasıl netleştirirsin?",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Figma",
                 items: [
-                  { title: "Design QA and Reviews" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI QA Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why UI QA Matters" },
-                  { title: "Design QA for UI Designers" },
+                  { title: "The designer's handbook for developer handoff", url: "https://www.figma.com/blog/the-designers-handbook-for-developer-handoff/" },
                 ],
               },
             ],
@@ -3775,34 +3699,37 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Spacing, Renk, Tipografi Aktarımı",
-            description: "UI critique beğeni üzerinden değil, prensip ve hedefler üzerinden yapılır. İyi critique problemi tanımlar, etkiyi açıklar, alternatif önerir. Bir UI eleştir: 'Beğenmedim' yerine 'Şu yüzden çalışmıyor' de.",
+            title: "File Organization & Naming",
+            description: "İyi organize edilmiş dosyalar ve tutarlı isimlendirme, developer'ların tasarımı hızlı anlamasını ve doğru uygulamasını sağlar. Dosya yapısı ve isimlendirme kuralları net olmalı, herkes aynı dili konuşmalıdır. Bir tasarım dosyası düşün: Developer aradığı şeyi bulabilir mi?",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Medium",
                 items: [
-                  { title: "How to Give Design Feedback" },
+                  { title: "Guidelines for organizing your design files", url: "https://medium.com/@mariamargarida/guidelines-for-organizing-your-design-files-3dcf25fa0475" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Smashing Magazine",
                 items: [
-                  { title: "Design Critique Basics – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How to Critique UI Designs" },
-                  { title: "Design Feedback Without Ego" },
+                  { title: "UX Design Files Organization Template", url: "https://www.smashingmagazine.com/2025/04/ux-design-files-organization-template/" },
                 ],
               },
             ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir UI eleştir: 'Beğenmedim' yerine",
-                "'Şu yüzden çalışmıyor' de",
+                "Bir tasarım dosyası düşün: Developer aradığı şeyi bulabilir mi?",
+              ],
+            },
+          },
+          {
+            title: "Component Behavior & States",
+            description: "Component'lerin davranışlarını ve state'lerini net bir şekilde dokümante etmek, developer'ların component'leri doğru şekilde uygulamasını sağlar. Her component'in farklı state'leri (hover, active, disabled, error) tanımlanmalı ve açıklanmalıdır. Bir component düşün: Tüm state'leri tanımlı mı?",
+            resources: [],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir component düşün: Tüm state'leri tanımlı mı?",
               ],
             },
           },
@@ -3837,34 +3764,20 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Tasarım – Geliştirme Tutarlılığı",
-            description: "Iteration hatayı kabul etmek değil, öğrenmeyi sahiplenmektir. İyi iteration küçük adımlarla ilerler, geri bildirimle beslenir, kaliteyi artırır. Bir tasarımı düşün: İlk versiyon ne öğretti? İkinci versiyon neyi düzeltti?",
+            title: "Developer-Friendly UI Decisions",
+            description: "UI tasarımında developer'larla işbirliği yapmak, teknik kısıtlamaları anlamak ve uygulanabilir çözümler üretmek kritiktir. Developer'larla erken ve sürekli iletişim kurmak, tasarımın geliştirme sürecinde sorunsuz ilerlemesini sağlar. Bir tasarım kararı düşün: Developer bu kararı uygulayabilir mi?",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Iterative Design" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Iterative UI Design – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Iteration Is Not Rework" },
-                  { title: "Designing in Small Improvements" },
+                  { title: "Collaboration with Developers", url: "https://www.nngroup.com/articles/developer-designer-relationship/" },
                 ],
               },
             ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir tasarımı düşün: İlk versiyon ne öğretti?",
-                "İkinci versiyon neyi düzeltti?",
+                "Bir tasarım kararı düşün: Developer bu kararı uygulayabilir mi?",
               ],
             },
           },
@@ -3873,21 +3786,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Geliştirme sonrası UI mutlaka kontrol edilmelidir, küçük farklar büyük etki yaratır. UI QA suçlama değil, kalite korumadır. Canlı ürüne bak: Tasarımdan farklı olan ne? Bu fark deneyimi etkiliyor mu?",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Fireart Studio",
                 items: [
-                  { title: "Design Consistency Issues" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI Quality Issues Explained" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why UI Quality Degrades Over Time" },
+                  { title: "What Does Design QA Mean?", url: "https://fireart.studio/blog/what-does-design-qa-mean/" },
                 ],
               },
             ],
@@ -3908,27 +3809,7 @@ const roadmaps: Record<string, Roadmap> = {
           {
             title: "UI Portfolio Nedir?",
             description: "İyi bir UI portfolyosu az ama net iş gösterir, görsel kararların nedenlerini açıklar, tutarlılığı ve kaliteyi yansıtır. Junior seviyede 3–5 sağlam case yeterlidir, quantity değil clarity önemlidir. Portfolyondaki bir işi seç: Bu işi neden ekledin? Seni hangi açıdan temsil ediyor?",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Design Handoff Best Practices" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI Handoff Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Design Handoff Is Communication" },
-                  { title: "Why UI Breaks After Handoff" },
-                ],
-              },
-            ],
+            resources: [],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
@@ -3940,27 +3821,7 @@ const roadmaps: Record<string, Roadmap> = {
           {
             title: "Case Study'de UI Nasıl Anlatılır?",
             description: "Düzenli dosyalar geliştiricinin işi anlamasını kolaylaştırır, yanlış ekran uygulanma riskini azaltır. İyi organizasyon: net sayfa isimleri, component bazlı yapı, gereksiz frame'lerden arınmış dosya. Bir dosyana bak: İlk kez açan biri neyin nerede olduğunu anlar mı?",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Organizing Design Files" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Organizing UI Files for Handoff" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How to Organize Figma Files" },
-                  { title: "Clean Files, Better Handoff" },
-                ],
-              },
-            ],
+            resources: [],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
@@ -3971,26 +3832,7 @@ const roadmaps: Record<string, Roadmap> = {
           {
             title: "UI Case Study Yapısı",
             description: "Developer'lar görünümü değil, davranışı uygular. Bu yüzden state'ler, varyantlar, responsive kurallar net olmalıdır. Bir component seç: Hover yoksa ne olur? Disabled ne zaman kullanılır?",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "UI States and Behavior" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Explaining UI States to Developers" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Designing States Developers Understand" },
-                ],
-              },
-            ],
+            resources: [],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
@@ -4002,27 +3844,7 @@ const roadmaps: Record<string, Roadmap> = {
           {
             title: "Junior UI Designer'dan Beklentiler",
             description: "İyi UI geliştirilebilir UI'dır. Dikkat edilmesi gerekenler: aşırı özel spacing'ler, tek seferlik varyantlar, mantıksız kırılımlar. Basit kurallar daha hızlı, daha stabil, daha tutarlı ürünler sağlar. Bir UI kararını düşün: Bu gerçekten gerekli mi? Yoksa görsel tercih mi?",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Collaboration with Developers" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Designing for Developers" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Designing UI Developers Can Build" },
-                  { title: "Why Simple UI Wins" },
-                ],
-              },
-            ],
+            resources: [],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
@@ -4034,26 +3856,7 @@ const roadmaps: Record<string, Roadmap> = {
           {
             title: "UI'da Sürekli Gelişim",
             description: "Geliştirme sonrası UI mutlaka kontrol edilmelidir, küçük farklar büyük etki yaratır. UI QA suçlama değil, kalite korumadır. Canlı ürüne bak: Tasarımdan farklı olan ne? Bu fark deneyimi etkiliyor mu?",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Design QA" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI QA After Build" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why Designers Should QA Their UI" },
-                ],
-              },
-            ],
+            resources: [],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
