@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useAuth } from "@/lib/auth-context";
 import { getAuthHeaders } from "@/lib/api-client";
 import ReactMarkdown from "react-markdown";
@@ -98,7 +98,7 @@ function ThinkingStepsAnimation() {
 }
 
 export default function CaseAtolyesiContent() {
-  const { user, profile } = useAuth();
+  const { user, profile, loading: authLoading } = useAuth();
   const [threads, setThreads] = useState<CaseThread[]>([]);
   const [selectedThreadId, setSelectedThreadId] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -118,15 +118,65 @@ export default function CaseAtolyesiContent() {
   const hasThreads = threads.length > 0;
   const showSidebar = hasThreads && sidebarOpen;
 
+  const loadThreads = useCallback(async () => {
+    try {
+      setIsLoadingThreads(true);
+      setError(""); // Clear previous errors
+      
+      const headers = await getAuthHeaders();
+      
+      // Add timeout to prevent hanging
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+      
+      const response = await fetch("/api/cases", {
+        headers,
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || `Threads yüklenemedi (${response.status})`);
+      }
+
+      const data = await response.json();
+      const loadedThreads = data.threads || [];
+      setThreads(loadedThreads);
+
+      // Auto-open sidebar if threads exist (but don't auto-select any thread)
+      if (loadedThreads.length > 0) {
+        setSidebarOpen(true);
+      }
+    } catch (err: any) {
+      console.error("Error loading threads:", err);
+      if (err.name === 'AbortError') {
+        setError("İstek zaman aşımına uğradı. Lütfen tekrar deneyin.");
+      } else {
+        setError(err.message || "Threads yüklenemedi");
+      }
+      // Ensure loading state is cleared even on error
+      setThreads([]);
+    } finally {
+      setIsLoadingThreads(false);
+    }
+  }, []);
+
   // Load threads on mount
   useEffect(() => {
+    // Wait for auth to finish loading
+    if (authLoading) {
+      return; // Don't do anything while auth is loading
+    }
+
     if (user) {
       loadThreads();
     } else {
       // If no user, ensure loading state is cleared
       setIsLoadingThreads(false);
     }
-  }, [user]);
+  }, [user, authLoading, loadThreads]);
 
   // Load messages when thread is selected
   useEffect(() => {
@@ -199,51 +249,6 @@ export default function CaseAtolyesiContent() {
       }
     };
   }, [hasThreads, currentPromptIndex, input]);
-
-  const loadThreads = async () => {
-    try {
-      setIsLoadingThreads(true);
-      setError(""); // Clear previous errors
-      
-      const headers = await getAuthHeaders();
-      
-      // Add timeout to prevent hanging
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
-      
-      const response = await fetch("/api/cases", {
-        headers,
-        signal: controller.signal,
-      });
-
-      clearTimeout(timeoutId);
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.error || `Threads yüklenemedi (${response.status})`);
-      }
-
-      const data = await response.json();
-      const loadedThreads = data.threads || [];
-      setThreads(loadedThreads);
-
-      // Auto-open sidebar if threads exist (but don't auto-select any thread)
-      if (loadedThreads.length > 0) {
-        setSidebarOpen(true);
-      }
-    } catch (err: any) {
-      console.error("Error loading threads:", err);
-      if (err.name === 'AbortError') {
-        setError("İstek zaman aşımına uğradı. Lütfen tekrar deneyin.");
-      } else {
-        setError(err.message || "Threads yüklenemedi");
-      }
-      // Ensure loading state is cleared even on error
-      setThreads([]);
-    } finally {
-      setIsLoadingThreads(false);
-    }
-  };
 
   const loadMessages = async (threadId: string) => {
     try {
