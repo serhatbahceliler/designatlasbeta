@@ -159,9 +159,21 @@ export default function Header({ showBackLink = false }: HeaderProps) {
                 <div className="relative">
                   <button
                     onClick={() => setUserMenuOpen(!userMenuOpen)}
-                    className="w-8 h-8 rounded-full bg-[#DEFF37] text-black font-bold flex items-center justify-center text-xs hover:bg-[#DEFF37]/90 transition-colors"
+                    className="w-8 h-8 rounded-full bg-[#DEFF37] text-black flex items-center justify-center hover:bg-[#DEFF37]/90 transition-colors"
                   >
-                    {getInitials()}
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                      />
+                    </svg>
                   </button>
 
                   {userMenuOpen && (
