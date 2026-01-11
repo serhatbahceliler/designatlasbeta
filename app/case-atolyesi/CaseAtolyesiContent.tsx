@@ -37,59 +37,57 @@ const THINKING_STEPS = [
 // Thinking steps animation component with typewriter effect
 function ThinkingStepsAnimation() {
   const [displayText, setDisplayText] = useState("");
-  const [currentStepIndex, setCurrentStepIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
-  const [isDeleting, setIsDeleting] = useState(false);
   const stepRef = useRef(0);
   const charIndexRef = useRef(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const isTypingRef = useRef(true);
+  const isDeletingRef = useRef(false);
 
   useEffect(() => {
-    const currentText = THINKING_STEPS[stepRef.current];
-    
     const type = () => {
+      const currentText = THINKING_STEPS[stepRef.current];
+      
       if (charIndexRef.current <= currentText.length) {
         setDisplayText(currentText.slice(0, charIndexRef.current));
         charIndexRef.current++;
         timeoutRef.current = setTimeout(type, 50); // Typing speed: 50ms per character
       } else {
         // Finished typing, wait then start deleting
-        setIsTyping(false);
+        isTypingRef.current = false;
         timeoutRef.current = setTimeout(() => {
-          setIsDeleting(true);
+          isDeletingRef.current = true;
           deleteText();
         }, 2000); // Wait 2 seconds before deleting
       }
     };
 
     const deleteText = () => {
+      const currentText = THINKING_STEPS[stepRef.current];
+      
       if (charIndexRef.current > 0) {
         charIndexRef.current--;
         setDisplayText(currentText.slice(0, charIndexRef.current));
         timeoutRef.current = setTimeout(deleteText, 30); // Deleting speed: 30ms per character
       } else {
         // Finished deleting, move to next step
-        setIsDeleting(false);
+        isDeletingRef.current = false;
         stepRef.current = (stepRef.current + 1) % THINKING_STEPS.length;
-        setCurrentStepIndex(stepRef.current);
         charIndexRef.current = 0;
-        setIsTyping(true);
+        isTypingRef.current = true;
         // Start typing next step
         timeoutRef.current = setTimeout(type, 300);
       }
     };
 
     // Start typing
-    if (isTyping && !isDeleting) {
-      type();
-    }
+    type();
 
     return () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
     };
-  }, [currentStepIndex, isTyping, isDeleting]);
+  }, []); // Run only once on mount
 
   return (
     <div className="text-sm text-white font-medium">
