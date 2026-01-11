@@ -100,6 +100,9 @@ function ThinkingStepsAnimation() {
 
 export default function CaseAtolyesiContent() {
   const { user, profile } = useAuth();
+  const pathname = usePathname();
+  const prevPathnameRef = useRef<string | null>(null);
+  
   const [threads, setThreads] = useState<CaseThread[]>([]);
   const [selectedThreadId, setSelectedThreadId] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -119,6 +122,22 @@ export default function CaseAtolyesiContent() {
   const hasThreads = threads.length > 0;
   const showSidebar = hasThreads && sidebarOpen;
   const abortControllerRef = useRef<AbortController | null>(null);
+
+  // Reset state when navigating to this page
+  useEffect(() => {
+    if (prevPathnameRef.current !== null && prevPathnameRef.current !== pathname) {
+      // Route changed - reset state
+      setThreads([]);
+      setSelectedThreadId(null);
+      setMessages([]);
+      setInput("");
+      setIsLoading(false);
+      setError("");
+      setIsLoadingThreads(true);
+      setSidebarOpen(false);
+    }
+    prevPathnameRef.current = pathname;
+  }, [pathname]);
 
   const loadThreads = useCallback(async () => {
     try {
