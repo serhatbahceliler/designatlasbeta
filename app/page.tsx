@@ -471,21 +471,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Beta / Early Access Section */}
-      <section className="py-16 px-6 bg-zinc-950 border-t border-[#DEFF37]/20">
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="inline-block px-4 py-2 mb-4 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-full">
-            <span className="text-[#DEFF37] font-semibold text-sm">ERKEN ERİŞİM</span>
-          </div>
-          <h3 className="text-2xl font-bold mb-4 text-white">
-            DesignAtlas erken erişimde
-          </h3>
-          <p className="text-gray-400">
-            Roadmap'ler sürekli güncellenir ve geri bildirimlerle gelişir. Öğrenme yolculuğunda her zaman yanında.
-          </p>
-        </div>
-      </section>
-
       {/* Case Atölyesi Section */}
       <section className="py-24 px-6 bg-black border-t border-[#DEFF37]/20 relative overflow-hidden">
         {/* Background decoration */}
