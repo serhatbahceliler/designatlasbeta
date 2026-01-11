@@ -127,6 +127,7 @@ export async function POST(request: NextRequest) {
       console.error("OpenAI error in chat route:", {
         message: openaiError.message,
         stack: openaiError.stack,
+        error: openaiError,
       });
       // Return more specific error message if it's an API key issue
       if (openaiError.message?.includes("API key") || openaiError.message?.includes("not configured")) {
@@ -135,8 +136,12 @@ export async function POST(request: NextRequest) {
           { status: 500 }
         );
       }
+      // Return the actual error message for debugging
       return NextResponse.json(
-        { error: "Şu an cevap üretemedim, tekrar dener misiniz?" },
+        { 
+          error: "Şu an cevap üretemedim, tekrar dener misiniz?",
+          details: process.env.NODE_ENV === 'development' ? openaiError.message : undefined
+        },
         { status: 500 }
       );
     }
