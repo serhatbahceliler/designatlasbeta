@@ -422,36 +422,31 @@ export default function UXSozlukPage() {
                         <span className="text-gray-500 text-sm">({categoryTerms.length})</span>
                       </div>
                       
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {categoryTerms.map((term) => {
                           const hasContent = TERM_CONTENTS[term.id] !== undefined;
                           
                           return (
-                            <div
+                            <button
                               key={term.id}
                               onClick={() => hasContent && handleTermClick(term.id)}
-                              className={`p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl transition-all duration-200 ${
-                                hasContent
-                                  ? 'hover:border-[#DEFF37]/50 cursor-pointer'
-                                  : 'opacity-60'
+                              disabled={!hasContent}
+                              className={`group flex items-center justify-between p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl transition-all duration-300 hover:border-[#DEFF37]/50 hover:bg-zinc-900 text-left ${
+                                !hasContent ? 'opacity-60 cursor-not-allowed' : ''
                               }`}
                             >
-                              <h3 className="text-lg font-semibold text-white mb-2">
+                              <span className="font-medium text-white group-hover:text-[#DEFF37] transition-colors">
                                 {term.term}
-                              </h3>
-                              {hasContent && (
-                                <div className="flex flex-wrap gap-2 mt-3">
-                                  {TERM_CONTENTS[term.id].relatedConcepts.slice(0, 3).map((concept) => (
-                                    <span
-                                      key={concept}
-                                      className="px-2 py-1 bg-zinc-800 text-gray-300 text-xs rounded-full"
-                                    >
-                                      {concept}
-                                    </span>
-                                  ))}
-                                </div>
-                              )}
-                            </div>
+                              </span>
+                              <svg
+                                className="w-5 h-5 text-gray-400 group-hover:text-[#DEFF37] transition-colors flex-shrink-0"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                              </svg>
+                            </button>
                           );
                         })}
                       </div>
@@ -466,84 +461,88 @@ export default function UXSozlukPage() {
 
       {/* Drawer */}
       {isDrawerOpen && selectedTermData && selectedTermContent && (
-        <>
+        <div className="fixed inset-0 z-50 overflow-hidden">
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 transition-opacity"
+            className="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
             onClick={handleCloseDrawer}
           />
           
           {/* Drawer */}
-          <div className="fixed right-0 top-0 bottom-0 w-full max-w-2xl bg-zinc-900 border-l border-zinc-800 z-50 overflow-y-auto">
-            <div className="sticky top-0 bg-zinc-900 border-b border-zinc-800 px-6 py-4 flex items-center justify-between z-10">
-              <h2 className="text-2xl font-bold text-white">{selectedTermData.term}</h2>
-              <button
-                onClick={handleCloseDrawer}
-                className="p-2 hover:bg-zinc-800 rounded-lg transition-colors"
-              >
-                <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-
-            <div className="p-6 space-y-8">
-              {/* Kısa Tanım */}
-              <div>
-                <h3 className="text-lg font-semibold text-[#DEFF37] mb-3">Kısa Tanım</h3>
-                <p className="text-gray-300 leading-relaxed">{selectedTermContent.shortDefinition}</p>
+          <div className="absolute right-0 top-0 h-full w-full max-w-2xl bg-zinc-900 shadow-2xl border-l border-[#DEFF37]/20 overflow-y-auto">
+            <div className="p-8">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-8">
+                <h2 className="text-2xl font-bold text-white">{selectedTermData.term}</h2>
+                <button
+                  onClick={handleCloseDrawer}
+                  className="w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
+                >
+                  <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
               </div>
 
-              {/* Detaylı Açıklama */}
-              <div>
-                <h3 className="text-lg font-semibold text-[#DEFF37] mb-3">Detaylı Açıklama</h3>
-                <div className="text-gray-300 leading-relaxed whitespace-pre-line">
-                  {selectedTermContent.detailedDescription}
-                </div>
-              </div>
-
-              {/* Örnek Senaryo */}
-              {selectedTermContent.exampleScenario && (
+              {/* Content */}
+              <div className="space-y-8">
+                {/* Kısa Tanım */}
                 <div>
-                  <h3 className="text-lg font-semibold text-[#DEFF37] mb-3">Örnek Senaryo</h3>
-                  <p className="text-gray-300 leading-relaxed">{selectedTermContent.exampleScenario}</p>
+                  <h3 className="text-lg font-semibold text-[#DEFF37] mb-3">Kısa Tanım</h3>
+                  <p className="text-gray-300 leading-relaxed">{selectedTermContent.shortDefinition}</p>
                 </div>
-              )}
 
-              {/* Ne Zaman Kullanılır? */}
-              {selectedTermContent.whenToUse && selectedTermContent.whenToUse.length > 0 && (
+                {/* Detaylı Açıklama */}
                 <div>
-                  <h3 className="text-lg font-semibold text-[#DEFF37] mb-3">Ne Zaman Kullanılır?</h3>
-                  <ul className="space-y-2">
-                    {selectedTermContent.whenToUse.map((item, index) => (
-                      <li key={index} className="flex items-start gap-3 text-gray-300">
-                        <span className="text-[#DEFF37] mt-1">•</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* İlgili Kavramlar */}
-              {selectedTermContent.relatedConcepts && selectedTermContent.relatedConcepts.length > 0 && (
-                <div>
-                  <h3 className="text-lg font-semibold text-[#DEFF37] mb-3">İlgili Kavramlar</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedTermContent.relatedConcepts.map((concept) => (
-                      <span
-                        key={concept}
-                        className="px-3 py-1.5 bg-zinc-800 border border-zinc-700 text-gray-300 text-sm rounded-full"
-                      >
-                        {concept}
-                      </span>
-                    ))}
+                  <h3 className="text-lg font-semibold text-[#DEFF37] mb-3">Detaylı Açıklama</h3>
+                  <div className="text-gray-300 leading-relaxed whitespace-pre-line">
+                    {selectedTermContent.detailedDescription}
                   </div>
                 </div>
-              )}
+
+                {/* Örnek Senaryo */}
+                {selectedTermContent.exampleScenario && (
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#DEFF37] mb-3">Örnek Senaryo</h3>
+                    <p className="text-gray-300 leading-relaxed">{selectedTermContent.exampleScenario}</p>
+                  </div>
+                )}
+
+                {/* Ne Zaman Kullanılır? */}
+                {selectedTermContent.whenToUse && selectedTermContent.whenToUse.length > 0 && (
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#DEFF37] mb-3">Ne Zaman Kullanılır?</h3>
+                    <ul className="space-y-2">
+                      {selectedTermContent.whenToUse.map((item, index) => (
+                        <li key={index} className="flex items-start gap-3 text-gray-300">
+                          <span className="text-[#DEFF37] mt-1">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* İlgili Kavramlar */}
+                {selectedTermContent.relatedConcepts && selectedTermContent.relatedConcepts.length > 0 && (
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#DEFF37] mb-3">İlgili Kavramlar</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedTermContent.relatedConcepts.map((concept) => (
+                        <span
+                          key={concept}
+                          className="px-3 py-1.5 bg-zinc-800 border border-zinc-700 text-gray-300 text-sm rounded-full"
+                        >
+                          {concept}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-        </>
+        </div>
       )}
     </div>
   );
