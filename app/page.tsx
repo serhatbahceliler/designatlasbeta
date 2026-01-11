@@ -486,6 +486,90 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Case Atölyesi Section */}
+      <section className="py-24 px-6 bg-black border-t border-[#DEFF37]/20 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-[#DEFF37]/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-[#DEFF37]/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-full mb-6">
+              <svg className="w-4 h-4 text-[#DEFF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+              </svg>
+              <span className="text-[#DEFF37] font-semibold text-sm">Case Atölyesi</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Portfolyon için
+              <br />
+              <span className="text-[#DEFF37]">gerçekçi case brief'ler</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Case Atölyesi, AI destekli mentorunla birlikte portfolyon için profesyonel case brief'ler oluşturmanı sağlar.
+              <br />
+              <span className="text-gray-400">Gerçek problemler, gerçek çözümler, gerçek portfolyo projeleri.</span>
+            </p>
+          </div>
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-[#DEFF37]/30 transition-colors">
+              <div className="w-12 h-12 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-[#DEFF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">AI Mentor Desteği</h3>
+              <p className="text-gray-400 leading-relaxed">
+                Deneyimli bir mentor gibi sana rehberlik eder, case brief'ini adım adım şekillendirir.
+              </p>
+            </div>
+
+            <div className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-[#DEFF37]/30 transition-colors">
+              <div className="w-12 h-12 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-[#DEFF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Structured Brief</h3>
+              <p className="text-gray-400 leading-relaxed">
+                Problem, hedef kullanıcı, hedefler, kısıtlar ve metriklerle tam bir case brief şablonu.
+              </p>
+            </div>
+
+            <div className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-[#DEFF37]/30 transition-colors">
+              <div className="w-12 h-12 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-[#DEFF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Geçmiş Saklama</h3>
+              <p className="text-gray-400 leading-relaxed">
+                Tüm case sohbetlerin kaydedilir, istediğin zaman geri dönüp düzenleyebilirsin.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <Link
+              href="/case-atolyesi"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-[#DEFF37] text-black font-bold text-lg rounded-xl hover:bg-[#DEFF37]/90 transition-colors shadow-[0_0_20px_rgba(222,255,55,0.3)]"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+              </svg>
+              Case Atölyesi'ni Keşfet
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Roadmap Preview Section */}
       <section id="roadmaps" className="py-24 px-6 bg-zinc-950 border-t border-[#DEFF37]/20">
         <div className="max-w-7xl mx-auto">
