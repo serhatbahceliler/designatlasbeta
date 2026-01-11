@@ -133,17 +133,15 @@ export default function Header({ showBackLink = false }: HeaderProps) {
                     </span>
                   </div>
 
-                  {/* Sheen effect on hover - gradient shift */}
-                  <div
-                    className={`absolute inset-0 rounded-full opacity-0 transition-opacity duration-700 ${
-                      !isCaseAtolyesiActive && "group-hover:opacity-100"
-                    }`}
-                    style={{
-                      background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%)",
-                      backgroundSize: "200% 100%",
-                      animation: !isCaseAtolyesiActive ? "sheen 2s ease-in-out infinite" : "none",
-                    }}
-                  />
+                {/* Sheen effect - continuous animation */}
+                <div
+                  className="absolute inset-0 rounded-full opacity-30"
+                  style={{
+                    background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)",
+                    backgroundSize: "200% 100%",
+                    animation: "sheen 3s ease-in-out infinite",
+                  }}
+                />
                 </Link>
 
                 {/* Minimalist Profile Avatar */}
