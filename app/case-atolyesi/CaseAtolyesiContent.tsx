@@ -361,9 +361,20 @@ export default function CaseAtolyesiContent() {
 
   return (
     <>
-      {/* Animated Gradient Background */}
+      {/* Animated Background Elements - Same as homepage */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
-        <div className="absolute inset-0 bg-gradient-animated"></div>
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#DEFF37]/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#DEFF37]/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'linear-gradient(#DEFF37 1px, transparent 1px), linear-gradient(90deg, #DEFF37 1px, transparent 1px)',
+            backgroundSize: '50px 50px',
+          }}></div>
+        </div>
       </div>
 
       <div className="flex-1 flex overflow-hidden relative">
@@ -473,14 +484,14 @@ export default function CaseAtolyesiContent() {
                         onChange={(e) => setInput(e.target.value)}
                         placeholder={animatedPlaceholder || "Herhangi bir şey sor"}
                         disabled={isLoading}
-                        className="w-full px-4 py-4 bg-zinc-900/80 backdrop-blur-sm border border-zinc-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors disabled:opacity-50 text-lg"
+                        className="w-full px-5 py-4 bg-black/20 backdrop-blur-md border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#DEFF37]/50 focus:bg-black/30 transition-all disabled:opacity-50 text-lg shadow-lg"
                         autoFocus
                       />
                     </div>
                     <button
                       type="submit"
                       disabled={!input.trim() || isLoading}
-                      className="px-8 py-4 bg-[#DEFF37] text-black font-semibold rounded-xl hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                      className="px-8 py-4 bg-[#DEFF37] text-black font-semibold rounded-xl hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shadow-lg"
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -564,7 +575,7 @@ export default function CaseAtolyesiContent() {
             )}
 
             {/* Input Area */}
-            <div className="p-4 border-t border-zinc-800 bg-zinc-900/50">
+            <div className="p-4 border-t border-white/10 bg-black/20 backdrop-blur-md">
               <form onSubmit={handleSubmit} className="flex gap-3">
                 <input
                   type="text"
@@ -572,12 +583,12 @@ export default function CaseAtolyesiContent() {
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Mesajınızı yazın..."
                   disabled={isLoading}
-                  className="flex-1 px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors disabled:opacity-50"
+                  className="flex-1 px-4 py-3 bg-black/20 backdrop-blur-md border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#DEFF37]/50 focus:bg-black/30 transition-all disabled:opacity-50 shadow-lg"
                 />
                 <button
                   type="submit"
                   disabled={!input.trim() || isLoading}
-                  className="px-6 py-3 bg-[#DEFF37] text-black font-semibold rounded-lg hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-6 py-3 bg-[#DEFF37] text-black font-semibold rounded-xl hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
                 >
                   Gönder
                 </button>
@@ -587,37 +598,6 @@ export default function CaseAtolyesiContent() {
         )}
       </main>
       </div>
-
-      {/* CSS for animated gradient */}
-      <style jsx>{`
-        @keyframes gradient-shift {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-
-        .bg-gradient-animated {
-          background: linear-gradient(
-            -45deg,
-            #0a0a0f,
-            #1a1a2e,
-            #16213e,
-            #0f3460,
-            #2d1b4e,
-            #533483,
-            #3d2a5f,
-            #0a0a0f
-          );
-          background-size: 400% 400%;
-          animation: gradient-shift 20s ease infinite;
-        }
-      `}</style>
     </>
   );
 }

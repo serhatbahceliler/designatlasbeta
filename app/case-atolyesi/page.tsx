@@ -30,7 +30,7 @@ export default function CaseAtolyesiPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <Header />
       <Suspense
         fallback={
