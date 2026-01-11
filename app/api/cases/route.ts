@@ -15,7 +15,13 @@ export async function GET(request: NextRequest) {
     }
 
     const token = authHeader.replace('Bearer ', '');
-    const supabase = createClient(supabaseUrl, supabaseAnonKey);
+    const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+      global: {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
+    });
     
     const { data: { user }, error: authError } = await supabase.auth.getUser(token);
     
@@ -51,7 +57,13 @@ export async function POST(request: NextRequest) {
     }
 
     const token = authHeader.replace('Bearer ', '');
-    const supabase = createClient(supabaseUrl, supabaseAnonKey);
+    const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+      global: {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
+    });
     
     const { data: { user }, error: authError } = await supabase.auth.getUser(token);
     
@@ -66,7 +78,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Title gereklidir" }, { status: 400 });
     }
 
-    // Create new thread
+    // Create new thread (RLS will verify auth.uid() = user_id)
     const { data: thread, error } = await supabase
       .from("case_threads")
       .insert([
