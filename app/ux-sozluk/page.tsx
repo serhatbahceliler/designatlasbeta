@@ -623,12 +623,26 @@ function filterTermsByRange(terms: Term[], range: FilterRange): Term[] {
 
 export default function UXSozlukPage() {
   const [activeFilter, setActiveFilter] = useState<FilterRange>('all');
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedTerm, setSelectedTerm] = useState<string | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const filteredTerms = useMemo(() => {
-    return filterTermsByRange(UX_TERMS, activeFilter);
-  }, [activeFilter]);
+    let terms = UX_TERMS;
+
+    // Apply search filter first if search query exists
+    if (searchQuery.trim()) {
+      const query = searchQuery.trim().toLowerCase();
+      terms = terms.filter((term) =>
+        term.term.toLowerCase().includes(query)
+      );
+    } else {
+      // Apply quick filter only if no search query
+      terms = filterTermsByRange(UX_TERMS, activeFilter);
+    }
+
+    return terms;
+  }, [activeFilter, searchQuery]);
 
   const categories = useMemo(() => {
     const uniqueCategories = Array.from(new Set(UX_TERMS.map((t) => t.category)));
@@ -681,16 +695,68 @@ export default function UXSozlukPage() {
             </p>
           </div>
 
+          {/* Search */}
+          <div className="mb-8 max-w-2xl mx-auto">
+            <div className="relative">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Terim ara..."
+                className="w-full px-6 py-4 pl-12 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37]/50 focus:ring-2 focus:ring-[#DEFF37]/20 transition-all"
+              />
+              <svg
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center text-gray-500 hover:text-gray-300 transition-colors"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              )}
+            </div>
+          </div>
+
           {/* Quick Filters */}
           <div className="mb-8">
             <div className="flex flex-wrap items-center justify-center gap-3">
               {filterButtons.map((filter) => (
                 <button
                   key={filter.value}
-                  onClick={() => setActiveFilter(filter.value)}
+                  onClick={() => {
+                    setActiveFilter(filter.value);
+                    setSearchQuery(''); // Clear search when filter is clicked
+                  }}
+                  disabled={!!searchQuery} // Disable filters when searching
                   className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 ${
-                    activeFilter === filter.value
+                    activeFilter === filter.value && !searchQuery
                       ? 'bg-[#DEFF37] text-black'
+                      : searchQuery
+                      ? 'bg-zinc-900/50 text-gray-500 cursor-not-allowed'
                       : 'bg-zinc-900 text-gray-300 hover:bg-zinc-800'
                   }`}
                 >
