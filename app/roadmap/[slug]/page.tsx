@@ -4039,6 +4039,20 @@ const roadmaps: Record<string, Roadmap> = {
           {
             title: "Product Discovery Nedir?",
             description: "Product Discovery, doğru problemi bulmak ve doğru çözümü keşfetmek için yapılan süreçtir. Discovery aşamasında kullanıcı ihtiyaçları, iş hedefleri ve teknik kısıtlar birlikte ele alınır. Amaç: yanlış problemi çözmekten kaçınmak ve en çok değer yaratan çözümü bulmaktır.",
+            resources: [
+              {
+                category: "📘 Miro",
+                items: [
+                  { title: "What is product discovery", url: "https://miro.com/product-development/what-is-product-discovery/" },
+                ],
+              },
+              {
+                category: "📘 ProductPlan",
+                items: [
+                  { title: "Product Discovery", url: "https://www.productplan.com/glossary/product-discovery/" },
+                ],
+              },
+            ],
           },
           {
             title: "Discovery vs Delivery",
@@ -4093,9 +4107,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Birçok ürün kararı veri değil varsayım içerir. Örnek varsayımlar: 'Kullanıcı bunu anlar', 'Bu daha hızlıdır', 'Bu daha kolaydır'. Product Thinking varsayımı fark eder, test edilebilir hale getirir. Varsayım haritalama varsayımları görünür yapar, hangilerinin riskli olduğunu gösterir.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Assumptions in UX" },
+                  { title: "Assumptions in UX", url: "https://www.interaction-design.org/literature/topics/assumptions?srsltid=AfmBOorcen3SFiTkK05j9ZsDC_Ak4fHZFrbEf_ApIOwqYyPiP5wpbt6H" },
                 ],
               },
             ],
