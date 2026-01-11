@@ -637,7 +637,7 @@ export default function UXSozlukPage() {
                               }`}
                             >
                               <span className="font-medium text-white group-hover:text-[#DEFF37] transition-colors">
-                                {term.term}
+                                {term.term} Nedir?
                               </span>
                               <svg
                                 className="w-5 h-5 text-gray-400 group-hover:text-[#DEFF37] transition-colors flex-shrink-0"
