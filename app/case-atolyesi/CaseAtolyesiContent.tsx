@@ -118,6 +118,7 @@ export default function CaseAtolyesiContent() {
   const hasThreads = threads.length > 0;
   const showSidebar = hasThreads && sidebarOpen;
   const hasLoadedRef = useRef(false);
+  const abortControllerRef = useRef<AbortController | null>(null);
 
   const loadThreads = useCallback(async () => {
     try {
@@ -304,6 +305,10 @@ export default function CaseAtolyesiContent() {
   };
 
   const sendFirstMessage = async (messageText: string) => {
+    // Create new AbortController for this request
+    const abortController = new AbortController();
+    abortControllerRef.current = abortController;
+
     try {
       setIsLoading(true);
       setError("");
@@ -314,6 +319,7 @@ export default function CaseAtolyesiContent() {
         method: "POST",
         headers,
         body: JSON.stringify({ title: "Yeni Case" }),
+        signal: abortController.signal,
       });
 
       if (!createResponse.ok) {
@@ -354,6 +360,7 @@ export default function CaseAtolyesiContent() {
           message: messageText,
           isFirstMessage: true,
         }),
+        signal: abortController.signal,
       });
 
       if (!chatResponse.ok) {
@@ -401,14 +408,24 @@ export default function CaseAtolyesiContent() {
       }
     } catch (err: any) {
       console.error("Error sending first message:", err);
-      setError(err.message || "Mesaj gönderilemedi");
-      setMessages([]);
+      if (err.name === 'AbortError') {
+        setError("İstek iptal edildi");
+        setMessages([]);
+      } else {
+        setError(err.message || "Mesaj gönderilemedi");
+        setMessages([]);
+      }
     } finally {
       setIsLoading(false);
+      abortControllerRef.current = null;
     }
   };
 
   const sendMessage = async (messageText: string, threadId: string, isFirstMessage: boolean) => {
+    // Create new AbortController for this request
+    const abortController = new AbortController();
+    abortControllerRef.current = abortController;
+
     try {
       setIsLoading(true);
       setError("");
@@ -432,6 +449,7 @@ export default function CaseAtolyesiContent() {
           message: messageText,
           isFirstMessage,
         }),
+        signal: abortController.signal,
       });
 
       if (!response.ok) {
@@ -483,11 +501,27 @@ export default function CaseAtolyesiContent() {
       }
     } catch (err: any) {
       console.error("Error sending message:", err);
-      setError(err.message || "Mesaj gönderilemedi");
+      if (err.name === 'AbortError') {
+        setError("İstek iptal edildi");
+      } else {
+        setError(err.message || "Mesaj gönderilemedi");
+      }
       // Remove temp message on error
       setMessages((prev) => prev.filter((m) => !m.id.startsWith("temp")));
     } finally {
       setIsLoading(false);
+      abortControllerRef.current = null;
+    }
+  };
+
+  const cancelRequest = () => {
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+      abortControllerRef.current = null;
+      setIsLoading(false);
+      setError("İstek iptal edildi");
+      // Remove temp messages
+      setMessages((prev) => prev.filter((m) => !m.id.startsWith("temp")));
     }
   };
 
@@ -646,15 +680,25 @@ export default function CaseAtolyesiContent() {
                         autoFocus
                       />
                     </div>
-                    <button
-                      type="submit"
-                      disabled={!input.trim() || isLoading}
-                      className="px-8 py-4 bg-[#DEFF37] text-black font-semibold rounded-xl hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shadow-lg"
-                    >
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </button>
+                    {isLoading ? (
+                      <button
+                        type="button"
+                        onClick={cancelRequest}
+                        className="px-8 py-4 bg-red-600 text-white font-semibold rounded-xl hover:bg-red-700 transition-colors flex items-center justify-center shadow-lg"
+                      >
+                        Durdur
+                      </button>
+                    ) : (
+                      <button
+                        type="submit"
+                        disabled={!input.trim()}
+                        className="px-8 py-4 bg-[#DEFF37] text-black font-semibold rounded-xl hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shadow-lg"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      </button>
+                    )}
                   </form>
                 </div>
               </div>
@@ -775,13 +819,23 @@ export default function CaseAtolyesiContent() {
                     className="w-full px-4 py-3 bg-black/20 backdrop-blur-md border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#DEFF37]/50 focus:bg-black/30 transition-all disabled:opacity-50 shadow-lg"
                   />
                 </div>
-                <button
-                  type="submit"
-                  disabled={!input.trim() || isLoading}
-                  className="px-6 py-3 bg-[#DEFF37] text-black font-semibold rounded-xl hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
-                >
-                  Gönder
-                </button>
+                {isLoading ? (
+                  <button
+                    type="button"
+                    onClick={cancelRequest}
+                    className="px-6 py-3 bg-red-600 text-white font-semibold rounded-xl hover:bg-red-700 transition-colors shadow-lg"
+                  >
+                    Durdur
+                  </button>
+                ) : (
+                  <button
+                    type="submit"
+                    disabled={!input.trim()}
+                    className="px-6 py-3 bg-[#DEFF37] text-black font-semibold rounded-xl hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+                  >
+                    Gönder
+                  </button>
+                )}
               </form>
             </div>
           </>
