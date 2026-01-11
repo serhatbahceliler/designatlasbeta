@@ -36,10 +36,6 @@ export async function POST(request: NextRequest) {
     }
 
     const { user } = session;
-    
-    if (authError || !user) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
 
     // Check rate limit
     const rateLimit = checkRateLimit(user.id);
