@@ -674,7 +674,7 @@ export default function UXSozlukPage() {
             <div className="p-8">
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
-                <h2 className="text-2xl font-bold text-white">{selectedTermData.term}</h2>
+                <h2 className="text-2xl font-bold text-white">{selectedTermData.term} Nedir?</h2>
                 <button
                   onClick={handleCloseDrawer}
                   className="w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
