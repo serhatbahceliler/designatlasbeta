@@ -4151,9 +4151,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Araştırma bir faz değil, bir düşünme biçimidir. Yanlış yaklaşım: 'Tasarım yaptık, şimdi test edelim'. Doğru yaklaşım: 'Henüz emin değiliz, önce anlayalım'. Research mindset emin olmamayı kabul eder, varsayımları görünür kılar, hızlı öğrenmeyi önemser. Araştırma yapılması gereken anlar: Yeni bir problem tanımlanıyorsa, Kullanıcı davranışı beklenenden farklıysa, Ekip 'neden böyle?' diye tartışıyorsa.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "When to Do User Research" },
+                  { title: "Kullanıcı araştırması nedir?", url: "https://www.interaction-design.org/literature/topics/user-research" },
                 ],
               },
             ],
@@ -4168,6 +4168,14 @@ const roadmaps: Record<string, Roadmap> = {
           {
             title: "Nitel & Nicel Araştırma",
             description: "Qualitative: derinlik, neden, bağlam. Quantitative: yaygınlık, trend, karşılaştırma. Product Designer ikisini birlikte okumayı öğrenir. Nitel araştırma 'neden?' sorusunu, nicel araştırma 'ne kadar?' sorusunu cevaplar.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Quantitative & Qualitative Research: Study Guide", url: "https://www.nngroup.com/articles/quantitative-research-study-guide/" },
+                ],
+              },
+            ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
@@ -4183,7 +4191,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "User Interviews" },
+                  { title: "User Interviews", url: "https://www.nngroup.com/articles/user-interviews/" },
                 ],
               },
             ],
@@ -4200,10 +4208,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Kullanıcılar her zaman doğruyu söylemez ama her zaman bir şey yapar. Davranışsal veri kullanıcının ne yaptığını gösterir (contextual inquiry, analytics), tutumsal veri kullanıcının ne düşündüğünü gösterir (interview, survey). İkisi birlikte anlamlıdır.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Kullanıcı Deneyimi",
                 items: [
-                  { title: "Contextual Inquiry" },
-                  { title: "Surveys" },
+                  { title: "Tutumsal ve Davranışsal UX Araştırma Yöntemleri Nelerdir?", url: "https://www.kullanicideneyimi.org.tr/blog/tutumsal-davranissal-ux-arastirma-yontemleri" },
                 ],
               },
             ],
@@ -4220,9 +4227,15 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Araştırmanın en kritik kısmı veri toplamak değil, anlam çıkarmaktır. Insight tekrar eden davranışlardan, güçlü sinyallerden, bağlamdan doğar. İçgörü üretme: veri → pattern → insight → karar zincirini kurmaktır.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Medium",
                 items: [
-                  { title: "Synthesis" },
+                  { title: "UX Research Synthesis", url: "https://medium.com/@whatismunadoing/ux-research-synthesis-4e623a80527a" },
+                ],
+              },
+              {
+                category: "📘 UX Tweak",
+                items: [
+                  { title: "UX Research Synthesis 101: How to Synthesize UX Research Data", url: "https://blog.uxtweak.com/ux-research-synthesis/" },
                 ],
               },
             ],
