@@ -129,6 +129,9 @@ export default function Header({ showBackLink = false }: HeaderProps) {
                 >
                   Case Atölyesi
                 </span>
+                <span className="px-1.5 py-0.5 bg-white text-black text-[10px] font-bold rounded uppercase leading-none">
+                  BETA
+                </span>
               </div>
 
               {/* Sheen effect - continuous animation */}
