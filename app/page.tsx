@@ -239,13 +239,6 @@ export default function Home() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center">
           <div>
-            {/* Badges */}
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-8 animate-text-reveal" style={{ animationDelay: '0ms' }}>
-              <span className="px-4 py-2 bg-[#DEFF37]/10 border border-[#DEFF37]/30 rounded-full text-[#DEFF37] font-semibold text-sm">
-                BETA
-              </span>
-            </div>
-
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight animate-text-reveal" style={{ animationDelay: '150ms' }}>
               Tasarımı öğrenirken kaybolma.
               <br />
