@@ -366,6 +366,19 @@ export default function CaseAtolyesiContent() {
         throw new Error(errorData.error || `Mesaj gönderilemedi (${chatResponse.status})`);
       }
 
+      // Handle 204 No Content - response has no body
+      if (chatResponse.status === 204) {
+        console.warn("Received 204 No Content - API returned no body");
+        throw new Error("Yanıt alınamadı. Lütfen tekrar deneyin.");
+      }
+
+      // Check if response has content before parsing
+      const contentType = chatResponse.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        console.error("Unexpected response type:", contentType);
+        throw new Error("Geçersiz yanıt formatı. Lütfen tekrar deneyin.");
+      }
+
       const chatData = await chatResponse.json();
       
       // Add assistant message to UI with animation
@@ -429,6 +442,19 @@ export default function CaseAtolyesiContent() {
           errorData,
         });
         throw new Error(errorData.error || `Mesaj gönderilemedi (${response.status})`);
+      }
+
+      // Handle 204 No Content - response has no body
+      if (response.status === 204) {
+        console.warn("Received 204 No Content - API returned no body");
+        throw new Error("Yanıt alınamadı. Lütfen tekrar deneyin.");
+      }
+
+      // Check if response has content before parsing
+      const contentType = response.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        console.error("Unexpected response type:", contentType);
+        throw new Error("Geçersiz yanıt formatı. Lütfen tekrar deneyin.");
       }
 
       const data = await response.json();
