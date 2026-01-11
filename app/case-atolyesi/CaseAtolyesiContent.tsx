@@ -170,11 +170,13 @@ export default function CaseAtolyesiContent() {
     }
   }, [user, loadThreads]);
 
-  // Load messages when thread is selected
+  // Load messages when thread is selected (but not if we're in the middle of sending a message)
+  const isSendingMessageRef = useRef(false);
+  
   useEffect(() => {
-    if (selectedThreadId) {
+    if (selectedThreadId && !isSendingMessageRef.current) {
       loadMessages(selectedThreadId);
-    } else {
+    } else if (!selectedThreadId) {
       setMessages([]);
     }
   }, [selectedThreadId]);
@@ -307,6 +309,7 @@ export default function CaseAtolyesiContent() {
     try {
       setIsLoading(true);
       setError("");
+      isSendingMessageRef.current = true; // Prevent loadMessages from being called
 
       // Create new thread first
       const headers = await getAuthHeaders();
@@ -323,7 +326,17 @@ export default function CaseAtolyesiContent() {
 
       const { thread } = await createResponse.json();
       
-      // Set selected thread and show sidebar
+      // Add user message to UI immediately BEFORE setting selectedThreadId
+      const userMessage: Message = {
+        id: `temp-${Date.now()}`,
+        role: "user",
+        content: messageText,
+        created_at: new Date().toISOString(),
+      };
+      setMessages([userMessage]);
+      setInput("");
+      
+      // Set selected thread and show sidebar (this will trigger useEffect but isSendingMessageRef prevents loadMessages)
       setSelectedThreadId(thread.id);
       setSidebarOpen(true);
       
@@ -335,16 +348,6 @@ export default function CaseAtolyesiContent() {
         updated_at: thread.updated_at || new Date().toISOString(),
       };
       setThreads((prev) => [newThread, ...prev]);
-
-      // Add user message to UI immediately
-      const userMessage: Message = {
-        id: `temp-${Date.now()}`,
-        role: "user",
-        content: messageText,
-        created_at: new Date().toISOString(),
-      };
-      setMessages([userMessage]);
-      setInput("");
 
       // Send message to API
       const chatResponse = await fetch("/api/chat", {
@@ -413,6 +416,7 @@ export default function CaseAtolyesiContent() {
     } finally {
       setIsLoading(false);
       abortControllerRef.current = null;
+      isSendingMessageRef.current = false; // Allow loadMessages to be called again
     }
   };
 
