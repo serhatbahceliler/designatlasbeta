@@ -26,6 +26,44 @@ const QUICK_PROMPTS = [
   "Mobil health app için problem bulalım",
 ];
 
+const THINKING_STEPS = [
+  "Case'i düşünüyorum…",
+  "Problemi netleştiriyorum…",
+  "Şablonu oluşturuyorum…",
+  "Kapsamı belirliyorum…",
+  "Portfolyo yapısını hazırlıyorum…",
+];
+
+// Thinking steps animation component
+function ThinkingStepsAnimation() {
+  const [currentStep, setCurrentStep] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentStep((prev) => (prev + 1) % THINKING_STEPS.length);
+    }, 2000); // Change step every 2 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="space-y-1">
+      {THINKING_STEPS.map((step, index) => (
+        <div
+          key={index}
+          className={`text-sm transition-all duration-500 ${
+            index === currentStep
+              ? "text-white font-medium opacity-100"
+              : "text-gray-400 opacity-50"
+          }`}
+        >
+          {index + 1}. {step}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function CaseAtolyesiContent() {
   const { user, profile } = useAuth();
   const [threads, setThreads] = useState<CaseThread[]>([]);
