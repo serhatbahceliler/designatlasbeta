@@ -4288,69 +4288,12 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "🧭 User Experience (UX)",
-        description: "User Experience (UX), bir kullanıcının bir ürünü kullanırken, bir hedefe ulaşmaya çalışırken, sistemle etkileşime girdiği tüm süreçte yaşadığı algı, duygu ve çaba bütünüdür. UX sadece ekranlardan ibaret değildir, kullanıcının işi ne kadar kolay, hızlı ve hatasız yaptığıyla ilgilidir. Amaç: kullanıcıyı düşündürmek değil, kullanıcının düşünmesine gerek bırakmamaktır.",
+        title: "Ürün Akışları & Deneyim Tasarımı",
+        description: "User flow'lar, task flow'lar, bilgi mimarisi, deneyim tutarlılığı ve edge case düşüncesi ile bütünsel deneyim tasarımı.",
         topics: [
           {
-            title: "UX Temelleri & Kullanılabilirlik",
-            description: "Kullanılabilirlik (usability) öğrenilebilirlik, verimlilik, hata oranı, memnuniyet gibi kriterlerle ölçülür. İyi UX fark edilmez, kötü UX ise her zaman fark edilir.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Usability 101" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir ürün düşün: İlk kez kullanan biri nerede zorlanır?",
-                "Bunun nedeni UX mi, UI mı?",
-              ],
-            },
-          },
-          {
-            title: "Persona & Segment Kavramı",
-            description: "Persona gerçek kullanıcı verilerinden türetilmiş, temsil edici kullanıcı profilleridir. Segment davranış, ihtiyaç veya rol bazlı kullanıcı gruplarıdır. Persona empati kurmayı, Segment karar almayı kolaylaştırır.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Personas" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir kullanıcı grubunu düşün: Hepsi aynı persona mı?",
-                "Yoksa aynı ürünü farklı amaçlarla mı kullanıyorlar?",
-              ],
-            },
-          },
-          {
-            title: "Jobs-to-be-Done (JTBD)",
-            description: "JTBD yaklaşımı kullanıcıyı değil, kullanıcının yapmak istediği işi merkeze alır. Kullanıcı ürünü değil, bir sonucu 'işe alır'.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Jobs to Be Done" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir özelliği düşün: Kullanıcı bunu neden 'işe alıyor'?",
-                "Hangi işi çözmek için?",
-              ],
-            },
-          },
-          {
-            title: "User Journey Mapping",
-            description: "User Journey kullanıcının hedefe giderken geçtiği adımların haritasıdır. Amaç: sürtünme noktalarını görmek, kritik anları (moments that matter) yakalamak. Journey map tek ekran değil, uçtan uca deneyimi gösterir.",
+            title: "User Flow'lar",
+            description: "User Journey kullanıcının hedefe giderken geçtiği adımların haritasıdır. User flow birden fazla hedefi kapsayan geniş akıştır. Amaç: sürtünme noktalarını görmek, kritik anları (moments that matter) yakalamak. Journey map tek ekran değil, uçtan uca deneyimi gösterir.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -4368,18 +4311,18 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Moments That Matter",
-            description: "Moments that matter kullanıcının karar verdiği, duygusal tepki verdiği, ürünü sevip sevmeyeceğine karar verdiği kritik anlardır. UX tasarımı bu anlara özellikle odaklanır.",
+            title: "Task Flow'lar",
+            description: "Task flow tek bir işi yapma adımlarıdır. Task flow'lar user flow'lardan daha dar kapsamlıdır ve belirli bir görevi tamamlama sürecini gösterir. UX tasarımı bu akışları sadeleştirmeye çalışır.",
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir deneyimi düşün: Kullanıcı ürünü bırakmaya en yakın olduğu an ne?",
-                "Orada UX ne yapıyor?",
+                "Bir görev seç: Kaç adım var?",
+                "Hangisi gerçekten gerekli?",
               ],
             },
           },
           {
-            title: "Information Architecture (IA)",
+            title: "Bilgi Mimarisi (IA)",
             description: "Information Architecture içeriğin nasıl gruplanacağı, nasıl adlandırılacağı, nasıl bulunacağı ile ilgilenir. İyi IA kullanıcıyı düşündürmez, aradığını sezgisel olarak buldurur.",
             resources: [
               {
@@ -4397,35 +4340,67 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Navigation & Menü Yapıları",
-            description: "Navigasyon kullanıcıya 'neredeyim?', 'nereye gidebilirim?', 'buradan nasıl çıkarım?' sorularının cevabını verir. Yanlış navigasyon en iyi içeriği bile görünmez yapar.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Navigation Design" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir ekran düşün: Kullanıcı geri dönmek isterse ne yapar?",
-                "Bu net mi?",
-              ],
-            },
+            title: "Deneyim Tutarlılığı",
+            description: "Deneyim tutarlılığı, kullanıcının ürünün farklı bölümlerinde aynı davranışları görmesini ve aynı beklentileri geliştirmesini sağlar. Tutarlı deneyim öğrenme maliyetini düşürür, güven oluşturur.",
           },
           {
-            title: "Task Flows & User Flows",
-            description: "Task flow tek bir işi yapma adımları, User flow birden fazla hedefi kapsayan geniş akıştır. UX tasarımı bu akışları sadeleştirmeye çalışır.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir görev seç: Kaç adım var?",
-                "Hangisi gerçekten gerekli?",
-              ],
-            },
+            title: "Edge Case Düşüncesi (High-level)",
+            description: "Edge case'ler, kullanıcının beklenen akış dışında kaldığı durumlardır. High-level edge case düşüncesi: hata durumları, boş durumlar, limit durumları gibi kritik anları önceden düşünmektir.",
           },
+        ],
+      },
+      {
+        title: "Wireframe & Prototipleme",
+        description: "Low-fidelity wireframe'ler, deneyim odaklı wireframe, prototipleme ile test etme, fidelity seviyeleri ve karar vermek için prototip.",
+        topics: [
+          {
+            title: "Low-Fidelity Wireframe'ler",
+            description: "Low-fi wireframe'ler: hızlıdır, ucuzdur, tartışmaya açıktır. Bu yüzden discovery ve erken çözüm aşamasında idealdir. Low-fidelity wireframe'ler detaydan çok yapıya odaklanır.",
+          },
+          {
+            title: "Deneyim Odaklı Wireframe",
+            description: "Deneyim odaklı wireframe, kullanıcının ürünle etkileşimini ve akışını ön planda tutar. Detaydan çok deneyim akışına, içerikten çok kullanıcı eylemlerine odaklanır.",
+          },
+          {
+            title: "Prototipleme ile Test Etme",
+            description: "Prototype: sunum için değil, test için yapılır. İyi prototype: sadece test edilecek akışı içerir, her detayı kapsamaz. Prototipleme ile test etme, çözüm varsayımlarını doğrulama imkanı sağlar.",
+          },
+          {
+            title: "Fidelity Seviyeleri",
+            description: "Fidelity seviyeleri low-fidelity'den high-fidelity'ye kadar değişir. Low-fidelity hızlı test için, high-fidelity detaylı test ve developer handoff için kullanılır. Doğru fidelity seviyesini seçmek, zamanı ve kaynağı verimli kullanmak için önemlidir.",
+          },
+          {
+            title: "Karar Vermek İçin Prototip",
+            description: "Prototip karar vermek için bir araçtır. Prototip ile hangi çözümün daha iyi çalıştığını, kullanıcının hangi akışı tercih ettiğini test edebilirsin. Karar vermek için prototip: hızlı, odaklı ve test edilebilir olmalıdır.",
+          },
+        ],
+      },
+      {
+        title: "UI & Design System ile Çalışmak",
+        description: "UI ve Product Design ilişkisi, Design System kullanımı, component bazlı tasarım, tutarlılık & ölçeklenebilirlik ve UI kararlarının ürüne etkisi.",
+        topics: [
+          {
+            title: "UI ve Product Design İlişkisi",
+            description: "UI, Product Design'ın görsel ve etkileşimsel katmanıdır. UI sadece görsel değil, kullanıcı deneyimini şekillendiren bir araçtır. UI kararları Product Design kararlarıyla uyumlu olmalıdır.",
+          },
+          {
+            title: "Design System Kullanımı",
+            description: "Design System, tutarlı ve ölçeklenebilir ürünler oluşturmak için kullanılan component, pattern ve guideline'ların birleşimidir. Design System kullanımı, hız, tutarlılık ve ölçeklenebilirlik sağlar.",
+          },
+          {
+            title: "Component Bazlı Tasarım",
+            description: "Component bazlı tasarım, tekrar eden UI elementlerini yeniden kullanılabilir parçalara böler. Component bazlı tasarım: tutarlılık sağlar, geliştirme hızını artırır, bakımı kolaylaştırır.",
+          },
+          {
+            title: "Tutarlılık & Ölçeklenebilirlik",
+            description: "Tutarlılık öğrenme maliyetini düşürür, kullanıcıyı rahatlatır. Ölçeklenebilirlik ise ürün büyüdükçe tutarlılığı ve kaliteyi korur. Design System bu ikisini birlikte sağlar.",
+          },
+          {
+            title: "UI Kararlarının Ürüne Etkisi",
+            description: "UI kararları sadece görsel değil, kullanıcı davranışını ve ürün metriklerini etkiler. İyi UI kararları: kullanıcı deneyimini iyileştirir, ürün hedeflerine katkı sağlar, teknik kısıtları dikkate alır.",
+          },
+        ],
+      },
           {
             title: "Error Prevention & Recovery",
             description: "İyi UX hatayı sadece göstermez, hata yapılmasını engeller. Hata olursa kullanıcıyı suçlamaz, nasıl düzelteceğini net anlatır.",
