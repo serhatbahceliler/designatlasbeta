@@ -227,12 +227,7 @@ export default function CaseAtolyesiContent() {
       const loadedThreads = data.threads || [];
       setThreads(loadedThreads);
 
-      // Auto-select first thread if exists and none selected
-      if (loadedThreads.length > 0 && !selectedThreadId) {
-        setSelectedThreadId(loadedThreads[0].id);
-      }
-
-      // Auto-open sidebar if threads exist
+      // Auto-open sidebar if threads exist (but don't auto-select any thread)
       if (loadedThreads.length > 0) {
         setSidebarOpen(true);
       }
