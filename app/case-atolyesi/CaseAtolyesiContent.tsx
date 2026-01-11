@@ -322,12 +322,18 @@ export default function CaseAtolyesiContent() {
 
       const { thread } = await createResponse.json();
       
-      // Set selected thread and reload threads to show sidebar
+      // Set selected thread and show sidebar
       setSelectedThreadId(thread.id);
       setSidebarOpen(true);
       
-      // Reload threads to update UI
-      await loadThreads();
+      // Update threads list optimistically
+      const newThread: CaseThread = {
+        id: thread.id,
+        title: thread.title || "Yeni Case",
+        created_at: thread.created_at || new Date().toISOString(),
+        updated_at: thread.updated_at || new Date().toISOString(),
+      };
+      setThreads((prev) => [newThread, ...prev]);
 
       // Add user message to UI immediately
       const userMessage: Message = {
@@ -362,7 +368,7 @@ export default function CaseAtolyesiContent() {
 
       const chatData = await chatResponse.json();
       
-      // Add assistant message to UI
+      // Add assistant message to UI with animation
       const assistantMessage: Message = {
         id: chatData.message.id || `assistant-${Date.now()}`,
         role: "assistant",
@@ -372,8 +378,14 @@ export default function CaseAtolyesiContent() {
       
       setMessages([userMessage, assistantMessage]);
 
-      // Reload threads to update title
-      await loadThreads();
+      // Update thread title if it was generated
+      if (chatData.threadTitle) {
+        setThreads((prev) =>
+          prev.map((t) =>
+            t.id === thread.id ? { ...t, title: chatData.threadTitle } : t
+          )
+        );
+      }
     } catch (err: any) {
       console.error("Error sending first message:", err);
       setError(err.message || "Mesaj gönderilemedi");
@@ -421,7 +433,7 @@ export default function CaseAtolyesiContent() {
 
       const data = await response.json();
       
-      // Add assistant message to UI
+      // Add assistant message to UI with animation
       const assistantMessage: Message = {
         id: data.message.id || `assistant-${Date.now()}`,
         role: "assistant",
@@ -435,8 +447,14 @@ export default function CaseAtolyesiContent() {
         return [...filtered, userMessage, assistantMessage];
       });
 
-      // Reload threads to update titles
-      await loadThreads();
+      // Update thread title if it was generated (only for first message)
+      if (isFirstMessage && data.threadTitle) {
+        setThreads((prev) =>
+          prev.map((t) =>
+            t.id === threadId ? { ...t, title: data.threadTitle } : t
+          )
+        );
+      }
     } catch (err: any) {
       console.error("Error sending message:", err);
       setError(err.message || "Mesaj gönderilemedi");
@@ -634,17 +652,18 @@ export default function CaseAtolyesiContent() {
                 </div>
               ) : (
                 <>
-                  {messages.map((message) => (
+                  {messages.map((message, index) => (
                     <div
                       key={message.id}
-                      className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
+                      className={`flex ${message.role === "user" ? "justify-end" : "justify-start"} animate-fade-in-up`}
+                      style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       <div
                         className={`max-w-3xl ${
                           message.role === "user"
                             ? "bg-[#DEFF37] text-black"
                             : "bg-zinc-800 text-white"
-                        } rounded-2xl px-5 py-4`}
+                        } rounded-2xl px-5 py-4 transform transition-all duration-300 hover:scale-[1.02]`}
                       >
                         {message.role === "assistant" ? (
                           <div className="markdown-content">
@@ -743,6 +762,24 @@ export default function CaseAtolyesiContent() {
         )}
       </main>
       </div>
+
+      {/* Animation CSS */}
+      <style jsx>{`
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in-up {
+          animation: fade-in-up 0.4s ease-out forwards;
+          opacity: 0;
+        }
+      `}</style>
     </>
   );
 }

@@ -72,11 +72,12 @@ export async function POST(request: NextRequest) {
     }
 
     // If first message, update thread title
+    let updatedTitle: string | null = null;
     if (isFirstMessage && thread.title === "Yeni Case") {
-      const title = generateTitleFromFirstMessage(message);
+      updatedTitle = generateTitleFromFirstMessage(message);
       await supabaseService
         .from("case_threads")
-        .update({ title })
+        .update({ title: updatedTitle })
         .eq("id", threadId);
     }
 
@@ -172,9 +173,11 @@ export async function POST(request: NextRequest) {
       // Don't fail if message save fails, still return response
     }
 
+    // Return response with optional thread title update
     return NextResponse.json({
       message: assistantMessage || { role: "assistant", content: assistantResponse },
       remainingRequests: rateLimit.remaining,
+      ...(updatedTitle && { threadTitle: updatedTitle }),
     });
   } catch (error: any) {
     console.error("Chat API error:", error);
