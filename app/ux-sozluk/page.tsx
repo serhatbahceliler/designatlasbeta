@@ -274,6 +274,107 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Tasarım kararları alınırken'
     ],
     relatedConcepts: ['User Research', 'User Journey Map', 'Empathy']
+  },
+  'jobs-to-be-done-jtbd': {
+    shortDefinition: 'Jobs To Be Done (JTBD), kullanıcıların bir ürünü belirli bir "işi" yapmak için kullandığını savunan bir yaklaşımdır. Odak, kullanıcıdan çok yapılmak istenen iştir.',
+    detailedDescription: 'JTBD, "kullanıcı kim?" sorusu yerine "kullanıcı bu ürünü neden kullanıyor?" sorusunu sorar. İnsanlar ürünleri özellikleri için değil, bir problemi çözmek için "işe alır".\n\nBu yaklaşım, yüzeysel ihtiyaçlar yerine temel motivasyonları anlamayı sağlar ve daha anlamlı çözümler üretmeye yardımcı olur.',
+    exampleScenario: 'Bir kullanıcı not alma uygulamasını yazı yazmak için değil, "bir şeyi unutmamak" işi için kullanır.',
+    whenToUse: [
+      'Problem tanımı yapılırken',
+      'Yeni özellikler kurgulanırken',
+      'Kullanıcı motivasyonları analiz edilirken'
+    ],
+    relatedConcepts: ['User Research', 'Problem Statement', 'Personas']
+  },
+  'user-journey-map': {
+    shortDefinition: 'User Journey Map, bir kullanıcının bir ürünle etkileşimi boyunca yaşadığı adımların ve deneyimlerin görselleştirilmiş halidir.',
+    detailedDescription: 'Journey map\'ler yalnızca adımları değil, kullanıcının o anki duygu durumunu ve yaşadığı problemleri de gösterir.\n\nBu sayede ekipler, kullanıcı deneyiminin nerede koptuğunu veya iyileştirilebileceğini daha net görür.',
+    exampleScenario: 'Bir kullanıcı sipariş verirken ödeme adımında yaşadığı problemi journey map üzerinde net şekilde gösterebilirsiniz.',
+    whenToUse: [
+      'Uçtan uca deneyim analiz edilirken',
+      'Servis veya ürün iyileştirmeleri planlanırken'
+    ],
+    relatedConcepts: ['User Flow', 'Personas', 'Touchpoints']
+  },
+  'problem-statement': {
+    shortDefinition: 'Problem Statement, çözülmesi gereken problemi net ve odaklı bir şekilde tanımlayan ifadedir.',
+    detailedDescription: 'İyi bir problem tanımı, çözümü yönlendirir. Belirsiz veya yanlış tanımlanmış problemler, yanlış çözümlere yol açar.\n\nProblem statement genellikle kullanıcı, bağlam ve yaşanan zorlukları içerir.',
+    exampleScenario: '"Kullanıcılar ödeme yapamıyor" yerine "Mobil kullanıcılar ödeme adımında güven problemi yaşıyor" demek daha net bir problem tanımıdır.',
+    whenToUse: [
+      'Discovery sürecinde',
+      'Çözüm üretmeye başlamadan önce'
+    ],
+    relatedConcepts: ['User Research', 'JTBD', 'Hypothesis']
+  },
+  'hypothesis': {
+    shortDefinition: 'Hypothesis, belirli bir değişikliğin nasıl bir etki yaratacağına dair test edilebilir varsayımdır.',
+    detailedDescription: 'Hipotezler, rastgele kararlar almak yerine öğrenmeye dayalı ilerlemeyi sağlar. Yanlış çıkan hipotezler de öğrenme sağlar.\n\nİyi bir hipotez, neyin değiştirileceğini ve neyin ölçüleceğini açıkça belirtir.',
+    exampleScenario: '"Ödeme adımına güven rozetleri eklersek tamamlanma oranı artar" bir hipotezdir.',
+    whenToUse: [
+      'Deney planlanırken',
+      'A/B testleri yapılırken'
+    ],
+    relatedConcepts: ['Experiment', 'Success Metrics', 'MVP']
+  },
+  'mvp-minimum-viable-product': {
+    shortDefinition: 'MVP, bir ürünün temel değerini test etmek için geliştirilen en basit çalışan versiyonudur.',
+    detailedDescription: 'MVP, eksik bir ürün değil, öğrenme amacıyla tasarlanmış bir üründür. Amaç, en az eforla en fazla içgörüyü elde etmektir.\n\nYanlış anlaşıldığında "kalitesiz ürün" olarak algılanabilir, ancak doğru kurgulandığında büyük riskleri azaltır.',
+    exampleScenario: 'Yeni bir özelliği tüm detaylarıyla geliştirmek yerine, temel bir versiyonunu sınırlı kullanıcıya sunmak MVP yaklaşımıdır.',
+    whenToUse: [
+      'Yeni ürün veya özellik geliştirirken',
+      'Varsayımlar test edilirken'
+    ],
+    relatedConcepts: ['Hypothesis', 'Product Discovery', 'Experiment']
+  },
+  'product-discovery': {
+    shortDefinition: 'Product Discovery, doğru problemi ve doğru çözümü bulmaya yönelik yapılan keşif sürecidir.',
+    detailedDescription: 'Discovery süreci, "ne geliştirelim?" sorusuna cevap arar. Kullanıcı ihtiyaçları, iş hedefleri ve teknik kısıtlar bu aşamada değerlendirilir.\n\nDiscovery yapılmadan geliştirilen ürünler, çoğu zaman yanlış problemlere çözüm üretir.',
+    exampleScenario: 'Kullanıcıların gerçekten hangi özelliğe ihtiyaç duyduğunu anlamadan geliştirilen fonksiyonlar kullanılmayabilir.',
+    whenToUse: [
+      'Ürün yol haritası oluşturulurken',
+      'Yeni fikirler değerlendirilirken'
+    ],
+    relatedConcepts: ['User Research', 'Problem Statement', 'MVP']
+  },
+  'success-metrics': {
+    shortDefinition: 'Success Metrics, bir ürün veya özelliğin başarılı olup olmadığını ölçmek için kullanılan metriklerdir.',
+    detailedDescription: 'Bu metrikler, "iyi hissettirdi mi?" yerine "işe yaradı mı?" sorusuna cevap verir. Doğru metrikler, doğru kararlar almayı sağlar.\n\nYanlış metrikler ise ekibi yanlış yönde optimize edebilir.',
+    exampleScenario: 'Bir onboarding sürecinin başarısı, tamamlanma oranı ile ölçülebilir.',
+    whenToUse: [
+      'Deney sonuçları değerlendirilirken',
+      'Ürün performansı izlenirken'
+    ],
+    relatedConcepts: ['North Star Metric', 'KPI', 'Experiment']
+  },
+  'north-star-metric': {
+    shortDefinition: 'North Star Metric, bir ürünün uzun vadeli değerini en iyi temsil eden ana metriktir.',
+    detailedDescription: 'Bu metrik, ekiplerin aynı hedefe odaklanmasını sağlar. Her metrik North Star değildir; kullanıcıya sağlanan değeri yansıtması gerekir.\n\nYanlış seçilmiş bir North Star, ürünü yanlış yönde büyütebilir.',
+    exampleScenario: 'Bir içerik platformu için "haftalık aktif okuyucu sayısı" bir North Star Metric olabilir.',
+    whenToUse: [
+      'Ürün stratejisi belirlenirken',
+      'Ekip hedefleri hizalanırken'
+    ],
+    relatedConcepts: ['Success Metrics', 'KPI', 'Product Strategy']
+  },
+  'design-system': {
+    shortDefinition: 'Design System, bir ürünün tasarım ve geliştirme süreçlerinde tutarlılık sağlamak için oluşturulan bileşen, kural ve prensipler bütünüdür.',
+    detailedDescription: 'Design system yalnızca UI bileşenlerinden ibaret değildir; renkler, tipografi, davranış kuralları ve kullanım rehberlerini de kapsar.\n\nİyi bir design system, ekiplerin daha hızlı ve tutarlı çalışmasını sağlar.',
+    exampleScenario: 'Farklı ekiplerin aynı butonu farklı şekillerde tasarlaması, design system eksikliğine işaret eder.',
+    whenToUse: [
+      'Büyük ürünlerde',
+      'Birden fazla ekip çalışıyorsa'
+    ],
+    relatedConcepts: ['Component', 'Consistency', 'Atomic Design']
+  },
+  'component': {
+    shortDefinition: 'Component, bir arayüzde tekrar eden ve farklı yerlerde kullanılabilen bağımsız UI parçasıdır.',
+    detailedDescription: 'Component\'ler, tasarım ve geliştirme sürecini ölçeklenebilir hale getirir. Değişiklikler tek noktadan yönetilebilir.\n\nYanlış kurgulanan component\'ler ise esnekliği azaltabilir.',
+    exampleScenario: 'Bir buton component\'i, farklı ekranlarda aynı davranışı sergiler.',
+    whenToUse: [
+      'Design system oluşturulurken',
+      'Tekrar eden UI elemanları tasarlanırken'
+    ],
+    relatedConcepts: ['Design System', 'Atomic Design', 'Consistency']
   }
 };
 
