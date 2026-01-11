@@ -4825,17 +4825,92 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "🎯 Portfolio & Career Growth",
-        description: "Product Designer için portfolyo sadece yapılan işleri göstermez, nasıl düşündüğünü, nasıl karar verdiğini, hangi etkiyi yarattığını anlatır. Kariyer gelişimi title biriktirmek değil, problem çözme olgunluğunu artırmaktır.",
+        title: "Teslim, Dokümantasyon & Handoff",
+        description: "Product Design handoff, kararların dokümantasyonu, tasarım – geliştirme uyumu, Design QA ve canlı sonrası takip.",
         topics: [
           {
-            title: "Product Designer Portfolyosu Nedir?",
-            description: "Product Designer portfolyosu görsel şovdan çok, karar ve süreç anlatımıdır. İyi bir portfolyo problemi net tanımlar, süreci sade anlatır, sonucu ve etkiyi gösterir. Junior seviyede 3–4 güçlü case yeterlidir.",
+            title: "Product Design Handoff",
+            description: "Handoff dosya teslimi değil, bilgi aktarımıdır. İyi handoff belirsizliği azaltır, yorum ihtiyacını düşürür, geliştirme sürecini hızlandırır. Product Design handoff: tasarım dosyaları, component davranışları, edge case'ler ve karar gerekçelerini içerir.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Design Handoff" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir handoff düşün: Developer hangi soruyu sordu?",
+                "Bunu önceden çözebilir miydin?",
+              ],
+            },
+          },
+          {
+            title: "Kararların Dokümantasyonu",
+            description: "Kararların dokümantasyonu, tasarım kararlarının nedenlerini, alternatifleri ve trade-off'ları kaydetmektir. İyi dokümantasyon: problemi hatırlatır, karar gerekçesini açıklar, gelecekteki kararları yönlendirir.",
+          },
+          {
+            title: "Tasarım – Geliştirme Uyumu",
+            description: "Tasarım – geliştirme uyumu, tasarımın canlıda beklendiği gibi görünmesini ve çalışmasını sağlamaktır. İyi uyum: erken iletişim, net spesifikasyonlar, düzenli kontroller ve feedback döngüleri gerektirir.",
+          },
+          {
+            title: "Design QA",
+            description: "Design QA, geliştirme sonrasında tasarımın canlıda doğru şekilde uygulanıp uygulanmadığını kontrol etmektir. Design QA küçük farkları yakalar, deneyim kalitesini korur, kullanıcıyı savunur.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Canlı ürüne bak: Tasarımdan farklı olan ne?",
+                "Bu fark kullanıcıyı etkiliyor mu?",
+              ],
+            },
+          },
+          {
+            title: "Canlı Sonrası Takip",
+            description: "Canlı sonrası takip, ürün yayına alındıktan sonra kullanıcı davranışını, metrikleri ve feedback'i izlemektir. Canlı sonrası takip: beklenen etkiyi ölçer, beklenmeyen problemleri tespit eder, iterasyon için öğrenme sağlar.",
+          },
+        ],
+      },
+      {
+        title: "Product Designer Kariyeri",
+        description: "Product Designer'dan beklentiler, Junior → Mid → Senior farkları, Product case study yazımı, portfolyoda ürün anlatmak ve sürekli öğrenme & gelişim.",
+        topics: [
+          {
+            title: "Product Designer'dan Beklentiler",
+            description: "Product Designer'dan beklentiler: problemi doğru tanımlamak, kullanıcıyı temsil etmek, veriye dayalı karar vermek, ekip içinde çalışmak ve ürünün etkisini ölçmek. Product Designer hem tasarım hem de ürün düşüncesi gerektirir.",
+          },
+          {
+            title: "Junior → Mid → Senior Farkları",
+            description: "Junior öğrenir, uygular, yönlendirme ister. Mid problemi sahiplenir, alternatif üretir, sorumluluk alır. Senior çerçeve çizer, riskleri öngörür, başkalarının kararını güçlendirir.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Kendine sor: Şu an hangi seviyedesin?",
+                "Seni bir üst seviyeye taşıyacak şey ne?",
+              ],
+            },
+          },
+          {
+            title: "Product Case Study Yazımı",
+            description: "Etkili bir Product case study: 1. Problemi anlatır 2. Süreci gösterir 3. Kritik kararları açıklar 4. Sonucu ve etkiyi paylaşır. Product case study yazımı: kararların nedenlerini, trade-off'ları ve öğrenilenleri içerir.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir case için yaz: En zor karar neydi?",
+                "Alternatif neydi?",
+              ],
+            },
+          },
+          {
+            title: "Portfolyoda Ürün Anlatmak",
+            description: "Portfolyoda ürün anlatmak, yapılan işleri göstermekten çok, nasıl düşünüldüğünü, nasıl karar verildiğini ve hangi etkinin yaratıldığını anlatmaktır. İyi bir portfolyo problemi net tanımlar, süreci sade anlatır, sonucu ve etkiyi gösterir.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
                   { title: "UX & Product Design Portfolios" },
+                  { title: "Case Study Storytelling" },
                 ],
               },
             ],
@@ -4848,79 +4923,8 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Case Study Yapısı (Problem → Süreç → Karar → Sonuç)",
-            description: "Etkili bir case study: 1. Problemi anlatır 2. Süreci gösterir 3. Kritik kararları açıklar 4. Sonucu ve etkiyi paylaşır. Eksik olan şey genelde kararların nedenleridir.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir case için yaz: En zor karar neydi?",
-                "Alternatif neydi?",
-              ],
-            },
-          },
-          {
-            title: "Research & Impact Gösterimi",
-            description: "Product Designer araştırmayı süs olarak değil, karar dayanağı olarak gösterir. Impact 'kullanıcılar beğendi' değil, davranış değişimiyle anlatılır.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Case Study Storytelling" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir iş için düşün: Bu tasarım neyi değiştirdi?",
-                "Bunu nasıl fark ettiniz?",
-              ],
-            },
-          },
-          {
-            title: "Trade-off ve Karar Anlatımı",
-            description: "Senior'lık göstergesi her şeyi yapabilmek değil, neden bazı şeyleri yapmadığını anlatabilmektir. Trade-off'lar kısıtları, öncelikleri, gerçek hayatı gösterir.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir karar yaz: Neden bunu seçtin?",
-                "Neden diğerini elemedin?",
-              ],
-            },
-          },
-          {
-            title: "Interview & Case Challenge Hazırlığı",
-            description: "Interview'lar ezber cevap değil, düşünme biçimi görmek ister. Case challenge'larda sonuca değil, yaklaşıma bakılır. İyi yaklaşım: sorular sormak, varsayımları dile getirmek, düşünceyi şeffaf paylaşmak.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "UX Interviews" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir case challenge düşün: İlk soracağın soru ne olurdu?",
-                "Neden?",
-              ],
-            },
-          },
-          {
-            title: "Junior → Mid → Senior Beklentileri",
-            description: "Junior öğrenir, uygular, yönlendirme ister. Mid problemi sahiplenir, alternatif üretir, sorumluluk alır. Senior çerçeve çizer, riskleri öngörür, başkalarının kararını güçlendirir.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Kendine sor: Şu an hangi seviyedesin?",
-                "Seni bir üst seviyeye taşıyacak şey ne?",
-              ],
-            },
-          },
-          {
-            title: "Sürekli Öğrenme & Gelişim Planı",
-            description: "İyi Product Designer trend kovalamaz, temelini güçlendirir. Gelişim düzenli gözlem, geri bildirim, bilinçli pratikle olur.",
+            title: "Sürekli Öğrenme & Gelişim",
+            description: "İyi Product Designer trend kovalamaz, temelini güçlendirir. Sürekli öğrenme & gelişim: düzenli gözlem, geri bildirim, bilinçli pratik ve öz eleştiri gerektirir.",
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
