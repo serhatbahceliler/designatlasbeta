@@ -74,76 +74,76 @@ export default function Header({ showBackLink = false }: HeaderProps) {
               </Link>
             )}
 
-            {user ? (
-              <>
-                {/* Case Atölyesi Button */}
-                <Link
-                  href="/case-atolyesi"
-                  className={`group relative inline-flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 overflow-hidden ${
+            {/* Case Atölyesi Button - Visible to everyone */}
+            <Link
+              href={user ? "/case-atolyesi" : "/auth/login?redirect=/case-atolyesi"}
+              className={`group relative inline-flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 overflow-hidden ${
+                isCaseAtolyesiActive
+                  ? "bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-cyan-500/20 shadow-[0_0_15px_rgba(168,85,247,0.3),inset_0_0_20px_rgba(59,130,246,0.1)]"
+                  : "bg-zinc-900/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:via-blue-500/10 hover:to-cyan-500/10 hover:shadow-[0_0_10px_rgba(168,85,247,0.2)]"
+              }`}
+            >
+              {/* Gradient border effect using pseudo-element */}
+              <div
+                className={`absolute -inset-[1px] rounded-full opacity-60 transition-opacity duration-300 ${
+                  isCaseAtolyesiActive
+                    ? "opacity-80"
+                    : "opacity-0 group-hover:opacity-40"
+                }`}
+              >
+                <div className="w-full h-full rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 blur-[2px]" />
+              </div>
+
+              {/* Inner border to create gradient border effect */}
+              <div className="absolute inset-[1px] rounded-full bg-black/80 z-0" />
+
+              {/* Content */}
+              <div className="relative z-10 flex items-center gap-2">
+                {/* AI Sparkle Icon - Starburst style */}
+                <svg
+                  className={`w-4 h-4 transition-all duration-300 ${
                     isCaseAtolyesiActive
-                      ? "bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-cyan-500/20 shadow-[0_0_15px_rgba(168,85,247,0.3),inset_0_0_20px_rgba(59,130,246,0.1)]"
-                      : "bg-zinc-900/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:via-blue-500/10 hover:to-cyan-500/10 hover:shadow-[0_0_10px_rgba(168,85,247,0.2)]"
+                      ? "text-purple-400 drop-shadow-[0_0_6px_rgba(168,85,247,0.9)]"
+                      : "text-gray-400 group-hover:text-purple-400 group-hover:drop-shadow-[0_0_4px_rgba(168,85,247,0.7)]"
+                  }`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                >
+                  {/* Sparkle/Starburst icon - unique AI style */}
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z"
+                  />
+                  <circle cx="12" cy="10" r="1.5" fill="currentColor" />
+                </svg>
+
+                <span
+                  className={`transition-colors duration-300 ${
+                    isCaseAtolyesiActive
+                      ? "text-white font-semibold"
+                      : "text-gray-300 group-hover:text-white"
                   }`}
                 >
-                  {/* Gradient border effect using pseudo-element */}
-                  <div
-                    className={`absolute -inset-[1px] rounded-full opacity-60 transition-opacity duration-300 ${
-                      isCaseAtolyesiActive
-                        ? "opacity-80"
-                        : "opacity-0 group-hover:opacity-40"
-                    }`}
-                  >
-                    <div className="w-full h-full rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 blur-[2px]" />
-                  </div>
+                  Case Atölyesi
+                </span>
+              </div>
 
-                  {/* Inner border to create gradient border effect */}
-                  <div className="absolute inset-[1px] rounded-full bg-black/80 z-0" />
+              {/* Sheen effect - continuous animation */}
+              <div
+                className="absolute inset-0 rounded-full opacity-30"
+                style={{
+                  background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)",
+                  backgroundSize: "200% 100%",
+                  animation: "sheen 3s ease-in-out infinite",
+                }}
+              />
+            </Link>
 
-                  {/* Content */}
-                  <div className="relative z-10 flex items-center gap-2">
-                    {/* AI Sparkle Icon - Starburst style */}
-                    <svg
-                      className={`w-4 h-4 transition-all duration-300 ${
-                        isCaseAtolyesiActive
-                          ? "text-purple-400 drop-shadow-[0_0_6px_rgba(168,85,247,0.9)]"
-                          : "text-gray-400 group-hover:text-purple-400 group-hover:drop-shadow-[0_0_4px_rgba(168,85,247,0.7)]"
-                      }`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={1.5}
-                    >
-                      {/* Sparkle/Starburst icon - unique AI style */}
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z"
-                      />
-                      <circle cx="12" cy="10" r="1.5" fill="currentColor" />
-                    </svg>
-
-                    <span
-                      className={`transition-colors duration-300 ${
-                        isCaseAtolyesiActive
-                          ? "text-white font-semibold"
-                          : "text-gray-300 group-hover:text-white"
-                      }`}
-                    >
-                      Case Atölyesi
-                    </span>
-                  </div>
-
-                {/* Sheen effect - continuous animation */}
-                <div
-                  className="absolute inset-0 rounded-full opacity-30"
-                  style={{
-                    background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)",
-                    backgroundSize: "200% 100%",
-                    animation: "sheen 3s ease-in-out infinite",
-                  }}
-                />
-                </Link>
-
+            {user ? (
+              <>
                 {/* Minimalist Profile Avatar */}
                 <div className="relative">
                   <button
