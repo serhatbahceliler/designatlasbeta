@@ -274,15 +274,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust & Value Section */}
-      <section className="py-12 px-6 bg-zinc-950 border-t border-[#DEFF37]/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg text-gray-300 leading-relaxed">
-            Tüm roadmap'ler, gerçek kaynaklara dayanır ve öğrenme belirsizliğini azaltmak için hazırlanır.
-          </p>
-        </div>
-      </section>
-
       {/* Problem Section */}
       <section className="py-24 px-6 bg-black border-t border-[#DEFF37]/20">
         <div className="max-w-4xl mx-auto">
