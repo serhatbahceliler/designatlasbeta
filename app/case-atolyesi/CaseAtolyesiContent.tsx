@@ -118,76 +118,59 @@ export default function CaseAtolyesiContent() {
   const hasThreads = threads.length > 0;
   const showSidebar = hasThreads && sidebarOpen;
 
+  const loadThreads = useCallback(async () => {
+    try {
+      setIsLoadingThreads(true);
+      setError(""); // Clear previous errors
+      
+      const headers = await getAuthHeaders();
+      
+      // Add timeout to prevent hanging
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+      
+      const response = await fetch("/api/cases", {
+        headers,
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || `Threads yüklenemedi (${response.status})`);
+      }
+
+      const data = await response.json();
+      const loadedThreads = data.threads || [];
+      setThreads(loadedThreads);
+
+      // Auto-open sidebar if threads exist (but don't auto-select any thread)
+      if (loadedThreads.length > 0) {
+        setSidebarOpen(true);
+      }
+    } catch (err: any) {
+      console.error("Error loading threads:", err);
+      if (err.name === 'AbortError') {
+        setError("İstek zaman aşımına uğradı. Lütfen tekrar deneyin.");
+      } else {
+        setError(err.message || "Threads yüklenemedi");
+      }
+      // Ensure loading state is cleared even on error
+      setThreads([]);
+    } finally {
+      setIsLoadingThreads(false);
+    }
+  }, []);
+
   // Load threads on mount - page.tsx ensures user exists before rendering this component
   useEffect(() => {
-    // Only load if user exists
-    if (!user) {
+    if (user) {
+      loadThreads();
+    } else {
       setIsLoadingThreads(false);
-      return;
     }
-
-    let isMounted = true;
-
-    const loadThreads = async () => {
-      try {
-        setIsLoadingThreads(true);
-        setError(""); // Clear previous errors
-        
-        const headers = await getAuthHeaders();
-        
-        // Add timeout to prevent hanging
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
-        
-        const response = await fetch("/api/cases", {
-          headers,
-          signal: controller.signal,
-        });
-
-        clearTimeout(timeoutId);
-
-        if (!response.ok) {
-          const errorData = await response.json().catch(() => ({}));
-          throw new Error(errorData.error || `Threads yüklenemedi (${response.status})`);
-        }
-
-        const data = await response.json();
-        const loadedThreads = data.threads || [];
-
-        // Only update state if component is still mounted
-        if (isMounted) {
-          setThreads(loadedThreads);
-
-          // Auto-open sidebar if threads exist (but don't auto-select any thread)
-          if (loadedThreads.length > 0) {
-            setSidebarOpen(true);
-          }
-        }
-      } catch (err: any) {
-        console.error("Error loading threads:", err);
-        if (isMounted) {
-          if (err.name === 'AbortError') {
-            setError("İstek zaman aşımına uğradı. Lütfen tekrar deneyin.");
-          } else {
-            setError(err.message || "Threads yüklenemedi");
-          }
-          // Ensure loading state is cleared even on error
-          setThreads([]);
-        }
-      } finally {
-        if (isMounted) {
-          setIsLoadingThreads(false);
-        }
-      }
-    };
-
-    loadThreads();
-
-    // Cleanup function
-    return () => {
-      isMounted = false;
-    };
-  }, [user]);
+  }, [user, loadThreads]);
 
   // Load messages when thread is selected
   useEffect(() => {
