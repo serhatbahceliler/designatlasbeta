@@ -146,9 +146,28 @@ export default function AuthModal({ isOpen, onClose, onSuccess, intent = null, i
           }
         }
 
-        // Success - close modal and trigger onSuccess
-        onSuccess();
-        onClose();
+        // Check if user is automatically logged in (email confirmation disabled)
+        if (authData.session) {
+          // User is automatically authenticated - trigger success callback
+          onSuccess();
+          onClose();
+        } else {
+          // Email confirmation required - wait a bit and check session again
+          await new Promise((resolve) => setTimeout(resolve, 500));
+          
+          const { data: { session } } = await supabase.auth.getSession();
+          
+          if (session) {
+            // User is now authenticated
+            onSuccess();
+            onClose();
+          } else {
+            // Still no session - might need email confirmation
+            // Show success message but user will need to confirm email
+            onSuccess();
+            onClose();
+          }
+        }
       }
     } catch (err: any) {
       console.error("Signup error:", err);

@@ -108,26 +108,26 @@ function SignupContent() {
           }
         }
 
-        // Check if email confirmation is required
-        // If user is not confirmed, we'll wait for confirmation email
-        // But with auto-confirm enabled in Supabase, this should work immediately
+        // Check if user is automatically logged in (email confirmation disabled)
         if (authData.session) {
           // User is already authenticated (email confirmation disabled)
+          // Redirect immediately
           router.push(redirectTo);
           router.refresh();
         } else {
-          // Email confirmation required - wait a bit for auto-confirm trigger
-          await new Promise((resolve) => setTimeout(resolve, 1000));
+          // Email confirmation might be required - wait a bit and check session again
+          await new Promise((resolve) => setTimeout(resolve, 500));
           
           // Try to get session again
           const { data: { session } } = await supabase.auth.getSession();
           
           if (session) {
+            // User is now authenticated
             router.push(redirectTo);
             router.refresh();
           } else {
-            // Still no session - might need email confirmation
-            // Show message but still redirect (user will need to confirm email)
+            // Still no session - email confirmation required
+            // Show success message and redirect (user will need to confirm email)
             router.push(redirectTo);
             router.refresh();
           }
