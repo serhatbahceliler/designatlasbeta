@@ -172,6 +172,108 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Drop-off noktaları analiz edilirken'
     ],
     relatedConcepts: ['Journey Map', 'Interaction Design', 'Usability']
+  },
+  '2-saniye-kurali': {
+    shortDefinition: '2 Saniye Kuralı, bir kullanıcının bir sistemin verdiği tepki için en fazla yaklaşık 2 saniye beklemesi gerektiğini ifade eden bir kullanılabilirlik prensibidir.',
+    detailedDescription: 'Kullanıcılar bir aksiyon aldıktan sonra sistemden hızlı bir geri dönüş bekler. 2 saniye, teknik olarak kısa görünse de bu süre içinde kullanıcı sistem hakkında bilinçli veya bilinçsiz bir yargı oluşturur.\n\nBu kural, gerçek performanstan çok algılanan performans ile ilgilidir. Sistem arka planda çalışıyor olabilir ancak kullanıcıya bu his geçmiyorsa deneyim zayıflar.\n\n2 saniyeyi aşan beklemelerde kullanıcı sabırsızlanır, aynı aksiyonu tekrarlar ya da sistemi terk edebilir.',
+    exampleScenario: 'Bir kullanıcı "Sepete Ekle" butonuna tıkladığında hiçbir geri bildirim almazsa, tıklamanın algılanmadığını düşünebilir ve sayfayı yenileyebilir.',
+    whenToUse: [
+      'Sayfa ve ekran geçişleri tasarlanırken',
+      'Performans algısı değerlendirilirken',
+      'Loading ve feedback durumları kurgulanırken'
+    ],
+    relatedConcepts: ['Response Time', 'Perceived Performance', 'Feedback', 'Loading States']
+  },
+  'response-time': {
+    shortDefinition: 'Response Time, kullanıcının bir aksiyonundan sonra sistemin tepki vermesi için geçen süredir.',
+    detailedDescription: 'Response time ne kadar kısaysa, kullanıcı sistemin hızlı ve güvenilir olduğunu düşünür. Uzun response time\'lar, kullanıcıda hata olduğu hissini yaratabilir.\n\nBu süre yalnızca teknik ölçümlerle değil, kullanıcı algısıyla da değerlendirilmelidir.',
+    exampleScenario: 'Bir arama yaptıktan sonra sonuçların geç yüklenmesi, kullanıcıyı aramanın başarısız olduğuna inandırabilir.',
+    whenToUse: [
+      'Performans analizleri yapılırken',
+      'Geri bildirim mekanizmaları tasarlanırken'
+    ],
+    relatedConcepts: ['2 Saniye Kuralı', 'Feedback', 'Perceived Performance']
+  },
+  'perceived-performance': {
+    shortDefinition: 'Perceived Performance, bir sistemin kullanıcı tarafından ne kadar hızlı algılandığını ifade eder.',
+    detailedDescription: 'Gerçek performans ile algılanan performans her zaman aynı değildir. Kullanıcı, bekleme sırasında bilgilendiriliyorsa sistemi daha hızlı algılar.\n\nBu nedenle algıyı yöneten tasarım kararları, teknik iyileştirmeler kadar önemlidir.',
+    exampleScenario: 'Skeleton ekran gösterilen bir sayfa, tamamen boş kalan bir sayfaya göre daha hızlı algılanır.',
+    whenToUse: [
+      'Loading deneyimleri tasarlanırken',
+      'Performans algısı iyileştirilirken'
+    ],
+    relatedConcepts: ['Skeleton Screen', 'Loading States', 'Feedback']
+  },
+  'loading-states': {
+    shortDefinition: 'Loading states, sistemin bir işlem yaptığı sırada kullanıcıya gösterdiği geçici durumlardır.',
+    detailedDescription: 'Loading state\'ler kullanıcıyı belirsizlikten kurtarır. Kullanıcı, sistemin çalıştığını anlar ve beklemeye daha toleranslı olur.\n\nYanlış veya eksik loading state kullanımı, kullanıcıyı güvensiz hissettirebilir.',
+    exampleScenario: 'Bir liste yüklenirken spinner veya skeleton gösterilmemesi, sayfanın donduğu izlenimini verebilir.',
+    whenToUse: [
+      'Veri yüklenirken',
+      'Sayfa geçişlerinde',
+      'Uzun süren işlemlerde'
+    ],
+    relatedConcepts: ['Perceived Performance', 'Skeleton Screen', 'Feedback']
+  },
+  'skeleton-screen': {
+    shortDefinition: 'Skeleton screen, içerik yüklenmeden önce sayfanın iskelet yapısını gösteren bir loading tekniğidir.',
+    detailedDescription: 'Skeleton screen, kullanıcının neyin yükleneceğini önceden görmesini sağlar. Bu da bekleme süresinin daha kısa algılanmasına yardımcı olur.\n\nSpinner\'a göre daha bilgilendirici ve yönlendiricidir.',
+    exampleScenario: 'Bir haber sitesinde başlık ve içerik alanlarının gri bloklar olarak görünmesi skeleton screen kullanımına örnektir.',
+    whenToUse: [
+      'İçerik ağırlıklı sayfalarda',
+      'Liste ve feed yapılarında'
+    ],
+    relatedConcepts: ['Loading States', 'Perceived Performance', 'Response Time']
+  },
+  'feedback-visual-system': {
+    shortDefinition: 'Feedback, kullanıcının yaptığı bir aksiyonun sistem tarafından algılandığını gösteren geri bildirimdir.',
+    detailedDescription: 'Kullanıcı her aksiyonunun bir sonucu olduğunu görmek ister. Feedback olmadığı durumlarda kullanıcı aynı işlemi tekrar edebilir veya hata yaptığını düşünebilir.\n\nGeri bildirimler görsel, metinsel veya animasyonel olabilir.',
+    exampleScenario: 'Bir form gönderildiğinde "Başarıyla kaydedildi" mesajı gösterilmesi feedback\'tir.',
+    whenToUse: [
+      'Kullanıcı aksiyonlarından sonra',
+      'Hata veya başarı durumlarında'
+    ],
+    relatedConcepts: ['Response Time', 'Error Prevention', 'Microinteractions']
+  },
+  'user-research': {
+    shortDefinition: 'User Research, kullanıcıların ihtiyaçlarını, davranışlarını ve motivasyonlarını anlamak için yapılan araştırma sürecidir.',
+    detailedDescription: 'Kullanıcıyı tanımadan yapılan tasarım kararları varsayımlara dayanır. User research, bu varsayımları doğrular veya çürütür.\n\nAraştırma süreci, ürünün yanlış yönde gelişmesini engeller.',
+    exampleScenario: 'Kullanıcılarla görüşmeden geliştirilen bir özellik, ihtiyaç olmadığı için kullanılmayabilir.',
+    whenToUse: [
+      'Ürün keşif aşamasında',
+      'Büyük kararlar alınmadan önce'
+    ],
+    relatedConcepts: ['User Interview', 'Personas', 'Usability Testing']
+  },
+  'user-interview': {
+    shortDefinition: 'User interview, kullanıcılarla birebir yapılan görüşmeler yoluyla içgörü toplama yöntemidir.',
+    detailedDescription: 'Bu görüşmeler, kullanıcıların ne yaptığını değil neden yaptığını anlamayı sağlar. Doğru sorular sormak kritik öneme sahiptir.\n\nYanlış sorular, yanlış içgörülere yol açabilir.',
+    exampleScenario: 'Kullanıcıya "Bu özelliği neden kullanmıyorsun?" diye sormak, değerli içgörüler ortaya çıkarabilir.',
+    whenToUse: [
+      'Problemi derinlemesine anlamak için',
+      'Varsayımları doğrulamak için'
+    ],
+    relatedConcepts: ['User Research', 'Qualitative Research', 'Empathy']
+  },
+  'usability-testing': {
+    shortDefinition: 'Usability testing, kullanıcıların bir ürünü kullanırken yaşadığı problemleri gözlemlemeye yönelik testlerdir.',
+    detailedDescription: 'Bu testler, tasarımcının değil kullanıcının bakış açısını ortaya koyar. Küçük testler bile büyük problemleri açığa çıkarabilir.\n\nAmaç, kullanıcıyı test etmek değil, ürünü test etmektir.',
+    exampleScenario: 'Bir kullanıcının kayıt olurken sürekli yanlış alanları doldurması usability problemine işaret eder.',
+    whenToUse: [
+      'Tasarım doğrulanırken',
+      'Yayın öncesi kontrollerde'
+    ],
+    relatedConcepts: ['Usability', 'User Testing', 'Feedback']
+  },
+  'personas': {
+    shortDefinition: 'Personas, hedef kullanıcı gruplarını temsil eden kurgusal ama veri temelli karakterlerdir.',
+    detailedDescription: 'Personalar, tasarım kararlarını soyut kullanıcı tanımlarından kurtarır. Ekiplerin aynı kullanıcıyı düşünerek karar almasını sağlar.\n\nAncak gerçek veriye dayanmayan personelar yanıltıcı olabilir.',
+    exampleScenario: '"Yoğun çalışan, mobil odaklı bir kullanıcı"yı temsil eden persona, tasarım kararlarını netleştirir.',
+    whenToUse: [
+      'Kullanıcı segmentasyonu yapılırken',
+      'Tasarım kararları alınırken'
+    ],
+    relatedConcepts: ['User Research', 'User Journey Map', 'Empathy']
   }
 };
 
@@ -207,19 +309,12 @@ function filterTermsByRange(terms: Term[], range: FilterRange): Term[] {
 
 export default function UXSozlukPage() {
   const [activeFilter, setActiveFilter] = useState<FilterRange>('all');
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTerm, setSelectedTerm] = useState<string | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const filteredTerms = useMemo(() => {
-    let terms = filterTermsByRange(UX_TERMS, activeFilter);
-    
-    if (selectedCategory) {
-      terms = terms.filter((term) => term.category === selectedCategory);
-    }
-    
-    return terms;
-  }, [activeFilter, selectedCategory]);
+    return filterTermsByRange(UX_TERMS, activeFilter);
+  }, [activeFilter]);
 
   const categories = useMemo(() => {
     const uniqueCategories = Array.from(new Set(UX_TERMS.map((t) => t.category)));
@@ -278,10 +373,7 @@ export default function UXSozlukPage() {
               {filterButtons.map((filter) => (
                 <button
                   key={filter.value}
-                  onClick={() => {
-                    setActiveFilter(filter.value);
-                    setSelectedCategory(null);
-                  }}
+                  onClick={() => setActiveFilter(filter.value)}
                   className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 ${
                     activeFilter === filter.value
                       ? 'bg-[#DEFF37] text-black'
@@ -289,39 +381,6 @@ export default function UXSozlukPage() {
                   }`}
                 >
                   {filter.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Category Filters */}
-          <div className="mb-8">
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              <button
-                onClick={() => setSelectedCategory(null)}
-                className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 ${
-                  selectedCategory === null
-                    ? 'bg-[#DEFF37] text-black'
-                    : 'bg-zinc-900 text-gray-300 hover:bg-zinc-800'
-                }`}
-              >
-                Tüm Kategoriler
-              </button>
-              {categories.map((category) => (
-                <button
-                  key={category.name}
-                  onClick={() => {
-                    setSelectedCategory(category.name);
-                    setActiveFilter('all');
-                  }}
-                  className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 ${
-                    selectedCategory === category.name
-                      ? 'bg-[#DEFF37] text-black'
-                      : 'bg-zinc-900 text-gray-300 hover:bg-zinc-800'
-                  }`}
-                >
-                  <span className="mr-2">{category.emoji}</span>
-                  {category.name}
                 </button>
               ))}
             </div>
