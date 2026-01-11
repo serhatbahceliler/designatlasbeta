@@ -4261,9 +4261,15 @@ const roadmaps: Record<string, Roadmap> = {
             description: "JTBD yaklaşımı kullanıcıyı değil, kullanıcının yapmak istediği işi merkeze alır. Kullanıcı ürünü değil, bir sonucu 'işe alır'. JTBD yaklaşımı kullanıcının gerçek motivasyonunu anlamaya yardımcı olur.",
             resources: [
               {
+                category: "📘 UX Planet",
+                items: [
+                  { title: "Jobs to Be Done (JTBD) in Product Design", url: "https://uxplanet.org/jobs-to-be-done-jtbd-in-product-design-6065e7bec122" },
+                ],
+              },
+              {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Jobs to Be Done" },
+                  { title: "Personas vs. Jobs-to-Be-Done", url: "https://www.nngroup.com/articles/personas-jobs-be-done/" },
                 ],
               },
             ],
