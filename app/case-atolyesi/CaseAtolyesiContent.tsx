@@ -577,7 +577,7 @@ export default function CaseAtolyesiContent() {
                     Portfolyon için bir case üretelim mi?
                   </h1>
                   <p className="text-gray-400 text-lg md:text-xl">
-                    Fikrin olmasına gerek yok. İstersen sadece "mobil case üret" yazman yeterli.
+                    Fikrin olmasına gerek yok. İstersen sadece "bir case üret" yazman yeterli.
                   </p>
                 </div>
 
