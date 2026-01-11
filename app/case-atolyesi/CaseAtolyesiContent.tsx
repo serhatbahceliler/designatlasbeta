@@ -655,10 +655,10 @@ export default function CaseAtolyesiContent() {
                           {/* Icon with loading animation */}
                           <div className="relative flex-shrink-0 w-10 h-10 flex items-center justify-center">
                             {/* Outer rotating ring */}
-                            <div className="absolute top-0 left-0 w-10 h-10 border-2 border-purple-500/30 border-t-purple-500 rounded-full animate-spin"></div>
+                            <div className="absolute top-0 left-0 w-10 h-10 border-2 border-[#DEFF37]/30 border-t-[#DEFF37] rounded-full animate-spin"></div>
                             {/* Icon - centered */}
                             <svg
-                              className="w-6 h-6 text-purple-400 relative z-10"
+                              className="w-6 h-6 text-[#DEFF37] relative z-10"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
