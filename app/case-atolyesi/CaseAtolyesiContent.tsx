@@ -195,9 +195,10 @@ export default function CaseAtolyesiContent() {
     }
   }, [hasThreads, sidebarOpen]);
 
-  // Animated placeholder typing effect
+  // Animated placeholder typing effect - only when no thread is selected and input is empty
   useEffect(() => {
-    if (hasThreads || input !== "") {
+    // Stop animation if input has text or a thread is selected
+    if (input !== "" || selectedThreadId) {
       setAnimatedPlaceholder("");
       if (placeholderTimeoutRef.current) {
         clearTimeout(placeholderTimeoutRef.current);
@@ -244,7 +245,7 @@ export default function CaseAtolyesiContent() {
         clearTimeout(placeholderTimeoutRef.current);
       }
     };
-  }, [hasThreads, currentPromptIndex, input]);
+  }, [selectedThreadId, currentPromptIndex, input]);
 
   const loadMessages = async (threadId: string) => {
     try {
@@ -452,7 +453,8 @@ export default function CaseAtolyesiContent() {
 
     const messageText = input.trim();
 
-    if (!hasThreads) {
+    // If no thread is selected (new case screen), always create a new thread
+    if (!selectedThreadId) {
       await sendFirstMessage(messageText);
     } else if (selectedThreadId) {
       await sendMessage(messageText, selectedThreadId, false);
@@ -718,14 +720,16 @@ export default function CaseAtolyesiContent() {
             {/* Input Area - Sticky */}
             <div className="sticky bottom-0 p-4 border-t border-white/10 bg-black/95 backdrop-blur-md z-10">
               <form onSubmit={handleSubmit} className="flex gap-3">
-                <input
-                  type="text"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  placeholder="Mesajınızı yazın..."
-                  disabled={isLoading}
-                  className="flex-1 px-4 py-3 bg-black/20 backdrop-blur-md border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#DEFF37]/50 focus:bg-black/30 transition-all disabled:opacity-50 shadow-lg"
-                />
+                <div className="flex-1 relative">
+                  <input
+                    type="text"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    placeholder={animatedPlaceholder || "Mesajınızı yazın..."}
+                    disabled={isLoading}
+                    className="w-full px-4 py-3 bg-black/20 backdrop-blur-md border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#DEFF37]/50 focus:bg-black/30 transition-all disabled:opacity-50 shadow-lg"
+                  />
+                </div>
                 <button
                   type="submit"
                   disabled={!input.trim() || isLoading}
