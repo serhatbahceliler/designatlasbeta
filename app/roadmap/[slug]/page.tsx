@@ -4346,7 +4346,7 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Journey Mapping" },
+                  { title: "Journey mapping 101", url: "https://www.nngroup.com/articles/journey-mapping-101/" },
                 ],
               },
             ],
@@ -4361,6 +4361,14 @@ const roadmaps: Record<string, Roadmap> = {
           {
             title: "Task Flow'lar",
             description: "Task flow tek bir işi yapma adımlarıdır. Task flow'lar user flow'lardan daha dar kapsamlıdır ve belirli bir görevi tamamlama sürecini gösterir. UX tasarımı bu akışları sadeleştirmeye çalışır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "User journeys vs user flows", url: "https://www.nngroup.com/articles/user-journeys-vs-user-flows/" },
+                ],
+              },
+            ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
@@ -4374,9 +4382,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "Information Architecture içeriğin nasıl gruplanacağı, nasıl adlandırılacağı, nasıl bulunacağı ile ilgilenir. İyi IA kullanıcıyı düşündürmez, aradığını sezgisel olarak buldurur.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 UX Design Institute",
                 items: [
-                  { title: "Information Architecture" },
+                  { title: "What is information architecture?", url: "https://www.uxdesigninstitute.com/blog/what-is-information-architecture/" },
                 ],
               },
             ],
