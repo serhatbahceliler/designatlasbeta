@@ -4,12 +4,82 @@ import "./globals.css";
 import AuthProviderWrapper from "@/components/AuthProviderWrapper";
 
 export const metadata: Metadata = {
-  title: "DesignAtlas – UX, UI ve Product Design için Öğrenme Roadmap'leri",
-  description: "UX, UI ve Product Designer'lar için net, açık roadmap'ler. Kayıt yok. Boş laf yok. Net öğrenme yolları.",
+  title: {
+    default: "Design Atlas - UX, UI ve Product Design Öğrenme Platformu",
+    template: "%s | Design Atlas",
+  },
+  description: "Design Atlas - UX, UI ve Product Designer'lar için net, açık roadmap'ler ve öğrenme yolları. UX Sözlük, Case Atölyesi ve kapsamlı tasarım rehberleri. Kayıt yok. Boş laf yok. Net öğrenme yolları.",
+  keywords: [
+    "Design Atlas",
+    "design atlas",
+    "UX design",
+    "UI design",
+    "Product design",
+    "UX roadmap",
+    "UI roadmap",
+    "Product design roadmap",
+    "tasarım öğrenme",
+    "design öğrenme",
+    "UX rehberi",
+    "UI rehberi",
+    "tasarım roadmap",
+    "design roadmap",
+    "UX case study",
+    "UX sözlük",
+    "design sözlük",
+  ],
+  authors: [{ name: "Design Atlas" }],
+  creator: "Design Atlas",
+  publisher: "Design Atlas",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://www.designatlas.io"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "tr_TR",
+    url: "https://www.designatlas.io",
+    siteName: "Design Atlas",
+    title: "Design Atlas - UX, UI ve Product Design Öğrenme Platformu",
+    description: "Design Atlas - UX, UI ve Product Designer'lar için net, açık roadmap'ler ve öğrenme yolları. UX Sözlük, Case Atölyesi ve kapsamlı tasarım rehberleri.",
+    images: [
+      {
+        url: "https://r.resimlink.com/Tp-aXNqbWR.png",
+        width: 1200,
+        height: 630,
+        alt: "Design Atlas - UX, UI ve Product Design Öğrenme Platformu",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Design Atlas - UX, UI ve Product Design Öğrenme Platformu",
+    description: "Design Atlas - UX, UI ve Product Designer'lar için net, açık roadmap'ler ve öğrenme yolları.",
+    images: ["https://r.resimlink.com/Tp-aXNqbWR.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: "https://r.resimlink.com/Tp-aXNqbWR.png",
     shortcut: "https://r.resimlink.com/Tp-aXNqbWR.png",
     apple: "https://r.resimlink.com/Tp-aXNqbWR.png",
+  },
+  verification: {
+    // Google Search Console verification code'u buraya eklenecek (gerekirse)
   },
 };
 
@@ -21,7 +91,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="tr">
       <body className="antialiased">
         {/* Google Analytics */}
         <Script
