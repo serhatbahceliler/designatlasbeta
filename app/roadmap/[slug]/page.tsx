@@ -4401,8 +4401,8 @@ const roadmaps: Record<string, Roadmap> = {
           },
         ],
       },
-          {
-            title: "Error Prevention & Recovery",
+      {
+        title: "🎨 Interface (UI & Interaction)",
             description: "İyi UX hatayı sadece göstermez, hata yapılmasını engeller. Hata olursa kullanıcıyı suçlamaz, nasıl düzelteceğini net anlatır.",
             resources: [
               {
@@ -4647,11 +4647,118 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "🤝 Communication & Collaboration",
-        description: "Product Designer tek başına tasarlamaz, ekip içinde karar üretir, tasarımın etkisini anlatır. İyi iletişim tasarımı savunmak değil, ortak anlayış oluşturmaktır. Amaç: 'benim tasarımım' değil, 'ekibin kararı' hissini yaratmak.",
+        title: "MVP & Iterasyon",
+        description: "MVP nedir ne değildir, scope belirleme, hızlı teslim – öğrenme döngüsü, iteratif gelişim ve öğrenilenlere göre iyileştirme.",
         topics: [
           {
-            title: "Product Manager ile Çalışma",
+            title: "MVP Nedir? Ne Değildir?",
+            description: "MVP en küçük çözüm değil, en çok öğrenme sağlayan çözümdür. MVP, kullanıcıya değer sağlayan ve test edilebilir varsayımları doğrulayan en küçük özellik setidir. Amaç kusursuzluk değil, öğrenme hızıdır.",
+          },
+          {
+            title: "Scope Belirleme",
+            description: "Scope belirleme, MVP'ye hangi özelliklerin dahil edileceğini, hangilerinin sonraya bırakılacağını karar vermektir. Scope belirleme: kullanıcı değeri, iş değeri, teknik yapılabilirlik ve öğrenme hedeflerini birlikte düşünmektir.",
+          },
+          {
+            title: "Hızlı Teslim – Öğrenme Döngüsü",
+            description: "Hızlı teslim – öğrenme döngüsü, kısa sprint'lerde ürünü canlıya alıp, kullanıcı davranışından öğrenmeyi sağlar. Bu döngü: build → measure → learn → iterate mantığıyla çalışır.",
+          },
+          {
+            title: "Iteratif Gelişim",
+            description: "İyi ürünler tek seferde 'mükemmel' olmaz, iterasyonla gelişir. Iteratif gelişim: her iterasyonda öğrenilenleri bir sonraki versiyona yansıtarak sürekli iyileştirmektir. Iteration geri adım değil, öğrenmenin sonucudur.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarım için sor: Bugün yeniden yapsan neyi değiştirirdin?",
+                "Neden?",
+              ],
+            },
+          },
+          {
+            title: "Öğrenilenlere Göre İyileştirme",
+            description: "Öğrenilenlere göre iyileştirme, test sonuçlarını, kullanıcı feedback'ini ve metrikleri analiz ederek ürünü geliştirmektir. Öğrenme yoksa iyileştirme de olmaz.",
+          },
+        ],
+      },
+      {
+        title: "Validasyon & Test",
+        description: "Çözüm doğrulama, usability testleri, konsept testleri, feedback toplama ve test sonuçlarını ürüne yansıtma.",
+        topics: [
+          {
+            title: "Çözüm Doğrulama",
+            description: "Çözüm doğrulama, ürettiğiniz çözümün gerçekten problemi çözüp çözmediğini test etmektir. Çözüm doğrulama: kullanıcıların çözümü kullanabilmesi, problemi çözebilmesi ve çözümden değer alabilmesi ile ölçülür.",
+          },
+          {
+            title: "Usability Testleri",
+            description: "Usability testleri, kullanıcıların ürünü kullanırken ne kadar kolay, hızlı ve hatasız bir şekilde görevlerini tamamlayabildiğini ölçer. Usability testleri: görev tamamlama süresi, hata oranı, kullanıcı memnuniyeti gibi metriklerle ölçülür.",
+          },
+          {
+            title: "Konsept Testleri",
+            description: "Konsept testleri, kullanıcıların yeni bir fikri veya konsepti nasıl algıladığını ve ne kadar değerli bulduğunu anlamak için yapılır. Konsept testleri: kullanıcı görüşmeleri, prototip testleri ve A/B testleri ile yapılabilir.",
+          },
+          {
+            title: "Feedback Toplama",
+            description: "Feedback toplama, kullanıcılardan, stakeholder'lardan ve ekipten ürün hakkında geri bildirim toplamaktır. İyi feedback toplama: net sorular sorar, yapıcı geri bildirim alır, geri bildirimi analiz eder ve ürüne yansıtır.",
+          },
+          {
+            title: "Test Sonuçlarını Ürüne Yansıtma",
+            description: "Test sonuçlarını ürüne yansıtma, test bulgularını analiz edip, öğrenilenleri ürün geliştirme sürecine entegre etmektir. Test yapıp sonuçları yansıtmamak, test yapmamaktan daha kötüdür.",
+          },
+        ],
+      },
+      {
+        title: "Metrikler & Etki Ölçümü",
+        description: "Product metrikleri nedir, output vs outcome, UX & product metrikleri, başarıyı ölçmek ve öğrenme odaklı KPI'lar.",
+        topics: [
+          {
+            title: "Product Metrikleri Nedir?",
+            description: "Product metrikleri, ürünün başarısını ve kullanıcı davranışını ölçmek için kullanılan sayısal göstergelerdir. Product metrikleri: activation, adoption, retention, revenue gibi farklı kategorilerde olabilir.",
+          },
+          {
+            title: "Output vs Outcome",
+            description: "Output yaptığın iştir (ör. yeni ekran), outcome ise yarattığın etkidir (ör. kullanıcı daha hızlı işini tamamladı). Product Designer output değil, outcome üretir. Tasarımın başarısı kaç ekran çizildiğiyle değil, hangi davranış değiştiğiyle ölçülür.",
+          },
+          {
+            title: "UX & Product Metrikleri",
+            description: "UX ve Product metrikleri birlikte okunur. Örnek UX metrikleri: görev tamamlama süresi, hata oranı, kullanıcı memnuniyeti. Örnek Product metrikleri: activation, adoption, retention. Tek başına biri yeterli değildir.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir feature seç: UX tarafında neyi ölçerdin?",
+                "Product tarafında neyi izlerdin?",
+              ],
+            },
+          },
+          {
+            title: "Başarıyı Ölçmek",
+            description: "Başarıyı ölçmek, tasarım kararlarının ne kadar etkili olduğunu anlamak için metrikleri kullanmaktır. İyi bir success metric net, ölçülebilir, davranışa bağlıdır. Başarı 'ekran yayına alındı' değildir, 'kullanıcı şu işi daha kolay yaptı'dır.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "UX Metrics" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir tasarım için yaz: Bu tasarım başarılı olursa ne değişir?",
+                "Bunu hangi sinyalle anlarsın?",
+              ],
+            },
+          },
+          {
+            title: "Öğrenme Odaklı KPI'lar",
+            description: "Öğrenme odaklı KPI'lar, ürün kararlarının doğruluğunu öğrenmek için kullanılan metriklerdir. Öğrenme odaklı KPI'lar: 'kullanıcılar bu özelliği kullanıyor mu?', 'bu özellik problemi çözüyor mu?' gibi sorulara cevap verir.",
+          },
+        ],
+      },
+      {
+        title: "Ekiplerle Çalışma",
+        description: "Product Manager ile çalışmak, developer'larla çalışmak, stakeholder yönetimi, karar alma süreçleri ve cross-functional iş birliği.",
+        topics: [
+          {
+            title: "Product Manager ile Çalışmak",
             description: "PM ürün hedeflerini, öncelikleri, iş etkisini temsil eder. Product Designer kullanıcı perspektifini, deneyim kalitesini, riskleri ortaya koyar. Sağlıklı ilişki: erken konuşmak, birlikte problem tanımlamak, çözümü birlikte şekillendirmek.",
             resources: [
               {
@@ -4670,7 +4777,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Developer'larla Çalışma",
+            title: "Developer'larla Çalışmak",
             description: "Developer'lar tasarımı değil, davranışı uygular. İyi iletişim niyeti açıklar, edge-case yerine temel mantığı anlatır, 'neden böyle'yi paylaşır. Amaç tasarımın canlıda bozulmamasıdır.",
             resources: [
               {
@@ -4708,212 +4815,12 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Design Critique Alma & Verme",
-            description: "Design critique beğeni toplamak değildir, tasarımı geliştirmektir. İyi critique probleme odaklanır, kişisel olmaz, gerekçelidir. Kötü critique: 'bence böyle', 'daha güzel olur'.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Design Critiques" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir feedback cümlesi yaz: 'Bence güzel değil' yerine",
-                "Nasıl daha yapıcı olur?",
-              ],
-            },
+            title: "Karar Alma Süreçleri",
+            description: "Karar alma süreçleri, ekip içinde karar verme yöntemlerini ve süreçlerini içerir. İyi karar alma süreçleri: problemi net tanımlar, alternatifleri değerlendirir, veriye dayalı karar verir, kararı dokümante eder.",
           },
           {
-            title: "Design Decision'ları Anlatma",
-            description: "Tasarımcı sadece çizen değil, karar anlatan kişidir. İyi anlatım problemi hatırlatır, alternatifleri açıklar, neden bu kararın alındığını söyler.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir tasarım kararını yaz: Alternatif neydi?",
-                "Neden bunu seçtin?",
-              ],
-            },
-          },
-          {
-            title: "Handoff & Dokümantasyon",
-            description: "Handoff dosya teslimi değil, bilgi aktarımıdır. İyi handoff belirsizliği azaltır, yorum ihtiyacını düşürür, geliştirme sürecini hızlandırır.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Design Handoff" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir handoff düşün: Developer hangi soruyu sordu?",
-                "Bunu önceden çözebilir miydin?",
-              ],
-            },
-          },
-          {
-            title: "Design QA & Canlı Ürün Takibi",
-            description: "Geliştirme bittiğinde iş bitmez. Design QA küçük farkları yakalar, deneyim kalitesini korur, kullanıcıyı savunur.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Canlı ürüne bak: Tasarımdan farklı olan ne?",
-                "Bu fark kullanıcıyı etkiliyor mu?",
-              ],
-            },
-          },
-          {
-            title: "Feedback Loop Kurma",
-            description: "İyi ekipler feedback'i tek seferlik almaz, döngü kurar. Feedback loop öğrenmeyi hızlandırır, aynı hatanın tekrarlanmasını önler.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir karar sonrası sor: Bundan ne öğrendik?",
-                "Bir dahaki sefere neyi farklı yaparız?",
-              ],
-            },
-          },
-          {
-            title: "Tasarımın Etkisini İfade Etme",
-            description: "Product Designer yaptığı işin etkisini söyleyebilmelidir. Bu etki kullanıcı memnuniyeti, hız, hata oranı, benimsenme gibi sinyallerle anlatılır.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir işin için yaz: Bu tasarım neyi iyileştirdi?",
-                "Bunu nasıl fark ettin?",
-              ],
-            },
-          },
-        ],
-      },
-      {
-        title: "📊 Metrics, Impact & Iteration",
-        description: "Metrics, tasarımın işe yarayıp yaramadığını, hangi davranışı değiştirdiğini, ürün hedeflerine nasıl katkı sağladığını görmemizi sağlar. Product Designer için metrikler tasarımı kanıtlamak için değil, daha iyi karar vermek için kullanılır.",
-        topics: [
-          {
-            title: "Success Metrics Tanımlama",
-            description: "Her tasarım kararı bir başarı tanımına sahip olmalıdır. Başarı 'ekran yayına alındı' değildir, 'kullanıcı şu işi daha kolay yaptı'dır. İyi bir success metric net, ölçülebilir, davranışa bağlıdır.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "UX Metrics" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir tasarım için yaz: Bu tasarım başarılı olursa ne değişir?",
-                "Bunu hangi sinyalle anlarsın?",
-              ],
-            },
-          },
-          {
-            title: "UX & Product Metrics",
-            description: "UX ve Product metrikleri birlikte okunur. Örnek UX metrikleri: görev tamamlama süresi, hata oranı, kullanıcı memnuniyeti. Örnek Product metrikleri: activation, adoption, retention. Tek başına biri yeterli değildir.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir feature seç: UX tarafında neyi ölçerdin?",
-                "Product tarafında neyi izlerdin?",
-              ],
-            },
-          },
-          {
-            title: "Funnel & Davranış Analizi",
-            description: "Funnel kullanıcının adım adım ilerleyişini gösterir. Düşüş olan noktalar genelde UX problemine işaret eder, bazen de yanlış beklentiye. Funnel okumak 'nerede' sorusunu, UX araştırma 'neden' ile tamamlar.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Funnel Analysis" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir funnel düşün: En büyük düşüş nerede?",
-                "UX orada ne yapıyor?",
-              ],
-            },
-          },
-          {
-            title: "Qualitative & Quantitative Sinyalleri Birlikte Okuma",
-            description: "Quant ne oluyor?, Qual neden oluyor? sorusunu cevaplar. Product Designer bu iki sinyali birleştirir. Sadece veri bağlamı kaçırır, sadece görüş genellenemez.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir sayı düşün: Bu sayı neden böyle olabilir?",
-                "Bunu kiminle konuşarak anlarsın?",
-              ],
-            },
-          },
-          {
-            title: "Deney & A/B Test Mantığı",
-            description: "A/B test her problem için uygun değildir, küçük, net değişikliklerde işe yarar. Yanlış kullanım: belirsiz hipotez, çok fazla değişken. Doğru kullanım: tek varsayım, net başarı kriteri.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "A/B Testing" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir fikir düşün: Bu A/B test için uygun mu?",
-                "Yoksa önce UX araştırma mı gerekir?",
-              ],
-            },
-          },
-          {
-            title: "Post-Launch Analiz",
-            description: "Yayına almak son değil, başlangıçtır. Post-launch beklenen etki oldu mu?, kullanıcı nerede zorlanıyor?, yeni problemler doğdu mu? sorularını sorar. Bu analiz yapılmazsa aynı hatalar tekrar eder.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Son yayını düşün: Beklediğiniz etki oldu mu?",
-                "Olmadıysa neden?",
-              ],
-            },
-          },
-          {
-            title: "Iteration & Continuous Improvement",
-            description: "İyi ürünler tek seferde 'mükemmel' olmaz, iterasyonla gelişir. Iteration geri adım değil, öğrenmenin sonucudur.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir tasarım için sor: Bugün yeniden yapsan neyi değiştirirdin?",
-                "Neden?",
-              ],
-            },
-          },
-          {
-            title: "UX / UI Debt Farkındalığı",
-            description: "UX / UI debt kısa vadede alınan kararların uzun vadede deneyimi zorlaştırmasıdır. Debt birikir, ama fark edilmezse büyür. Product Designer bu debt'i görünür kılar.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "UX Debt" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir ürünü düşün: En çok 'idare eden' kısım neresi?",
-                "Bunun bedeli ne?",
-              ],
-            },
+            title: "Cross-functional İş Birliği",
+            description: "Cross-functional iş birliği, farklı ekiplerle (PM, developer, data, marketing vb.) birlikte çalışarak ürün geliştirmektir. İyi cross-functional iş birliği: erken iletişim, ortak hedefler, açık feedback döngüleri ve karşılıklı saygı gerektirir.",
           },
         ],
       },
