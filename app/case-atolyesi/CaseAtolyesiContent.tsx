@@ -117,7 +117,6 @@ export default function CaseAtolyesiContent() {
   const firstName = profile?.first_name || "Serhat";
   const hasThreads = threads.length > 0;
   const showSidebar = hasThreads && sidebarOpen;
-  const hasLoadedRef = useRef(false);
   const abortControllerRef = useRef<AbortController | null>(null);
 
   const loadThreads = useCallback(async () => {
@@ -162,16 +161,12 @@ export default function CaseAtolyesiContent() {
     }
   }, []);
 
-  // Load threads on mount - only once
+  // Load threads when user is available
   useEffect(() => {
-    if (hasLoadedRef.current) return;
-    
     if (user) {
-      hasLoadedRef.current = true;
       loadThreads();
     } else {
       setIsLoadingThreads(false);
-      hasLoadedRef.current = true;
     }
   }, [user, loadThreads]);
 
