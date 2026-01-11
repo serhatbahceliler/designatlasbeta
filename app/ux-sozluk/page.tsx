@@ -487,6 +487,107 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Kritik aksiyonlar öncesinde'
     ],
     relatedConcepts: ['Validation', 'Feedback', 'Edge Case']
+  },
+  'mental-model': {
+    shortDefinition: 'Mental model, kullanıcıların bir sistemin nasıl çalıştığına dair kafalarında oluşturdukları içsel düşünce yapısıdır.',
+    detailedDescription: 'Kullanıcılar bir ürünü ilk kez kullanırken sıfırdan öğrenmez; daha önce gördükleri sistemlere dayanarak beklentiler oluşturur. Bu beklentiler mental model\'leri oluşturur.\n\nEğer tasarlanan sistem, kullanıcının mental modeliyle uyuşmuyorsa kullanıcı zorlanır, hata yapar veya sistemi "karmaşık" olarak etiketler.\n\nİyi UX, kullanıcıyı eğitmeye çalışmaz; mevcut mental model\'lere uyum sağlar veya onları yavaşça dönüştürür.',
+    exampleScenario: 'Kullanıcı bir çöp kutusu ikonuna tıkladığında silme işlemi bekler. Farklı bir aksiyon gerçekleşirse mental model kırılır.',
+    whenToUse: [
+      'Yeni bir akış tasarlanırken',
+      'Alışılmış davranışlar değiştirilirken',
+      'Kullanıcı hatalarının nedeni analiz edilirken'
+    ],
+    relatedConcepts: ['Affordance', "Jakob's Law", 'Usability']
+  },
+  'heuristic': {
+    shortDefinition: 'Heuristic, kullanıcı deneyimini değerlendirmek için kullanılan genel kural ve prensiplerdir.',
+    detailedDescription: 'Heuristic\'ler kesin doğrular değildir; hızlı değerlendirme yapmak için kullanılan rehberlerdir.\n\nBir arayüzün "neden iyi" ya da "neden problemli" olduğunu anlamak için kullanılır.\n\nTasarım kararlarını doğrulamak veya problem alanlarını hızlıca tespit etmek için oldukça etkilidir.',
+    exampleScenario: 'Bir ekranda kullanıcıya sistem durumu hakkında bilgi verilmemesi, temel bir heuristic ihlalidir.',
+    whenToUse: [
+      'Hızlı UX değerlendirmeleri yapılırken',
+      'Usability testleri öncesinde'
+    ],
+    relatedConcepts: ["Nielsen's Heuristics", 'Usability', 'UX Review']
+  },
+  'nielsens-heuristics': {
+    shortDefinition: "Nielsen's Heuristics, Jakob Nielsen tarafından tanımlanan ve UX değerlendirmelerinde sık kullanılan 10 temel kullanılabilirlik prensibidir.",
+    detailedDescription: 'Bu heuristikler, kullanıcı arayüzlerinde en sık karşılaşılan problemleri tespit etmeye yardımcı olur.\n\nAmaç kusursuz tasarım yapmak değil, büyük problemleri erken aşamada fark etmektir.\n\nTek başına yeterli değildir; kullanıcı testleriyle desteklenmelidir.',
+    exampleScenario: "Hata mesajlarının ne yapılacağını söylememesi, Nielsen heuristiklerine aykırıdır.",
+    whenToUse: [
+      'UX audit yapılırken',
+      'Mevcut ürünler değerlendirilirken'
+    ],
+    relatedConcepts: ['Heuristic', 'Error Prevention', 'Usability']
+  },
+  'empathy': {
+    shortDefinition: 'Empathy, kullanıcının duygularını, ihtiyaçlarını ve motivasyonlarını gerçekten anlamaya çalışmaktır.',
+    detailedDescription: 'Empati, "kullanıcı ne yapıyor?"dan çok "neden böyle hissediyor?" sorusuna odaklanır.\n\nEmpati kurmadan yapılan tasarım kararları genellikle yüzeysel kalır.\n\nUX\'in temelinde insanı anlamak vardır; empati bu anlayışın başlangıç noktasıdır.',
+    exampleScenario: 'Finansal bir hata yaşayan kullanıcının stresini hesaba katmadan tasarlanan ekranlar güvensizlik yaratır.',
+    whenToUse: [
+      'User research yapılırken',
+      'Hassas akışlar tasarlanırken'
+    ],
+    relatedConcepts: ['Human-Centered Design', 'User Research', 'Personas']
+  },
+  'cognitive-bias': {
+    shortDefinition: 'Cognitive bias, insanların karar verirken farkında olmadan yaptığı zihinsel eğilimlerdir.',
+    detailedDescription: 'Kullanıcılar her zaman rasyonel kararlar almaz. Alışkanlıklar, korkular ve geçmiş deneyimler kararları etkiler.\n\nBu bias\'ları anlamak, daha gerçekçi ve etkili deneyimler tasarlamayı sağlar.',
+    exampleScenario: 'Varsayılan olarak seçili gelen bir seçeneğin çoğu kullanıcı tarafından değiştirilmemesi bir cognitive bias örneğidir.',
+    whenToUse: [
+      'Karar noktaları tasarlanırken',
+      'Form ve seçim alanları oluşturulurken'
+    ],
+    relatedConcepts: ['Default Bias', 'Decision Making', 'Behavioral Design']
+  },
+  'progressive-disclosure': {
+    shortDefinition: 'Progressive disclosure, bilgiyi kullanıcıya ihtiyaç duyduğu anda ve parça parça sunma yaklaşımıdır.',
+    detailedDescription: 'Tüm bilgiyi tek ekranda göstermek kullanıcıyı bunaltır. Progressive disclosure, karmaşıklığı yönetilebilir hale getirir.\n\nBu yaklaşım, bilişsel yükü azaltır ve kullanıcıyı daha rahat ilerletir.',
+    exampleScenario: 'Gelişmiş ayarların varsayılan olarak gizli olması progressive disclosure\'dır.',
+    whenToUse: [
+      'Karmaşık akışlar tasarlanırken',
+      'Ayar ve konfigürasyon ekranlarında'
+    ],
+    relatedConcepts: ['Cognitive Load', 'Visual Hierarchy', 'UX Writing']
+  },
+  'hicks-law': {
+    shortDefinition: "Hick's Law, kullanıcıya sunulan seçenek sayısı arttıkça karar verme süresinin de arttığını söyler.",
+    detailedDescription: 'Çok fazla seçenek, kullanıcıyı özgürleştirmek yerine kararsız bırakabilir.\n\nBu nedenle sadeleştirme ve önceliklendirme, iyi UX\'in temelidir.',
+    exampleScenario: 'Bir ana ekranda aynı anda 10 aksiyon sunmak, kullanıcıyı hangi yolu seçeceği konusunda zorlar.',
+    whenToUse: [
+      'Menü ve navigasyon tasarlanırken',
+      'Kritik karar noktalarında'
+    ],
+    relatedConcepts: ['Cognitive Load', 'Decision Making', 'Visual Hierarchy']
+  },
+  'fittss-law': {
+    shortDefinition: "Fitts's Law, bir hedefin boyutu ve uzaklığı arttıkça ona ulaşmanın daha kolay olduğunu ifade eden bir prensiptir.",
+    detailedDescription: 'Kullanıcılar büyük ve yakın hedeflere daha hızlı ve hatasız ulaşır.\n\nBu nedenle sık kullanılan aksiyonlar daha büyük ve erişilebilir konumlarda olmalıdır.',
+    exampleScenario: "Mobil uygulamalarda ana aksiyonun başparmağın kolayca ulaşabileceği yerde olması Fitts's Law ile ilgilidir.",
+    whenToUse: [
+      'Buton boyutları belirlenirken',
+      'Mobil etkileşimler tasarlanırken'
+    ],
+    relatedConcepts: ['Interaction Design', 'Accessibility', 'Touch Targets']
+  },
+  'jakobs-law': {
+    shortDefinition: "Jakob's Law, kullanıcıların çoğu zaman başka ürünlerde öğrendikleri deneyimleri yeni ürünlere taşıdığını söyler.",
+    detailedDescription: 'Kullanıcılar her ürünü sıfırdan öğrenmek istemez. Alışılmış kalıplar bozulduğunda deneyim zorlaşır.\n\nBu yüzden farklı olmak her zaman daha iyi değildir.',
+    exampleScenario: "Sağa bakan ok ikonunun \"ilerle\" anlamına gelmesi Jakob's Law'a dayanır.",
+    whenToUse: [
+      'Alışılmış pattern\'ler değiştirilirken',
+      'Yeni etkileşimler tasarlanırken'
+    ],
+    relatedConcepts: ['Mental Model', 'Consistency', 'Usability']
+  },
+  'gestalt-principles': {
+    shortDefinition: 'Gestalt prensipleri, insanların görsel öğeleri nasıl algıladığını açıklayan psikolojik ilkelerdir.',
+    detailedDescription: 'Yakınlık, benzerlik ve devamlılık gibi prensipler, kullanıcıların bilgiyi nasıl gruplayacağını belirler.\n\nBu prensipler doğru kullanıldığında arayüz daha anlaşılır hale gelir.',
+    exampleScenario: 'Birbirine yakın duran butonların aynı gruba ait algılanması Gestalt prensiplerindendir.',
+    whenToUse: [
+      'Layout ve grid tasarlanırken',
+      'Bilgi gruplandırılırken'
+    ],
+    relatedConcepts: ['Visual Hierarchy', 'UI Design', 'Cognitive Load']
   }
 };
 
