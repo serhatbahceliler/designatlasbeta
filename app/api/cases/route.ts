@@ -5,6 +5,7 @@ export const dynamic = 'force-dynamic';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || supabaseAnonKey; // Fallback to anon key if service key not set
 
 export async function GET(request: NextRequest) {
   try {
@@ -15,29 +16,28 @@ export async function GET(request: NextRequest) {
     }
 
     const token = authHeader.replace('Bearer ', '');
-    const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+    const supabase = createClient(supabaseUrl, supabaseAnonKey);
+    
+    // Verify user with token
+    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+    
+    if (authError || !user) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    // Use service role client for queries (bypasses RLS but we filter by user_id)
+    const supabaseService = createClient(supabaseUrl, supabaseServiceKey, {
       auth: {
         persistSession: false,
         autoRefreshToken: false,
       },
     });
-    
-    // Set session for RLS policies to work
-    const { data: { session }, error: sessionError } = await supabase.auth.setSession({
-      access_token: token,
-      refresh_token: '',
-    });
-    
-    if (sessionError || !session?.user) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
-
-    const { user } = session;
 
     // Get all threads for user, ordered by updated_at DESC
-    const { data: threads, error } = await supabase
+    const { data: threads, error } = await supabaseService
       .from("case_threads")
       .select("*")
+      .eq("user_id", user.id)
       .order("updated_at", { ascending: false });
 
     if (error) {
@@ -61,24 +61,14 @@ export async function POST(request: NextRequest) {
     }
 
     const token = authHeader.replace('Bearer ', '');
-    const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-      auth: {
-        persistSession: false,
-        autoRefreshToken: false,
-      },
-    });
+    const supabase = createClient(supabaseUrl, supabaseAnonKey);
     
-    // Set session for RLS policies to work
-    const { data: { session }, error: sessionError } = await supabase.auth.setSession({
-      access_token: token,
-      refresh_token: '',
-    });
+    // Verify user with token
+    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
     
-    if (sessionError || !session?.user) {
+    if (authError || !user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
-
-    const { user } = session;
 
     const body = await request.json();
     const { title } = body;
@@ -87,8 +77,16 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Title gereklidir" }, { status: 400 });
     }
 
-    // Create new thread (RLS will verify auth.uid() = user_id)
-    const { data: thread, error } = await supabase
+    // Use service role client for insert (bypasses RLS)
+    const supabaseService = createClient(supabaseUrl, supabaseServiceKey, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+      },
+    });
+
+    // Create new thread - service role bypasses RLS
+    const { data: thread, error } = await supabaseService
       .from("case_threads")
       .insert([
         {
@@ -101,7 +99,10 @@ export async function POST(request: NextRequest) {
 
     if (error) {
       console.error("Error creating thread:", error);
-      return NextResponse.json({ error: "Thread oluşturulamadı" }, { status: 500 });
+      return NextResponse.json({ 
+        error: "Thread oluşturulamadı",
+        details: error.message 
+      }, { status: 500 });
     }
 
     return NextResponse.json({ thread });

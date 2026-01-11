@@ -8,6 +8,7 @@ export const dynamic = 'force-dynamic';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || supabaseAnonKey; // Fallback to anon key if service key not set
 
 export async function POST(request: NextRequest) {
   try {
@@ -18,24 +19,22 @@ export async function POST(request: NextRequest) {
     }
 
     const token = authHeader.replace('Bearer ', '');
-    const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+    const supabase = createClient(supabaseUrl, supabaseAnonKey);
+    
+    // Verify user with token
+    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+    
+    if (authError || !user) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    // Use service role client for queries (bypasses RLS but we filter by user_id)
+    const supabaseService = createClient(supabaseUrl, supabaseServiceKey, {
       auth: {
         persistSession: false,
         autoRefreshToken: false,
       },
     });
-    
-    // Set session for RLS policies to work
-    const { data: { session }, error: sessionError } = await supabase.auth.setSession({
-      access_token: token,
-      refresh_token: '',
-    });
-    
-    if (sessionError || !session?.user) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
-
-    const { user } = session;
 
     // Check rate limit
     const rateLimit = checkRateLimit(user.id);
@@ -61,7 +60,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Verify thread belongs to user
-    const { data: thread, error: threadError } = await supabase
+    const { data: thread, error: threadError } = await supabaseService
       .from("case_threads")
       .select("id, user_id, title")
       .eq("id", threadId)
@@ -75,14 +74,14 @@ export async function POST(request: NextRequest) {
     // If first message, update thread title
     if (isFirstMessage && thread.title === "Yeni Case") {
       const title = generateTitleFromFirstMessage(message);
-      await supabase
+      await supabaseService
         .from("case_threads")
         .update({ title })
         .eq("id", threadId);
     }
 
     // Save user message
-    const { data: userMessage, error: userMessageError } = await supabase
+    const { data: userMessage, error: userMessageError } = await supabaseService
       .from("case_messages")
       .insert([
         {
@@ -101,7 +100,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Get last 20 messages for context (limit for OpenAI)
-    const { data: messages, error: messagesError } = await supabase
+    const { data: messages, error: messagesError } = await supabaseService
       .from("case_messages")
       .select("role, content")
       .eq("thread_id", threadId)
@@ -143,7 +142,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Save assistant message
-    const { data: assistantMessage, error: assistantMessageError } = await supabase
+    const { data: assistantMessage, error: assistantMessageError } = await supabaseService
       .from("case_messages")
       .insert([
         {
