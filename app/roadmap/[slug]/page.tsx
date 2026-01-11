@@ -47,7 +47,7 @@ const roadmaps: Record<string, Roadmap> = {
     icon: "🎯",
     sections: [
       {
-        title: "1. UX Temelleri (UX Foundations)",
+        title: "UX Temelleri (UX Foundations)",
         description: "UX'in ne olduğunu, problem çözme yaklaşımını ve temel kavramları oturtmak.",
         topics: [
           {
@@ -195,7 +195,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "2. Ürün & Tasarım Süreci (Product & Design Process)",
+        title: "Ürün & Tasarım Süreci (Product & Design Process)",
         description: "UX'in ürün geliştirme sürecindeki yerini ve çalışma biçimini anlamak.",
         topics: [
           {
@@ -344,7 +344,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "3. Kullanıcı Araştırması Temelleri (User Research Fundamentals)",
+        title: "Kullanıcı Araştırması Temelleri (User Research Fundamentals)",
         description: "Doğru soruyu sorma ve doğru yöntemi seçme kasını geliştirmek.",
         topics: [
           {
@@ -489,7 +489,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "4. Kullanıcı Görüşmeleri (User Interviews)",
+        title: "Kullanıcı Görüşmeleri (User Interviews)",
         description: "Görüşmeyi 'sohbet' değil, 'kanıt üretme' aracına çevirmek.",
         topics: [
           {
@@ -631,7 +631,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "5. Anketler & Nicel Temeller (Light) (Surveys & Quant Basics)",
+        title: "Anketler & Nicel Temeller (Light) (Surveys & Quant Basics)",
         description: "Junior seviyede 'temel nicel okuryazarlık' ve doğru kullanım.",
         topics: [
           {
@@ -771,7 +771,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "6. Sentez & İçgörü (Synthesis & Insight)",
+        title: "Sentez & İçgörü (Synthesis & Insight)",
         description: "Dağınık veriyi karar aldıran içgörüye dönüştürmek.",
         topics: [
           {
@@ -863,7 +863,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "7. Persona & Journey Mapping",
+        title: "Persona & Journey Mapping",
         description: "Kullanıcıyı 'temsil edilebilir' hale getirip yolculuğu görünür kılmak.",
         topics: [
           {
@@ -971,7 +971,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "8. Bilgi Mimarisi (Information Architecture)",
+        title: "Bilgi Mimarisi (Information Architecture)",
         description: "İçeriği ve navigasyonu kullanıcıların zihnine göre düzenlemek.",
         topics: [
           {
@@ -1107,7 +1107,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "9. Etkileşim Tasarımı (Temel) (Interaction Design)",
+        title: "Etkileşim Tasarımı (Temel) (Interaction Design)",
         description: "Akışları, durumları ve ekran davranışlarını doğru kurgulamak.",
         topics: [
           {
@@ -1225,7 +1225,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "10. Wireframing & Prototyping",
+        title: "Wireframing & Prototyping",
         description: "Çözümü hızlı doğrulamak ve öğrenmeyi hızlandırmak.",
         topics: [
           {
@@ -1293,7 +1293,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "11. Kullanılabilirlik Testleri (Usability Testing)",
+        title: "Kullanılabilirlik Testleri (Usability Testing)",
         description: "Tasarımın 'çalışıp çalışmadığını' kanıtlamak.",
         topics: [
           {
@@ -1424,7 +1424,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "12. Heuristics & UX Prensipleri (Heuristics & UX Principles)",
+        title: "Heuristics & UX Prensipleri (Heuristics & UX Principles)",
         description: "Tasarımı hızlı değerlendirme ve sorunları diline dökebilme.",
         topics: [
           {
@@ -1472,7 +1472,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "13. Erişilebilirlik & Kapsayıcı Tasarım (Accessibility & Inclusive Design)",
+        title: "Erişilebilirlik & Kapsayıcı Tasarım (Accessibility & Inclusive Design)",
         description: "Herkes için kullanılabilir deneyim tasarlamak (temel seviye).",
         topics: [
           {
@@ -1623,7 +1623,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "14. UX Writing & İçerik (Temel) (UX Writing & Content)",
+        title: "UX Writing & İçerik (Temel) (UX Writing & Content)",
         description: "Mikro metinlerle anlaşılabilirliği ve güveni artırmak.",
         topics: [
           {
@@ -1722,7 +1722,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "15. Ekip İçinde Çalışma & Teslim (Collaboration & Delivery)",
+        title: "Ekip İçinde Çalışma & Teslim (Collaboration & Delivery)",
         description: "UX çıktısını ekip içinde 'işe dönüştürmek'.",
         topics: [
           {
@@ -1834,7 +1834,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "16. 🚀 Kariyer, Büyüme & UX Zihniyeti (Junior) (Career, Growth & UX Mindset)",
+        title: "🚀 Kariyer, Büyüme & UX Zihniyeti (Junior) (Career, Growth & UX Mindset)",
         description: "Junior UX Designer'ların kariyere gerçekçi beklentilerle başlaması, sürdürülebilir şekilde gelişmesi ve doğru zihniyeti erken kazanması.",
         topics: [
           {
@@ -1929,7 +1929,7 @@ const roadmaps: Record<string, Roadmap> = {
     icon: "🎨",
     sections: [
       {
-        title: "1. UI Design Temelleri",
+        title: "UI Design Temelleri",
         description: "UI Designer'ın görsel kararları bilinçli alması, estetik ile kullanılabilirlik arasında denge kurması ve tutarlı, ölçeklenebilir arayüzler tasarlaması.",
         topics: [
           {
@@ -2071,7 +2071,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "2. Görsel Tasarım Prensipleri",
+        title: "Görsel Tasarım Prensipleri",
         description: "Arayüzdeki içeriklerin nerede konumlandığını, birbirleriyle nasıl ilişkilendiğini ve hangi sırayla algılandığını belirleyen yapısal kararlar.",
         topics: [
           {
@@ -2207,7 +2207,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "3. Renk (Color)",
+        title: "Renk (Color)",
         description: "Renk bir arayüzde hiyerarşiyi güçlendiren, durumu ve geri bildirimi ileten, markayı yansıtan ve erişilebilirliği doğrudan etkileyen en güçlü UI araçlarından biridir.",
         topics: [
           {
@@ -2380,7 +2380,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "4. Tipografi (Typography)",
+        title: "Tipografi (Typography)",
         description: "Arayüzdeki metinlerin okunabilirliğini, hiyerarşisini, tonunu ve algılanan kalitesini belirleyen kritik UI bileşenleri.",
         topics: [
           {
@@ -2553,7 +2553,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "5. Grid & Layout Sistemleri",
+        title: "Grid & Layout Sistemleri",
         description: "Grid ve layout sistemleri arayüzdeki içeriklerin nerede konumlandığını, birbirleriyle nasıl ilişkilendiğini ve hangi sırayla algılandığını belirleyen yapısal kararlardır.",
         topics: [
           {
@@ -2830,7 +2830,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "6. UI Components",
+        title: "UI Components",
         description: "UI component'leri arayüzün tekrar eden yapı taşlarıdır. Tutarlılığı sağlar ve tasarım/geliştirme sürecini hızlandırır. Amaç: her ekranı sıfırdan tasarlamamak, kullanıcıya tanıdık deneyimler sunmak ve ölçeklenebilir UI sistemleri kurmak.",
         topics: [
           {
@@ -3001,7 +3001,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "7. Design System Temelleri",
+        title: "Design System Temelleri",
         description: "Design System, bir ürün ailesinde görsel tutarlılığı, tekrar kullanılabilirliği ve ölçeklenebilirliği sağlayan canlı bir UI altyapısıdır. Amaç: her ekranı yeniden tasarlamamak, UI kararlarını kişiye değil sisteme bağlamak ve tasarım/geliştirme hızını artırmak.",
         topics: [
           {
@@ -3149,7 +3149,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "8. Interaction & Motion (Temel)",
+        title: "Interaction & Motion (Temel)",
         description: "Motion ve etkileşim, bir arayüzün nasıl 'tepki verdiğini', geçişlerin nasıl algılandığını ve kullanıcının nerede olduğunu anlatan görsel ipuçlarıdır. Amaç: dikkat yönlendirmek, durumu açıklamak ve deneyimi akıcı hale getirmek. Motion amaçlı olmalıdır; süs değildir.",
         topics: [
           {
@@ -3265,7 +3265,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "9. Accessibility (UI Odaklı)",
+        title: "Accessibility (UI Odaklı)",
         description: "Accessibility (erişilebilirlik), arayüzlerin farklı yetilere sahip kullanıcılar, farklı cihazlar ve farklı çevresel koşullar altında da kullanılabilir olmasını sağlar. Amaç: erişilebilirliği 'opsiyonel' değil varsayılan görmek, UI kararlarının herkesi kapsamasını sağlamak ve yasal/etik riskleri azaltmak.",
         topics: [
           {
@@ -3388,7 +3388,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "10. UI Pattern'ları",
+        title: "UI Pattern'ları",
         description: "UI pattern'ları sık karşılaşılan problemler için kanıtlanmış çözümler sunar. Pattern'lar kullanıcıya tanıdık deneyimler sağlar ve öğrenme maliyetini düşürür. Amaç: her problemi sıfırdan çözmek yerine, kanıtlanmış pattern'ları doğru şekilde kullanmak.",
         topics: [
           {
@@ -3512,7 +3512,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "11. UI Tasarım Süreci",
+        title: "UI Tasarım Süreci",
         description: "UI tasarım süreci, UX'ten UI'a geçişten başlayarak iteratif tasarım ve refine sürecine kadar uzanan bir yolculuktur. Amaç: sistematik bir yaklaşımla kaliteli UI'lar üretmek ve sürekli iyileştirmek.",
         topics: [
           {
@@ -3676,7 +3676,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "12. Developer Handoff (UI Perspektifi)",
+        title: "Developer Handoff (UI Perspektifi)",
         description: "Bu bölüm, UI tasarımının doğru anlaşılmasını, eksiksiz uygulanmasını, canlı üründe bozulmamasını sağlayan iletişim ve aktarım pratiklerini kapsar. Amaç: 'dosyayı attım bitti' yaklaşımını bırakmak, UI kararlarını geliştirilebilir hale getirmek, tasarım–geliştirme arasında ortak dil kurmak.",
         topics: [
           {
@@ -3803,7 +3803,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "13. UI Portfolio & Kariyer (Junior)",
+        title: "UI Portfolio & Kariyer (Junior)",
         description: "Bu bölüm, Junior UI Designer'ların portfolyosunu doğru kurgulamasını, sektöre gerçekçi beklentilerle girmesini, sürdürülebilir şekilde gelişmesini amaçlar. Amaç: 'güzel ekranlar' yerine UI düşüncesini göstermek, işe alım süreçlerinde net ve anlaşılır olmak, kariyerin erken aşamasında doğru alışkanlıklar kazanmak.",
         topics: [
           {
@@ -3876,7 +3876,7 @@ const roadmaps: Record<string, Roadmap> = {
     icon: "💡",
     sections: [
       {
-        title: "1. 🧠 Product Thinking",
+        title: "🧠 Product Thinking",
         description: "Product Thinking, tasarımcının ekrana değil probleme odaklanmasını, çözümden önce değeri sorgulamasını, kullanıcı, iş ve teknik gerçekliği birlikte düşünmesini sağlayan düşünme biçimidir. Amaç: feature üretmek değil, anlamlı ve etkisi ölçülebilen çözümler üretmek.",
         topics: [
           {
@@ -4040,7 +4040,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "2. 🔍 Design Research",
+        title: "🔍 Design Research",
         description: "Design Research, ürün kararlarının varsayımlara değil, gerçek kullanıcı ihtiyaçlarına, gözlemlenebilir davranışlara dayanmasını sağlayan süreçtir. Amaç: 'kullanıcı ne dedi?'yi değil, 'kullanıcı neden böyle davrandı?'yı anlamaktır. Design Research tasarımı doğrulamak için değil, doğru problemi bulmak için yapılır.",
         topics: [
           {
@@ -4203,7 +4203,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "3. 🧭 User Experience (UX)",
+        title: "🧭 User Experience (UX)",
         description: "User Experience (UX), bir kullanıcının bir ürünü kullanırken, bir hedefe ulaşmaya çalışırken, sistemle etkileşime girdiği tüm süreçte yaşadığı algı, duygu ve çaba bütünüdür. UX sadece ekranlardan ibaret değildir, kullanıcının işi ne kadar kolay, hızlı ve hatasız yaptığıyla ilgilidir. Amaç: kullanıcıyı düşündürmek değil, kullanıcının düşünmesine gerek bırakmamaktır.",
         topics: [
           {
@@ -4412,7 +4412,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "4. 🎨 Interface (UI & Interaction)",
+        title: "🎨 Interface (UI & Interaction)",
         description: "User Interface (UI), kullanıcının sistemle doğrudan temas ettiği, gördüğü, tıkladığı, etkileşime girdiği tüm görsel ve etkileşimsel katmandır. UI UX'in görünür halidir, ama tek başına UX değildir. İyi UI dikkat çekmez, karar vermeyi hızlandırır, hatayı azaltır.",
         topics: [
           {
@@ -4587,7 +4587,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "5. 🤝 Communication & Collaboration",
+        title: "🤝 Communication & Collaboration",
         description: "Product Designer tek başına tasarlamaz, ekip içinde karar üretir, tasarımın etkisini anlatır. İyi iletişim tasarımı savunmak değil, ortak anlayış oluşturmaktır. Amaç: 'benim tasarımım' değil, 'ekibin kararı' hissini yaratmak.",
         topics: [
           {
@@ -4732,7 +4732,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "6. 📊 Metrics, Impact & Iteration",
+        title: "📊 Metrics, Impact & Iteration",
         description: "Metrics, tasarımın işe yarayıp yaramadığını, hangi davranışı değiştirdiğini, ürün hedeflerine nasıl katkı sağladığını görmemizi sağlar. Product Designer için metrikler tasarımı kanıtlamak için değil, daha iyi karar vermek için kullanılır.",
         topics: [
           {
@@ -4858,7 +4858,7 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "7. 🎯 Portfolio & Career Growth",
+        title: "🎯 Portfolio & Career Growth",
         description: "Product Designer için portfolyo sadece yapılan işleri göstermez, nasıl düşündüğünü, nasıl karar verdiğini, hangi etkiyi yarattığını anlatır. Kariyer gelişimi title biriktirmek değil, problem çözme olgunluğunu artırmaktır.",
         topics: [
           {
