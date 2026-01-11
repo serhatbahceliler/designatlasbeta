@@ -59,19 +59,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       
       setUser(null);
       setProfile(null);
-      
-      // Force page reload to clear all state
-      if (typeof window !== "undefined") {
-        window.location.href = "/";
-      }
     } catch (error) {
       console.error("Error signing out:", error);
       // Still clear local state even if signout fails
       setUser(null);
       setProfile(null);
-      if (typeof window !== "undefined") {
-        window.location.href = "/";
-      }
+    }
+    
+    // Force page reload to clear all state
+    if (typeof window !== "undefined") {
+      window.location.href = "/";
     }
   };
 

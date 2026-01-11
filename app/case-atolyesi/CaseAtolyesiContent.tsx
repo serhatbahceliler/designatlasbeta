@@ -117,6 +117,7 @@ export default function CaseAtolyesiContent() {
   const firstName = profile?.first_name || "Serhat";
   const hasThreads = threads.length > 0;
   const showSidebar = hasThreads && sidebarOpen;
+  const hasLoadedRef = useRef(false);
 
   const loadThreads = useCallback(async () => {
     try {
@@ -160,19 +161,16 @@ export default function CaseAtolyesiContent() {
     }
   }, []);
 
-  // Load threads on mount - always reset state first to ensure clean start
+  // Load threads on mount - only once
   useEffect(() => {
-    // Reset state to ensure clean start
-    setThreads([]);
-    setSelectedThreadId(null);
-    setMessages([]);
-    setSidebarOpen(false);
-    setIsLoadingThreads(true);
-
+    if (hasLoadedRef.current) return;
+    
     if (user) {
+      hasLoadedRef.current = true;
       loadThreads();
     } else {
       setIsLoadingThreads(false);
+      hasLoadedRef.current = true;
     }
   }, [user, loadThreads]);
 
