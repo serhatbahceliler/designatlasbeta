@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { usePathname } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
 import { getAuthHeaders } from "@/lib/api-client";
 import ReactMarkdown from "react-markdown";
@@ -99,7 +98,6 @@ function ThinkingStepsAnimation() {
 }
 
 export default function CaseAtolyesiContent() {
-  const pathname = usePathname();
   const { user, profile } = useAuth();
   const [threads, setThreads] = useState<CaseThread[]>([]);
   const [selectedThreadId, setSelectedThreadId] = useState<string | null>(null);
@@ -107,15 +105,14 @@ export default function CaseAtolyesiContent() {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const [isLoadingThreads, setIsLoadingThreads] = useState(true); // Start as true to show loading initially
-  const [sidebarOpen, setSidebarOpen] = useState(false); // Start closed, will open when threads exist
+  const [isLoadingThreads, setIsLoadingThreads] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [animatedPlaceholder, setAnimatedPlaceholder] = useState("");
   const [currentPromptIndex, setCurrentPromptIndex] = useState(0);
   const placeholderTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const charIndexRef = useRef(0);
   const isTypingRef = useRef(true);
-  const lastPathnameRef = useRef<string | null>(null); // Track last pathname to detect route changes
 
   const firstName = profile?.first_name || "Serhat";
   const hasThreads = threads.length > 0;
@@ -124,13 +121,12 @@ export default function CaseAtolyesiContent() {
   const loadThreads = useCallback(async () => {
     try {
       setIsLoadingThreads(true);
-      setError(""); // Clear previous errors
+      setError("");
       
       const headers = await getAuthHeaders();
       
-      // Add timeout to prevent hanging
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+      const timeoutId = setTimeout(() => controller.abort(), 10000);
       
       const response = await fetch("/api/cases", {
         headers,
@@ -148,7 +144,6 @@ export default function CaseAtolyesiContent() {
       const loadedThreads = data.threads || [];
       setThreads(loadedThreads);
 
-      // Auto-open sidebar if threads exist (but don't auto-select any thread)
       if (loadedThreads.length > 0) {
         setSidebarOpen(true);
       }
@@ -159,34 +154,20 @@ export default function CaseAtolyesiContent() {
       } else {
         setError(err.message || "Threads yüklenemedi");
       }
-      // Ensure loading state is cleared even on error
       setThreads([]);
     } finally {
       setIsLoadingThreads(false);
     }
   }, []);
 
-  // Load threads on mount or when pathname changes (route change)
+  // Load threads on mount - page.tsx ensures user exists before rendering this component
   useEffect(() => {
-    // Reset state when pathname changes (client-side navigation)
-    if (lastPathnameRef.current !== null && lastPathnameRef.current !== pathname) {
-      // Route changed, reset and reload
-      setThreads([]);
-      setSelectedThreadId(null);
-      setMessages([]);
-      setSidebarOpen(false);
-      setIsLoadingThreads(true);
-    }
-    
-    lastPathnameRef.current = pathname;
-
-    // Load threads if user exists
     if (user) {
       loadThreads();
     } else {
       setIsLoadingThreads(false);
     }
-  }, [user, pathname, loadThreads]);
+  }, [user, loadThreads]);
 
   // Load messages when thread is selected
   useEffect(() => {
