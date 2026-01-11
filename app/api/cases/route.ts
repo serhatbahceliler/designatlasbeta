@@ -16,24 +16,28 @@ export async function GET(request: NextRequest) {
 
     const token = authHeader.replace('Bearer ', '');
     const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-      global: {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
       },
     });
     
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+    // Set session for RLS policies to work
+    const { data: { session }, error: sessionError } = await supabase.auth.setSession({
+      access_token: token,
+      refresh_token: '',
+    });
     
-    if (authError || !user) {
+    if (sessionError || !session?.user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
+
+    const { user } = session;
 
     // Get all threads for user, ordered by updated_at DESC
     const { data: threads, error } = await supabase
       .from("case_threads")
       .select("*")
-      .eq("user_id", user.id)
       .order("updated_at", { ascending: false });
 
     if (error) {
@@ -58,18 +62,23 @@ export async function POST(request: NextRequest) {
 
     const token = authHeader.replace('Bearer ', '');
     const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-      global: {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
       },
     });
     
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+    // Set session for RLS policies to work
+    const { data: { session }, error: sessionError } = await supabase.auth.setSession({
+      access_token: token,
+      refresh_token: '',
+    });
     
-    if (authError || !user) {
+    if (sessionError || !session?.user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
+
+    const { user } = session;
 
     const body = await request.json();
     const { title } = body;

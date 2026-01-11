@@ -21,14 +21,23 @@ export async function GET(
 
     const token = authHeader.replace('Bearer ', '');
     const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-      global: {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
       },
     });
     
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+    // Set session for RLS policies to work
+    const { data: { session }, error: sessionError } = await supabase.auth.setSession({
+      access_token: token,
+      refresh_token: '',
+    });
+    
+    if (sessionError || !session?.user) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    const { user } = session;
     
     if (authError || !user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -82,14 +91,23 @@ export async function POST(
 
     const token = authHeader.replace('Bearer ', '');
     const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-      global: {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
       },
     });
     
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+    // Set session for RLS policies to work
+    const { data: { session }, error: sessionError } = await supabase.auth.setSession({
+      access_token: token,
+      refresh_token: '',
+    });
+    
+    if (sessionError || !session?.user) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    const { user } = session;
     
     if (authError || !user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
