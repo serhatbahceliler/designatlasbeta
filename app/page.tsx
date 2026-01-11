@@ -528,7 +528,7 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/case-atolyesi"
-              className="group relative inline-flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 overflow-hidden bg-zinc-900/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:via-blue-500/10 hover:to-cyan-500/10 hover:shadow-[0_0_10px_rgba(168,85,247,0.2)]"
+              className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full font-medium text-base transition-all duration-300 overflow-hidden bg-zinc-900/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:via-blue-500/10 hover:to-cyan-500/10 hover:shadow-[0_0_10px_rgba(168,85,247,0.2)]"
             >
               {/* Gradient border effect using pseudo-element */}
               <div className="absolute -inset-[1px] rounded-full opacity-0 group-hover:opacity-40 transition-opacity duration-300">
@@ -539,10 +539,10 @@ export default function Home() {
               <div className="absolute inset-[1px] rounded-full bg-black/80 z-0" />
 
               {/* Content */}
-              <div className="relative z-10 flex items-center gap-2">
+              <div className="relative z-10 flex items-center gap-3">
                 {/* AI Sparkle Icon - Starburst style */}
                 <svg
-                  className="w-4 h-4 transition-all duration-300 text-gray-400 group-hover:text-purple-400 group-hover:drop-shadow-[0_0_4px_rgba(168,85,247,0.7)]"
+                  className="w-5 h-5 transition-all duration-300 text-gray-400 group-hover:text-purple-400 group-hover:drop-shadow-[0_0_4px_rgba(168,85,247,0.7)]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
