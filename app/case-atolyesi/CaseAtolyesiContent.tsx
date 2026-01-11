@@ -566,8 +566,8 @@ export default function CaseAtolyesiContent() {
               <p className="text-gray-400">Case'ler yükleniyor...</p>
             </div>
           </div>
-        ) : !hasThreads ? (
-          /* Empty State - No threads, sidebar hidden, full width */
+        ) : !selectedThread ? (
+          /* New Chat Start Screen - No thread selected (sidebar may be visible) */
           <>
             <div className="flex-1 flex items-center justify-center p-8 overflow-y-auto">
               <div className="max-w-3xl w-full">
@@ -613,14 +613,6 @@ export default function CaseAtolyesiContent() {
               </div>
             </div>
           </>
-        ) : !selectedThread ? (
-          /* Empty State - Threads exist but none selected */
-          <div className="flex-1 flex items-center justify-center p-8">
-            <div className="max-w-2xl w-full text-center">
-              <h2 className="text-2xl font-bold text-white mb-4">Bir case seçin</h2>
-              <p className="text-gray-400 mb-8">Devam etmek için bir case seçin veya yeni bir case oluşturun.</p>
-            </div>
-          </div>
         ) : (
           /* Chat Interface */
           <>
