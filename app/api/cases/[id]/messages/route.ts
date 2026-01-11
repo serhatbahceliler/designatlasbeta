@@ -38,10 +38,6 @@ export async function GET(
     }
 
     const { user } = session;
-    
-    if (authError || !user) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
 
     // Verify thread belongs to user
     const { data: thread, error: threadError } = await supabase
@@ -108,10 +104,6 @@ export async function POST(
     }
 
     const { user } = session;
-    
-    if (authError || !user) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
 
     // Verify thread belongs to user
     const { data: thread, error: threadError } = await supabase
