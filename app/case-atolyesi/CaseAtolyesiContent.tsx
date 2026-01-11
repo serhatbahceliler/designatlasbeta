@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { usePathname } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
 import { getAuthHeaders } from "@/lib/api-client";
 import ReactMarkdown from "react-markdown";
@@ -161,28 +160,21 @@ export default function CaseAtolyesiContent() {
     }
   }, []);
 
-  // Load threads on mount and when pathname changes (route change)
-  const pathname = usePathname();
-  const prevPathnameRef = useRef<string | null>(null);
-
+  // Load threads on mount - always reset state first to ensure clean start
   useEffect(() => {
-    // If pathname changed, reset state and reload
-    if (prevPathnameRef.current !== null && prevPathnameRef.current !== pathname) {
-      setThreads([]);
-      setSelectedThreadId(null);
-      setMessages([]);
-      setSidebarOpen(false);
-      setIsLoadingThreads(true);
-    }
-    
-    prevPathnameRef.current = pathname;
+    // Reset state to ensure clean start
+    setThreads([]);
+    setSelectedThreadId(null);
+    setMessages([]);
+    setSidebarOpen(false);
+    setIsLoadingThreads(true);
 
     if (user) {
       loadThreads();
     } else {
       setIsLoadingThreads(false);
     }
-  }, [user, pathname, loadThreads]);
+  }, [user, loadThreads]);
 
   // Load messages when thread is selected
   useEffect(() => {
