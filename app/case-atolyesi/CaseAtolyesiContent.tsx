@@ -574,10 +574,10 @@ export default function CaseAtolyesiContent() {
               <div className="max-w-3xl w-full">
                 <div className="text-center mb-12">
                   <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                    Bugün ne tasarlıyoruz {firstName}?
+                    Portfolyon için bir case üretelim mi?
                   </h1>
                   <p className="text-gray-400 text-lg md:text-xl">
-                    Case Atölyesi, portfolyon için gerçekçi bir problemle başlamana yardımcı olur. Biraz anlat, gerisini birlikte şekillendirelim.
+                    Fikrin olmasına gerek yok. İstersen sadece "mobil case üret" yazman yeterli.
                   </p>
                 </div>
 
