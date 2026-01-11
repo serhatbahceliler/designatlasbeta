@@ -122,6 +122,9 @@ export default function CaseAtolyesiContent() {
   useEffect(() => {
     if (user) {
       loadThreads();
+    } else {
+      // If no user, ensure loading state is cleared
+      setIsLoadingThreads(false);
     }
   }, [user]);
 
@@ -141,10 +144,10 @@ export default function CaseAtolyesiContent() {
 
   // Auto-open sidebar when threads exist
   useEffect(() => {
-    if (hasThreads) {
+    if (hasThreads && !sidebarOpen) {
       setSidebarOpen(true);
     }
-  }, [hasThreads]);
+  }, [hasThreads, sidebarOpen]);
 
   // Animated placeholder typing effect
   useEffect(() => {
@@ -200,13 +203,24 @@ export default function CaseAtolyesiContent() {
   const loadThreads = async () => {
     try {
       setIsLoadingThreads(true);
+      setError(""); // Clear previous errors
+      
       const headers = await getAuthHeaders();
+      
+      // Add timeout to prevent hanging
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+      
       const response = await fetch("/api/cases", {
         headers,
+        signal: controller.signal,
       });
 
+      clearTimeout(timeoutId);
+
       if (!response.ok) {
-        throw new Error("Threads yüklenemedi");
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || `Threads yüklenemedi (${response.status})`);
       }
 
       const data = await response.json();
@@ -224,7 +238,13 @@ export default function CaseAtolyesiContent() {
       }
     } catch (err: any) {
       console.error("Error loading threads:", err);
-      setError(err.message || "Threads yüklenemedi");
+      if (err.name === 'AbortError') {
+        setError("İstek zaman aşımına uğradı. Lütfen tekrar deneyin.");
+      } else {
+        setError(err.message || "Threads yüklenemedi");
+      }
+      // Ensure loading state is cleared even on error
+      setThreads([]);
     } finally {
       setIsLoadingThreads(false);
     }
@@ -543,7 +563,15 @@ export default function CaseAtolyesiContent() {
 
       {/* Main Content - Chat */}
       <main className="flex-1 flex flex-col overflow-hidden">
-        {!hasThreads ? (
+        {isLoadingThreads ? (
+          /* Loading State */
+          <div className="flex-1 flex items-center justify-center">
+            <div className="text-center">
+              <div className="w-16 h-16 border-4 border-[#DEFF37] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-gray-400">Case'ler yükleniyor...</p>
+            </div>
+          </div>
+        ) : !hasThreads ? (
           /* Empty State - No threads, sidebar hidden, full width */
           <>
             <div className="flex-1 flex items-center justify-center p-8 overflow-y-auto">
