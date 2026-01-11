@@ -34,39 +34,67 @@ const THINKING_STEPS = [
   "Portfolyo yapısını hazırlıyorum…",
 ];
 
-// Thinking steps animation component
+// Thinking steps animation component with typewriter effect
 function ThinkingStepsAnimation() {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [displayText, setDisplayText] = useState("");
+  const [currentStepIndex, setCurrentStepIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  const [isDeleting, setIsDeleting] = useState(false);
   const stepRef = useRef(0);
+  const charIndexRef = useRef(0);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      // Fade out (siliniyor gibi)
-      setIsVisible(false);
-      
-      setTimeout(() => {
-        // Change step
-        stepRef.current = (stepRef.current + 1) % THINKING_STEPS.length;
-        setCurrentStep(stepRef.current);
-        // Fade in (yazılıyor gibi)
-        setIsVisible(true);
-      }, 400); // Wait for fade out animation to complete
-    }, 2500); // Change step every 2.5 seconds
+    const currentText = THINKING_STEPS[stepRef.current];
+    
+    const type = () => {
+      if (charIndexRef.current <= currentText.length) {
+        setDisplayText(currentText.slice(0, charIndexRef.current));
+        charIndexRef.current++;
+        timeoutRef.current = setTimeout(type, 50); // Typing speed: 50ms per character
+      } else {
+        // Finished typing, wait then start deleting
+        setIsTyping(false);
+        timeoutRef.current = setTimeout(() => {
+          setIsDeleting(true);
+          deleteText();
+        }, 2000); // Wait 2 seconds before deleting
+      }
+    };
 
-    return () => clearInterval(interval);
-  }, []);
+    const deleteText = () => {
+      if (charIndexRef.current > 0) {
+        charIndexRef.current--;
+        setDisplayText(currentText.slice(0, charIndexRef.current));
+        timeoutRef.current = setTimeout(deleteText, 30); // Deleting speed: 30ms per character
+      } else {
+        // Finished deleting, move to next step
+        setIsDeleting(false);
+        stepRef.current = (stepRef.current + 1) % THINKING_STEPS.length;
+        setCurrentStepIndex(stepRef.current);
+        charIndexRef.current = 0;
+        setIsTyping(true);
+        // Start typing next step
+        timeoutRef.current = setTimeout(type, 300);
+      }
+    };
+
+    // Start typing
+    if (isTyping && !isDeleting) {
+      type();
+    }
+
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [currentStepIndex, isTyping, isDeleting]);
 
   return (
-    <div 
-      className={`text-sm text-white font-medium transition-all ease-in-out ${
-        isVisible 
-          ? "opacity-100 translate-y-0" 
-          : "opacity-0 -translate-y-1"
-      }`}
-      style={{ transitionDuration: '400ms' }}
-    >
-      {THINKING_STEPS[currentStep]}
+    <div className="text-sm text-white font-medium">
+      {displayText}
+      <span className="animate-pulse">|</span>
     </div>
   );
 }
