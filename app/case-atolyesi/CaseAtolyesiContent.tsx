@@ -37,17 +37,30 @@ const THINKING_STEPS = [
 // Thinking steps animation component
 function ThinkingStepsAnimation() {
   const [currentStep, setCurrentStep] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentStep((prev) => (prev + 1) % THINKING_STEPS.length);
-    }, 2000); // Change step every 2 seconds
+      // Fade out
+      setIsVisible(false);
+      
+      setTimeout(() => {
+        // Change step
+        setCurrentStep((prev) => (prev + 1) % THINKING_STEPS.length);
+        // Fade in
+        setIsVisible(true);
+      }, 300); // Wait for fade out animation
+    }, 2500); // Change step every 2.5 seconds (2s visible + 0.5s transition)
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="text-sm text-white font-medium">
+    <div 
+      className={`text-sm text-white font-medium transition-opacity duration-300 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       {THINKING_STEPS[currentStep]}
     </div>
   );
@@ -607,11 +620,11 @@ export default function CaseAtolyesiContent() {
                   {isLoading && (
                     <div className="flex justify-start">
                       <div className="bg-zinc-800 text-white rounded-2xl px-5 py-4">
-                        <div className="flex items-start gap-4">
+                        <div className="flex items-center gap-4">
                           {/* Icon with loading animation */}
-                          <div className="relative flex-shrink-0 mt-1">
-                            {/* Outer rotating ring */}
-                            <div className="absolute inset-0 w-6 h-6 border-2 border-purple-500/30 border-t-purple-500 rounded-full animate-spin"></div>
+                          <div className="relative flex-shrink-0 flex items-center justify-center w-8 h-8">
+                            {/* Outer rotating ring - more spacing */}
+                            <div className="absolute inset-0 -m-2 w-10 h-10 border-2 border-purple-500/30 border-t-purple-500 rounded-full animate-spin"></div>
                             {/* Icon */}
                             <svg
                               className="w-6 h-6 text-purple-400 relative z-10"
@@ -629,7 +642,7 @@ export default function CaseAtolyesiContent() {
                           </div>
 
                           {/* Thinking steps animation */}
-                          <div className="flex-1">
+                          <div className="flex-1 min-h-[20px] flex items-center">
                             <ThinkingStepsAnimation />
                           </div>
                         </div>
