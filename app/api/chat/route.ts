@@ -136,6 +136,13 @@ export async function POST(request: NextRequest) {
           { status: 500 }
         );
       }
+      // Return specific message for quota/billing errors
+      if (openaiError.message?.includes("quota") || openaiError.message?.includes("insufficient_quota") || openaiError.message?.includes("billing")) {
+        return NextResponse.json(
+          { error: "OpenAI API kotası doldu. Lütfen OpenAI hesabınızda billing ayarlarını kontrol edin." },
+          { status: 429 }
+        );
+      }
       // Return the actual error message for debugging
       return NextResponse.json(
         { 
