@@ -139,9 +139,9 @@ export default function CaseAtolyesiContent() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // Auto-open sidebar when first thread is created
+  // Auto-open sidebar when threads exist
   useEffect(() => {
-    if (hasThreads && !sidebarOpen) {
+    if (hasThreads) {
       setSidebarOpen(true);
     }
   }, [hasThreads]);
@@ -216,6 +216,11 @@ export default function CaseAtolyesiContent() {
       // Auto-select first thread if exists and none selected
       if (loadedThreads.length > 0 && !selectedThreadId) {
         setSelectedThreadId(loadedThreads[0].id);
+      }
+
+      // Auto-open sidebar if threads exist
+      if (loadedThreads.length > 0) {
+        setSidebarOpen(true);
       }
     } catch (err: any) {
       console.error("Error loading threads:", err);
@@ -458,7 +463,7 @@ export default function CaseAtolyesiContent() {
         </div>
       </div>
 
-      <div className="flex-1 flex overflow-hidden relative">
+      <div className="flex-1 flex overflow-hidden relative h-[calc(100vh-60px)]">
         {/* Sidebar - Only render when threads exist */}
       {hasThreads && (
         <aside
