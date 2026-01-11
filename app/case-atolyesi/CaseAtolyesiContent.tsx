@@ -27,11 +27,11 @@ const QUICK_PROMPTS = [
 ];
 
 const THINKING_STEPS = [
-  "Case'i düşünüyorum…",
-  "Problemi netleştiriyorum…",
-  "Şablonu oluşturuyorum…",
-  "Kapsamı belirliyorum…",
-  "Portfolyo yapısını hazırlıyorum…",
+  "Case'i düşünüyorum...",
+  "Problemi netleştiriyorum...",
+  "Şablonu oluşturuyorum...",
+  "Kapsamı belirliyorum...",
+  "Portfolyo yapısını hazırlıyorum...",
 ];
 
 // Thinking steps animation component with typewriter effect
