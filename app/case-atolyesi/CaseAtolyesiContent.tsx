@@ -469,7 +469,7 @@ export default function CaseAtolyesiContent() {
         <aside
           className={`bg-zinc-900 border-r border-zinc-800 flex flex-col transition-all duration-300 ease-in-out ${
             showSidebar ? "w-64" : "w-0"
-          } overflow-hidden`}
+          } overflow-hidden sticky top-0 self-start h-full`}
         >
           {/* Header */}
           <div className={`p-4 border-b border-zinc-800 ${showSidebar ? "opacity-100" : "opacity-0"} transition-opacity whitespace-nowrap`}>
