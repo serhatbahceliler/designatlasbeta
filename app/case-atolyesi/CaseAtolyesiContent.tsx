@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
 import { getAuthHeaders } from "@/lib/api-client";
 import ReactMarkdown from "react-markdown";
@@ -98,6 +99,7 @@ function ThinkingStepsAnimation() {
 }
 
 export default function CaseAtolyesiContent() {
+  const pathname = usePathname();
   const { user, profile } = useAuth();
   const [threads, setThreads] = useState<CaseThread[]>([]);
   const [selectedThreadId, setSelectedThreadId] = useState<string | null>(null);
@@ -105,7 +107,7 @@ export default function CaseAtolyesiContent() {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const [isLoadingThreads, setIsLoadingThreads] = useState(false); // Start as false, will be set to true when loading starts
+  const [isLoadingThreads, setIsLoadingThreads] = useState(true); // Start as true to show loading initially
   const [sidebarOpen, setSidebarOpen] = useState(false); // Start closed, will open when threads exist
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [animatedPlaceholder, setAnimatedPlaceholder] = useState("");
@@ -113,7 +115,7 @@ export default function CaseAtolyesiContent() {
   const placeholderTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const charIndexRef = useRef(0);
   const isTypingRef = useRef(true);
-  const hasLoadedRef = useRef(false); // Track if we've attempted to load threads
+  const lastPathnameRef = useRef<string | null>(null); // Track last pathname to detect route changes
 
   const firstName = profile?.first_name || "Serhat";
   const hasThreads = threads.length > 0;
@@ -161,24 +163,30 @@ export default function CaseAtolyesiContent() {
       setThreads([]);
     } finally {
       setIsLoadingThreads(false);
-      hasLoadedRef.current = true;
     }
   }, []);
 
-  // Load threads on mount - page.tsx ensures user exists before rendering this component
+  // Load threads on mount or when pathname changes (route change)
   useEffect(() => {
-    // Only load once when component mounts with a user
-    if (hasLoadedRef.current) {
-      return; // Already loaded, don't reload
+    // Reset state when pathname changes (client-side navigation)
+    if (lastPathnameRef.current !== null && lastPathnameRef.current !== pathname) {
+      // Route changed, reset and reload
+      setThreads([]);
+      setSelectedThreadId(null);
+      setMessages([]);
+      setSidebarOpen(false);
+      setIsLoadingThreads(true);
     }
+    
+    lastPathnameRef.current = pathname;
 
+    // Load threads if user exists
     if (user) {
       loadThreads();
     } else {
       setIsLoadingThreads(false);
-      hasLoadedRef.current = true; // Mark as loaded even if no user
     }
-  }, [user, loadThreads]);
+  }, [user, pathname, loadThreads]);
 
   // Load messages when thread is selected
   useEffect(() => {
