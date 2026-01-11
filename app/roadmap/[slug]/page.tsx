@@ -1929,30 +1929,23 @@ const roadmaps: Record<string, Roadmap> = {
     icon: "🎨",
     sections: [
       {
-        title: "1. 🎨 UI Foundations",
+        title: "1. UI Design Temelleri",
         description: "UI Designer'ın görsel kararları bilinçli alması, estetik ile kullanılabilirlik arasında denge kurması ve tutarlı, ölçeklenebilir arayüzler tasarlaması.",
         topics: [
           {
-            title: "What is UI Design?",
+            title: "UI Design Nedir?",
             description: "UI Design, kullanıcı ile sistem arasındaki görsel ve etkileşimsel katmanı tasarlamaktır. UI Designer bilgiyi görsel olarak organize eder, etkileşimleri anlaşılır hale getirir ve kullanıcıyı yönlendirir. UI, UX'in görünen yüzüdür; ama UX'in tamamı değildir.",
             resources: [
               {
+                category: "📘 Interaction Design Foundation",
+                items: [
+                  { title: "What is UI Design?", url: "https://www.interaction-design.org/literature/topics/ui-design#:~:text=UI%20design%20is%20about%20creating,simple%20and%20natural%20to%20use." },
+                ],
+              },
+              {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Visual Design in UX" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI vs UX Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "What UI Design Really Is" },
-                  { title: "UI Design Is Not Just Making Things Pretty" },
+                  { title: "Visual Design in UX", url: "https://www.nngroup.com/articles/visual-design-in-ux-study-guide/" },
                 ],
               },
             ],
@@ -1966,8 +1959,8 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "UI vs UX vs Product Design",
-            description: "UX Design problemi ve akışı çözer, UI Design çözümü görsel olarak netleştirir, Product Design ise UX + UI + iş hedeflerini birleştirir. UI Designer'ın rolü: UX kararlarını bozmadan görsel netlik ve kalite kazandırmaktır.",
+            title: "UI Designer'ın Rolü",
+            description: "UI Designer görsel kararları bilinçli alır, estetik ile kullanılabilirlik arasında denge kurar ve tutarlı, ölçeklenebilir arayüzler tasarlar. UI Designer'ın rolü: UX kararlarını bozmadan görsel netlik ve kalite kazandırmaktır.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -1998,26 +1991,13 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Principles of Good Visual Design",
-            description: "İyi UI evrensel görsel prensiplere dayanır: Hiyerarşi, Kontrast, Denge, Yakınlık (Gestalt), Tutarlılık. Bu prensipler ihlal edildiğinde kullanıcı yavaşlar, hata yapar ve arayüz karmaşık hissedilir.",
+            title: "UI vs UX Arasındaki Fark",
+            description: "UX Design problemi ve akışı çözer, UI Design çözümü görsel olarak netleştirir. UI, UX'in görünen yüzüdür; ama UX'in tamamı değildir. UI Designer'ın rolü: UX kararlarını bozmadan görsel netlik ve kalite kazandırmaktır.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Visual Design Principles" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Visual Design Principles – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Gestalt Principles in UI Design" },
-                  { title: "Why Visual Hierarchy Matters" },
+                  { title: "UX vs UI: What's the Difference?", url: "https://www.interaction-design.org/literature/article/ux-vs-ui-what-s-the-difference?srsltid=AfmBOorO4481heRQmWiPFnu4t3DCldqHbhbWeOBPWdCFFYd8kfjdoy4m" },
                 ],
               },
             ],
@@ -2031,8 +2011,8 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Visual Hierarchy",
-            description: "Visual hierarchy, kullanıcının ekrana nereden baktığını, neyi önce gördüğünü ve neyi sonra fark ettiğini belirler. Araçlar: boyut, renk, boşluk, kontrast.",
+            title: "Görsel Algı ve Kullanıcı Davranışı",
+            description: "Kullanıcılar ekranı nasıl algılar, nereye bakar, neyi önce fark eder? Görsel algı prensipleri UI tasarımının temelidir. Kullanıcı davranışını anlamak, etkili arayüzler tasarlamak için kritiktir.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -2063,25 +2043,19 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Consistency & Predictability",
-            description: "Tutarlılık öğrenme maliyetini düşürür, kullanıcıyı rahatlatır ve güven oluşturur. UI'da tutarlılık: aynı renk = aynı anlam, aynı component = aynı davranış. Tutarsız UI, kullanıcıyı her seferinde yeniden düşünmeye zorlar.",
+            title: "Temel Tasarım Prensipleri",
+            description: "İyi UI evrensel görsel prensiplere dayanır: Hiyerarşi, Kontrast, Denge, Yakınlık (Gestalt), Tutarlılık. Bu prensipler ihlal edildiğinde kullanıcı yavaşlar, hata yapar ve arayüz karmaşık hissedilir.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Consistency in UI Design" },
+                  { title: "Visual Design Principles", url: "https://www.nngroup.com/videos/visual-design-principles-in-action/#:~:text=Summary%3A%20Use%20the%205%20key,objectively%20critique%20and%20improve%20designs." },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Consistency in UX/UI – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why Consistency Is Critical in UI Design" },
+                  { title: "User Interface Design Guidelines: 10 Rules of Thumb", url: "https://www.interaction-design.org/literature/article/user-interface-design-guidelines-10-rules-of-thumb?srsltid=AfmBOorNkP1i0IFxfscODlu1ngsyEh36Z5x_hF6twnAaGTG6HVEGa50k" },
                 ],
               },
             ],
@@ -2094,65 +2068,20 @@ const roadmaps: Record<string, Roadmap> = {
               ],
             },
           },
-          {
-            title: "UI Design Mindset",
-            description: "UI Designer her pikselin bir nedeni olduğunu bilir, estetik ile kullanılabilirlik arasında seçim yapar ve 'beğenmedim' yerine nedenini açıklar. İyi UI sessizdir, dikkat çekmez ve işini yapar.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "UX Visual Design Mindset" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Thinking Like a UI Designer" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "UI Design Is Decision Making" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir UI kararını kendine açıkla:",
-                "'Bunu neden böyle yaptım?'",
-                "Cevabın sadece 'daha güzel' mi?",
-              ],
-            },
-          },
         ],
       },
       {
-        title: "2. 🧱 Layout & Composition",
+        title: "2. Görsel Tasarım Prensipleri",
         description: "Arayüzdeki içeriklerin nerede konumlandığını, birbirleriyle nasıl ilişkilendiğini ve hangi sırayla algılandığını belirleyen yapısal kararlar.",
         topics: [
           {
-            title: "Layout Basics",
+            title: "Görsel Hiyerarşi",
             description: "Layout, yalnızca 'kutuları dizmek' değildir. İyi bir layout boşlukları bilinçli kullanır, yoğunluğu dengeler ve içeriği nefes aldırır. Temel kavramlar: yoğunluk (density), ritim, white space.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 MockFlow",
                 items: [
-                  { title: "Page Layouts" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI Layout Basics – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "White Space Is Not Empty Space" },
-                  { title: "Layout Mistakes in UI Design" },
+                  { title: "Page Layouts", url: "https://mockflow.com/glossary/layout" },
                 ],
               },
             ],
@@ -2166,26 +2095,19 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Grid Systems",
-            description: "Grid'ler hizalamayı kolaylaştırır, tutarlılık sağlar ve responsive tasarımın temelini oluşturur. Yaygın grid türleri: column grid, baseline grid, modular grid.",
+            title: "Alignment & Spacing",
+            description: "Hizalama ve boşluk kullanımı görsel düzeni belirler. Grid'ler hizalamayı kolaylaştırır, tutarlılık sağlar ve responsive tasarımın temelini oluşturur. Yaygın grid türleri: column grid, baseline grid, modular grid.",
             resources: [
+              {
+                category: "📘 Interaction Design Foundation",
+                items: [
+                  { title: "Grid Systems in UX", url: "https://www.interaction-design.org/literature/topics/grid-systems?srsltid=AfmBOooDR_Ljp7VYMzDKQOgAlvB2cYgDtiYLBiF8p-pOQCz2CaJ9obSG" },
+                ],
+              },
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Grid Systems in UX" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Grid Systems Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why UI Designers Should Use Grids" },
-                  { title: "Grid Systems in Modern UI" },
+                  { title: "Using Grids in Interface Designs", url: "https://www.nngroup.com/articles/using-grids-in-interface-designs/" },
                 ],
               },
             ],
@@ -2199,26 +2121,25 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Spacing Systems (4pt / 8pt)",
-            description: "Spacing system rastgele boşlukları sistematik aralıklara dönüştürür. 4pt / 8pt sistemi: karar sayısını azaltır, tutarlılığı artırır, dev–designer iletişimini kolaylaştırır.",
+            title: "Contrast & Denge",
+            description: "Kontrast ve denge görsel hiyerarşiyi güçlendirir. Spacing system rastgele boşlukları sistematik aralıklara dönüştürür. 4pt / 8pt sistemi: karar sayısını azaltır, tutarlılığı artırır, dev–designer iletişimini kolaylaştırır.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Spacing and Alignment" },
+                  { title: "What is Visual Alignment?", url: "https://www.interaction-design.org/literature/topics/visual-alignment?srsltid=AfmBOorL_302QUOG6ngZee0R96wC5VdAgNlHx24eWTlRQh460n4VrAkx" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 UX Planet",
                 items: [
-                  { title: "8pt Grid System Explained" },
+                  { title: "Principles of Spacing in UI Design: A Beginner's Guide to the 4-Point Spacing System", url: "https://uxplanet.org/principles-of-spacing-in-ui-design-a-beginners-guide-to-the-4-point-spacing-system-6e88233b527a" },
                 ],
               },
               {
-                category: "✍️ Medium",
+                category: "📘 UX Lab Academy",
                 items: [
-                  { title: "Why the 8pt Grid Works" },
-                  { title: "Spacing Systems for UI Designers" },
+                  { title: "The Ultimate spacing guide for UI Designers", url: "https://www.uxlab.academy/blogs/the-ultimate-spacing-guide-for-ui-designers" },
                 ],
               },
             ],
@@ -2232,26 +2153,19 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Responsive Layout Thinking",
-            description: "Responsive layout ekran küçülünce 'sığdırmak' değildir, öncelikleri yeniden düşünmektir. Önemli noktalar: içerik önceliği, kırılım noktaları (breakpoints), esnek container'lar.",
+            title: "Consistency & Tekrar",
+            description: "Tutarlılık öğrenme maliyetini düşürür, kullanıcıyı rahatlatır ve güven oluşturur. UI'da tutarlılık: aynı renk = aynı anlam, aynı component = aynı davranış. Tutarsız UI, kullanıcıyı her seferinde yeniden düşünmeye zorlar.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Responsive Web Design" },
+                  { title: "Responsive Web Design (RWD) and User Experience", url: "https://www.nngroup.com/articles/responsive-web-design-definition/" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Responsive UI Design Basics – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Designing Responsive Layouts" },
-                  { title: "Mobile First UI Thinking" },
+                  { title: "Responsive Design: Best Practices", url: "https://www.interaction-design.org/literature/article/responsive-design-let-the-device-do-the-work?srsltid=AfmBOoqJ-dHKcVeeHatxN9TpgYZXiqwsWDuKPeEFhDU_OMw-7FzGpZGW" },
                 ],
               },
             ],
@@ -2265,26 +2179,19 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Content-First Layout",
-            description: "İyi UI lorem ipsum'a göre değil, gerçek içeriğe göre tasarlanır. Content-first yaklaşım: metin uzunluklarını, gerçek veri varyasyonlarını ve edge durumları erken görmeni sağlar.",
+            title: "Gestalt Prensipleri",
+            description: "Gestalt prensipleri kullanıcıların görsel bilgiyi nasıl organize ettiğini açıklar. Yakınlık, benzerlik, süreklilik, kapatma gibi prensipler UI tasarımında kritik rol oynar. İyi UI lorem ipsum'a göre değil, gerçek içeriğe göre tasarlanır.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Content-First Design" },
+                  { title: "What is Content-First?", url: "https://www.interaction-design.org/literature/topics/content-first?srsltid=AfmBOoqk-M0kxL-YNWMFlHBSa2EkZ7mvfmTyYb0NaRAmN4aeRkAkUujO" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 UX Design Institute",
                 items: [
-                  { title: "Content First UI – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Designing with Real Content" },
-                  { title: "Why Lorem Ipsum Breaks UI" },
+                  { title: "How to do content-first design: an actionable framework", url: "https://www.uxdesigninstitute.com/blog/content-first-design-guide/" },
                 ],
               },
             ],
@@ -2297,98 +2204,70 @@ const roadmaps: Record<string, Roadmap> = {
               ],
             },
           },
-          {
-            title: "Common Layout Mistakes",
-            description: "Sık yapılan hatalar: gereksiz hizalama kırıkları, aşırı yoğun ekranlar, her şeyi aynı önemde göstermek. Bu hatalar kullanıcıyı yorar ve görsel kaliteyi düşürür.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Visual Design Mistakes" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI Layout Mistakes – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Common UI Layout Mistakes" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir ekranı eleştir:",
-                "Neresi fazla?",
-                "Neresi eksik?",
-              ],
-            },
-          },
         ],
       },
       {
-        title: "3. ✍️ Typography",
-        description: "Arayüzdeki metinlerin okunabilirliğini, hiyerarşisini, tonunu ve algılanan kalitesini belirleyen kritik UI bileşenleri.",
+        title: "3. Renk (Color)",
+        description: "Renk bir arayüzde hiyerarşiyi güçlendiren, durumu ve geri bildirimi ileten, markayı yansıtan ve erişilebilirliği doğrudan etkileyen en güçlü UI araçlarından biridir.",
         topics: [
           {
-            title: "Typography Basics",
-            description: "Typography yalnızca font seçmek değildir. Font ailesi, font boyutu, satır aralığı (line-height), harf aralığı (letter-spacing) ve ağırlık (font-weight) kararlarının tamamını kapsar. Yanlış kombinasyonlar metni okunamaz hale getirir.",
+            title: "Renk Teorisi Temelleri",
+            description: "UI'da renk temel görsel kavramlara dayanır: hue (renk tonu), saturation (doygunluk), value/lightness (açıklık). Yanlış kullanım: düşük kontrast, göz yorgunluğu, yanlış vurgu.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 UX Planet",
                 items: [
-                  { title: "Typography for UX" },
+                  { title: "Principles of color in UI Design", url: "https://uxplanet.org/principles-of-color-in-ui-design-43708d8512d8" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Typography Basics for UI – NNGroup" },
+                  { title: "UI Color Palette 2025: Best Practices, Tips, and Tricks for Designers", url: "https://www.interaction-design.org/literature/article/ui-color-palette?srsltid=AfmBOoqSRBQ7vWikEN3E8O-6kAeU6eTFkPWOkuDHrfnDUkYT38t8ZNPX" },
                 ],
               },
               {
-                category: "✍️ Medium",
+                category: "📘 Learn UI Design",
                 items: [
-                  { title: "Typography in UI Design" },
-                  { title: "Why Typography Is UX" },
+                  { title: "Color in UI Design: A (Practical) Framework", url: "https://www.learnui.design/blog/color-in-ui-design-a-practical-framework.html" },
                 ],
               },
             ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir metni incele:",
-                "Okumak mı zor, taramak mı?",
-                "Gözün nerede yoruluyor?",
+                "Bir rengi seç:",
+                "Bu renk neyi vurguluyor?",
+                "Alternatif bir renkle aynı mesajı verir mi?",
               ],
             },
           },
           {
-            title: "Type Scale & Hierarchy",
-            description: "Type scale başlıklar, alt başlıklar, gövde metni ve yardımcı metinler arasında net bir hiyerarşi kurar. İyi bir scale az sayıda seviye içerir ve tutarlı artışlarla ilerler.",
+            title: "Renk Paleti Oluşturma",
+            description: "Renk paleti oluştururken sistematik bir yaklaşım izlenmelidir. UI'da renkler role göre tanımlanmalıdır: Primary (ana aksiyon), Secondary (ikincil aksiyon), Surface/Background, Feedback (success, warning, error). Bu yaklaşım tutarlılığı artırır ve theming'i kolaylaştırır.",
             resources: [
+              {
+                category: "📘 Interaction Design Foundation",
+                items: [
+                  { title: "What is Dark Mode?", url: "https://www.interaction-design.org/literature/topics/dark-mode?srsltid=AfmBOooTMJ-tUAdRHMeKmUJtq4Isf1w05LH4Qb-gSV-nF1e8PbiBsh_e" },
+                ],
+              },
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Visual Hierarchy" },
+                  { title: "Dark Mode: How Users Think About It and Issues to Avoid", url: "https://www.nngroup.com/articles/dark-mode-users-issues/" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Type Scale Explained – NNGroup" },
+                  { title: "Branding in UX Design", url: "https://www.interaction-design.org/literature/topics/branding-in-ux-design#:~:text=Branding%20focuses%20on%20how%20to,boost%20user%20satisfaction%20and%20usability." },
                 ],
               },
               {
-                category: "✍️ Medium",
+                category: "📘 iA",
                 items: [
-                  { title: "Type Scales for UI Designers" },
-                  { title: "How Typography Creates Hierarchy" },
+                  { title: "Return on Design", url: "https://ia.net/topics/return-on-design" },
                 ],
               },
             ],
@@ -2402,27 +2281,19 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Readability & Scannability",
-            description: "Kullanıcılar metni okumaz, tarar. Okunabilirliği etkileyen faktörler: satır uzunluğu, satır aralığı, paragraf yapısı, kontrast. İyi typography hızlı taranır ve anlamı bölmez.",
+            title: "Primary / Secondary Renkler",
+            description: "UI'da renkler role göre tanımlanmalıdır: Primary (ana aksiyon), Secondary (ikincil aksiyon), Surface/Background. Primary renk en önemli aksiyonlar için, Secondary renk ikincil aksiyonlar için kullanılır. Bu yaklaşım tutarlılığı artırır ve theming'i kolaylaştırır.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Figma",
                 items: [
-                  { title: "Readability and Legibility" },
-                  { title: "Writing for Scannability" },
+                  { title: "Color Symbolism", url: "https://www.figma.com/resource-library/color-symbolism/" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 BrandBros",
                 items: [
-                  { title: "Readable UI Text – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Designing Readable Interfaces" },
-                  { title: "Why Scannability Matters in UI" },
+                  { title: "De rol van kleuren in branding", url: "https://www.brandbros.nl/en/brandblog/de-rol-van-kleuren-in-branding" },
                 ],
               },
             ],
@@ -2436,8 +2307,8 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Accessibility for Typography",
-            description: "Erişilebilir typography yeterli kontrast, yeterli boyut ve zoom/dynamic type uyumu sağlar. Küçük ve düşük kontrastlı metin en yaygın UI hatalarından biridir.",
+            title: "Durum Renkleri (Success, Error, Warning)",
+            description: "Durum renkleri kullanıcıya sistemin durumunu bildirir. Success (başarılı işlemler), Error (hata durumları), Warning (uyarılar) için net ve tutarlı renkler kullanılmalıdır. Bu renkler sadece görsel değil, anlamsal olarak da doğru kullanılmalıdır.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -2475,25 +2346,25 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Common Typography Mistakes",
-            description: "Sık yapılan hatalar: çok fazla font ailesi, çok fazla font boyutu, yetersiz line-height, sadece estetik için küçük metinler. Bu hatalar UI kalitesini düşürür.",
+            title: "Kontrast & Erişilebilirlik",
+            description: "Yetersiz kontrast en yaygın erişilebilirlik problemidir ve estetik gerekçeyle sıkça ihlal edilir. UI'da kontrast metin–zemin, ikon–zemin, state'ler arası kontrol edilmelidir. Erişilebilirlik standartlarına uygun kontrast oranları kullanılmalıdır.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Afixt",
                 items: [
-                  { title: "Visual Design Mistakes" },
+                  { title: "Color Contrast and Readability: The Cornerstones of Accessible Design", url: "https://afixt.com/color-contrast-and-readability-the-cornerstones-of-accessible-design/" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 Havenly",
                 items: [
-                  { title: "Typography Mistakes in UI" },
+                  { title: "Color Palette Mistakes", url: "https://havenly.com/blog/color-palette-mistakes" },
                 ],
               },
               {
-                category: "✍️ Medium",
+                category: "📘 Supercharge Design",
                 items: [
-                  { title: "Typography Mistakes UI Designers Make" },
+                  { title: "8 Common UI Color Mistakes", url: "https://supercharge.design/blog/8-common-ui-color-mistakes" },
                 ],
               },
             ],
@@ -2509,278 +2380,251 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "4. 🎨 Color & Theme",
-        description: "Renk bir arayüzde hiyerarşiyi güçlendiren, durumu ve geri bildirimi ileten, markayı yansıtan ve erişilebilirliği doğrudan etkileyen en güçlü UI araçlarından biridir.",
+        title: "4. Tipografi (Typography)",
+        description: "Arayüzdeki metinlerin okunabilirliğini, hiyerarşisini, tonunu ve algılanan kalitesini belirleyen kritik UI bileşenleri.",
         topics: [
           {
-            title: "Color Basics (UI Level)",
-            description: "UI'da renk temel görsel kavramlara dayanır: hue (renk tonu), saturation (doygunluk), value/lightness (açıklık). Yanlış kullanım: düşük kontrast, göz yorgunluğu, yanlış vurgu.",
+            title: "Tipografi Temelleri",
+            description: "Typography yalnızca font seçmek değildir. Font ailesi, font boyutu, satır aralığı (line-height), harf aralığı (letter-spacing) ve ağırlık (font-weight) kararlarının tamamını kapsar. Yanlış kombinasyonlar metni okunamaz hale getirir.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Interaction Design Foundation",
                 items: [
-                  { title: "Color in UI Design" },
+                  { title: "The UI Designer's Guide to Typography", url: "https://www.interaction-design.org/literature/article/the-ux-designer-s-guide-to-typography?srsltid=AfmBOorBTKMat-qzKyLmworWpjpdXcsH3Ne7WhmVZ9T9fz4BjMTZdOhO" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 UX Planet",
                 items: [
-                  { title: "UI Color Basics – NNGroup" },
+                  { title: "Principles of Typography in UI Design", url: "https://uxplanet.org/principles-of-typography-in-ui-design-bc28f1f9666d" },
                 ],
               },
               {
-                category: "✍️ Medium",
+                category: "📘 DesignLab",
                 items: [
-                  { title: "Color Basics for UI Designers" },
-                  { title: "Why Color Decisions Matter in UX" },
+                  { title: "Guide: How to Define & Use Typography in UX/UI Design", url: "https://designlab.com/blog/what-is-typography-how-is-it-important-to-ux-ui-design" },
                 ],
               },
             ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir rengi seç:",
-                "Bu renk neyi vurguluyor?",
-                "Alternatif bir renkle aynı mesajı verir mi?",
+                "Bir metni incele:",
+                "Okumak mı zor, taramak mı?",
+                "Gözün nerede yoruluyor?",
               ],
             },
           },
           {
-            title: "Color Roles in UI",
-            description: "UI'da renkler role göre tanımlanmalıdır: Primary (ana aksiyon), Secondary (ikincil aksiyon), Surface/Background, Feedback (success, warning, error). Bu yaklaşım tutarlılığı artırır ve theming'i kolaylaştırır.",
+            title: "Font Aileleri & Kullanım Alanları",
+            description: "Font aileleri farklı kullanım alanları için seçilir. Serif, sans-serif, monospace gibi font kategorileri farklı bağlamlarda farklı etkiler yaratır. UI'da genellikle sans-serif fontlar tercih edilir çünkü ekranda daha okunabilirdir.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Color Roles and Meaning" },
+                  { title: "Typography for UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Color Roles Explained – NNGroup" },
+                  { title: "Typography Basics for UI – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Designing Color Systems for UI" },
-                  { title: "Stop Picking Random Colors" },
+                  { title: "Typography in UI Design" },
+                  { title: "Why Typography Is UX" },
                 ],
               },
             ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir ekrana bak:",
-                "Kaç farklı 'aksiyon rengi' var?",
+                "Bir ekranı seç:",
+                "Hangi font ailesi kullanılmış?",
+                "Neden bu font seçilmiş olabilir?",
+              ],
+            },
+          },
+          {
+            title: "Hiyerarşi (Heading, Body, Caption)",
+            description: "Type scale başlıklar, alt başlıklar, gövde metni ve yardımcı metinler arasında net bir hiyerarşi kurar. İyi bir scale az sayıda seviye içerir ve tutarlı artışlarla ilerler. Heading, Body, Caption gibi seviyeler görsel hiyerarşiyi güçlendirir.",
+            resources: [
+              {
+                category: "📘 Figma",
+                items: [
+                  { title: "What is visual hierarchy", url: "https://www.figma.com/resource-library/what-is-visual-hierarchy/" },
+                ],
+              },
+              {
+                category: "📘 UX Planet",
+                items: [
+                  { title: "Principles of visual hierarchy in UI Design", url: "https://uxplanet.org/principles-of-visual-hierarchy-in-ui-design-fbcd31f88088" },
+                ],
+              },
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Visual Hierarchy in UX: Definition", url: "https://www.nngroup.com/articles/visual-hierarchy-ux-definition/" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir ekranı seç:",
+                "Kaç farklı font boyutu var?",
                 "Hepsi gerçekten gerekli mi?",
               ],
             },
           },
           {
-            title: "Contrast & Readability",
-            description: "Yetersiz kontrast en yaygın erişilebilirlik problemidir ve estetik gerekçeyle sıkça ihlal edilir. UI'da kontrast metin–zemin, ikon–zemin, state'ler arası kontrol edilmelidir.",
+            title: "Satır Aralığı & Okunabilirlik",
+            description: "Kullanıcılar metni okumaz, tarar. Okunabilirliği etkileyen faktörler: satır uzunluğu, satır aralığı, paragraf yapısı, kontrast. İyi typography hızlı taranır ve anlamı bölmez. Satır aralığı (line-height) okunabilirliği doğrudan etkiler.",
             resources: [
+              {
+                category: "📘 Readability Matters",
+                items: [
+                  { title: "Legibility vs Readability", url: "https://readabilitymatters.org/articles/legibility-vs-readability#:~:text=%E2%80%9CLegibility%E2%80%9D%20is%20based%20on%20the,and%20move%20along%20the%20line." },
+                ],
+              },
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Color Contrast and Readability" },
+                  { title: "Legibility, Readability, and Comprehension", url: "https://www.nngroup.com/articles/legibility-readability-comprehension/" },
                 ],
               },
               {
-                category: "🌐 W3C",
+                category: "📘 DesignCode",
                 items: [
-                  { title: "Contrast (Minimum)" },
+                  { title: "UX Design Handbook: Readability and Legibility", url: "https://designcode.io/ux-design-handbook-readability-and-legibility" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 UX Matters",
                 items: [
-                  { title: "Color Contrast Explained – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why Designers Get Contrast Wrong" },
-                  { title: "Accessible Color in UI" },
+                  { title: "Scannability: Principle and Practice", url: "https://www.uxmatters.com/mt/archives/2015/06/scannability-principle-and-practice.php" },
                 ],
               },
             ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir metni test et:",
-                "Güneş ışığında okunuyor mu?",
-                "Sadece renk ile anlam veriyor mu?",
+                "Bir paragrafı incele:",
+                "Satırlar çok mu uzun?",
+                "Metni bölmek mümkün mü?",
               ],
             },
           },
           {
-            title: "Dark Mode & Theme Switching",
-            description: "Dark mode sadece renkleri ters çevirmek değildir; kontrast, vurgu ve yüzey mantığı değişir. İyi dark mode göz yormaz, hiyerarşiyi korur ve her bileşende tutarlıdır.",
+            title: "UI Tipografisinde Yaygın Hatalar",
+            description: "Sık yapılan hatalar: çok fazla font ailesi, çok fazla font boyutu, yetersiz line-height, sadece estetik için küçük metinler. Bu hatalar UI kalitesini düşürür. Erişilebilir typography yeterli kontrast, yeterli boyut ve zoom/dynamic type uyumu sağlar.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Digital Ink",
                 items: [
-                  { title: "Dark Mode UX" },
+                  { title: "Typography Mistakes", url: "https://www.digital.ink/blog/typography-mistakes/" },
                 ],
               },
               {
-                category: "🎥 YouTube",
+                category: "📘 UX Design CC",
                 items: [
-                  { title: "Designing Dark Mode – NNGroup" },
+                  { title: "5 Typography Mistakes New Designers Make", url: "https://uxdesign.cc/5-typography-mistakes-new-designers-make-how-to-avoid-them-f75abe7da937" },
                 ],
               },
               {
-                category: "✍️ Medium",
+                category: "📘 Supercharge Design",
                 items: [
-                  { title: "Dark Mode Done Right" },
-                  { title: "Common Dark Mode Mistakes" },
+                  { title: "20 Common Typography Mistakes in UI Design", url: "https://supercharge.design/blog/20-common-typography-mistakes-in-ui-design" },
                 ],
               },
             ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir ekranı dark mode'a çevir:",
-                "Hangi renkler bozuldu?",
-                "Hangi vurgu kayboldu?",
-              ],
-            },
-          },
-          {
-            title: "Branding vs Product UI",
-            description: "Marka renkleri her zaman UI için ideal değildir. UI'da öncelik: kullanılabilirlik, netlik, erişilebilirliktir. Gerekirse marka rengi tonlanır, ikincil role alınır veya sınırlı kullanılır.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Branding vs Usability" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Branding in UI Design – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "When Branding Hurts UX" },
-                  { title: "Balancing Brand and Usability" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir marka rengi düşün:",
-                "Primary action için uygun mu?",
-                "Değilse nerede kullanılmalı?",
-              ],
-            },
-          },
-          {
-            title: "Common Color Mistakes",
-            description: "Sık yapılan hatalar: çok fazla vurgu rengi, kontrastsız metinler, state'lerde tutarsız renkler, yalnızca renkle anlam vermek. Bu hatalar kullanıcıyı yorar ve hata riskini artırır.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Visual Design Mistakes" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI Color Mistakes" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Common UI Color Mistakes" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir ekranı incele:",
-                "Renkler bilgi mi veriyor, yoksa süs mü?",
+                "Bir tasarımı eleştir:",
+                "En gereksiz typographic karar hangisi?",
+                "Kaldırsan ne olur?",
               ],
             },
           },
         ],
       },
       {
-        title: "5. 🖼️ Iconography & Imagery",
-        description: "Iconography ve imagery, bir arayüzde anlamı hızla iletmek, metin yükünü azaltmak ve görsel tutarlılık sağlamak için kullanılan güçlü UI araçlarıdır. Bir ikon kelimelerden önce algılanır, görseller bilişsel yükü azaltır ve tutarlı görsel dil marka tutarlılığını artırır.",
+        title: "5. Grid & Layout Sistemleri",
+        description: "Grid ve layout sistemleri arayüzdeki içeriklerin nerede konumlandığını, birbirleriyle nasıl ilişkilendiğini ve hangi sırayla algılandığını belirleyen yapısal kararlardır.",
         topics: [
           {
-            title: "Icon Basics (Meaning & Clarity)",
-            description: "UI'da ikonlar sadece estetik değil, anlam taşıyan fonksiyonel unsurlardır. Bir ikon iyi sayılabilmesi için: anlaşılır olmalı (kullanıcı ikonu görmeden önce ne yaptığını tahmin edebilmeli), bağlamsal olmalı (hep aynı anlamı taşımalı), grid tabanlı olmalı (görsel tutarlılık için), ve stroke (çizgi) tutarlı olmalı (aynı kalınlık & stil kuralları). Kafa karıştıran ikonlar kullanıcının akışını bozar ve hata riskini artırır.",
+            title: "Grid Sistemleri Nedir?",
+            description: "Grid'ler hizalamayı kolaylaştırır, tutarlılık sağlar ve responsive tasarımın temelini oluşturur. Yaygın grid türleri: column grid, baseline grid, modular grid.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Icon Usability" },
+                  { title: "Grid Systems in UX" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Designing App Icons (Apple)" },
+                  { title: "Grid Systems Explained – NNGroup" },
                 ],
               },
               {
                 category: "✍️ Medium",
                 items: [
-                  { title: "Systematic Icon Design (Sketch)" },
+                  { title: "Why UI Designers Should Use Grids" },
+                  { title: "Grid Systems in Modern UI" },
                 ],
               },
             ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir app aç ve 5 ikona bak",
-                "Hangisinin ne yaptığını ilk bakışta anladın?",
-                "Hangisi kafa karıştırdı? Neden?",
+                "Bir tasarım aç:",
+                "Grid var mı?",
+                "Yoksa elemanlar göz kararı mı dizilmiş?",
               ],
             },
           },
           {
-            title: "Icon Grids & Visual Consistency",
-            description: "Tutarlı bir icon set için, tüm ikonları aynı grid (örn. 24×24 pixel kare) ve stroke (çizgi kalınlığı) sistemine göre tasarlamak gerekir. Icon set tutarlılığı: grid size (24px, 32px, 48px), padding/safe area (ikonun kenarından boşluk), stroke weight (tüm çizgiler aynı kalınlık), corner radius (köşelerin yuvarlaklığı), ve optik hizalama (görsel ağırlık ve denge) gerektirir. Tutarsız icon set tasarımın kalitesini düşürür ve amatör görünmesine neden olur.",
+            title: "8pt / 4pt Spacing System",
+            description: "Spacing system rastgele boşlukları sistematik aralıklara dönüştürür. 4pt / 8pt sistemi: karar sayısını azaltır, tutarlılığı artırır, dev–designer iletişimini kolaylaştırır.",
             resources: [
               {
-                category: "✍️ Medium",
+                category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Designing Perfect Icon Sets" },
+                  { title: "Spacing and Alignment" },
                 ],
               },
               {
                 category: "🎥 YouTube",
                 items: [
-                  { title: "Icon Design for Beginners (Figma Community)" },
+                  { title: "8pt Grid System Explained" },
+                ],
+              },
+              {
+                category: "✍️ Medium",
+                items: [
+                  { title: "Why the 8pt Grid Works" },
+                  { title: "Spacing Systems for UI Designers" },
                 ],
               },
             ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir design system (Material, Feather, Heroicons) aç",
-                "İkonları yan yana koy: hepsi aynı stroke kalınlığında mı?",
-                "Görsel ağırlıkları eşit mi?",
+                "Bir ekran ölç:",
+                "Boşluklar aynı artışlarla mı ilerliyor?",
+                "Yoksa rastgele mi?",
               ],
             },
           },
           {
-            title: "Icon Styles (Outline vs Filled)",
-            description: "İkonların iki ana stili vardır: outline (çizgi tabanlı - minimal, modern, daha az yoğun UI'larda tercih edilir) ve filled (dolu - bold, dikkat çekici, vurgulamak için kullanılır). Outline web ve mobilde popüler (Feather, Heroicons), filled mobilde sık kullanılır (Material Icons). UI minimse outline kullan, aktif durum/seçili öğe/önemli action için filled kullan. Karışık kullanma: outline kullanıyorsan, filled sadece vurgu için kullan (örn: selected tab filled, rest outline).",
+            title: "Responsive Grid Mantığı",
+            description: "Responsive layout ekran küçülünce 'sığdırmak' değildir, öncelikleri yeniden düşünmektir. Önemli noktalar: içerik önceliği, kırılım noktaları (breakpoints), esnek container'lar.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -2805,8 +2649,8 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Illustrations in UI",
-            description: "İllüstrasyonlar UI'da boş durumları, onboarding akışlarını veya brand hikayesini anlatmak için kullanılır. Empty state (hiç içerik yokken), onboarding (adım adım tanıtım), error state (404, 500, offline sayfaları), ve brand storytelling için idealdir. İyi bir UI illüstrasyonu minimal (çok detaylı olmamalı), bağlamsal (içerikle uyumlu), marka ile uyumlu (tone & style kurallarına uygun), ve kullanılabilirliğe katkı sağlayan (sadece süs olmamalı) olmalıdır. Yanlış illustrasyon UI'yı karıştırır, doğru kullanım deneyimi zenginleştirir.",
+            title: "Layout Türleri (Fixed, Fluid)",
+            description: "Layout türleri: Fixed (sabit genişlik), Fluid (esnek genişlik), Responsive (breakpoint'lere göre değişen). Her layout türünün kendi kullanım alanı vardır. Fixed layout daha kontrollü, fluid layout daha esnek, responsive layout her ekrana uyum sağlar.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -2831,8 +2675,8 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Images & Thumbnails",
-            description: "UI'da kullanılan görsellerin (fotoğraflar, thumbnails) doğru crop edilmesi, aspect ratio'su ve kalitesi deneyimi etkiler. İyi image/thumbnail kullanımı: aspect ratio tutarlılığı (tüm kartlar aynı orana sahip olmalı: 16:9, 4:3, 1:1), cropping stratejisi (otomatik crop yaparken önemli içerik kesilmemeli), placeholder usage (görsel yüklenene kadar skeleton ya da LQIP göster), ve lazy loading (performans için ekrana gelince yükle) gerektirir. Kötü crop edilmiş, farklı oranlar, düşük kalite tasarımı kalitesiz gösterir.",
+            title: "Breakpoint Düşüncesi",
+            description: "Breakpoint'ler ekran genişliğine göre layout'un değiştiği noktalardır. Breakpoint'leri düşünürken: içerik önceliği, kullanıcı davranışı, cihaz türleri göz önünde bulundurulmalıdır. Yaygın breakpoint'ler: mobile (320-768px), tablet (768-1024px), desktop (1024px+).",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -2863,13 +2707,19 @@ const roadmaps: Record<string, Roadmap> = {
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
-                  { title: "Icon Usability" },
+                  { title: "Bad Icons: How to Identify and Improve Them", url: "https://www.nngroup.com/articles/bad-icons/" },
                 ],
               },
               {
-                category: "✍️ Medium",
+                category: "📘 Codener",
                 items: [
-                  { title: "Common Icon Design Mistakes" },
+                  { title: "Icon Design Mistakes to Avoid in Your Next Project", url: "https://codener.com/icon-design-mistakes-to-avoid-in-your-next-project/" },
+                ],
+              },
+              {
+                category: "📘 Oodles Studio",
+                items: [
+                  { title: "5 Common Iconography Mistakes", url: "https://www.oodlesstudio.com/blog/common-iconography-mistakes/" },
                 ],
               },
             ],
@@ -2885,11 +2735,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "6. 🧩 UI Components & Patterns",
-        description: "UI component'leri ve pattern'lar arayüzün tekrar eden yapı taşlarıdır. Tutarlılığı sağlar ve tasarım/geliştirme sürecini hızlandırır. Amaç: her ekranı sıfırdan tasarlamamak, kullanıcıya tanıdık deneyimler sunmak ve ölçeklenebilir UI sistemleri kurmak.",
+        title: "6. UI Components",
+        description: "UI component'leri arayüzün tekrar eden yapı taşlarıdır. Tutarlılığı sağlar ve tasarım/geliştirme sürecini hızlandırır. Amaç: her ekranı sıfırdan tasarlamamak, kullanıcıya tanıdık deneyimler sunmak ve ölçeklenebilir UI sistemleri kurmak.",
         topics: [
           {
-            title: "What is a UI Component?",
+            title: "UI Component Nedir?",
             description: "UI component tek başına anlamı olan, tekrar kullanılabilen ve belirli bir davranışı olan arayüz parçasıdır. Örnekler: button, input, card, modal. Component'ler tutarlı davranmalı ve aynı kuralları izlemelidir.",
             resources: [
               {
@@ -2921,7 +2771,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Core Components (Buttons, Inputs, etc.)",
+            title: "Temel Component'ler (Button, Input, Checkbox)",
             description: "Her UI sisteminde bazı temel component'ler vardır: buttons, inputs, selects, checkboxes, radio buttons, cards. Bu component'ler tutarlı davranmalı ve aynı kuralları izlemelidir. Her component'in tıklanabilirliği net olmalı ve birbirleriyle karışmamalıdır.",
             resources: [
               {
@@ -2953,7 +2803,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Component Anatomy",
+            title: "Component States (Default, Hover, Disabled)",
             description: "Bir component yalnızca 'kutudan' ibaret değildir. Örnek bir input: label, helper text, placeholder, error state, prefix/suffix içerir. Bu parçalar birlikte çalışır. Placeholder kaybolunca kullanıcı ne yapacak? Label yeterince net mi? Bu sorular component anatomy'sini anlamak için önemlidir.",
             resources: [
               {
@@ -2985,8 +2835,8 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "UI Patterns (When to Use What)",
-            description: "UI pattern'ları sık karşılaşılan problemler için kanıtlanmış çözümler sunar. Örnek kararlar: modal mı sayfa mı? tabs mi stepper mı? dropdown mı radio mı? Bir problem düşün: Bu problem daha önce çözülmüş mü? Var olan bir pattern işini görür mü?",
+            title: "Component Tutarlılığı",
+            description: "Component'ler tek bir yerde tanımlanmalı ve her yerde aynı davranmalıdır. Tutarsız component kullanıcıyı şaşırtır ve bakım maliyetini artırır. Bir projede aynı isimle kaç farklı buton var? Neden farklılar? Bu sorular tutarlılığı kontrol etmek için önemlidir.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -3017,7 +2867,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Component Consistency & Reusability",
+            title: "Reusable Component Mantığı",
             description: "Component'ler tek bir yerde tanımlanmalı ve her yerde aynı davranmalıdır. Tutarsız component kullanıcıyı şaşırtır ve bakım maliyetini artırır. Bir projede aynı isimle kaç farklı buton var? Neden farklılar? Bu sorular tutarlılığı kontrol etmek için önemlidir.",
             resources: [
               {
@@ -3048,46 +2898,15 @@ const roadmaps: Record<string, Roadmap> = {
               ],
             },
           },
-          {
-            title: "Common Component Mistakes",
-            description: "Sık yapılan hatalar: her varyasyonu yeni component yapmak, davranışları dokümante etmemek, state'leri atlamak. Bu hatalar teknik borç yaratır ve UI kalitesini düşürür. Bir component düşün: Hangi state'leri eksik? Gerçekte nasıl davranmalı?",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Design System Mistakes" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI Component Mistakes" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Common UI Component Mistakes" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir component düşün: Hangi state'leri eksik?",
-                "Gerçekte nasıl davranmalı?",
-              ],
-            },
-          },
         ],
       },
       {
-        title: "7. 🔄 States, Feedback & System Status",
-        description: "Bu bölüm, bir arayüzün kullanıcı aksiyonlarına nasıl tepki verdiğini, sistemin o anda ne yaptığını ve kullanıcının nerede olduğunu net şekilde anlatmasını sağlar. Amaç: belirsizliği azaltmak, kullanıcıyı kontrol altında hissettirmek ve hata/bekleme anlarını yönetmek.",
+        title: "7. Design System Temelleri",
+        description: "Design System, bir ürün ailesinde görsel tutarlılığı, tekrar kullanılabilirliği ve ölçeklenebilirliği sağlayan canlı bir UI altyapısıdır. Amaç: her ekranı yeniden tasarlamamak, UI kararlarını kişiye değil sisteme bağlamak ve tasarım/geliştirme hızını artırmak.",
         topics: [
           {
-            title: "Component States (Default, Hover, Focus, etc.)",
-            description: "Her UI component'i birden fazla state'e sahiptir: default, hover, focus, active, disabled. Eksik state'ler kullanıcıyı kararsız bırakır ve arayüzü 'bozuk' hissettirir. Bir butona bak: Hover yoksa ne hissediyorsun? Disabled hali yeterince farklı mı?",
+            title: "Design System Nedir?",
+            description: "Design system'ler büyüyen ürünlerde dağılmayı önler, tutarsız UI kararlarını azaltır ve ekipler arası ortak dil oluşturur. Design system ≠ component listesi. Design system = kurallar + bileşenler + prensipler. Bir ürün düşün: Aynı şey kaç farklı şekilde tasarlanmış? Neden?",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -3118,8 +2937,8 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Validation & Error Handling",
-            description: "Hata mesajları kullanıcıyı suçlamamalı, net ve yönlendirici olmalı, mümkünse anında gösterilmelidir. İyi hata mesajı ne oldu, neden oldu, nasıl düzeltilir sorularını cevaplar. Bir hata mesajını oku: Ne yapman gerektiği net mi? Tekrar denemek kolay mı?",
+            title: "UI Kit vs Design System",
+            description: "UI Kit sadece component'lerin toplandığı bir kütüphanedir. Design System ise component'ler, kurallar, prensipler ve dokümantasyonu içeren kapsamlı bir sistemdir. UI Kit tasarımı hızlandırır, Design System tutarlılığı ve ölçeklenebilirliği sağlar.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -3150,8 +2969,8 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Loading, Empty & Success States",
-            description: "Bu state'ler genelde ihmal edilir ama deneyimin en kırılgan anlarıdır. Boş state yönlendirmeli, loading beklenti yönetmeli, success güven vermelidir. Bir boş ekran düşün: Kullanıcı ne yapmalı? UI bunu söylüyor mu?",
+            title: "Component & Pattern Ayrımı",
+            description: "Component tek başına anlamı olan, tekrar kullanılabilen UI yapı taşıdır (örn: button, input). Pattern ise birden fazla component'in bir araya gelerek oluşturduğu çözümdür (örn: form pattern, navigation pattern). Component'ler pattern'ları oluşturur, pattern'lar kullanıcı deneyimini şekillendirir.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -3183,8 +3002,8 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Affordance & Visual Feedback",
-            description: "Affordance bir şeyin ne yapılabileceğini görsel olarak anlatmasıdır. Örnek: buton buton gibi görünmeli, link link gibi davranmalı. Bir ekrana bak: Nereler tıklanabilir? Bunu sadece bakarak anlayabiliyor musun?",
+            title: "Design Token Mantığı (Intro)",
+            description: "Design token tasarım kararlarının adlandırılmış halidir. Örnek: primary.color, spacing.sm, radius.md. Token'lar theming'i kolaylaştırır ve tasarım–dev uyumunu artırır. Bir rengi düşün: Hex yerine rol adıyla çağırabilir misin?",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -3215,8 +3034,8 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Microcopy for UI States",
-            description: "Microcopy küçük metinlerdir ama büyük fark yaratır. Özellikle hata, boş ve loading state'lerinde kritik rol oynar. Bir microcopy düşün: Daha kısa olabilir mi? Daha net bir fiil var mı?",
+            title: "Design System ile Ölçeklenebilirlik",
+            description: "Design System ürün büyüdükçe tutarlılığı korur, yeni ekip üyelerinin hızlı adapte olmasını sağlar ve tasarım/geliştirme hızını artırır. İyi bir Design System ölçeklenebilir, dokümante edilmiş ve sürdürülebilirdir.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -3241,50 +3060,19 @@ const roadmaps: Record<string, Roadmap> = {
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir microcopy düşün: Daha kısa olabilir mi?",
-                "Daha net bir fiil var mı?",
-              ],
-            },
-          },
-          {
-            title: "Common State & Feedback Mistakes",
-            description: "Sık yapılan hatalar: sessiz butonlar, belirsiz loading'ler, suçlayıcı hata mesajları, success state'i göstermemek. Bu hatalar kullanıcı güvenini azaltır. Bir etkileşimi incele: Tıkladıktan sonra ne oluyor? Kullanıcı bunu fark ediyor mu?",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "UX Feedback Mistakes" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI Feedback Mistakes" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why Feedback Is a UX Principle" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir etkileşimi incele: Tıkladıktan sonra ne oluyor?",
-                "Kullanıcı bunu fark ediyor mu?",
+                "Bir Design System düşün: Ürün 10 kat büyüse ne olur?",
+                "Sistem hâlâ çalışır mı?",
               ],
             },
           },
         ],
       },
       {
-        title: "8. 🎞️ Interaction & Motion (UI Perspective)",
+        title: "8. Interaction & Motion (Temel)",
         description: "Motion ve etkileşim, bir arayüzün nasıl 'tepki verdiğini', geçişlerin nasıl algılandığını ve kullanıcının nerede olduğunu anlatan görsel ipuçlarıdır. Amaç: dikkat yönlendirmek, durumu açıklamak ve deneyimi akıcı hale getirmek. Motion amaçlı olmalıdır; süs değildir.",
         topics: [
           {
-            title: "Microinteractions",
+            title: "UI'da Interaction Nedir?",
             description: "Microinteraction tek bir aksiyona verilen küçük tepkidir. Örnekler: butona basıldığında renk değişimi, favoriye ekleme animasyonu, toggle geçişi. İyi microinteraction hızlı, doğal ve dikkat dağıtmayan olmalıdır. Bir microinteraction düşün: Olmazsa ne kaybolur? Varsa kullanıcı ne hisseder?",
             resources: [
               {
@@ -3316,7 +3104,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Motion Principles (Timing & Easing)",
+            title: "Hover, Focus, Active State'ler",
             description: "Motion kararları hız, gecikme ve easing üzerinden algılanır. Yanlış motion yavaşlatır, mide bulandırır ve profesyonellik hissini düşürür. Bir animasyonu izle: Çok mu yavaş? Gereğinden uzun mu?",
             resources: [
               {
@@ -3348,7 +3136,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Motion for Hierarchy & Focus",
+            title: "Micro Interaction Mantığı",
             description: "Motion dikkati yönlendirebilir ve önceliği gösterebilir. Örnek: modal açılırken arka planın geri çekilmesi, focus olan alanın öne çıkması. Bir geçiş düşün: Motion olmasa kullanıcı nerede olduğunu anlar mı?",
             resources: [
               {
@@ -3379,7 +3167,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Motion Pitfalls",
+            title: "Motion'ın Amacı (Süs değil, anlam)",
             description: "Sık yapılan hatalar: her şeyi hareketlendirmek, gereksiz bounce'lar, uzun animasyonlar, performansı düşüren motion. Motion görünmez olmalı, baskın değil. Bir ekranı düşün: Motion kapalı olsa hâlâ anlaşılır mı?",
             resources: [
               {
@@ -3409,8 +3197,8 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Motion in Components",
-            description: "Component bazlı motion state değişimlerini netleştirir ve geçişleri yumuşatır. Örnek: accordion açılıp kapanması, toast mesajlarının girişi. Bir component seç: State değişimi motion ile daha mı anlaşılır?",
+            title: "UI Motion'da Dikkat Edilmesi Gerekenler",
+            description: "Motion kararları hız, gecikme ve easing üzerinden algılanır. Yanlış motion yavaşlatır, mide bulandırır ve profesyonellik hissini düşürür. Motion görünmez olmalı, baskın değil. Bir animasyonu izle: Çok mu yavaş? Gereğinden uzun mu?",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -3442,11 +3230,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "9. ♿ Accessibility for UI Designers",
+        title: "9. Accessibility (UI Odaklı)",
         description: "Accessibility (erişilebilirlik), arayüzlerin farklı yetilere sahip kullanıcılar, farklı cihazlar ve farklı çevresel koşullar altında da kullanılabilir olmasını sağlar. Amaç: erişilebilirliği 'opsiyonel' değil varsayılan görmek, UI kararlarının herkesi kapsamasını sağlamak ve yasal/etik riskleri azaltmak.",
         topics: [
           {
-            title: "Accessibility Mindset (UI Focused)",
+            title: "UI'da Accessibility Neden Önemli?",
             description: "Erişilebilirlik sadece engelli kullanıcılar için değildir, herkes için daha iyi UI üretir. UI Designer 'herkes görebilir' varsayımını bırakır ve en zor koşulu baz alarak tasarlar. Bir ekran düşün: Tek el, güneş ışığı, düşük dikkat - hâlâ kullanılabilir mi?",
             resources: [
               {
@@ -3478,7 +3266,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Color & Contrast Accessibility",
+            title: "Renk Kontrast Kuralları",
             description: "Renk körlüğü ve düşük görüş çok yaygındır ve çoğu UI tasarımında göz ardı edilir. Kurallar: sadece renkle anlam verme, yeterli kontrast sağla, feedback'i çoklu sinyallerle destekle. Bir hata state'i düşün: Renk kapalı olsa da anlaşılır mı?",
             resources: [
               {
@@ -3515,7 +3303,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Focus, Keyboard & Visibility",
+            title: "Tipografi & Okunabilirlik",
             description: "Web arayüzlerinde klavye ile gezinme ve focus state'leri hayati önemdedir. Focus olmayan UI klavye kullanıcıları için kullanılamaz hale gelir. Bir formu düşün: Sadece Tab ile tamamlanabiliyor mu? Focus net mi?",
             resources: [
               {
@@ -3547,7 +3335,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Typography & Legibility",
+            title: "Tıklanabilir Alanlar",
             description: "Erişilebilir typography yeterli font boyutu, yeterli satır aralığı ve zoom uyumu sağlar. Küçük ve sık metinler en yaygın erişilebilirlik ihlallerindendir. Bir metni %200 büyüt: Bozuluyor mu? Taşıyor mu?",
             resources: [
               {
@@ -3585,7 +3373,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Accessible UI Checklist",
+            title: "Accessibility'de Sık Yapılan UI Hataları",
             description: "Her UI tasarımı için hızlı kontrol listesi: Kontrast yeterli mi? Renk tek başına anlam taşıyor mu? Focus state'leri net mi? Metinler okunabilir mi? Boş ve hata state'leri açıklayıcı mı? Bir ekranı checklist ile tara: İlk bulduğun problem ne?",
             resources: [
               {
@@ -3617,11 +3405,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "10. 📱💻 Platform Awareness (Web & Mobile)",
-        description: "Platform awareness, bir UI Designer'ın tasarımın çalışacağı platformu anlamasını, her platformun kendi kurallarını dikkate almasını ve 'tek tasarım her yere uyar' yanılgısından kaçınmasını sağlar. Amaç: platforma doğal hissettiren arayüzler tasarlamak, kullanıcı alışkanlıklarını bozmamak ve teknik/deneyimsel hataları azaltmak.",
+        title: "10. UI Pattern'ları",
+        description: "UI pattern'ları sık karşılaşılan problemler için kanıtlanmış çözümler sunar. Pattern'lar kullanıcıya tanıdık deneyimler sağlar ve öğrenme maliyetini düşürür. Amaç: her problemi sıfırdan çözmek yerine, kanıtlanmış pattern'ları doğru şekilde kullanmak.",
         topics: [
           {
-            title: "Web UI Basics",
+            title: "UI Pattern Nedir?",
             description: "Web arayüzleri mouse + klavye kullanımına dayanır, hover ve focus gibi state'leri yoğun kullanır ve genellikle daha yüksek bilgi yoğunluğuna sahiptir. Web UI'da önemli noktalar: hover affordance, link davranışları, scroll algısı. Bir web ekranına bak: Hover olmadan anlaşılır mı? Linkler net mi?",
             resources: [
               {
@@ -3653,7 +3441,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Mobile UI Basics",
+            title: "Form Pattern'ları",
             description: "Mobil UI dokunma odaklıdır, tek el kullanımını hesaba katar ve daha sınırlı alanla çalışır. Mobilde kritik noktalar: dokunma alanı boyutları, thumb reach, safe area'lar. Bir mobil ekran düşün: En sık kullanılan aksiyon nereye yakın? Tek elle erişilebilir mi?",
             resources: [
               {
@@ -3685,7 +3473,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Platform Guidelines Awareness",
+            title: "Navigation Pattern'ları",
             description: "Her platformun kendi beklentileri vardır: Web → tarayıcı alışkanlıkları, iOS → Human Interface Guidelines, Android → Material Design. Amaç guideline'ları kopyalamak değil, mantığını anlamaktır. Bir iOS ve Android ekranı karşılaştır: Aynı davranış neden farklı görünüyor?",
             resources: [
               {
@@ -3722,7 +3510,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Responsive vs Adaptive UI",
+            title: "Feedback & Status Pattern'ları",
             description: "Responsive UI ekran boyutuna göre esner. Adaptive UI belirli breakpoint'lerde farklı tasarlanır. Hangisi? Ürün türüne, içerik yoğunluğuna ve teknik kısıtlara bağlıdır. Bir ekran düşün: Sadece küçülse yeterli mi? Yoksa farklı davranmalı mı?",
             resources: [
               {
@@ -3754,7 +3542,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Platform-Specific Pitfalls",
+            title: "Pattern Kullanırken Dikkat Edilmesi Gerekenler",
             description: "Sık yapılan hatalar: web mantığını mobile taşımak, hover'a güvenmek, küçük dokunma alanları, platforma aykırı navigation. Bu hatalar öğrenme maliyetini artırır ve ürünü yabancı hissettirir. Bir tasarımı düşün: Bu ekran hangi platformda daha zor? Neden?",
             resources: [
               {
@@ -3787,11 +3575,11 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "11. 🧬 Design Systems (UI-Focused)",
-        description: "Design System, bir ürün ailesinde görsel tutarlılığı, tekrar kullanılabilirliği ve ölçeklenebilirliği sağlayan canlı bir UI altyapısıdır. Amaç: her ekranı yeniden tasarlamamak, UI kararlarını kişiye değil sisteme bağlamak ve tasarım/geliştirme hızını artırmak.",
+        title: "11. UI Tasarım Süreci",
+        description: "UI tasarım süreci, UX'ten UI'a geçişten başlayarak iteratif tasarım ve refine sürecine kadar uzanan bir yolculuktur. Amaç: sistematik bir yaklaşımla kaliteli UI'lar üretmek ve sürekli iyileştirmek.",
         topics: [
           {
-            title: "Why Design Systems Exist",
+            title: "UI Tasarımına Nereden Başlanır?",
             description: "Design system'ler büyüyen ürünlerde dağılmayı önler, tutarsız UI kararlarını azaltır ve ekipler arası ortak dil oluşturur. Design system ≠ component listesi. Design system = kurallar + bileşenler + prensipler. Bir ürün düşün: Aynı şey kaç farklı şekilde tasarlanmış? Neden?",
             resources: [
               {
@@ -3823,7 +3611,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Foundations (Color, Type, Spacing, Radius)",
+            title: "Referans & Inspiration Kullanımı",
             description: "Foundations tüm UI'ın temelidir ve component'lerden önce gelir. Genellikle şunları içerir: renk rolleri, typography scale, spacing sistemi, radius/elevation. Bir component'e bak: Hangi foundation'lara dayanıyor?",
             resources: [
               {
@@ -3854,7 +3642,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Design Tokens (Intro Level)",
+            title: "UX'ten UI'a Geçiş",
             description: "Design token tasarım kararlarının adlandırılmış halidir. Örnek: primary.color, spacing.sm, radius.md. Token'lar theming'i kolaylaştırır ve tasarım–dev uyumunu artırır. Bir rengi düşün: Hex yerine rol adıyla çağırabilir misin?",
             resources: [
               {
@@ -3885,7 +3673,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Component Libraries",
+            title: "Iteratif UI Tasarımı",
             description: "Component library sistemin görünen yüzüdür. İyi bir library varyantları net tanımlar, state'leri kapsar ve kullanım kurallarını belirtir. Bir component düşün: Kaç varyantı var? Hangileri gerçekten gerekli?",
             resources: [
               {
@@ -3917,7 +3705,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Theming & Variants",
+            title: "Review & Refine Süreci",
             description: "Theming light/dark, brand varyantları ve ürün bazlı farklılaşmalar için kullanılır. Ama kontrolsüz theme sayısı sistemi kırar. Bir theme düşün: Hangi foundation'lar değişiyor? Hangileri sabit kalmalı?",
             resources: [
               {
@@ -3948,46 +3736,15 @@ const roadmaps: Record<string, Roadmap> = {
               ],
             },
           },
-          {
-            title: "Common Design System Mistakes",
-            description: "Sık yapılan hatalar: her şeyi component yapmak, esnekliği öldürmek, dokümantasyonu ihmal etmek, sistem yerine vitrin yapmak. Bu hatalar design system'in terk edilmesine yol açar. Bir sistem düşün: Kullanımı zor mu? Neden?",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Design System Mistakes" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Design System Pitfalls" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why Design Systems Fail" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir sistem düşün: Kullanımı zor mu?",
-                "Neden?",
-              ],
-            },
-          },
         ],
       },
       {
-        title: "12. 🔍 UI QA, Critique & Iteration",
-        description: "Bu bölüm, tasarlanan UI'ın gerçekten doğru uygulanıp uygulanmadığını, görsel ve etkileşimsel kaliteyi, zaman içinde bozulup bozulmadığını kontrol etmeyi kapsar. Amaç: 'tasarımı verdik bitti' yaklaşımını kırmak, kaliteyi sürdürülebilir hale getirmek, UI'ı canlı bir sistem olarak ele almak.",
+        title: "12. Developer Handoff (UI Perspektifi)",
+        description: "Bu bölüm, UI tasarımının doğru anlaşılmasını, eksiksiz uygulanmasını, canlı üründe bozulmamasını sağlayan iletişim ve aktarım pratiklerini kapsar. Amaç: 'dosyayı attım bitti' yaklaşımını bırakmak, UI kararlarını geliştirilebilir hale getirmek, tasarım–geliştirme arasında ortak dil kurmak.",
         topics: [
           {
-            title: "UI Quality Assurance (QA) Basics",
-            description: "UI QA tasarım ile canlı ürün arasındaki farkları kontrol eder, görsel hataları erken yakalar, küçük sorunların büyümesini engeller. UI QA, bug avı değil deneyim korumadır. Bir canlı ürüne bak: Tasarımla birebir mi? Fark varsa neden?",
+            title: "UI Handoff Nedir?",
+            description: "UI handoff sadece Figma linki paylaşmak değildir, tasarımın nasıl çalıştığını anlatmaktır. İyi bir handoff belirsizliği azaltır, tekrar soru ihtiyacını düşürür, geliştirme süresini hızlandırır. Bir tasarımı düşün: Developer ilk hangi soruyu sorar? Bunu önceden nasıl netleştirirsin?",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -4018,7 +3775,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "UI Critique Framework",
+            title: "Spacing, Renk, Tipografi Aktarımı",
             description: "UI critique beğeni üzerinden değil, prensip ve hedefler üzerinden yapılır. İyi critique problemi tanımlar, etkiyi açıklar, alternatif önerir. Bir UI eleştir: 'Beğenmedim' yerine 'Şu yüzden çalışmıyor' de.",
             resources: [
               {
@@ -4050,7 +3807,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Visual QA Checklist",
+            title: "Component Dokümantasyonu",
             description: "UI QA sırasında kontrol edilecekler: spacing tutarlılığı, hizalamalar, renk ve kontrast, typography scale, state'lerin varlığı. Checklist, kaliteyi kişiden bağımsız hale getirir. Bir ekranı checklist ile tara: İlk yakaladığın hata ne?",
             resources: [
               {
@@ -4080,7 +3837,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Iteration Loops",
+            title: "Tasarım – Geliştirme Tutarlılığı",
             description: "Iteration hatayı kabul etmek değil, öğrenmeyi sahiplenmektir. İyi iteration küçük adımlarla ilerler, geri bildirimle beslenir, kaliteyi artırır. Bir tasarımı düşün: İlk versiyon ne öğretti? İkinci versiyon neyi düzeltti?",
             resources: [
               {
@@ -4112,8 +3869,8 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Common UI Quality Issues",
-            description: "Sık karşılaşılan sorunlar: zamanla bozulan spacing, yeni feature'larla kırılan hiyerarşi, tutarsız state'ler, kontrolsüz varyantlar. Bu sorunlar ürün büyüdükçe artar. Bir ürün düşün: İlk versiyon ile şimdiki hali arasında kalite farkı var mı?",
+            title: "UI Bug'ları ve Design QA",
+            description: "Geliştirme sonrası UI mutlaka kontrol edilmelidir, küçük farklar büyük etki yaratır. UI QA suçlama değil, kalite korumadır. Canlı ürüne bak: Tasarımdan farklı olan ne? Bu fark deneyimi etkiliyor mu?",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -4145,12 +3902,12 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "13. 🤝 Handoff & Working with Developers (UI Angle)",
-        description: "Bu bölüm, UI tasarımının doğru anlaşılmasını, eksiksiz uygulanmasını, canlı üründe bozulmamasını sağlayan iletişim ve aktarım pratiklerini kapsar. Amaç: 'dosyayı attım bitti' yaklaşımını bırakmak, UI kararlarını geliştirilebilir hale getirmek, tasarım–geliştirme arasında ortak dil kurmak.",
+        title: "13. UI Portfolio & Kariyer (Junior)",
+        description: "Bu bölüm, Junior UI Designer'ların portfolyosunu doğru kurgulamasını, sektöre gerçekçi beklentilerle girmesini, sürdürülebilir şekilde gelişmesini amaçlar. Amaç: 'güzel ekranlar' yerine UI düşüncesini göstermek, işe alım süreçlerinde net ve anlaşılır olmak, kariyerin erken aşamasında doğru alışkanlıklar kazanmak.",
         topics: [
           {
-            title: "UI Handoff Basics",
-            description: "UI handoff sadece Figma linki paylaşmak değildir, tasarımın nasıl çalıştığını anlatmaktır. İyi bir handoff belirsizliği azaltır, tekrar soru ihtiyacını düşürür, geliştirme süresini hızlandırır. Bir tasarımı düşün: Developer ilk hangi soruyu sorar? Bunu önceden nasıl netleştirirsin?",
+            title: "UI Portfolio Nedir?",
+            description: "İyi bir UI portfolyosu az ama net iş gösterir, görsel kararların nedenlerini açıklar, tutarlılığı ve kaliteyi yansıtır. Junior seviyede 3–5 sağlam case yeterlidir, quantity değil clarity önemlidir. Portfolyondaki bir işi seç: Bu işi neden ekledin? Seni hangi açıdan temsil ediyor?",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -4181,7 +3938,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "File Organization & Naming",
+            title: "Case Study'de UI Nasıl Anlatılır?",
             description: "Düzenli dosyalar geliştiricinin işi anlamasını kolaylaştırır, yanlış ekran uygulanma riskini azaltır. İyi organizasyon: net sayfa isimleri, component bazlı yapı, gereksiz frame'lerden arınmış dosya. Bir dosyana bak: İlk kez açan biri neyin nerede olduğunu anlar mı?",
             resources: [
               {
@@ -4212,7 +3969,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Component Behavior & States",
+            title: "UI Case Study Yapısı",
             description: "Developer'lar görünümü değil, davranışı uygular. Bu yüzden state'ler, varyantlar, responsive kurallar net olmalıdır. Bir component seç: Hover yoksa ne olur? Disabled ne zaman kullanılır?",
             resources: [
               {
@@ -4243,7 +4000,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Developer-Friendly UI Decisions",
+            title: "Junior UI Designer'dan Beklentiler",
             description: "İyi UI geliştirilebilir UI'dır. Dikkat edilmesi gerekenler: aşırı özel spacing'ler, tek seferlik varyantlar, mantıksız kırılımlar. Basit kurallar daha hızlı, daha stabil, daha tutarlı ürünler sağlar. Bir UI kararını düşün: Bu gerçekten gerekli mi? Yoksa görsel tercih mi?",
             resources: [
               {
@@ -4275,7 +4032,7 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "UI QA After Development",
+            title: "UI'da Sürekli Gelişim",
             description: "Geliştirme sonrası UI mutlaka kontrol edilmelidir, küçük farklar büyük etki yaratır. UI QA suçlama değil, kalite korumadır. Canlı ürüne bak: Tasarımdan farklı olan ne? Bu fark deneyimi etkiliyor mu?",
             resources: [
               {
@@ -4302,171 +4059,6 @@ const roadmaps: Record<string, Roadmap> = {
               tasks: [
                 "Canlı ürüne bak: Tasarımdan farklı olan ne?",
                 "Bu fark deneyimi etkiliyor mu?",
-              ],
-            },
-          },
-        ],
-      },
-      {
-        title: "14. 🎯 UI Portfolio & Career (Junior Focused)",
-        description: "Bu bölüm, Junior UI Designer'ların portfolyosunu doğru kurgulamasını, sektöre gerçekçi beklentilerle girmesini, sürdürülebilir şekilde gelişmesini amaçlar. Amaç: 'güzel ekranlar' yerine UI düşüncesini göstermek, işe alım süreçlerinde net ve anlaşılır olmak, kariyerin erken aşamasında doğru alışkanlıklar kazanmak.",
-        topics: [
-          {
-            title: "What Makes a Strong UI Portfolio",
-            description: "İyi bir UI portfolyosu az ama net iş gösterir, görsel kararların nedenlerini açıklar, tutarlılığı ve kaliteyi yansıtır. Junior seviyede 3–5 sağlam case yeterlidir, quantity değil clarity önemlidir. Portfolyondaki bir işi seç: Bu işi neden ekledin? Seni hangi açıdan temsil ediyor?",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "UX & UI Portfolios" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI Portfolio Tips – NNGroup" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "What Recruiters Look for in UI Portfolios" },
-                  { title: "How to Build a UI Portfolio" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Portfolyondaki bir işi seç: Bu işi neden ekledin?",
-                "Seni hangi açıdan temsil ediyor?",
-              ],
-            },
-          },
-          {
-            title: "Showing UI Thinking (Not Just Screens)",
-            description: "UI portfolyosu sadece ekran göstermez: hiyerarşi kararlarını, renk ve typography tercihlerini, component mantığını anlatır. 'Nasıl görünüyor?' kadar 'Neden böyle?' sorusu önemlidir. Bir ekran için yaz: En kritik UI kararın neydi? Alternatif neydi?",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Explaining Design Decisions" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Showing Design Thinking in Portfolios" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How to Explain UI Decisions" },
-                  { title: "From Screens to Reasoning" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir ekran için yaz: En kritik UI kararın neydi?",
-                "Alternatif neydi?",
-              ],
-            },
-          },
-          {
-            title: "Before / After & UI Improvements",
-            description: "UI Designer'lar için before / after çalışmaları, iyileştirme örnekleri çok değerlidir. Bu format gözlem yeteneğini, kalite farkını, UI hassasiyetini gösterir. Bir ekran seç: Ne çalışmıyordu? UI bunu nasıl çözdü?",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Redesign Case Studies" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI Redesign Case Studies" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How to Present UI Improvements" },
-                  { title: "Before & After UI Done Right" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir ekran seç: Ne çalışmıyordu?",
-                "UI bunu nasıl çözdü?",
-              ],
-            },
-          },
-          {
-            title: "Common Junior UI Portfolio Mistakes",
-            description: "Sık yapılan hatalar: sadece Dribbble tarzı ekranlar, aşırı süslü ama temelsiz UI, aynı tarzda çok fazla iş, açıklama eksikliği. Bu hatalar potansiyeli gizler, değerlendirmeyi zorlaştırır. Portfolyonu gözden geçir: En zayıf iş hangisi? Çıkarsan daha mı iyi olur?",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Portfolio Mistakes" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UI Portfolio Mistakes" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "Why UI Portfolios Get Rejected" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Portfolyonu gözden geçir: En zayıf iş hangisi?",
-                "Çıkarsan daha mı iyi olur?",
-              ],
-            },
-          },
-          {
-            title: "Growing as a UI Designer",
-            description: "UI kariyeri tek sıçrama değil, kademeli gelişimdir. Gelişim için: iyi UI'ları incele, sistem düşün, feedback iste, sabırlı ol. Junior'luk geçici, alışkanlıklar kalıcıdır. Kendine sor: Son 3 ayda UI olarak ne öğrendin? Bir sonraki adımın ne?",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Growing UX Careers" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "Growing as a UI Designer" },
-                ],
-              },
-              {
-                category: "✍️ Medium",
-                items: [
-                  { title: "How Junior UI Designers Grow" },
-                  { title: "Building a Long-Term UI Career" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Kendine sor: Son 3 ayda UI olarak ne öğrendin?",
-                "Bir sonraki adımın ne?",
               ],
             },
           },
