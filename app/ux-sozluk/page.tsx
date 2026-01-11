@@ -375,6 +375,106 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Tekrar eden UI elemanları tasarlanırken'
     ],
     relatedConcepts: ['Design System', 'Atomic Design', 'Consistency']
+  },
+  'atomic-design': {
+    shortDefinition: 'Atomic Design, arayüzleri küçük parçalardan başlayarak daha büyük ve anlamlı yapılara dönüştüren bir tasarım metodolojisidir.',
+    detailedDescription: 'Bu yaklaşım, UI\'ı atom, molekül, organizma gibi katmanlara ayırır. Amaç sadece isimlendirme değil, sistematik düşünmeyi sağlamaktır.\n\nYanlış anlaşıldığında fazla teorik kalabilir; doğru uygulandığında ise design system\'lerin temelini oluşturur.',
+    exampleScenario: 'Bir buton atomdur, buton + ikon bir molekül olabilir, bu yapıların birleşmesiyle daha karmaşık arayüzler oluşur.',
+    whenToUse: [
+      'Design system kurulurken',
+      'Bileşenler ölçeklenirken'
+    ],
+    relatedConcepts: ['Design System', 'Component', 'Consistency']
+  },
+  'consistency': {
+    shortDefinition: 'Consistency, bir ürünün tüm ekranlarında ve etkileşimlerinde tutarlı davranmasıdır.',
+    detailedDescription: 'Tutarlılık, kullanıcıların ürünü öğrenme süresini kısaltır. Kullanıcı bir yerde öğrendiği davranışı başka bir yerde de geçerli varsayar.\n\nTutarsız tasarımlar kullanıcıyı düşündürür ve hata yapmasına neden olur.',
+    exampleScenario: 'Bir ekranda mavi olan "Devam" butonunun başka bir ekranda gri olması kafa karışıklığı yaratır.',
+    whenToUse: [
+      'UI kararları alınırken',
+      'Design system uygulanırken'
+    ],
+    relatedConcepts: ['Design System', 'Visual Hierarchy', 'Usability']
+  },
+  'visual-hierarchy': {
+    shortDefinition: 'Visual Hierarchy, ekrandaki öğelerin önem sırasına göre algılanmasını sağlayan görsel düzenlemedir.',
+    detailedDescription: 'Boyut, renk, kontrast ve boşluk gibi öğeler kullanılarak kullanıcının dikkati yönlendirilir.\n\nİyi bir görsel hiyerarşi, kullanıcıya "önce nereye bakması gerektiğini" söyler.',
+    exampleScenario: 'Başlığın büyük, açıklamanın daha küçük yazılması görsel hiyerarşinin bir sonucudur.',
+    whenToUse: [
+      'Ekran tasarımları yapılırken',
+      'Bilgi önceliklendirilirken'
+    ],
+    relatedConcepts: ['UI Design', 'Consistency', 'Accessibility']
+  },
+  'empty-state': {
+    shortDefinition: 'Empty state, bir ekranda henüz içerik olmadığında kullanıcıya gösterilen durumdur.',
+    detailedDescription: 'Empty state\'ler sadece "boş" ekranlar değildir; kullanıcıyı yönlendiren fırsatlardır.\n\nİyi bir empty state, kullanıcıya ne yapması gerektiğini net bir şekilde anlatır.',
+    exampleScenario: 'Yeni kayıt olan bir kullanıcının boş dashboard yerine yönlendirici bir mesaj görmesi empty state örneğidir.',
+    whenToUse: [
+      'İlk kullanımda',
+      'Veri olmadığında'
+    ],
+    relatedConcepts: ['Onboarding', 'Feedback', 'UX Writing']
+  },
+  'ux-case-study': {
+    shortDefinition: 'UX Case Study, bir problemin nasıl ele alındığını ve hangi süreçlerle çözüldüğünü anlatan tasarım hikâyesidir.',
+    detailedDescription: 'UX case\'ler sonuçtan çok sürece odaklanır. Ekran sayısından ziyade kararların gerekçeleri önemlidir.\n\nİyi bir UX case, düşünce biçimini net bir şekilde aktarır.',
+    exampleScenario: 'Bir onboarding probleminin nasıl keşfedildiğini ve çözüldüğünü anlatan çalışma bir UX case\'tir.',
+    whenToUse: [
+      'Portfolyo hazırlanırken',
+      'Tasarım süreci anlatılırken'
+    ],
+    relatedConcepts: ['Concept Case', 'Problem Statement', 'User Research']
+  },
+  'concept-case': {
+    shortDefinition: 'Concept case, gerçek bir ürün yerine varsayımsal bir problem üzerinden oluşturulan UX çalışmasıdır.',
+    detailedDescription: 'Concept case\'ler, özellikle junior tasarımcılar için düşünme becerisini göstermek adına değerlidir.\n\nAncak gerçek ürünmüş gibi anlatılması yanıltıcı olabilir.',
+    exampleScenario: 'Varsayımsal bir sağlık uygulaması için hazırlanan UX çalışması concept case\'tir.',
+    whenToUse: [
+      'Gerçek ürün erişimi yoksa',
+      'Düşünme süreci göstermek istendiğinde'
+    ],
+    relatedConcepts: ['UX Case Study', 'Problem Statement', 'Case Atölyesi']
+  },
+  'edge-case': {
+    shortDefinition: 'Edge case, çoğu kullanıcı için nadir gerçekleşen ama gerçekleştiğinde önemli etkiler yaratan durumlardır.',
+    detailedDescription: 'Edge case\'ler genellikle göz ardı edilir ancak kötü deneyimlere yol açabilir.\n\nİyi bir tasarım, ana senaryolar kadar edge case\'leri de hesaba katar.',
+    exampleScenario: 'İnternet bağlantısı kesildiğinde formun nasıl davranacağı bir edge case\'tir.',
+    whenToUse: [
+      'Akışlar detaylandırılırken',
+      'Hata senaryoları düşünülürken'
+    ],
+    relatedConcepts: ['Error Prevention', 'Feedback', 'User Flow']
+  },
+  'cognitive-load': {
+    shortDefinition: 'Cognitive load, kullanıcının bir görevi yerine getirirken harcadığı zihinsel efor miktarıdır.',
+    detailedDescription: 'Yüksek bilişsel yük, kullanıcıyı yorar ve hata yapma olasılığını artırır.\n\nİyi UX, kullanıcıdan mümkün olan en az zihinsel eforu talep eder.',
+    exampleScenario: 'Aynı ekranda çok fazla seçenek sunulması cognitive load\'u artırır.',
+    whenToUse: [
+      'Form ve akış tasarlanırken',
+      'Bilgi yoğun ekranlarda'
+    ],
+    relatedConcepts: ['Usability', 'Visual Hierarchy', 'Progressive Disclosure']
+  },
+  'affordance': {
+    shortDefinition: 'Affordance, bir nesnenin nasıl kullanılacağını kullanıcıya sezgisel olarak anlatma yeteneğidir.',
+    detailedDescription: 'Bir öğenin tıklanabilir mi, sürüklenebilir mi olduğu görünümünden anlaşılmalıdır.\n\nGizli affordance\'lar kullanıcıyı deneme-yanılmaya iter.',
+    exampleScenario: 'Buton gibi görünen bir alanın tıklanamaması affordance problemidir.',
+    whenToUse: [
+      'Etkileşimler tasarlanırken',
+      'UI elemanları değerlendirilirken'
+    ],
+    relatedConcepts: ['Signifiers', 'Interaction Design', 'Feedback']
+  },
+  'error-prevention': {
+    shortDefinition: 'Error prevention, kullanıcıların hata yapmasını en baştan engellemeye yönelik tasarım yaklaşımıdır.',
+    detailedDescription: 'Hataları sonradan düzeltmek yerine, hataya giden yolları kapatmak daha iyi bir deneyim sunar.\n\nBu yaklaşım, kullanıcıyı uyarmaktan çok yönlendirmeyi hedefler.',
+    exampleScenario: 'Yanlış formatta e-posta girildiğinde anında uyarı verilmesi error prevention örneğidir.',
+    whenToUse: [
+      'Form tasarımlarında',
+      'Kritik aksiyonlar öncesinde'
+    ],
+    relatedConcepts: ['Validation', 'Feedback', 'Edge Case']
   }
 };
 
