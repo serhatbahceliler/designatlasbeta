@@ -145,6 +145,14 @@ export default function Header({ showBackLink = false }: HeaderProps) {
               />
             </Link>
 
+            {/* UX Sözlük Link - Visible to everyone */}
+            <Link
+              href="/ux-sozluk"
+              className="text-gray-300 hover:text-[#DEFF37] transition-colors font-medium"
+            >
+              UX Sözlük
+            </Link>
+
             {user ? (
               <>
                 {/* Minimalist Profile Avatar */}
