@@ -65,6 +65,18 @@ const UX_TERMS = [
   { id: 'cognitive-load', term: 'Cognitive Load', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
   { id: 'affordance', term: 'Affordance', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
   { id: 'error-prevention', term: 'Error Prevention', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
+
+  // 🧠 Core UX & Thinking
+  { id: 'mental-model', term: 'Mental Model', category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'heuristic', term: 'Heuristic', category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'nielsens-heuristics', term: "Nielsen's Heuristics", category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'empathy', term: 'Empathy', category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'cognitive-bias', term: 'Cognitive Bias', category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'progressive-disclosure', term: 'Progressive Disclosure', category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'hicks-law', term: "Hick's Law", category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'fittss-law', term: "Fitts's Law", category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'jakobs-law', term: "Jakob's Law", category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'gestalt-principles', term: 'Gestalt Principles', category: 'Core UX & Thinking', emoji: '🧠' },
 ];
 
 // Term Contents (first 10 terms)
