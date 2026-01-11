@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
 import { getAuthHeaders } from "@/lib/api-client";
 import ReactMarkdown from "react-markdown";
