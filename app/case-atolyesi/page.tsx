@@ -39,7 +39,7 @@ export default function CaseAtolyesiPage() {
           </div>
         }
       >
-        <CaseAtolyesiContent />
+        <CaseAtolyesiContent key="case-atolyesi-content" />
       </Suspense>
     </div>
   );
