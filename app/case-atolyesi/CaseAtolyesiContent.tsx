@@ -548,14 +548,31 @@ export default function CaseAtolyesiContent() {
                           message.role === "user"
                             ? "bg-[#DEFF37] text-black"
                             : "bg-zinc-800 text-white"
-                        } rounded-2xl px-4 py-3`}
+                        } rounded-2xl px-5 py-4`}
                       >
                         {message.role === "assistant" ? (
-                          <ReactMarkdown className="prose prose-invert prose-sm max-w-none prose-headings:text-white prose-p:text-gray-300 prose-strong:text-white prose-ul:text-gray-300 prose-ol:text-gray-300 prose-li:text-gray-300 prose-code:text-[#DEFF37] prose-pre:bg-zinc-900 prose-pre:text-gray-300">
-                            {message.content}
-                          </ReactMarkdown>
+                          <div className="markdown-content">
+                            <ReactMarkdown
+                              className="prose prose-invert prose-sm max-w-none 
+                                prose-headings:text-white prose-headings:font-bold prose-headings:mb-3 prose-headings:mt-4 prose-headings:leading-tight
+                                prose-h1:text-2xl prose-h1:font-bold prose-h1:mb-4 prose-h1:mt-6
+                                prose-h2:text-xl prose-h2:font-bold prose-h2:mb-3 prose-h2:mt-5
+                                prose-h3:text-lg prose-h3:font-bold prose-h3:mb-2 prose-h3:mt-4
+                                prose-p:text-gray-300 prose-p:font-normal prose-p:leading-relaxed prose-p:my-3 prose-p:first:mt-0 prose-p:last:mb-0
+                                prose-strong:text-white prose-strong:font-bold
+                                prose-ul:text-gray-300 prose-ul:my-3 prose-ul:space-y-2
+                                prose-ol:text-gray-300 prose-ol:my-3 prose-ol:space-y-2
+                                prose-li:text-gray-300 prose-li:leading-relaxed prose-li:my-1
+                                prose-code:text-[#DEFF37] prose-code:font-mono prose-code:text-sm prose-code:bg-zinc-900/50 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+                                prose-pre:bg-zinc-900 prose-pre:text-gray-300 prose-pre:my-4 prose-pre:rounded-lg prose-pre:overflow-x-auto
+                                prose-hr:border-zinc-700 prose-hr:my-6
+                                prose-blockquote:text-gray-400 prose-blockquote:border-l-[#DEFF37] prose-blockquote:pl-4 prose-blockquote:my-4"
+                            >
+                              {message.content}
+                            </ReactMarkdown>
+                          </div>
                         ) : (
-                          <p className="whitespace-pre-wrap">{message.content}</p>
+                          <p className="whitespace-pre-wrap leading-relaxed">{message.content}</p>
                         )}
                       </div>
                     </div>
