@@ -3882,15 +3882,29 @@ const roadmaps: Record<string, Roadmap> = {
           {
             title: "Product Design Nedir?",
             description: "Product Design, kullanıcı deneyimi, arayüz tasarımı ve ürün stratejisini birleştirerek anlamlı ve değer yaratan ürünler oluşturma sürecidir. Sadece ekran tasarlamak değil, kullanıcı ve iş hedeflerini birlikte ele alarak problem çözmektir.",
+            resources: [
+              {
+                category: "📘 Interaction Design Foundation",
+                items: [
+                  { title: "Product Design — The Process of Creating Products People Love", url: "https://www.interaction-design.org/literature/topics/product-design" },
+                ],
+              },
+              {
+                category: "📘 Figma",
+                items: [
+                  { title: "What is product design?", url: "https://www.figma.com/resource-library/what-is-product-design/" },
+                ],
+              },
+            ],
           },
           {
             title: "Product Designer'ın Rolü",
             description: "Product Designer sadece UX veya UI yapan kişi değildir, ürün kararlarının tasarım tarafındaki ortağıdır. Sorumluluk alanı: problemi doğru tanımlamak, çözüm alternatiflerini düşünmek, kullanıcıyı temsil etmek, kararların etkisini sorgulamak. Product Designer karar veren değil, kararı şekillendiren kişidir.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 Figma",
                 items: [
-                  { title: "UX Roles & Responsibilities" },
+                  { title: "What is product design?", url: "https://www.figma.com/resource-library/what-is-product-design/" },
                 ],
               },
             ],
@@ -3907,16 +3921,9 @@ const roadmaps: Record<string, Roadmap> = {
             description: "UX Design: Problemi anlar ve çözümün kullanıcı için çalışıp çalışmadığını test eder. UI Design: Görsel dili ve arayüzü tasarlar. Product Design: UX + UI + iş hedeflerini birlikte ele alır. Bu roller çoğu şirkette örtüşebilir, ama bakış açıları farklıdır.",
             resources: [
               {
-                category: "📘 NNGroup",
+                category: "📘 CareerFoundry",
                 items: [
-                  { title: "UX vs UI vs Product Design", url: "https://www.nngroup.com/videos/ux-vs-ui/" },
-                ],
-              },
-              {
-                category: "🎥 YouTube",
-                items: [
-                  { title: "UX vs UI vs Product Design Explained – Jesse Showalter", url: "https://www.youtube.com/@jesseshowalter" },
-                  { title: "UX, UI and Product Design Differences – AJ&Smart", url: "https://www.youtube.com/@ajsmart" },
+                  { title: "What is the Difference Between a UX Designer and a Product Designer?", url: "https://careerfoundry.com/en/blog/ux-design/what-is-the-difference-between-a-ux-designer-and-a-product-designer/" },
                 ],
               },
             ],
@@ -3933,6 +3940,14 @@ const roadmaps: Record<string, Roadmap> = {
           {
             title: "Product Mindset Nedir?",
             description: "Product Mindset, tasarımcının ekrana değil probleme odaklanmasını, çözümden önce değeri sorgulamasını, kullanıcı, iş ve teknik gerçekliği birlikte düşünmesini sağlayan düşünme biçimidir. Product Sense doğru soruları sorabilme yetisidir, zamanla gelişir, deneyimle güçlenir.",
+            resources: [
+              {
+                category: "📘 Product School",
+                items: [
+                  { title: "Ürün Odaklı Bir Zihniyet Nasıl Oluşturulur?", url: "https://productschool.com/blog/product-fundamentals/product-mindset-for-yourself-and-your-organization" },
+                ],
+              },
+            ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
