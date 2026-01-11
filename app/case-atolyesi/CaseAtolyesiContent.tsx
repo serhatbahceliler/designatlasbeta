@@ -40,6 +40,8 @@ export default function CaseAtolyesiContent() {
   const [animatedPlaceholder, setAnimatedPlaceholder] = useState("");
   const [currentPromptIndex, setCurrentPromptIndex] = useState(0);
   const placeholderTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const charIndexRef = useRef(0);
+  const isTypingRef = useRef(true);
 
   const firstName = profile?.first_name || "Serhat";
   const hasThreads = threads.length > 0;
@@ -84,33 +86,38 @@ export default function CaseAtolyesiContent() {
     }
 
     const currentPrompt = QUICK_PROMPTS[currentPromptIndex];
-    let charIndex = 0;
+    charIndexRef.current = 0;
+    isTypingRef.current = true;
 
-    const typeText = () => {
-      if (charIndex <= currentPrompt.length) {
-        setAnimatedPlaceholder(currentPrompt.slice(0, charIndex));
-        charIndex++;
-        placeholderTimeoutRef.current = setTimeout(typeText, 50);
+    const animate = () => {
+      if (isTypingRef.current) {
+        // Typing phase
+        if (charIndexRef.current <= currentPrompt.length) {
+          setAnimatedPlaceholder(currentPrompt.slice(0, charIndexRef.current));
+          charIndexRef.current++;
+          placeholderTimeoutRef.current = setTimeout(animate, 50);
+        } else {
+          // Wait before deleting
+          placeholderTimeoutRef.current = setTimeout(() => {
+            isTypingRef.current = false;
+            charIndexRef.current = currentPrompt.length;
+            animate();
+          }, 2000);
+        }
       } else {
-        // Wait before deleting
-        placeholderTimeoutRef.current = setTimeout(() => {
-          charIndex = currentPrompt.length;
-          const deleteText = () => {
-            if (charIndex > 0) {
-              charIndex--;
-              setAnimatedPlaceholder(currentPrompt.slice(0, charIndex));
-              placeholderTimeoutRef.current = setTimeout(deleteText, 30);
-            } else {
-              // Move to next prompt
-              setCurrentPromptIndex((prev) => (prev + 1) % QUICK_PROMPTS.length);
-            }
-          };
-          deleteText();
-        }, 2000);
+        // Deleting phase
+        if (charIndexRef.current > 0) {
+          charIndexRef.current--;
+          setAnimatedPlaceholder(currentPrompt.slice(0, charIndexRef.current));
+          placeholderTimeoutRef.current = setTimeout(animate, 30);
+        } else {
+          // Move to next prompt
+          setCurrentPromptIndex((prev) => (prev + 1) % QUICK_PROMPTS.length);
+        }
       }
     };
 
-    typeText();
+    animate();
 
     return () => {
       if (placeholderTimeoutRef.current) {
@@ -598,14 +605,17 @@ export default function CaseAtolyesiContent() {
         .bg-gradient-animated {
           background: linear-gradient(
             -45deg,
+            #0a0a0f,
             #1a1a2e,
             #16213e,
             #0f3460,
+            #2d1b4e,
             #533483,
-            #1a1a2e
+            #3d2a5f,
+            #0a0a0f
           );
           background-size: 400% 400%;
-          animation: gradient-shift 15s ease infinite;
+          animation: gradient-shift 20s ease infinite;
         }
       `}</style>
     </>
