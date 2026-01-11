@@ -4114,23 +4114,12 @@ const roadmaps: Record<string, Roadmap> = {
         ],
       },
       {
-        title: "🔍 Design Research",
-        description: "Design Research, ürün kararlarının varsayımlara değil, gerçek kullanıcı ihtiyaçlarına, gözlemlenebilir davranışlara dayanmasını sağlayan süreçtir. Amaç: 'kullanıcı ne dedi?'yi değil, 'kullanıcı neden böyle davrandı?'yı anlamaktır. Design Research tasarımı doğrulamak için değil, doğru problemi bulmak için yapılır.",
+        title: "Kullanıcıyı Anlamak",
+        description: "Kullanıcı araştırması temelleri, nitel ve nicel araştırma yöntemleri, kullanıcı görüşmeleri ve içgörü üretme süreçleri.",
         topics: [
           {
-            title: "Research Mindset",
-            description: "Araştırma bir faz değil, bir düşünme biçimidir. Yanlış yaklaşım: 'Tasarım yaptık, şimdi test edelim'. Doğru yaklaşım: 'Henüz emin değiliz, önce anlayalım'. Research mindset emin olmamayı kabul eder, varsayımları görünür kılar, hızlı öğrenmeyi önemser.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir ürün kararını düşün: Bu karar hangi bilgiye dayanıyor?",
-                "Bu bilgi gerçekten kullanıcıdan mı geliyor?",
-              ],
-            },
-          },
-          {
-            title: "Ne Zaman Araştırma Yapılır?",
-            description: "Araştırma sadece başta yapılmaz. Araştırma yapılması gereken anlar: Yeni bir problem tanımlanıyorsa, Kullanıcı davranışı beklenenden farklıysa, Ekip 'neden böyle?' diye tartışıyorsa, Aynı sorun tekrar tekrar geliyorsa. Araştırma belirsizlik varsa yapılır.",
+            title: "Kullanıcı Araştırması Temelleri",
+            description: "Araştırma bir faz değil, bir düşünme biçimidir. Yanlış yaklaşım: 'Tasarım yaptık, şimdi test edelim'. Doğru yaklaşım: 'Henüz emin değiliz, önce anlayalım'. Research mindset emin olmamayı kabul eder, varsayımları görünür kılar, hızlı öğrenmeyi önemser. Araştırma yapılması gereken anlar: Yeni bir problem tanımlanıyorsa, Kullanıcı davranışı beklenenden farklıysa, Ekip 'neden böyle?' diye tartışıyorsa.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -4142,43 +4131,24 @@ const roadmaps: Record<string, Roadmap> = {
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Son sprinti düşün: Hangi noktada 'emin değiliz' dediniz?",
-                "Orada araştırma yapılsa ne öğrenilirdi?",
+                "Bir ürün kararını düşün: Bu karar hangi bilgiye dayanıyor?",
+                "Bu bilgi gerçekten kullanıcıdan mı geliyor?",
               ],
             },
           },
           {
-            title: "Stakeholder Interview & Brief Alma",
-            description: "Araştırma sadece kullanıcıyla yapılmaz. Stakeholder interview iş hedeflerini, teknik kısıtları, ekip beklentilerini anlamanı sağlar. Amaç: 'benden ne istiyorsunuz?' değil, 'neyi çözmeye çalışıyoruz?' demektir.",
+            title: "Nitel & Nicel Araştırma",
+            description: "Qualitative: derinlik, neden, bağlam. Quantitative: yaygınlık, trend, karşılaştırma. Product Designer ikisini birlikte okumayı öğrenir. Nitel araştırma 'neden?' sorusunu, nicel araştırma 'ne kadar?' sorusunu cevaplar.",
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir stakeholder konuşmasını düşün: Dile getirilmeyen beklenti neydi?",
-                "Asıl problem ne olabilir?",
+                "Bir problem için sor: Önce hangisi gerekli?",
+                "Neden?",
               ],
             },
           },
           {
-            title: "Varsayım Haritalama (Assumption Mapping)",
-            description: "Ürün kararlarının çoğu varsayıma dayanır. Varsayım örnekleri: 'Kullanıcı bunu anlar', 'Bu daha hızlıdır', 'Bu bizim için daha kârlı'. Assumption mapping varsayımları görünür yapar, hangilerinin riskli olduğunu gösterir.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Assumptions in UX" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir feature için yaz: En riskli varsayım hangisi?",
-                "Yanlış çıkarsa ne olur?",
-              ],
-            },
-          },
-          {
-            title: "Kullanıcı Interview'ları",
+            title: "Kullanıcı Görüşmeleri",
             description: "User interview kullanıcıyı ikna etme değil, onu anlama çabasıdır. İyi interview 'neden?' sorusunu derinleştirir, yönlendirme yapmaz, çözüm değil deneyim konuşur.",
             resources: [
               {
@@ -4197,13 +4167,14 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Contextual Inquiry",
-            description: "Kullanıcılar her zaman doğruyu söylemez ama her zaman bir şey yapar. Contextual inquiry kullanıcıyı kendi ortamında gözlemler, gerçek davranışı ortaya çıkarır.",
+            title: "Davranışsal vs Tutumsal Veri",
+            description: "Kullanıcılar her zaman doğruyu söylemez ama her zaman bir şey yapar. Davranışsal veri kullanıcının ne yaptığını gösterir (contextual inquiry, analytics), tutumsal veri kullanıcının ne düşündüğünü gösterir (interview, survey). İkisi birlikte anlamlıdır.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
                 items: [
                   { title: "Contextual Inquiry" },
+                  { title: "Surveys" },
                 ],
               },
             ],
@@ -4216,38 +4187,8 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Survey & Anketler",
-            description: "Survey 'neden'i değil, 'ne kadar'ı gösterir. Yanlış kullanım: karar vermek için tek başına survey. Doğru kullanım: eğilimleri görmek, qualitative bulguları desteklemek.",
-            resources: [
-              {
-                category: "📘 Nielsen Norman Group",
-                items: [
-                  { title: "Surveys" },
-                ],
-              },
-            ],
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir survey sorusu düşün: Bu soru hangi kararı destekliyor?",
-                "Tek başına yeterli mi?",
-              ],
-            },
-          },
-          {
-            title: "Qualitative vs Quantitative Research",
-            description: "Qualitative: derinlik, neden, bağlam. Quantitative: yaygınlık, trend, karşılaştırma. Product Designer ikisini birlikte okumayı öğrenir.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir problem için sor: Önce hangisi gerekli?",
-                "Neden?",
-              ],
-            },
-          },
-          {
-            title: "Insight Synthesis",
-            description: "Araştırmanın en kritik kısmı veri toplamak değil, anlam çıkarmaktır. Insight tekrar eden davranışlardan, güçlü sinyallerden, bağlamdan doğar.",
+            title: "İçgörü (Insight) Üretme",
+            description: "Araştırmanın en kritik kısmı veri toplamak değil, anlam çıkarmaktır. Insight tekrar eden davranışlardan, güçlü sinyallerden, bağlamdan doğar. İçgörü üretme: veri → pattern → insight → karar zincirini kurmaktır.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -4263,14 +4204,84 @@ const roadmaps: Record<string, Roadmap> = {
               ],
             },
           },
+        ],
+      },
+      {
+        title: "Problem Tanımı & Çerçeveleme",
+        description: "Problem statement yazımı, Jobs To Be Done, kullanıcı ihtiyaçları ve pain point'ler, opportunity alanları ve problem önceliklendirme.",
+        topics: [
           {
-            title: "Research'ten Karara Gitmek",
-            description: "Araştırma tek başına değer üretmez. Değer: insight → karar → aksiyon zinciri kurulduğunda oluşur. Product Designer 'kullanıcılar böyle dedi' demez, 'bu yüzden şunu öneriyoruz' der.",
+            title: "Problem Statement Yazımı",
+            description: "Problem statement problemi net, ölçülebilir ve çözülebilir şekilde tanımlar. İyi bir problem statement: kime yönelik olduğunu, ne problemini çözdüğünü, neden önemli olduğunu açıklar. Problem statement yoksa çözüm de hedefli olamaz.",
+          },
+          {
+            title: "Jobs To Be Done (JTBD)",
+            description: "JTBD yaklaşımı kullanıcıyı değil, kullanıcının yapmak istediği işi merkeze alır. Kullanıcı ürünü değil, bir sonucu 'işe alır'. JTBD yaklaşımı kullanıcının gerçek motivasyonunu anlamaya yardımcı olur.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Jobs to Be Done" },
+                ],
+              },
+            ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir bulgu düşün: Bu bulgu hangi kararı değiştirmeli?",
-                "Değiştirmiyorsa neden?",
+                "Bir özelliği düşün: Kullanıcı bunu neden 'işe alıyor'?",
+                "Hangi işi çözmek için?",
+              ],
+            },
+          },
+          {
+            title: "Kullanıcı İhtiyaçları & Pain Point'ler",
+            description: "Kullanıcı ihtiyaçları kullanıcının gerçekleştirmek istediği hedefler, pain point'ler ise bu hedeflere ulaşmayı engelleyen zorluklardır. İyi ürünler hem ihtiyacı karşılar hem de pain point'i çözer.",
+          },
+          {
+            title: "Opportunity Alanlarını Belirleme",
+            description: "Opportunity alanları, kullanıcı ihtiyaçları ve iş hedeflerinin kesiştiği, çözüm üretilebilecek alanlardır. Opportunity alanlarını belirlemek için: kullanıcı ihtiyaçlarını, pain point'leri, iş hedeflerini ve teknik kısıtları birlikte düşünmek gerekir.",
+          },
+          {
+            title: "Problem Önceliklendirme",
+            description: "Her şey önemliyse, hiçbir şey önemli değildir. Problem önceliklendirme etki (impact), çaba (effort), risk ve kullanıcı aciliyeti üzerinden düşünülür. Önceliklendirme yapılmazsa kaynaklar dağılır, etki azalır.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Üç problem yaz: En çok etki hangisinde?",
+                "En az çaba hangisinde?",
+              ],
+            },
+          },
+        ],
+      },
+      {
+        title: "Fikir Üretimi & Çözüm Alanı",
+        description: "Ideation teknikleri, çözüm alternatifleri üretme, diverge & converge mantığı, hızlı fikir değerlendirme ve çözüm varsayımları.",
+        topics: [
+          {
+            title: "Ideation Teknikleri",
+            description: "Ideation teknikleri yaratıcı fikir üretmek için kullanılan yöntemlerdir. Örnek teknikler: brainstorming, mind mapping, SCAMPER, worst possible idea, analogies. Ideation teknikleri çözüm alanını genişletir.",
+          },
+          {
+            title: "Çözüm Alternatifleri Üretme",
+            description: "Tek bir çözüm üretmek yerine, birden fazla alternatif düşünmek daha iyi sonuçlar verir. Çözüm alternatifleri üretirken: farklı yaklaşımlar dene, kısıtları kaldırmayı dene, 'ya şöyle olsaydı?' sor.",
+          },
+          {
+            title: "Diverge & Converge Mantığı",
+            description: "Diverge aşamasında çok sayıda fikir üretilir, converge aşamasında bu fikirler değerlendirilip daraltılır. Önce diverge yap, sonra converge. Diverge yapılmadan converge yapılırsa daha iyi çözümler kaçırılabilir.",
+          },
+          {
+            title: "Hızlı Fikir Değerlendirme",
+            description: "Her fikri detaylı değerlendirmek yerine, hızlı değerlendirme kriterleri kullan. Örnek kriterler: kullanıcı değeri, teknik yapılabilirlik, iş değeri, çaba. Hızlı değerlendirme ile daha umut verici fikirler üzerinde odaklanılır.",
+          },
+          {
+            title: "Çözüm Varsayımları",
+            description: "Her çözüm fikri bir varsayıma dayanır. Örnek varsayımlar: 'Kullanıcı bunu anlar', 'Bu daha hızlıdır', 'Bu daha kolaydır'. Çözüm varsayımlarını görünür kılmak ve test etmek, yanlış çözüme yatırım yapmayı önler.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir çözüm fikri yaz: Bu fikir hangi varsayıma dayanıyor?",
+                "Bu varsayımı nasıl test edersin?",
               ],
             },
           },
