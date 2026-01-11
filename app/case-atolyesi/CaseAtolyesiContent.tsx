@@ -37,6 +37,9 @@ export default function CaseAtolyesiContent() {
   const [isLoadingThreads, setIsLoadingThreads] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false); // Start closed, will open when threads exist
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [animatedPlaceholder, setAnimatedPlaceholder] = useState("");
+  const [currentPromptIndex, setCurrentPromptIndex] = useState(0);
+  const placeholderTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const firstName = profile?.first_name || "Serhat";
   const hasThreads = threads.length > 0;
@@ -69,6 +72,52 @@ export default function CaseAtolyesiContent() {
       setSidebarOpen(true);
     }
   }, [hasThreads]);
+
+  // Animated placeholder typing effect
+  useEffect(() => {
+    if (hasThreads || input !== "") {
+      setAnimatedPlaceholder("");
+      if (placeholderTimeoutRef.current) {
+        clearTimeout(placeholderTimeoutRef.current);
+      }
+      return;
+    }
+
+    const currentPrompt = QUICK_PROMPTS[currentPromptIndex];
+    let charIndex = 0;
+
+    const typeText = () => {
+      if (charIndex <= currentPrompt.length) {
+        setAnimatedPlaceholder(currentPrompt.slice(0, charIndex));
+        charIndex++;
+        placeholderTimeoutRef.current = setTimeout(typeText, 50);
+      } else {
+        // Wait before deleting
+        placeholderTimeoutRef.current = setTimeout(() => {
+          charIndex = currentPrompt.length;
+          const deleteText = () => {
+            if (charIndex > 0) {
+              charIndex--;
+              setAnimatedPlaceholder(currentPrompt.slice(0, charIndex));
+              placeholderTimeoutRef.current = setTimeout(deleteText, 30);
+            } else {
+              // Move to next prompt
+              setCurrentPromptIndex((prev) => (prev + 1) % QUICK_PROMPTS.length);
+            }
+          };
+          deleteText();
+        }, 2000);
+      }
+    };
+
+    typeText();
+
+    return () => {
+      if (placeholderTimeoutRef.current) {
+        clearTimeout(placeholderTimeoutRef.current);
+      }
+    };
+  }, [hasThreads, currentPromptIndex, input]);
 
   const loadThreads = async () => {
     try {
@@ -304,8 +353,14 @@ export default function CaseAtolyesiContent() {
   const selectedThread = threads.find((t) => t.id === selectedThreadId);
 
   return (
-    <div className="flex-1 flex overflow-hidden relative">
-      {/* Sidebar - Only render when threads exist */}
+    <>
+      {/* Animated Gradient Background */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div className="absolute inset-0 bg-gradient-animated"></div>
+      </div>
+
+      <div className="flex-1 flex overflow-hidden relative">
+        {/* Sidebar - Only render when threads exist */}
       {hasThreads && (
         <aside
           className={`bg-zinc-900 border-r border-zinc-800 flex flex-col transition-all duration-300 ease-in-out ${
@@ -386,55 +441,47 @@ export default function CaseAtolyesiContent() {
           /* Empty State - No threads, sidebar hidden, full width */
           <>
             <div className="flex-1 flex items-center justify-center p-8 overflow-y-auto">
-              <div className="max-w-2xl w-full text-center">
-                <h1 className="text-4xl font-bold text-white mb-4">
-                  Bugün ne tasarlıyoruz {firstName}?
-                </h1>
-                <p className="text-gray-400 text-lg mb-8">
-                  Case Atölyesi, portfolyon için gerçekçi bir problemle başlamana yardımcı olur. Biraz anlat, gerisini birlikte şekillendirelim.
-                </p>
+              <div className="max-w-3xl w-full">
+                <div className="text-center mb-12">
+                  <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                    Bugün ne tasarlıyoruz {firstName}?
+                  </h1>
+                  <p className="text-gray-400 text-lg md:text-xl">
+                    Case Atölyesi, portfolyon için gerçekçi bir problemle başlamana yardımcı olur. Biraz anlat, gerisini birlikte şekillendirelim.
+                  </p>
+                </div>
 
-                {/* Quick Prompts */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                  {QUICK_PROMPTS.map((prompt, index) => (
+                {/* Input Area - Moved below title and subtitle */}
+                <div className="max-w-3xl mx-auto">
+                  {error && (
+                    <div className="mb-4 p-3 bg-red-500/10 border border-red-500/30 rounded-lg">
+                      <p className="text-red-400 text-sm">{error}</p>
+                    </div>
+                  )}
+                  <form onSubmit={handleSubmit} className="flex gap-3">
+                    <div className="flex-1 relative">
+                      <input
+                        type="text"
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        placeholder={animatedPlaceholder || "Herhangi bir şey sor"}
+                        disabled={isLoading}
+                        className="w-full px-4 py-4 bg-zinc-900/80 backdrop-blur-sm border border-zinc-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors disabled:opacity-50 text-lg"
+                        autoFocus
+                      />
+                    </div>
                     <button
-                      key={index}
-                      onClick={() => handleQuickPrompt(prompt)}
-                      disabled={isLoading}
-                      className="p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl text-left hover:border-[#DEFF37]/50 hover:bg-zinc-900 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                      type="submit"
+                      disabled={!input.trim() || isLoading}
+                      className="px-8 py-4 bg-[#DEFF37] text-black font-semibold rounded-xl hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                     >
-                      <p className="text-white text-sm">{prompt}</p>
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
                     </button>
-                  ))}
+                  </form>
                 </div>
               </div>
-            </div>
-
-            {/* Input Area for Empty State */}
-            <div className="p-4 border-t border-zinc-800 bg-zinc-900/50">
-              {error && (
-                <div className="mb-4 p-3 bg-red-500/10 border border-red-500/30 rounded-lg">
-                  <p className="text-red-400 text-sm">{error}</p>
-                </div>
-              )}
-              <form onSubmit={handleSubmit} className="flex gap-3 max-w-3xl mx-auto">
-                <input
-                  type="text"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  placeholder="Mesajınızı yazın..."
-                  disabled={isLoading}
-                  className="flex-1 px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors disabled:opacity-50"
-                  autoFocus
-                />
-                <button
-                  type="submit"
-                  disabled={!input.trim() || isLoading}
-                  className="px-6 py-3 bg-[#DEFF37] text-black font-semibold rounded-lg hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  Gönder
-                </button>
-              </form>
             </div>
           </>
         ) : !selectedThread ? (
@@ -458,19 +505,7 @@ export default function CaseAtolyesiContent() {
               {messages.length === 0 ? (
                 <div className="flex items-center justify-center h-full">
                   <div className="text-center">
-                    <p className="text-gray-400 mb-4">Henüz mesaj yok</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl">
-                      {QUICK_PROMPTS.map((prompt, index) => (
-                        <button
-                          key={index}
-                          onClick={() => handleQuickPrompt(prompt)}
-                          disabled={isLoading}
-                          className="p-3 bg-zinc-900/50 border border-zinc-800 rounded-lg text-left hover:border-[#DEFF37]/50 hover:bg-zinc-900 transition-all text-sm text-white disabled:opacity-50"
-                        >
-                          {prompt}
-                        </button>
-                      ))}
-                    </div>
+                    <p className="text-gray-400">Henüz mesaj yok</p>
                   </div>
                 </div>
               ) : (
@@ -544,6 +579,35 @@ export default function CaseAtolyesiContent() {
           </>
         )}
       </main>
-    </div>
+      </div>
+
+      {/* CSS for animated gradient */}
+      <style jsx>{`
+        @keyframes gradient-shift {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        .bg-gradient-animated {
+          background: linear-gradient(
+            -45deg,
+            #1a1a2e,
+            #16213e,
+            #0f3460,
+            #533483,
+            #1a1a2e
+          );
+          background-size: 400% 400%;
+          animation: gradient-shift 15s ease infinite;
+        }
+      `}</style>
+    </>
   );
 }

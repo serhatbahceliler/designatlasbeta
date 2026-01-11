@@ -114,7 +114,17 @@ export async function POST(request: NextRequest) {
     try {
       assistantResponse = await generateChatCompletion(chatMessages, MENTOR_SYSTEM_PROMPT);
     } catch (openaiError: any) {
-      console.error("OpenAI error:", openaiError);
+      console.error("OpenAI error in chat route:", {
+        message: openaiError.message,
+        stack: openaiError.stack,
+      });
+      // Return more specific error message if it's an API key issue
+      if (openaiError.message?.includes("API key") || openaiError.message?.includes("not configured")) {
+        return NextResponse.json(
+          { error: "OpenAI API yapılandırması eksik. Lütfen yöneticiye bildirin." },
+          { status: 500 }
+        );
+      }
       return NextResponse.json(
         { error: "Şu an cevap üretemedim, tekrar dener misiniz?" },
         { status: 500 }

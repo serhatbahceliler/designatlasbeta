@@ -17,6 +17,7 @@ export async function generateChatCompletion(
   systemPrompt: string
 ): Promise<string> {
   if (!OPENAI_API_KEY) {
+    console.error("OPENAI_API_KEY is not set in environment variables");
     throw new Error("OpenAI API key is not configured");
   }
 
@@ -40,14 +41,31 @@ export async function generateChatCompletion(
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
-      throw new Error(errorData.error?.message || `OpenAI API error: ${response.statusText}`);
+      const errorMessage = errorData.error?.message || response.statusText;
+      console.error("OpenAI API error response:", {
+        status: response.status,
+        statusText: response.statusText,
+        error: errorData,
+      });
+      throw new Error(errorMessage || `OpenAI API error: ${response.statusText}`);
     }
 
     const data = await response.json();
-    return data.choices[0]?.message?.content || "";
+    const content = data.choices[0]?.message?.content || "";
+    
+    if (!content) {
+      console.error("OpenAI API returned empty content:", data);
+      throw new Error("OpenAI API boş yanıt döndü");
+    }
+    
+    return content;
   } catch (error: any) {
-    console.error("OpenAI API error:", error);
-    throw new Error(error.message || "OpenAI API istek hatası");
+    console.error("OpenAI API error:", {
+      message: error.message,
+      stack: error.stack,
+      name: error.name,
+    });
+    throw error;
   }
 }
 
