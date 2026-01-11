@@ -38,28 +38,33 @@ const THINKING_STEPS = [
 function ThinkingStepsAnimation() {
   const [currentStep, setCurrentStep] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const stepRef = useRef(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Fade out
+      // Fade out (siliniyor gibi)
       setIsVisible(false);
       
       setTimeout(() => {
         // Change step
-        setCurrentStep((prev) => (prev + 1) % THINKING_STEPS.length);
-        // Fade in
+        stepRef.current = (stepRef.current + 1) % THINKING_STEPS.length;
+        setCurrentStep(stepRef.current);
+        // Fade in (yazılıyor gibi)
         setIsVisible(true);
-      }, 300); // Wait for fade out animation
-    }, 2500); // Change step every 2.5 seconds (2s visible + 0.5s transition)
+      }, 400); // Wait for fade out animation to complete
+    }, 2500); // Change step every 2.5 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div 
-      className={`text-sm text-white font-medium transition-opacity duration-300 ${
-        isVisible ? "opacity-100" : "opacity-0"
+      className={`text-sm text-white font-medium transition-all ease-in-out ${
+        isVisible 
+          ? "opacity-100 translate-y-0" 
+          : "opacity-0 -translate-y-1"
       }`}
+      style={{ transitionDuration: '400ms' }}
     >
       {THINKING_STEPS[currentStep]}
     </div>
