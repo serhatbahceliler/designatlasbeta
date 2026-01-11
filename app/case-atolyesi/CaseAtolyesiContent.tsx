@@ -26,6 +26,8 @@ const QUICK_PROMPTS = [
   "Mobil health app için problem bulalım",
 ];
 
+const SIDEBAR_WIDTH = 256; // w-64 = 16rem = 256px
+
 export default function CaseAtolyesiContent() {
   const { user, profile } = useAuth();
   const [threads, setThreads] = useState<CaseThread[]>([]);
@@ -35,9 +37,12 @@ export default function CaseAtolyesiContent() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [isLoadingThreads, setIsLoadingThreads] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(true); // Default open when threads exist
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const firstName = profile?.first_name || "Serhat";
+  const hasThreads = threads.length > 0;
+  const showSidebar = hasThreads && sidebarOpen;
 
   // Load threads on mount
   useEffect(() => {
@@ -57,6 +62,13 @@ export default function CaseAtolyesiContent() {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  // Auto-open sidebar when first thread is created
+  useEffect(() => {
+    if (hasThreads && !sidebarOpen) {
+      setSidebarOpen(true);
+    }
+  }, [hasThreads, sidebarOpen]);
 
   const loadThreads = async () => {
     try {
@@ -124,6 +136,7 @@ export default function CaseAtolyesiContent() {
       await loadThreads();
       setSelectedThreadId(data.thread.id);
       setMessages([]);
+      setSidebarOpen(true);
     } catch (err: any) {
       console.error("Error creating thread:", err);
       setError(err.message || "Yeni case oluşturulamadı");
@@ -132,32 +145,90 @@ export default function CaseAtolyesiContent() {
   };
 
   const handleQuickPrompt = async (prompt: string) => {
-    // Create new thread if none selected
-    if (!selectedThreadId) {
-      try {
-        setIsLoading(true);
-        const headers = await getAuthHeaders();
-        
-        const response = await fetch("/api/cases", {
-          method: "POST",
-          headers,
-          body: JSON.stringify({ title: "Yeni Case" }),
-        });
-
-        if (!response.ok) {
-          throw new Error("Yeni case oluşturulamadı");
-        }
-
-        const data = await response.json();
-        setSelectedThreadId(data.thread.id);
-        await sendMessage(prompt, data.thread.id, true);
-      } catch (err: any) {
-        console.error("Error creating thread:", err);
-        setError(err.message || "Yeni case oluşturulamadı");
-        setIsLoading(false);
-      }
-    } else {
+    if (!hasThreads) {
+      // No threads exist, create new thread and send message
+      await sendFirstMessage(prompt);
+    } else if (selectedThreadId) {
       await sendMessage(prompt, selectedThreadId, false);
+    } else {
+      // Threads exist but none selected, select first and send
+      if (threads.length > 0) {
+        setSelectedThreadId(threads[0].id);
+        await sendMessage(prompt, threads[0].id, false);
+      }
+    }
+  };
+
+  const sendFirstMessage = async (messageText: string) => {
+    try {
+      setIsLoading(true);
+      setError("");
+
+      // Create new thread first
+      const headers = await getAuthHeaders();
+      const createResponse = await fetch("/api/cases", {
+        method: "POST",
+        headers,
+        body: JSON.stringify({ title: "Yeni Case" }),
+      });
+
+      if (!createResponse.ok) {
+        throw new Error("Case oluşturulamadı");
+      }
+
+      const { thread } = await createResponse.json();
+      
+      // Set selected thread and reload threads to show sidebar
+      setSelectedThreadId(thread.id);
+      await loadThreads();
+      setSidebarOpen(true);
+
+      // Add user message to UI immediately
+      const userMessage: Message = {
+        id: `temp-${Date.now()}`,
+        role: "user",
+        content: messageText,
+        created_at: new Date().toISOString(),
+      };
+      setMessages([userMessage]);
+      setInput("");
+
+      // Send message to API
+      const chatResponse = await fetch("/api/chat", {
+        method: "POST",
+        headers,
+        body: JSON.stringify({
+          threadId: thread.id,
+          message: messageText,
+          isFirstMessage: true,
+        }),
+      });
+
+      if (!chatResponse.ok) {
+        const errorData = await chatResponse.json().catch(() => ({}));
+        throw new Error(errorData.error || "Mesaj gönderilemedi");
+      }
+
+      const chatData = await chatResponse.json();
+      
+      // Add assistant message to UI
+      const assistantMessage: Message = {
+        id: chatData.message.id || `assistant-${Date.now()}`,
+        role: "assistant",
+        content: chatData.message.content,
+        created_at: chatData.message.created_at || new Date().toISOString(),
+      };
+      
+      setMessages([userMessage, assistantMessage]);
+
+      // Reload threads to update title
+      await loadThreads();
+    } catch (err: any) {
+      console.error("Error sending first message:", err);
+      setError(err.message || "Mesaj gönderilemedi");
+      setMessages([]);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -222,68 +293,108 @@ export default function CaseAtolyesiContent() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim() || isLoading || !selectedThreadId) return;
+    if (!input.trim() || isLoading) return;
 
-    await sendMessage(input.trim(), selectedThreadId, false);
+    const messageText = input.trim();
+
+    if (!hasThreads) {
+      // No threads, create new and send first message
+      await sendFirstMessage(messageText);
+    } else if (selectedThreadId) {
+      await sendMessage(messageText, selectedThreadId, false);
+    } else {
+      // Threads exist but none selected, select first and send
+      if (threads.length > 0) {
+        setSelectedThreadId(threads[0].id);
+        await sendMessage(messageText, threads[0].id, false);
+      }
+    }
   };
 
   const selectedThread = threads.find((t) => t.id === selectedThreadId);
 
   return (
     <div className="min-h-screen bg-black flex flex-col">
-      <div className="flex-1 flex overflow-hidden">
+      <div className="flex-1 flex overflow-hidden relative">
         {/* Sidebar - Case List */}
-        <aside className="w-64 bg-zinc-900 border-r border-zinc-800 flex flex-col">
-          {/* Header */}
-          <div className="p-4 border-b border-zinc-800">
-            <button
-              onClick={createNewThread}
-              disabled={isLoading}
-              className="w-full px-4 py-2.5 bg-[#DEFF37] text-black font-semibold rounded-lg hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              + Yeni Case
-            </button>
-          </div>
+        {hasThreads && (
+          <aside
+            className={`bg-zinc-900 border-r border-zinc-800 flex flex-col transition-all duration-300 ease-in-out ${
+              showSidebar ? "w-64" : "w-0"
+            } overflow-hidden`}
+          >
+            {/* Header */}
+            <div className={`p-4 border-b border-zinc-800 ${showSidebar ? "opacity-100" : "opacity-0"} transition-opacity`}>
+              <div className="flex items-center justify-between mb-3">
+                <h2 className="text-sm font-semibold text-white">Case'lerim</h2>
+                <button
+                  onClick={() => setSidebarOpen(false)}
+                  className="p-1.5 hover:bg-zinc-800 rounded-lg transition-colors"
+                  title="Sidebar'ı Kapat"
+                >
+                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <button
+                onClick={createNewThread}
+                disabled={isLoading}
+                className="w-full px-4 py-2.5 bg-[#DEFF37] text-black font-semibold rounded-lg hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                + Yeni Case
+              </button>
+            </div>
 
-          {/* Thread List */}
-          <div className="flex-1 overflow-y-auto">
-            {isLoadingThreads ? (
-              <div className="p-4 text-center">
-                <div className="w-6 h-6 border-2 border-[#DEFF37] border-t-transparent rounded-full animate-spin mx-auto"></div>
-              </div>
-            ) : threads.length === 0 ? (
-              <div className="p-4 text-center text-gray-400 text-sm">
-                Henüz case yok
-              </div>
-            ) : (
-              <div className="p-2 space-y-1">
-                {threads.map((thread) => (
-                  <button
-                    key={thread.id}
-                    onClick={() => setSelectedThreadId(thread.id)}
-                    className={`w-full text-left p-3 rounded-lg transition-colors ${
-                      selectedThreadId === thread.id
-                        ? "bg-[#DEFF37]/20 border border-[#DEFF37]/30"
-                        : "bg-zinc-800/50 hover:bg-zinc-800"
-                    }`}
-                  >
-                    <div className="font-medium text-white text-sm mb-1 truncate">
-                      {thread.title}
-                    </div>
-                    <div className="text-xs text-gray-400">
-                      {new Date(thread.updated_at).toLocaleDateString("tr-TR")}
-                    </div>
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-        </aside>
+            {/* Thread List */}
+            <div className={`flex-1 overflow-y-auto ${showSidebar ? "opacity-100" : "opacity-0"} transition-opacity`}>
+              {isLoadingThreads ? (
+                <div className="p-4 text-center">
+                  <div className="w-6 h-6 border-2 border-[#DEFF37] border-t-transparent rounded-full animate-spin mx-auto"></div>
+                </div>
+              ) : (
+                <div className="p-2 space-y-1">
+                  {threads.map((thread) => (
+                    <button
+                      key={thread.id}
+                      onClick={() => setSelectedThreadId(thread.id)}
+                      className={`w-full text-left p-3 rounded-lg transition-colors ${
+                        selectedThreadId === thread.id
+                          ? "bg-[#DEFF37]/20 border border-[#DEFF37]/30"
+                          : "bg-zinc-800/50 hover:bg-zinc-800"
+                      }`}
+                    >
+                      <div className="font-medium text-white text-sm mb-1 truncate">
+                        {thread.title}
+                      </div>
+                      <div className="text-xs text-gray-400">
+                        {new Date(thread.updated_at).toLocaleDateString("tr-TR")}
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </aside>
+        )}
+
+        {/* Sidebar Toggle Button - Only show when threads exist but sidebar is closed */}
+        {hasThreads && !sidebarOpen && (
+          <button
+            onClick={() => setSidebarOpen(true)}
+            className="absolute left-0 top-4 z-10 p-2 bg-zinc-900 border border-zinc-800 rounded-r-lg hover:bg-zinc-800 transition-colors"
+            title="Case'leri Göster"
+          >
+            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        )}
 
         {/* Main Content - Chat */}
         <main className="flex-1 flex flex-col overflow-hidden">
-          {!selectedThread ? (
-            /* Empty State */
+          {!hasThreads ? (
+            /* Empty State - No threads */
             <div className="flex-1 flex items-center justify-center p-8">
               <div className="max-w-2xl w-full text-center">
                 <h1 className="text-4xl font-bold text-white mb-4">
@@ -306,6 +417,14 @@ export default function CaseAtolyesiContent() {
                     </button>
                   ))}
                 </div>
+              </div>
+            </div>
+          ) : !selectedThread ? (
+            /* Empty State - Threads exist but none selected */
+            <div className="flex-1 flex items-center justify-center p-8">
+              <div className="max-w-2xl w-full text-center">
+                <h2 className="text-2xl font-bold text-white mb-4">Bir case seçin</h2>
+                <p className="text-gray-400 mb-8">Devam etmek için bir case seçin veya yeni bir case oluşturun.</p>
               </div>
             </div>
           ) : (
