@@ -47,19 +47,8 @@ function ThinkingStepsAnimation() {
   }, []);
 
   return (
-    <div className="space-y-1">
-      {THINKING_STEPS.map((step, index) => (
-        <div
-          key={index}
-          className={`text-sm transition-all duration-500 ${
-            index === currentStep
-              ? "text-white font-medium opacity-100"
-              : "text-gray-400 opacity-50"
-          }`}
-        >
-          {index + 1}. {step}
-        </div>
-      ))}
+    <div className="text-sm text-white font-medium">
+      {THINKING_STEPS[currentStep]}
     </div>
   );
 }
