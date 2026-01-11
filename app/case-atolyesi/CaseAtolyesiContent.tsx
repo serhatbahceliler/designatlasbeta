@@ -447,29 +447,31 @@ export default function CaseAtolyesiContent() {
 
   return (
     <>
-      {/* Animated Background Elements - Same as homepage */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#DEFF37]/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#DEFF37]/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        </div>
+      {/* Background - Only show animated background when no threads (empty state), otherwise normal black */}
+      {!hasThreads && (
+        <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#DEFF37]/10 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#DEFF37]/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+          </div>
 
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(#DEFF37 1px, transparent 1px), linear-gradient(90deg, #DEFF37 1px, transparent 1px)',
-            backgroundSize: '50px 50px',
-          }}></div>
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0" style={{
+              backgroundImage: 'linear-gradient(#DEFF37 1px, transparent 1px), linear-gradient(90deg, #DEFF37 1px, transparent 1px)',
+              backgroundSize: '50px 50px',
+            }}></div>
+          </div>
         </div>
-      </div>
+      )}
 
-      <div className="flex-1 flex overflow-hidden relative h-[calc(100vh-60px)]">
+      <div className="flex-1 flex overflow-hidden relative">
         {/* Sidebar - Only render when threads exist */}
       {hasThreads && (
         <aside
           className={`bg-zinc-900 border-r border-zinc-800 flex flex-col transition-all duration-300 ease-in-out ${
             showSidebar ? "w-64" : "w-0"
-          } overflow-hidden sticky top-0 self-start h-full`}
+          } overflow-hidden`}
         >
           {/* Header */}
           <div className={`p-4 border-b border-zinc-800 ${showSidebar ? "opacity-100" : "opacity-0"} transition-opacity whitespace-nowrap`}>
