@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useAuth } from "@/lib/auth-context";
-import { apiRequest, getAuthHeaders } from "@/lib/api-client";
+import { getAuthHeaders } from "@/lib/api-client";
 import ReactMarkdown from "react-markdown";
 
 interface CaseThread {
@@ -26,8 +26,6 @@ const QUICK_PROMPTS = [
   "Mobil health app için problem bulalım",
 ];
 
-const SIDEBAR_WIDTH = 256; // w-64 = 16rem = 256px
-
 export default function CaseAtolyesiContent() {
   const { user, profile } = useAuth();
   const [threads, setThreads] = useState<CaseThread[]>([]);
@@ -37,7 +35,7 @@ export default function CaseAtolyesiContent() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [isLoadingThreads, setIsLoadingThreads] = useState(true);
-  const [sidebarOpen, setSidebarOpen] = useState(true); // Default open when threads exist
+  const [sidebarOpen, setSidebarOpen] = useState(false); // Start closed, will open when threads exist
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const firstName = profile?.first_name || "Serhat";
@@ -46,8 +44,10 @@ export default function CaseAtolyesiContent() {
 
   // Load threads on mount
   useEffect(() => {
-    loadThreads();
-  }, []);
+    if (user) {
+      loadThreads();
+    }
+  }, [user]);
 
   // Load messages when thread is selected
   useEffect(() => {
@@ -68,7 +68,7 @@ export default function CaseAtolyesiContent() {
     if (hasThreads && !sidebarOpen) {
       setSidebarOpen(true);
     }
-  }, [hasThreads, sidebarOpen]);
+  }, [hasThreads]);
 
   const loadThreads = async () => {
     try {
@@ -83,11 +83,12 @@ export default function CaseAtolyesiContent() {
       }
 
       const data = await response.json();
-      setThreads(data.threads || []);
+      const loadedThreads = data.threads || [];
+      setThreads(loadedThreads);
 
-      // Auto-select first thread if exists
-      if (data.threads && data.threads.length > 0 && !selectedThreadId) {
-        setSelectedThreadId(data.threads[0].id);
+      // Auto-select first thread if exists and none selected
+      if (loadedThreads.length > 0 && !selectedThreadId) {
+        setSelectedThreadId(loadedThreads[0].id);
       }
     } catch (err: any) {
       console.error("Error loading threads:", err);
@@ -140,22 +141,16 @@ export default function CaseAtolyesiContent() {
     } catch (err: any) {
       console.error("Error creating thread:", err);
       setError(err.message || "Yeni case oluşturulamadı");
+    } finally {
       setIsLoading(false);
     }
   };
 
   const handleQuickPrompt = async (prompt: string) => {
     if (!hasThreads) {
-      // No threads exist, create new thread and send message
       await sendFirstMessage(prompt);
     } else if (selectedThreadId) {
       await sendMessage(prompt, selectedThreadId, false);
-    } else {
-      // Threads exist but none selected, select first and send
-      if (threads.length > 0) {
-        setSelectedThreadId(threads[0].id);
-        await sendMessage(prompt, threads[0].id, false);
-      }
     }
   };
 
@@ -180,8 +175,10 @@ export default function CaseAtolyesiContent() {
       
       // Set selected thread and reload threads to show sidebar
       setSelectedThreadId(thread.id);
-      await loadThreads();
       setSidebarOpen(true);
+      
+      // Reload threads to update UI
+      await loadThreads();
 
       // Add user message to UI immediately
       const userMessage: Message = {
@@ -298,104 +295,97 @@ export default function CaseAtolyesiContent() {
     const messageText = input.trim();
 
     if (!hasThreads) {
-      // No threads, create new and send first message
       await sendFirstMessage(messageText);
     } else if (selectedThreadId) {
       await sendMessage(messageText, selectedThreadId, false);
-    } else {
-      // Threads exist but none selected, select first and send
-      if (threads.length > 0) {
-        setSelectedThreadId(threads[0].id);
-        await sendMessage(messageText, threads[0].id, false);
-      }
     }
   };
 
   const selectedThread = threads.find((t) => t.id === selectedThreadId);
 
   return (
-    <div className="min-h-screen bg-black flex flex-col">
-      <div className="flex-1 flex overflow-hidden relative">
-        {/* Sidebar - Case List */}
-        {hasThreads && (
-          <aside
-            className={`bg-zinc-900 border-r border-zinc-800 flex flex-col transition-all duration-300 ease-in-out ${
-              showSidebar ? "w-64" : "w-0"
-            } overflow-hidden`}
-          >
-            {/* Header */}
-            <div className={`p-4 border-b border-zinc-800 ${showSidebar ? "opacity-100" : "opacity-0"} transition-opacity`}>
-              <div className="flex items-center justify-between mb-3">
-                <h2 className="text-sm font-semibold text-white">Case'lerim</h2>
-                <button
-                  onClick={() => setSidebarOpen(false)}
-                  className="p-1.5 hover:bg-zinc-800 rounded-lg transition-colors"
-                  title="Sidebar'ı Kapat"
-                >
-                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
+    <div className="flex-1 flex overflow-hidden relative">
+      {/* Sidebar - Only render when threads exist */}
+      {hasThreads && (
+        <aside
+          className={`bg-zinc-900 border-r border-zinc-800 flex flex-col transition-all duration-300 ease-in-out ${
+            showSidebar ? "w-64" : "w-0"
+          } overflow-hidden`}
+        >
+          {/* Header */}
+          <div className={`p-4 border-b border-zinc-800 ${showSidebar ? "opacity-100" : "opacity-0"} transition-opacity whitespace-nowrap`}>
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-sm font-semibold text-white">Case'lerim</h2>
               <button
-                onClick={createNewThread}
-                disabled={isLoading}
-                className="w-full px-4 py-2.5 bg-[#DEFF37] text-black font-semibold rounded-lg hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                onClick={() => setSidebarOpen(false)}
+                className="p-1.5 hover:bg-zinc-800 rounded-lg transition-colors"
+                title="Sidebar'ı Kapat"
               >
-                + Yeni Case
+                <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
             </div>
+            <button
+              onClick={createNewThread}
+              disabled={isLoading}
+              className="w-full px-4 py-2.5 bg-[#DEFF37] text-black font-semibold rounded-lg hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              + Yeni Case
+            </button>
+          </div>
 
-            {/* Thread List */}
-            <div className={`flex-1 overflow-y-auto ${showSidebar ? "opacity-100" : "opacity-0"} transition-opacity`}>
-              {isLoadingThreads ? (
-                <div className="p-4 text-center">
-                  <div className="w-6 h-6 border-2 border-[#DEFF37] border-t-transparent rounded-full animate-spin mx-auto"></div>
-                </div>
-              ) : (
-                <div className="p-2 space-y-1">
-                  {threads.map((thread) => (
-                    <button
-                      key={thread.id}
-                      onClick={() => setSelectedThreadId(thread.id)}
-                      className={`w-full text-left p-3 rounded-lg transition-colors ${
-                        selectedThreadId === thread.id
-                          ? "bg-[#DEFF37]/20 border border-[#DEFF37]/30"
-                          : "bg-zinc-800/50 hover:bg-zinc-800"
-                      }`}
-                    >
-                      <div className="font-medium text-white text-sm mb-1 truncate">
-                        {thread.title}
-                      </div>
-                      <div className="text-xs text-gray-400">
-                        {new Date(thread.updated_at).toLocaleDateString("tr-TR")}
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-          </aside>
-        )}
+          {/* Thread List */}
+          <div className={`flex-1 overflow-y-auto ${showSidebar ? "opacity-100" : "opacity-0"} transition-opacity`}>
+            {isLoadingThreads ? (
+              <div className="p-4 text-center">
+                <div className="w-6 h-6 border-2 border-[#DEFF37] border-t-transparent rounded-full animate-spin mx-auto"></div>
+              </div>
+            ) : (
+              <div className="p-2 space-y-1">
+                {threads.map((thread) => (
+                  <button
+                    key={thread.id}
+                    onClick={() => setSelectedThreadId(thread.id)}
+                    className={`w-full text-left p-3 rounded-lg transition-colors ${
+                      selectedThreadId === thread.id
+                        ? "bg-[#DEFF37]/20 border border-[#DEFF37]/30"
+                        : "bg-zinc-800/50 hover:bg-zinc-800"
+                    }`}
+                  >
+                    <div className="font-medium text-white text-sm mb-1 truncate">
+                      {thread.title}
+                    </div>
+                    <div className="text-xs text-gray-400">
+                      {new Date(thread.updated_at).toLocaleDateString("tr-TR")}
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        </aside>
+      )}
 
-        {/* Sidebar Toggle Button - Only show when threads exist but sidebar is closed */}
-        {hasThreads && !sidebarOpen && (
-          <button
-            onClick={() => setSidebarOpen(true)}
-            className="absolute left-0 top-4 z-10 p-2 bg-zinc-900 border border-zinc-800 rounded-r-lg hover:bg-zinc-800 transition-colors"
-            title="Case'leri Göster"
-          >
-            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        )}
+      {/* Sidebar Toggle Button - Only show when threads exist but sidebar is closed */}
+      {hasThreads && !sidebarOpen && (
+        <button
+          onClick={() => setSidebarOpen(true)}
+          className="absolute left-0 top-4 z-10 p-2 bg-zinc-900 border border-zinc-800 rounded-r-lg hover:bg-zinc-800 transition-colors"
+          title="Case'leri Göster"
+        >
+          <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      )}
 
-        {/* Main Content - Chat */}
-        <main className="flex-1 flex flex-col overflow-hidden">
-          {!hasThreads ? (
-            /* Empty State - No threads */
-            <div className="flex-1 flex items-center justify-center p-8">
+      {/* Main Content - Chat */}
+      <main className="flex-1 flex flex-col overflow-hidden">
+        {!hasThreads ? (
+          /* Empty State - No threads, sidebar hidden, full width */
+          <>
+            <div className="flex-1 flex items-center justify-center p-8 overflow-y-auto">
               <div className="max-w-2xl w-full text-center">
                 <h1 className="text-4xl font-bold text-white mb-4">
                   Bugün ne tasarlıyoruz {firstName}?
@@ -405,7 +395,7 @@ export default function CaseAtolyesiContent() {
                 </p>
 
                 {/* Quick Prompts */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                   {QUICK_PROMPTS.map((prompt, index) => (
                     <button
                       key={index}
@@ -419,114 +409,141 @@ export default function CaseAtolyesiContent() {
                 </div>
               </div>
             </div>
-          ) : !selectedThread ? (
-            /* Empty State - Threads exist but none selected */
-            <div className="flex-1 flex items-center justify-center p-8">
-              <div className="max-w-2xl w-full text-center">
-                <h2 className="text-2xl font-bold text-white mb-4">Bir case seçin</h2>
-                <p className="text-gray-400 mb-8">Devam etmek için bir case seçin veya yeni bir case oluşturun.</p>
-              </div>
-            </div>
-          ) : (
-            /* Chat Interface */
-            <>
-              {/* Chat Header */}
-              <div className="p-4 border-b border-zinc-800 bg-zinc-900/50">
-                <h2 className="text-xl font-bold text-white">{selectedThread.title}</h2>
-              </div>
 
-              {/* Messages */}
-              <div className="flex-1 overflow-y-auto p-6 space-y-6">
-                {messages.length === 0 ? (
-                  <div className="flex items-center justify-center h-full">
-                    <div className="text-center">
-                      <p className="text-gray-400 mb-4">Henüz mesaj yok</p>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl">
-                        {QUICK_PROMPTS.map((prompt, index) => (
-                          <button
-                            key={index}
-                            onClick={() => handleQuickPrompt(prompt)}
-                            disabled={isLoading}
-                            className="p-3 bg-zinc-900/50 border border-zinc-800 rounded-lg text-left hover:border-[#DEFF37]/50 hover:bg-zinc-900 transition-all text-sm text-white disabled:opacity-50"
-                          >
-                            {prompt}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <>
-                    {messages.map((message) => (
-                      <div
-                        key={message.id}
-                        className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
-                      >
-                        <div
-                          className={`max-w-3xl ${
-                            message.role === "user"
-                              ? "bg-[#DEFF37] text-black"
-                              : "bg-zinc-800 text-white"
-                          } rounded-2xl px-4 py-3`}
-                        >
-                          {message.role === "assistant" ? (
-                            <ReactMarkdown className="prose prose-invert prose-sm max-w-none prose-headings:text-white prose-p:text-gray-300 prose-strong:text-white prose-ul:text-gray-300 prose-ol:text-gray-300 prose-li:text-gray-300 prose-code:text-[#DEFF37] prose-pre:bg-zinc-900 prose-pre:text-gray-300">
-                              {message.content}
-                            </ReactMarkdown>
-                          ) : (
-                            <p className="whitespace-pre-wrap">{message.content}</p>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                    {isLoading && (
-                      <div className="flex justify-start">
-                        <div className="bg-zinc-800 text-white rounded-2xl px-4 py-3">
-                          <div className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "0.4s" }}></div>
-                            <span className="text-gray-400 text-sm ml-2">Yazıyor...</span>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                    <div ref={messagesEndRef} />
-                  </>
-                )}
-              </div>
-
-              {/* Error Message */}
+            {/* Input Area for Empty State */}
+            <div className="p-4 border-t border-zinc-800 bg-zinc-900/50">
               {error && (
-                <div className="mx-6 mb-4 p-3 bg-red-500/10 border border-red-500/30 rounded-lg">
+                <div className="mb-4 p-3 bg-red-500/10 border border-red-500/30 rounded-lg">
                   <p className="text-red-400 text-sm">{error}</p>
                 </div>
               )}
+              <form onSubmit={handleSubmit} className="flex gap-3 max-w-3xl mx-auto">
+                <input
+                  type="text"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  placeholder="Mesajınızı yazın..."
+                  disabled={isLoading}
+                  className="flex-1 px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors disabled:opacity-50"
+                  autoFocus
+                />
+                <button
+                  type="submit"
+                  disabled={!input.trim() || isLoading}
+                  className="px-6 py-3 bg-[#DEFF37] text-black font-semibold rounded-lg hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Gönder
+                </button>
+              </form>
+            </div>
+          </>
+        ) : !selectedThread ? (
+          /* Empty State - Threads exist but none selected */
+          <div className="flex-1 flex items-center justify-center p-8">
+            <div className="max-w-2xl w-full text-center">
+              <h2 className="text-2xl font-bold text-white mb-4">Bir case seçin</h2>
+              <p className="text-gray-400 mb-8">Devam etmek için bir case seçin veya yeni bir case oluşturun.</p>
+            </div>
+          </div>
+        ) : (
+          /* Chat Interface */
+          <>
+            {/* Chat Header */}
+            <div className="p-4 border-b border-zinc-800 bg-zinc-900/50">
+              <h2 className="text-xl font-bold text-white">{selectedThread.title}</h2>
+            </div>
 
-              {/* Input Area */}
-              <div className="p-4 border-t border-zinc-800 bg-zinc-900/50">
-                <form onSubmit={handleSubmit} className="flex gap-3">
-                  <input
-                    type="text"
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    placeholder="Mesajınızı yazın..."
-                    disabled={isLoading}
-                    className="flex-1 px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors disabled:opacity-50"
-                  />
-                  <button
-                    type="submit"
-                    disabled={!input.trim() || isLoading}
-                    className="px-6 py-3 bg-[#DEFF37] text-black font-semibold rounded-lg hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    Gönder
-                  </button>
-                </form>
+            {/* Messages */}
+            <div className="flex-1 overflow-y-auto p-6 space-y-6">
+              {messages.length === 0 ? (
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-center">
+                    <p className="text-gray-400 mb-4">Henüz mesaj yok</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl">
+                      {QUICK_PROMPTS.map((prompt, index) => (
+                        <button
+                          key={index}
+                          onClick={() => handleQuickPrompt(prompt)}
+                          disabled={isLoading}
+                          className="p-3 bg-zinc-900/50 border border-zinc-800 rounded-lg text-left hover:border-[#DEFF37]/50 hover:bg-zinc-900 transition-all text-sm text-white disabled:opacity-50"
+                        >
+                          {prompt}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  {messages.map((message) => (
+                    <div
+                      key={message.id}
+                      className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
+                    >
+                      <div
+                        className={`max-w-3xl ${
+                          message.role === "user"
+                            ? "bg-[#DEFF37] text-black"
+                            : "bg-zinc-800 text-white"
+                        } rounded-2xl px-4 py-3`}
+                      >
+                        {message.role === "assistant" ? (
+                          <ReactMarkdown className="prose prose-invert prose-sm max-w-none prose-headings:text-white prose-p:text-gray-300 prose-strong:text-white prose-ul:text-gray-300 prose-ol:text-gray-300 prose-li:text-gray-300 prose-code:text-[#DEFF37] prose-pre:bg-zinc-900 prose-pre:text-gray-300">
+                            {message.content}
+                          </ReactMarkdown>
+                        ) : (
+                          <p className="whitespace-pre-wrap">{message.content}</p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                  {isLoading && (
+                    <div className="flex justify-start">
+                      <div className="bg-zinc-800 text-white rounded-2xl px-4 py-3">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "0.4s" }}></div>
+                          <span className="text-gray-400 text-sm ml-2">Yazıyor...</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  <div ref={messagesEndRef} />
+                </>
+              )}
+            </div>
+
+            {/* Error Message */}
+            {error && (
+              <div className="mx-6 mb-4 p-3 bg-red-500/10 border border-red-500/30 rounded-lg">
+                <p className="text-red-400 text-sm">{error}</p>
               </div>
-            </>
-          )}
-        </main>
-      </div>
+            )}
+
+            {/* Input Area */}
+            <div className="p-4 border-t border-zinc-800 bg-zinc-900/50">
+              <form onSubmit={handleSubmit} className="flex gap-3">
+                <input
+                  type="text"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  placeholder="Mesajınızı yazın..."
+                  disabled={isLoading}
+                  className="flex-1 px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37] transition-colors disabled:opacity-50"
+                />
+                <button
+                  type="submit"
+                  disabled={!input.trim() || isLoading}
+                  className="px-6 py-3 bg-[#DEFF37] text-black font-semibold rounded-lg hover:bg-[#DEFF37]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Gönder
+                </button>
+              </form>
+            </div>
+          </>
+        )}
+      </main>
     </div>
   );
 }
