@@ -699,8 +699,8 @@ export default function CaseAtolyesiContent() {
               </div>
             )}
 
-            {/* Input Area */}
-            <div className="p-4 border-t border-white/10 bg-black/20 backdrop-blur-md">
+            {/* Input Area - Sticky */}
+            <div className="sticky bottom-0 p-4 border-t border-white/10 bg-black/95 backdrop-blur-md z-10">
               <form onSubmit={handleSubmit} className="flex gap-3">
                 <input
                   type="text"
