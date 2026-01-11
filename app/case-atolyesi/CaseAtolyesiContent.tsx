@@ -259,7 +259,12 @@ export default function CaseAtolyesiContent() {
 
       if (!chatResponse.ok) {
         const errorData = await chatResponse.json().catch(() => ({}));
-        throw new Error(errorData.error || "Mesaj gönderilemedi");
+        console.error("Chat API error response:", {
+          status: chatResponse.status,
+          statusText: chatResponse.statusText,
+          errorData,
+        });
+        throw new Error(errorData.error || `Mesaj gönderilemedi (${chatResponse.status})`);
       }
 
       const chatData = await chatResponse.json();
@@ -313,7 +318,12 @@ export default function CaseAtolyesiContent() {
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.error || "Mesaj gönderilemedi");
+        console.error("Chat API error response:", {
+          status: response.status,
+          statusText: response.statusText,
+          errorData,
+        });
+        throw new Error(errorData.error || `Mesaj gönderilemedi (${response.status})`);
       }
 
       const data = await response.json();
