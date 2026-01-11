@@ -3876,11 +3876,15 @@ const roadmaps: Record<string, Roadmap> = {
     icon: "💡",
     sections: [
       {
-        title: "🧠 Product Thinking",
-        description: "Product Thinking, tasarımcının ekrana değil probleme odaklanmasını, çözümden önce değeri sorgulamasını, kullanıcı, iş ve teknik gerçekliği birlikte düşünmesini sağlayan düşünme biçimidir. Amaç: feature üretmek değil, anlamlı ve etkisi ölçülebilen çözümler üretmek.",
+        title: "Product Design Temelleri",
+        description: "Product Design'ın ne olduğunu, Product Designer'ın rolünü ve Product Design'ın UX, UI ile ilişkisini anlamak.",
         topics: [
           {
-            title: "Product Designer Rolü & Sorumlulukları",
+            title: "Product Design Nedir?",
+            description: "Product Design, kullanıcı deneyimi, arayüz tasarımı ve ürün stratejisini birleştirerek anlamlı ve değer yaratan ürünler oluşturma sürecidir. Sadece ekran tasarlamak değil, kullanıcı ve iş hedeflerini birlikte ele alarak problem çözmektir.",
+          },
+          {
+            title: "Product Designer'ın Rolü",
             description: "Product Designer sadece UX veya UI yapan kişi değildir, ürün kararlarının tasarım tarafındaki ortağıdır. Sorumluluk alanı: problemi doğru tanımlamak, çözüm alternatiflerini düşünmek, kullanıcıyı temsil etmek, kararların etkisini sorgulamak. Product Designer karar veren değil, kararı şekillendiren kişidir.",
             resources: [
               {
@@ -3899,21 +3903,92 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Problem Thinking vs Solution Thinking",
-            description: "En yaygın hata: problemi dinler dinlemez çözüm düşünmek. Problem thinking: neden bu sorun var? kim için sorun? gerçekten çözülmeli mi? Solution thinking: nasıl çözeriz? hangi ekran? hangi buton? Product Thinking = önce problem, sonra çözüm.",
+            title: "UX, UI ve Product Design Arasındaki Farklar",
+            description: "UX Design: Problemi anlar ve çözümün kullanıcı için çalışıp çalışmadığını test eder. UI Design: Görsel dili ve arayüzü tasarlar. Product Design: UX + UI + iş hedeflerini birlikte ele alır. Bu roller çoğu şirkette örtüşebilir, ama bakış açıları farklıdır.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 NNGroup",
                 items: [
-                  { title: "Problem vs Solution" },
+                  { title: "UX vs UI vs Product Design", url: "https://www.nngroup.com/videos/ux-vs-ui/" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "UX vs UI vs Product Design Explained – Jesse Showalter", url: "https://www.youtube.com/@jesseshowalter" },
+                  { title: "UX, UI and Product Design Differences – AJ&Smart", url: "https://www.youtube.com/@ajsmart" },
                 ],
               },
             ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "'Kullanıcı X istiyor' cümlesini şuna çevir:",
-                "'Kullanıcı aslında neyi başarmaya çalışıyor?'",
+                "Bir mobil uygulama seç",
+                "UX problemi örneği yaz",
+                "UI problemi örneği yaz",
+                "Product kararıyla ilgili bir problem yaz",
+              ],
+            },
+          },
+          {
+            title: "Product Mindset Nedir?",
+            description: "Product Mindset, tasarımcının ekrana değil probleme odaklanmasını, çözümden önce değeri sorgulamasını, kullanıcı, iş ve teknik gerçekliği birlikte düşünmesini sağlayan düşünme biçimidir. Product Sense doğru soruları sorabilme yetisidir, zamanla gelişir, deneyimle güçlenir.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Günlük kullandığın bir ürünü seç: En sevdiğin özellik neden iyi?",
+                "En sinir olduğun şey neden kötü?",
+              ],
+            },
+          },
+          {
+            title: "Kullanıcı ve İş Dengesi",
+            description: "Gerçek ürünlerde kullanıcı her istediğini alamaz, iş her istediğini yaptıramaz. Product Designer iki taraf arasında denge kurar, kör savunma yapmaz. İyi Product Thinking ortak noktayı arar.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir çatışma düşün: Kullanıcıyı mutlu eden ama iş için riskli olan ne?",
+                "Bunun orta yolu ne olabilir?",
+              ],
+            },
+          },
+        ],
+      },
+      {
+        title: "Ürün Düşüncesi & İş Perspektifi",
+        description: "Ürünün neden var olduğunu, kullanıcı ve iş problemlerini, değer önerisini ve Product Designer'ın işe etkisini anlamak.",
+        topics: [
+          {
+            title: "Ürün Neden Var?",
+            description: "Her ürün bir problemi çözmek için vardır. Ürünün var olma nedeni kullanıcının hayatını kolaylaştırmak, bir iş problemini çözmek veya yeni bir değer yaratmaktır. Product Designer ürünün amacını sorgulayarak başlar.",
+          },
+          {
+            title: "Kullanıcı Problemi vs İş Problemi",
+            description: "Kullanıcı problemi, kullanıcının yaşadığı zorluk veya ihtiyaçtır. İş problemi ise şirketin çözmeye çalıştığı iş hedefleri veya kısıtlardır. Product Designer hem kullanıcıyı hem de işi anlayarak denge kurmalıdır. İyi ürünler bu iki problemi birlikte çözer.",
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir feature düşün: Bu feature hangi kullanıcı problemini çözüyor?",
+                "Bu feature hangi iş problemini çözüyor?",
+              ],
+            },
+          },
+          {
+            title: "Değer Önerisi (Value Proposition)",
+            description: "Bir ürün kararı ancak şu üçü kesişiyorsa değerlidir: Kullanıcı için anlamlı, İş için mantıklı, Teknik olarak yapılabilir. Değer önerisi, ürünün kullanıcıya sağladığı benzersiz değeri açıklar. Bu üçlüden biri yoksa risk vardır, sürdürülebilirlik düşer.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Value Proposition in UX" },
+                ],
+              },
+            ],
+            practice: {
+              title: "🧠 Mini Pratik",
+              tasks: [
+                "Bir fikir düşün: Kullanıcı için neden değerli?",
+                "İş tarafında hangi probleme hizmet ediyor?",
               ],
             },
           },
@@ -3937,38 +4012,70 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Ürün Değeri (Value) Nedir?",
-            description: "Bir ürün kararı ancak şu üçü kesişiyorsa değerlidir: Kullanıcı için anlamlı, İş için mantıklı, Teknik olarak yapılabilir. Bu üçlüden biri yoksa risk vardır, sürdürülebilirlik düşer.",
+            title: "Product Designer'ın İşe Etkisi",
+            description: "Product Designer yaptığı işin iş hedeflerine nasıl katkı sağladığını anlayabilmelidir. Bu etki kullanıcı memnuniyeti, hız, hata oranı, benimsenme, iş metrikleri gibi sinyallerle anlatılır.",
+          },
+        ],
+      },
+      {
+        title: "Product Discovery (UX Discovery)",
+        description: "Product Discovery, doğru problemi bulmak, varsayımları test etmek ve sürekli öğrenmeyi sağlamak için yapılan araştırma ve öğrenme sürecidir.",
+        topics: [
+          {
+            title: "Product Discovery Nedir?",
+            description: "Product Discovery, doğru problemi bulmak ve doğru çözümü keşfetmek için yapılan süreçtir. Discovery aşamasında kullanıcı ihtiyaçları, iş hedefleri ve teknik kısıtlar birlikte ele alınır. Amaç: yanlış problemi çözmekten kaçınmak ve en çok değer yaratan çözümü bulmaktır.",
+          },
+          {
+            title: "Discovery vs Delivery",
+            description: "Ürün geliştirme süreci iki ana fazda ilerler: Discovery (Doğru problemi bulmak) ve Delivery (Bulduğun problemi doğru çözmek). Discovery aşamasında belirsizlik yüksektir, Delivery'de ise çözüm netleşmiştir. Product Designer'ın asıl gücü discovery aşamasında ortaya çıkar.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 NNGroup",
                 items: [
-                  { title: "Value Proposition in UX" },
+                  { title: "Upfront vs. Continuous Discovery", url: "https://www.nngroup.com/videos/upfront-vs-continuous-discovery/" },
+                  { title: "UX Activities in the Product Lifecycle", url: "https://media.nngroup.com/media/articles/attachments/ux_methods_activities_NNg_A4.pdf" },
+                ],
+              },
+              {
+                category: "🎥 YouTube",
+                items: [
+                  { title: "Discovery in Agile – NNGroup", url: "https://www.nngroup.com/videos/discovery-in-agile/" },
+                  { title: "Product Discovery – Teresa Torres", url: "https://www.producttalk.org/" },
                 ],
               },
             ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir fikir düşün: Kullanıcı için neden değerli?",
-                "İş tarafında hangi probleme hizmet ediyor?",
+                "Kullandığın bir ürün düşün",
+                "Bu ürün sence gerçek bir problemi çözüyor mu?",
+                "Bu problem discovery'de yakalanmış gibi mi duruyor?",
+                "Yoksa sonradan 'eklenmiş' mi?",
               ],
             },
           },
           {
-            title: "Kullanıcı Değeri vs İş Hedefleri",
-            description: "Gerçek ürünlerde kullanıcı her istediğini alamaz, iş her istediğini yaptıramaz. Product Designer iki taraf arasında denge kurar, kör savunma yapmaz. İyi Product Thinking ortak noktayı arar.",
+            title: "Doğru Problemi Bulmak",
+            description: "En yaygın hata: problemi dinler dinlemez çözüm düşünmek. Doğru problemi bulmak için: neden bu sorun var? kim için sorun? gerçekten çözülmeli mi? Product Thinking = önce problem, sonra çözüm.",
+            resources: [
+              {
+                category: "📘 Nielsen Norman Group",
+                items: [
+                  { title: "Problem vs Solution" },
+                ],
+              },
+            ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir çatışma düşün: Kullanıcıyı mutlu eden ama iş için riskli olan ne?",
-                "Bunun orta yolu ne olabilir?",
+                "'Kullanıcı X istiyor' cümlesini şuna çevir:",
+                "'Kullanıcı aslında neyi başarmaya çalışıyor?'",
               ],
             },
           },
           {
-            title: "Varsayım (Assumption) ile Düşünmek",
-            description: "Birçok ürün kararı veri değil varsayım içerir. Örnek varsayımlar: 'Kullanıcı bunu anlar', 'Bu daha hızlıdır', 'Bu daha kolaydır'. Product Thinking varsayımı fark eder, test edilebilir hale getirir.",
+            title: "Varsayımlar & Hipotezler",
+            description: "Birçok ürün kararı veri değil varsayım içerir. Örnek varsayımlar: 'Kullanıcı bunu anlar', 'Bu daha hızlıdır', 'Bu daha kolaydır'. Product Thinking varsayımı fark eder, test edilebilir hale getirir. Varsayım haritalama varsayımları görünür yapar, hangilerinin riskli olduğunu gösterir.",
             resources: [
               {
                 category: "📘 Nielsen Norman Group",
@@ -3986,54 +4093,21 @@ const roadmaps: Record<string, Roadmap> = {
             },
           },
           {
-            title: "Önceliklendirme Mantığı",
-            description: "Her şey önemliyse, hiçbir şey önemli değildir. Product Thinking etki (impact), çaba (effort), risk üzerinden öncelik düşünür.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Üç iş yaz: En çok etki hangisinde?",
-                "En az çaba hangisinde?",
-              ],
-            },
-          },
-          {
-            title: "Trade-off'ları Kabul Etmek",
-            description: "Her ürün kararı bir şeyden vazgeçmektir. Hız vs kalite, esneklik vs sadelik, kısa vade vs uzun vade. Product Designer 'en iyisi'ni değil, şartlara göre en mantıklıyı savunur.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Bir karar düşün: Bunun bedeli ne?",
-                "Neyi feda ediyorsun?",
-              ],
-            },
-          },
-          {
-            title: "MVP & Iteratif Düşünce",
-            description: "MVP en küçük çözüm değil, en çok öğrenme sağlayan çözümdür. Amaç kusursuzluk değil, öğrenme hızıdır.",
+            title: "Discovery Sürekliliği",
+            description: "Discovery bir faz değil, sürekli bir düşünme biçimidir. Upfront discovery başlangıçta yapılır, continuous discovery ise sürekli devam eder. Product Designer discovery'i sadece başta değil, her aşamada yapmalıdır. Araştırma belirsizlik varsa yapılır.",
             resources: [
               {
-                category: "📘 Nielsen Norman Group",
+                category: "📘 NNGroup",
                 items: [
-                  { title: "Minimum Viable Product" },
+                  { title: "Upfront vs. Continuous Discovery", url: "https://www.nngroup.com/videos/upfront-vs-continuous-discovery/" },
                 ],
               },
             ],
             practice: {
               title: "🧠 Mini Pratik",
               tasks: [
-                "Bir fikir için sor: En küçük ama anlamlı hali ne?",
-                "Ne öğrenmek istiyoruz?",
-              ],
-            },
-          },
-          {
-            title: "Product Sense Geliştirme",
-            description: "Product Sense doğru soruları sorabilme yetisidir, zamanla gelişir, deneyimle güçlenir. Geliştirmek için: iyi ürünleri incele, kötü deneyimleri sorgula, 'neden böyle?' demekten vazgeçme.",
-            practice: {
-              title: "🧠 Mini Pratik",
-              tasks: [
-                "Günlük kullandığın bir ürünü seç: En sevdiğin özellik neden iyi?",
-                "En sinir olduğun şey neden kötü?",
+                "Son sprinti düşün: Hangi noktada 'emin değiliz' dediniz?",
+                "Orada araştırma yapılsa ne öğrenilirdi?",
               ],
             },
           },

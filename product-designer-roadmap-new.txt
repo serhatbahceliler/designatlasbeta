@@ -1,0 +1,106 @@
+Yeni Product Designer Roadmap Yapısı - 15 Section
+
+1. Product Design Temelleri
+   - Product Design Nedir?
+   - Product Designer'ın Rolü
+   - UX, UI ve Product Design Arasındaki Farklar
+   - Product Mindset Nedir?
+   - Kullanıcı ve İş Dengesi
+
+2. Ürün Düşüncesi & İş Perspektifi
+   - Ürün Neden Var?
+   - Kullanıcı Problemi vs İş Problemi
+   - Değer Önerisi (Value Proposition)
+   - Outcome Odaklı Düşünme
+   - Product Designer'ın İşe Etkisi
+
+3. Product Discovery (UX Discovery)
+   - Product Discovery Nedir?
+   - Discovery vs Delivery
+   - Doğru Problemi Bulmak
+   - Varsayımlar & Hipotezler
+   - Discovery Sürekliliği
+
+4. Kullanıcıyı Anlamak
+   - Kullanıcı Araştırması Temelleri
+   - Nitel & Nicel Araştırma
+   - Kullanıcı Görüşmeleri
+   - Davranışsal vs Tutumsal Veri
+   - İçgörü (Insight) Üretme
+
+5. Problem Tanımı & Çerçeveleme
+   - Problem Statement Yazımı
+   - Jobs To Be Done (JTBD)
+   - Kullanıcı İhtiyaçları & Pain Point'ler
+   - Opportunity Alanlarını Belirleme
+   - Problem Önceliklendirme
+
+6. Fikir Üretimi & Çözüm Alanı
+   - Ideation Teknikleri
+   - Çözüm Alternatifleri Üretme
+   - Diverge & Converge Mantığı
+   - Hızlı Fikir Değerlendirme
+   - Çözüm Varsayımları
+
+7. Ürün Akışları & Deneyim Tasarımı
+   - User Flow'lar
+   - Task Flow'lar
+   - Bilgi Mimarisi (IA)
+   - Deneyim Tutarlılığı
+   - Edge Case Düşüncesi (High-level)
+
+8. Wireframe & Prototipleme
+   - Low-Fidelity Wireframe'ler
+   - Deneyim Odaklı Wireframe
+   - Prototipleme ile Test Etme
+   - Fidelity Seviyeleri
+   - Karar Vermek İçin Prototip
+
+9. UI & Design System ile Çalışmak
+   - UI ve Product Design İlişkisi
+   - Design System Kullanımı
+   - Component Bazlı Tasarım
+   - Tutarlılık & Ölçeklenebilirlik
+   - UI Kararlarının Ürüne Etkisi
+
+10. MVP & Iterasyon
+    - MVP Nedir? Ne Değildir?
+    - Scope Belirleme
+    - Hızlı Teslim – Öğrenme Döngüsü
+    - Iteratif Gelişim
+    - Öğrenilenlere Göre İyileştirme
+
+11. Validasyon & Test
+    - Çözüm Doğrulama
+    - Usability Testleri
+    - Konsept Testleri
+    - Feedback Toplama
+    - Test Sonuçlarını Ürüne Yansıtma
+
+12. Metrikler & Etki Ölçümü
+    - Product Metrikleri Nedir?
+    - Output vs Outcome
+    - UX & Product Metrikleri
+    - Başarıyı Ölçmek
+    - Öğrenme Odaklı KPI'lar
+
+13. Ekiplerle Çalışma
+    - Product Manager ile Çalışmak
+    - Developer'larla Çalışmak
+    - Stakeholder Yönetimi
+    - Karar Alma Süreçleri
+    - Cross-functional İş Birliği
+
+14. Teslim, Dokümantasyon & Handoff
+    - Product Design Handoff
+    - Kararların Dokümantasyonu
+    - Tasarım – Geliştirme Uyumu
+    - Design QA
+    - Canlı Sonrası Takip
+
+15. Product Designer Kariyeri
+    - Product Designer'dan Beklentiler
+    - Junior → Mid → Senior Farkları
+    - Product Case Study Yazımı
+    - Portfolyoda Ürün Anlatmak
+    - Sürekli Öğrenme & Gelişim
