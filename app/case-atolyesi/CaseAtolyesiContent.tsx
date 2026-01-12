@@ -537,6 +537,7 @@ export default function CaseAtolyesiContent() {
     // Create new AbortController for this request
     const abortController = new AbortController();
     abortControllerRef.current = abortController;
+    const apiStartTime = Date.now();
 
     try {
       setIsLoading(true);
@@ -563,6 +564,8 @@ export default function CaseAtolyesiContent() {
         }),
         signal: abortController.signal,
       });
+      
+      const apiResponseTime = Date.now() - apiStartTime;
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
