@@ -100,6 +100,13 @@ const UX_TERMS = [
   { id: 'basari-orani', term: 'Başarı Oranı (Success Rate) Nedir?', category: 'Test & Doğrulama', emoji: '🧪' },
   { id: 'gorev-tamamlama-suresi', term: 'Görev Tamamlama Süresi (Time on Task) Nedir?', category: 'Test & Doğrulama', emoji: '🧪' },
 
+  // 🧱 UI & Design System
+  { id: 'tasarim-degiskenleri', term: 'Tasarım Değişkenleri (Design Tokens) Nedir?', category: 'UI & Design System', emoji: '🧱' },
+  { id: 'bilesen-kutuphanesi', term: 'Bileşen Kütüphanesi (Component Library) Nedir?', category: 'UI & Design System', emoji: '🧱' },
+  { id: 'tasarim-deseni', term: 'Tasarım Deseni (Design Pattern) Nedir?', category: 'UI & Design System', emoji: '🧱' },
+  { id: 'atomik-tasarim', term: 'Atomik Tasarım (Atomic Design) Nedir?', category: 'UI & Design System', emoji: '🧱' },
+  { id: 'tutarlilik', term: 'Tutarlılık (Consistency) Nedir?', category: 'UI & Design System', emoji: '🧱' },
+
   // 🧱 UI & Pattern Odaklı Kavramlar
   { id: 'design-system', term: 'Design System', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
   { id: 'component', term: 'Component', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
@@ -1083,6 +1090,61 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Benchmark testleri yapılırken'
     ],
     relatedConcepts: ['Success Rate', 'Usability Testing', 'Efficiency', 'Task Completion']
+  },
+  'tasarim-degiskenleri': {
+    shortDefinition: 'Tasarım Değişkenleri, renk, tipografi, boşluk, gölge gibi tasarım değerlerinin kod olarak tanımlandığı ve tutarlı şekilde kullanıldığı sistemdir.',
+    detailedDescription: 'Design Tokens, renk, tipografi, boşluk, gölge gibi tasarım değerlerinin kod olarak tanımlandığı ve tutarlı şekilde kullanıldığı sistemdir. Bu değerler, tasarım ve geliştirme ekipleri arasında ortak bir dil oluşturur.\n\nTasarım değişkenleri, tasarım sistemlerinin temelidir. Bir renk veya spacing değeri değiştirildiğinde, tüm sistemde otomatik olarak güncellenir. Bu sayede tutarlılık sağlanır ve bakım maliyeti azalır.\n\nDesign tokens, farklı platformlarda (web, mobil) aynı değerleri kullanmayı sağlar ve tasarım değişikliklerini hızlı bir şekilde uygulamayı kolaylaştırır.',
+    exampleScenario: 'Bir tasarım değişkeni "primary-color: #DEFF37" olarak tanımlanır ve tüm butonlar, linkler ve vurgu alanları bu değişkeni kullanır. Renk değiştirilmek istendiğinde sadece bu değişken güncellenir ve tüm kullanım alanları otomatik olarak güncellenir.',
+    whenToUse: [
+      'Design system oluşturulurken',
+      'Tutarlılık sağlanmak istendiğinde',
+      'Tasarım değerleri yönetilirken'
+    ],
+    relatedConcepts: ['Design System', 'Component Library', 'Consistency', 'Design Variables']
+  },
+  'bilesen-kutuphanesi': {
+    shortDefinition: 'Bileşen Kütüphanesi, bir ürünün tasarım ve geliştirme süreçlerinde kullanılabilecek hazır UI bileşenlerinin toplandığı koleksiyondur.',
+    detailedDescription: 'Component Library, bir ürünün tasarım ve geliştirme süreçlerinde kullanılabilecek hazır UI bileşenlerinin toplandığı koleksiyondur. Buton, input, card gibi temel UI elemanlarından daha karmaşık bileşimlere kadar geniş bir yelpazede bileşenler içerir.\n\nBileşen kütüphanesi, design system\'in uygulama katmanıdır. Tasarım ve geliştirme ekiplerinin daha hızlı ve tutarlı çalışmasını sağlar.\n\nİyi bir component library, dokümantasyon, kullanım örnekleri ve kod implementasyonları içerir. Bu sayede ekipler bileşenleri doğru şekilde kullanabilir.',
+    exampleScenario: 'Bir bileşen kütüphanesinde "Primary Button", "Secondary Button", "Text Input" gibi bileşenler tanımlıdır. Tasarımcılar ve geliştiriciler bu bileşenleri kullanarak yeni ekranlar oluşturur.',
+    whenToUse: [
+      'Design system uygulanırken',
+      'Tutarlı UI bileşenleri oluşturulurken',
+      'Ekip verimliliği artırılmak istendiğinde'
+    ],
+    relatedConcepts: ['Design System', 'Design Tokens', 'Atomic Design', 'UI Components']
+  },
+  'tasarim-deseni': {
+    shortDefinition: 'Tasarım Deseni, yaygın olarak kullanılan ve kanıtlanmış çözüm yaklaşımlarıdır.',
+    detailedDescription: 'Design Pattern, yaygın olarak kullanılan ve kanıtlanmış çözüm yaklaşımlarıdır. Bu desenler, benzer problemler için tekrar eden çözümler sunar ve tasarımcıların deneme-yanılma yapmadan doğru yaklaşımı seçmesini sağlar.\n\nTasarım desenleri, navigasyon, form tasarımı, ödeme akışları, filtreleme gibi birçok alanda uygulanabilir. Bu desenler, kullanıcıların zihinsel modellerine uyum sağlar ve öğrenme eğrisini azaltır.\n\nDesenler evrensel olmamakla birlikte, farklı platformlarda ve bağlamlarda uyarlanarak kullanılabilir.',
+    exampleScenario: 'E-ticaret sitelerinde "Ürün Detay Sayfası" bir tasarım desenidir. Ürün görselleri, fiyat bilgisi, sepete ekleme butonu gibi öğeler bu desende standartlaştırılmıştır. Kullanıcılar bu desene aşina olduğu için yeni sitelerde de hızlıca adapte olur.',
+    whenToUse: [
+      'Yaygın problemler için çözüm aranırken',
+      'Kullanıcı deneyimi standartlaştırılırken',
+      'Yeni özellikler tasarlanırken'
+    ],
+    relatedConcepts: ['UI Pattern', 'Best Practices', 'User Experience', 'Design Standards']
+  },
+  'atomik-tasarim': {
+    shortDefinition: 'Atomik Tasarım, arayüzleri küçük parçalardan başlayarak daha büyük ve anlamlı yapılara dönüştüren bir tasarım metodolojisidir.',
+    detailedDescription: 'Atomic Design, arayüzleri küçük parçalardan başlayarak daha büyük ve anlamlı yapılara dönüştüren bir tasarım metodolojisidir. Bu yaklaşım, UI\'ı atom, molekül, organizma, template ve page olmak üzere beş seviyede yapılandırır.\n\nAtomlar (buton, input, label) en küçük yapı taşlarıdır. Bunlar birleşerek molekülleri (form alanı, arama çubuğu), moleküller birleşerek organizmaları (header, sidebar) oluşturur.\n\nBu yaklaşım, design system\'lerin temelini oluşturur ve bileşenlerin ölçeklenebilir şekilde yapılandırılmasını sağlar.',
+    exampleScenario: 'Bir buton atomdur, buton + ikon bir molekül olabilir, bu yapıların birleşmesiyle daha karmaşık arayüzler (header, form) oluşur. Bu hiyerarşik yapı, design system\'in temelini oluşturur.',
+    whenToUse: [
+      'Design system kurulurken',
+      'Bileşenler ölçeklenirken',
+      'Sistematik tasarım yaklaşımı benimsenirken'
+    ],
+    relatedConcepts: ['Design System', 'Component Library', 'Design Tokens', 'UI Structure']
+  },
+  'tutarlilik': {
+    shortDefinition: 'Tutarlılık, bir ürünün tüm ekranlarında ve etkileşimlerinde tutarlı davranmasıdır.',
+    detailedDescription: 'Consistency, bir ürünün tüm ekranlarında ve etkileşimlerinde tutarlı davranmasıdır. Tutarlılık, kullanıcıların ürünü öğrenme süresini kısaltır ve kullanıcı bir yerde öğrendiği davranışı başka bir yerde de geçerli varsayar.\n\nTutarlılık, görsel (renk, tipografi, spacing), davranışsal (etkileşimler, animasyonlar) ve sözel (dil, ton) olmak üzere farklı boyutlarda değerlendirilir.\n\nTutarsız tasarımlar kullanıcıyı düşündürür ve hata yapmasına neden olur. İyi bir design system, tutarlılığı sağlamak için kritik öneme sahiptir.',
+    exampleScenario: 'Bir ekranda mavi olan "Devam" butonunun başka bir ekranda gri olması kafa karışıklığı yaratır. Tüm ekranlarda aynı renk ve stilde kullanılması tutarlılık sağlar.',
+    whenToUse: [
+      'UI kararları alınırken',
+      'Design system uygulanırken',
+      'Kullanıcı deneyimi iyileştirilirken'
+    ],
+    relatedConcepts: ['Design System', 'Visual Hierarchy', 'Usability', 'User Experience']
   }
 };
 
