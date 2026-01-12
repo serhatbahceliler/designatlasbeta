@@ -175,16 +175,6 @@ const TERM_CONTENTS: Record<string, TermContent> = {
     relatedConcepts: ['UI Design', 'Consistency', 'Accessibility']
   },
   'user-centered-design': {
-    detailedDescription: 'Erişilebilirlik yalnızca engelli kullanıcılar için değil, herkes için daha iyi bir deneyim anlamına gelir. Kontrast, klavye ile kullanım ve ekran okuyucu uyumluluğu bu kapsamda değerlendirilir.\n\nİyi bir accessibility yaklaşımı, daha kapsayıcı ve sürdürülebilir ürünler ortaya çıkarır.',
-    exampleScenario: 'Düşük kontrastlı bir metin, görme problemi olan kullanıcılar için okunamaz hâle gelebilir.',
-    whenToUse: [
-      'UI tasarlanırken',
-      'Design system oluşturulurken',
-      'Yasal ve etik gereklilikler değerlendirilirken'
-    ],
-    relatedConcepts: ['Usability', 'Inclusive Design', 'Visual Hierarchy']
-  },
-  'user-centered-design': {
     shortDefinition: 'User-Centered Design, tasarım sürecinin merkezine kullanıcı ihtiyaçlarını ve beklentilerini koyan bir yaklaşımdır.',
     detailedDescription: 'Bu yaklaşımda kararlar varsayımlara göre değil, kullanıcıdan elde edilen içgörülere göre alınır. Kullanıcı geri bildirimi sürecin doğal bir parçasıdır.\n\nAmaç, kullanıcıyı ürüne adapte etmek değil, ürünü kullanıcıya adapte etmektir.',
     exampleScenario: 'Kullanıcıyı tanımadan tasarlanan bir dashboard, ihtiyaçları karşılamadığı için kullanılmaz.',
