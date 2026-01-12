@@ -34,15 +34,13 @@ const UX_TERMS = [
   { id: 'skeleton-screen', term: 'Skeleton Screen Nedir?', category: 'Performans & Algı', emoji: '⏱️' },
   { id: 'feedback-visual-system', term: 'Feedback (Visual / System Feedback) Nedir?', category: 'Performans & Algı', emoji: '⏱️' },
 
-  // 🧪 Research & Discovery
-  { id: 'user-research', term: 'User Research Nedir?', category: 'Research & Discovery', emoji: '🧪' },
-  { id: 'user-interview', term: 'User Interview Nedir?', category: 'Research & Discovery', emoji: '🧪' },
-  { id: 'usability-testing', term: 'Usability Testing Nedir?', category: 'Research & Discovery', emoji: '🧪' },
-  { id: 'personas', term: 'Personas Nedir?', category: 'Research & Discovery', emoji: '🧪' },
-  { id: 'jobs-to-be-done-jtbd', term: 'Jobs To Be Done (JTBD) Nedir?', category: 'Research & Discovery', emoji: '🧪' },
-  { id: 'user-journey-map', term: 'User Journey Map Nedir?', category: 'Research & Discovery', emoji: '🧪' },
-
   // 🔍 Araştırma & Keşif
+  { id: 'user-research', term: 'User Research Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'user-interview', term: 'User Interview Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'usability-testing', term: 'Usability Testing Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'personas', term: 'Personas Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'jobs-to-be-done-jtbd', term: 'Jobs To Be Done (JTBD) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'user-journey-map', term: 'User Journey Map Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
   { id: 'exploratory-research', term: 'Keşifsel Araştırma (Exploratory Research) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
   { id: 'generative-research', term: 'Üretici Araştırma (Generative Research) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
   { id: 'evaluative-research', term: 'Değerlendirici Araştırma (Evaluative Research) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
