@@ -15,32 +15,32 @@ interface TermContent {
 // UX Terms Data Structure
 const UX_TERMS = [
   // 🧠 Temel UX Kavramları
-  { id: 'user-experience-ux', term: 'User Experience (UX)', category: 'Temel UX Kavramları', emoji: '🧠' },
-  { id: 'user-interface-ui', term: 'User Interface (UI)', category: 'Temel UX Kavramları', emoji: '🧠' },
-  { id: 'usability', term: 'Usability', category: 'Temel UX Kavramları', emoji: '🧠' },
-  { id: 'accessibility-a11y', term: 'Accessibility (A11y)', category: 'Temel UX Kavramları', emoji: '🧠' },
-  { id: 'user-centered-design', term: 'User-Centered Design', category: 'Temel UX Kavramları', emoji: '🧠' },
-  { id: 'human-centered-design', term: 'Human-Centered Design', category: 'Temel UX Kavramları', emoji: '🧠' },
-  { id: 'design-thinking', term: 'Design Thinking', category: 'Temel UX Kavramları', emoji: '🧠' },
-  { id: 'interaction-design', term: 'Interaction Design', category: 'Temel UX Kavramları', emoji: '🧠' },
-  { id: 'information-architecture-ia', term: 'Information Architecture (IA)', category: 'Temel UX Kavramları', emoji: '🧠' },
-  { id: 'user-flow', term: 'User Flow', category: 'Temel UX Kavramları', emoji: '🧠' },
+  { id: 'user-experience-ux', term: 'User Experience (UX) Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
+  { id: 'user-interface-ui', term: 'User Interface (UI) Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
+  { id: 'usability', term: 'Usability Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
+  { id: 'accessibility-a11y', term: 'Accessibility (A11y) Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
+  { id: 'user-centered-design', term: 'User-Centered Design Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
+  { id: 'human-centered-design', term: 'Human-Centered Design Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
+  { id: 'design-thinking', term: 'Design Thinking Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
+  { id: 'interaction-design', term: 'Interaction Design Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
+  { id: 'information-architecture-ia', term: 'Information Architecture (IA) Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
+  { id: 'user-flow', term: 'User Flow Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
 
   // ⏱️ Performans & Algı
-  { id: '2-saniye-kurali', term: '2 Saniye Kuralı', category: 'Performans & Algı', emoji: '⏱️' },
-  { id: 'response-time', term: 'Response Time', category: 'Performans & Algı', emoji: '⏱️' },
-  { id: 'perceived-performance', term: 'Perceived Performance', category: 'Performans & Algı', emoji: '⏱️' },
-  { id: 'loading-states', term: 'Loading States', category: 'Performans & Algı', emoji: '⏱️' },
-  { id: 'skeleton-screen', term: 'Skeleton Screen', category: 'Performans & Algı', emoji: '⏱️' },
-  { id: 'feedback-visual-system', term: 'Feedback (Visual / System Feedback)', category: 'Performans & Algı', emoji: '⏱️' },
+  { id: '2-saniye-kurali', term: '2 Saniye Kuralı Nedir?', category: 'Performans & Algı', emoji: '⏱️' },
+  { id: 'response-time', term: 'Response Time Nedir?', category: 'Performans & Algı', emoji: '⏱️' },
+  { id: 'perceived-performance', term: 'Perceived Performance Nedir?', category: 'Performans & Algı', emoji: '⏱️' },
+  { id: 'loading-states', term: 'Loading States Nedir?', category: 'Performans & Algı', emoji: '⏱️' },
+  { id: 'skeleton-screen', term: 'Skeleton Screen Nedir?', category: 'Performans & Algı', emoji: '⏱️' },
+  { id: 'feedback-visual-system', term: 'Feedback (Visual / System Feedback) Nedir?', category: 'Performans & Algı', emoji: '⏱️' },
 
   // 🧪 Research & Discovery
-  { id: 'user-research', term: 'User Research', category: 'Research & Discovery', emoji: '🧪' },
-  { id: 'user-interview', term: 'User Interview', category: 'Research & Discovery', emoji: '🧪' },
-  { id: 'usability-testing', term: 'Usability Testing', category: 'Research & Discovery', emoji: '🧪' },
-  { id: 'personas', term: 'Personas', category: 'Research & Discovery', emoji: '🧪' },
-  { id: 'jobs-to-be-done-jtbd', term: 'Jobs To Be Done (JTBD)', category: 'Research & Discovery', emoji: '🧪' },
-  { id: 'user-journey-map', term: 'User Journey Map', category: 'Research & Discovery', emoji: '🧪' },
+  { id: 'user-research', term: 'User Research Nedir?', category: 'Research & Discovery', emoji: '🧪' },
+  { id: 'user-interview', term: 'User Interview Nedir?', category: 'Research & Discovery', emoji: '🧪' },
+  { id: 'usability-testing', term: 'Usability Testing Nedir?', category: 'Research & Discovery', emoji: '🧪' },
+  { id: 'personas', term: 'Personas Nedir?', category: 'Research & Discovery', emoji: '🧪' },
+  { id: 'jobs-to-be-done-jtbd', term: 'Jobs To Be Done (JTBD) Nedir?', category: 'Research & Discovery', emoji: '🧪' },
+  { id: 'user-journey-map', term: 'User Journey Map Nedir?', category: 'Research & Discovery', emoji: '🧪' },
 
   // 🔍 Araştırma & Keşif
   { id: 'exploratory-research', term: 'Keşifsel Araştırma (Exploratory Research) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
@@ -84,12 +84,12 @@ const UX_TERMS = [
   { id: 'gosterge-isaretleyici', term: 'Gösterge / İşaretleyici (Signifier) Nedir?', category: 'Kullanılabilirlik & Erişilebilirlik', emoji: '🎯' },
 
   // 🧩 Product & Karar Alma
-  { id: 'problem-statement', term: 'Problem Statement', category: 'Product & Karar Alma', emoji: '🧩' },
-  { id: 'hypothesis', term: 'Hypothesis', category: 'Product & Karar Alma', emoji: '🧩' },
-  { id: 'mvp-minimum-viable-product', term: 'MVP (Minimum Viable Product)', category: 'Product & Karar Alma', emoji: '🧩' },
-  { id: 'product-discovery', term: 'Product Discovery', category: 'Product & Karar Alma', emoji: '🧩' },
-  { id: 'success-metrics', term: 'Success Metrics', category: 'Product & Karar Alma', emoji: '🧩' },
-  { id: 'north-star-metric', term: 'North Star Metric', category: 'Product & Karar Alma', emoji: '🧩' },
+  { id: 'problem-statement', term: 'Problem Statement Nedir?', category: 'Product & Karar Alma', emoji: '🧩' },
+  { id: 'hypothesis', term: 'Hypothesis Nedir?', category: 'Product & Karar Alma', emoji: '🧩' },
+  { id: 'mvp-minimum-viable-product', term: 'MVP (Minimum Viable Product) Nedir?', category: 'Product & Karar Alma', emoji: '🧩' },
+  { id: 'product-discovery', term: 'Product Discovery Nedir?', category: 'Product & Karar Alma', emoji: '🧩' },
+  { id: 'success-metrics', term: 'Success Metrics Nedir?', category: 'Product & Karar Alma', emoji: '🧩' },
+  { id: 'north-star-metric', term: 'North Star Metric Nedir?', category: 'Product & Karar Alma', emoji: '🧩' },
 
   // 🧪 Test & Doğrulama
   { id: 'kullanilabilirlik-testi', term: 'Kullanılabilirlik Testi (Usability Testing) Nedir?', category: 'Test & Doğrulama', emoji: '🧪' },
@@ -108,32 +108,32 @@ const UX_TERMS = [
   { id: 'tutarlilik', term: 'Tutarlılık (Consistency) Nedir?', category: 'UI & Design System', emoji: '🧱' },
 
   // 🧱 UI & Pattern Odaklı Kavramlar
-  { id: 'design-system', term: 'Design System', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
-  { id: 'component', term: 'Component', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
-  { id: 'atomic-design', term: 'Atomic Design', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
-  { id: 'consistency', term: 'Consistency', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
-  { id: 'visual-hierarchy', term: 'Visual Hierarchy', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
-  { id: 'empty-state', term: 'Empty State', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
+  { id: 'design-system', term: 'Design System Nedir?', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
+  { id: 'component', term: 'Component Nedir?', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
+  { id: 'atomic-design', term: 'Atomic Design Nedir?', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
+  { id: 'consistency', term: 'Consistency Nedir?', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
+  { id: 'visual-hierarchy', term: 'Visual Hierarchy Nedir?', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
+  { id: 'empty-state', term: 'Empty State Nedir?', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
 
   // ⚠️ Çok Yanlış Anlaşılan ama Çok Önemli
-  { id: 'ux-case-study', term: 'UX Case Study', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
-  { id: 'concept-case', term: 'Concept Case', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
-  { id: 'edge-case', term: 'Edge Case', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
-  { id: 'cognitive-load', term: 'Cognitive Load', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
-  { id: 'affordance', term: 'Affordance', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
-  { id: 'error-prevention', term: 'Error Prevention', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
+  { id: 'ux-case-study', term: 'UX Case Study Nedir?', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
+  { id: 'concept-case', term: 'Concept Case Nedir?', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
+  { id: 'edge-case', term: 'Edge Case Nedir?', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
+  { id: 'cognitive-load', term: 'Cognitive Load Nedir?', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
+  { id: 'affordance', term: 'Affordance Nedir?', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
+  { id: 'error-prevention', term: 'Error Prevention Nedir?', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
 
   // 🧠 Core UX & Thinking
-  { id: 'mental-model', term: 'Mental Model', category: 'Core UX & Thinking', emoji: '🧠' },
-  { id: 'heuristic', term: 'Heuristic', category: 'Core UX & Thinking', emoji: '🧠' },
-  { id: 'nielsens-heuristics', term: "Nielsen's Heuristics", category: 'Core UX & Thinking', emoji: '🧠' },
-  { id: 'empathy', term: 'Empathy', category: 'Core UX & Thinking', emoji: '🧠' },
-  { id: 'cognitive-bias', term: 'Cognitive Bias', category: 'Core UX & Thinking', emoji: '🧠' },
-  { id: 'progressive-disclosure', term: 'Progressive Disclosure', category: 'Core UX & Thinking', emoji: '🧠' },
-  { id: 'hicks-law', term: "Hick's Law", category: 'Core UX & Thinking', emoji: '🧠' },
-  { id: 'fittss-law', term: "Fitts's Law", category: 'Core UX & Thinking', emoji: '🧠' },
-  { id: 'jakobs-law', term: "Jakob's Law", category: 'Core UX & Thinking', emoji: '🧠' },
-  { id: 'gestalt-principles', term: 'Gestalt Principles', category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'mental-model', term: 'Mental Model Nedir?', category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'heuristic', term: 'Heuristic Nedir?', category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'nielsens-heuristics', term: "Nielsen's Heuristics Nedir?", category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'empathy', term: 'Empathy Nedir?', category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'cognitive-bias', term: 'Cognitive Bias Nedir?', category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'progressive-disclosure', term: 'Progressive Disclosure Nedir?', category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'hicks-law', term: "Hick's Law Nedir?", category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'fittss-law', term: "Fitts's Law Nedir?", category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'jakobs-law', term: "Jakob's Law Nedir?", category: 'Core UX & Thinking', emoji: '🧠' },
+  { id: 'gestalt-principles', term: 'Gestalt Principles Nedir?', category: 'Core UX & Thinking', emoji: '🧠' },
 ];
 
 // Term Contents (first 10 terms)
