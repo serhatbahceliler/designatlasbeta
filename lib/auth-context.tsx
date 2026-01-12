@@ -74,14 +74,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
-      setLoading(false);
+    supabase.auth.getSession()
+      .then(({ data: { session } }) => {
+        setUser(session?.user ?? null);
+        setLoading(false);
 
-      if (session?.user) {
-        refreshProfile();
-      }
-    });
+        if (session?.user) {
+          refreshProfile();
+        }
+      })
+      .catch((error) => {
+        console.error("Error getting session:", error);
+        setUser(null);
+        setLoading(false); // Always set loading to false even on error
+      });
 
     // Listen for auth changes
     const {
