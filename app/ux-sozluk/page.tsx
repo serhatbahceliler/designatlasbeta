@@ -91,6 +91,15 @@ const UX_TERMS = [
   { id: 'success-metrics', term: 'Success Metrics', category: 'Product & Karar Alma', emoji: '🧩' },
   { id: 'north-star-metric', term: 'North Star Metric', category: 'Product & Karar Alma', emoji: '🧩' },
 
+  // 🧪 Test & Doğrulama
+  { id: 'kullanilabilirlik-testi', term: 'Kullanılabilirlik Testi (Usability Testing) Nedir?', category: 'Test & Doğrulama', emoji: '🧪' },
+  { id: 'ab-testi', term: 'A/B Testi (A/B Testing) Nedir?', category: 'Test & Doğrulama', emoji: '🧪' },
+  { id: 'kiyaslama-testi', term: 'Kıyaslama Testi (Benchmark Testing) Nedir?', category: 'Test & Doğrulama', emoji: '🧪' },
+  { id: 'moderatorlu-test', term: 'Moderatörlü Test (Moderated Test) Nedir?', category: 'Test & Doğrulama', emoji: '🧪' },
+  { id: 'moderatorsuz-test', term: 'Moderatörsüz Test (Unmoderated Test) Nedir?', category: 'Test & Doğrulama', emoji: '🧪' },
+  { id: 'basari-orani', term: 'Başarı Oranı (Success Rate) Nedir?', category: 'Test & Doğrulama', emoji: '🧪' },
+  { id: 'gorev-tamamlama-suresi', term: 'Görev Tamamlama Süresi (Time on Task) Nedir?', category: 'Test & Doğrulama', emoji: '🧪' },
+
   // 🧱 UI & Pattern Odaklı Kavramlar
   { id: 'design-system', term: 'Design System', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
   { id: 'component', term: 'Component', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
@@ -997,6 +1006,83 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Kullanılabilirlik iyileştirilirken'
     ],
     relatedConcepts: ['Affordance', 'Visual Design', 'Interaction Design', 'Usability']
+  },
+  'kullanilabilirlik-testi': {
+    shortDefinition: 'Kullanılabilirlik Testi, kullanıcıların bir ürünü kullanırken yaşadığı problemleri gözlemlemeye yönelik testlerdir.',
+    detailedDescription: 'Usability Testing, kullanıcıların bir ürünü kullanırken yaşadığı problemleri gözlemlemeye yönelik testlerdir. Bu testler, tasarımcının değil kullanıcının bakış açısını ortaya koyar.\n\nKullanılabilirlik testleri, moderatörlü veya moderatörsüz olarak yapılabilir. Kullanıcılara belirli görevler verilir ve bu görevleri tamamlarken gözlemlenirler.\n\nKüçük testler bile büyük problemleri açığa çıkarabilir. Amaç, kullanıcıyı test etmek değil, ürünü test etmektir.',
+    exampleScenario: 'Bir kullanıcının kayıt olurken sürekli yanlış alanları doldurması usability problemine işaret eder. Test sırasında bu problem gözlemlenir ve çözüm üretilir.',
+    whenToUse: [
+      'Tasarım doğrulanırken',
+      'Yayın öncesi kontrollerde',
+      'Mevcut ürün iyileştirilirken'
+    ],
+    relatedConcepts: ['Usability', 'User Testing', 'Feedback', 'Moderated Test']
+  },
+  'ab-testi': {
+    shortDefinition: 'A/B Testi, iki veya daha fazla tasarım versiyonunun performansını karşılaştırarak hangisinin daha etkili olduğunu belirleyen test yöntemidir.',
+    detailedDescription: 'A/B Testing, iki veya daha fazla tasarım versiyonunun performansını karşılaştırarak hangisinin daha etkili olduğunu belirleyen test yöntemidir. Kullanıcılar rastgele olarak farklı versiyonlara yönlendirilir ve davranışları ölçülür.\n\nBu test yöntemi, tasarım kararlarını varsayımlara göre değil, veriye göre almayı sağlar. Hangi buton renginin, hangi başlığın veya hangi yerleşimin daha iyi sonuç verdiğini öğrenmek için kullanılır.\n\nA/B testleri, net bir hipotez ve ölçülebilir metrik gerektirir. Test sonuçları istatistiksel olarak anlamlı olmalıdır.',
+    exampleScenario: 'Bir e-ticaret sitesinde "Sepete Ekle" butonunun yeşil mi yoksa turuncu mu olması gerektiğini test etmek için kullanıcıların yarısına yeşil, yarısına turuncu buton gösterilir. Hangisinin daha fazla tıklama aldığı ölçülür.',
+    whenToUse: [
+      'Tasarım kararları doğrulanırken',
+      'Farklı tasarım seçenekleri değerlendirilirken',
+      'Dönüşüm oranları optimize edilirken'
+    ],
+    relatedConcepts: ['Hypothesis', 'Experiment', 'Success Metrics', 'Statistical Significance']
+  },
+  'kiyaslama-testi': {
+    shortDefinition: 'Kıyaslama Testi, bir ürünün performansını önceden belirlenmiş standartlarla veya rakip ürünlerle karşılaştıran test yöntemidir.',
+    detailedDescription: 'Benchmark Testing, bir ürünün performansını önceden belirlenmiş standartlarla veya rakip ürünlerle karşılaştıran test yöntemidir. Bu test, ürünün mevcut durumunu ölçer ve iyileştirme alanlarını belirler.\n\nKıyaslama testleri, görev tamamlama süresi, başarı oranı, hata oranı gibi metriklerle yapılır. Bu metrikler, zaman içinde karşılaştırılarak iyileştirmelerin etkisi ölçülür.\n\nBu test yöntemi, ürünün pazar pozisyonunu anlamak ve hedeflere ulaşılıp ulaşılmadığını değerlendirmek için kullanılır.',
+    exampleScenario: 'Bir e-ticaret sitesinin ödeme akışının tamamlanma süresini ve başarı oranını rakip sitelerle karşılaştırmak, ürünün performansını değerlendirmek için benchmark testing kullanılır.',
+    whenToUse: [
+      'Ürün performansı değerlendirilirken',
+      'Rakip analizi yapılırken',
+      'Hedef metrikler izlenirken'
+    ],
+    relatedConcepts: ['Success Rate', 'Time on Task', 'Usability Testing', 'Metrics']
+  },
+  'moderatorlu-test': {
+    shortDefinition: 'Moderatörlü Test, bir moderatörün (araştırmacı) kullanıcıya rehberlik ettiği ve gerçek zamanlı gözlem yapıldığı test yöntemidir.',
+    detailedDescription: 'Moderated Test, bir moderatörün (araştırmacı) kullanıcıya rehberlik ettiği ve gerçek zamanlı gözlem yapıldığı test yöntemidir. Moderator, test sırasında kullanıcıya görevleri verir, sorular sorar ve davranışlarını gözlemler.\n\nBu test yöntemi, derinlemesine içgörüler elde etmek için idealdir. Moderator, kullanıcının düşünce süreçlerini anlamak için sorular sorabilir ve gerçek zamanlı olarak problemleri tespit edebilir.\n\nModeratörlü testler, yüz yüze veya uzaktan (video konferans) yapılabilir. Daha kontrollü bir ortam sağlar ancak zaman ve kaynak açısından daha maliyetlidir.',
+    exampleScenario: 'Bir araştırmacı, kullanıcıya bir mobil uygulamayı kullanmasını istediğinde yanında oturur, görevleri verir, kullanıcının ne düşündüğünü sorar ve davranışlarını gözlemler. Bu moderatörlü testtir.',
+    whenToUse: [
+      'Derinlemesine içgörüler elde edilmek istendiğinde',
+      'Karmaşık görevler test edilirken',
+      'Kullanıcı düşünce süreçleri anlaşılmaya çalışılırken'
+    ],
+    relatedConcepts: ['Usability Testing', 'User Research', 'Unmoderated Test', 'Qualitative Research']
+  },
+  'moderatorsuz-test': {
+    shortDefinition: 'Moderatörsüz Test, kullanıcıların kendi kendilerine ve kendi zamanlarında gerçekleştirdikleri test yöntemidir.',
+    detailedDescription: 'Unmoderated Test, kullanıcıların kendi kendilerine ve kendi zamanlarında gerçekleştirdikleri test yöntemidir. Kullanıcılar, belirli görevleri verilen talimatlara göre tamamlar ve davranışları otomatik olarak kaydedilir.\n\nBu test yöntemi, daha büyük örneklemlerle test yapmayı sağlar ve zaman ve kaynak açısından daha verimlidir. Ancak derinlemesine içgörüler elde etmek moderatörlü testlere göre daha zordur.\n\nModeratörsüz testler, özellikle nicel metrikleri (başarı oranı, görev tamamlama süresi) ölçmek için idealdir.',
+    exampleScenario: 'Kullanıcılara bir web sitesinde ürün bulma görevi verilir ve kullanıcılar kendi bilgisayarlarından, kendi zamanlarında bu görevi tamamlar. Davranışları otomatik olarak kaydedilir ve analiz edilir.',
+    whenToUse: [
+      'Büyük örneklemlerle test yapılırken',
+      'Nicel metrikler ölçülürken',
+      'Hızlı ve verimli test yapılmak istendiğinde'
+    ],
+    relatedConcepts: ['Usability Testing', 'Moderated Test', 'Quantitative Research', 'Remote Testing']
+  },
+  'basari-orani': {
+    shortDefinition: 'Başarı Oranı, kullanıcıların belirli bir görevi başarıyla tamamlama yüzdesidir.',
+    detailedDescription: 'Success Rate, kullanıcıların belirli bir görevi başarıyla tamamlama yüzdesidir. Bu metrik, bir ürünün kullanılabilirliğini ölçmek için en önemli metriklerden biridir.\n\nBaşarı oranı, görevlerin tamamlanıp tamamlanmadığını ve tamamlanma sırasında hata yapılıp yapılmadığını ölçer. Yüksek başarı oranı, ürünün kullanıcıların hedeflerine ulaşmasını kolaylaştırdığını gösterir.\n\nBu metrik, usability testleri, A/B testleri ve benchmark testlerinde sıklıkla kullanılır. Zaman içinde karşılaştırılarak iyileştirmelerin etkisi ölçülür.',
+    exampleScenario: 'Bir e-ticaret sitesinde 100 kullanıcıdan 75\'i alışveriş sepetine ürün ekleyip ödeme sayfasına ulaşabiliyorsa, başarı oranı %75\'tir. %100\'e yakın olması ideal kabul edilir.',
+    whenToUse: [
+      'Usability testleri sonuçları değerlendirilirken',
+      'A/B testleri analiz edilirken',
+      'Ürün performansı ölçülürken'
+    ],
+    relatedConcepts: ['Usability Testing', 'Time on Task', 'Error Rate', 'Task Completion']
+  },
+  'gorev-tamamlama-suresi': {
+    shortDefinition: 'Görev Tamamlama Süresi, kullanıcının belirli bir görevi tamamlaması için geçen süredir.',
+    detailedDescription: 'Time on Task, kullanıcının belirli bir görevi tamamlaması için geçen süredir. Bu metrik, bir ürünün kullanılabilirliğini ve verimliliğini ölçmek için önemli bir göstergedir.\n\nGörev tamamlama süresi ne kadar kısaysa, ürün o kadar verimli ve kullanıcı dostu kabul edilir. Ancak süre, kullanıcının hedefine ulaşması için gereken süredir; hızlı olması her zaman iyi olmayabilir.\n\nBu metrik, usability testleri, A/B testleri ve benchmark testlerinde kullanılır. Zaman içinde karşılaştırılarak iyileştirmelerin etkisi ölçülür.',
+    exampleScenario: 'Bir kullanıcının bir ürünü bulup sepete eklemesi ortalama 2 dakika sürüyorsa, bu görev tamamlama süresidir. Bu süreyi 1 dakikaya indirmek, ürünün daha verimli kullanıldığını gösterir.',
+    whenToUse: [
+      'Görev verimliliği ölçülürken',
+      'A/B testleri analiz edilirken',
+      'Benchmark testleri yapılırken'
+    ],
+    relatedConcepts: ['Success Rate', 'Usability Testing', 'Efficiency', 'Task Completion']
   }
 };
 
