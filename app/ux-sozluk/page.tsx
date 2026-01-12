@@ -43,16 +43,26 @@ const UX_TERMS = [
   { id: 'user-journey-map', term: 'User Journey Map', category: 'Research & Discovery', emoji: '🧪' },
 
   // 🔍 Araştırma & Keşif
-  { id: 'exploratory-research', term: 'Keşifsel Araştırma', category: 'Araştırma & Keşif', emoji: '🔍' },
-  { id: 'generative-research', term: 'Üretici Araştırma', category: 'Araştırma & Keşif', emoji: '🔍' },
-  { id: 'evaluative-research', term: 'Değerlendirici Araştırma', category: 'Araştırma & Keşif', emoji: '🔍' },
-  { id: 'research-operations', term: 'Araştırma Operasyonları', category: 'Araştırma & Keşif', emoji: '🔍' },
-  { id: 'insight', term: 'İçgörü', category: 'Araştırma & Keşif', emoji: '🔍' },
-  { id: 'affinity-mapping', term: 'Yakınlık Haritalama', category: 'Araştırma & Keşif', emoji: '🔍' },
-  { id: 'synthesis', term: 'Sentez', category: 'Araştırma & Keşif', emoji: '🔍' },
-  { id: 'contextual-inquiry', term: 'Bağlamsal Sorgulama', category: 'Araştırma & Keşif', emoji: '🔍' },
-  { id: 'diary-study', term: 'Günlük Çalışması', category: 'Araştırma & Keşif', emoji: '🔍' },
-  { id: 'assumption-mapping', term: 'Varsayım Haritalama', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'exploratory-research', term: 'Keşifsel Araştırma (Exploratory Research) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'generative-research', term: 'Üretici Araştırma (Generative Research) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'evaluative-research', term: 'Değerlendirici Araştırma (Evaluative Research) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'research-operations', term: 'Araştırma Operasyonları (Research Operations / Research Ops) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'insight', term: 'İçgörü (Insight) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'affinity-mapping', term: 'Yakınlık Haritalama (Affinity Mapping) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'synthesis', term: 'Sentez (Synthesis) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'contextual-inquiry', term: 'Bağlamsal Sorgulama (Contextual Inquiry) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'diary-study', term: 'Günlük Çalışması (Diary Study) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'assumption-mapping', term: 'Varsayım Haritalama (Assumption Mapping) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
+
+  // 🧠 Problem & Strateji
+  { id: 'problem-space', term: 'Problem Alanı (Problem Space) Nedir?', category: 'Problem & Strateji', emoji: '🧠' },
+  { id: 'solution-space', term: 'Çözüm Alanı (Solution Space) Nedir?', category: 'Problem & Strateji', emoji: '🧠' },
+  { id: 'how-might-we', term: 'Nasıl Yapabiliriz? (How Might We) Nedir?', category: 'Problem & Strateji', emoji: '🧠' },
+  { id: 'design-hypothesis', term: 'Tasarım Hipotezi (Design Hypothesis) Nedir?', category: 'Problem & Strateji', emoji: '🧠' },
+  { id: 'outcome', term: 'Sonuç (Etkisel Sonuç) (Outcome) Nedir?', category: 'Problem & Strateji', emoji: '🧠' },
+  { id: 'output', term: 'Çıktı (Output) Nedir?', category: 'Problem & Strateji', emoji: '🧠' },
+  { id: 'kuzey-yildizi-metriği', term: 'Kuzey Yıldızı Metriği (North Star Metric) Nedir?', category: 'Problem & Strateji', emoji: '🧠' },
+  { id: 'product-vision', term: 'Ürün Vizyonu (Product Vision) Nedir?', category: 'Problem & Strateji', emoji: '🧠' },
 
   // 🧩 Product & Karar Alma
   { id: 'problem-statement', term: 'Problem Statement', category: 'Product & Karar Alma', emoji: '🧩' },
@@ -710,6 +720,94 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Araştırma önceliklerini belirlerken'
     ],
     relatedConcepts: ['Hypothesis', 'Risk Assessment', 'Product Discovery', 'User Research']
+  },
+  'problem-space': {
+    shortDefinition: 'Problem Alanı, çözülmesi gereken problemi ve problemle ilgili bağlamı tanımlayan kavramsal alandır.',
+    detailedDescription: 'Problem space, "ne problemi çözmeye çalışıyoruz?" sorusuna cevap verir. Bu alan, kullanıcı ihtiyaçlarını, problemleri, kısıtları ve bağlamı kapsar.\n\nProblem space\'e odaklanmak, erken çözümlere atlamadan önce problemi derinlemesine anlamayı sağlar. Doğru problemi çözmeden, en iyi çözüm bile başarısız olur.\n\nProblem space genellikle kullanıcı araştırması, bağlam analizi ve problem tanımı çalışmalarıyla şekillenir.',
+    exampleScenario: 'Bir e-ticaret uygulamasında "kullanıcılar alışveriş yapamıyor" bir problem ifadesidir. Problem space ise bu problemin altında yatan nedenleri, hangi kullanıcıların etkilendiğini, hangi durumlarda ortaya çıktığını ve problem bağlamını kapsar.',
+    whenToUse: [
+      'Problem tanımı yapılırken',
+      'Yeni ürün veya özellik geliştirmeye başlarken',
+      'Çözüm üretmeden önce problemi anlamak için'
+    ],
+    relatedConcepts: ['Problem Statement', 'Solution Space', 'User Research', 'Contextual Inquiry']
+  },
+  'solution-space': {
+    shortDefinition: 'Çözüm Alanı, belirli bir problemi çözmek için geliştirilebilecek çözümlerin bulunduğu kavramsal alandır.',
+    detailedDescription: 'Solution space, "bu problemi nasıl çözebiliriz?" sorusuna cevap verir. Bu alan, tasarım seçenekleri, teknolojik çözümler, özellikler ve yaklaşımları kapsar.\n\nÇözüm alanına geçmeden önce problem alanını net bir şekilde anlamak kritik öneme sahiptir. Yanlış problemi çözen en iyi çözüm bile başarısız olur.\n\nİyi bir çözüm alanı, problem space\'i doğru yansıtan ve kullanıcı ihtiyaçlarını gerçekten karşılayan çözümleri içerir.',
+    exampleScenario: 'Alışveriş yapma problemi için çözüm alanı, ödeme akışını sadeleştirme, güven sinyalleri ekleme, mobil optimizasyon gibi farklı çözüm yaklaşımlarını içerebilir.',
+    whenToUse: [
+      'Problem netleştirildikten sonra',
+      'Çözüm alternatifleri düşünülürken',
+      'Tasarım seçenekleri değerlendirilirken'
+    ],
+    relatedConcepts: ['Problem Space', 'Ideation', 'Solution Design', 'Feature Prioritization']
+  },
+  'how-might-we': {
+    shortDefinition: 'How Might We (Nasıl Yapabiliriz?), problemi fırsat haline getiren ve yaratıcı çözümleri teşvik eden bir soru formatıdır.',
+    detailedDescription: 'HMW soruları, problemi olumsuz bir ifade yerine olumlu bir fırsat olarak çerçeveler. "Kullanıcılar ödeme yapamıyor" yerine "Nasıl yapabiliriz ki kullanıcılar güvenle ve kolayca ödeme yapsın?" gibi.\n\nBu soru formatı, tasarım odaklı düşünme sürecinde ideation aşamasında kullanılır. Açık uçlu ve çözüm odaklı olması nedeniyle yaratıcı fikirlerin ortaya çıkmasına yardımcı olur.\n\nİyi bir HMW sorusu, çok geniş değildir (odaklıdır) ama aynı zamanda çok dar da değildir (yaratıcılığa izin verir).',
+    exampleScenario: 'Problem: "Kullanıcılar formu tamamlayamıyor." HMW: "Nasıl yapabiliriz ki kullanıcılar formu hatasız ve hızlı bir şekilde tamamlasın?" Bu soru, çözüm odaklı düşünmeyi teşvik eder.',
+    whenToUse: [
+      'Ideation aşamasında',
+      'Problem ifadelerini fırsatlara dönüştürürken',
+      'Beyin fırtınası oturumlarında'
+    ],
+    relatedConcepts: ['Problem Statement', 'Ideation', 'Design Thinking', 'Solution Space']
+  },
+  'design-hypothesis': {
+    shortDefinition: 'Tasarım Hipotezi, belirli bir tasarım değişikliğinin veya çözümün nasıl bir etki yaratacağına dair test edilebilir varsayımdır.',
+    detailedDescription: 'Tasarım hipotezi, "X değişikliğini yaparsak Y sonucunu bekleriz çünkü Z" formatında ifade edilir. Bu yapı, neyin değiştirileceğini, neyin ölçüleceğini ve nedenini açıkça belirtir.\n\nİyi bir tasarım hipotezi test edilebilir olmalıdır. Değişikliğin etkisini ölçmek için net metrikler tanımlanmalıdır.\n\nBu hipotezler, rastgele kararlar almak yerine öğrenmeye dayalı ilerlemeyi sağlar. Yanlış çıkan hipotezler de değerli öğrenmeler sağlar.',
+    exampleScenario: 'Tasarım Hipotezi: "Ödeme adımına güven rozetleri eklersek, tamamlanma oranı %15 artacak çünkü kullanıcılar güvenlik endişelerini giderecek." Bu hipotez, değişikliği, sonucu ve nedeni net bir şekilde ifade eder.',
+    whenToUse: [
+      'Tasarım değişiklikleri planlanırken',
+      'Deneyler tasarlanırken',
+      'A/B testleri yapılırken'
+    ],
+    relatedConcepts: ['Hypothesis', 'Experiment', 'Success Metrics', 'A/B Testing']
+  },
+  'outcome': {
+    shortDefinition: 'Sonuç (Outcome), bir ürün veya tasarımın kullanıcılar ve iş üzerinde yarattığı etkisel değişikliktir.',
+    detailedDescription: 'Outcome, "neyi değiştirdik?" sorusuna cevap verir. Kullanıcının davranışındaki, durumundaki veya hislerindeki değişiklikleri ifade eder.\n\nOutcome, output\'tan farklıdır. Output bir özellik veya çıktıyken, outcome bu çıktının yarattığı etkidir. Örneğin, bir özellik (output) geliştirmek yerine, kullanıcının zamanını kazanması (outcome) hedeflenebilir.\n\nİyi tasarım kararları, output\'tan çok outcome\'a odaklanır. Kullanıcının gerçekten ihtiyacı olan şey, daha fazla özellik değil, problemlerinin çözülmesidir.',
+    exampleScenario: 'Bir eğitim uygulaması için output "kurs ekleme özelliği" olabilir. Outcome ise "kullanıcıların öğrenme hedeflerine daha hızlı ulaşması" veya "motivasyonlarının artması" olabilir.',
+    whenToUse: [
+      'Ürün hedefleri belirlenirken',
+      'Tasarım kararları alınırken',
+      'Başarı metrikleri tanımlanırken'
+    ],
+    relatedConcepts: ['Output', 'Success Metrics', 'North Star Metric', 'Value Proposition']
+  },
+  'output': {
+    shortDefinition: 'Çıktı (Output), bir ürün geliştirme sürecinde üretilen somut özellik, ürün veya deliverable\'dır.',
+    detailedDescription: 'Output, "neyi ürettik?" sorusuna cevap verir. Geliştirilen özellikler, ekranlar, fonksiyonlar ve teknik çıktılar bu kapsamdadır.\n\nOutput önemlidir ancak yeterli değildir. Bir özellik üretmek, o özelliğin gerçek bir değer yaratacağı anlamına gelmez.\n\nİyi tasarım ve ürün yönetimi, output\'tan çok outcome\'a odaklanır. Çünkü kullanıcılar özellikleri değil, problemlerinin çözülmesini ister.',
+    exampleScenario: 'Bir proje yönetim uygulaması için output "yeni görev oluşturma özelliği" olabilir. Ancak gerçek değer (outcome), kullanıcıların projelerini daha iyi yönetmesi ve zamanlarını daha etkili kullanmasıdır.',
+    whenToUse: [
+      'Geliştirme çıktılarını tanımlarken',
+      'Proje planlaması yaparken',
+      'Deliverable\'ları listelerken'
+    ],
+    relatedConcepts: ['Outcome', 'Feature', 'Deliverable', 'Product Development']
+  },
+  'kuzey-yildizi-metriği': {
+    shortDefinition: 'Kuzey Yıldızı Metriği, bir ürünün uzun vadeli değerini en iyi temsil eden ana metriktir.',
+    detailedDescription: 'Bu metrik, ekiplerin aynı hedefe odaklanmasını sağlar. Her metrik North Star değildir; kullanıcıya sağlanan değeri yansıtması gerekir.\n\nKuzey Yıldızı Metriği, hem iş hedeflerini hem de kullanıcı değerini temsil eden bir ölçüttür. Kısa vadeli metrikler yerine, ürünün gerçek başarısını gösteren uzun vadeli bir gösterge olmalıdır.\n\nYanlış seçilmiş bir Kuzey Yıldızı Metriği, ürünü yanlış yönde büyütebilir ve ekip yanlış optimizasyonlar yapabilir.',
+    exampleScenario: 'Bir içerik platformu için "haftalık aktif okuyucu sayısı" bir Kuzey Yıldızı Metriği olabilir. Çünkü hem kullanıcı değerini (okuma alışkanlığı) hem de iş değerini (platform kullanımı) temsil eder.',
+    whenToUse: [
+      'Ürün stratejisi belirlenirken',
+      'Ekip hedefleri hizalanırken',
+      'Uzun vadeli başarı ölçülürken'
+    ],
+    relatedConcepts: ['Success Metrics', 'Outcome', 'Product Strategy', 'KPI']
+  },
+  'product-vision': {
+    shortDefinition: 'Ürün Vizyonu, bir ürünün gelecekte nasıl bir değer yaratacağını ve dünyayı nasıl değiştireceğini tanımlayan uzun vadeli hedef ve yöndür.',
+    detailedDescription: 'Ürün vizyonu, "gelecekte nerede olmak istiyoruz?" sorusuna cevap verir. Somut özelliklerden çok, ürünün yaratacağı etki ve değeri tanımlar.\n\nİyi bir ürün vizyonu, ilham verici, net ve ulaşılabilir olmalıdır. Ekiplere neden çalıştıklarını hatırlatır ve karar alma süreçlerinde rehberlik eder.\n\nVizyon değişmez ama yol haritası değişebilir. Vizyon, ekiplerin hangi yönde ilerlemesi gerektiğini gösterir ama nasıl ilerleyeceğini göstermez.',
+    exampleScenario: 'Bir sağlık uygulamasının vizyonu "herkesin sağlığını yönetmesini kolaylaştırmak ve sağlık okuryazarlığını artırmak" olabilir. Bu vizyon, özellikler değişse bile ekipe yön gösterir.',
+    whenToUse: [
+      'Ürün stratejisi oluşturulurken',
+      'Ekip motivasyonu ve hedef hizalaması sağlanırken',
+      'Uzun vadeli planlamalar yapılırken'
+    ],
+    relatedConcepts: ['Product Strategy', 'Mission', 'Product Roadmap', 'North Star Metric']
   }
 };
 
@@ -949,7 +1047,7 @@ export default function UXSozlukPage() {
                               }`}
                             >
                               <span className="font-medium text-white group-hover:text-[#DEFF37] transition-colors">
-                                {term.term} Nedir?
+                                {term.term}
                               </span>
                               <svg
                                 className="w-5 h-5 text-gray-400 group-hover:text-[#DEFF37] transition-colors flex-shrink-0"
@@ -986,7 +1084,7 @@ export default function UXSozlukPage() {
             <div className="p-8">
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
-                <h2 className="text-2xl font-bold text-white">{selectedTermData.term} Nedir?</h2>
+                <h2 className="text-2xl font-bold text-white">{selectedTermData.term}</h2>
                 <button
                   onClick={handleCloseDrawer}
                   className="w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
