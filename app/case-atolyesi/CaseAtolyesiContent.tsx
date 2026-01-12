@@ -772,7 +772,7 @@ export default function CaseAtolyesiContent() {
       )}
 
       {/* Main Content - Chat */}
-      <main className="flex-1 flex flex-col overflow-hidden">
+      <main className="flex-1 flex flex-col">
         {isLoadingThreads ? (
           /* Loading State */
           <div className="flex-1 flex items-center justify-center">
@@ -796,13 +796,12 @@ export default function CaseAtolyesiContent() {
                 </div>
 
                 {/* Input Area - Moved below title and subtitle */}
-                <div className="max-w-3xl mx-auto">
-                  {error && (
-                    <div className="mb-4 p-3 bg-red-500/10 border border-red-500/30 rounded-lg">
-                      <p className="text-red-400 text-sm">{error}</p>
-                    </div>
-                  )}
-                  <form onSubmit={handleSubmit} className="flex gap-3">
+                {error && (
+                  <div className="mb-4 p-3 bg-red-500/10 border border-red-500/30 rounded-lg">
+                    <p className="text-red-400 text-sm">{error}</p>
+                  </div>
+                )}
+                <form onSubmit={handleSubmit} className="flex gap-3">
                     <div className="flex-1 relative">
                       <input
                         type="text"
@@ -834,7 +833,6 @@ export default function CaseAtolyesiContent() {
                       </button>
                     )}
                   </form>
-                </div>
               </div>
             </div>
           </>
