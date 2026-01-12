@@ -123,7 +123,15 @@ export default function CaseAtolyesiContent() {
   const showSidebar = hasThreads && sidebarOpen;
   const abortControllerRef = useRef<AbortController | null>(null);
 
+  // Helper function to track analytics events
+  const trackEvent = (eventName: string, params: Record<string, any>) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, params);
+    }
+  };
+
   const loadThreads = useCallback(async () => {
+    const loadStartTime = Date.now();
     try {
       setIsLoadingThreads(true);
       setError("");
@@ -139,6 +147,15 @@ export default function CaseAtolyesiContent() {
       });
 
       clearTimeout(timeoutId);
+      
+      const loadTime = Date.now() - loadStartTime;
+      
+      // Track loading time
+      trackEvent('case_atolyesi_load_threads', {
+        load_time_ms: loadTime,
+        success: response.ok,
+        status: response.status,
+      });
 
       // Handle 204 No Content
       if (response.status === 204) {
@@ -171,6 +188,16 @@ export default function CaseAtolyesiContent() {
       }
     } catch (err: any) {
       console.error("Error loading threads:", err);
+      const loadTime = Date.now() - loadStartTime;
+      
+      // Track error
+      trackEvent('case_atolyesi_error', {
+        error_type: 'load_threads',
+        error_name: err.name || 'Unknown',
+        error_message: err.message || 'Unknown error',
+        load_time_ms: loadTime,
+      });
+      
       if (err.name === 'AbortError') {
         setError("İstek zaman aşımına uğradı. Lütfen tekrar deneyin.");
       } else {
@@ -181,6 +208,22 @@ export default function CaseAtolyesiContent() {
       setIsLoadingThreads(false);
     }
   }, []);
+
+  // Track loading screen time
+  const loadingStartTimeRef = useRef<number | null>(null);
+  
+  useEffect(() => {
+    if (isLoadingThreads && !loadingStartTimeRef.current) {
+      loadingStartTimeRef.current = Date.now();
+    } else if (!isLoadingThreads && loadingStartTimeRef.current) {
+      const loadingTime = Date.now() - loadingStartTimeRef.current;
+      trackEvent('case_atolyesi_loading_time', {
+        loading_time_ms: loadingTime,
+        loading_time_seconds: Math.round(loadingTime / 1000),
+      });
+      loadingStartTimeRef.current = null;
+    }
+  }, [isLoadingThreads]);
 
   // Reset state when navigating to this page or on mount
   useEffect(() => {
@@ -352,6 +395,7 @@ export default function CaseAtolyesiContent() {
     // Create new AbortController for this request
     const abortController = new AbortController();
     abortControllerRef.current = abortController;
+    const apiStartTime = Date.now();
 
     try {
       setIsLoading(true);
@@ -397,6 +441,7 @@ export default function CaseAtolyesiContent() {
       setThreads((prev) => [newThread, ...prev]);
 
       // Send message to API
+      const chatApiStartTime = Date.now();
       const chatResponse = await fetch("/api/chat", {
         method: "POST",
         headers,
@@ -407,6 +452,8 @@ export default function CaseAtolyesiContent() {
         }),
         signal: abortController.signal,
       });
+      
+      const chatApiResponseTime = Date.now() - chatApiStartTime;
 
       if (!chatResponse.ok) {
         const errorData = await chatResponse.json().catch(() => ({}));
@@ -433,6 +480,14 @@ export default function CaseAtolyesiContent() {
 
       const chatData = await chatResponse.json();
       
+      // Track API response time
+      trackEvent('case_atolyesi_api_response', {
+        response_time_ms: chatApiResponseTime,
+        response_time_seconds: Math.round(chatApiResponseTime / 1000),
+        is_first_message: true,
+        success: true,
+      });
+      
       // Add assistant message to UI with animation
       const assistantMessage: Message = {
         id: chatData.message.id || `assistant-${Date.now()}`,
@@ -453,6 +508,17 @@ export default function CaseAtolyesiContent() {
       }
     } catch (err: any) {
       console.error("Error sending first message:", err);
+      const totalTime = Date.now() - apiStartTime;
+      
+      // Track error
+      trackEvent('case_atolyesi_error', {
+        error_type: 'send_first_message',
+        error_name: err.name || 'Unknown',
+        error_message: err.message || 'Unknown error',
+        response_time_ms: totalTime,
+        is_first_message: true,
+      });
+      
       if (err.name === 'AbortError') {
         setError("İstek iptal edildi");
         setMessages([]);
@@ -523,6 +589,14 @@ export default function CaseAtolyesiContent() {
 
       const data = await response.json();
       
+      // Track API response time
+      trackEvent('case_atolyesi_api_response', {
+        response_time_ms: apiResponseTime,
+        response_time_seconds: Math.round(apiResponseTime / 1000),
+        is_first_message: isFirstMessage,
+        success: true,
+      });
+      
       // Add assistant message to UI with animation
       const assistantMessage: Message = {
         id: data.message.id || `assistant-${Date.now()}`,
@@ -547,6 +621,17 @@ export default function CaseAtolyesiContent() {
       }
     } catch (err: any) {
       console.error("Error sending message:", err);
+      const totalTime = Date.now() - apiStartTime;
+      
+      // Track error
+      trackEvent('case_atolyesi_error', {
+        error_type: 'send_message',
+        error_name: err.name || 'Unknown',
+        error_message: err.message || 'Unknown error',
+        response_time_ms: totalTime,
+        is_first_message: isFirstMessage,
+      });
+      
       if (err.name === 'AbortError') {
         setError("İstek iptal edildi");
       } else {
