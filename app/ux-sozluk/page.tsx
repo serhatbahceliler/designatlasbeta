@@ -17,27 +17,22 @@ const UX_TERMS = [
   // 🧠 Temel UX Kavramları
   { id: 'user-experience-ux', term: 'User Experience (UX) Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
   { id: 'user-interface-ui', term: 'User Interface (UI) Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
-  { id: 'usability', term: 'Usability Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
-  { id: 'accessibility-a11y', term: 'Accessibility (A11y) Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
   { id: 'user-centered-design', term: 'User-Centered Design Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
   { id: 'human-centered-design', term: 'Human-Centered Design Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
   { id: 'design-thinking', term: 'Design Thinking Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
   { id: 'interaction-design', term: 'Interaction Design Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
-  { id: 'information-architecture-ia', term: 'Information Architecture (IA) Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
   { id: 'user-flow', term: 'User Flow Nedir?', category: 'Temel UX Kavramları', emoji: '🧠' },
 
   // ⏱️ Performans & Algı
   { id: '2-saniye-kurali', term: '2 Saniye Kuralı Nedir?', category: 'Performans & Algı', emoji: '⏱️' },
   { id: 'response-time', term: 'Response Time Nedir?', category: 'Performans & Algı', emoji: '⏱️' },
   { id: 'perceived-performance', term: 'Perceived Performance Nedir?', category: 'Performans & Algı', emoji: '⏱️' },
-  { id: 'loading-states', term: 'Loading States Nedir?', category: 'Performans & Algı', emoji: '⏱️' },
   { id: 'skeleton-screen', term: 'Skeleton Screen Nedir?', category: 'Performans & Algı', emoji: '⏱️' },
   { id: 'feedback-visual-system', term: 'Feedback (Visual / System Feedback) Nedir?', category: 'Performans & Algı', emoji: '⏱️' },
 
   // 🔍 Araştırma & Keşif
   { id: 'user-research', term: 'User Research Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
   { id: 'user-interview', term: 'User Interview Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
-  { id: 'usability-testing', term: 'Usability Testing Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
   { id: 'personas', term: 'Personas Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
   { id: 'jobs-to-be-done-jtbd', term: 'Jobs To Be Done (JTBD) Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
   { id: 'user-journey-map', term: 'User Journey Map Nedir?', category: 'Araştırma & Keşif', emoji: '🔍' },
@@ -87,7 +82,6 @@ const UX_TERMS = [
   { id: 'mvp-minimum-viable-product', term: 'MVP (Minimum Viable Product) Nedir?', category: 'Product & Karar Alma', emoji: '🧩' },
   { id: 'product-discovery', term: 'Product Discovery Nedir?', category: 'Product & Karar Alma', emoji: '🧩' },
   { id: 'success-metrics', term: 'Success Metrics Nedir?', category: 'Product & Karar Alma', emoji: '🧩' },
-  { id: 'north-star-metric', term: 'North Star Metric Nedir?', category: 'Product & Karar Alma', emoji: '🧩' },
 
   // 🧪 Test & Doğrulama
   { id: 'kullanilabilirlik-testi', term: 'Kullanılabilirlik Testi (Usability Testing) Nedir?', category: 'Test & Doğrulama', emoji: '🧪' },
@@ -99,26 +93,19 @@ const UX_TERMS = [
   { id: 'gorev-tamamlama-suresi', term: 'Görev Tamamlama Süresi (Time on Task) Nedir?', category: 'Test & Doğrulama', emoji: '🧪' },
 
   // 🧱 UI & Design System
+  { id: 'tasarim-sistemi', term: 'Tasarım Sistemi (Design System) Nedir?', category: 'UI & Design System', emoji: '🧱' },
+  { id: 'bilesen', term: 'Bileşen (Component) Nedir?', category: 'UI & Design System', emoji: '🧱' },
   { id: 'tasarim-degiskenleri', term: 'Tasarım Değişkenleri (Design Tokens) Nedir?', category: 'UI & Design System', emoji: '🧱' },
   { id: 'bilesen-kutuphanesi', term: 'Bileşen Kütüphanesi (Component Library) Nedir?', category: 'UI & Design System', emoji: '🧱' },
   { id: 'tasarim-deseni', term: 'Tasarım Deseni (Design Pattern) Nedir?', category: 'UI & Design System', emoji: '🧱' },
   { id: 'atomik-tasarim', term: 'Atomik Tasarım (Atomic Design) Nedir?', category: 'UI & Design System', emoji: '🧱' },
   { id: 'tutarlilik', term: 'Tutarlılık (Consistency) Nedir?', category: 'UI & Design System', emoji: '🧱' },
-
-  // 🧱 UI & Pattern Odaklı Kavramlar
-  { id: 'design-system', term: 'Design System Nedir?', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
-  { id: 'component', term: 'Component Nedir?', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
-  { id: 'atomic-design', term: 'Atomic Design Nedir?', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
-  { id: 'consistency', term: 'Consistency Nedir?', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
-  { id: 'visual-hierarchy', term: 'Visual Hierarchy Nedir?', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
-  { id: 'empty-state', term: 'Empty State Nedir?', category: 'UI & Pattern Odaklı Kavramlar', emoji: '🧱' },
+  { id: 'gorsel-hiyerarsi', term: 'Görsel Hiyerarşi (Visual Hierarchy) Nedir?', category: 'UI & Design System', emoji: '🧱' },
 
   // ⚠️ Çok Yanlış Anlaşılan ama Çok Önemli
   { id: 'ux-case-study', term: 'UX Case Study Nedir?', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
   { id: 'concept-case', term: 'Concept Case Nedir?', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
   { id: 'edge-case', term: 'Edge Case Nedir?', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
-  { id: 'cognitive-load', term: 'Cognitive Load Nedir?', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
-  { id: 'affordance', term: 'Affordance Nedir?', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
   { id: 'error-prevention', term: 'Error Prevention Nedir?', category: 'Çok Yanlış Anlaşılan ama Çok Önemli', emoji: '⚠️' },
 
   // 🧠 Core UX & Thinking
@@ -127,7 +114,6 @@ const UX_TERMS = [
   { id: 'nielsens-heuristics', term: "Nielsen's Heuristics Nedir?", category: 'Core UX & Thinking', emoji: '🧠' },
   { id: 'empathy', term: 'Empathy Nedir?', category: 'Core UX & Thinking', emoji: '🧠' },
   { id: 'cognitive-bias', term: 'Cognitive Bias Nedir?', category: 'Core UX & Thinking', emoji: '🧠' },
-  { id: 'progressive-disclosure', term: 'Progressive Disclosure Nedir?', category: 'Core UX & Thinking', emoji: '🧠' },
   { id: 'hicks-law', term: "Hick's Law Nedir?", category: 'Core UX & Thinking', emoji: '🧠' },
   { id: 'fittss-law', term: "Fitts's Law Nedir?", category: 'Core UX & Thinking', emoji: '🧠' },
   { id: 'jakobs-law', term: "Jakob's Law Nedir?", category: 'Core UX & Thinking', emoji: '🧠' },
@@ -158,19 +144,37 @@ const TERM_CONTENTS: Record<string, TermContent> = {
     ],
     relatedConcepts: ['Visual Hierarchy', 'Design System', 'Consistency']
   },
-  'usability': {
-    shortDefinition: 'Usability, bir ürünün kullanıcılar tarafından ne kadar kolay, hızlı ve hatasız kullanılabildiğini ifade eder.',
-    detailedDescription: 'Kullanılabilirlik; öğrenilebilirlik, hata oranı ve görev tamamlama süresi gibi kriterlerle değerlendirilir. Bir ürün görsel olarak iyi tasarlanmış olabilir ancak kullanımı zorsa usability düşüktür.\n\nİyi usability, kullanıcıyı eğitmeye gerek kalmadan hedefe ulaştırır ve kullanıcıyı yormaz.',
-    exampleScenario: 'Bir formda hangi alanların zorunlu olduğu anlaşılmıyorsa ve kullanıcı hata mesajlarıyla karşılaşıyorsa, burada bir usability problemi vardır.',
+  'tasarim-sistemi': {
+    shortDefinition: 'Tasarım Sistemi, bir ürünün tasarım ve geliştirme süreçlerinde tutarlılık sağlamak için oluşturulan bileşen, kural ve prensipler bütünüdür.',
+    detailedDescription: 'Design System yalnızca UI bileşenlerinden ibaret değildir; renkler, tipografi, davranış kuralları ve kullanım rehberlerini de kapsar.\n\nİyi bir design system, ekiplerin daha hızlı ve tutarlı çalışmasını sağlar.',
+    exampleScenario: 'Farklı ekiplerin aynı butonu farklı şekillerde tasarlaması, design system eksikliğine işaret eder.',
     whenToUse: [
-      'Ürün test edilirken',
-      'Kullanıcı hataları analiz edilirken',
-      'Akışlar sadeleştirilirken'
+      'Büyük ürünlerde',
+      'Birden fazla ekip çalışıyorsa'
     ],
-    relatedConcepts: ['Usability Testing', 'Cognitive Load', 'Error Prevention']
+    relatedConcepts: ['Component', 'Consistency', 'Atomic Design', 'Design Tokens']
   },
-  'accessibility-a11y': {
-    shortDefinition: 'Accessibility, dijital ürünlerin farklı yetilere sahip kullanıcılar tarafından da erişilebilir ve kullanılabilir olmasını ifade eder.',
+  'bilesen': {
+    shortDefinition: 'Bileşen, bir arayüzde tekrar eden ve farklı yerlerde kullanılabilen bağımsız UI parçasıdır.',
+    detailedDescription: 'Component\'ler, tasarım ve geliştirme sürecini ölçeklenebilir hale getirir. Değişiklikler tek noktadan yönetilebilir.\n\nYanlış kurgulanan component\'ler ise esnekliği azaltabilir.',
+    exampleScenario: 'Bir buton component\'i, farklı ekranlarda aynı davranışı sergiler.',
+    whenToUse: [
+      'Design system oluşturulurken',
+      'Tekrar eden UI elemanları tasarlanırken'
+    ],
+    relatedConcepts: ['Design System', 'Atomic Design', 'Consistency', 'Component Library']
+  },
+  'gorsel-hiyerarsi': {
+    shortDefinition: 'Görsel Hiyerarşi, ekrandaki öğelerin önem sırasına göre algılanmasını sağlayan görsel düzenlemedir.',
+    detailedDescription: 'Visual Hierarchy, boyut, renk, kontrast ve boşluk gibi öğeler kullanılarak kullanıcının dikkati yönlendirilir.\n\nİyi bir görsel hiyerarşi, kullanıcıya "önce nereye bakması gerektiğini" söyler.',
+    exampleScenario: 'Başlığın büyük, açıklamanın daha küçük yazılması görsel hiyerarşinin bir sonucudur.',
+    whenToUse: [
+      'Ekran tasarımları yapılırken',
+      'Bilgi önceliklendirilirken'
+    ],
+    relatedConcepts: ['UI Design', 'Consistency', 'Accessibility']
+  },
+  'user-centered-design': {
     detailedDescription: 'Erişilebilirlik yalnızca engelli kullanıcılar için değil, herkes için daha iyi bir deneyim anlamına gelir. Kontrast, klavye ile kullanım ve ekran okuyucu uyumluluğu bu kapsamda değerlendirilir.\n\nİyi bir accessibility yaklaşımı, daha kapsayıcı ve sürdürülebilir ürünler ortaya çıkarır.',
     exampleScenario: 'Düşük kontrastlı bir metin, görme problemi olan kullanıcılar için okunamaz hâle gelebilir.',
     whenToUse: [
@@ -220,16 +224,6 @@ const TERM_CONTENTS: Record<string, TermContent> = {
     ],
     relatedConcepts: ['Feedback', 'User Flow', 'Microinteractions']
   },
-  'information-architecture-ia': {
-    shortDefinition: 'Information Architecture, bilginin nasıl yapılandırıldığını ve kullanıcıya nasıl sunulduğunu ifade eder.',
-    detailedDescription: 'IA, kullanıcının doğru bilgiye doğru zamanda ulaşmasını sağlar. Menü yapıları, kategoriler ve hiyerarşi bu kapsamda değerlendirilir.',
-    exampleScenario: 'Kullanıcının aradığı içeriği menüde bulamaması, bir bilgi mimarisi problemidir.',
-    whenToUse: [
-      'Navigasyon tasarlanırken',
-      'İçerik yapısı kurgulanırken'
-    ],
-    relatedConcepts: ['Navigation', 'User Flow', 'Content Strategy']
-  },
   'user-flow': {
     shortDefinition: 'User Flow, kullanıcının bir hedefe ulaşmak için izlediği adımların bütünüdür.',
     detailedDescription: 'Net ve kesintisiz bir user flow, kullanıcıyı doğru aksiyona yönlendirir. Gereksiz adımlar kullanıcıyı yorar ve terk oranını artırır.',
@@ -249,7 +243,7 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Performans algısı değerlendirilirken',
       'Loading ve feedback durumları kurgulanırken'
     ],
-    relatedConcepts: ['Response Time', 'Perceived Performance', 'Feedback', 'Loading States']
+    relatedConcepts: ['Response Time', 'Perceived Performance', 'Feedback']
   },
   'response-time': {
     shortDefinition: 'Response Time, kullanıcının bir aksiyonundan sonra sistemin tepki vermesi için geçen süredir.',
@@ -269,18 +263,7 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Loading deneyimleri tasarlanırken',
       'Performans algısı iyileştirilirken'
     ],
-    relatedConcepts: ['Skeleton Screen', 'Loading States', 'Feedback']
-  },
-  'loading-states': {
-    shortDefinition: 'Loading states, sistemin bir işlem yaptığı sırada kullanıcıya gösterdiği geçici durumlardır.',
-    detailedDescription: 'Loading state\'ler kullanıcıyı belirsizlikten kurtarır. Kullanıcı, sistemin çalıştığını anlar ve beklemeye daha toleranslı olur.\n\nYanlış veya eksik loading state kullanımı, kullanıcıyı güvensiz hissettirebilir.',
-    exampleScenario: 'Bir liste yüklenirken spinner veya skeleton gösterilmemesi, sayfanın donduğu izlenimini verebilir.',
-    whenToUse: [
-      'Veri yüklenirken',
-      'Sayfa geçişlerinde',
-      'Uzun süren işlemlerde'
-    ],
-    relatedConcepts: ['Perceived Performance', 'Skeleton Screen', 'Feedback']
+    relatedConcepts: ['Skeleton Screen', 'Feedback']
   },
   'skeleton-screen': {
     shortDefinition: 'Skeleton screen, içerik yüklenmeden önce sayfanın iskelet yapısını gösteren bir loading tekniğidir.',
@@ -321,16 +304,6 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Varsayımları doğrulamak için'
     ],
     relatedConcepts: ['User Research', 'Qualitative Research', 'Empathy']
-  },
-  'usability-testing': {
-    shortDefinition: 'Usability testing, kullanıcıların bir ürünü kullanırken yaşadığı problemleri gözlemlemeye yönelik testlerdir.',
-    detailedDescription: 'Bu testler, tasarımcının değil kullanıcının bakış açısını ortaya koyar. Küçük testler bile büyük problemleri açığa çıkarabilir.\n\nAmaç, kullanıcıyı test etmek değil, ürünü test etmektir.',
-    exampleScenario: 'Bir kullanıcının kayıt olurken sürekli yanlış alanları doldurması usability problemine işaret eder.',
-    whenToUse: [
-      'Tasarım doğrulanırken',
-      'Yayın öncesi kontrollerde'
-    ],
-    relatedConcepts: ['Usability', 'User Testing', 'Feedback']
   },
   'personas': {
     shortDefinition: 'Personas, hedef kullanıcı gruplarını temsil eden kurgusal ama veri temelli karakterlerdir.',
@@ -413,76 +386,6 @@ const TERM_CONTENTS: Record<string, TermContent> = {
     ],
     relatedConcepts: ['North Star Metric', 'KPI', 'Experiment']
   },
-  'north-star-metric': {
-    shortDefinition: 'North Star Metric, bir ürünün uzun vadeli değerini en iyi temsil eden ana metriktir.',
-    detailedDescription: 'Bu metrik, ekiplerin aynı hedefe odaklanmasını sağlar. Her metrik North Star değildir; kullanıcıya sağlanan değeri yansıtması gerekir.\n\nYanlış seçilmiş bir North Star, ürünü yanlış yönde büyütebilir.',
-    exampleScenario: 'Bir içerik platformu için "haftalık aktif okuyucu sayısı" bir North Star Metric olabilir.',
-    whenToUse: [
-      'Ürün stratejisi belirlenirken',
-      'Ekip hedefleri hizalanırken'
-    ],
-    relatedConcepts: ['Success Metrics', 'KPI', 'Product Strategy']
-  },
-  'design-system': {
-    shortDefinition: 'Design System, bir ürünün tasarım ve geliştirme süreçlerinde tutarlılık sağlamak için oluşturulan bileşen, kural ve prensipler bütünüdür.',
-    detailedDescription: 'Design system yalnızca UI bileşenlerinden ibaret değildir; renkler, tipografi, davranış kuralları ve kullanım rehberlerini de kapsar.\n\nİyi bir design system, ekiplerin daha hızlı ve tutarlı çalışmasını sağlar.',
-    exampleScenario: 'Farklı ekiplerin aynı butonu farklı şekillerde tasarlaması, design system eksikliğine işaret eder.',
-    whenToUse: [
-      'Büyük ürünlerde',
-      'Birden fazla ekip çalışıyorsa'
-    ],
-    relatedConcepts: ['Component', 'Consistency', 'Atomic Design']
-  },
-  'component': {
-    shortDefinition: 'Component, bir arayüzde tekrar eden ve farklı yerlerde kullanılabilen bağımsız UI parçasıdır.',
-    detailedDescription: 'Component\'ler, tasarım ve geliştirme sürecini ölçeklenebilir hale getirir. Değişiklikler tek noktadan yönetilebilir.\n\nYanlış kurgulanan component\'ler ise esnekliği azaltabilir.',
-    exampleScenario: 'Bir buton component\'i, farklı ekranlarda aynı davranışı sergiler.',
-    whenToUse: [
-      'Design system oluşturulurken',
-      'Tekrar eden UI elemanları tasarlanırken'
-    ],
-    relatedConcepts: ['Design System', 'Atomic Design', 'Consistency']
-  },
-  'atomic-design': {
-    shortDefinition: 'Atomic Design, arayüzleri küçük parçalardan başlayarak daha büyük ve anlamlı yapılara dönüştüren bir tasarım metodolojisidir.',
-    detailedDescription: 'Bu yaklaşım, UI\'ı atom, molekül, organizma gibi katmanlara ayırır. Amaç sadece isimlendirme değil, sistematik düşünmeyi sağlamaktır.\n\nYanlış anlaşıldığında fazla teorik kalabilir; doğru uygulandığında ise design system\'lerin temelini oluşturur.',
-    exampleScenario: 'Bir buton atomdur, buton + ikon bir molekül olabilir, bu yapıların birleşmesiyle daha karmaşık arayüzler oluşur.',
-    whenToUse: [
-      'Design system kurulurken',
-      'Bileşenler ölçeklenirken'
-    ],
-    relatedConcepts: ['Design System', 'Component', 'Consistency']
-  },
-  'consistency': {
-    shortDefinition: 'Consistency, bir ürünün tüm ekranlarında ve etkileşimlerinde tutarlı davranmasıdır.',
-    detailedDescription: 'Tutarlılık, kullanıcıların ürünü öğrenme süresini kısaltır. Kullanıcı bir yerde öğrendiği davranışı başka bir yerde de geçerli varsayar.\n\nTutarsız tasarımlar kullanıcıyı düşündürür ve hata yapmasına neden olur.',
-    exampleScenario: 'Bir ekranda mavi olan "Devam" butonunun başka bir ekranda gri olması kafa karışıklığı yaratır.',
-    whenToUse: [
-      'UI kararları alınırken',
-      'Design system uygulanırken'
-    ],
-    relatedConcepts: ['Design System', 'Visual Hierarchy', 'Usability']
-  },
-  'visual-hierarchy': {
-    shortDefinition: 'Visual Hierarchy, ekrandaki öğelerin önem sırasına göre algılanmasını sağlayan görsel düzenlemedir.',
-    detailedDescription: 'Boyut, renk, kontrast ve boşluk gibi öğeler kullanılarak kullanıcının dikkati yönlendirilir.\n\nİyi bir görsel hiyerarşi, kullanıcıya "önce nereye bakması gerektiğini" söyler.',
-    exampleScenario: 'Başlığın büyük, açıklamanın daha küçük yazılması görsel hiyerarşinin bir sonucudur.',
-    whenToUse: [
-      'Ekran tasarımları yapılırken',
-      'Bilgi önceliklendirilirken'
-    ],
-    relatedConcepts: ['UI Design', 'Consistency', 'Accessibility']
-  },
-  'empty-state': {
-    shortDefinition: 'Empty state, bir ekranda henüz içerik olmadığında kullanıcıya gösterilen durumdur.',
-    detailedDescription: 'Empty state\'ler sadece "boş" ekranlar değildir; kullanıcıyı yönlendiren fırsatlardır.\n\nİyi bir empty state, kullanıcıya ne yapması gerektiğini net bir şekilde anlatır.',
-    exampleScenario: 'Yeni kayıt olan bir kullanıcının boş dashboard yerine yönlendirici bir mesaj görmesi empty state örneğidir.',
-    whenToUse: [
-      'İlk kullanımda',
-      'Veri olmadığında'
-    ],
-    relatedConcepts: ['Onboarding', 'Feedback', 'UX Writing']
-  },
   'ux-case-study': {
     shortDefinition: 'UX Case Study, bir problemin nasıl ele alındığını ve hangi süreçlerle çözüldüğünü anlatan tasarım hikâyesidir.',
     detailedDescription: 'UX case\'ler sonuçtan çok sürece odaklanır. Ekran sayısından ziyade kararların gerekçeleri önemlidir.\n\nİyi bir UX case, düşünce biçimini net bir şekilde aktarır.',
@@ -512,26 +415,6 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Hata senaryoları düşünülürken'
     ],
     relatedConcepts: ['Error Prevention', 'Feedback', 'User Flow']
-  },
-  'cognitive-load': {
-    shortDefinition: 'Cognitive load, kullanıcının bir görevi yerine getirirken harcadığı zihinsel efor miktarıdır.',
-    detailedDescription: 'Yüksek bilişsel yük, kullanıcıyı yorar ve hata yapma olasılığını artırır.\n\nİyi UX, kullanıcıdan mümkün olan en az zihinsel eforu talep eder.',
-    exampleScenario: 'Aynı ekranda çok fazla seçenek sunulması cognitive load\'u artırır.',
-    whenToUse: [
-      'Form ve akış tasarlanırken',
-      'Bilgi yoğun ekranlarda'
-    ],
-    relatedConcepts: ['Usability', 'Visual Hierarchy', 'Progressive Disclosure']
-  },
-  'affordance': {
-    shortDefinition: 'Affordance, bir nesnenin nasıl kullanılacağını kullanıcıya sezgisel olarak anlatma yeteneğidir.',
-    detailedDescription: 'Bir öğenin tıklanabilir mi, sürüklenebilir mi olduğu görünümünden anlaşılmalıdır.\n\nGizli affordance\'lar kullanıcıyı deneme-yanılmaya iter.',
-    exampleScenario: 'Buton gibi görünen bir alanın tıklanamaması affordance problemidir.',
-    whenToUse: [
-      'Etkileşimler tasarlanırken',
-      'UI elemanları değerlendirilirken'
-    ],
-    relatedConcepts: ['Signifiers', 'Interaction Design', 'Feedback']
   },
   'error-prevention': {
     shortDefinition: 'Error prevention, kullanıcıların hata yapmasını en baştan engellemeye yönelik tasarım yaklaşımıdır.',
@@ -593,16 +476,6 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Form ve seçim alanları oluşturulurken'
     ],
     relatedConcepts: ['Default Bias', 'Decision Making', 'Behavioral Design']
-  },
-  'progressive-disclosure': {
-    shortDefinition: 'Progressive disclosure, bilgiyi kullanıcıya ihtiyaç duyduğu anda ve parça parça sunma yaklaşımıdır.',
-    detailedDescription: 'Tüm bilgiyi tek ekranda göstermek kullanıcıyı bunaltır. Progressive disclosure, karmaşıklığı yönetilebilir hale getirir.\n\nBu yaklaşım, bilişsel yükü azaltır ve kullanıcıyı daha rahat ilerletir.',
-    exampleScenario: 'Gelişmiş ayarların varsayılan olarak gizli olması progressive disclosure\'dır.',
-    whenToUse: [
-      'Karmaşık akışlar tasarlanırken',
-      'Ayar ve konfigürasyon ekranlarında'
-    ],
-    relatedConcepts: ['Cognitive Load', 'Visual Hierarchy', 'UX Writing']
   },
   'hicks-law': {
     shortDefinition: "Hick's Law, kullanıcıya sunulan seçenek sayısı arttıkça karar verme süresinin de arttığını söyler.",
