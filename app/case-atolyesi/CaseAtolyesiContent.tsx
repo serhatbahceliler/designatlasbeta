@@ -163,6 +163,7 @@ export default function CaseAtolyesiContent() {
       if (response.status === 204) {
         console.warn("Received 204 No Content from /api/cases");
         setThreads([]);
+        setIsLoadingThreads(false);
         return;
       }
 
@@ -176,6 +177,7 @@ export default function CaseAtolyesiContent() {
       if (!contentType || !contentType.includes("application/json")) {
         console.error("Unexpected response type from /api/cases:", contentType);
         setThreads([]);
+        setIsLoadingThreads(false);
         return;
       }
 
