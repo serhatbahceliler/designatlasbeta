@@ -42,6 +42,18 @@ const UX_TERMS = [
   { id: 'jobs-to-be-done-jtbd', term: 'Jobs To Be Done (JTBD)', category: 'Research & Discovery', emoji: '🧪' },
   { id: 'user-journey-map', term: 'User Journey Map', category: 'Research & Discovery', emoji: '🧪' },
 
+  // 🔍 Araştırma & Keşif
+  { id: 'exploratory-research', term: 'Keşifsel Araştırma', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'generative-research', term: 'Üretici Araştırma', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'evaluative-research', term: 'Değerlendirici Araştırma', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'research-operations', term: 'Araştırma Operasyonları', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'insight', term: 'İçgörü', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'affinity-mapping', term: 'Yakınlık Haritalama', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'synthesis', term: 'Sentez', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'contextual-inquiry', term: 'Bağlamsal Sorgulama', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'diary-study', term: 'Günlük Çalışması', category: 'Araştırma & Keşif', emoji: '🔍' },
+  { id: 'assumption-mapping', term: 'Varsayım Haritalama', category: 'Araştırma & Keşif', emoji: '🔍' },
+
   // 🧩 Product & Karar Alma
   { id: 'problem-statement', term: 'Problem Statement', category: 'Product & Karar Alma', emoji: '🧩' },
   { id: 'hypothesis', term: 'Hypothesis', category: 'Product & Karar Alma', emoji: '🧩' },
@@ -588,6 +600,116 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Bilgi gruplandırılırken'
     ],
     relatedConcepts: ['Visual Hierarchy', 'UI Design', 'Cognitive Load']
+  },
+  'exploratory-research': {
+    shortDefinition: 'Keşifsel Araştırma, henüz net olmayan problem alanlarını anlamak ve yeni fırsatları keşfetmek için yapılan araştırma türüdür.',
+    detailedDescription: 'Bu araştırma türü, "ne bilmiyoruz?" sorusuna cevap arar. Problem tanımı net değilken, kullanıcı ihtiyaçları belirsizken veya yeni bir alan keşfedilirken kullanılır.\n\nKeşifsel araştırma, hipotez oluşturmaktan çok soru oluşturmayı hedefler. Açık uçlu sorular ve derinlemesine görüşmeler bu araştırmanın temelidir.\n\nBu araştırma sonunda net çözümler değil, daha iyi anlaşılmış problem alanları ve araştırma soruları elde edilir.',
+    exampleScenario: 'Yeni bir sağlık uygulaması geliştirmeye başlarken, kullanıcıların sağlık yönetimi konusunda hangi zorlukları yaşadığını anlamak için keşifsel araştırma yapılır.',
+    whenToUse: [
+      'Problem alanı belirsizken',
+      'Yeni bir ürün veya özellik düşünülürken',
+      'Kullanıcı ihtiyaçları hakkında çok az bilgi varken'
+    ],
+    relatedConcepts: ['User Research', 'User Interview', 'Generative Research', 'Problem Statement']
+  },
+  'generative-research': {
+    shortDefinition: 'Üretici Araştırma, yeni fikirler ve çözümler üretmek için kullanıcıların ihtiyaçlarını, motivasyonlarını ve davranışlarını anlamaya yönelik araştırma türüdür.',
+    detailedDescription: 'Generative research, "ne yapmalıyız?" sorusuna cevap arar. Kullanıcıların gerçek ihtiyaçlarını ortaya çıkararak, henüz var olmayan çözümler için fırsatlar yaratır.\n\nBu araştırma türü, kullanıcıların söylediklerinden çok yaptıklarına ve neden yaptıklarına odaklanır. Gözlem ve derinlemesine görüşmeler kritik öneme sahiptir.\n\nÜretici araştırma, tasarım sürecinin başında yapılır ve tasarım kararlarını yönlendirir. Mevcut bir ürünü değerlendirmek için değil, yeni bir şey yaratmak için kullanılır.',
+    exampleScenario: 'Bir e-ticaret platformu için yeni bir özellik geliştirmeden önce, kullanıcıların alışveriş sürecinde hangi problemleri yaşadığını anlamak için üretici araştırma yapılır.',
+    whenToUse: [
+      'Yeni ürün veya özellik geliştirilirken',
+      'Kullanıcı ihtiyaçları keşfedilirken',
+      'Tasarım sürecinin başında'
+    ],
+    relatedConcepts: ['User Research', 'Exploratory Research', 'User Interview', 'Contextual Inquiry']
+  },
+  'evaluative-research': {
+    shortDefinition: 'Değerlendirici Araştırma, mevcut bir ürün, prototip veya tasarımın kullanılabilirliğini ve etkinliğini değerlendirmek için yapılan araştırma türüdür.',
+    detailedDescription: 'Bu araştırma türü, "çalışıyor mu?" sorusuna cevap arar. Tasarım kararlarının doğruluğunu test eder ve iyileştirme alanlarını ortaya çıkarır.\n\nDeğerlendirici araştırma, genellikle bir çözüm oluşturulduktan sonra yapılır. Usability testing, A/B testing ve kullanıcı geri bildirimleri bu kapsamda değerlendirilir.\n\nBu araştırma, tasarım sürecinin her aşamasında yapılabilir: erken prototiplerden canlı ürünlere kadar. Amaç, problemleri erken tespit etmek ve çözümleri iyileştirmektir.',
+    exampleScenario: 'Yeni tasarlanan bir onboarding akışının kullanıcılar tarafından anlaşılıp anlaşılmadığını test etmek için değerlendirici araştırma yapılır.',
+    whenToUse: [
+      'Tasarım veya prototip test edilirken',
+      'Mevcut ürün iyileştirilirken',
+      'Tasarım kararlarının doğruluğu kontrol edilirken'
+    ],
+    relatedConcepts: ['Usability Testing', 'User Testing', 'A/B Testing', 'Feedback']
+  },
+  'research-operations': {
+    shortDefinition: 'Araştırma Operasyonları (Research Ops), kullanıcı araştırmasının etkin ve ölçeklenebilir şekilde yürütülmesi için gerekli süreçler, araçlar ve altyapıyı yöneten disiplindir.',
+    detailedDescription: 'Research Ops, araştırmacıların araştırma yapmaya odaklanabilmesi için operasyonel işleri optimize eder. Katılımcı bulma, veri yönetimi, araç seçimi ve araştırma sonuçlarının paylaşımı gibi konuları kapsar.\n\nİyi bir Research Ops yapısı, araştırma sürecini hızlandırır, kaliteyi artırır ve araştırma bulgularının organizasyonda daha geniş kullanımını sağlar.\n\nBu disiplin, özellikle büyük organizasyonlarda ve birden fazla araştırmacının çalıştığı ekiplerde kritik öneme sahiptir.',
+    exampleScenario: 'Bir şirkette tüm araştırmacıların aynı katılımcı havuzunu kullanması, araştırma sonuçlarının merkezi bir platformda saklanması ve araştırma şablonlarının standartlaştırılması Research Ops kapsamındadır.',
+    whenToUse: [
+      'Araştırma süreçleri ölçeklendirilirken',
+      'Birden fazla araştırmacı çalışırken',
+      'Araştırma verimliliği artırılmak istendiğinde'
+    ],
+    relatedConcepts: ['User Research', 'Research Process', 'Data Management', 'Research Tools']
+  },
+  'insight': {
+    shortDefinition: 'İçgörü, kullanıcı araştırmasından elde edilen ve tasarım kararlarını yönlendiren derin anlayış ve farkındalıktır.',
+    detailedDescription: 'İçgörü, sadece bir gözlem veya veri değildir. Kullanıcıların davranışlarının, ihtiyaçlarının ve motivasyonlarının altında yatan nedenleri açıklayan, eyleme dönüştürülebilir anlayıştır.\n\nİyi bir içgörü, "kullanıcılar bunu yapıyor" demek yerine "kullanıcılar bunu şu sebepten dolayı yapıyor ve bu bize şunu gösteriyor" der.\n\nİçgörüler, araştırma verilerinin sentezlenmesi ve analiz edilmesiyle ortaya çıkar. Tek bir veri noktasından değil, birden fazla kaynaktan gelen bilgilerin birleştirilmesiyle oluşur.',
+    exampleScenario: 'Kullanıcı görüşmelerinde birçok kişinin "zaman kazanmak" istediğini söylemesi bir gözlemdir. Ancak "kullanıcılar zaman kazanmak istiyor çünkü tekrarlayan görevlerden bunaldılar ve otomasyon arıyorlar" bir içgörüdür.',
+    whenToUse: [
+      'Tasarım kararları alınırken',
+      'Problem tanımları yapılırken',
+      'Ürün stratejisi oluşturulurken'
+    ],
+    relatedConcepts: ['User Research', 'Synthesis', 'Affinity Mapping', 'Problem Statement']
+  },
+  'affinity-mapping': {
+    shortDefinition: 'Yakınlık Haritalama, araştırma verilerini benzerliklerine göre gruplandırarak kalıpları ve temaları ortaya çıkaran bir sentez yöntemidir.',
+    detailedDescription: 'Bu yöntem, çok sayıda araştırma verisini (notlar, gözlemler, geri bildirimler) fiziksel veya dijital olarak gruplandırarak organize eder. Benzer içerikler bir araya getirilir ve her grup bir tema veya kalıp temsil eder.\n\nAffinity mapping, ekip çalışması için idealdir. Herkesin verileri birlikte gruplandırması, ortak bir anlayış oluşturur ve farklı bakış açılarını birleştirir.\n\nBu yöntem, karmaşık araştırma verilerini anlaşılır hale getirir ve içgörülerin ortaya çıkmasını sağlar.',
+    exampleScenario: '20 kullanıcı görüşmesinden çıkan notlar, post-it\'lere yazılıp duvara yapıştırılır. Benzer gözlemler bir araya getirilir ve her grup için bir başlık oluşturulur. Bu sayede "ödeme süreci" ve "ürün arama" gibi temalar ortaya çıkar.',
+    whenToUse: [
+      'Çok sayıda araştırma verisi analiz edilirken',
+      'Ekip olarak veri sentezi yapılırken',
+      'Kalıplar ve temalar keşfedilirken'
+    ],
+    relatedConcepts: ['Synthesis', 'User Research', 'Insight', 'Data Analysis']
+  },
+  'synthesis': {
+    shortDefinition: 'Sentez, araştırma verilerini analiz ederek anlamlı kalıplar, temalar ve içgörüler ortaya çıkarma sürecidir.',
+    detailedDescription: 'Sentez, ham veriyi anlamlı bilgiye dönüştürür. Araştırmadan toplanan notlar, gözlemler ve geri bildirimler, organize edilir, gruplandırılır ve yorumlanır.\n\nBu süreç, tek tek veri noktalarından çok, bunların bir araya gelmesiyle oluşan büyük resmi görmeyi sağlar. Sentez olmadan araştırma verileri sadece bir bilgi yığınıdır.\n\nİyi bir sentez, tasarım kararlarını yönlendirebilecek net içgörüler ve öneriler üretir.',
+    exampleScenario: '10 kullanıcı görüşmesinden çıkan notlar, affinity mapping ile gruplandırılır, her grup için temalar belirlenir ve bu temalardan tasarım önerileri çıkarılır. Bu tüm süreç sentezdir.',
+    whenToUse: [
+      'Araştırma verileri toplandıktan sonra',
+      'İçgörüler ortaya çıkarılırken',
+      'Tasarım kararları alınmadan önce'
+    ],
+    relatedConcepts: ['User Research', 'Affinity Mapping', 'Insight', 'Data Analysis']
+  },
+  'contextual-inquiry': {
+    shortDefinition: 'Bağlamsal Sorgulama, kullanıcıların kendi doğal ortamlarında gözlemlenmesi ve aynı anda görüşme yapılması yöntemiyle gerçek kullanım bağlamını anlamaya yönelik bir araştırma yöntemidir.',
+    detailedDescription: 'Bu yöntem, kullanıcıların laboratuvar ortamında değil, gerçek çalışma veya yaşam alanlarında gözlemlenmesini sağlar. Araştırmacı, kullanıcının gerçek bağlamında nasıl davrandığını görür ve aynı anda sorular sorarak davranışların nedenlerini anlar.\n\nBağlamsal sorgulama, kullanıcıların söyledikleri ile yaptıkları arasındaki farkı ortaya çıkarır. Gerçek problemler ve kullanım senaryoları bu yöntemle daha net görülür.\n\nBu yöntem özellikle karmaşık sistemler ve iş süreçleri için değerlidir çünkü bağlam, kullanıcı davranışını büyük ölçüde etkiler.',
+    exampleScenario: 'Bir sağlık uygulaması tasarlarken, araştırmacı bir doktorun ofisinde, gerçek hasta randevuları sırasında doktoru gözlemler ve aynı anda "bu bilgiyi neden burada arıyorsunuz?" gibi sorular sorar.',
+    whenToUse: [
+      'Gerçek kullanım bağlamını anlamak istendiğinde',
+      'Karmaşık iş süreçleri araştırılırken',
+      'Kullanıcıların söyledikleri ile yaptıkları arasındaki farkı görmek için'
+    ],
+    relatedConcepts: ['User Research', 'User Interview', 'Ethnographic Research', 'Field Study']
+  },
+  'diary-study': {
+    shortDefinition: 'Günlük Çalışması, kullanıcıların belirli bir süre boyunca deneyimlerini, davranışlarını ve düşüncelerini günlük formatında kaydetmesini sağlayan uzun vadeli bir araştırma yöntemidir.',
+    detailedDescription: 'Bu yöntem, kullanıcıların zaman içindeki deneyimlerini ve davranış değişikliklerini anlamak için kullanılır. Katılımcılar, belirli bir süre boyunca (genellikle birkaç gün veya hafta) günlük tutar veya düzenli olarak geri bildirim verir.\n\nGünlük çalışması, anlık davranışları ve uzun vadeli trendleri yakalamak için idealdir. Kullanıcıların kendi ortamlarında, kendi zamanlarında veri toplamasını sağlar.\n\nBu yöntem özellikle zaman içinde değişen ihtiyaçları, alışkanlıkları ve kullanım kalıplarını anlamak için değerlidir.',
+    exampleScenario: 'Bir fitness uygulaması için, kullanıcılardan 2 hafta boyunca her gün egzersiz yapma motivasyonlarını, engellerini ve deneyimlerini kaydetmeleri istenir. Bu veriler, uygulamanın nasıl kullanıldığını ve hangi anlarda destek gerektiğini gösterir.',
+    whenToUse: [
+      'Zaman içindeki davranış değişikliklerini anlamak için',
+      'Uzun vadeli kullanım kalıplarını görmek için',
+      'Kullanıcıların kendi ortamlarında veri toplamak için'
+    ],
+    relatedConcepts: ['User Research', 'Longitudinal Study', 'User Behavior', 'Qualitative Research']
+  },
+  'assumption-mapping': {
+    shortDefinition: 'Varsayım Haritalama, ekibin bir ürün veya özellik hakkındaki varsayımlarını görselleştirerek, hangilerinin test edilmesi gerektiğini belirleyen bir çalışma yöntemidir.',
+    detailedDescription: 'Bu yöntem, ekibin bilinçli veya bilinçsiz varsayımlarını ortaya çıkarır ve bunları önem ve belirsizlik ekseninde haritalandırır. Yüksek önem ve yüksek belirsizlik içeren varsayımlar, öncelikli olarak test edilmesi gerekenlerdir.\n\nVarsayım haritalama, ekibin aynı sayfada olmasını sağlar ve hangi araştırmaların yapılması gerektiğini netleştirir. Varsayımlar test edilmeden ürün geliştirmek risklidir.\n\nBu yöntem, özellikle yeni ürün veya özellik geliştirirken, ekibin farklı varsayımlarını bir araya getirmek ve önceliklendirmek için kullanılır.',
+    exampleScenario: 'Yeni bir ödeme özelliği geliştirilirken, ekip varsayımlarını listeler: "Kullanıcılar hızlı ödeme istiyor", "Güvenlik en önemli faktör", "Mobil kullanıcılar daha fazla". Bu varsayımlar önem ve belirsizlik ekseninde haritalandırılır ve en riskli olanlar önce test edilir.',
+    whenToUse: [
+      'Yeni ürün veya özellik geliştirilirken',
+      'Ekip varsayımlarını netleştirmek istediğinde',
+      'Araştırma önceliklerini belirlerken'
+    ],
+    relatedConcepts: ['Hypothesis', 'Risk Assessment', 'Product Discovery', 'User Research']
   }
 };
 
