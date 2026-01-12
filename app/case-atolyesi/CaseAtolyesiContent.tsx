@@ -123,32 +123,6 @@ export default function CaseAtolyesiContent() {
   const showSidebar = hasThreads && sidebarOpen;
   const abortControllerRef = useRef<AbortController | null>(null);
 
-  // Reset state when navigating to this page or on mount
-  useEffect(() => {
-    const isRouteChange = prevPathnameRef.current !== null && prevPathnameRef.current !== pathname;
-    const isFirstMount = prevPathnameRef.current === null;
-    
-    if (isRouteChange || isFirstMount) {
-      // Route changed or first mount - reset state
-      setThreads([]);
-      setSelectedThreadId(null);
-      setMessages([]);
-      setInput("");
-      setIsLoading(false);
-      setError("");
-      setIsLoadingThreads(true);
-      setSidebarOpen(false);
-      
-      // Load threads if user is available
-      if (user) {
-        loadThreads();
-      } else {
-        setIsLoadingThreads(false);
-      }
-    }
-    prevPathnameRef.current = pathname;
-  }, [pathname, user, loadThreads]);
-
   const loadThreads = useCallback(async () => {
     try {
       setIsLoadingThreads(true);
@@ -208,14 +182,40 @@ export default function CaseAtolyesiContent() {
     }
   }, []);
 
-  // Load threads when user is available
+  // Reset state when navigating to this page or on mount
   useEffect(() => {
-    if (user) {
+    const isRouteChange = prevPathnameRef.current !== null && prevPathnameRef.current !== pathname;
+    const isFirstMount = prevPathnameRef.current === null;
+    
+    if (isRouteChange || isFirstMount) {
+      // Route changed or first mount - reset state
+      setThreads([]);
+      setSelectedThreadId(null);
+      setMessages([]);
+      setInput("");
+      setIsLoading(false);
+      setError("");
+      setIsLoadingThreads(true);
+      setSidebarOpen(false);
+      
+      // Load threads if user is available
+      if (user) {
+        loadThreads();
+      } else {
+        setIsLoadingThreads(false);
+      }
+    }
+    prevPathnameRef.current = pathname;
+  }, [pathname, user, loadThreads]);
+
+  // Load threads when user is available (fallback for when route doesn't change)
+  useEffect(() => {
+    if (user && prevPathnameRef.current === pathname) {
       loadThreads();
-    } else {
+    } else if (!user) {
       setIsLoadingThreads(false);
     }
-  }, [user, loadThreads]);
+  }, [user, loadThreads, pathname]);
 
   // Load messages when thread is selected (but not if we're in the middle of sending a message)
   const isSendingMessageRef = useRef(false);
