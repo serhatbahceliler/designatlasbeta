@@ -1119,8 +1119,11 @@ export default function UXSozlukPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               UX Sözlük
             </h1>
+            <div className="inline-block px-6 py-2 mb-4 rounded-full bg-[#DEFF37]/10 border border-[#DEFF37]/30 text-[#DEFF37] font-semibold">
+              {UX_TERMS.length} terim · {categories.length} kategori
+            </div>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              UX, UI ve Product Design terimlerinin açıklamaları
+              UX, UI ve Product Design süreçlerinde sıkça karşınıza çıkan temel kavramları, sade tanımlarla DesignAtlas UX Sözlük'te topladık.
             </p>
           </div>
 
