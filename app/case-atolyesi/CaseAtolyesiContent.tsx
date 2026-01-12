@@ -123,10 +123,13 @@ export default function CaseAtolyesiContent() {
   const showSidebar = hasThreads && sidebarOpen;
   const abortControllerRef = useRef<AbortController | null>(null);
 
-  // Reset state when navigating to this page
+  // Reset state when navigating to this page or on mount
   useEffect(() => {
-    if (prevPathnameRef.current !== null && prevPathnameRef.current !== pathname) {
-      // Route changed - reset state
+    const isRouteChange = prevPathnameRef.current !== null && prevPathnameRef.current !== pathname;
+    const isFirstMount = prevPathnameRef.current === null;
+    
+    if (isRouteChange || isFirstMount) {
+      // Route changed or first mount - reset state
       setThreads([]);
       setSelectedThreadId(null);
       setMessages([]);
@@ -156,9 +159,24 @@ export default function CaseAtolyesiContent() {
 
       clearTimeout(timeoutId);
 
+      // Handle 204 No Content
+      if (response.status === 204) {
+        console.warn("Received 204 No Content from /api/cases");
+        setThreads([]);
+        return;
+      }
+
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
         throw new Error(errorData.error || `Threads yüklenemedi (${response.status})`);
+      }
+
+      // Check content-type before parsing
+      const contentType = response.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        console.error("Unexpected response type from /api/cases:", contentType);
+        setThreads([]);
+        return;
       }
 
       const data = await response.json();
