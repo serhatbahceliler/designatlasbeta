@@ -138,9 +138,16 @@ export default function CaseAtolyesiContent() {
       setError("");
       setIsLoadingThreads(true);
       setSidebarOpen(false);
+      
+      // Load threads if user is available
+      if (user) {
+        loadThreads();
+      } else {
+        setIsLoadingThreads(false);
+      }
     }
     prevPathnameRef.current = pathname;
-  }, [pathname]);
+  }, [pathname, user, loadThreads]);
 
   const loadThreads = useCallback(async () => {
     try {
