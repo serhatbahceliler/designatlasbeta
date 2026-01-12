@@ -64,6 +64,25 @@ const UX_TERMS = [
   { id: 'kuzey-yildizi-metriği', term: 'Kuzey Yıldızı Metriği (North Star Metric) Nedir?', category: 'Problem & Strateji', emoji: '🧠' },
   { id: 'product-vision', term: 'Ürün Vizyonu (Product Vision) Nedir?', category: 'Problem & Strateji', emoji: '🧠' },
 
+  // 🧩 Bilgi Mimarisi & Etkileşim
+  { id: 'bilgi-mimarisi', term: 'Bilgi Mimarisi (Information Architecture) Nedir?', category: 'Bilgi Mimarisi & Etkileşim', emoji: '🧩' },
+  { id: 'kart-gruplama', term: 'Kart Gruplama (Card Sorting) Nedir?', category: 'Bilgi Mimarisi & Etkileşim', emoji: '🧩' },
+  { id: 'agac-testi', term: 'Ağaç Testi (Tree Testing) Nedir?', category: 'Bilgi Mimarisi & Etkileşim', emoji: '🧩' },
+  { id: 'etkilesim-maliyeti', term: 'Etkileşim Maliyeti (Interaction Cost) Nedir?', category: 'Bilgi Mimarisi & Etkileşim', emoji: '🧩' },
+  { id: 'asamali-bilgi-gosterimi', term: 'Aşamalı Bilgi Gösterimi (Progressive Disclosure) Nedir?', category: 'Bilgi Mimarisi & Etkileşim', emoji: '🧩' },
+  { id: 'bos-durum', term: 'Boş Durum (Empty State) Nedir?', category: 'Bilgi Mimarisi & Etkileşim', emoji: '🧩' },
+  { id: 'hata-durumu', term: 'Hata Durumu (Error State) Nedir?', category: 'Bilgi Mimarisi & Etkileşim', emoji: '🧩' },
+  { id: 'yukleniyor-durumu', term: 'Yükleniyor Durumu (Loading State) Nedir?', category: 'Bilgi Mimarisi & Etkileşim', emoji: '🧩' },
+
+  // 🎯 Kullanılabilirlik & Erişilebilirlik
+  { id: 'kullanilabilirlik', term: 'Kullanılabilirlik (Usability) Nedir?', category: 'Kullanılabilirlik & Erişilebilirlik', emoji: '🎯' },
+  { id: 'ogrenilebilirlik', term: 'Öğrenilebilirlik (Learnability) Nedir?', category: 'Kullanılabilirlik & Erişilebilirlik', emoji: '🎯' },
+  { id: 'erisilebilirlik', term: 'Erişilebilirlik (Accessibility – A11y) Nedir?', category: 'Kullanılabilirlik & Erişilebilirlik', emoji: '🎯' },
+  { id: 'wcag', term: 'Web İçeriği Erişilebilirlik Yönergeleri (WCAG) Nedir?', category: 'Kullanılabilirlik & Erişilebilirlik', emoji: '🎯' },
+  { id: 'bilissel-yuk', term: 'Bilişsel Yük (Cognitive Load) Nedir?', category: 'Kullanılabilirlik & Erişilebilirlik', emoji: '🎯' },
+  { id: 'eylem-imkani', term: 'Eylem İmkanı (Affordance) Nedir?', category: 'Kullanılabilirlik & Erişilebilirlik', emoji: '🎯' },
+  { id: 'gosterge-isaretleyici', term: 'Gösterge / İşaretleyici (Signifier) Nedir?', category: 'Kullanılabilirlik & Erişilebilirlik', emoji: '🎯' },
+
   // 🧩 Product & Karar Alma
   { id: 'problem-statement', term: 'Problem Statement', category: 'Product & Karar Alma', emoji: '🧩' },
   { id: 'hypothesis', term: 'Hypothesis', category: 'Product & Karar Alma', emoji: '🧩' },
@@ -808,6 +827,176 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Uzun vadeli planlamalar yapılırken'
     ],
     relatedConcepts: ['Product Strategy', 'Mission', 'Product Roadmap', 'North Star Metric']
+  },
+  'bilgi-mimarisi': {
+    shortDefinition: 'Bilgi Mimarisi, bilginin nasıl yapılandırıldığını ve kullanıcıya nasıl sunulduğunu ifade eden disiplindir.',
+    detailedDescription: 'Information Architecture (IA), kullanıcının doğru bilgiye doğru zamanda ulaşmasını sağlar. Menü yapıları, kategoriler, navigasyon ve içerik organizasyonu bu kapsamda değerlendirilir.\n\nİyi bir bilgi mimarisi, kullanıcıyı eğitmeye gerek kalmadan doğru yönlendirir ve karar vermeyi kolaylaştırır. Kötü bir bilgi mimarisi ise kullanıcıyı kaybettirir ve ürünü karmaşık gösterir.\n\nIA tasarımı, kullanıcıların zihinsel modellerini anlamayı ve bu modellere uygun yapılar oluşturmayı gerektirir.',
+    exampleScenario: 'Bir e-ticaret sitesinde ürünlerin kategorilere ayrılması, menü yapısının mantıklı olması ve kullanıcının aradığı ürüne kolayca ulaşabilmesi bilgi mimarisinin başarılı uygulanmasıdır.',
+    whenToUse: [
+      'Navigasyon tasarlanırken',
+      'İçerik yapısı kurgulanırken',
+      'Menü ve kategori yapıları oluşturulurken'
+    ],
+    relatedConcepts: ['Navigation', 'User Flow', 'Content Strategy', 'Card Sorting']
+  },
+  'kart-gruplama': {
+    shortDefinition: 'Kart Gruplama (Card Sorting), kullanıcıların bilgi yapısını nasıl organize ettiklerini anlamak için kullanılan bir araştırma yöntemidir.',
+    detailedDescription: 'Bu yöntemde, kullanıcılara farklı içerik veya özellikler kartlar halinde verilir ve bunları kendi mantıklarına göre gruplamaları istenir. Bu sayede kullanıcıların zihinsel modelleri anlaşılır.\n\nCard sorting, açık ve kapalı olmak üzere iki şekilde yapılabilir. Açık card sorting\'de kullanıcılar kendi kategorilerini oluştururken, kapalı card sorting\'de önceden belirlenmiş kategoriler kullanılır.\n\nBu yöntem, bilgi mimarisi tasarımında kullanıcı odaklı kararlar almayı sağlar ve ekibin varsayımları yerine kullanıcıların gerçek beklentilerini ortaya çıkarır.',
+    exampleScenario: 'Bir haber sitesi için içerik türlerini (spor, ekonomi, teknoloji vb.) kartlara yazıp kullanıcılardan bunları gruplamalarını istemek, kullanıcıların bu içerikleri nasıl algıladığını ve nasıl bir yapı beklediğini gösterir.',
+    whenToUse: [
+      'Bilgi mimarisi tasarımının başında',
+      'Mevcut navigasyon yapısı değerlendirilirken',
+      'Kullanıcı zihinsel modelleri anlaşılmaya çalışılırken'
+    ],
+    relatedConcepts: ['Information Architecture', 'Tree Testing', 'User Research', 'Navigation']
+  },
+  'agac-testi': {
+    shortDefinition: 'Ağaç Testi (Tree Testing), bir navigasyon yapısının etkinliğini test etmek için kullanılan araştırma yöntemidir.',
+    detailedDescription: 'Bu yöntemde, kullanıcılara bir görev verilir ve sadece navigasyon yapısı (menü ağacı) gösterilir. Tasarım veya görsel öğeler olmadan sadece metin tabanlı navigasyonla görevi tamamlamaları istenir.\n\nTree testing, bilgi mimarisinin kendi başına çalışıp çalışmadığını anlamak için idealdir. Görsel tasarımdan bağımsız olarak yapının doğruluğunu test eder.\n\nBu yöntem, card sorting\'den sonra veya mevcut bir navigasyon yapısını değerlendirmek için kullanılır. Kullanıcıların hedeflerine ne kadar kolay ulaştığını gösterir.',
+    exampleScenario: 'Bir e-ticaret sitesinin menü yapısını metin olarak gösterip kullanıcılardan "kahve makinesi" bulmalarını istemek, navigasyon yapısının etkinliğini test eder.',
+    whenToUse: [
+      'Navigasyon yapısı tasarlandıktan sonra',
+      'Mevcut menü yapısı değerlendirilirken',
+      'Bilgi mimarisi doğrulanırken'
+    ],
+    relatedConcepts: ['Card Sorting', 'Information Architecture', 'Usability Testing', 'Navigation']
+  },
+  'etkilesim-maliyeti': {
+    shortDefinition: 'Etkileşim Maliyeti, kullanıcının bir görevi tamamlamak için harcadığı fiziksel ve zihinsel çabadır.',
+    detailedDescription: 'Her etkileşim (tıklama, kaydırma, düşünme, karar verme) bir maliyettir. Bu maliyet ne kadar düşükse, kullanıcı o kadar kolay hedefine ulaşır.\n\nEtkileşim maliyeti yalnızca tıklama sayısı değildir. Kullanıcının düşünmesi, karar vermesi, hata yapması ve düzeltmesi de maliyet oluşturur.\n\nİyi tasarım, gereksiz etkileşim maliyetlerini azaltır ve kullanıcıyı en kısa yoldan hedefine ulaştırır.',
+    exampleScenario: 'Bir formda 10 alanın 5 adımda gösterilmesi, kullanıcının her adımda düşünmesini gerektirir. Tek ekranda gösterilmesi ise tüm alanları bir anda görmesini sağlar. Hangisinin daha düşük maliyet olduğu bağlama göre değişir.',
+    whenToUse: [
+      'Akış tasarımları optimize edilirken',
+      'Kullanıcı deneyimi iyileştirilirken',
+      'Karar verme noktaları değerlendirilirken'
+    ],
+    relatedConcepts: ['Cognitive Load', 'Usability', 'User Flow', 'Efficiency']
+  },
+  'asamali-bilgi-gosterimi': {
+    shortDefinition: 'Aşamalı Bilgi Gösterimi, bilgiyi kullanıcıya ihtiyaç duyduğu anda ve parça parça sunma yaklaşımıdır.',
+    detailedDescription: 'Progressive Disclosure, tüm bilgiyi tek ekranda göstermek yerine, önce temel bilgiyi sunar ve kullanıcı daha fazla bilgi istediğinde ek detayları gösterir.\n\nBu yaklaşım, karmaşıklığı yönetilebilir hale getirir ve kullanıcıyı bunaltmaz. Bilişsel yükü azaltır ve kullanıcıyı daha rahat ilerletir.\n\nProgressive disclosure, "Gelişmiş ayarlar", "Daha fazla göster", "Detaylar" gibi mekanizmalarla uygulanır.',
+    exampleScenario: 'Bir formda temel alanlar (isim, e-posta) önce gösterilirken, gelişmiş seçenekler (tercihler, ayarlar) varsayılan olarak gizlidir ve kullanıcı istediğinde açılabilir.',
+    whenToUse: [
+      'Karmaşık akışlar tasarlanırken',
+      'Ayar ve konfigürasyon ekranlarında',
+      'Bilgi yoğun ekranlarda'
+    ],
+    relatedConcepts: ['Cognitive Load', 'Visual Hierarchy', 'UX Writing', 'Information Architecture']
+  },
+  'bos-durum': {
+    shortDefinition: 'Boş Durum, bir ekranda henüz içerik olmadığında veya veri bulunmadığında kullanıcıya gösterilen durumdur.',
+    detailedDescription: 'Empty state\'ler sadece "boş" ekranlar değildir; kullanıcıyı yönlendiren fırsatlardır. İyi bir empty state, kullanıcıya ne yapması gerektiğini net bir şekilde anlatır.\n\nEmpty state\'ler, kullanıcıyı eğitir, motive eder ve aksiyona yönlendirir. Boş bir ekran yerine, kullanıcıya bir sonraki adımı gösteren içerik sunulmalıdır.\n\nBu durumlar, ilk kullanımda, filtreleme sonrasında veya veri silinmesinden sonra görülebilir.',
+    exampleScenario: 'Yeni kayıt olan bir kullanıcının boş dashboard\'unda sadece boş bir alan yerine, "İlk projenizi oluşturun" gibi yönlendirici bir mesaj ve aksiyon butonu gösterilmesi empty state örneğidir.',
+    whenToUse: [
+      'İlk kullanımda',
+      'Veri olmadığında',
+      'Filtreleme sonrası sonuç bulunamadığında'
+    ],
+    relatedConcepts: ['Onboarding', 'Feedback', 'UX Writing', 'User Guidance']
+  },
+  'hata-durumu': {
+    shortDefinition: 'Hata Durumu, kullanıcının bir işlemi tamamlayamadığı veya beklenmeyen bir durumla karşılaştığında gösterilen durumdur.',
+    detailedDescription: 'Error state\'ler, kullanıcıya neyin yanlış gittiğini, nedenini ve ne yapması gerektiğini net bir şekilde anlatmalıdır. Teknik hata mesajları yerine, kullanıcı dostu açıklamalar kullanılmalıdır.\n\nİyi bir error state, kullanıcıyı suçlamaz, problemi açıklar ve çözüm önerir. Kullanıcının hatayı düzeltmesine veya alternatif bir yol bulmasına yardımcı olur.\n\nHata durumları, form validasyonlarından, ağ hatalarından, yetkilendirme problemlerinden veya beklenmeyen sistem durumlarından kaynaklanabilir.',
+    exampleScenario: 'Bir form gönderilirken ağ hatası oluştuğunda, "Bağlantı hatası oluştu. Lütfen tekrar deneyin." yerine "Gönderim sırasında bir sorun oluştu. Bağlantınızı kontrol edip tekrar deneyin." gibi daha açıklayıcı bir mesaj gösterilmesi error state örneğidir.',
+    whenToUse: [
+      'Form validasyon hatalarında',
+      'Ağ ve sunucu hatalarında',
+      'Kullanıcı yetkisi olmayan işlemlerde',
+      'Beklenmeyen sistem durumlarında'
+    ],
+    relatedConcepts: ['Error Prevention', 'Feedback', 'UX Writing', 'User Guidance']
+  },
+  'yukleniyor-durumu': {
+    shortDefinition: 'Yükleniyor Durumu, sistemin bir işlem yaptığı sırada kullanıcıya gösterdiği geçici durumdur.',
+    detailedDescription: 'Loading state\'ler kullanıcıyı belirsizlikten kurtarır. Kullanıcı, sistemin çalıştığını anlar ve beklemeye daha toleranslı olur.\n\nLoading state\'ler farklı şekillerde gösterilebilir: spinner, progress bar, skeleton screen veya animasyonlar. Sürenin uzunluğuna göre uygun format seçilmelidir.\n\nYanlış veya eksik loading state kullanımı, kullanıcıyı güvensiz hissettirebilir ve sistemin donduğunu düşündürebilir.',
+    exampleScenario: 'Bir liste yüklenirken spinner gösterilmesi veya içerik yüklemeden önce skeleton screen gösterilmesi loading state örneğidir. Kullanıcı sistemin çalıştığını anlar ve bekler.',
+    whenToUse: [
+      'Veri yüklenirken',
+      'Sayfa geçişlerinde',
+      'Uzun süren işlemlerde',
+      'Form gönderimlerinde'
+    ],
+    relatedConcepts: ['Perceived Performance', 'Skeleton Screen', 'Feedback', 'Response Time']
+  },
+  'kullanilabilirlik': {
+    shortDefinition: 'Kullanılabilirlik, bir ürünün kullanıcılar tarafından ne kadar kolay, hızlı ve hatasız kullanılabildiğini ifade eder.',
+    detailedDescription: 'Usability, bir ürünün kullanıcılar tarafından ne kadar kolay, hızlı ve hatasız kullanılabildiğini ifade eder. Kullanılabilirlik; öğrenilebilirlik, hata oranı ve görev tamamlama süresi gibi kriterlerle değerlendirilir.\n\nBir ürün görsel olarak iyi tasarlanmış olabilir ancak kullanımı zorsa usability düşüktür. İyi usability, kullanıcıyı eğitmeye gerek kalmadan hedefe ulaştırır ve kullanıcıyı yormaz.\n\nUsability testleri, bir ürünün kullanılabilirliğini ölçmek ve iyileştirmek için yapılır.',
+    exampleScenario: 'Bir formda hangi alanların zorunlu olduğu anlaşılmıyorsa ve kullanıcı hata mesajlarıyla karşılaşıyorsa, burada bir usability problemi vardır.',
+    whenToUse: [
+      'Ürün test edilirken',
+      'Kullanıcı hataları analiz edilirken',
+      'Akışlar sadeleştirilirken'
+    ],
+    relatedConcepts: ['Usability Testing', 'Learnability', 'Error Prevention', 'Accessibility']
+  },
+  'ogrenilebilirlik': {
+    shortDefinition: 'Öğrenilebilirlik, bir ürünün kullanıcılar tarafından ne kadar hızlı ve kolay öğrenilebildiğini ifade eder.',
+    detailedDescription: 'Learnability, kullanılabilirliğin temel bileşenlerinden biridir. Bir ürün, kullanıcıların ilk kullanımda ne kadar hızlı öğrenebildiğini ve sonraki kullanımlarda ne kadar hızlı hatırladığını ölçer.\n\nYüksek öğrenilebilirlik, kullanıcıların ürünü eğitime gerek kalmadan kullanabilmesini sağlar. İyi öğrenilebilirlik, kullanıcıları eğitmek için kaynak harcamayı azaltır.\n\nÖğrenilebilirlik, mevcut mental modellere uyum, tutarlılık ve sezgisel tasarım ile artırılabilir.',
+    exampleScenario: 'Yeni bir kullanıcı, bir e-ticaret sitesine ilk kez girdiğinde ürün arama, sepet ekleme ve ödeme gibi temel işlemleri hızlıca yapabiliyorsa, site yüksek öğrenilebilirliğe sahiptir.',
+    whenToUse: [
+      'Yeni kullanıcı deneyimi tasarlanırken',
+      'Onboarding süreçleri değerlendirilirken',
+      'Ürünün ilk kullanım deneyimi iyileştirilirken'
+    ],
+    relatedConcepts: ['Usability', 'Mental Model', 'Consistency', 'First-time User Experience']
+  },
+  'erisilebilirlik': {
+    shortDefinition: 'Erişilebilirlik, dijital ürünlerin farklı yetilere sahip kullanıcılar tarafından da erişilebilir ve kullanılabilir olmasını ifade eder.',
+    detailedDescription: 'Accessibility (A11y), dijital ürünlerin farklı yetilere sahip kullanıcılar tarafından da erişilebilir ve kullanılabilir olmasını ifade eder. Erişilebilirlik yalnızca engelli kullanıcılar için değil, herkes için daha iyi bir deneyim anlamına gelir.\n\nKontrast, klavye ile kullanım, ekran okuyucu uyumluluğu ve alternatif metinler bu kapsamda değerlendirilir. İyi bir accessibility yaklaşımı, daha kapsayıcı ve sürdürülebilir ürünler ortaya çıkarır.\n\nWCAG yönergeleri, erişilebilirlik standartlarını belirler ve A, AA, AAA seviyelerinde ölçüm yapılmasını sağlar.',
+    exampleScenario: 'Düşük kontrastlı bir metin, görme problemi olan kullanıcılar için okunamaz hâle gelebilir. Yeterli kontrast oranına sahip metinler ise tüm kullanıcılar için daha okunabilirdir.',
+    whenToUse: [
+      'UI tasarlanırken',
+      'Design system oluşturulurken',
+      'Yasal ve etik gereklilikler değerlendirilirken',
+      'Kapsayıcı tasarım yapılırken'
+    ],
+    relatedConcepts: ['WCAG', 'Usability', 'Inclusive Design', 'Visual Hierarchy']
+  },
+  'wcag': {
+    shortDefinition: 'WCAG, web içeriğinin erişilebilirliğini sağlamak için belirlenmiş uluslararası standartlar ve yönergelerdir.',
+    detailedDescription: 'Web Content Accessibility Guidelines (WCAG), web içeriğinin erişilebilirliğini sağlamak için W3C tarafından belirlenmiş uluslararası standartlardır. Bu yönergeler, web sitelerinin farklı yetilere sahip kullanıcılar tarafından da erişilebilir olmasını hedefler.\n\nWCAG, POUR prensiplerine dayanır: Perceivable (Algılanabilir), Operable (Kullanılabilir), Understandable (Anlaşılabilir) ve Robust (Sağlam).\n\nWCAG seviyeleri A (en düşük), AA (orta) ve AAA (en yüksek) olmak üzere üç seviyededir. Çoğu yasal düzenleme AA seviyesini gerektirir.',
+    exampleScenario: 'WCAG AA seviyesi, metin için en az 4.5:1 kontrast oranı gerektirir. Bu standart, görme zorluğu yaşayan kullanıcıların içeriği okuyabilmesini sağlar.',
+    whenToUse: [
+      'Erişilebilirlik standartları belirlenirken',
+      'Yasal uyumluluk değerlendirilirken',
+      'Tasarım kararları alınırken',
+      'Ürün test edilirken'
+    ],
+    relatedConcepts: ['Accessibility', 'Inclusive Design', 'Web Standards', 'User Testing']
+  },
+  'bilissel-yuk': {
+    shortDefinition: 'Bilişsel Yük, kullanıcının bir görevi yerine getirirken harcadığı zihinsel efor miktarıdır.',
+    detailedDescription: 'Cognitive Load, kullanıcının bir görevi yerine getirirken harcadığı zihinsel efor miktarıdır. Yüksek bilişsel yük, kullanıcıyı yorar ve hata yapma olasılığını artırır.\n\nBilişsel yük, içsel (kullanıcının bilgiyi işleme süreci), dışsal (tasarımdan kaynaklanan) ve ilgili (öğrenme süreci) olmak üzere üç türde olabilir. İyi UX tasarımı, dışsal bilişsel yükü azaltmayı hedefler.\n\nİyi UX, kullanıcıdan mümkün olan en az zihinsel eforu talep eder ve karmaşıklığı yönetilebilir hale getirir.',
+    exampleScenario: 'Aynı ekranda çok fazla seçenek sunulması, renk ve şekil karmaşası veya belirsiz etiketler bilişsel yükü artırır. Sadeleştirme ve net yönlendirmeler ise bilişsel yükü azaltır.',
+    whenToUse: [
+      'Form ve akış tasarlanırken',
+      'Bilgi yoğun ekranlarda',
+      'Karar verme noktalarında',
+      'Kullanıcı deneyimi iyileştirilirken'
+    ],
+    relatedConcepts: ['Usability', 'Visual Hierarchy', 'Progressive Disclosure', 'Cognitive Overload']
+  },
+  'eylem-imkani': {
+    shortDefinition: 'Eylem İmkanı, bir nesnenin nasıl kullanılacağını kullanıcıya sezgisel olarak anlatma yeteneğidir.',
+    detailedDescription: 'Affordance, bir nesnenin nasıl kullanılacağını kullanıcıya sezgisel olarak anlatma yeteneğidir. Bir öğenin tıklanabilir mi, sürüklenebilir mi, seçilebilir mi olduğu görünümünden anlaşılmalıdır.\n\nGizli affordance\'lar kullanıcıyı deneme-yanılmaya iter. İyi tasarım, her öğenin ne işe yaradığını ve nasıl kullanılacağını görsel ipuçlarıyla açıkça gösterir.\n\nAffordance, görsel tasarımın yanı sıra etkileşim tasarımında da önemlidir. Kullanıcı, bir öğenin nasıl davranacağını önceden tahmin edebilmelidir.',
+    exampleScenario: 'Buton gibi görünen bir alanın tıklanamaması affordance problemidir. Tıklanabilir bir öğenin görsel olarak (renk, boyut, gölge) tıklanabilir görünmesi gerekir.',
+    whenToUse: [
+      'Etkileşimler tasarlanırken',
+      'UI elemanları değerlendirilirken',
+      'Kullanılabilirlik problemleri çözülürken'
+    ],
+    relatedConcepts: ['Signifier', 'Interaction Design', 'Feedback', 'Usability']
+  },
+  'gosterge-isaretleyici': {
+    shortDefinition: 'Gösterge / İşaretleyici, bir öğenin eylem imkanını (affordance) kullanıcıya ileten görsel veya metinsel ipucudur.',
+    detailedDescription: 'Signifier, bir öğenin eylem imkanını (affordance) kullanıcıya ileten görsel veya metinsel ipucudur. Affordance bir öğenin ne yapabileceğini gösterirken, signifier bu yeteneği kullanıcıya nasıl ileteceğimizi gösterir.\n\nİyi bir signifier, kullanıcıya net bir şekilde ne yapabileceğini ve nasıl yapacağını anlatır. İkonlar, etiketler, renkler, şekiller ve animasyonlar signifier olarak kullanılabilir.\n\nSignifier\'lar görünür olmalı ve kullanıcının dikkatini çekmelidir. Belirsiz veya eksik signifier\'lar kullanılabilirlik problemlerine yol açar.',
+    exampleScenario: 'Bir butonun üzerindeki "Kaydet" yazısı, tıklanabilir bir öğe olduğunu ve ne işe yaradığını gösterir. Bir linkin altı çizili olması veya mavi renkte olması tıklanabilir olduğunu gösterir.',
+    whenToUse: [
+      'UI elemanları tasarlanırken',
+      'Etkileşim ipuçları eklenirken',
+      'Kullanılabilirlik iyileştirilirken'
+    ],
+    relatedConcepts: ['Affordance', 'Visual Design', 'Interaction Design', 'Usability']
   }
 };
 
