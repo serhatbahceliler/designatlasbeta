@@ -4845,7 +4845,7 @@ export default async function RoadmapPage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* Roadmap Content (Client Component) */}
-      <RoadmapClient sections={roadmap.sections} credits={roadmap.credits} />
+      <RoadmapClient sections={roadmap.sections} credits={roadmap.credits} roadmapSlug={slug} />
 
       {/* CTA */}
       <section className="py-12 px-6 pb-24">

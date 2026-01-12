@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Header from '@/components/Header';
 
 // Term Content Type
@@ -626,6 +626,17 @@ export default function UXSozlukPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTerm, setSelectedTerm] = useState<string | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  // Google Analytics page view tracking
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'page_view', {
+        page_title: 'UX Sözlük',
+        page_location: window.location.href,
+        page_path: '/ux-sozluk',
+      });
+    }
+  }, []);
 
   const filteredTerms = useMemo(() => {
     let terms = UX_TERMS;

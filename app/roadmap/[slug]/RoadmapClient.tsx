@@ -36,13 +36,30 @@ interface Credits {
 interface RoadmapClientProps {
   sections: Section[];
   credits?: Credits[];
+  roadmapSlug?: string;
 }
 
-export default function RoadmapClient({ sections, credits }: RoadmapClientProps) {
+export default function RoadmapClient({ sections, credits, roadmapSlug }: RoadmapClientProps) {
   const router = useRouter();
   const { user, loading } = useAuth();
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  // Google Analytics page view tracking
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      const roadmapType = roadmapSlug === 'ux-designer' ? 'UX Designer' :
+                         roadmapSlug === 'ui-designer' ? 'UI Designer' :
+                         roadmapSlug === 'product-designer' ? 'Product Designer' :
+                         'Roadmap';
+      
+      (window as any).gtag('event', 'page_view', {
+        page_title: roadmapType + ' Roadmap',
+        page_location: window.location.href,
+        page_path: window.location.pathname,
+      });
+    }
+  }, [roadmapSlug]);
 
   // When user successfully authenticates (returns from auth page), check for pending topic
   useEffect(() => {
