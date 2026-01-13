@@ -420,7 +420,7 @@ export default function ArticlePage() {
 
       {/* Hero Section */}
       <section className="relative py-12 md:py-16 px-6 border-b border-zinc-800">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Breadcrumb */}
           <nav className="mb-6 text-sm text-gray-400">
             <Link href="/" className="hover:text-[#DEFF37] transition-colors">
@@ -470,29 +470,16 @@ export default function ArticlePage() {
             )}
           </div>
 
-          {/* Hero Image */}
-          {article.heroImage && (
-            <div className="mt-8 rounded-xl overflow-hidden max-w-2xl mx-auto">
-              <Image
-                src={article.heroImage}
-                alt={article.title}
-                width={1200}
-                height={600}
-                className="w-full h-auto max-h-96 object-cover"
-                unoptimized
-              />
-            </div>
-          )}
         </div>
       </section>
 
       {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-6 py-12">
+      <main className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Table of Contents - Desktop */}
           {tocSections.length > 0 && (
             <aside className="hidden lg:block lg:col-span-1">
-              <div className="sticky top-24">
+              <div className="sticky top-24 pl-0">
                 <h3 className="text-sm font-semibold text-gray-400 uppercase mb-4">İçindekiler</h3>
                 <nav className="space-y-2">
                   {tocSections.map((section) => (

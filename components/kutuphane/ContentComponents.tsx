@@ -21,19 +21,19 @@ export function ComparisonBlock({
 }) {
   return (
     <div className="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div className="p-4 rounded-lg border-2 border-red-500 bg-[#FEF2F2]">
+      <div className="p-4 rounded-lg border-2 border-red-500/50 bg-red-500/5">
         <div className="flex items-center gap-2 mb-2">
-          <span className="text-red-600 font-bold">❌</span>
-          <span className="text-red-600 font-semibold">Kötü Örnek</span>
+          <span className="text-red-400 font-bold">❌</span>
+          <span className="text-red-400 font-semibold">Kötü Örnek</span>
         </div>
-        <div className="prose prose-invert max-w-none text-gray-800">{bad}</div>
+        <div className="prose prose-invert max-w-none text-gray-300">{bad}</div>
       </div>
-      <div className="p-4 rounded-lg border-2 border-green-500 bg-[#F0FDF4]">
+      <div className="p-4 rounded-lg border-2 border-green-500/50 bg-green-500/5">
         <div className="flex items-center gap-2 mb-2">
-          <span className="text-green-600 font-bold">✅</span>
-          <span className="text-green-600 font-semibold">İyi Örnek</span>
+          <span className="text-green-400 font-bold">✅</span>
+          <span className="text-green-400 font-semibold">İyi Örnek</span>
         </div>
-        <div className="prose prose-invert max-w-none text-gray-800">{good}</div>
+        <div className="prose prose-invert max-w-none text-gray-300">{good}</div>
       </div>
     </div>
   );
