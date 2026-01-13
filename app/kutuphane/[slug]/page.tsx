@@ -3814,6 +3814,40 @@ export default function ArticlePage() {
               },
             },
           ],
+          "wireframe-nedir": [
+            {
+              "@type": "Question",
+              name: "Wireframe nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Wireframe, bir dijital ürünün sayfa veya ekran yapısını gösteren düşük sadakatli (low-fidelity) görsel taslaklardır. Renk, tipografi veya görsel detay içermez; sadece içerik yerleşimini, hiyerarşiyi ve temel fonksiyonları gösterir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Wireframe ne işe yarar?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Wireframe, tasarım sürecinin erken aşamasında fikirleri hızlıca görselleştirmeye, ekip içi iletişimi kolaylaştırmaya, yapısal sorunları erken tespit etmeye ve görsel tasarıma geçmeden önce akışı doğrulamaya yarar.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Wireframe nasıl çizilir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Wireframe çizmek için önce sayfanın amacını belirle, içerik hiyerarşisini oluştur, temel layout'u çiz, placeholder içerikleri yerleştir ve navigasyonu ekle. Kalem kağıtla veya Figma, Balsamiq gibi dijital araçlarla çizilebilir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Wireframe ve mockup arasındaki fark nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Wireframe düşük sadakatlidir, yapıyı gösterir, görsel detay içermez. Mockup yüksek sadakatlidir, gerçek renkler, fontlar ve görseller içerir, final tasarıma yakındır. Wireframe önce, mockup sonra gelir.",
+              },
+            },
+          ],
         };
 
         const faqs = faqData[slug];
