@@ -506,7 +506,7 @@ export default function ArticlePage() {
                       }`}
                     >
                       {section.text}
-                    </nav>
+                    </a>
                   ))}
                 </nav>
               </div>
