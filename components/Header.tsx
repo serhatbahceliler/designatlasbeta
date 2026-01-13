@@ -50,7 +50,7 @@ export default function Header({ showBackLink = false }: HeaderProps) {
   return (
     <>
       <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-lg border-b border-zinc-800">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between w-full">
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
             <Image
               src="https://r.resimlink.com/9ezfkr.png"
