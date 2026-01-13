@@ -27,7 +27,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
     // Regex patterns for special blocks
     const patterns = [
       {
-        regex: /\[CALLOUT\](.*?)\[\/CALLOUT\]/gs,
+        regex: /\[CALLOUT\]([\s\S]*?)\[\/CALLOUT\]/g,
         component: (match: string, content: string) => (
           <CalloutBox key={`callout-${lastIndex}`}>
             <ReactMarkdown
@@ -42,7 +42,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         ),
       },
       {
-        regex: /\[COMPARISON\](.*?)\[\/COMPARISON\]/gs,
+        regex: /\[COMPARISON\]([\s\S]*?)\[\/COMPARISON\]/g,
         component: (match: string, content: string) => {
           const lines = content.trim().split("\n").filter((l) => l.trim());
           let bad = "";
@@ -69,7 +69,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         },
       },
       {
-        regex: /\[TIP\](.*?)\[\/TIP\]/gs,
+        regex: /\[TIP\]([\s\S]*?)\[\/TIP\]/g,
         component: (match: string, content: string) => (
           <TipBox key={`tip-${lastIndex}`}>
             <ReactMarkdown
@@ -86,7 +86,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         ),
       },
       {
-        regex: /\[WARNING\](.*?)\[\/WARNING\]/gs,
+        regex: /\[WARNING\]([\s\S]*?)\[\/WARNING\]/g,
         component: (match: string, content: string) => (
           <WarningBox key={`warning-${lastIndex}`}>
             <ReactMarkdown
@@ -100,7 +100,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         ),
       },
       {
-        regex: /\[INFO\](.*?)\[\/INFO\]/gs,
+        regex: /\[INFO\]([\s\S]*?)\[\/INFO\]/g,
         component: (match: string, content: string) => {
           const lines = content.trim().split("\n").filter((l) => l.trim());
           const number = lines[0] || "";
@@ -115,7 +115,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         },
       },
       {
-        regex: /\[QUOTE\](.*?)\[\/QUOTE\]/gs,
+        regex: /\[QUOTE\]([\s\S]*?)\[\/QUOTE\]/g,
         component: (match: string, content: string) => (
           <QuoteBlock key={`quote-${lastIndex}`}>
             <ReactMarkdown
@@ -129,7 +129,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         ),
       },
       {
-        regex: /\[EXERCISE\](.*?)\[\/EXERCISE\]/gs,
+        regex: /\[EXERCISE\]([\s\S]*?)\[\/EXERCISE\]/g,
         component: (match: string, content: string) => {
           const titleMatch = content.match(/##\s*(.+)/);
           const title = titleMatch ? titleMatch[1] : "Şimdi Sen Dene";
@@ -153,7 +153,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         },
       },
       {
-        regex: /\[SUMMARY\](.*?)\[\/SUMMARY\]/gs,
+        regex: /\[SUMMARY\]([\s\S]*?)\[\/SUMMARY\]/g,
         component: (match: string, content: string) => {
           const lines = content.split("\n").filter((l) => l.trim() && !l.startsWith("##"));
           return (
@@ -168,7 +168,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         },
       },
       {
-        regex: /\[CHECKLIST\](.*?)\[\/CHECKLIST\]/gs,
+        regex: /\[CHECKLIST\]([\s\S]*?)\[\/CHECKLIST\]/g,
         component: (match: string, content: string) => {
           const doItems: string[] = [];
           const dontItems: string[] = [];
@@ -196,7 +196,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         },
       },
       {
-        regex: /\[STEPS\](.*?)\[\/STEPS\]/gs,
+        regex: /\[STEPS\]([\s\S]*?)\[\/STEPS\]/g,
         component: (match: string, content: string) => {
           const steps: Array<{ number: number; title: string; content: string }> = [];
           const lines = content.trim().split("\n");
@@ -239,7 +239,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         },
       },
       {
-        regex: /\[TABLE\](.*?)\[\/TABLE\]/gs,
+        regex: /\[TABLE\]([\s\S]*?)\[\/TABLE\]/g,
         component: (match: string, content: string) => {
           const lines = content.trim().split("\n").filter((l) => l.trim());
           const headers = lines[0]
