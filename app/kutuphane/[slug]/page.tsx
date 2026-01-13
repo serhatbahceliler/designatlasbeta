@@ -479,7 +479,7 @@ export default function ArticlePage() {
           {/* Table of Contents - Desktop */}
           {tocSections.length > 0 && (
             <aside className="hidden lg:block lg:col-span-1">
-              <div className="sticky top-24 pl-0">
+              <div className="sticky top-24 -ml-6 pl-6">
                 <h3 className="text-sm font-semibold text-gray-400 uppercase mb-4">İçindekiler</h3>
                 <nav className="space-y-2">
                   {tocSections.map((section) => (
