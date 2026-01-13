@@ -215,6 +215,21 @@ const MOCK_ARTICLES: Article[] = [
     author: "Serhat Bahçeliler",
     views: 0,
   },
+  {
+    id: "prototype-nedir",
+    title: "Prototype Nedir?",
+    subtitle: "Etkileşimli Tasarım Taslakları Oluşturma Rehberi",
+    titleEn: "What is Prototype?",
+    slug: "prototype-nedir",
+    description: "Prototype nedir, ne işe yarar? Prototip nasıl oluşturulur, hangi araçlar kullanılır? Low-fi'dan high-fi'ya prototipleme rehberi.",
+    category: "ux-design",
+    readingTime: 12,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    views: 0,
+  },
 ];
 
 type SortOption = "newest" | "popular" | "az";

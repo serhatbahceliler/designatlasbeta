@@ -3318,7 +3318,7 @@ Wireframe'i stakeholder'lara sunarken dikkat et:
 
 **Önceki:** [UX ve UI Arasındaki Fark](/kutuphane/ux-ui-farki)
 
-**Sonraki:** Prototype Nedir? *(yakında)*
+**Sonraki:** [Prototype Nedir?](/kutuphane/prototype-nedir)
 
 **İlgili konular:**
 - [User Flow ve Task Flow](/kutuphane/user-flow-task-flow)
@@ -4752,7 +4752,7 @@ Kod bilmek faydalı ama zorunlu değil. Teknik anlayış (feasibility, constrain
 
 **Önceki:** [UX Mülakat Soruları](/kutuphane/ux-mulakat-sorulari)
 
-**Sonraki:** Prototype Nedir? *(yakında)*
+**Sonraki:** [Prototype Nedir?](/kutuphane/prototype-nedir)
 
 **İlgili konular:**
 - [UX Nedir?](/kutuphane/ux-nedir)
@@ -4770,6 +4770,512 @@ Derinleşmek istersen:
 - [What is Product Design? - IDEO](https://www.ideou.com/pages/product-design) (İngilizce, 8 dk)
 - [Product Design vs UX Design - NNGroup](https://www.nngroup.com/articles/product-design-vs-ux-design/) (İngilizce, 6 dk)
 - [Inspired - Marty Cagan](https://www.svpg.com/inspired-how-to-create-products-customers-love/) (Kitap, ürün yönetimi klasiği)
+`,
+  },
+  "prototype-nedir": {
+    id: "prototype-nedir",
+    title: "Prototype Nedir?",
+    subtitle: "Etkileşimli Tasarım Taslakları Oluşturma Rehberi",
+    titleEn: "What is Prototype?",
+    slug: "prototype-nedir",
+    description: "Prototype nedir, ne işe yarar? Prototip nasıl oluşturulur, hangi araçlar kullanılır? Low-fi'dan high-fi'ya prototipleme rehberi.",
+    category: "ux-design",
+    readingTime: 12,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    content: `# Prototype Nedir? Etkileşimli Tasarım Taslakları Oluşturma Rehberi
+
+**Seviye:** Başlangıç  
+**Kategori:** UX Design  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Statik tasarımlar her şeyi anlatamaz.
+
+Wireframe'ler ve mockup'lar "nasıl görüneceğini" gösterir ama "nasıl hissettireceğini" gösteremez. Bir butona tıkladığında ne olacak? Sayfa nasıl geçiş yapacak? Form gönderildiğinde kullanıcı ne görecek?
+
+İşte burada **prototype** devreye girer.
+
+Prototip, tasarımının çalışan bir simülasyonu. Gerçek kod yok ama gerçek gibi hissettiriyor. Tıklıyorsun, geçiş oluyor, animasyon çalışıyor. Kullanıcılar sanki gerçek ürünü kullanıyormuş gibi test edebiliyor.
+
+Bu yazıda prototype'ın ne olduğunu, neden önemli olduğunu ve nasıl oluşturulacağını öğreneceksin.
+
+---
+
+## Prototype Ne Demek?
+
+[CALLOUT]
+**Prototype (Prototip):**
+Bir ürün veya özelliğin etkileşimli simülasyonu. Kod yazmadan, tasarımın nasıl çalışacağını deneyimlemeyi sağlar. Tıklanabilir, gezinilebilir ve test edilebilir tasarım taslağı.
+[/CALLOUT]
+
+"Proto" (ilk) + "type" (örnek) = İlk örnek, taslak.
+
+Prototip, final ürün değil. Bir deney aracı. Fikirleri test etmek, geri bildirim almak ve sorunları erken yakalamak için kullanılır.
+
+---
+
+## Prototip Ne İşe Yarar?
+
+### 1. Fikirleri test etme
+
+Bir fikrin işe yarayıp yaramayacağını anlamanın en hızlı yolu, prototip yapıp denemek. Kod yazmak haftalar alır, prototip saatler.
+
+### 2. Kullanılabilirlik testi
+
+Gerçek kullanıcılarla test yapmak için gerçek ürün gerekmiyor. Prototip yeterli. "Bu butonu bul ve tıkla" görevi prototiple yapılabilir.
+
+### 3. Stakeholder sunumu
+
+"Şöyle çalışacak" demek yerine, "buyurun deneyin" demek çok daha etkili. Prototip, fikirleri satmanın en iyi yolu.
+
+### 4. Developer iletişimi
+
+Statik tasarım + prototip kombinasyonu, developer'a "nasıl çalışmalı" sorusunun cevabını verir. Animasyonlar, geçişler, etkileşimler netleşir.
+
+### 5. Erken hata tespiti
+
+Bir akış sorunu var mı? Kullanıcı kaybolur mu? Prototipte görmek, geliştirme sonrası görmekten 10 kat ucuz.
+
+[INFO]
+100x daha ucuz
+Geliştirme sonrası hata düzeltmek, tasarım aşamasında düzeltmekten 100 kat daha maliyetli
+[/INFO]
+
+---
+
+## Prototip Türleri
+
+Prototipler sadakat seviyesine (fidelity) göre ayrılır:
+
+### Low-Fidelity Prototype
+
+En basit hali. Hızlı, kaba, konsept doğrulama için.
+
+**Özellikleri:**
+- Kağıt veya basit dijital
+- Görsel detay yok
+- Temel tıklama/geçiş
+- Dakikalar/saatler içinde yapılır
+
+**Ne zaman kullanılır:**
+- İlk fikirler
+- Konsept doğrulama
+- Beyin fırtınası sonrası
+
+### Mid-Fidelity Prototype
+
+Orta detay seviyesi. Akışı test etmek için ideal.
+
+**Özellikleri:**
+- Wireframe bazlı
+- Gerçekçi akış
+- Temel etkileşimler
+- Günler içinde yapılır
+
+**Ne zaman kullanılır:**
+- Kullanılabilirlik testi
+- Stakeholder geri bildirimi
+- Akış doğrulama
+
+### High-Fidelity Prototype
+
+Final tasarıma yakın. Gerçek gibi görünür ve hisseder.
+
+**Özellikleri:**
+- Gerçek renkler, fontlar, görseller
+- Detaylı etkileşimler
+- Animasyonlar ve micro-interactions
+- Günler/haftalar içinde yapılır
+
+**Ne zaman kullanılır:**
+- Final kullanılabilirlik testi
+- Stakeholder onayı
+- Developer handoff
+- Kullanıcı araştırması
+
+[TABLE]
+| Fidelity | Görsel | Etkileşim | Süre | Kullanım |
+|----------|--------|-----------|------|----------|
+| **Low** | Kaba/kağıt | Temel tıklama | Dakikalar | Konsept test |
+| **Mid** | Wireframe | Akış | Saatler | Kullanılabilirlik |
+| **High** | Final tasarım | Detaylı | Günler | Final onay |
+[/TABLE]
+
+[TIP]
+💡 Her zaman high-fidelity gerekmiyor. Amaca göre doğru fidelity'yi seç. Erken aşamada low-fi daha verimli.
+[/TIP]
+
+---
+
+## Prototip Yöntemleri
+
+### 1. Kağıt Prototip
+
+En basit ve en hızlı yöntem.
+
+**Nasıl yapılır:**
+- Her ekranı ayrı kağıda çiz
+- Kullanıcıya göster
+- "Buraya tıklasaydın" de, sonraki kağıdı göster
+
+**Avantajları:**
+- Sıfır maliyet
+- Çok hızlı
+- Herkes yapabilir
+- Erken fikirler için ideal
+
+**Dezavantajları:**
+- Gerçekçi değil
+- Kaydetmek zor
+- Uzaktan test zor
+
+### 2. Tıklanabilir Prototip
+
+Statik ekranları bağlayarak oluşturulan prototip.
+
+**Nasıl yapılır:**
+- Ekranları tasarla (wireframe veya mockup)
+- Hotspot'lar ekle (tıklanabilir alanlar)
+- Ekranları birbirine bağla
+- Geçiş animasyonu ekle
+
+**Araçlar:** Figma, InVision, Marvel
+
+**Avantajları:**
+- Hızlı oluşturulur
+- Kolayca paylaşılır
+- Test için yeterli
+
+**Dezavantajları:**
+- Sınırlı etkileşim
+- Gerçek data yok
+
+### 3. Etkileşimli Prototip
+
+Daha karmaşık etkileşimler içeren prototip.
+
+**Özellikler:**
+- Conditional logic (if/else)
+- Değişkenler (variables)
+- Dinamik içerik
+- Karmaşık animasyonlar
+
+**Araçlar:** Figma (advanced), ProtoPie, Principle, Framer
+
+**Avantajları:**
+- Çok gerçekçi
+- Kompleks senaryolar
+- Micro-interactions
+
+**Dezavantajları:**
+- Daha fazla zaman
+- Öğrenme eğrisi
+
+### 4. Kod Prototip
+
+HTML/CSS/JS ile yapılan prototip.
+
+**Ne zaman kullanılır:**
+- Çok karmaşık etkileşimler
+- Gerçek data gerektiğinde
+- Developer background varsa
+
+**Avantajları:**
+- Tam kontrol
+- Gerçek data
+- Bazen ürüne dönüşür
+
+**Dezavantajları:**
+- En yavaş
+- Teknik beceri gerektirir
+
+---
+
+## Figma'da Prototip Oluşturma
+
+Figma en popüler prototipleme aracı. Temel adımlar:
+
+### Adım 1: Ekranları Hazırla
+
+Her ekranı ayrı frame olarak tasarla. Frame isimlendirmesi önemli:
+- \`01-Home\`
+- \`02-Product-List\`
+- \`03-Product-Detail\`
+- \`04-Cart\`
+
+### Adım 2: Prototype Moduna Geç
+
+Sağ panelde "Design" yerine "Prototype" sekmesine tıkla.
+
+### Adım 3: Bağlantı Oluştur
+
+1. Bir element seç (buton, kart, link)
+2. Sağ taraftaki mavi noktaya tıkla ve sürükle
+3. Hedef frame'e bırak
+4. Bağlantı oluştu
+
+### Adım 4: Etkileşim Ayarları
+
+Her bağlantı için ayarlar:
+
+**Trigger (Tetikleyici):**
+- On tap/click (tıklama)
+- On drag (sürükleme)
+- While hovering (hover)
+- Mouse enter/leave
+- After delay (gecikme sonrası)
+
+**Action (Aksiyon):**
+- Navigate to (sayfa geçişi)
+- Open overlay (modal açma)
+- Swap with (component değiştirme)
+- Back (geri gitme)
+- Close overlay
+- Scroll to
+
+**Animation (Animasyon):**
+- Instant (anında)
+- Dissolve (çözünme)
+- Move in/out (kayma)
+- Push (itme)
+- Slide in/out
+
+### Adım 5: Önizleme ve Paylaş
+
+- ▶️ butonuyla önizle
+- "Share" ile link oluştur
+- "Present" ile tam ekran göster
+
+[STEPS]
+1. Frame'leri oluştur ve isimlendir
+2. Prototype moduna geç
+3. Elementleri bağla
+4. Trigger ve animasyon ayarla
+5. Test et ve paylaş
+[/STEPS]
+
+---
+
+## Prototip Best Practices
+
+### 1. Amacı belirle
+
+Her prototipin bir amacı olmalı. "Ne test edeceğim?" sorusunu cevapla.
+
+[COMPARISON]
+❌ "Tüm uygulamanın prototipi"
+✅ "Checkout akışını test etmek için prototip"
+[/COMPARISON]
+
+### 2. Doğru fidelity seç
+
+Erken aşama = low-fi, final onay = high-fi. Her şey high-fi olmak zorunda değil.
+
+### 3. Gerçekçi içerik kullan
+
+"Lorem ipsum" yerine gerçekçi içerik. Kullanıcılar gerçek içerikle daha doğal etkileşir.
+
+### 4. Edge case'leri dahil et
+
+- Boş durum (empty state)
+- Hata durumu (error state)
+- Yükleme durumu (loading state)
+- Başarı durumu (success state)
+
+### 5. Akışı tamamla
+
+Yarım kalan akışlar test sonuçlarını bozar. "Burası henüz yok" demek yerine, basit placeholder ekle.
+
+### 6. Mobil için ayrı düşün
+
+Desktop prototip mobilde çalışmaz. Responsive düşün veya ayrı mobil prototip yap.
+
+---
+
+## Prototip Araçları
+
+[TABLE]
+| Araç | Fiyat | En İyi Yön | Platform |
+|------|-------|------------|----------|
+| **Figma** | Ücretsiz+ | All-in-one, işbirliği | Web |
+| **ProtoPie** | Ücretli | Karmaşık etkileşimler | Desktop |
+| **Principle** | Ücretli | Animasyon | macOS |
+| **Framer** | Ücretsiz+ | Kod + tasarım | Web |
+| **InVision** | Ücretsiz+ | Basit prototipler | Web |
+| **Marvel** | Ücretsiz+ | Hızlı prototip | Web |
+| **Adobe XD** | Ücretsiz+ | Adobe ekosistemi | Desktop |
+[/TABLE]
+
+### Araç Seçimi
+
+**Yeni başlıyorsan:** Figma (ücretsiz, kolay, yaygın)
+
+**Karmaşık animasyonlar:** ProtoPie veya Principle
+
+**Kod biliyorsan:** Framer
+
+**Sadece akış testi:** InVision veya Marvel
+
+---
+
+## Wireframe vs Mockup vs Prototype
+
+Sık karıştırılan üç kavram:
+
+[TABLE]
+| Özellik | Wireframe | Mockup | Prototype |
+|---------|-----------|--------|-----------|
+| **Sadakat** | Düşük | Yüksek | Değişken |
+| **Görsel** | Gri, placeholder | Gerçek tasarım | Değişken |
+| **Etkileşim** | Yok (statik) | Yok (statik) | Var (tıklanabilir) |
+| **Amaç** | Yapı | Görsel | Deneyim |
+| **Soru** | Ne nerede? | Nasıl görünecek? | Nasıl çalışacak? |
+[/TABLE]
+
+[COMPARISON]
+**Wireframe:** İskelet - yapıyı gösterir
+**Mockup:** Cilt - görünümü gösterir
+**Prototype:** Hareket - deneyimi gösterir
+[/COMPARISON]
+
+**Tipik akış:**
+Wireframe → Mockup → Prototype → Geliştirme
+
+Ama her projede hepsi gerekli değil. Bazen wireframe'den direkt prototype'a geçilir.
+
+---
+
+## Prototiple Test Yapma
+
+Prototip oluşturdun. Şimdi test zamanı.
+
+### Test Senaryosu Hazırla
+Senaryo: Yeni bir çift koşu ayakkabısı almak istiyorsun.
+Görev 1: Ana sayfadan koşu ayakkabıları kategorisine git.
+Görev 2: Bir ayakkabı seç ve detaylarını incele.
+Görev 3: Sepete ekle.
+Görev 4: Ödeme sayfasına ilerle.
+
+### Test Sırasında Dikkat Et
+
+- Kullanıcı nerede takılıyor?
+- Hangi butonu bulamıyor?
+- Beklediği yerde olmayan ne var?
+- Kaç tıklamada görevi tamamlıyor?
+
+### Test Sonrası
+
+- Notları derle
+- Paternleri bul
+- Önceliklendir
+- İtere et
+
+[TIP]
+💡 5 kullanıcıyla test, sorunların %85'ini ortaya çıkarır. Daha fazlasına gerek yok, bulguları düzelt ve tekrar test et.
+[/TIP]
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Her şeyi prototiplemek
+
+Tüm uygulama değil, test edilecek akış yeterli.
+
+### 2. Çok erken high-fidelity
+
+Konsept bile netleşmeden piksel-perfect prototip yapmak zaman kaybı.
+
+### 3. Etkileşimleri unutmak
+
+Sadece ekranları bağlamak yetmez. Hover, loading, error durumları da önemli.
+
+### 4. Test etmeden geçmek
+
+Prototip yapıp kimseye göstermemek, yapmamış olmakla aynı.
+
+### 5. Geri bildirim sonrası güncellememek
+
+Test yaptın, sorunları buldun ama düzeltmedin. Prototip ölü döküman oldu.
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**30 dakika**
+
+**Görev:** Basit bir login akışı için tıklanabilir prototip oluştur.
+
+**Ekranlar:**
+1. Login ekranı (email + şifre + giriş butonu + şifremi unuttum link)
+2. Şifremi unuttum ekranı (email + gönder butonu)
+3. Email gönderildi onay ekranı
+4. Ana sayfa (başarılı giriş sonrası)
+
+**Adımlar:**
+
+1. Figma'da 4 frame oluştur (mobil boyut: 375x812)
+
+2. Her ekranı basitçe tasarla (wireframe seviyesi yeterli)
+
+3. Prototype modunda bağlantıları kur:
+   - Login → "Giriş" butonu → Ana sayfa
+   - Login → "Şifremi unuttum" → Şifremi unuttum ekranı
+   - Şifremi unuttum → "Gönder" → Onay ekranı
+   - Onay → "Giriş yap" → Login
+
+4. Geçiş animasyonu ekle (Dissolve veya Slide)
+
+5. Preview ile test et
+
+**Bonus:** Hata durumu ekle - yanlış şifre girildiğinde error mesajı göster.
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Prototype, tasarımın etkileşimli simülasyonu - tıklanabilir, test edilebilir
+- Low/mid/high fidelity seçimi amaca göre yapılır
+- Kağıt prototipten kod prototipe kadar farklı yöntemler var
+- Figma en popüler araç: frame'leri bağla, trigger/action/animation ayarla
+- Wireframe statik yapı, mockup statik görsel, prototype etkileşimli deneyim
+- Test için prototip oluştur, 5 kullanıcı sorunların çoğunu gösterir
+- Her şeyi prototipleme, amaca odaklan
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Product Design Nedir?](/kutuphane/product-design-nedir)
+
+**Sonraki:** Wireframe vs Mockup vs Prototype *(yakında)*
+
+**İlgili konular:**
+- [Wireframe Nedir?](/kutuphane/wireframe-nedir)
+- [Kullanılabilirlik Testi Nedir?](/kutuphane/kullanilabilirlik-testi)
+- [User Flow ve Task Flow](/kutuphane/user-flow-task-flow)
+
+**İlgili Roadmap:** UX Designer Roadmap → Tasarım Çıktıları
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Prototyping - NNGroup](https://www.nngroup.com/articles/ux-prototype-hi-lo-fidelity/) (İngilizce, 8 dk)
+- [Figma Prototyping Guide](https://help.figma.com/hc/en-us/articles/360040314193-Guide-to-prototyping-in-Figma) (İngilizce, resmi döküman)
+- [Prototyping - IxDF](https://www.interaction-design.org/literature/topics/prototyping) (İngilizce, 10 dk)
 `,
   },
 };
