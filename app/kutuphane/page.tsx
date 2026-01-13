@@ -321,14 +321,24 @@ function KutuphaneContent() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 px-6 border-b border-zinc-800">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-16 md:py-24 px-6 border-b border-zinc-800 overflow-hidden">
+        {/* Animated Background Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#DEFF37]/5 via-transparent to-purple-500/5 animate-gradient-shift"></div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white flex items-center justify-center gap-3">
-              <span>📚</span>
-              <span>Kütüphane</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            {/* Animated Books Stack */}
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="flex items-end gap-2 book-stack">
+                <div className="book book-1">📖</div>
+                <div className="book book-2">📗</div>
+                <div className="book book-3">📕</div>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white hero-title">
+                Kütüphane
+              </h1>
+            </div>
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto hero-subtitle">
               UX, UI ve Product Design hakkında Türkçe rehberler. Öğrenmeye nereden başlayacağını bilmiyorsan, roadmap'lere göz at.
             </p>
           </div>
@@ -600,6 +610,160 @@ function KutuphaneContent() {
       <footer className="py-8 px-6 bg-black border-t border-zinc-900 text-gray-500 text-center">
         <p>DesignAtlas BETA &copy; 2024 - Tasarımı Öğren. Adım Adım.</p>
       </footer>
+
+      {/* Animation Styles */}
+      <style jsx>{`
+        /* Floating Books Animation */
+        .book-stack {
+          position: relative;
+        }
+
+        .book {
+          font-size: 2.5rem;
+          display: inline-block;
+          filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+        }
+
+        .book-1 {
+          animation: float-book-1 3s ease-in-out infinite;
+          transform-origin: center bottom;
+        }
+
+        .book-2 {
+          animation: float-book-2 3.5s ease-in-out infinite;
+          animation-delay: 0.2s;
+          transform-origin: center bottom;
+        }
+
+        .book-3 {
+          animation: float-book-3 3.2s ease-in-out infinite;
+          animation-delay: 0.4s;
+          transform-origin: center bottom;
+        }
+
+        @keyframes float-book-1 {
+          0%, 100% {
+            transform: translateY(0) rotate(-2deg) scale(1);
+          }
+          50% {
+            transform: translateY(-12px) rotate(2deg) scale(1.05);
+          }
+        }
+
+        @keyframes float-book-2 {
+          0%, 100% {
+            transform: translateY(0) rotate(1deg) scale(1);
+          }
+          50% {
+            transform: translateY(-15px) rotate(-1deg) scale(1.05);
+          }
+        }
+
+        @keyframes float-book-3 {
+          0%, 100% {
+            transform: translateY(0) rotate(-1.5deg) scale(1);
+          }
+          50% {
+            transform: translateY(-10px) rotate(1.5deg) scale(1.05);
+          }
+        }
+
+        /* Hero Title Animation */
+        .hero-title {
+          animation: fade-in-up 0.8s ease-out;
+          background: linear-gradient(to right, #ffffff, #f0f0f0, #ffffff);
+          background-size: 200% auto;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: fade-in-up 0.8s ease-out, shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes shimmer {
+          0%, 100% {
+            background-position: 0% center;
+          }
+          50% {
+            background-position: 100% center;
+          }
+        }
+
+        /* Hero Subtitle Animation */
+        .hero-subtitle {
+          animation: fade-in-up 0.8s ease-out 0.2s both;
+        }
+
+        /* Gradient Background Animation */
+        @keyframes gradient-shift {
+          0%, 100% {
+            opacity: 0.5;
+            transform: translate(0, 0) scale(1);
+          }
+          33% {
+            opacity: 0.7;
+            transform: translate(20px, -20px) scale(1.1);
+          }
+          66% {
+            opacity: 0.6;
+            transform: translate(-20px, 20px) scale(0.9);
+          }
+        }
+
+        .animate-gradient-shift {
+          animation: gradient-shift 8s ease-in-out infinite;
+        }
+
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+          .book-1,
+          .book-2,
+          .book-3,
+          .hero-title,
+          .hero-subtitle,
+          .animate-gradient-shift {
+            animation: none;
+          }
+
+          .hero-title {
+            background: none;
+            -webkit-text-fill-color: #ffffff;
+            color: #ffffff;
+          }
+
+          .book {
+            filter: none;
+          }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+          .book {
+            font-size: 2rem;
+          }
+
+          @keyframes float-book-1,
+                   float-book-2,
+                   float-book-3 {
+            0%, 100% {
+              transform: translateY(0) rotate(0deg) scale(1);
+            }
+            50% {
+              transform: translateY(-8px) rotate(1deg) scale(1.02);
+            }
+          }
+        }
+      `}</style>
     </div>
   );
 }
