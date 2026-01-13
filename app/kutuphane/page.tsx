@@ -230,6 +230,21 @@ const MOCK_ARTICLES: Article[] = [
     author: "Serhat Bahçeliler",
     views: 0,
   },
+  {
+    id: "wireframe-mockup-prototype",
+    title: "Wireframe vs Mockup vs Prototype",
+    subtitle: "Üç Tasarım Çıktısını Doğru Anla, Doğru Kullan",
+    titleEn: "Wireframe vs Mockup vs Prototype",
+    slug: "wireframe-mockup-prototype",
+    description: "Wireframe, mockup ve prototype arasındaki farklar nedir? Hangisini ne zaman kullanmalısın? Karşılaştırmalı rehber ve pratik örnekler.",
+    category: "ux-design",
+    readingTime: 10,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    views: 0,
+  },
 ];
 
 type SortOption = "newest" | "popular" | "az";

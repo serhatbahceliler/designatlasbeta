@@ -5258,7 +5258,7 @@ Test yaptın, sorunları buldun ama düzeltmedin. Prototip ölü döküman oldu.
 
 **Önceki:** [Product Design Nedir?](/kutuphane/product-design-nedir)
 
-**Sonraki:** Wireframe vs Mockup vs Prototype *(yakında)*
+**Sonraki:** [Wireframe vs Mockup vs Prototype](/kutuphane/wireframe-mockup-prototype)
 
 **İlgili konular:**
 - [Wireframe Nedir?](/kutuphane/wireframe-nedir)
@@ -5276,6 +5276,455 @@ Derinleşmek istersen:
 - [Prototyping - NNGroup](https://www.nngroup.com/articles/ux-prototype-hi-lo-fidelity/) (İngilizce, 8 dk)
 - [Figma Prototyping Guide](https://help.figma.com/hc/en-us/articles/360040314193-Guide-to-prototyping-in-Figma) (İngilizce, resmi döküman)
 - [Prototyping - IxDF](https://www.interaction-design.org/literature/topics/prototyping) (İngilizce, 10 dk)
+`,
+  },
+  "wireframe-mockup-prototype": {
+    id: "wireframe-mockup-prototype",
+    title: "Wireframe vs Mockup vs Prototype",
+    subtitle: "Üç Tasarım Çıktısını Doğru Anla, Doğru Kullan",
+    titleEn: "Wireframe vs Mockup vs Prototype",
+    slug: "wireframe-mockup-prototype",
+    description: "Wireframe, mockup ve prototype arasındaki farklar nedir? Hangisini ne zaman kullanmalısın? Karşılaştırmalı rehber ve pratik örnekler.",
+    category: "ux-design",
+    readingTime: 10,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    content: `# Wireframe vs Mockup vs Prototype: Üç Tasarım Çıktısını Doğru Anla
+
+**Seviye:** Başlangıç  
+**Kategori:** UX Design  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+"Wireframe gönderir misin?" diyor PM. "Prototype hazır mı?" diyor developer. "Mockup'ı görelim" diyor stakeholder.
+
+Üç farklı terim, üç farklı beklenti. Yanlış çıktıyı gönderirsen, toplantı verimsiz geçer, beklentiler karışır.
+
+Bu üç kavram en çok karıştırılan tasarım terimleri arasında. Hepsinin ortak noktası: Henüz kod yazılmadan tasarımı görselleştirmek. Ama her biri farklı amaca hizmet ediyor.
+
+Bu yazıda wireframe, mockup ve prototype arasındaki farkları, hangisini ne zaman kullanacağını ve tipik tasarım akışında nasıl sıralandıklarını öğreneceksin.
+
+---
+
+## Hızlı Özet
+
+Üç kavramı tek tabloda görelim:
+
+[TABLE]
+| Özellik | Wireframe | Mockup | Prototype |
+|---------|-----------|--------|-----------|
+| **Sadakat** | Düşük (Low-fi) | Yüksek (High-fi) | Değişken |
+| **Etkileşim** | Yok (Statik) | Yok (Statik) | Var (Tıklanabilir) |
+| **Görsel** | Gri, placeholder | Gerçek tasarım | Değişken |
+| **Amaç** | Yapı | Görünüm | Deneyim |
+| **Soru** | Ne nerede? | Nasıl görünecek? | Nasıl çalışacak? |
+| **Süre** | Dakikalar-saatler | Saatler-günler | Saatler-günler |
+[/TABLE]
+
+---
+
+## Wireframe Nedir?
+
+[CALLOUT]
+**Wireframe:**
+Düşük sadakatli, statik yapı taslağı. İçerik yerleşimini ve hiyerarşiyi gösterir. Görsel detay içermez.
+[/CALLOUT]
+
+### Özellikleri
+
+- Siyah, beyaz ve gri tonları
+- Placeholder içerik ("Lorem ipsum", "Image")
+- Basit şekiller: kutular, çizgiler
+- Renk, tipografi, görsel detay yok
+- Hızlı üretilir
+
+### Ne Zaman Kullanılır?
+
+- Erken aşama fikirleri paylaşırken
+- Sayfa yapısını ve hiyerarşiyi belirlerken
+- Stakeholder'dan yapısal onay alırken
+- Görsel detaylara girmeden önce
+
+### Avantajları
+
+- Çok hızlı
+- Görsel tartışmalara girmez
+- Yapıya odaklanmayı sağlar
+- Değiştirmesi kolay
+
+### Dezavantajları
+
+- Gerçekçi değil
+- Etkileşim yok
+- Stakeholder'lar bazen anlamakta zorlanır
+
+---
+
+## Mockup Nedir?
+
+[CALLOUT]
+**Mockup:**
+Yüksek sadakatli, statik görsel tasarım. Final ürünün görünümünü gösterir. Etkileşim içermez.
+[/CALLOUT]
+
+### Özellikleri
+
+- Gerçek renkler ve tipografi
+- Gerçek veya gerçekçi içerik
+- Detaylı görsel tasarım
+- İkonlar, görseller, gölgeler
+- Piksel-perfect
+
+### Ne Zaman Kullanılır?
+
+- Görsel tasarım onayı alırken
+- Brand uyumunu gösterirken
+- Developer'a visual spec verirken
+- Pazarlama materyalleri için
+
+### Avantajları
+
+- Gerçekçi görünüm
+- Görsel kararları netleştirir
+- Developer için referans
+- Stakeholder'lar kolayca anlar
+
+### Dezavantajları
+
+- Zaman alır
+- Değiştirmesi daha zor
+- Etkileşimi göstermez
+- Erken aşamada gereksiz detay
+
+---
+
+## Prototype Nedir?
+
+[CALLOUT]
+**Prototype:**
+Etkileşimli tasarım simülasyonu. Tıklanabilir, gezinilebilir. Deneyimi test etmeyi sağlar.
+[/CALLOUT]
+
+### Özellikleri
+
+- Tıklanabilir alanlar (hotspot)
+- Sayfa geçişleri
+- Animasyonlar (opsiyonel)
+- Low-fi veya high-fi olabilir
+- Test edilebilir
+
+### Ne Zaman Kullanılır?
+
+- Kullanılabilirlik testi yaparken
+- Akışı stakeholder'a gösterirken
+- Developer'a etkileşim spec verirken
+- Fikirleri test ederken
+
+### Avantajları
+
+- Deneyimi simüle eder
+- Test edilebilir
+- Stakeholder'lar "dener"
+- Akış sorunlarını ortaya çıkarır
+
+### Dezavantajları
+
+- Wireframe/mockup'a göre daha fazla zaman
+- Bakımı gerekir (değişikliklerde güncelleme)
+- Bazen "gerçek ürün" sanılır
+
+---
+
+## Fidelity Kavramı
+
+**Fidelity** (sadakat), tasarımın final ürüne ne kadar benzediğini ifade eder.
+
+### Low-Fidelity (Düşük Sadakat)
+
+- Kaba, hızlı
+- Detaysız
+- Erken aşama fikirleri için
+- Örnek: Wireframe, paper prototype
+
+### High-Fidelity (Yüksek Sadakat)
+
+- Detaylı, gerçekçi
+- Final ürüne yakın
+- Onay ve test için
+- Örnek: Mockup, high-fi prototype
+
+[TIP]
+💡 Fidelity seçimi amaca göre yapılır. Erken aşamada low-fi daha verimli, final onayda high-fi gerekli.
+[/TIP]
+
+---
+
+## Detaylı Karşılaştırma
+
+### Amaç Açısından
+
+[TABLE]
+| Çıktı | Ana Soru | Amaç |
+|-------|----------|------|
+| **Wireframe** | Ne nerede olacak? | Yapıyı ve hiyerarşiyi belirlemek |
+| **Mockup** | Nasıl görünecek? | Görsel tasarımı onaylatmak |
+| **Prototype** | Nasıl çalışacak? | Deneyimi test etmek |
+[/TABLE]
+
+### Hedef Kitle Açısından
+
+[TABLE]
+| Çıktı | Birincil Hedef Kitle |
+|-------|---------------------|
+| **Wireframe** | Tasarım ekibi, PM, stakeholder (yapısal onay) |
+| **Mockup** | Stakeholder (görsel onay), developer (spec) |
+| **Prototype** | Kullanıcı (test), stakeholder (demo), developer (etkileşim) |
+[/TABLE]
+
+### Zaman ve Emek Açısından
+
+[TABLE]
+| Çıktı | Oluşturma Süresi | Değiştirme Kolaylığı |
+|-------|------------------|---------------------|
+| **Wireframe** | Dakikalar - saatler | Çok kolay |
+| **Mockup** | Saatler - günler | Orta |
+| **Prototype** | Saatler - günler | Orta - Zor (bağlantılar) |
+[/TABLE]
+
+---
+
+## Tipik Tasarım Akışı
+
+Çoğu projede akış şöyle ilerler:
+
+**Adım 1: Wireframe**
+Yapıyı belirle, stakeholder onayı al.
+
+**Adım 2: Mockup**
+Görsel tasarımı yap, onay al.
+
+**Adım 3: Prototype**
+Etkileşimleri ekle, test et.
+
+**Adım 4: Handoff**
+Developer'a teslim et.
+
+[WARNING]
+⚠️ Bu sıra her projede geçerli değil. Bazen wireframe'den direkt prototype'a geçilir. Bazen sadece mockup yeterli olur. Projenin ihtiyacına göre esnek ol.
+[/WARNING]
+
+---
+
+## Hangi Durumda Hangisi?
+
+### Sadece Wireframe Yeterli
+
+- Erken aşama beyin fırtınası
+- İç ekip hizalaması
+- Hızlı A/B fikir karşılaştırması
+- Yapısal karar alma
+
+### Sadece Mockup Yeterli
+
+- Küçük UI değişiklikleri
+- Görsel güncelleme
+- Pazarlama materyali
+- Mevcut akışta görsel yenileme
+
+### Prototype Gerekli
+
+- Kullanılabilirlik testi
+- Karmaşık akış doğrulama
+- Stakeholder demo
+- Yeni özellik lansmanı
+- Developer'a etkileşim anlatma
+
+### Üçü Birlikte Gerekli
+
+- Yeni ürün tasarımı
+- Büyük yeniden tasarım
+- Kompleks çok adımlı akışlar
+- Yüksek riskli projeler
+
+---
+
+## Yaygın Hatalar
+
+### 1. Her şeye mockup ile başlamak
+
+[COMPARISON]
+❌ Hata: Direkt Figma'da detaylı tasarım yapmak
+✅ Doğrusu: Önce wireframe ile yapıyı onayla, sonra mockup'a geç
+[/COMPARISON]
+
+Yapı yanlışsa, güzel mockup'ı çöpe atarsın.
+
+### 2. Prototype'ı atlayıp geliştirmeye geçmek
+
+"Mockup yeterli, developer anlar" düşüncesi tehlikeli. Etkileşimler, geçişler, edge case'ler prototype olmadan net olmaz.
+
+### 3. Wireframe'i müşteriye göstermek
+
+Bazı stakeholder'lar wireframe'i "bitmiş tasarım" sanır ve "çok çirkin" der. Bağlamı açıkla veya direkt mockup göster.
+
+### 4. High-fi prototype'ı "gerçek ürün" sanmak
+
+Prototype test aracıdır, final ürün değil. Kullanıcılar bazen "neden bu kadar yavaş?" der çünkü gerçek zannneder.
+
+### 5. Fidelity tutarsızlığı
+
+Aynı projede bazı ekranlar wireframe, bazıları mockup olunca karışıklık çıkar. Tutarlı ol.
+
+---
+
+## Pratik Senaryolar
+
+### Senaryo 1: Yeni Onboarding Akışı
+
+**İhtiyaç:** 5 ekranlık yeni kullanıcı karşılama akışı
+
+**Yaklaşım:**
+1. Wireframe ile akışı belirle (hangi bilgiler, hangi sırayla)
+2. Stakeholder onayı al
+3. Mockup ile görsel tasarla
+4. Prototype ile animasyonları ve geçişleri ekle
+5. 5 kullanıcıyla test et
+6. İtere et
+
+### Senaryo 2: Buton Rengi Değişikliği
+
+**İhtiyaç:** Primary buton rengini değiştirmek
+
+**Yaklaşım:**
+- Sadece mockup yeterli
+- Design system'da güncelle
+- Wireframe/prototype gereksiz
+
+### Senaryo 3: Checkout Akışını Test Etme
+
+**İhtiyaç:** Mevcut checkout'un sorunlu olduğu düşünülüyor
+
+**Yaklaşım:**
+1. Mevcut akışın prototype'ını çıkar
+2. Kullanılabilirlik testi yap
+3. Sorunları tespit et
+4. Alternatif wireframe'ler çiz
+5. Yeni mockup ve prototype yap
+6. Tekrar test et
+
+---
+
+## Araçlara Göre Kullanım
+
+[TABLE]
+| Araç | Wireframe | Mockup | Prototype |
+|------|-----------|--------|-----------|
+| **Figma** | ✓ | ✓ | ✓ |
+| **Sketch** | ✓ | ✓ | Sınırlı |
+| **Adobe XD** | ✓ | ✓ | ✓ |
+| **Balsamiq** | ✓ | ✗ | ✗ |
+| **InVision** | ✗ | ✗ | ✓ |
+| **ProtoPie** | ✗ | ✗ | ✓ (gelişmiş) |
+| **Kalem/Kağıt** | ✓ | ✗ | ✓ (paper prototype) |
+[/TABLE]
+
+[TIP]
+💡 Figma her üçü için de kullanılabilir. Tek araçta kalarak geçişler arası zaman kaybetmezsin.
+[/TIP]
+
+---
+
+## Özet Tablosu
+
+[TABLE]
+| | Wireframe | Mockup | Prototype |
+|---|-----------|--------|-----------|
+| **Bir kelimeyle** | İskelet | Görünüm | Deneyim |
+| **Sadakat** | Düşük | Yüksek | Değişken |
+| **Statik/Dinamik** | Statik | Statik | Dinamik |
+| **Ne gösterir** | Yapı, hiyerarşi | Renkler, fontlar | Akış, etkileşim |
+| **Ne zaman** | Erken aşama | Görsel onay | Test, demo |
+| **Hız** | En hızlı | Orta | Orta-yavaş |
+[/TABLE]
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**15 dakika**
+
+**Görev:** Aynı ekran için wireframe, mockup ve prototype farkını anla.
+
+**Senaryo:** Bir profil ayarları sayfası tasarlıyorsun.
+
+**Adım 1 - Wireframe (5 dk)**
+Kağıda veya Figma'da gri kutularla:
+- Profil fotoğrafı placeholder
+- İsim ve email alanları
+- Şifre değiştir butonu
+- Bildirim ayarları toggle'ları
+- Kaydet butonu
+
+**Adım 2 - Mockup'a dönüştür (5 dk)**
+Aynı yapıyı:
+- Gerçek renklerle
+- Gerçek fontlarla
+- Örnek bir profil fotoğrafıyla
+- Tamamla
+
+**Adım 3 - Prototype düşün (5 dk)**
+Şu etkileşimleri not al:
+- Toggle'a tıklayınca ne olur?
+- Kaydet'e basınca ne olur?
+- Başarılı kayıt mesajı nasıl görünür?
+
+**Değerlendirme:** Her adımda ne kadar farklı bilgi iletildiğini gör.
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- **Wireframe:** Düşük sadakat, statik, yapı gösterir - "Ne nerede?"
+- **Mockup:** Yüksek sadakat, statik, görünüm gösterir - "Nasıl görünecek?"
+- **Prototype:** Etkileşimli, deneyim gösterir - "Nasıl çalışacak?"
+- Tipik akış: Wireframe → Mockup → Prototype (ama esnek ol)
+- Her projede üçü gerekmez, amaca göre seç
+- Fidelity seçimi: Erken aşama low-fi, final onay high-fi
+- Figma üçü için de kullanılabilir
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Prototype Nedir?](/kutuphane/prototype-nedir)
+
+**Sonraki:** Information Architecture Temelleri *(yakında)*
+
+**İlgili konular:**
+- [Wireframe Nedir?](/kutuphane/wireframe-nedir)
+- [Prototype Nedir?](/kutuphane/prototype-nedir)
+- [User Flow ve Task Flow](/kutuphane/user-flow-task-flow)
+
+**İlgili Roadmap:** UX Designer Roadmap → Tasarım Çıktıları
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Wireframes vs Mockups vs Prototypes - UXPin](https://www.uxpin.com/studio/blog/wireframe-vs-mockup-vs-prototype/) (İngilizce, 8 dk)
+- [Fidelity in Design - NNGroup](https://www.nngroup.com/articles/ux-prototype-hi-lo-fidelity/) (İngilizce, 6 dk)
+- [Design Fidelity - IxDF](https://www.interaction-design.org/literature/article/design-fidelity-what-it-is-and-why-it-matters) (İngilizce, 10 dk)
 `,
   },
 };
