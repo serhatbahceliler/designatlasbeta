@@ -2812,6 +2812,74 @@ export default function ArticlePage() {
               },
             },
           ],
+          "ux-nedir": [
+            {
+              "@type": "Question",
+              name: "UX ne demek?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "UX, User Experience (Kullanıcı Deneyimi) kelimelerinin kısaltmasıdır. Bir kullanıcının bir ürün, sistem veya hizmetle etkileşiminde yaşadığı tüm deneyimi ifade eder.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "UX Designer ne yapar?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "UX Designer, kullanıcı araştırması yapar, kullanıcı ihtiyaçlarını analiz eder, kullanıcı akışları ve wireframe'ler oluşturur, prototipler tasarlar ve kullanılabilirlik testleri yürütür. Amacı, ürünlerin kullanıcılar için kolay, verimli ve keyifli olmasını sağlamaktır.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "UX ve UI arasındaki fark nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "UX (User Experience) ürünün nasıl çalıştığını ve hissettirdiğini tasarlar; kullanıcı araştırması, akışlar ve yapı ile ilgilenir. UI (User Interface) ise ürünün nasıl göründüğünü tasarlar; renkler, tipografi, butonlar ve görsel elementlerle ilgilenir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "UX Designer olmak için ne gerekir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "UX Designer olmak için empati, analitik düşünme, problem çözme ve iletişim becerileri gerekir. Teknik olarak kullanıcı araştırması, wireframing, prototyping ve temel görsel tasarım bilgisi önemlidir. Belirli bir diploma zorunluluğu yoktur.",
+              },
+            },
+          ],
+          "ui-nedir": [
+            {
+              "@type": "Question",
+              name: "UI ne demek?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "UI, User Interface (Kullanıcı Arayüzü) kelimelerinin kısaltmasıdır. Kullanıcının bir dijital ürünle etkileşime girdiği görsel ve etkileşimli yüzeyi ifade eder: butonlar, menüler, ikonlar, renkler, tipografi ve tüm görsel elementler.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "UI Designer ne yapar?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "UI Designer, dijital ürünlerin görsel tasarımını yapar. Renk paletleri, tipografi, ikonlar, butonlar ve tüm görsel elementleri tasarlar. Design system oluşturur, style guide hazırlar ve görsel tutarlılığı sağlar.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "UI ve UX arasındaki fark nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "UI (User Interface) ürünün nasıl göründüğüyle ilgilenir: renkler, tipografi, görsel elementler. UX (User Experience) ise ürünün nasıl çalıştığı ve hissettirdiğiyle ilgilenir: kullanıcı araştırması, akışlar, yapı. UI görsel katman, UX deneyim katmanıdır.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "İyi bir UI nasıl olmalı?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "İyi bir UI tutarlı, anlaşılır, erişilebilir ve estetik olmalıdır. Görsel hiyerarşi net olmalı, elementler tahmin edilebilir davranmalı, renk kontrastı yeterli olmalı ve marka kimliğiyle uyumlu olmalıdır.",
+              },
+            },
+          ],
         };
 
         const faqs = faqData[slug];
