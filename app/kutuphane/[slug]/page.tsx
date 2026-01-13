@@ -4309,6 +4309,40 @@ export default function ArticlePage() {
               },
             },
           ],
+          "persona-olusturma": [
+            {
+              "@type": "Question",
+              name: "Persona nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Persona, hedef kullanıcı grubunu temsil eden kurgusal ama araştırmaya dayalı karakter profilidir. Gerçek kullanıcı verilerinden oluşturulur ve tasarım kararlarına rehberlik eder.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Persona ne işe yarar?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Persona, ekibin kullanıcıya empati kurmasını sağlar, tasarım kararlarında ortak referans noktası oluşturur, 'herkes için tasarla' tuzağından kaçınmaya yardımcı olur ve stakeholder iletişimini kolaylaştırır.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Kaç persona oluşturulmalı?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Çoğu proje için 2-4 persona yeterlidir. Bir primary persona (ana hedef) ve 1-3 secondary persona (diğer önemli gruplar) oluşturulur. Çok fazla persona odağı dağıtır.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Persona araştırma olmadan oluşturulabilir mi?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Teknik olarak evet ama önerilmez. Araştırma olmadan oluşturulan personalar varsayımlara dayanır ve yanlış yönlendirebilir. En azından mevcut veriler, müşteri destek kayıtları veya stakeholder görüşmeleri kullanılmalıdır.",
+              },
+            },
+          ],
         };
 
         const faqs = faqData[slug];
