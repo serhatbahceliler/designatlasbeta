@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect, Suspense } from "react";
+import { useState, useMemo, useEffect, useRef, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import Header from "@/components/Header";
@@ -171,6 +171,12 @@ const MOCK_ARTICLES: Article[] = [
 
 type SortOption = "newest" | "popular" | "az";
 
+const SEARCH_PROMPTS = [
+  "UX Design nedir?",
+  "Kullanılabilirlik testi nedir?",
+  "User flow nedir?",
+];
+
 function KutuphaneContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -181,6 +187,11 @@ function KutuphaneContent() {
   );
   const [sortBy, setSortBy] = useState<SortOption>("newest");
   const [displayLimit, setDisplayLimit] = useState(8);
+  const [animatedPlaceholder, setAnimatedPlaceholder] = useState("");
+  const [currentPromptIndex, setCurrentPromptIndex] = useState(0);
+  const placeholderTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const charIndexRef = useRef(0);
+  const isTypingRef = useRef(true);
 
   // Debounce search
   useEffect(() => {
@@ -190,6 +201,58 @@ function KutuphaneContent() {
 
     return () => clearTimeout(timer);
   }, [searchQuery]);
+
+  // Animated placeholder typing effect - only when search input is empty
+  useEffect(() => {
+    // Stop animation if search query has text
+    if (searchQuery !== "") {
+      setAnimatedPlaceholder("");
+      if (placeholderTimeoutRef.current) {
+        clearTimeout(placeholderTimeoutRef.current);
+      }
+      return;
+    }
+
+    const currentPrompt = SEARCH_PROMPTS[currentPromptIndex];
+    charIndexRef.current = 0;
+    isTypingRef.current = true;
+
+    const animate = () => {
+      if (isTypingRef.current) {
+        // Typing phase
+        if (charIndexRef.current <= currentPrompt.length) {
+          setAnimatedPlaceholder(currentPrompt.slice(0, charIndexRef.current));
+          charIndexRef.current++;
+          placeholderTimeoutRef.current = setTimeout(animate, 50);
+        } else {
+          // Wait before deleting
+          placeholderTimeoutRef.current = setTimeout(() => {
+            isTypingRef.current = false;
+            charIndexRef.current = currentPrompt.length;
+            animate();
+          }, 2000);
+        }
+      } else {
+        // Deleting phase
+        if (charIndexRef.current > 0) {
+          charIndexRef.current--;
+          setAnimatedPlaceholder(currentPrompt.slice(0, charIndexRef.current));
+          placeholderTimeoutRef.current = setTimeout(animate, 30);
+        } else {
+          // Move to next prompt
+          setCurrentPromptIndex((prev) => (prev + 1) % SEARCH_PROMPTS.length);
+        }
+      }
+    };
+
+    animate();
+
+    return () => {
+      if (placeholderTimeoutRef.current) {
+        clearTimeout(placeholderTimeoutRef.current);
+      }
+    };
+  }, [searchQuery, currentPromptIndex]);
 
   // Update URL when category changes
   useEffect(() => {
@@ -363,7 +426,7 @@ function KutuphaneContent() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Konu veya anahtar kelime ara..."
+                placeholder={animatedPlaceholder || "Konu veya anahtar kelime ara..."}
                 className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#DEFF37]/50 focus:ring-2 focus:ring-[#DEFF37]/20 transition-all"
               />
               {searchQuery && (
