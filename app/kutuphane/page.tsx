@@ -155,6 +155,21 @@ const MOCK_ARTICLES: Article[] = [
     author: "Serhat Bahçeliler",
     views: 0,
   },
+  {
+    id: "wireframe-nedir",
+    title: "Wireframe Nedir?",
+    subtitle: "Tasarımın İskeletini Oluşturma Rehberi",
+    titleEn: "What is Wireframe?",
+    slug: "wireframe-nedir",
+    description: "Wireframe nedir, ne işe yarar? Wireframe nasıl çizilir, hangi araçlar kullanılır? Low-fidelity tasarımın temellerini öğren.",
+    category: "ux-design",
+    readingTime: 11,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    views: 0,
+  },
 ];
 
 type SortOption = "newest" | "popular" | "az";

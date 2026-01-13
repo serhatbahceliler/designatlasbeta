@@ -2846,7 +2846,7 @@ Sorularının odağı ne kadar farklı? Hangilerinde örtüşme var?
 
 **Önceki:** [UI Nedir?](/kutuphane/ui-nedir)
 
-**Sonraki:** Wireframe Nedir? *(yakında)*
+**Sonraki:** [Wireframe Nedir?](/kutuphane/wireframe-nedir)
 
 **İlgili konular:**
 - [UX Nedir?](/kutuphane/ux-nedir)
@@ -2864,6 +2864,477 @@ Derinleşmek istersen:
 - [UX vs UI Design: What's the Difference? - NNGroup](https://www.nngroup.com/articles/ux-vs-ui/) (İngilizce, 6 dk)
 - [The Difference Between UX and UI Design - IxDF](https://www.interaction-design.org/literature/article/the-difference-between-ux-and-ui-design-a-layman-s-guide) (İngilizce, 10 dk)
 - [UI vs UX: What's the difference? - Figma](https://www.figma.com/resource-library/difference-between-ui-and-ux/) (İngilizce, 8 dk)
+`,
+  },
+  "wireframe-nedir": {
+    id: "wireframe-nedir",
+    title: "Wireframe Nedir?",
+    subtitle: "Tasarımın İskeletini Oluşturma Rehberi",
+    titleEn: "What is Wireframe?",
+    slug: "wireframe-nedir",
+    description: "Wireframe nedir, ne işe yarar? Wireframe nasıl çizilir, hangi araçlar kullanılır? Low-fidelity tasarımın temellerini öğren.",
+    category: "ux-design",
+    readingTime: 11,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    content: `# Wireframe Nedir? Tasarımın İskeletini Oluşturma Rehberi
+
+**Seviye:** Başlangıç  
+**Kategori:** UX Design  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Bir bina inşa etmeden önce mimar çizim yapar. Duvarlar nerede olacak, kapılar nereye açılacak, pencereler hangi yönü görecek. Henüz boya rengi, parke seçimi yok. Sadece yapı.
+
+Dijital ürünlerde de aynı mantık geçerli. Renkler, fontlar ve güzel görseller eklemeden önce, sayfanın iskeletini çizersin. Buna **wireframe** diyoruz.
+
+Wireframe, tasarım sürecinin en değerli ama en çok atlanan adımlarından biri. "Hızlıca mockup'a geçelim" derken, yapısal sorunlar göz ardı edilir. Sonra her şeyi baştan yapmak zorunda kalırsın.
+
+Bu yazıda wireframe'in ne olduğunu, neden önemli olduğunu ve nasıl çizileceğini öğreneceksin.
+
+---
+
+## Wireframe Ne Demek?
+
+[CALLOUT]
+**Wireframe:**
+Bir dijital ürünün sayfa veya ekran yapısını gösteren düşük sadakatli (low-fidelity) görsel taslak. İçerik yerleşimini, hiyerarşiyi ve temel fonksiyonları gösterir. Renk, tipografi veya detaylı görsel içermez.
+[/CALLOUT]
+
+"Wire" (tel) + "Frame" (çerçeve) = Tel çerçeve.
+
+Wireframe, tasarımın iskeletidir. Tıpkı bir binanın çelik konstrüksiyonu gibi. Üzerine duvar, boya, dekorasyon (yani UI) sonra gelir.
+
+---
+
+## Wireframe Neye Benzer?
+
+Tipik bir wireframe şu özelliklere sahiptir:
+
+- **Gri tonları:** Siyah, beyaz ve gri. Renk yok.
+- **Placeholder içerik:** "Lorem ipsum" metinler, "Image" yazan kutular
+- **Basit şekiller:** Dikdörtgenler, çizgiler, basit ikonlar
+- **Görsel detay yok:** Gölge, gradient, efekt yok
+- **Net etiketler:** Her alanın ne olduğu yazılı
+
+[COMPARISON]
+**Wireframe'de olan:**
+- İçerik blokları ve yerleşimi
+- Navigasyon yapısı
+- Buton konumları
+- Metin hiyerarşisi (başlık, alt başlık, body)
+- Temel akış
+
+**Wireframe'de olmayan:**
+- Gerçek renkler
+- Son tipografi
+- Gerçek görseller
+- Detaylı ikonlar
+- Animasyonlar
+[/COMPARISON]
+
+---
+
+## Neden Wireframe Çizilir?
+
+### 1. Hızlı iterasyon
+
+Wireframe çizmek hızlıdır. Mockup yapmak saatler alırken, wireframe dakikalar alır. Yanlış bir fikri wireframe'de görmek, mockup'ta görmekten çok daha ucuz.
+
+### 2. Yapıya odaklanma
+
+Renkler ve görseller dikkat dağıtır. "Bu mavi çok koyu" tartışması yerine, "Bu buton burada mı olmalı?" tartışması yaparsın.
+
+### 3. Erken geri bildirim
+
+Stakeholder'lara wireframe göstermek, erken feedback almayı sağlar. Yanlış yönde ilerlemeden önce düzeltme şansı verir.
+
+### 4. Ekip hizalaması
+
+Wireframe, herkesin aynı sayfada olduğundan emin olmanı sağlar. Developer, PM, tasarımcı - herkes yapıyı görür.
+
+### 5. Kullanılabilirlik testi
+
+Wireframe'lerle bile kullanılabilirlik testi yapabilirsin. Görsel tasarım olmadan akışı test edebilirsin.
+
+[INFO]
+5x daha hızlı
+Wireframe iterasyonu, mockup iterasyonundan ortalama 5 kat hızlı
+[/INFO]
+
+---
+
+## Wireframe Tipleri
+
+Wireframe'ler sadakat seviyesine (fidelity) göre ayrılır:
+
+### Low-Fidelity (Düşük Sadakat)
+
+En basit hali. Kalem kağıtla bile çizilebilir.
+
+**Özellikleri:**
+- Çok hızlı (dakikalar)
+- Çok kaba
+- Elle çizim veya basit kutular
+- Beyin fırtınası ve ilk fikirler için
+
+### Mid-Fidelity (Orta Sadakat)
+
+En yaygın kullanılan tip. Dijital araçlarla çizilir.
+
+**Özellikleri:**
+- Orta hızda (saatler)
+- Net yapı ve yerleşim
+- Placeholder içerik
+- Ekip paylaşımı ve geri bildirim için
+
+### High-Fidelity (Yüksek Sadakat)
+
+Wireframe'den çok "grayscale mockup"a yakın.
+
+**Özellikleri:**
+- Daha uzun süre
+- Gerçek içerik
+- Detaylı yerleşim
+- Kullanılabilirlik testi için
+
+[TABLE]
+| Tip | Hız | Detay | Kullanım |
+|-----|-----|-------|----------|
+| **Low-fi** | Dakikalar | Çok düşük | Beyin fırtınası, ilk fikirler |
+| **Mid-fi** | Saatler | Orta | Ekip paylaşımı, feedback |
+| **High-fi** | Günler | Yüksek | Test, dokümantasyon |
+[/TABLE]
+
+[TIP]
+💡 Çoğu projede mid-fidelity wireframe yeterli. High-fidelity'e geçmeden önce akışın doğrulanması gerekir.
+[/TIP]
+
+---
+
+## Wireframe Nasıl Çizilir?
+
+### Adım Adım Süreç
+
+[STEPS]
+1. Amacı belirle
+   Bu sayfanın amacı ne? Kullanıcı ne yapmak istiyor?
+
+2. İçerik listesi çıkar
+   Sayfada hangi içerikler olmalı? Header, form, liste, butonlar...
+
+3. Hiyerarşi oluştur
+   En önemli ne? İkincil ne? Üçüncül ne?
+
+4. Layout seç
+   Tek kolon mu? İki kolon mu? Grid nasıl olacak?
+
+5. Kabaca yerleştir
+   İçerikleri kabaca konumlandır. Mükemmel olmasına gerek yok.
+
+6. Detaylandır
+   Placeholder metin ekle, butonları yerleştir, navigasyonu kur.
+
+7. Gözden geçir
+   Akış mantıklı mı? Eksik bir şey var mı? Feedback al.
+[/STEPS]
+
+### Temel Layout Kalıpları
+
+**Tek Kolon:**
+Mobil için ideal. İçerik yukarıdan aşağı akar.
+[Header]
+[Hero]
+[Content Block]
+[Content Block]
+[CTA]
+[Footer]
+
+**İki Kolon:**
+Desktop için yaygın. Ana içerik + sidebar.
+[Header                    ]
+[Sidebar] [Main Content    ]
+[Footer                    ]
+
+**Grid:**
+Ürün listeleri, portfolyo, galeri için.
+[Header           ]
+[Card][Card][Card]
+[Card][Card][Card]
+[Footer           ]
+
+---
+
+## Wireframe Elementleri
+
+Wireframe'lerde kullanılan standart element gösterimleri:
+
+### Metin
+[████████████████] → Başlık
+[████████████] → Alt başlık
+[████ ████ ████ ████] → Paragraf (çizgiler)
+
+### Görsel
+┌─────────────┐
+│      ✕      │ → Placeholder görsel
+│   IMAGE     │
+└─────────────┘
+
+### Buton
+[  Buton Text  ] → Primary buton
+[  Buton Text  ] → Secondary buton (border only)
+
+### Input
+Label
+┌─────────────────┐
+│ Placeholder...  │
+└─────────────────┘
+
+### Navigation
+[Logo]  Link  Link  Link  [CTA]
+
+### Kart
+┌─────────────────┐
+│     IMAGE       │
+├─────────────────┤
+│ Başlık          │
+│ Açıklama text   │
+│ [Buton]         │
+└─────────────────┘
+
+---
+
+## Wireframe Araçları
+
+### Analog (Kalem + Kağıt)
+
+**Avantajları:**
+- Sıfır maliyet
+- Anında başlama
+- Tam özgürlük
+- Hiçbir öğrenme eğrisi yok
+
+**Dezavantajları:**
+- Paylaşımı zor
+- Düzenleme zahmetli
+- Arşivleme sorunu
+
+**Ne zaman kullan:**
+Beyin fırtınası, ilk eskizler, whiteboard çalışmaları
+
+### Dijital Araçlar
+
+[TABLE]
+| Araç | Ücretsiz | En İyi Yön | Platform |
+|------|----------|------------|----------|
+| **Figma** | ✓ | Her şey bir arada | Web, Desktop |
+| **Balsamiq** | ✗ | Sketch tarzı, hızlı | Web, Desktop |
+| **Whimsical** | Kısmen | Basitlik, hız | Web |
+| **Miro** | Kısmen | İş birliği, whiteboard | Web |
+| **Sketch** | ✗ | macOS için güçlü | macOS |
+| **Adobe XD** | Kısmen | Adobe ekosistemi | Desktop |
+[/TABLE]
+
+[TIP]
+💡 Figma, hem wireframe hem mockup için kullanılabildiğinden en popüler seçenek. Ücretsiz planı çoğu ihtiyacı karşılar.
+[/TIP]
+
+---
+
+## Wireframe vs Diğerleri
+
+### Wireframe vs Sketch
+
+| Sketch | Wireframe |
+|--------|-----------|
+| Kalem kağıt, çok hızlı | Dijital, biraz daha yavaş |
+| Çok kaba | Daha düzenli |
+| Kişisel kullanım | Ekip paylaşımı |
+
+### Wireframe vs Mockup
+
+[COMPARISON]
+**Wireframe:**
+- Düşük sadakat
+- Yapı odaklı
+- Gri tonları
+- Hızlı iterasyon
+- "Ne nerede?"
+
+**Mockup:**
+- Yüksek sadakat
+- Görsel odaklı
+- Gerçek renkler, fontlar
+- Detaylı çalışma
+- "Nasıl görünecek?"
+[/COMPARISON]
+
+### Wireframe vs Prototype
+
+| Wireframe | Prototype |
+|-----------|-----------|
+| Statik | Etkileşimli |
+| Görüntü | Deneyim |
+| "Böyle görünecek" | "Böyle çalışacak" |
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Çok erken detaya girmek
+
+[COMPARISON]
+❌ Hata: İlk wireframe'de pixel-perfect hizalama
+✅ Doğrusu: Önce yapı, detay sonra
+[/COMPARISON]
+
+### 2. Wireframe'i atlamak
+
+"Hemen mockup yapalım" düşüncesi. Yapısal hatalar mockup'ta düzeltmek 5x daha uzun sürer.
+
+### 3. Renk ve görsel eklemek
+
+Wireframe'de renk kullanmak, odağı dağıtır. Gri tonlarında kal.
+
+### 4. Gerçek içerik koymamak
+
+"Lorem ipsum" her yerde olunca, içerik uzunlukları anlaşılmaz. Mümkünse gerçekçi içerik kullan.
+
+### 5. Tek versiyon çizmek
+
+[COMPARISON]
+❌ Hata: Bir wireframe, herkes onaylasın
+✅ Doğrusu: 2-3 alternatif çiz, karşılaştır
+[/COMPARISON]
+
+### 6. Mobili unutmak
+
+Desktop wireframe çizip, mobili "sonra hallederiz" demek. Responsive düşünceyi baştan kur.
+
+---
+
+## Wireframe Checklist
+
+Wireframe'ini paylaşmadan önce kontrol et:
+
+[CHECKLIST]
+✓ Sayfanın amacı net mi?
+✓ İçerik hiyerarşisi doğru mu?
+✓ Tüm gerekli elementler var mı?
+✓ Navigasyon mantıklı mı?
+✓ Primary aksiyon öne çıkıyor mu?
+✓ Mobile düşünüldü mü?
+✓ Placeholder içerik yeterli mi?
+✓ Eksik durum var mı? (empty, error, loading)
+✓ Etiketler ve notlar eklendi mi?
+[/CHECKLIST]
+
+---
+
+## Ne Zaman Wireframe Atlanabilir?
+
+Her projede wireframe şart değil. Atlayabileceğin durumlar:
+
+- Çok küçük değişiklikler (buton rengi, metin değişikliği)
+- Mevcut design system'dan direkt uygulama
+- Daha önce yapılmış benzer sayfa
+- Çok sıkı deadline ve validate edilmiş konsept
+
+[WARNING]
+⚠️ Yeni sayfa, yeni akış veya karmaşık özellik tasarlıyorsan, wireframe atlama. Sonra pişman olursun.
+[/WARNING]
+
+---
+
+## Wireframe Sunumu
+
+Wireframe'i stakeholder'lara sunarken dikkat et:
+
+**Yapılması gerekenler:**
+- Bağlamı anlat: "Bu sayfa şu amaçla tasarlandı"
+- Akışı göster: "Kullanıcı buradan buraya gidiyor"
+- Feedback iste: "Yapı hakkında ne düşünüyorsunuz?"
+- Görsel olmadığını vurgula: "Bu final tasarım değil"
+
+**Yapılmaması gerekenler:**
+- Renk/font tartışmasına girme
+- Her detayı açıklama
+- Tek seçenek sunma
+- Feedback olmadan geçme
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**25 dakika**
+
+**Görev:** Bir blog yazısı sayfası için mid-fidelity wireframe çiz.
+
+**Gereksinimler:**
+- Header (logo, navigation)
+- Yazı başlığı ve meta bilgiler (yazar, tarih, okuma süresi)
+- Yazı içeriği alanı
+- Yazar hakkında bölüm
+- İlgili yazılar
+- Footer
+
+**Adımlar:**
+
+1. Kalem kağıtla veya Figma'da 5 dakika içinde low-fi sketch çiz
+
+2. Sketch'i düzenle, mid-fi wireframe'e dönüştür
+
+3. Şu kontrolleri yap:
+   - Görsel hiyerarşi net mi?
+   - Primary içerik (yazı) öne çıkıyor mu?
+   - Mobile'da nasıl görünür?
+
+**Bonus:** 2 farklı layout alternatifi çiz ve karşılaştır.
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Wireframe, dijital ürünün düşük sadakatli yapısal taslağıdır
+- Renk ve görsel detay içermez, yapıya odaklanır
+- Hızlı iterasyon, erken feedback ve ekip hizalaması sağlar
+- Low, mid ve high-fidelity seviyeleri vardır; çoğu projede mid-fi yeterli
+- Figma, Balsamiq, Whimsical gibi araçlarla veya kalem kağıtla çizilebilir
+- Mockup'tan önce gelir, prototype'tan farklıdır (statik vs etkileşimli)
+- Yeni sayfa veya karmaşık özellik tasarlıyorsan wireframe atlanmamalı
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [UX ve UI Arasındaki Fark](/kutuphane/ux-ui-farki)
+
+**Sonraki:** Prototype Nedir? *(yakında)*
+
+**İlgili konular:**
+- [User Flow ve Task Flow](/kutuphane/user-flow-task-flow)
+- Wireframe vs Mockup vs Prototype *(yakında)*
+
+**İlgili Roadmap:** [UX Designer Roadmap → Tasarım Çıktıları](/roadmap/ux-designer)
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Wireframing - Usability.gov](https://www.usability.gov/how-to-and-tools/methods/wireframing.html) (İngilizce, 6 dk)
+- [What is a Wireframe? - IxDF](https://www.interaction-design.org/literature/topics/wireframing) (İngilizce, 8 dk)
+- [The Guide to Wireframing - UXPin](https://www.uxpin.com/studio/blog/what-is-a-wireframe-designing-your-ux-backbone/) (İngilizce, 10 dk)
 `,
   },
 };
