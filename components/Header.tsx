@@ -15,6 +15,7 @@ export default function Header({ showBackLink = false }: HeaderProps) {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const pathname = usePathname();
   const isCaseAtolyesiActive = pathname === "/case-atolyesi";
+  const isKutuphaneActive = pathname === "/kutuphane";
 
   // Refresh profile when user changes
   useEffect(() => {
@@ -143,6 +144,18 @@ export default function Header({ showBackLink = false }: HeaderProps) {
                   animation: "sheen 3s ease-in-out infinite",
                 }}
               />
+            </Link>
+
+            {/* Kütüphane Link - Visible to everyone */}
+            <Link
+              href="/kutuphane"
+              className={`transition-colors font-medium ${
+                isKutuphaneActive
+                  ? "text-[#DEFF37]"
+                  : "text-gray-300 hover:text-[#DEFF37]"
+              }`}
+            >
+              Kütüphane
             </Link>
 
             {/* UX Sözlük Link - Visible to everyone */}
