@@ -4838,6 +4838,40 @@ export default function ArticlePage() {
               },
             },
           ],
+          "ux-mulakat-sorulari": [
+            {
+              "@type": "Question",
+              name: "UX mülakatında en çok hangi sorular soruluyor?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "UX mülakatlarında genellikle üç tip soru sorulur: Davranışsal sorular (geçmiş deneyimler), teknik sorular (UX bilgisi ve süreç) ve case study/whiteboard challenge (problem çözme becerisi). En yaygın sorular tasarım sürecini, zor projelerden örnekleri ve kullanıcı araştırması deneyimini içerir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "UX mülakatına nasıl hazırlanmalı?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Portfolyonuzdaki 2-3 projeyi detaylı anlatabilecek şekilde hazırlayın, STAR metoduyla davranışsal soru cevapları pratik yapın, şirketi ve ürünlerini araştırın, whiteboard challenge için problem çözme pratiği yapın ve sorulacak sorularınızı hazırlayın.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Deneyimim az, nasıl cevap vermeliyim?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Kişisel projelerden, bootcamp çalışmalarından veya redesign projelerinden örnekler verin. Sürecinizi ve düşünce yapınızı gösterin. 'Deneyimim yok' demek yerine 'Bu konuda şu projeyi yaptım' deyin. Öğrenme isteğinizi ve potansiyelinizi vurgulayın.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "STAR metodu nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "STAR metodu davranışsal soruları cevaplamak için kullanılan bir yapıdır: Situation (durum), Task (görev), Action (aksiyon), Result (sonuç). Geçmiş deneyimlerinizi bu yapıda anlatmak, cevaplarınızı organize ve etkili kılar.",
+              },
+            },
+          ],
         };
 
         const faqs = faqData[slug];
