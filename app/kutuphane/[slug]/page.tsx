@@ -1675,20 +1675,18 @@ export default function ArticlePage() {
 
           {/* Meta Info */}
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
-            <span>{article.readingTime} dk okuma</span>
+            <div className="flex items-center gap-2">
+              <img
+                src="https://r.resimlink.com/MOZoRk0.png"
+                alt="Serhat Bahçeliler"
+                className="w-6 h-6 rounded-full object-cover border border-zinc-700"
+              />
+              <span>Serhat Bahçeliler</span>
+            </div>
             <span>•</span>
             <span>{new Date(article.publishedAt).toLocaleDateString("tr-TR", { year: "numeric", month: "long", day: "numeric" })}</span>
-            <div className="flex items-center gap-2">
-              <span>•</span>
-              <div className="flex items-center gap-2">
-                <img
-                  src="https://r.resimlink.com/MOZoRk0.png"
-                  alt="Serhat Bahçeliler"
-                  className="w-6 h-6 rounded-full object-cover border border-zinc-700"
-                />
-                <span>Serhat Bahçeliler</span>
-              </div>
-            </div>
+            <span>•</span>
+            <span>{article.readingTime} dk okuma</span>
           </div>
 
         </div>
