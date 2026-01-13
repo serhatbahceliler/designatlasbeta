@@ -185,6 +185,21 @@ const MOCK_ARTICLES: Article[] = [
     author: "Serhat Bahçeliler",
     views: 0,
   },
+  {
+    id: "ux-mulakat-sorulari",
+    title: "UX Mülakat Soruları ve Cevapları",
+    subtitle: "İş Görüşmesine Hazırlık Rehberi",
+    titleEn: "UX Interview Questions",
+    slug: "ux-mulakat-sorulari",
+    description: "UX Designer iş görüşmesinde en çok sorulan sorular ve nasıl cevaplanır? Davranışsal, teknik ve case study soruları için hazırlık rehberi.",
+    category: "kariyer",
+    readingTime: 16,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    views: 0,
+  },
 ];
 
 type SortOption = "newest" | "popular" | "az";

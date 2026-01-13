@@ -3778,7 +3778,7 @@ Empathy map, persona'nın bir bölümü gibidir. Tek bir kullanıcının düşü
 
 **Önceki:** [Wireframe Nedir?](/kutuphane/wireframe-nedir)
 
-**Sonraki:** UX Mülakat Soruları ve Cevapları *(yakında)*
+**Sonraki:** [UX Mülakat Soruları ve Cevapları](/kutuphane/ux-mulakat-sorulari)
 
 **İlgili konular:**
 - [Kullanıcı Görüşmesi Nasıl Yapılır?](/kutuphane/kullanici-gorusmesi)
@@ -3796,6 +3796,501 @@ Derinleşmek istersen:
 - [Personas - NNGroup](https://www.nngroup.com/articles/persona/) (İngilizce, 8 dk)
 - [Personas - IxDF](https://www.interaction-design.org/literature/topics/personas) (İngilizce, 10 dk)
 - [Just Enough Research - Erika Hall](https://abookapart.com/products/just-enough-research) (Kitap, araştırma temelleri)
+`,
+  },
+  "ux-mulakat-sorulari": {
+    id: "ux-mulakat-sorulari",
+    title: "UX Mülakat Soruları ve Cevapları",
+    subtitle: "İş Görüşmesine Hazırlık Rehberi",
+    titleEn: "UX Interview Questions",
+    slug: "ux-mulakat-sorulari",
+    description: "UX Designer iş görüşmesinde en çok sorulan sorular ve nasıl cevaplanır? Davranışsal, teknik ve case study soruları için hazırlık rehberi.",
+    category: "kariyer",
+    readingTime: 16,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    content: `# UX Mülakat Soruları ve Cevapları: İş Görüşmesine Hazırlık Rehberi
+
+**Seviye:** Başlangıç - Orta  
+**Kategori:** Kariyer  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+CV'ni gönderdin, portfolyonu inclediler, seni mülakata çağırdılar. Şimdi gerçek sınav başlıyor.
+
+UX mülakatları diğer mesleklere göre biraz farklı. Sadece "kendinden bahset" ve "neden bu şirketi istiyorsun" yok. Tasarım sürecini anlatman, problem çözme becerinizi göstermen, hatta canlı olarak bir challenge çözmen istenebilir.
+
+Hazırlıksız yakalanmak, iyi bir pozisyonu kaçırmana neden olabilir. Ama iyi hazırlandığında, mülakat seni öne çıkarma fırsatı olur.
+
+Bu yazıda UX mülakatlarında en çok sorulan soruları, nasıl cevaplaman gerektiğini ve hazırlık ipuçlarını bulacaksın.
+
+---
+
+## Mülakat Türleri
+
+UX mülakatları genellikle birkaç turdan oluşur:
+
+### 1. HR/Recruiter Görüşmesi
+
+İlk eleme. Genel sorular, maaş beklentisi, uygunluk.
+
+**Süre:** 15-30 dakika
+**Format:** Telefon veya video
+
+### 2. Hiring Manager Görüşmesi
+
+Portföy incelemesi, deneyim soruları, takım uyumu.
+
+**Süre:** 45-60 dakika
+**Format:** Video veya yüz yüze
+
+### 3. Teknik/Portfolio Sunumu
+
+Derinlemesine proje anlatımı, süreç soruları.
+
+**Süre:** 45-60 dakika
+**Format:** Sunum + Q&A
+
+### 4. Whiteboard/Design Challenge
+
+Canlı problem çözme. Yerinde tasarım.
+
+**Süre:** 60-90 dakika
+**Format:** Yüz yüze veya video (FigJam/Miro)
+
+### 5. Takım Görüşmesi
+
+Potansiyel iş arkadaşlarıyla tanışma, kültür uyumu.
+
+**Süre:** 30-45 dakika
+**Format:** Yüz yüze veya video
+
+[TIP]
+💡 Her şirketin süreci farklı. Başvurduğun şirketin mülakat sürecini önceden araştır. Glassdoor ve LinkedIn'de eski adayların deneyimlerini bulabilirsin.
+[/TIP]
+
+---
+
+## STAR Metodu
+
+Davranışsal soruları cevaplamak için en etkili yöntem: **STAR**
+
+[CALLOUT]
+**STAR Metodu:**
+- **S**ituation (Durum): Ne oluyordu? Bağlam ne?
+- **T**ask (Görev): Senin rolün/sorumluluğun ne?
+- **A**ction (Aksiyon): Ne yaptın? Nasıl yaptın?
+- **R**esult (Sonuç): Ne oldu? Sonuç ne?
+[/CALLOUT]
+
+**Örnek soru:** "Zor bir stakeholder ile çalıştığın bir durumu anlat."
+
+**STAR ile cevap:**
+
+> **Situation:** "Geçen yıl e-ticaret projemizde pazarlama direktörü her toplantıda tasarım kararlarını değiştirmek istiyordu."
+>
+> **Task:** "Benim görevim hem iyi bir ilişki kurmak hem de kullanıcı odaklı tasarım kararlarını korumaktı."
+>
+> **Action:** "Haftalık birebir toplantılar ayarladım. Endişelerini dinledim, araştırma verilerini paylaştım. Her büyük kararı veriyle destekledim."
+>
+> **Result:** "3 ay sonra en büyük destekçimiz oldu. Hatta CEO'ya UX yatırımını savundu. Proje zamanında tamamlandı ve conversion %18 arttı."
+
+---
+
+## Soru Kategorileri
+
+### Kategori 1: Genel/Tanışma Soruları
+
+İlk izlenim. Kim olduğunu, neden orada olduğunu anlamak için.
+
+---
+
+**Soru: "Kendinden bahseder misin?"**
+
+[COMPARISON]
+❌ Kötü cevap: "2018'de üniversiteden mezun oldum, şu şirketlerde çalıştım, şunu yaptım, bunu yaptım..." (özgeçmiş okuma)
+
+✅ İyi cevap: "Son 3 yıldır B2B SaaS ürünlerinde UX tasarımı yapıyorum. En çok kullanıcı araştırması ve karmaşık akışları sadeleştirmek ilgimi çekiyor. Şu anki rolümde checkout akışını yeniledik ve conversion %23 arttı. Sizin [ürün adı]'daki [spesifik özellik] benzer bir zorluk gibi görünüyor, bu yüzden bu pozisyon beni heyecanlandırıyor."
+[/COMPARISON]
+
+**İpucu:** 60-90 saniye. Özgeçmiş değil, hikaye anlat. Pozisyonla bağlantı kur.
+
+---
+
+**Soru: "Neden UX Designer oldun / olmak istiyorsun?"**
+
+**Cevap yaklaşımı:**
+- Kişisel hikaye (ne tetikledi?)
+- Neden bu alan seni çekiyor?
+- Hangi yönlerini seviyorsun?
+
+**Örnek:**
+> "İlk kullanıcı testimi yaptığımda, kullanıcının 'bu neden böyle çalışıyor?' dediğini gördüm. O an tasarımcıların varsayımlarının ne kadar yanlış olabileceğini anladım. O günden beri kullanıcıyı dinlemek ve onların hayatını kolaylaştırmak benim motivasyonum."
+
+---
+
+**Soru: "Neden bu şirkette çalışmak istiyorsun?"**
+
+[WARNING]
+⚠️ "Güzel şirketsiniz" veya "Büyümek istiyorum" gibi genel cevaplardan kaçın. Şirketi araştır, spesifik ol.
+[/WARNING]
+
+**Cevap yapısı:**
+1. Şirketin ürünü/misyonu hakkında spesifik bir şey
+2. Bu rolün senin hedeflerin ile nasıl örtüştüğü
+3. Ne katkı sağlayabileceğin
+
+**Örnek:**
+> "Ürününüzü 2 yıldır kullanıyorum ve [spesifik özellik] gerçekten iyi tasarlanmış. Ama [şu alan]'da fırsatlar görüyorum. B2B deneyimim bu tür karmaşık akışlarda işe yarar. Ayrıca [şirket blogu/podcast]'ında design system yaklaşımınızı okudum, bu benim de tutkulu olduğum bir alan."
+
+---
+
+### Kategori 2: Süreç ve Teknik Sorular
+
+UX bilgini ve çalışma şeklini anlamak için.
+
+---
+
+**Soru: "Tasarım sürecini anlat."**
+
+En klasik soru. Ezbere "discover, define, design, deliver" deme. Kendi deneyiminle anlat.
+
+**Cevap yapısı:**
+1. Genel framework'ü kısaca belirt
+2. Bir proje üzerinden somutlaştır
+3. Esnek olduğunu göster ("projeye göre değişir")
+
+**Örnek:**
+> "Genellikle Double Diamond'a benzer bir süreç izliyorum ama her projeye adapte ediyorum.
+>
+> Mesela son projemde, önce stakeholder'larla problem alanını netleştirdik. Sonra 6 kullanıcı görüşmesi yaptım. Bulgulardan 2 persona çıkardım. Akışları wireframe'ledim, 3 iterasyon geçtik. Kullanılabilirlik testiyle doğruladık, sonra UI'a geçtik.
+>
+> Ama deadline sıkıysa veya problem net tanımlıysa, araştırmayı kısaltıp direkt çözüme geçtiğim de oldu. Süreç araç, amaç değil."
+
+---
+
+**Soru: "Kullanıcı araştırması nasıl yaparsın?"**
+
+**Cevap yapısı:**
+- Hangi yöntemleri biliyorsun?
+- Ne zaman hangisini kullanırsın?
+- Örnek ver
+
+**Örnek:**
+> "Projenin aşamasına göre farklı yöntemler kullanıyorum.
+>
+> Keşif aşamasında kullanıcı görüşmeleri ve gözlem tercih ediyorum, derinlemesine anlayış için. Validasyon için kullanılabilirlik testi yapıyorum, genellikle 5-8 kişiyle.
+>
+> Son projemde, checkout problemini anlamak için önce analitik dataya baktım, hangi adımda terk ediyorlar. Sonra 5 kullanıcıyla görüşüp 'neden' sorusunun cevabını aldım."
+
+---
+
+**Soru: "Wireframe ile mockup arasındaki fark nedir?"**
+
+Temel bilgi sorusu. Net ve kısa cevapla.
+
+**Örnek:**
+> "Wireframe düşük sadakatli, yapıyı gösterir - gri kutular, placeholder içerik. Akışı ve yerleşimi doğrulamak için.
+>
+> Mockup yüksek sadakatli, final görünümü gösterir - gerçek renkler, fontlar, görseller. Görsel tasarımı onaylamak ve developer'a teslim için.
+>
+> Ben genellikle önce wireframe'le stakeholder onayı alıyorum, böylece görsel detaylarda kaybolmuyoruz."
+
+---
+
+**Soru: "Tasarım kararlarını nasıl savunursun?"**
+
+[COMPARISON]
+❌ "Bence bu daha iyi görünüyor"
+✅ "Kullanıcı araştırmasında şunu gördük, data şunu söylüyor, bu yüzden bu çözüm daha uygun"
+[/COMPARISON]
+
+**Cevap yaklaşımı:**
+- Veri ve araştırmayla destekleme
+- Alternatifler sunma
+- Dinlemeye açık olma
+
+**Örnek:**
+> "Tasarım kararlarını her zaman araştırma veya data ile desteklemeye çalışıyorum. 'Şunu düşünüyorum' yerine 'testlerde kullanıcıların %70'i bunu tercih etti' demek çok daha etkili.
+>
+> Ama her zaman elimde veri olmuyor. O zaman UX prensiplerini referans veriyorum. Ve her zaman 'deneyelim, ölçelim' demeye açığım. Ego yerine sonuca odaklanıyorum."
+
+---
+
+### Kategori 3: Davranışsal Sorular
+
+Geçmiş deneyimlerinden örnekler. STAR metodunu kullan.
+
+---
+
+**Soru: "Zor bir proje anlat. Nasıl üstesinden geldin?"**
+
+**STAR örneği:**
+
+> **S:** "Geçen yıl 2 haftalık deadline'la yeni bir ödeme özelliği tasarlamamız istendi."
+>
+> **T:** "Normalde 4-6 haftalık bir iş. Benim görevim süreci hızlandırmak ama kaliteden ödün vermemekti."
+>
+> **A:** "Araştırmayı kısalttım, mevcut müşteri feedback'lerini analiz ettim. Paralel çalıştım - wireframe'lerken UI pattern'leri hazırladım. Günlük 15 dk standup ile stakeholder'ları senkronize tuttum."
+>
+> **R:** "Zamanında teslim ettik. Lansman sonrası sadece 2 minor bug çıktı. PM, bu yaklaşımı diğer projelere de uyarlamak istedi."
+
+---
+
+**Soru: "Geri bildirimi nasıl alırsın? Zor bir feedback aldığında ne yaparsın?"**
+
+**Cevap yaklaşımı:**
+- Feedback'e açık olduğunu göster
+- Somut örnek ver
+- Ne öğrendiğini söyle
+
+**Örnek:**
+> "Feedback almayı severim çünkü körlüklerimi gösterir.
+>
+> Geçen ay, üzerinde 3 gün çalıştığım bir tasarımı design critique'te tamamen eleştirdiler. İlk an savunmacı oldum içimden. Ama not aldım, sorular sordum, 'neden' diye derinleştirdim.
+>
+> Sonuçta haklılardı. Kullanıcı perspektifini kaybetmişim, kendi çözümüme aşık olmuşum. Revize ettim, çok daha iyi oldu. O günden beri erken feedback almaya özen gösteriyorum."
+
+---
+
+**Soru: "Ekip içinde anlaşmazlık yaşadığında ne yaparsın?"**
+
+**Örnek:**
+> "Anlaşmazlıklar kaçınılmaz ve genellikle faydalı bile.
+>
+> Bir projede developer 'bu yapılamaz' dedi, ben 'kullanıcı için şart' dedim. Kavga etmek yerine, ikimiz bir saat oturup teknik kısıtları ve kullanıcı ihtiyaçlarını bir arada değerlendirdik.
+>
+> Ortaya hybrid bir çözüm çıktı - benim orijinal tasarımım kadar ideal değil ama kullanıcı için yeterli ve teknik olarak feasible. Win-win."
+
+---
+
+**Soru: "Bir hata yaptığın zamanı anlat."**
+
+[WARNING]
+⚠️ "Hiç hata yapmadım" deme. İnsan değilsin gibi görünür. Ama çok büyük, telafisi olmayan hata da anlatma.
+[/WARNING]
+
+**Cevap yapısı:**
+- Hata ne?
+- Ne yaptın düzeltmek için?
+- Ne öğrendin?
+
+**Örnek:**
+> "Bir projede araştırma yapmadan direkt wireframe'e geçtim. Deadline vardı, 'zaten biliyorum' dedim.
+>
+> Sonuç: 2 hafta çalıştım, stakeholder toplantısında kullanıcıların bu özelliği hiç istemediği ortaya çıktı. 2 hafta çöpe gitti.
+>
+> O günden beri ne kadar kısa olursa olsun, minimum araştırma yapmadan başlamıyorum. 2 saat görüşme, 2 hafta yanlış işten iyidir."
+
+---
+
+### Kategori 4: Case Study / Whiteboard Soruları
+
+Canlı problem çözme. En zorlu kısım.
+
+---
+
+**Soru: "Bir ATM yeniden tasarla" / "Yaşlılar için uygulama tasarla" / "[Şirket ürünündeki] şu sorunu çöz"**
+
+**Yaklaşım:**
+
+[STEPS]
+1. Sorular sor (5 dk)
+   - Hedef kullanıcı kim?
+   - En önemli senaryo ne?
+   - Kısıtlar var mı?
+   - Başarı nasıl ölçülür?
+
+2. Problemi çerçevele (5 dk)
+   - Problemi kendi cümlelerinle özetle
+   - Varsayımlarını söyle
+   - Kapsamı daralt (her şeyi çözemezsin)
+
+3. Kullanıcıyı tanımla (5 dk)
+   - Hızlı proto-persona
+   - Temel hedef ve pain point
+
+4. Çözüm geliştir (15-20 dk)
+   - Birkaç fikir üret
+   - En iyisini seç, neden onu seçtiğini açıkla
+   - Kabaca wireframe çiz
+
+5. Sunumunu yap (5 dk)
+   - Süreci özetle
+   - Varsayımları belirt
+   - Sonraki adımları söyle
+[/STEPS]
+
+[TIP]
+💡 **Kritik:** Sonuç kadar süreç önemli. Düşünce yapını sesli anlat. "Şu an şunu düşünüyorum, çünkü..." Hiring manager senin nasıl düşündüğünü görmek istiyor.
+[/TIP]
+
+---
+
+### Kategori 5: Senin Soruların
+
+Mülakat bittiğinde "soruların var mı?" diye sorulur. **Her zaman soru sor.**
+
+**Sorulacak iyi sorular:**
+
+[TABLE]
+| Soru | Neden Sor |
+|------|-----------|
+| "Tasarım ekibinin yapısı nasıl?" | Çalışma ortamını anlamak |
+| "Bir UX Designer'ın tipik haftası nasıl geçiyor?" | Gerçek işi anlamak |
+| "Bu pozisyondaki en büyük zorluk ne olur?" | Beklentileri anlamak |
+| "Tasarım kararları nasıl alınıyor?" | Kültürü anlamak |
+| "İlk 90 günde benden ne beklersiniz?" | Başarı kriterlerini anlamak |
+| "Design system var mı? Nasıl çalışıyor?" | Olgunluğu anlamak |
+[/TABLE]
+
+**Sorulmaması gereken sorular:**
+- İlk görüşmede maaş (recruiter aşaması hariç)
+- Tatil günleri, yan haklar (teklif aşamasında sor)
+- Google'da bulabileceğin şeyler ("Ne iş yapıyorsunuz?")
+
+---
+
+## Junior'lar İçin İpuçları
+
+Deneyim az olduğunda nasıl cevap vereceksin?
+
+### Kişisel projeler kullan
+
+"İş deneyimim yok ama kişisel projemde şunu yaptım..."
+
+### Bootcamp/kurs projeleri
+
+"Kursumda şu challenge'ı çözdüm, sürecim şöyleydi..."
+
+### Redesign projeleri
+
+"Spotify'ın şu özelliğini analiz edip iyileştirme önerisi hazırladım..."
+
+### Transferable skills
+
+Önceki kariyerinden aktarılabilir beceriler: araştırma, sunum, proje yönetimi, müşteri ilişkileri
+
+[COMPARISON]
+❌ "Deneyimim yok, bilmiyorum"
+✅ "Profesyonel deneyimim sınırlı ama bootcamp projemde 5 kullanıcı görüşmesi yaptım ve şunu öğrendim..."
+[/COMPARISON]
+
+---
+
+## Hazırlık Checklist
+
+Mülakata gitmeden önce:
+
+[CHECKLIST]
+✓ Portfolyodaki 2-3 projeyi detaylı anlatabiliyorum
+✓ Her proje için: problem, süreç, karar, sonuç hazır
+✓ STAR metoduyla 5-6 hikaye hazırladım
+✓ Şirketi araştırdım (ürün, kültür, son haberler)
+✓ Pozisyon ilanını tekrar okudum, gereksinimleri biliyorum
+✓ Whiteboard challenge için pratik yaptım
+✓ Soracağım 3-5 soru hazırladım
+✓ Teknik kurulum test edildi (video görüşmeyse)
+✓ Portfolyo linki çalışıyor
+✓ 10 dakika erken olacak şekilde plan yaptım
+[/CHECKLIST]
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Portfolyoyu bilmemek
+
+Kendi projenizi anlatamıyorsanız, kimin projesini anlatacaksınız?
+
+### 2. Sonuç odaklı olmamak
+
+Süreç güzel ama "conversion %20 arttı" veya "kullanıcı memnuniyeti yükseldi" gibi sonuçlar daha etkili.
+
+### 3. Tek başına çalışmış gibi anlatmak
+
+"Ben yaptım, ben tasarladım" yerine "Ekiple birlikte...", "Benim katkım şuydu..."
+
+### 4. Soru sormamak
+
+"Sorum yok" demek ilgisizlik göstergesi.
+
+### 5. Araştırma yapmamak
+
+Şirketi, ürünü, sektörü bilmeden gitmek.
+
+### 6. Ezbere cevap vermek
+
+Hazırlık önemli ama robotik cevaplar itici. Doğal ol.
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**45 dakika**
+
+**Görev:** Aşağıdaki 3 soruyu STAR metoduyla cevapla.
+
+**Sorular:**
+
+1. "Kullanıcı araştırmasının tasarım kararını değiştirdiği bir durum anlat."
+
+2. "Deadline baskısı altında nasıl çalışırsın?"
+
+3. "Bir tasarımını eleştirdiler, ne yaptın?"
+
+**Her cevap için:**
+- Situation: 2-3 cümle
+- Task: 1-2 cümle
+- Action: 3-5 cümle (en detaylı kısım)
+- Result: 2-3 cümle (mümkünse metrik)
+
+**Bonus:** Cevaplarını sesli oku ve süresini tut. Her cevap 2-3 dakika olmalı.
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- UX mülakatları: HR → Hiring Manager → Portfolio → Challenge → Takım aşamalarından oluşabilir
+- STAR metodu davranışsal sorularda etkili: Situation, Task, Action, Result
+- Süreç soruları için kendi deneyiminden somut örnekler ver
+- Whiteboard challenge'da sonuç kadar düşünce süreci önemli
+- Junior'lar: kişisel projeler, bootcamp, redesign çalışmaları kullanılabilir
+- Her zaman soru sor, araştırma yap, portfolyonu bil
+- Hazırlık kritik: 2-3 proje, 5-6 STAR hikayesi, şirket araştırması
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Persona Oluşturma Rehberi](/kutuphane/persona-olusturma)
+
+**Sonraki:** Product Design Nedir? *(yakında)*
+
+**İlgili konular:**
+- [Portfolio Case Study Nasıl Yazılır?](/kutuphane/portfolio-case-study)
+- Stakeholder'a Tasarım Sunumu *(yakında)*
+
+**İlgili Roadmap:** [UX Designer Roadmap → Kariyer](/roadmap/ux-designer)
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [UX Interview Questions - NNGroup](https://www.nngroup.com/articles/ux-interview-questions/) (İngilizce, 10 dk)
+- [Cracking the PM Interview - Gayle McDowell](https://www.amazon.com/Cracking-PM-Interview-Product-Technology/dp/0984782818) (Kitap, whiteboard için)
+- [Glassdoor UX Designer Interviews](https://www.glassdoor.com/Interview/ux-designer-interview-questions-SRCH_KO0,11.htm) (Şirket bazlı sorular)
 `,
   },
 };
