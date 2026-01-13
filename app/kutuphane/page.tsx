@@ -13,7 +13,7 @@ export interface Article {
   titleEn: string;
   slug: string;
   description: string;
-  category: "ux-research" | "ux-design" | "kariyer" | "araclar-ipucu";
+  category: "ux-research" | "ux-design" | "kariyer" | "araclar-ipucu" | "temel-kavramlar";
   readingTime: number;
   featured: boolean;
   publishedAt: string;
@@ -29,6 +29,7 @@ const CATEGORIES = [
   { id: "ux-design", label: "UX Design", value: "ux-design" },
   { id: "kariyer", label: "Kariyer", value: "kariyer" },
   { id: "araclar-ipucu", label: "Araçlar & İpucu", value: "araclar-ipucu" },
+  { id: "temel-kavramlar", label: "Temel Kavramlar", value: "temel-kavramlar" },
 ] as const;
 
 const CATEGORY_COLORS = {
@@ -36,6 +37,7 @@ const CATEGORY_COLORS = {
   "ux-design": "#10B981", // yeşil
   "kariyer": "#8B5CF6", // mor
   "araclar-ipucu": "#F59E0B", // turuncu
+  "temel-kavramlar": "#6366F1", // indigo
 } as const;
 
 const CATEGORY_LABELS = {
@@ -43,6 +45,7 @@ const CATEGORY_LABELS = {
   "ux-design": "UX Design",
   "kariyer": "Kariyer",
   "araclar-ipucu": "Araçlar & İpucu",
+  "temel-kavramlar": "Temel Kavramlar",
 } as const;
 
 // Mock articles data

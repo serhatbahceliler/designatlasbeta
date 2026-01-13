@@ -1514,7 +1514,7 @@ Aynı özellik için user flow çiz. Şu durumları da dahil et:
 
 **Önceki:** [Portfolio Case Study Nasıl Yazılır?](/kutuphane/portfolio-case-study)
 
-**Sonraki:** UX Nedir? *(yakında)*
+**Sonraki:** [UX Nedir?](/kutuphane/ux-nedir)
 
 **İlgili Roadmap:** [UX Designer Roadmap → Tasarım Çıktıları](/roadmap/ux-designer)
 
@@ -1529,6 +1529,436 @@ Derinleşmek istersen:
 - [The Guide to User Flow Diagrams - CareerFoundry](https://careerfoundry.com/en/blog/ux-design/what-are-user-flows/) (İngilizce, 12 dk)
 `,
   },
+  "ux-nedir": {
+    id: "ux-nedir",
+    title: "UX Nedir?",
+    subtitle: "Kullanıcı Deneyimi Tasarımına Giriş",
+    titleEn: "What is UX?",
+    slug: "ux-nedir",
+    description: "UX (User Experience) nedir? Kullanıcı deneyimi tasarımı ne anlama gelir, neden önemlidir ve UX Designer ne yapar? Başlangıç seviyesi rehberi.",
+    category: "temel-kavramlar",
+    readingTime: 12,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    content: `# UX Nedir? Kullanıcı Deneyimi Tasarımına Giriş
+
+**Seviye:** Başlangıç  
+**Kategori:** Temel Kavramlar  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Bir uygulamayı ilk açtığında her şey karmaşık geldi. Nereye tıklayacağını bilemedik, aradığını bulamadın, sonunda vazgeçip sildin.
+
+Başka bir uygulamada ise her şey yerli yerindeydi. İstediğini saniyeler içinde buldun, işlemini tamamladın, memnun kaldın.
+
+İkisi arasındaki fark neydi? Görsel tasarım mı? Belki biraz. Ama asıl fark **kullanıcı deneyimi** yani **UX** idi.
+
+UX, son yılların en popüler kariyer alanlarından biri haline geldi. Ama hâlâ en çok yanlış anlaşılan kavramlardan biri. "UX yapıyorum" diyenlerin bir kısmı aslında UI tasarlıyor, bir kısmı sadece wireframe çiziyor.
+
+Bu yazıda UX'in gerçekte ne anlama geldiğini, neden bu kadar önemli olduğunu ve UX Designer'ların ne yaptığını öğreneceksin.
+
+---
+
+## UX Ne Demek?
+
+UX, **User Experience** yani **Kullanıcı Deneyimi** kelimelerinin kısaltmasıdır.
+
+[CALLOUT]
+**Kullanıcı Deneyimi (UX):**
+Bir kullanıcının bir ürün, sistem veya hizmetle etkileşiminde yaşadığı tüm deneyim. Kullanım öncesi beklentilerden, kullanım sırasındaki etkileşime ve kullanım sonrası duygulara kadar her şeyi kapsar.
+[/CALLOUT]
+
+Bu terimi ilk kez **Don Norman** 1990'larda Apple'da çalışırken kullandı. Norman'ın tanımı oldukça geniş:
+
+> "Kullanıcı deneyimi, son kullanıcının şirketle, hizmetleriyle ve ürünleriyle olan tüm etkileşimini kapsar."
+
+Yani UX sadece ekrandaki butonlar değil. Ürünü keşfetme anından, satın alma sürecine, kullanıma, müşteri desteğine kadar her temas noktası UX'in parçası.
+
+---
+
+## UX Sadece Dijital Değil
+
+UX kavramı dijital ürünlerle sınırlı değil. Her deneyimin bir UX'i var:
+
+**Günlük hayattan örnekler:**
+
+- **Kapı kolu:** İtecek misin, çekecek misin? Tasarımı bunu anlatıyor mu?
+- **Market rafları:** Aradığın ürünü kolayca bulabiliyor musun?
+- **Havaalanı:** Check-in'den uçağa binişe kadar süreç ne kadar akıcı?
+- **Restoran menüsü:** İstediğin yemeği kaç saniyede buluyorsun?
+
+Dijital dünyada ise:
+- Mobil uygulamalar
+- Web siteleri
+- Yazılımlar
+- Kiosk ve ATM'ler
+- Akıllı cihazlar
+
+[TIP]
+💡 UX Designer olarak çalışsan da çalışmasan da, iyi UX'i fark etmeyi öğrenmek her yerde işine yarar. Eleştirel bakış açısı kazanırsın.
+[/TIP]
+
+---
+
+## UX'in Bileşenleri
+
+Peter Morville'in "UX Honeycomb" (Bal Peteği) modeli, iyi bir kullanıcı deneyiminin 7 bileşenini tanımlar:
+
+[TABLE]
+| Bileşen | İngilizce | Açıklama |
+|---------|-----------|----------|
+| **Kullanışlı** | Useful | Gerçek bir ihtiyacı karşılıyor mu? |
+| **Kullanılabilir** | Usable | Kolayca kullanılabiliyor mu? |
+| **Bulunabilir** | Findable | İçerik ve özellikler kolayca bulunuyor mu? |
+| **Güvenilir** | Credible | Kullanıcı ürüne güveniyor mu? |
+| **Erişilebilir** | Accessible | Herkes kullanabiliyor mu? |
+| **Arzu edilir** | Desirable | Kullanmak istiyor muyuz? |
+| **Değerli** | Valuable | İş hedeflerine katkı sağlıyor mu? |
+[/TABLE]
+
+İyi UX, bu 7 bileşenin dengesidir. Sadece "kullanılabilir" olmak yetmez. Ürün aynı zamanda kullanışlı, bulunabilir ve değerli olmalı.
+
+---
+
+## UX Neden Önemli?
+
+### 1. İş sonuçlarını doğrudan etkiler
+
+Kötü UX = kayıp müşteri, kayıp gelir.
+
+**Rakamlarla:**
+- Her 1 dolarlık UX yatırımı, 100 dolara kadar geri dönüş sağlayabilir (Forrester Research)
+- Kullanıcıların %88'i kötü deneyim sonrası siteye geri dönmüyor
+- Mobil kullanıcıların %53'ü 3 saniyeden uzun yüklenen siteleri terk ediyor
+
+### 2. Rekabet avantajı sağlar
+
+Ürünler giderek birbirine benziyor. Özellikleri kopyalamak kolay. Ama iyi deneyimi kopyalamak zor. UX, farklılaşma noktası.
+
+### 3. Destek maliyetlerini düşürür
+
+Kullanıcılar ürünü kolayca kullanabiliyorsa, daha az destek talebi gelir. Daha az "şifre sıfırlama nasıl yapılır?" sorusu demek, daha düşük destek maliyeti demek.
+
+### 4. Müşteri sadakati oluşturur
+
+İyi deneyim, duygusal bağ oluşturur. Apple kullanıcılarının marka sadakati tesadüf değil. Ürünlerini kullanmak keyifli.
+
+---
+
+## UX Designer Ne Yapar?
+
+UX Designer'ın temel amacı:
+
+**Kullanıcı ihtiyaçları ile iş hedeflerini buluşturan, kullanılabilir ve değerli ürünler tasarlamak.**
+
+### Günlük işler
+
+Bir UX Designer'ın tipik sorumlulukları:
+
+[STEPS]
+1. Kullanıcı Araştırması
+   Kullanıcıları anlama: görüşmeler, anketler, gözlem
+
+2. Analiz ve Sentez
+   Verileri anlamlı içgörülere dönüştürme: persona, journey map
+
+3. Bilgi Mimarisi
+   İçerik ve özelliklerin yapısını belirleme
+
+4. Akış Tasarımı
+   User flow, task flow oluşturma
+
+5. Wireframing
+   Düşük sadakatli ekran taslaları çizme
+
+6. Prototyping
+   Etkileşimli prototipler oluşturma
+
+7. Kullanılabilirlik Testi
+   Tasarımları gerçek kullanıcılarla test etme
+
+8. İterasyon
+   Geri bildirimlere göre tasarımı geliştirme
+[/STEPS]
+
+### Kullanılan araçlar
+
+| Kategori | Araçlar |
+|----------|---------|
+| Tasarım | Figma, Sketch, Adobe XD |
+| Prototyping | Figma, ProtoPie, Principle |
+| Araştırma | Maze, UserTesting, Hotjar |
+| İş birliği | FigJam, Miro, Notion |
+| Handoff | Zeplin, Figma Dev Mode |
+
+### Çalışma şekli
+
+UX Designer genellikle şu kişilerle birlikte çalışır:
+- Product Manager (ürün yöneticisi)
+- UI Designer (görsel tasarımcı)
+- Developer (geliştirici)
+- Researcher (araştırmacı, varsa)
+- Stakeholder'lar (paydaşlar)
+
+[CALLOUT]
+**UX tek kişilik iş değil.**
+İyi UX, farklı disiplinlerin iş birliğiyle ortaya çıkar. UX Designer bu iş birliğini koordine eden, kullanıcı perspektifini temsil eden kişidir.
+[/CALLOUT]
+
+---
+
+## UX Süreci Nasıl İşler?
+
+UX tasarım süreci genellikle şu aşamalardan oluşur:
+
+### 1. Keşif (Discover)
+
+**Sorular:** Problem ne? Kullanıcı kim? Mevcut durum ne?
+
+**Aktiviteler:**
+- Stakeholder görüşmeleri
+- Kullanıcı araştırması
+- Rakip analizi
+- Veri analizi
+
+### 2. Tanımlama (Define)
+
+**Sorular:** Asıl problem ne? Kime odaklanmalıyız?
+
+**Çıktılar:**
+- Problem statement
+- Persona
+- User journey map
+- Araştırma bulguları raporu
+
+### 3. Geliştirme (Develop)
+
+**Sorular:** Nasıl çözebiliriz? Hangi fikirler var?
+
+**Aktiviteler:**
+- Beyin fırtınası
+- Wireframing
+- Prototyping
+- Design critique
+
+### 4. Teslim (Deliver)
+
+**Sorular:** Çözüm işe yarıyor mu? Nasıl geliştirebiliriz?
+
+**Aktiviteler:**
+- Kullanılabilirlik testi
+- İterasyon
+- Developer handoff
+- Dokümantasyon
+
+[TIP]
+💡 Bu süreç lineer değil, döngüsel. Her aşamada öğrendiklerin, önceki aşamalara geri dönmeni gerektirebilir. Buna "iteratif süreç" denir.
+[/TIP]
+
+---
+
+## UX vs UI: Temel Fark
+
+En çok karıştırılan kavramlardan biri. Kısaca:
+
+[COMPARISON]
+**UX (User Experience):** Ürün nasıl çalışıyor ve hissettiriyor?
+**UI (User Interface):** Ürün nasıl görünüyor?
+[/COMPARISON]
+
+**Restoran benzetmesi:**
+- **UX:** Restoranın konsepti, menü tasarımı, masaların yerleşimi, sipariş süreci, yemeğin sunumu
+- **UI:** Menünün görsel tasarımı, tabak seçimi, iç mekan dekorasyonu, renk paleti
+
+[TABLE]
+| Özellik | UX Design | UI Design |
+|---------|-----------|-----------|
+| **Odak** | Deneyim, akış, yapı | Görsel, estetik, etkileşim |
+| **Sorular** | Nasıl çalışmalı? | Nasıl görünmeli? |
+| **Çıktılar** | Wireframe, flow, persona | Mockup, style guide, ikon |
+| **Araştırma** | Kullanıcı araştırması | Görsel trend araştırması |
+| **Test** | Kullanılabilirlik testi | Görsel A/B test |
+[/TABLE]
+
+İkisi birbirini tamamlar. İyi UX kötü UI ile batabilir, iyi UI kötü UX'i kurtaramaz.
+
+[WARNING]
+⚠️ Daha detaylı karşılaştırma için "UX ve UI Arasındaki Fark" yazımızı okuyabilirsin. *(yakında)*
+[/WARNING]
+
+---
+
+## UX Designer Olmak İçin Gerekenler
+
+### Temel beceriler
+
+**Soft skills:**
+- **Empati:** Kullanıcının yerine geçebilme
+- **Merak:** "Neden?" sorusunu sormaktan yorulmama
+- **İletişim:** Fikirleri net ifade edebilme
+- **Problem çözme:** Karmaşık sorunları parçalara ayırabilme
+- **İş birliği:** Farklı disiplinlerle çalışabilme
+
+**Hard skills:**
+- Kullanıcı araştırması yöntemleri
+- Wireframing ve prototyping
+- Bilgi mimarisi
+- Temel görsel tasarım prensipleri
+- Tasarım araçları (Figma vs.)
+
+### Eğitim gerekli mi?
+
+Kısa cevap: **Zorunlu değil.**
+
+UX alanında farklı arka planlardan insanlar var: psikoloji, grafik tasarım, mühendislik, pazarlama, hatta edebiyat. Önemli olan beceriler ve portfolio, diploma değil.
+
+**Öğrenme yolları:**
+- Online kurslar (Google UX Certificate, Coursera, IxDF)
+- Bootcamp'ler
+- Kendi kendine öğrenme + pratik projeler
+- Staj veya junior pozisyonlar
+
+[TIP]
+💡 DesignAtlas roadmap'leri, UX Designer olmak için gereken becerileri adım adım öğrenmeni sağlar. Nereden başlayacağını bilmiyorsan, oradan başla.
+[/TIP]
+
+---
+
+## UX Alanındaki Roller
+
+UX geniş bir alan. Zamanla farklı uzmanlıklar ortaya çıktı:
+
+[TABLE]
+| Rol | Odak | Tipik Çıktılar |
+|-----|------|----------------|
+| **UX Designer** | Genel deneyim | Flow, wireframe, prototype |
+| **UX Researcher** | Kullanıcı araştırması | Araştırma raporu, persona |
+| **UI Designer** | Görsel tasarım | Mockup, design system |
+| **Product Designer** | Uçtan uca ürün | Hepsi + strateji |
+| **UX Writer** | Metin ve içerik | Microcopy, içerik stratejisi |
+| **Interaction Designer** | Etkileşim tasarımı | Animasyon, micro-interaction |
+| **Service Designer** | Hizmet deneyimi | Service blueprint |
+[/TABLE]
+
+Küçük şirketlerde bir kişi birden fazla rolü üstlenebilir. Büyük şirketlerde roller daha ayrışmış olur.
+
+---
+
+## Yaygın Yanlış Anlamalar
+
+### "UX = UI"
+
+Hayır. İkisi farklı ama birbirini tamamlayan disiplinler. UX yapı ve deneyim, UI görsel ve estetik.
+
+### "UX = Wireframe çizmek"
+
+Wireframe, UX sürecinin sadece bir parçası. UX araştırmayla başlar, testle devam eder, iterasyonla gelişir.
+
+### "UX sadece tasarımcıların işi"
+
+UX, tüm organizasyonun sorumluluğu. Developer'dan müşteri hizmetlerine, pazarlamadan ürün yönetimine herkes UX'i etkiler.
+
+### "Güzel görünüyorsa UX iyidir"
+
+Güzellik UX'in sadece bir parçası (desirable). Kullanışlı, kullanılabilir, bulunabilir ve erişilebilir olması da gerekir.
+
+### "Ben kullanıcıyı tanıyorum, araştırmaya gerek yok"
+
+En tehlikeli varsayım. Kullanıcılar hakkındaki varsayımların genellikle yanlış çıkar. Araştırma, bu varsayımları test eder.
+
+---
+
+## Türkiye'de UX
+
+Türkiye'de UX alanı son 10 yılda hızla büyüdü. Özellikle:
+
+- Fintech (iyzico, Papara, Param)
+- E-ticaret (Trendyol, Hepsiburada, n11)
+- Bankacılık (Garanti BBVA, İş Bankası, Akbank)
+- Startup ekosistemi
+
+**Zorluklar:**
+- Türkçe kaynak azlığı (DesignAtlas bunu çözüyor!)
+- "UX'e gerek yok" algısı hâlâ bazı şirketlerde var
+- Junior pozisyonlar sınırlı
+
+**Fırsatlar:**
+- Büyüyen dijitalleşme
+- Remote çalışma ile global fırsatlar
+- UX olgunluğu artan şirketler
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**15 dakika**
+
+**Görev:** Bugün kullandığın bir dijital ürünü (uygulama veya website) UX Honeycomb modeline göre değerlendir.
+
+**Adımlar:**
+
+1. Bir ürün seç (banka uygulaması, e-ticaret sitesi, sosyal medya vs.)
+
+2. Her bileşen için 1-5 puan ver:
+   - Kullanışlı (Useful): ___/5
+   - Kullanılabilir (Usable): ___/5
+   - Bulunabilir (Findable): ___/5
+   - Güvenilir (Credible): ___/5
+   - Erişilebilir (Accessible): ___/5
+   - Arzu edilir (Desirable): ___/5
+   - Değerli (Valuable): ___/5
+
+3. En düşük puan verdiğin bileşen hangisi? Neden?
+
+4. Bu ürünün UX'ini iyileştirmek için bir öneri yaz.
+
+**Bonus:** Aynı kategoriden başka bir ürünü de değerlendir ve karşılaştır.
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- UX (User Experience), kullanıcının ürünle olan tüm etkileşim deneyimidir
+- UX sadece dijital değil, her deneyimin bir UX'i var
+- İyi UX: kullanışlı, kullanılabilir, bulunabilir, güvenilir, erişilebilir, arzu edilir ve değerli
+- UX Designer kullanıcıyı anlar, problem çözer, tasarlar ve test eder
+- UX ≠ UI: UX deneyim ve yapı, UI görsel ve estetik
+- UX kariyer için diploma şart değil, beceriler ve portfolio önemli
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [User Flow ve Task Flow](/kutuphane/user-flow-task-flow)
+
+**Sonraki:** UI Nedir? *(yakında)*
+
+**İlgili konular:**
+- UX ve UI Arasındaki Fark *(yakında)*
+- Product Design Nedir? *(yakında)*
+
+**İlgili Roadmap:** [UX Designer Roadmap → Temeller](/roadmap/ux-designer)
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [The Definition of User Experience (UX) - NNGroup](https://www.nngroup.com/articles/definition-user-experience/) (İngilizce, 5 dk)
+- [User Experience Basics - Usability.gov](https://www.usability.gov/what-and-why/user-experience.html) (İngilizce, 8 dk)
+- [Don Norman: The term "UX"](https://www.youtube.com/watch?v=9BdtGjoIN4E) (Video, İngilizce, 2 dk)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -1536,6 +1966,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   "ux-design": "#10B981",
   "kariyer": "#8B5CF6",
   "araclar-ipucu": "#F59E0B",
+  "temel-kavramlar": "#6366F1",
 };
 
 const CATEGORY_LABELS: Record<string, string> = {
@@ -1543,6 +1974,7 @@ const CATEGORY_LABELS: Record<string, string> = {
   "ux-design": "UX Design",
   "kariyer": "Kariyer",
   "araclar-ipucu": "Araçlar & İpucu",
+  "temel-kavramlar": "Temel Kavramlar",
 };
 
 
