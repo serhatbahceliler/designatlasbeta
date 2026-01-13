@@ -21,7 +21,7 @@ const ARTICLE_DATA: Record<string, any> = {
     featured: true,
     publishedAt: "2025-01-13",
     heroImage: "https://r.resimlink.com/76fDGw31VzEL.png",
-    author: "DesignAtlas",
+    author: "Serhat Bahçeliler",
     content: `# Kullanılabilirlik Testi Nedir? Adım Adım Uygulama Rehberi
 
 **Seviye:** Başlangıç  
@@ -340,7 +340,7 @@ Derinleşmek istersen:
     featured: false,
     publishedAt: "2025-01-13",
     heroImage: "",
-    author: "DesignAtlas",
+    author: "Serhat Bahçeliler",
     content: `# Kullanıcı Görüşmesi Nasıl Yapılır? Etkili User Interview Rehberi
 
 **Seviye:** Başlangıç  
@@ -748,7 +748,7 @@ Derinleşmek istersen:
     featured: false,
     publishedAt: "2025-01-13",
     heroImage: "",
-    author: "DesignAtlas",
+    author: "Serhat Bahçeliler",
     content: `# Portfolio Case Study Nasıl Yazılır? İş Bulmanı Sağlayacak Rehber
 
 **Seviye:** Başlangıç  
@@ -1178,7 +1178,7 @@ Derinleşmek istersen:
     featured: false,
     publishedAt: "2025-01-14",
     heroImage: "",
-    author: "DesignAtlas",
+    author: "Serhat Bahçeliler",
     content: `# User Flow ve Task Flow: Fark ve Kullanım Rehberi
 
 **Seviye:** Başlangıç  
@@ -1678,12 +1678,17 @@ export default function ArticlePage() {
             <span>{article.readingTime} dk okuma</span>
             <span>•</span>
             <span>{new Date(article.publishedAt).toLocaleDateString("tr-TR", { year: "numeric", month: "long", day: "numeric" })}</span>
-            {article.author && (
-              <>
-                <span>•</span>
-                <span>{article.author}</span>
-              </>
-            )}
+            <div className="flex items-center gap-2">
+              <span>•</span>
+              <div className="flex items-center gap-2">
+                <img
+                  src="https://r.resimlink.com/MOZoRk0.png"
+                  alt="Serhat Bahçeliler"
+                  className="w-6 h-6 rounded-full object-cover border border-zinc-700"
+                />
+                <span>Serhat Bahçeliler</span>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -1739,8 +1744,8 @@ export default function ArticlePage() {
             description: article.description,
             image: article.heroImage || undefined,
             author: {
-              "@type": "Organization",
-              name: article.author || "DesignAtlas",
+              "@type": "Person",
+              name: "Serhat Bahçeliler",
             },
             publisher: {
               "@type": "Organization",
