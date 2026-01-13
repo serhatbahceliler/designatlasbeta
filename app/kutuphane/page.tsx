@@ -83,7 +83,7 @@ const MOCK_ARTICLES: Article[] = [
     description: "UX portfolio case study nasıl yazılır? Hiring manager'ların dikkatini çeken, süreç odaklı ve ikna edici case study oluşturma rehberi.",
     category: "kariyer",
     readingTime: 15,
-    featured: false,
+    featured: true,
     publishedAt: "2025-01-13",
     heroImage: "",
     author: "DesignAtlas",
@@ -221,9 +221,9 @@ function KutuphaneContent() {
     return filtered;
   }, [selectedCategory, debouncedSearchQuery, sortBy]);
 
-  // Get featured article
-  const featuredArticle = useMemo(() => {
-    return MOCK_ARTICLES.find((article) => article.featured);
+  // Get featured articles
+  const featuredArticles = useMemo(() => {
+    return MOCK_ARTICLES.filter((article) => article.featured);
   }, []);
 
   // Get articles (excluding featured)
@@ -360,58 +360,68 @@ function KutuphaneContent() {
           </div>
         ) : (
           <>
-            {/* Featured Article */}
-            {featuredArticle &&
+            {/* Featured Articles */}
+            {featuredArticles.length > 0 &&
               !debouncedSearchQuery &&
-              (selectedCategory === "all" || featuredArticle.category === selectedCategory) && (
+              (selectedCategory === "all" ||
+                featuredArticles.some((article) => article.category === selectedCategory)) && (
                 <section className="mb-16">
                   <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
                     <span>⭐</span>
                     <span>Öne Çıkan</span>
                   </h2>
-                  <Link
-                    href={`/kutuphane/${featuredArticle.slug}`}
-                    className="group block bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden hover:border-[#DEFF37]/50 transition-all duration-300 hover:-translate-y-1"
-                  >
-                    {featuredArticle.heroImage && (
-                      <div className="w-full h-64 overflow-hidden">
-                        <img
-                          src={featuredArticle.heroImage}
-                          alt={featuredArticle.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    )}
-                    <div className="p-8">
-                      <div className="flex flex-col md:flex-row gap-6">
-                        <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-4">
-                          <span
-                            className="px-3 py-1 rounded-full text-sm font-semibold"
-                            style={{
-                              backgroundColor: `${CATEGORY_COLORS[featuredArticle.category]}20`,
-                              color: CATEGORY_COLORS[featuredArticle.category],
-                              border: `1px solid ${CATEGORY_COLORS[featuredArticle.category]}40`,
-                            }}
-                          >
-                            {CATEGORY_LABELS[featuredArticle.category]}
-                          </span>
-                          <span className="text-gray-400 text-sm">
-                            {featuredArticle.readingTime} dk okuma
-                          </span>
-                        </div>
-                        <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-[#DEFF37] transition-colors">
-                          {featuredArticle.title}
-                        </h3>
-                        <p className="text-gray-400 italic mb-3">{featuredArticle.titleEn}</p>
-                        <p className="text-gray-300 leading-relaxed">
-                          {featuredArticle.description.substring(0, 150)}
-                          {featuredArticle.description.length > 150 ? "..." : ""}
-                        </p>
-                      </div>
-                    </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {featuredArticles
+                      .filter(
+                        (article) =>
+                          selectedCategory === "all" || article.category === selectedCategory
+                      )
+                      .map((article) => (
+                        <Link
+                          key={article.id}
+                          href={`/kutuphane/${article.slug}`}
+                          className="group block bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden hover:border-[#DEFF37]/50 transition-all duration-300 hover:-translate-y-1"
+                        >
+                          {article.heroImage && (
+                            <div className="w-full h-48 overflow-hidden">
+                              <img
+                                src={article.heroImage}
+                                alt={article.title}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              />
+                            </div>
+                          )}
+                          <div className="p-6">
+                            <div className="flex items-center gap-3 mb-3">
+                              <span
+                                className="px-3 py-1 rounded-full text-xs font-semibold"
+                                style={{
+                                  backgroundColor: `${CATEGORY_COLORS[article.category]}20`,
+                                  color: CATEGORY_COLORS[article.category],
+                                  border: `1px solid ${CATEGORY_COLORS[article.category]}40`,
+                                }}
+                              >
+                                {CATEGORY_LABELS[article.category]}
+                              </span>
+                              <span className="text-gray-400 text-xs">
+                                {article.readingTime} dk okuma
+                              </span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#DEFF37] transition-colors">
+                              {article.title}
+                            </h3>
+                            {article.subtitle && (
+                              <p className="text-gray-400 text-sm mb-2">{article.subtitle}</p>
+                            )}
+                            <p className="text-gray-400 italic text-sm mb-3">{article.titleEn}</p>
+                            <p className="text-gray-300 text-sm leading-relaxed">
+                              {article.description.substring(0, 120)}
+                              {article.description.length > 120 ? "..." : ""}
+                            </p>
+                          </div>
+                        </Link>
+                      ))}
                   </div>
-                  </Link>
                 </section>
               )}
 
