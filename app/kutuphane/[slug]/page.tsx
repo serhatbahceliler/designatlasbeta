@@ -313,7 +313,7 @@ Kendi görevlerini yazdıktan sonra şu soruları sor:
 
 ## İlgili İçerikler
 
-**Sonraki:** Kullanıcı Görüşmesi (User Interview) Nasıl Yapılır? *(yakında)*
+**Sonraki:** [Kullanıcı Görüşmesi Nasıl Yapılır?](/kutuphane/kullanici-gorusmesi)
 
 **İlgili Roadmap:** [UX Designer Roadmap → Research Yöntemleri](/roadmap/ux-designer)
 
@@ -326,6 +326,414 @@ Derinleşmek istersen:
 - [Usability Testing 101 - NNGroup](https://www.nngroup.com/articles/usability-testing-101/) (İngilizce, 10 dk)
 - [How to Conduct Usability Testing - Interaction Design Foundation](https://www.interaction-design.org/literature/article/usability-testing) (İngilizce, 15 dk)
 - [Running a Usability Test - UsabilityHub](https://usabilityhub.com/guides/usability-testing) (İngilizce, 12 dk)
+`,
+  },
+  "kullanici-gorusmesi": {
+    id: "kullanici-gorusmesi",
+    title: "Kullanıcı Görüşmesi Nasıl Yapılır?",
+    subtitle: "Etkili User Interview Rehberi",
+    titleEn: "User Interview",
+    slug: "kullanici-gorusmesi",
+    description: "Kullanıcı görüşmesi nedir, nasıl yapılır? Doğru soru sorma teknikleri, görüşme planı oluşturma ve kullanıcıdan içgörü çıkarma rehberi.",
+    category: "ux-research",
+    readingTime: 14,
+    featured: false,
+    publishedAt: "2025-01-13",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Kullanıcı Görüşmesi Nasıl Yapılır? Etkili User Interview Rehberi
+
+**Seviye:** Başlangıç  
+**Kategori:** UX Research  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+"Kullanıcılar ne istiyor?" sorusunun cevabını bulmak için anket mi yapmalı, dataya mı bakmalı, yoksa tahmin mi etmeli?
+
+Hiçbiri. Kullanıcıyla konuşmalısın.
+
+Kullanıcı görüşmesi, UX araştırmasının en temel ve en güçlü yöntemlerinden biri. Doğru yapıldığında, hiçbir anketin veya analitik verinin veremeyeceği derinlikte içgörüler sunar. Kullanıcının ne yaptığını değil, neden yaptığını anlarsın.
+
+Ama dikkat: Kötü yapılan bir görüşme, yanlış içgörülere ve hatalı tasarım kararlarına yol açabilir. "Kullanıcı böyle istedi" deyip aslında kendi fikrini doğrulatmış olabilirsin.
+
+Bu yazıda kullanıcı görüşmesinin ne olduğunu, nasıl planlanacağını, doğru soru sorma tekniklerini ve görüşmeden içgörü çıkarmayı öğreneceksin.
+
+---
+
+## Kullanıcı Görüşmesi Ne Demek?
+
+Kullanıcı görüşmesi (user interview), hedef kullanıcılarla birebir yapılan, açık uçlu sorularla kullanıcının deneyimlerini, ihtiyaçlarını, motivasyonlarını ve sorunlarını anlamaya yönelik bir nitel araştırma yöntemidir.
+
+**Kullanıcı görüşmesi şu DEĞİLDİR:**
+
+- Anket (bu nicel veri toplar, yüzeyseldir)
+- Satış görüşmesi (bu ikna etmek içindir)
+- Kullanılabilirlik testi (bu görev tamamlamayı gözlemler)
+- Sohbet (bu yapılandırılmamış, amaçsızdır)
+
+[CALLOUT]
+**Kullanıcı görüşmesi şudur:**
+Yapılandırılmış ama esnek bir formatta, açık uçlu sorularla kullanıcının dünyasını, motivasyonlarını ve sorunlarını derinlemesine anlamaya çalışmak.
+[/CALLOUT]
+
+Kullanıcı görüşmesi sana "ne" değil "neden" sorusunun cevabını verir. Analitik veriler kullanıcının ne yaptığını gösterir, görüşmeler ise neden öyle davrandığını açıklar.
+
+---
+
+## Neden Önemli?
+
+### Varsayımları kırar
+
+Her tasarımcının kafasında kullanıcı hakkında varsayımlar vardır. "Kullanıcılar hızlı checkout ister", "Fiyat en önemli faktör", "Herkes mobil kullanıyor" gibi. Bu varsayımlar bazen doğru, bazen tamamen yanlış olabilir. Kullanıcı görüşmesi, varsayımları gerçek verilerle test eder.
+
+### Beklenmedik içgörüler sunar
+
+Anket yaparken hangi soruları soracağını önceden bilmen gerekir. Ama kullanıcı görüşmesinde, hiç beklemediğin konular ortaya çıkabilir. Kullanıcı, senin aklına bile gelmemiş bir sorunu anlatabilir.
+
+### Empati oluşturur
+
+Ekran başında veri analiz etmek başka, gerçek bir insanın yaşadığı zorlukları dinlemek başka. Kullanıcı görüşmeleri, tüm ekibin kullanıcıyla empati kurmasını sağlar. Stakeholder'a "5 kullanıcı bu sorunu yaşadı" demek, görüşme kaydını izletmekle aynı etkiyi yaratmaz.
+
+### Tasarım kararlarını destekler
+
+"Bence kullanıcılar bunu ister" yerine "8 görüşmeden 6'sında kullanıcılar bu ihtiyacı dile getirdi" demek, tartışmaları bitirir. Görüşmeler, tasarım kararlarına kanıt sağlar.
+
+---
+
+## Ne Zaman Kullanılır?
+
+Kullanıcı görüşmesi her aşamada farklı amaçlarla kullanılabilir:
+
+[TABLE]
+Aşama | Amaç | Örnek Sorular
+Keşif (Discovery) | Problemi ve kullanıcıyı anlamak | "Bu işi şu an nasıl yapıyorsun?"
+Tanımlama (Define) | İhtiyaçları netleştirmek | "En çok neye zaman harcıyorsun?"
+Değerlendirme | Konseptleri test etmek | "Bu çözüm hakkında ne düşünüyorsun?"
+Lansman sonrası | Deneyimi anlamak | "Ürünü kullanırken neler yaşadın?"
+[/TABLE]
+
+[TIP]
+💡 En değerli görüşmeler genellikle keşif aşamasında yapılır. Çünkü burada henüz çözüm geliştirmemişsindir ve kullanıcının gerçek dünyasını anlamaya çalışıyorsundur.
+[/TIP]
+
+---
+
+## Nasıl Yapılır? Adım Adım Süreç
+
+### 1. Hazırlık Aşaması
+
+#### Araştırma amacını belirle
+
+Her görüşmenin net bir amacı olmalı. "Kullanıcıyı tanımak istiyorum" çok genel.
+
+[COMPARISON]
+Kötü amaç: "Kullanıcıları daha iyi anlamak"
+İyi amaç: "Freelancer'ların fatura kesme sürecinde yaşadıkları zorlukları ve mevcut çözümlerini anlamak"
+[/COMPARISON]
+
+#### Katılımcı profilini tanımla
+
+Kimlerle görüşeceğini net olarak tanımla. Screening kriterleri oluştur:
+
+- Demografik özellikler (yaş, lokasyon, meslek)
+- Davranışsal özellikler (ürünü kullanıyor mu, ne sıklıkla)
+- Deneyim seviyesi (yeni mi, deneyimli mi)
+
+[WARNING]
+⚠️ Herkesle görüşme. "18-65 yaş arası herkes" bir segment değil. Ne kadar spesifik olursan, o kadar derin içgörü alırsın.
+[/WARNING]
+
+#### Katılımcı sayısını belirle
+
+[INFO]
+5-8 görüşme yeterli
+Belirli bir kullanıcı segmenti için ana temaları ortaya çıkarır
+[/INFO]
+
+Görüşmelerde "doygunluk noktası" vardır. Bir noktadan sonra yeni görüşmeler aynı temaları tekrarlar. Genellikle 5-8 görüşme sonrası ana paternler netleşir.
+
+#### Görüşme rehberi oluştur
+
+Görüşme rehberi (interview guide), sorulacak soruları ve akışı içeren bir dokümandır. Bu bir script değil, rehberdir. Kelimesi kelimesine okumak yerine, doğal bir sohbet akışı içinde kullanırsın.
+
+**Rehber yapısı:**
+
+[STEPS]
+1. Giriş (3-5 dakika)
+   - Kendini ve amacı tanıt
+   - Kayıt izni al
+   - "Doğru/yanlış cevap yok" de
+   - Süreyi belirt
+
+2. Isınma soruları (5 dakika)
+   - Katılımcı hakkında genel bilgi
+   - Konuyla ilgili arka plan
+   - Rahatlatıcı, kolay sorular
+
+3. Ana sorular (20-35 dakika)
+   - Araştırma amacına yönelik sorular
+   - Geçmiş deneyimler
+   - Mevcut davranışlar
+   - Sorunlar ve ihtiyaçlar
+
+4. Derinleştirme (5-10 dakika)
+   - Takip soruları
+   - "Neden?" ve "Nasıl?" ile derinleştirme
+   - Somut örnekler isteme
+
+5. Kapanış (3-5 dakika)
+   - "Eklemek istediğin bir şey var mı?"
+   - Teşekkür
+   - Sonraki adımlar
+[/STEPS]
+
+### 2. Soru Hazırlama
+
+Doğru soru sormak, kullanıcı görüşmesinin en kritik kısmı. Yanlış sorular yanlış içgörülere yol açar.
+
+#### Açık uçlu sorular sor
+
+[COMPARISON]
+Kötü soru: "Online alışveriş yapıyor musun?"
+İyi soru: "Son online alışveriş deneyimini anlatır mısın?"
+[/COMPARISON]
+
+Açık uçlu sorular "evet/hayır" ile cevaplanamaz. Kullanıcıyı anlatmaya, açıklamaya teşvik eder.
+
+**Açık uçlu soru kalıpları:**
+- "Anlat..."
+- "Nasıl...?"
+- "Ne oldu...?"
+- "Neden...?"
+- "Bana ... hakkında bilgi verir misin?"
+
+#### Yönlendirici sorulardan kaçın
+
+[COMPARISON]
+Yönlendirici: "Bu özellik faydalı değil mi?"
+Nötr: "Bu özellik hakkında ne düşünüyorsun?"
+[/COMPARISON]
+
+[COMPARISON]
+Yönlendirici: "Çoğu insan X'i tercih ediyor, sen?"
+Nötr: "Bu konuda tercihini nasıl belirlersin?"
+[/COMPARISON]
+
+Yönlendirici sorular, istediğin cevabı "üfler". Kullanıcı seni memnun etmek için o yönde cevap verebilir.
+
+#### Hipotetik sorulardan kaçın
+
+[COMPARISON]
+Hipotetik: "Böyle bir özellik olsa kullanır mıydın?"
+Davranış bazlı: "Bu işi şu an nasıl yapıyorsun?"
+[/COMPARISON]
+
+İnsanlar gelecekteki davranışlarını tahmin etmekte kötüdür. "Kullanırım" diyen kişi, gerçekte kullanmayabilir. Geçmiş davranışları sor, hipotetik senaryoları değil.
+
+#### Örnek soru seti
+
+**Keşif aşaması için:**
+- "Bana tipik bir iş gününü anlatır mısın?"
+- "Bu işi yapmaya nasıl karar verdin?"
+- "En son [X] yaptığında ne oldu?"
+- "Bu süreçte en çok neye zaman harcıyorsun?"
+- "En sinir bozucu kısım ne?"
+- "İdeal dünyada bu nasıl çalışırdı?"
+
+**Mevcut ürün değerlendirmesi için:**
+- "[Ürün]'ü ilk nasıl keşfettin?"
+- "En son ne zaman ve neden kullandın?"
+- "Hangi durumda aklına geliyor?"
+- "Başka hangi araçları deneydin?"
+- "Olmasa ne yapardın?"
+
+### 3. Görüşmeyi Yürütme
+
+#### Ortamı hazırla
+
+**Yüz yüze:**
+- Sessiz, rahat bir ortam
+- Karşılıklı oturma (masa arkasından değil)
+- Su, kağıt kalem hazır
+
+**Remote:**
+- Stabil internet bağlantısı
+- Sessiz arka plan
+- Kamera açık (mimik görmek için)
+- Yedek iletişim kanalı
+
+#### Giriş scripti
+
+[QUOTE]
+"Merhaba, ben [isim], [şirket]'te tasarımcı olarak çalışıyorum. Bugün seninle [konu] hakkında konuşmak istiyorum. Bu bir test değil, doğru veya yanlış cevap yok. Senin deneyimlerini ve düşüncelerini anlamak istiyorum. Görüşme yaklaşık [süre] dakika sürecek. İzin verirsen kayıt almak istiyorum, sadece ekip içinde kullanacağız. Başlamadan önce soruların var mı?"
+[/QUOTE]
+
+#### Görüşme sırasında dikkat edilecekler
+
+[CHECKLIST]
+Yap:
+- Aktif dinle, göz teması kur
+- Not al ama akışı bozma
+- "Neden?" ve "Nasıl?" ile derinleştir
+- Sessizliğe izin ver (düşünme süresi)
+- Somut örnekler iste ("Mesela?")
+- Nötr kal, tepki verme
+
+Yapma:
+- Kendi fikrini söyleme
+- Sözünü kesme
+- Cevabı tamamlama
+- Tasarımı/ürünü savunma
+- Çok hızlı soru geçme
+- Notlara gömülme
+[/CHECKLIST]
+
+#### Derinleştirme teknikleri
+
+Kullanıcı yüzeysel cevap verdiğinde şu teknikleri kullan:
+
+**"5 Neden" tekniği:**
+İlk cevaba "Neden?" diye sor. Cevaba tekrar "Neden?" sor. Kök nedene ulaşana kadar devam et.
+
+**Somutlaştırma:**
+"Bana en son bunun yaşandığı bir örnek verebilir misin?"
+"O gün tam olarak ne oldu?"
+
+**Yansıtma:**
+Kullanıcının söylediğini özetle ve geri sor:
+"Yani anlattığın şey... Doğru mu anladım?"
+
+**Sessizlik:**
+Cevaptan sonra hemen soru sorma. 3-5 saniye bekle. Kullanıcı genellikle devam eder ve daha derin bilgi verir.
+
+### 4. Analiz ve Sentez
+
+#### Notları düzenle
+
+Görüşmeden hemen sonra (mümkünse aynı gün) notlarını düzenle. Her görüşme için:
+
+- Katılımcı profili (anonim)
+- Öne çıkan temalar
+- Doğrudan alıntılar (önemli cümleler)
+- Şaşırtıcı bulgular
+- Takip edilecek sorular
+
+#### Temaları çıkar
+
+Tüm görüşmeleri tamamladıktan sonra:
+
+1. Tüm notları bir araya getir
+2. Tekrar eden kalıpları (pattern) işaretle
+3. Benzer konuları grupla
+4. Her gruba tema adı ver
+5. Temayı destekleyen alıntıları ekle
+
+[TIP]
+💡 Affinity mapping yöntemi: Her bulguyu ayrı post-it'e yaz. Benzer post-it'leri grupla. Gruplara isim ver. Bu, örüntüleri görselleştirmenin etkili bir yolu.
+[/TIP]
+
+#### Raporlama
+
+Görüşme raporun şunları içermeli:
+
+1. **Özet:** Araştırma amacı, katılımcı profili, ana bulgular
+2. **Metodoloji:** Kaç görüşme, kimlerle, nasıl yapıldı
+3. **Temalar:** Ana başlıklar ve destekleyen alıntılar
+4. **Persona/kullanıcı profili:** Görüşmelerden çıkan kullanıcı karakterizasyonu
+5. **Öneriler:** Tasarım için aksiyon önerileri
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Evet/hayır soruları sormak
+
+[COMPARISON]
+Hata: "Memnun musun?"
+Doğrusu: "Deneyimini nasıl değerlendirirsin?"
+[/COMPARISON]
+
+Kapalı sorular sohbeti keser, derinlik sağlamaz.
+
+### 2. Çözüm önermek
+
+Kullanıcı sorun anlattığında hemen "Şöyle bir özellik yapsak?" deme. Görüşme keşif için, çözüm için değil. Not al, sonra düşün.
+
+### 3. Kendi fikrini söylemek
+
+"Ben de öyle düşünüyorum" veya "Aslında şöyle çalışıyor" gibi cümleler kullanıcıyı etkiler. Nötr kal, yargılama.
+
+### 4. Savunmaya geçmek
+
+Kullanıcı ürünü eleştirdiğinde savunma. "Ama o özellik şunun için var" deme. Dinle, not al, anlamaya çalış.
+
+### 5. Tek görüşmeyle sonuç çıkarmak
+
+Bir kullanıcının söylediği tüm kullanıcıları temsil etmez. En az 5 görüşme yap, örüntüleri ara.
+
+### 6. Sadece pozitif dinlemek
+
+Confirmation bias: Duymak istediğini duyarsın. Varsayımlarını çürüten verilere de dikkat et.
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**Senaryo:** Bir online eğitim platformu tasarlıyorsun. Kullanıcıların online kurs satın alma ve tamamlama deneyimlerini anlamak istiyorsun.
+
+**Görev:** Bu araştırma için 5 adet görüşme sorusu yaz.
+
+**Kurallar:**
+- Sorular açık uçlu olmalı
+- Yönlendirici olmamalı
+- Geçmiş davranışlara odaklanmalı (hipotetik değil)
+- Farklı konuları kapsamalı (keşif, sorun, çözüm arayışı)
+
+**Başlangıç için örnek:**
+"En son online bir kurs aldığında, kursu nasıl buldun ve seçtin?"
+
+Sorularını yazdıktan sonra şu kontrolleri yap:
+- Evet/hayır ile cevaplanabilir mi? (cevaplanmamalı)
+- Cevabı yönlendiriyor mu? (yönlendirmemeli)
+- Geçmiş davranışı mı soruyor, gelecek tahmini mi? (geçmiş olmalı)
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Kullanıcı görüşmesi "neden" sorusunun cevabını verir; anket veya analitik "ne" sorusunu
+- 5-8 görüşme ana temaları ortaya çıkarmak için yeterli
+- Açık uçlu, yönlendirici olmayan sorular sor
+- Geçmiş davranışları sor, hipotetik senaryoları değil
+- Dinle, not al, yargılama; görüşme sırasında çözüm önerme
+- Tüm görüşmelerden örüntü ve tema çıkar
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Kullanılabilirlik Testi Nedir?](/kutuphane/kullanilabilirlik-testi)
+
+**Sonraki:** Portfolio Case Study Nasıl Yazılır? *(yakında)*
+
+**İlgili Roadmap:** [UX Designer Roadmap → Research Yöntemleri](/roadmap/ux-designer)
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [User Interviews: How, When, and Why to Conduct Them - NNGroup](https://www.nngroup.com/articles/user-interviews/) (İngilizce, 10 dk)
+- [Interviewing Users - Interaction Design Foundation](https://www.interaction-design.org/literature/article/interviewing-users) (İngilizce, 12 dk)
+- [The Mom Test - Rob Fitzpatrick](http://momtestbook.com/) (Kitap, kullanıcıdan dürüst feedback alma üzerine)
 `,
   },
 };
@@ -521,7 +929,7 @@ export default function ArticlePage() {
             "@type": "Article",
             headline: `${article.title} ${article.subtitle ? `- ${article.subtitle}` : ""}`,
             description: article.description,
-            image: article.heroImage,
+            image: article.heroImage || undefined,
             author: {
               "@type": "Organization",
               name: article.author || "DesignAtlas",
@@ -545,49 +953,94 @@ export default function ArticlePage() {
       />
 
       {/* Structured Data - FAQ */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Kullanılabilirlik testi nedir?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Kullanılabilirlik testi, gerçek kullanıcıların bir ürün veya tasarımla etkileşimini gözlemlediğin bir araştırma yöntemidir. Kullanıcıya belirli görevler verilir ve bu görevleri tamamlamaya çalışırken nerede takıldığı, ne hissettiği gözlemlenir.",
-                },
+      {(() => {
+        const faqData: any = {
+          "kullanilabilirlik-testi": [
+            {
+              "@type": "Question",
+              name: "Kullanılabilirlik testi nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Kullanılabilirlik testi, gerçek kullanıcıların bir ürün veya tasarımla etkileşimini gözlemlediğin bir araştırma yöntemidir. Kullanıcıya belirli görevler verilir ve bu görevleri tamamlamaya çalışırken nerede takıldığı, ne hissettiği gözlemlenir.",
               },
-              {
-                "@type": "Question",
-                name: "Kullanılabilirlik testi için kaç kişi gerekli?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Klasik kural olarak 5 kullanıcı, sorunların yaklaşık %85'ini ortaya çıkarır. Bu sayı tek bir kullanıcı segmenti için geçerlidir. Farklı kullanıcı grupları için ayrı testler yapılmalıdır.",
-                },
+            },
+            {
+              "@type": "Question",
+              name: "Kullanılabilirlik testi için kaç kişi gerekli?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Klasik kural olarak 5 kullanıcı, sorunların yaklaşık %85'ini ortaya çıkarır. Bu sayı tek bir kullanıcı segmenti için geçerlidir. Farklı kullanıcı grupları için ayrı testler yapılmalıdır.",
               },
-              {
-                "@type": "Question",
-                name: "Kullanılabilirlik testi nasıl yapılır?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Kullanılabilirlik testi 4 aşamada yapılır: 1) Hazırlık (amaç belirleme, görev yazma, katılımcı bulma), 2) Test senaryosu oluşturma, 3) Testi yürütme (gözlem ve not alma), 4) Analiz ve raporlama.",
-                },
+            },
+            {
+              "@type": "Question",
+              name: "Kullanılabilirlik testi nasıl yapılır?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Kullanılabilirlik testi 4 aşamada yapılır: 1) Hazırlık (amaç belirleme, görev yazma, katılımcı bulma), 2) Test senaryosu oluşturma, 3) Testi yürütme (gözlem ve not alma), 4) Analiz ve raporlama.",
               },
-              {
-                "@type": "Question",
-                name: "Kullanılabilirlik testi ile A/B testi arasındaki fark nedir?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Kullanılabilirlik testi, kullanıcıların bir tasarımla nasıl etkileşime girdiğini gözlemler ve nitel veri toplar. A/B testi ise iki farklı versiyonu karşılaştırarak hangisinin daha iyi performans gösterdiğini metriklerle ölçer.",
-                },
+            },
+            {
+              "@type": "Question",
+              name: "Kullanılabilirlik testi ile A/B testi arasındaki fark nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Kullanılabilirlik testi, kullanıcıların bir tasarımla nasıl etkileşime girdiğini gözlemler ve nitel veri toplar. A/B testi ise iki farklı versiyonu karşılaştırarak hangisinin daha iyi performans gösterdiğini metriklerle ölçer.",
               },
-            ],
-          }),
-        }}
-      />
+            },
+          ],
+          "kullanici-gorusmesi": [
+            {
+              "@type": "Question",
+              name: "Kullanıcı görüşmesi nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Kullanıcı görüşmesi, hedef kullanıcılarla birebir yapılan, açık uçlu sorularla kullanıcının deneyimlerini, ihtiyaçlarını, motivasyonlarını ve sorunlarını anlamaya yönelik bir nitel araştırma yöntemidir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Kullanıcı görüşmesi kaç dakika sürmeli?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "İdeal kullanıcı görüşmesi 30-60 dakika arasında sürer. 30 dakikanın altı yüzeysel kalır, 60 dakikanın üzeri ise katılımcıyı yorar ve veri kalitesini düşürür.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Kullanıcı görüşmesinde nasıl sorular sorulmalı?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Açık uçlu sorular sorulmalı, yönlendirici sorulardan kaçınılmalıdır. 'Evet/hayır' ile cevaplanabilecek sorular yerine 'Nasıl?', 'Neden?', 'Anlat' ile başlayan sorular tercih edilmelidir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Kullanıcı görüşmesi ile anket arasındaki fark nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Kullanıcı görüşmesi nitel veri toplar, derinlemesine içgörü sağlar ve az sayıda katılımcıyla yapılır. Anket ise nicel veri toplar, geniş kitleden yüzeysel bilgi alır ve istatistiksel analiz için kullanılır.",
+              },
+            },
+          ],
+        };
+
+        const faqs = faqData[slug];
+        if (!faqs) return null;
+
+        return (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: faqs,
+              }),
+            }}
+          />
+        );
+      })()}
 
       {/* Structured Data - Breadcrumb */}
       <script
