@@ -2418,7 +2418,7 @@ iOS uygulamasında Android pattern'leri veya tam tersi. Kullanıcılar platform 
 
 **Önceki:** [UX Nedir?](/kutuphane/ux-nedir)
 
-**Sonraki:** UX ve UI Arasındaki Fark *(yakında)*
+**Sonraki:** [UX ve UI Arasındaki Fark](/kutuphane/ux-ui-farki)
 
 **İlgili konular:**
 - Design System Temelleri *(yakında)*
@@ -2435,6 +2435,435 @@ Derinleşmek istersen:
 - [User Interface Design Basics - Usability.gov](https://www.usability.gov/what-and-why/user-interface-design.html) (İngilizce, 6 dk)
 - [UI Design - IxDF](https://www.interaction-design.org/literature/topics/ui-design) (İngilizce, 10 dk)
 - [Material Design](https://material.io/design) (Google'ın design system'ı, İngilizce)
+`,
+  },
+  "ux-ui-farki": {
+    id: "ux-ui-farki",
+    title: "UX ve UI Arasındaki Fark",
+    subtitle: "İki Kavramı Bir Kez ve Herkes İçin Netleştirelim",
+    titleEn: "UX vs UI",
+    slug: "ux-ui-farki",
+    description: "UX ve UI arasındaki fark nedir? UX Designer ile UI Designer ne yapar, nasıl çalışırlar? Karıştırılan bu iki kavramı örneklerle açıklıyoruz.",
+    category: "temel-kavramlar",
+    readingTime: 9,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    content: `# UX ve UI Arasındaki Fark: Kapsamlı Karşılaştırma
+
+**Seviye:** Başlangıç  
+**Kategori:** Temel Kavramlar  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+"UX/UI Designer arıyoruz."
+
+İş ilanlarının %80'i böyle yazıyor. Sanki UX ve UI aynı şeymiş gibi. Ya da biri diğerinin parçasıymış gibi.
+
+Değil.
+
+UX ve UI farklı disiplinler. Farklı sorulara cevap veriyorlar, farklı beceriler gerektiriyorlar, farklı çıktılar üretiyorlar. Ama birlikte çalışıyorlar, birbirlerini tamamlıyorlar.
+
+Bu yazıda UX ve UI arasındaki farkı bir kez ve herkes için netleştireceğiz. Benzetmeler, örnekler ve tablolarla.
+
+---
+
+## Tek Cümlede Fark
+
+[CALLOUT]
+**UX:** Ürün nasıl çalışıyor ve nasıl hissettiriyor?
+**UI:** Ürün nasıl görünüyor?
+[/CALLOUT]
+
+UX deneyimi tasarlar. UI görüntüyü tasarlar.
+
+---
+
+## Benzetmelerle Anlamak
+
+### Ev Benzetmesi
+
+Bir ev inşa ettiğini düşün:
+
+**UX:**
+- Evin planı (kaç oda, nerede)
+- Odalar arası geçişler
+- Kapıların açılış yönü
+- Elektrik prizlerinin konumu
+- Mutfak tezgahının yüksekliği
+- Işığın nereden geleceği
+
+**UI:**
+- Duvar renkleri
+- Mobilya seçimi
+- Aydınlatma armatürleri
+- Zemin kaplaması
+- Perde ve dekorasyon
+- Kapı kollarının tasarımı
+
+[TIP]
+💡 Güzel dekore edilmiş ama planı kötü bir evde yaşamak zor. Planı iyi ama çirkin bir evde yaşanabilir ama keyif vermez. İkisi de lazım.
+[/TIP]
+
+### Restoran Benzetmesi
+
+**UX:**
+- Menü yapısı ve kategorileri
+- Sipariş süreci
+- Masaların yerleşimi
+- Garsonun ne zaman geleceği
+- Ödeme akışı
+- Bekleme süresi
+
+**UI:**
+- Menünün görsel tasarımı
+- Tabak ve çatal bıçak seçimi
+- İç mekan dekorasyonu
+- Aydınlatma ambiyansı
+- Garson üniforması
+- Logo ve marka renkleri
+
+### Araba Benzetmesi
+
+**UX:**
+- Vites kolunun konumu
+- Gösterge panelinin düzeni
+- Klima kontrollerinin mantığı
+- Bagajın açılış şekli
+- Sürüş deneyimi
+
+**UI:**
+- Gösterge panelinin görsel tasarımı
+- Buton ve düğmelerin şekli
+- İç mekan renkleri ve malzemeleri
+- Ekran arayüzü tasarımı
+- Işıklandırma
+
+---
+
+## Detaylı Karşılaştırma
+
+[TABLE]
+| Özellik | UX Design | UI Design |
+|---------|-----------|-----------|
+| **Tam adı** | User Experience Design | User Interface Design |
+| **Odak** | Deneyim, akış, yapı | Görsel, estetik, etkileşim |
+| **Ana soru** | Nasıl çalışmalı? | Nasıl görünmeli? |
+| **Kullanıcı ile ilişki** | Kullanıcıyı anlamak | Kullanıcıya sunmak |
+| **Araştırma** | Kullanıcı araştırması | Görsel trend araştırması |
+| **Çıktılar** | Persona, journey map, wireframe, flow | Mockup, style guide, design system |
+| **Araçlar** | FigJam, Miro, Maze | Figma, Illustrator, Principle |
+| **Test** | Kullanılabilirlik testi | Görsel A/B test, preference test |
+| **Başarı kriteri** | Kullanıcı görevi tamamladı mı? | Görsel açık ve çekici mi? |
+| **Analoji** | Mimarın planı | İç mimarın dekorasyonu |
+[/TABLE]
+
+---
+
+## Süreçte Nerede Duruyorlar?
+
+Tipik bir tasarım sürecinde:
+
+[STEPS]
+1. Araştırma → UX
+   Kullanıcı görüşmeleri, anketler, veri analizi
+
+2. Tanımlama → UX
+   Persona, problem statement, user journey
+
+3. Yapı → UX
+   Information architecture, user flow, wireframe
+
+4. Görsel Tasarım → UI
+   Style exploration, renk, tipografi, bileşenler
+
+5. Prototip → UX + UI
+   Etkileşimli prototip, animasyonlar
+
+6. Test → UX + UI
+   Kullanılabilirlik testi, görsel feedback
+
+7. İterasyon → UX + UI
+   Geri bildirimlere göre düzenleme
+
+8. Handoff → UI
+   Developer'a görsel spesifikasyonlar
+[/STEPS]
+
+[CALLOUT]
+**Süreç lineer değil, döngüsel.**
+UI çalışırken UX sorunları ortaya çıkabilir. Test sonuçları hem UX hem UI değişikliği gerektirebilir. İkisi paralel ve iteratif çalışır.
+[/CALLOUT]
+
+---
+
+## Çıktılar Karşılaştırması
+
+### UX Designer Çıktıları
+
+| Çıktı | Açıklama |
+|-------|----------|
+| **Persona** | Hedef kullanıcı profili |
+| **User Journey Map** | Kullanıcı yolculuğu haritası |
+| **User Flow** | Kullanıcı akış diyagramı |
+| **Wireframe** | Düşük sadakatli ekran taslakları |
+| **Information Architecture** | İçerik ve navigasyon yapısı |
+| **Usability Test Raporu** | Test bulguları ve öneriler |
+
+### UI Designer Çıktıları
+
+| Çıktı | Açıklama |
+|-------|----------|
+| **Style Guide** | Renk, tipografi, spacing kuralları |
+| **Mockup** | Yüksek sadakatli ekran tasarımları |
+| **Design System** | Tekrar kullanılabilir bileşenler |
+| **Icon Set** | Tutarlı ikon kütüphanesi |
+| **Prototype** | Etkileşimli ve animasyonlu prototip |
+| **Redline/Spec** | Developer için ölçü ve detaylar |
+
+### Görsel Fark
+
+[COMPARISON]
+**Wireframe (UX):**
+Gri kutular, placeholder metinler, akış odaklı, görsel detay yok
+
+**Mockup (UI):**
+Gerçek renkler, fontlar, ikonlar, görseller, piksel-perfect tasarım
+[/COMPARISON]
+
+---
+
+## UX/UI Designer: Hibrit Rol
+
+İş ilanlarında sıkça gördüğün "UX/UI Designer" title'ı ne anlama geliyor?
+
+[CALLOUT]
+**UX/UI Designer:**
+Hem kullanıcı deneyimi hem kullanıcı arayüzü tasarımı yapan kişi. İki farklı beceri setini tek kişide birleştirir.
+[/CALLOUT]
+
+### Ne zaman bu rol mantıklı?
+
+- Küçük ekipler ve startup'lar
+- Sınırlı bütçe
+- Hızlı hareket etme ihtiyacı
+- Tek tasarımcılı projeler
+
+### Ne zaman roller ayrılmalı?
+
+- Büyük ve karmaşık projeler
+- Derin araştırma gerektiren ürünler
+- Yüksek görsel standart beklentisi
+- Yeterli bütçe ve ekip büyüklüğü
+
+[WARNING]
+⚠️ UX/UI Designer olarak çalışsan da, iki disiplini karıştırma. Hangi şapkayı taktığını bil. Araştırma yaparken UX, görsel tasarlarken UI modundasın.
+[/WARNING]
+
+---
+
+## Hangisi Önce Gelir?
+
+Genel kural: **UX önce.**
+
+Çünkü:
+1. Önce problemi anlamalısın (UX araştırma)
+2. Sonra yapıyı kurmalısın (UX yapı)
+3. Sonra görselleştirmelisin (UI)
+
+Ama pratikte bu kadar net değil. İkisi paralel ilerleyebilir:
+- UX wireframe çizerken, UI style exploration yapabilir
+- UI tasarlarken, UX sorunları fark edilebilir
+- Test sonuçları ikisini de etkiler
+
+[TIP]
+💡 Sıkı waterfall yerine, iteratif düşün. UX ve UI birbirini besler, bir ileri bir geri gidilir.
+[/TIP]
+
+---
+
+## Birlikte Nasıl Çalışırlar?
+
+### İdeal iş akışı
+
+[UX Research]
+↓
+[UX: Persona, Journey Map]
+↓
+[UX: Information Architecture, Flow]
+↓
+[UX: Wireframe] ←→ [UI: Style Exploration]
+↓
+[UI: Visual Design, Mockup]
+↓
+[UX + UI: Prototype]
+↓
+[UX: Usability Test] → Feedback → [Iterate]
+↓
+[UI: Design System, Handoff]
+
+### İletişim noktaları
+
+| Aşama | UX → UI | UI → UX |
+|-------|---------|---------|
+| **Araştırma sonrası** | Persona, kullanıcı ihtiyaçları | - |
+| **Yapı sonrası** | Wireframe, flow | Görsel kısıtlar, teknik limitler |
+| **Tasarım sırasında** | Akış değişiklikleri | Görsel alternatifler |
+| **Test sonrası** | Kullanılabilirlik bulguları | Görsel feedback |
+
+---
+
+## Yaygın Yanlış Anlamalar
+
+### "UX = Wireframe"
+
+Hayır. Wireframe, UX'in sadece bir çıktısı. UX araştırmayla başlar, stratejiyle devam eder.
+
+### "UI = Güzel tasarım"
+
+Kısmen. UI estetik ama aynı zamanda fonksiyonel, tutarlı ve erişilebilir olmalı.
+
+### "UI olmadan UX olur"
+
+Teknik olarak evet. Wireframe'lerle test yapılabilir. Ama final ürün için UI şart.
+
+### "UX olmadan UI olur"
+
+Yine teknik olarak evet. Ama sonuç güzel görünen ama kullanılamayan bir ürün olabilir.
+
+### "UX daha önemli"
+
+İkisi de önemli. Kötü UX + iyi UI = frustrasyon. İyi UX + kötü UI = terk. İkisi dengede olmalı.
+
+---
+
+## Kariyer Perspektifi
+
+### UX Designer olmak istiyorsan
+
+**Güçlü olman gereken alanlar:**
+- Kullanıcı araştırması
+- Problem tanımlama
+- Analitik düşünme
+- İletişim ve sunum
+- Empati
+
+**Daha az kritik:**
+- Görsel tasarım detayları
+- Renk teorisi
+- Tipografi uzmanlığı
+
+### UI Designer olmak istiyorsan
+
+**Güçlü olman gereken alanlar:**
+- Görsel tasarım prensipleri
+- Tipografi
+- Renk ve kompozisyon
+- Detaylara dikkat
+- Design system düşüncesi
+
+**Daha az kritik:**
+- Derin kullanıcı araştırması
+- İstatistik ve veri analizi
+
+### UX/UI Designer olmak istiyorsan
+
+Her iki alanın temellerine hakim olmalısın. Ama genellikle bir tarafta daha güçlü olursun. Bu normal.
+
+---
+
+## Gerçek Dünya Örneği
+
+Bir e-ticaret uygulamasının "Sepete Ekle" özelliğini düşünelim:
+
+### UX açısından sorular:
+- Kullanıcı ürünü sepete ne zaman eklemek istiyor?
+- Sepete ekledikten sonra ne bekliyor?
+- Sepete gitmek mi istiyor, alışverişe devam mı?
+- Miktar seçimi gerekli mi?
+- Aynı ürün zaten sepetteyse ne olacak?
+
+### UI açısından sorular:
+- Buton ne renk olmalı?
+- Buton nerede konumlanmalı?
+- Tıklandığında nasıl bir feedback olmalı?
+- Başarı animasyonu nasıl olmalı?
+- Buton üzerinde ne yazmalı? İkon mu, text mi?
+
+[COMPARISON]
+**UX kararı:** Sepete ekledikten sonra mini cart açılsın, kullanıcı sepeti görsün ama sayfada kalsın.
+
+**UI kararı:** Buton primary yeşil (#10B981), tıklandığında scale animasyonu, ardından mini cart sağdan slide-in.
+[/COMPARISON]
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**15 dakika**
+
+**Görev:** Bir özelliği hem UX hem UI gözüyle analiz et.
+
+**Senaryo:** Bir banka uygulamasının "Para Transferi" özelliği.
+
+**Adım 1 - UX soruları yaz (en az 5):**
+- Kullanıcı nasıl bir akış bekliyor?
+- Hangi bilgilere ihtiyaç var?
+- Hata durumlarında ne olmalı?
+- ...
+
+**Adım 2 - UI soruları yaz (en az 5):**
+- Tutar nasıl girilmeli?
+- Onay ekranı nasıl görünmeli?
+- Başarı durumu nasıl gösterilmeli?
+- ...
+
+**Adım 3 - Karşılaştır:**
+Sorularının odağı ne kadar farklı? Hangilerinde örtüşme var?
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- **UX** deneyimi tasarlar (nasıl çalışıyor?), **UI** görüntüyü tasarlar (nasıl görünüyor?)
+- UX: araştırma, yapı, akış, wireframe / UI: görsel, estetik, bileşen, mockup
+- Genel olarak UX önce gelir ama pratikte paralel ve iteratif çalışılır
+- UX/UI Designer hibrit roldür, özellikle küçük ekiplerde yaygın
+- İkisi birbirini tamamlar: iyi UX + kötü UI veya kötü UX + iyi UI başarısız olur
+- Kariyer seçiminde güçlü yönlerini değerlendir, ama temelleri her iki alanda da öğren
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [UI Nedir?](/kutuphane/ui-nedir)
+
+**Sonraki:** Wireframe Nedir? *(yakında)*
+
+**İlgili konular:**
+- [UX Nedir?](/kutuphane/ux-nedir)
+- [UI Nedir?](/kutuphane/ui-nedir)
+- Product Design Nedir? *(yakında)*
+
+**İlgili Roadmap:** [UX Designer Roadmap → Temeller](/roadmap/ux-designer)
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [UX vs UI Design: What's the Difference? - NNGroup](https://www.nngroup.com/articles/ux-vs-ui/) (İngilizce, 6 dk)
+- [The Difference Between UX and UI Design - IxDF](https://www.interaction-design.org/literature/article/the-difference-between-ux-and-ui-design-a-layman-s-guide) (İngilizce, 10 dk)
+- [UI vs UX: What's the difference? - Figma](https://www.figma.com/resource-library/difference-between-ui-and-ux/) (İngilizce, 8 dk)
 `,
   },
 };

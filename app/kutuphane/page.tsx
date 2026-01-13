@@ -140,6 +140,21 @@ const MOCK_ARTICLES: Article[] = [
     author: "Serhat Bahçeliler",
     views: 0,
   },
+  {
+    id: "ux-ui-farki",
+    title: "UX ve UI Arasındaki Fark",
+    subtitle: "İki Kavramı Bir Kez ve Herkes İçin Netleştirelim",
+    titleEn: "UX vs UI",
+    slug: "ux-ui-farki",
+    description: "UX ve UI arasındaki fark nedir? UX Designer ile UI Designer ne yapar, nasıl çalışırlar? Karıştırılan bu iki kavramı örneklerle açıklıyoruz.",
+    category: "temel-kavramlar",
+    readingTime: 9,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    views: 0,
+  },
 ];
 
 type SortOption = "newest" | "popular" | "az";
