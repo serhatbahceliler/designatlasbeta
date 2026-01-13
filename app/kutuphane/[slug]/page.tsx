@@ -4274,7 +4274,7 @@ Hazırlık önemli ama robotik cevaplar itici. Doğal ol.
 
 **Önceki:** [Persona Oluşturma Rehberi](/kutuphane/persona-olusturma)
 
-**Sonraki:** Product Design Nedir? *(yakında)*
+**Sonraki:** [Product Design Nedir?](/kutuphane/product-design-nedir)
 
 **İlgili konular:**
 - [Portfolio Case Study Nasıl Yazılır?](/kutuphane/portfolio-case-study)
@@ -5348,6 +5348,40 @@ export default function ArticlePage() {
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "STAR metodu davranışsal soruları cevaplamak için kullanılan bir yapıdır: Situation (durum), Task (görev), Action (aksiyon), Result (sonuç). Geçmiş deneyimlerinizi bu yapıda anlatmak, cevaplarınızı organize ve etkili kılar.",
+              },
+            },
+          ],
+          "product-design-nedir": [
+            {
+              "@type": "Question",
+              name: "Product Design nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Product Design, bir dijital ürünün kullanıcı deneyiminden görsel tasarımına, stratejisinden iş hedeflerine kadar tüm tasarım sürecini kapsayan disiplindir. UX ve UI'ı birleştirir, aynı zamanda ürün stratejisi ve iş metrikleriyle de ilgilenir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Product Designer ne yapar?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Product Designer kullanıcı araştırması yapar, deneyim ve arayüz tasarlar, prototip oluşturur, test eder ve ürün stratejisine katkıda bulunur. Sadece tasarlamak değil, ürünün başarısı için sorumluluk almak Product Designer'ın görevidir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Product Designer ile UX Designer arasındaki fark nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "UX Designer kullanıcı deneyimine odaklanır, Product Designer ise deneyimin yanı sıra iş hedefleri, metrikler ve ürün stratejisiyle de ilgilenir. Product Designer daha geniş bir sorumluluk alanına sahiptir ve genellikle UX+UI+strateji birleşimidir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Product Designer olmak için ne gerekir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "UX ve UI tasarım becerilerinin yanı sıra, ürün düşüncesi, iş metrikleri anlayışı, iletişim ve iş birliği becerileri gerekir. Teknik olarak araştırma, wireframing, prototyping, visual design ve temel analitik bilgisi önemlidir.",
               },
             },
           ],
