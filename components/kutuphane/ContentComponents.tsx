@@ -3,8 +3,8 @@ import React from "react";
 // Callout Box Component
 export function CalloutBox({ children }: { children: React.ReactNode }) {
   return (
-    <div className="my-6 p-4 md:p-6 rounded-lg border-l-4 border-[#3B82F6] bg-[#EFF6FF]">
-      <div className="prose prose-invert max-w-none text-gray-800">
+    <div className="my-6 p-4 md:p-6 rounded-lg border-l-4 border-[#3B82F6] bg-[#3B82F6]/10">
+      <div className="prose prose-invert max-w-none text-gray-300">
         {children}
       </div>
     </div>
