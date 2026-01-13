@@ -391,16 +391,16 @@ function KutuphaneContent() {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-8">
             {/* Animated Books Stack */}
-            <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="flex items-center justify-center mb-6">
               <div className="flex items-end gap-2 book-stack">
                 <div className="book book-1">📖</div>
                 <div className="book book-2">📗</div>
                 <div className="book book-3">📕</div>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white hero-title">
-                Kütüphane
-              </h1>
             </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white hero-title mb-4">
+              Kütüphane
+            </h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto hero-subtitle">
               UX, UI ve Product Design hakkında Türkçe rehberler. Öğrenmeye nereden başlayacağını bilmiyorsan, roadmap'lere göz at.
             </p>
