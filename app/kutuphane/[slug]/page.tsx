@@ -4293,6 +4293,485 @@ Derinleşmek istersen:
 - [Glassdoor UX Designer Interviews](https://www.glassdoor.com/Interview/ux-designer-interview-questions-SRCH_KO0,11.htm) (Şirket bazlı sorular)
 `,
   },
+  "product-design-nedir": {
+    id: "product-design-nedir",
+    title: "Product Design Nedir?",
+    subtitle: "Ürün Tasarımcısının Rolü ve Sorumlulukları",
+    titleEn: "What is Product Design?",
+    slug: "product-design-nedir",
+    description: "Product Design nedir? Product Designer ne yapar, UX Designer'dan farkı ne? Ürün tasarımcısının rolü, sorumlulukları ve kariyer yolu rehberi.",
+    category: "temel-kavramlar",
+    readingTime: 12,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    content: `# Product Design Nedir? Ürün Tasarımcısının Rolü ve Sorumlulukları
+
+**Seviye:** Başlangıç  
+**Kategori:** Temel Kavramlar  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+İş ilanlarına baktığında "UX Designer", "UI Designer", "Product Designer" title'larını yan yana görüyorsun. Bazen aynı iş için bile farklı isimler kullanılıyor.
+
+Peki Product Designer nedir? UX Designer'dan farkı ne? Neden bazı şirketler "UX/UI Designer" ararken, bazıları "Product Designer" arıyor?
+
+Son yıllarda özellikle startup'lar ve teknoloji şirketlerinde "Product Designer" title'ı giderek popülerleşti. Bunun bir nedeni var: Modern ürün ekipleri, sadece "tasarlayan" değil, "ürünün başarısından sorumlu olan" tasarımcılar istiyor.
+
+Bu yazıda Product Design'ın ne olduğunu, Product Designer'ın ne yaptığını ve bu kariyer yolunun nasıl göründüğünü öğreneceksin.
+
+---
+
+## Product Design Ne Demek?
+
+[CALLOUT]
+**Product Design:**
+Bir dijital ürünün kullanıcı ihtiyaçlarını karşılayacak ve iş hedeflerini destekleyecek şekilde tasarlanması sürecidir. UX, UI ve ürün stratejisini birleştirir. Sadece "nasıl görünüyor" veya "nasıl çalışıyor" değil, "neden var" ve "başarılı mı" sorularını da kapsar.
+[/CALLOUT]
+
+Product Design, tek bir disiplin değil, birden fazla disiplinin kesişimi:
+Product Design = UX Design + UI Design + Ürün Stratejisi + İş Anlayışı
+
+Product Designer sadece tasarlamaz. Ürünün neden var olduğunu anlar, kullanıcı ihtiyaçlarını keşfeder, çözümler tasarlar ve bu çözümlerin işe yarayıp yaramadığını ölçer.
+
+---
+
+## Product Designer Ne Yapar?
+
+### Temel Sorumluluklar
+
+[STEPS]
+1. Problemi Anlama
+   - Kullanıcı araştırması yapma
+   - İş hedeflerini anlama
+   - Problemin kapsamını belirleme
+   - Başarı metriklerini tanımlama
+
+2. Çözüm Geliştirme
+   - Fikirler üretme ve değerlendirme
+   - User flow ve wireframe oluşturma
+   - Prototip hazırlama
+   - Görsel tasarım yapma
+
+3. Doğrulama
+   - Kullanılabilirlik testi
+   - A/B test
+   - Metrik takibi
+   - İterasyon
+
+4. Teslim ve Takip
+   - Developer handoff
+   - QA desteği
+   - Lansman sonrası izleme
+   - Sürekli iyileştirme
+[/STEPS]
+
+### Günlük İşler
+
+Bir Product Designer'ın tipik bir haftası:
+
+| Gün | Aktiviteler |
+|-----|-------------|
+| Pazartesi | Sprint planning, stakeholder toplantısı |
+| Salı | Kullanıcı görüşmeleri, araştırma analizi |
+| Çarşamba | Wireframing, design critique |
+| Perşembe | Visual design, prototipleme |
+| Cuma | Kullanılabilirlik testi, retrospektif |
+
+[TIP]
+💡 Her gün farklı. Bazen tüm gün araştırma yaparsın, bazen tüm gün Figma'dasın. Bu çeşitlilik Product Design'ın cazip yanlarından biri.
+[/TIP]
+
+---
+
+## UX Designer vs Product Designer
+
+En çok karıştırılan konu. İkisi aynı mı, farklı mı?
+
+### Temel Farklar
+
+[TABLE]
+| Özellik | UX Designer | Product Designer |
+|---------|-------------|------------------|
+| **Odak** | Kullanıcı deneyimi | Deneyim + iş hedefleri |
+| **Kapsam** | UX (bazen UI) | UX + UI + strateji |
+| **Metrikler** | Kullanılabilirlik, NPS | Revenue, retention, conversion |
+| **Sahiplik** | Tasarım çıktıları | Ürün başarısı |
+| **Strateji** | Input verir | Aktif katılır |
+| **İş anlayışı** | Temel | Derinlemesine |
+[/TABLE]
+
+### Venn Diyagramı
+┌─────────────────────────────────────────────┐
+│                                             │
+│   UX Design         Product Design          │
+│   ┌───────┐         ┌───────────────┐      │
+│   │       │         │               │      │
+│   │ User  │◄───────►│  UX + UI +    │      │
+│   │Research│        │  Strategy +   │      │
+│   │ Flows │         │  Business     │      │
+│   │ Wire  │         │               │      │
+│   │       │         │               │      │
+│   └───────┘         └───────────────┘      │
+│                                             │
+└─────────────────────────────────────────────┘
+
+[COMPARISON]
+**UX Designer sorar:** "Kullanıcı bu görevi tamamlayabiliyor mu?"
+
+**Product Designer sorar:** "Kullanıcı bu görevi tamamlayabiliyor mu VE bu iş hedeflerimize ulaşmamıza yardımcı oluyor mu?"
+[/COMPARISON]
+
+### Hangisi Daha İyi?
+
+Ne iyi ne kötü - farklılar.
+
+**UX Designer ol:**
+- Derin araştırma yapmak istiyorsan
+- Kullanıcı psikolojisine ilgi duyuyorsan
+- Büyük organizasyonlarda specialized rol istiyorsan
+
+**Product Designer ol:**
+- Hem tasarım hem iş tarafını anlamak istiyorsan
+- Ürünün başarısında sorumluluk almak istiyorsan
+- Startup veya küçük takımlarda çalışmak istiyorsan
+
+---
+
+## Product Designer'ın Becerileri
+
+### Hard Skills
+
+**Tasarım becerileri:**
+- Kullanıcı araştırması yöntemleri
+- Information architecture
+- Wireframing ve prototyping
+- Visual/UI design
+- Interaction design
+- Design systems
+
+**Ürün becerileri:**
+- Ürün metrikleri anlayışı
+- A/B testing
+- Analitik araçları (Mixpanel, Amplitude)
+- Temel SQL/data anlayışı
+- Roadmap okuyabilme
+
+**Araçlar:**
+- Figma (tasarım + prototip)
+- FigJam/Miro (işbirliği)
+- Maze/UserTesting (araştırma)
+- Notion/Confluence (dokümantasyon)
+- Jira/Linear (proje yönetimi)
+
+### Soft Skills
+
+[TABLE]
+| Beceri | Neden Önemli |
+|--------|--------------|
+| **İletişim** | Fikirleri satmak, stakeholder yönetimi |
+| **Empati** | Kullanıcıyı ve ekibi anlamak |
+| **Problem çözme** | Karmaşık sorunları parçalamak |
+| **İş birliği** | Cross-functional çalışma |
+| **Stratejik düşünme** | Büyük resmi görmek |
+| **Esneklik** | Belirsizlikle başa çıkmak |
+[/TABLE]
+
+---
+
+## Product Designer Nasıl Çalışır?
+
+### Ürün Üçgeni
+
+Product Designer, üç ana grupla sürekli etkileşim halinde:
+          Product Manager
+                ▲
+               /│\\
+              / │ \\
+             /  │  \\
+            /   │   \\
+           /    │    \\
+          /     │     \\
+         /      │      \\
+        ▼───────┼───────▼
+Engineer        │        Data/Research
+                │
+          Product Designer
+          (merkezde)
+
+### PM ile İlişki
+
+| PM | Product Designer |
+|----|------------------|
+| "Ne" ve "Neden" | "Nasıl" |
+| Roadmap | Tasarım |
+| Business case | User case |
+| Önceliklendirme | Çözüm detayı |
+
+**İdeal ilişki:** Ortaklık. PM problem getirir, birlikte çözüm bulursunuz.
+
+### Engineer ile İlişki
+
+- Erken dahil et (feasibility)
+- Teknik kısıtları anla
+- Handoff'u kolaylaştır
+- Edge case'leri birlikte çöz
+
+### Stakeholder ile İlişki
+
+- Düzenli güncelleme
+- Veriyle konuş
+- Feedback loop kur
+- "Hayır" demeyi öğren (nazikçe)
+
+---
+
+## Product Design Süreci
+
+Her şirketin süreci farklı olsa da, genel çerçeve:
+
+### 1. Discover (Keşfet)
+
+**Aktiviteler:**
+- Problem statement oluşturma
+- Kullanıcı araştırması
+- Competitive analysis
+- Data analizi
+- Stakeholder görüşmeleri
+
+**Çıktılar:**
+- Araştırma bulguları
+- Opportunity areas
+- Problem tanımı
+
+### 2. Define (Tanımla)
+
+**Aktiviteler:**
+- Persona oluşturma
+- User journey mapping
+- Başarı metrikleri belirleme
+- Scope belirleme
+
+**Çıktılar:**
+- Persona
+- Journey map
+- Success metrics
+- Design brief
+
+### 3. Design (Tasarla)
+
+**Aktiviteler:**
+- Ideation (beyin fırtınası)
+- Sketching
+- Wireframing
+- Visual design
+- Prototyping
+
+**Çıktılar:**
+- Wireframes
+- High-fi mockups
+- Interactive prototype
+- Design specs
+
+### 4. Deliver (Teslim Et)
+
+**Aktiviteler:**
+- Usability testing
+- İterasyon
+- Developer handoff
+- QA support
+
+**Çıktılar:**
+- Final tasarımlar
+- Dev documentation
+- Test sonuçları
+
+### 5. Measure (Ölç)
+
+**Aktiviteler:**
+- Lansman sonrası takip
+- Metrik analizi
+- Kullanıcı feedback toplama
+- İyileştirme önerileri
+
+**Çıktılar:**
+- Performance raporu
+- Learning document
+- Next iteration plan
+
+[CALLOUT]
+**Süreç lineer değil.**
+Gerçek hayatta bu adımlar iç içe geçer, geri dönersin, atlar devam edersin. Önemli olan amacı unutmamak: Kullanıcı + iş için değer yaratmak.
+[/CALLOUT]
+
+---
+
+## Product Designer Olmak
+
+### Kariyer Yolları
+
+**1. UX Designer'dan geçiş:**
+En yaygın yol. UX temeli var, iş/strateji tarafını eklersin.
+
+**2. UI Designer'dan geçiş:**
+Görsel güçlü, UX ve strateji öğrenirsin.
+
+**3. Grafik tasarımdan geçiş:**
+Visual background var, dijital ürün ve UX öğrenirsin.
+
+**4. Farklı kariyerden geçiş:**
+PM, developer, pazarlama... Transferable skills + tasarım öğrenme.
+
+### Seviyeler
+
+[TABLE]
+| Seviye | Deneyim | Sorumluluk |
+|--------|---------|------------|
+| **Junior** | 0-2 yıl | Yönlendirme altında çalışma, tek özellikler |
+| **Mid** | 2-5 yıl | Bağımsız proje yönetimi, mentörlük |
+| **Senior** | 5-8 yıl | Karmaşık projeler, strateji input, liderlik |
+| **Staff/Principal** | 8+ yıl | Çoklu proje, organizasyonel etki |
+| **Design Manager** | Değişken | İnsan yönetimi, takım liderliği |
+[/TABLE]
+
+### Maaş Beklentisi (Türkiye, 2025)
+
+[WARNING]
+⚠️ Maaşlar şirkete, sektöre ve lokasyona göre değişir. Bunlar ortalama tahminlerdir.
+[/WARNING]
+
+| Seviye | Aylık Net (TL) |
+|--------|----------------|
+| Junior | 35.000 - 55.000 |
+| Mid | 55.000 - 90.000 |
+| Senior | 90.000 - 150.000 |
+| Lead/Principal | 150.000+ |
+
+Remote/global şirketlerde USD maaşlar çok daha yüksek olabilir.
+
+---
+
+## Product Design'ın Geleceği
+
+### Trendler
+
+**AI ve tasarım:**
+- AI-assisted design tools
+- Generative UI
+- Personalization at scale
+
+**Specialization vs Generalization:**
+- Bazı şirketler specialist istiyor (UX Researcher, UI Designer)
+- Bazıları generalist istiyor (Product Designer)
+- "T-shaped" designer: Geniş bilgi + derin uzmanlık
+
+**Business acumen önemi artıyor:**
+- Tasarımcıların iş metrikleri anlaması bekleniyor
+- "Seat at the table" için strateji bilgisi şart
+
+**Design systems maturity:**
+- Daha fazla şirket design system kuruyor
+- System thinking önemli beceri
+
+---
+
+## Sık Yapılan Yanlış Anlamalar
+
+### "Product Designer = UX/UI Designer"
+
+Kısmen doğru ama eksik. Product Designer aynı zamanda strateji ve iş tarafıyla ilgilenir.
+
+### "Product Designer her şeyi yapar"
+
+Hayır. Araştırma, görsel tasarım, strateji - hepsinde iyidir ama her birinde uzman olmak zorunda değil. T-shaped olmak önemli.
+
+### "Product Design sadece startup'larda var"
+
+Hayır. Enterprise şirketler de Product Designer title'ı kullanıyor. Fark şirket kültüründe.
+
+### "Product Designer kod bilmeli"
+
+Kod bilmek faydalı ama zorunlu değil. Teknik anlayış (feasibility, constraints) yeterli.
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**20 dakika**
+
+**Görev:** Bir ürün problemini Product Designer gözüyle analiz et.
+
+**Senaryo:** Bir yemek siparişi uygulamasında kullanıcıların %40'ı sepete ürün ekliyor ama siparişi tamamlamıyor.
+
+**Adımlar:**
+
+1. **Problem tanımı yaz** (2-3 cümle)
+   - Ne oluyor?
+   - Neden önemli? (iş etkisi)
+
+2. **Araştırma planı oluştur**
+   - Hangi verilere bakarsın?
+   - Kiminle konuşursun?
+   - Hangi sorular sorarsın?
+
+3. **Olası nedenler listele** (en az 5)
+   - Kullanıcı perspektifinden
+
+4. **Başarı metrikleri belirle**
+   - Bu problemi çözdüğünü nasıl anlarsın?
+
+5. **Bir çözüm önerisi yaz**
+   - Kısa açıklama
+   - Neden bu çözüm?
+
+**Bu egzersiz, Product Designer'ın problem-çözüm yaklaşımını pratiğe döker.**
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Product Design, UX + UI + strateji + iş anlayışının birleşimidir
+- Product Designer sadece tasarlamaz, ürünün başarısından sorumluluk alır
+- UX Designer deneyime odaklanır, Product Designer deneyim + iş hedeflerine
+- PM, Engineer ve stakeholder'larla yakın çalışır
+- Discover → Define → Design → Deliver → Measure süreci izlenir
+- T-shaped beceriler: Geniş bilgi + bir alanda derinlik
+- İş metrikleri anlayışı giderek daha önemli
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [UX Mülakat Soruları](/kutuphane/ux-mulakat-sorulari)
+
+**Sonraki:** Prototype Nedir? *(yakında)*
+
+**İlgili konular:**
+- [UX Nedir?](/kutuphane/ux-nedir)
+- [UI Nedir?](/kutuphane/ui-nedir)
+- [UX ve UI Arasındaki Fark](/kutuphane/ux-ui-farki)
+
+**İlgili Roadmap:** Product Designer Roadmap
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [What is Product Design? - IDEO](https://www.ideou.com/pages/product-design) (İngilizce, 8 dk)
+- [Product Design vs UX Design - NNGroup](https://www.nngroup.com/articles/product-design-vs-ux-design/) (İngilizce, 6 dk)
+- [Inspired - Marty Cagan](https://www.svpg.com/inspired-how-to-create-products-customers-love/) (Kitap, ürün yönetimi klasiği)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {

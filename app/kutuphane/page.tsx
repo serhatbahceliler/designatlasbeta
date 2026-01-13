@@ -200,6 +200,21 @@ const MOCK_ARTICLES: Article[] = [
     author: "Serhat Bahçeliler",
     views: 0,
   },
+  {
+    id: "product-design-nedir",
+    title: "Product Design Nedir?",
+    subtitle: "Ürün Tasarımcısının Rolü ve Sorumlulukları",
+    titleEn: "What is Product Design?",
+    slug: "product-design-nedir",
+    description: "Product Design nedir? Product Designer ne yapar, UX Designer'dan farkı ne? Ürün tasarımcısının rolü, sorumlulukları ve kariyer yolu rehberi.",
+    category: "temel-kavramlar",
+    readingTime: 12,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    views: 0,
+  },
 ];
 
 type SortOption = "newest" | "popular" | "az";
