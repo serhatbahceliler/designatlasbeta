@@ -721,7 +721,7 @@ Sorularını yazdıktan sonra şu kontrolleri yap:
 
 **Önceki:** [Kullanılabilirlik Testi Nedir?](/kutuphane/kullanilabilirlik-testi)
 
-**Sonraki:** Portfolio Case Study Nasıl Yazılır? *(yakında)*
+**Sonraki:** [Portfolio Case Study Nasıl Yazılır?](/kutuphane/portfolio-case-study)
 
 **İlgili Roadmap:** [UX Designer Roadmap → Research Yöntemleri](/roadmap/ux-designer)
 
@@ -734,6 +734,436 @@ Derinleşmek istersen:
 - [User Interviews: How, When, and Why to Conduct Them - NNGroup](https://www.nngroup.com/articles/user-interviews/) (İngilizce, 10 dk)
 - [Interviewing Users - Interaction Design Foundation](https://www.interaction-design.org/literature/article/interviewing-users) (İngilizce, 12 dk)
 - [The Mom Test - Rob Fitzpatrick](http://momtestbook.com/) (Kitap, kullanıcıdan dürüst feedback alma üzerine)
+`,
+  },
+  "portfolio-case-study": {
+    id: "portfolio-case-study",
+    title: "Portfolio Case Study Nasıl Yazılır?",
+    subtitle: "İş Bulmanı Sağlayacak Case Study Rehberi",
+    titleEn: "Portfolio Case Study",
+    slug: "portfolio-case-study",
+    description: "UX portfolio case study nasıl yazılır? Hiring manager'ların dikkatini çeken, süreç odaklı ve ikna edici case study oluşturma rehberi.",
+    category: "kariyer",
+    readingTime: 15,
+    featured: false,
+    publishedAt: "2025-01-13",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Portfolio Case Study Nasıl Yazılır? İş Bulmanı Sağlayacak Rehber
+
+**Seviye:** Başlangıç  
+**Kategori:** Kariyer  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Onlarca iş başvurusu yaptın ama geri dönüş yok. CV'n iyi, Figma biliyorsun, hatta birkaç proje de yaptın. Ama portfolyon? "Birkaç ekran görüntüsü koydum, yeter" diyorsan, işte sorun burada.
+
+Hiring manager'lar günde onlarca portfolyo inceliyor. Ortalama bir portfolyoya 3-5 dakika ayırıyorlar. Bu sürede seni diğer adaylardan ayıran şey güzel pikselller değil, düşünce sürecin.
+
+Case study, bir tasarım projesinin hikayesidir. Sadece "ne yaptığını" değil, "neden yaptığını", "nasıl düşündüğünü" ve "ne öğrendiğini" gösterir. İyi bir case study, hiring manager'a şunu söyler: "Bu kişi sadece tasarım yapmıyor, problem çözüyor."
+
+Bu yazıda etkili bir case study'nin yapısını, içermesi gerekenleri ve sık yapılan hataları öğreneceksin.
+
+---
+
+## Case Study Nedir?
+
+Case study, bir tasarım projesinin baştan sona hikayesini anlatan dokümandır. Problemi tanımlar, süreci gösterir, kararları açıklar ve sonuçları paylaşır.
+
+**Case study şu DEĞİLDİR:**
+
+- Ekran görüntüleri galerisi
+- Sadece final tasarımlar
+- Figma dosyası linki
+- "Güzel görünen" portfolio sayfası
+
+[CALLOUT]
+**Case study şudur:**
+Bir problemi nasıl anladığını, çözümü nasıl geliştirdiğini ve bu süreçte nasıl düşündüğünü gösteren, yapılandırılmış bir proje hikayesi.
+[/CALLOUT]
+
+Hiring manager'lar case study'de şunları arar:
+
+- **Problem çözme yeteneği:** Karmaşık bir sorunu nasıl parçaladın?
+- **Süreç:** Research'ten delivery'ye nasıl ilerladin?
+- **Karar verme:** Neden A'yı seçtin, B'yi değil?
+- **İş birliği:** Ekiple, stakeholder'larla nasıl çalıştın?
+- **Etki:** Tasarımın ne sonuç verdi?
+
+---
+
+## Neden Önemli?
+
+### CV yetmez
+
+CV, ne yaptığını listeler. Case study, nasıl düşündüğünü gösterir. İkisi farklı sorulara cevap verir:
+
+- CV: "Bu kişi deneyimli mi?"
+- Case study: "Bu kişi bizim problemlerimizi çözebilir mi?"
+
+### Görsel güzellik yetmez
+
+Dribbble'da güzel görseller paylaşabilirsin ama bu seni işe aldırmaz. Hiring manager'lar estetik yeteneğini değil, düşünce sürecini görmek ister.
+
+### Röportajda fark yaratır
+
+İyi bir case study, röportajda konuşacak somut materyal sağlar. "Bana bir projenden bahset" sorusuna hazırlıklı olursun.
+
+---
+
+## Kaç Case Study Gerekli?
+
+[INFO]
+3-4 kaliteli case study
+10 yüzeysel projeden daha etkili
+[/INFO]
+
+Daha fazla her zaman daha iyi değil. Hiring manager'lar hepsini okumayacak. 3-4 güçlü case study, farklı yetkinliklerini ve proje tiplerini göstermeye yeter.
+
+**Çeşitlilik önemli:**
+- Farklı proje tipleri (0'dan tasarım, redesign, feature)
+- Farklı platformlar (web, mobil, B2B, B2C)
+- Farklı roller (solo, ekip içinde, lead)
+
+---
+
+## Case Study Yapısı
+
+Her case study şu bölümlerden oluşmalı:
+
+### 1. Başlık ve Özet (Hero Section)
+
+İlk izlenim burada oluşur. 5 saniyede projenin ne olduğunu anlatmalı.
+
+**İçermeli:**
+- Proje adı
+- Şirket/müşteri (veya "Kişisel Proje")
+- Senin rolün
+- Kısa özet (1-2 cümle)
+- Öne çıkan görsel
+
+[COMPARISON]
+Kötü özet: "E-ticaret sitesi tasarımı"
+İyi özet: "Checkout tamamlanma oranını %23 artıran mobil ödeme deneyimi yeniden tasarımı"
+[/COMPARISON]
+
+### 2. Bağlam (Context)
+
+Okuyucuyu projeye dahil et. Arka planı anlat.
+
+**Cevap verilecek sorular:**
+- Bu proje neydi?
+- Şirket/ürün ne yapıyor?
+- Neden bu projeye ihtiyaç duyuldu?
+- Senin rolün ve sorumlulukların neydi?
+- Ekip kimlerden oluşuyordu?
+- Zaman çizelgesi neydi?
+
+[TIP]
+💡 Gizlilik varsa: "NDA nedeniyle bazı detayları değiştirdim" veya "Gerçek veriler yerine örnek veriler kullandım" diyebilirsin.
+[/TIP]
+
+### 3. Problem Tanımı
+
+Net ve spesifik bir problem ifadesi yaz. Bu, tüm case study'nin temelidir.
+
+[COMPARISON]
+Belirsiz problem: "Kullanıcı deneyimi kötüydü"
+Net problem: "Mobil kullanıcıların %67'si checkout'un 3. adımında sepeti terk ediyordu"
+[/COMPARISON]
+
+**Problem tanımı içermeli:**
+- Spesifik sorun ne?
+- Kimi etkiliyor?
+- Business etkisi ne? (metrik varsa)
+- Neden çözülmesi gerekiyordu?
+
+### 4. Araştırma ve Keşif
+
+Bu bölüm, "ödevini yaptığını" gösterir. Ne öğrendiğini ve bunun tasarımı nasıl şekillendirdiğini anlat.
+
+**Gösterebileceklerin:**
+- Kullanıcı görüşmeleri ve bulgular
+- Anket sonuçları
+- Analitik veri analizi
+- Rakip analizi
+- Persona veya kullanıcı profilleri
+- User journey map
+
+[WARNING]
+⚠️ Her projede her yöntemi kullanmak zorunda değilsin. "Research yapmadım" demek yerine, eldeki veriyi nasıl kullandığını anlat.
+[/WARNING]
+
+**Araştırmayı anlatırken:**
+- Ne yaptığını değil, ne öğrendiğini vurgula
+- Bulguları tasarım kararlarına bağla
+- Doğrudan alıntılar kullan ("Kullanıcı şöyle dedi...")
+
+### 5. Tasarım Süreci
+
+Bu bölüm, düşünce sürecini gösterir. Final tasarıma nasıl ulaştığını anlat.
+
+**Gösterebileceklerin:**
+- Sketch'ler ve ilk fikirler
+- Wireframe'ler
+- Farklı konsept alternatifleri
+- Karar noktaları ("A mı B mi?")
+- Kullanılabilirlik testi sonuçları
+- İterasyonlar ve değişiklikler
+
+[CALLOUT]
+**Süreci göster, sadece sonucu değil.**
+Hiring manager'lar final ekranları görmek istemez, oraya nasıl geldiğini görmek ister. Reddedilen fikirleri, değişen kararları, öğrenilen dersleri paylaş.
+[/CALLOUT]
+
+**Karar noktalarını açıkla:**
+
+[COMPARISON]
+Süreçsiz: "İşte final tasarım"
+Süreç odaklı: "İlk iterasyonda tek sayfa checkout denedik, ama testlerde kullanıcılar uzun formu görünce vazgeçti. Bu yüzden adımlı yapıya geçtik."
+[/COMPARISON]
+
+### 6. Final Tasarım
+
+Sonucu göster. Ama sadece ekran görüntüsü değil, tasarım kararlarını açıkla.
+
+**Gösterim formatları:**
+- Annotated mockup'lar (açıklamalı)
+- Before/after karşılaştırması
+- Prototype videosu veya gif
+- Farklı durumlar (states) ve akışlar
+
+**Her önemli tasarım kararını açıkla:**
+- Bu elementi neden böyle tasarladın?
+- Hangi kullanıcı ihtiyacına cevap veriyor?
+- Hangi araştırma bulgusuna dayanıyor?
+
+### 7. Sonuçlar ve Etki
+
+Bu bölüm, tasarımın işe yaradığını kanıtlar.
+
+**Metrikler varsa:**
+- Conversion rate değişimi
+- Task completion süresi
+- Kullanıcı memnuniyeti skoru
+- Business metrikleri (satış, kayıt, retention)
+
+[COMPARISON]
+Belirsiz sonuç: "Proje başarılı oldu"
+Somut sonuç: "Checkout tamamlanma oranı %58'den %71'e yükseldi (3 ay sonra ölçüm)"
+[/COMPARISON]
+
+**Metrik yoksa:**
+- Stakeholder feedback'i
+- Kullanıcı yorumları
+- Kalitaif gözlemler
+- Projenin durumu (launch edildi mi?)
+
+[TIP]
+💡 Junior'san ve metrik erişimin yoksa sorun değil. "Launch sonrası metriklere erişimim yoktu, ancak kullanılabilirlik testlerinde task completion %40'tan %85'e çıktı" gibi süreç içi metrikleri kullanabilirsin.
+[/TIP]
+
+### 8. Öğrenilenler (Reflection)
+
+Bu bölüm, öz farkındalığını gösterir. Ne iyi gitti, ne daha iyi olabilirdi?
+
+**Sorular:**
+- Bu projeden ne öğrendin?
+- Tekrar yapsan neyi farklı yapardın?
+- Hangi kısıtlarla karşılaştın?
+- Ekip olarak ne öğrendiniz?
+
+Bu bölüm hiring manager'lara şunu söyler: "Bu kişi sadece iş yapmıyor, aynı zamanda öğreniyor ve gelişiyor."
+
+---
+
+## Yazım İpuçları
+
+### Hikaye anlat
+
+Case study bir rapor değil, hikaye. Okuyucuyu yolculuğa çıkar:
+- Başlangıç: Problem ve bağlam
+- Gelişme: Araştırma, keşifler, zorluklar
+- Sonuç: Çözüm ve etki
+
+### "Ben" değil "biz" ama rolünü netleştir
+
+Ekip projelerinde "biz" kullan ama kendi katkını açıkça belirt:
+- "Ekip olarak user research yaptık. **Ben 5 kullanıcı görüşmesini yürüttüm.**"
+- "Tasarım sistemini birlikte geliştirdik. **Component library'yi ben oluşturdum.**"
+
+### Jargondan kaçın
+
+Hiring manager teknik olmayabilir. "Heuristic evaluation" yerine "uzman incelemesi", "information architecture" yerine "içerik yapısı" kullanabilirsin. Ya da terimi kullanıp kısaca açıkla.
+
+### Görsellerle destekle
+
+Metin duvarı okumak zor. Her bölümde görsel kullan:
+- Araştırma: Affinity map, persona kartları
+- Süreç: Sketch'ler, wireframe'ler
+- Final: Mockup'lar, prototype gif'leri
+
+### Uzunluğu dengele
+
+[INFO]
+5-10 dakika okuma süresi
+1500-3000 kelime ideal
+[/INFO]
+
+Çok kısa: Yüzeysel kalır, süreç anlaşılmaz
+Çok uzun: Kimse okumaz, ilgi kaybolur
+
+---
+
+## Gerçek Proje Yoksa Ne Yapmalı?
+
+Junior'lar için en büyük engel: "Gerçek proje deneyimim yok."
+
+**Alternatifler:**
+
+### 1. Redesign projesi
+Mevcut bir ürünü (Spotify, Instagram, banka uygulaması) analiz et ve iyileştirme öner. Gerçekçi kısıtlar belirle.
+
+### 2. Kişisel proje
+Kendi problemini çöz. "Arkadaşlarımla yemek planlamak zordu, bir uygulama konsepti tasarladım."
+
+### 3. Design challenge
+ADPList, UX Challenge gibi platformlardaki brief'leri kullan.
+
+### 4. Freelance/gönüllü iş
+Küçük işletmelere, STK'lara ücretsiz veya düşük ücretle çalış.
+
+[WARNING]
+⚠️ Önemli: Gerçek proje olmadığını belirt. "Kişisel Proje" veya "Konsept Çalışması" etiketiyle paylaş. Hiring manager'ları yanıltma.
+[/WARNING]
+
+**Kişisel projelerde de süreç göster:**
+- Problem tanımı (neden bu konuyu seçtin?)
+- Araştırma (rakip analizi, kullanıcı görüşmeleri)
+- Tasarım süreci (sketch, wireframe, iterasyon)
+- Sonuç (test sonuçları, varsa feedback)
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Sadece final görseller koymak
+
+[COMPARISON]
+Hata: "10 ekran görüntüsü yan yana"
+Doğrusu: "Her ekranın arkasındaki düşünceyi açıkla"
+[/COMPARISON]
+
+Güzel görseller seni Dribbble'da like yapar, ama işe aldırmaz.
+
+### 2. Problem tanımını atlaMak
+
+"E-ticaret sitesi tasarladım" hiçbir şey anlatmıyor. Hangi problem? Kimin için? Neden?
+
+### 3. Araştırmayı göstermemek
+
+"User research yaptım" yetmez. Ne öğrendin? Bu tasarımı nasıl etkiledi?
+
+### 4. "Ben her şeyi yaptım" demek
+
+Ekip projesinde her şeyin kredisini almak inandırıcı değil ve red flag. Kendi rolünü netleştir, ekibi de acknowledge et.
+
+### 5. Sonuç/etki göstermemek
+
+"Proje tamamlandı" bir sonuç değil. Metrik, feedback, öğrenilen ders - bir şey göster.
+
+### 6. Çok uzun yazmak
+
+Hiring manager'ların vakti kısıtlı. 20 dakikalık case study okunmaz. Öz ve etkili yaz.
+
+### 7. Mobil deneyimi unutmak
+
+Portfolyolar sıkça mobilde incelenir. Case study'lerin mobilde de okunabilir olduğundan emin ol.
+
+---
+
+## Case Study Checklist
+
+Yayınlamadan önce şu soruları kontrol et:
+
+[CHECKLIST]
+Problem açıkça tanımlanmış mı?
+Bağlam yeterli mi? (şirket, rol, ekip, süre)
+Araştırma bulguları var mı?
+Süreç gösterilmiş mi? (sadece sonuç değil)
+Karar noktaları açıklanmış mı?
+Final tasarımlar açıklamalı mı?
+Sonuç/etki belirtilmiş mi?
+Öğrenilenler paylaşılmış mı?
+Görseller yeterli ve kaliteli mi?
+Mobilde okunabilir mi?
+5-10 dakikada okunabilir mi?
+Yazım hataları kontrol edildi mi?
+[/CHECKLIST]
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**Görev:** Mevcut veya geçmiş bir projeni case study formatına dönüştürmek için outline oluştur.
+
+**Adımlar:**
+
+1. Bir proje seç (gerçek, kişisel veya konsept)
+
+2. Şu soruları cevapla:
+   - Problem ne? (1 cümle)
+   - Çözüm ne? (1 cümle)
+   - Senin rolün ne?
+   - En önemli 3 karar noktası ne?
+   - Sonuç/etki ne?
+
+3. Her bölüm için hangi görselleri kullanacağını listele:
+   - Araştırma bölümü için?
+   - Süreç bölümü için?
+   - Final bölümü için?
+
+**Başarı kriteri:** 
+Bu outline'ı birine gösterdiğinde, projenin ne olduğunu ve senin katkını 2 dakikada anlayabilmeli.
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Case study güzel görseller değil, düşünce sürecini gösterir
+- 3-4 kaliteli case study, 10 yüzeysel projeden iyidir
+- Yapı: Bağlam → Problem → Araştırma → Süreç → Sonuç → Öğrenilenler
+- Süreç göster: Reddedilen fikirler, iterasyonlar, kararlar
+- Sonuç göster: Metrik, feedback veya öğrenilenler
+- Gerçek proje yoksa kişisel proje veya redesign yap, ama belirt
+- 5-10 dakikada okunabilir uzunlukta tut
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Kullanıcı Görüşmesi Nasıl Yapılır?](/kutuphane/kullanici-gorusmesi)
+
+**Sonraki:** UX Mülakat Soruları ve Cevapları *(yakında)*
+
+**İlgili Roadmap:** [UX Designer Roadmap → Kariyer](/roadmap/ux-designer)
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [How to Write a UX Case Study - NNGroup](https://www.nngroup.com/articles/ux-case-study-guide/) (İngilizce, 12 dk)
+- [Case Study Club](https://www.casestudy.club/) (Örnek case study'ler, İngilizce)
+- [Bestfolios](https://www.bestfolios.com/) (Portfolio örnekleri, İngilizce)
 `,
   },
 };
@@ -1020,6 +1450,40 @@ export default function ArticlePage() {
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "Kullanıcı görüşmesi nitel veri toplar, derinlemesine içgörü sağlar ve az sayıda katılımcıyla yapılır. Anket ise nicel veri toplar, geniş kitleden yüzeysel bilgi alır ve istatistiksel analiz için kullanılır.",
+              },
+            },
+          ],
+          "portfolio-case-study": [
+            {
+              "@type": "Question",
+              name: "UX case study nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "UX case study, bir tasarım projesinin baştan sona hikayesini anlatan dokümandır. Problemi, süreci, kararları ve sonuçları gösterir. Portfolyoda yer alır ve iş başvurularında tasarımcının yetkinliğini kanıtlar.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Portfolio için kaç case study gerekli?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Kaliteli 3-4 case study yeterlidir. 10 yüzeysel projeden iyidir. Her case study farklı bir yetkinliği veya proje tipini göstermelidir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Case study ne kadar uzun olmalı?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "İdeal uzunluk 5-10 dakikalık okuma süresidir (1500-3000 kelime). Çok kısa yüzeysel kalır, çok uzun okunmaz. Hiring manager'lar genellikle 5 dakikadan fazla zaman ayırmaz.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Gerçek proje olmadan case study yazılabilir mi?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Evet, kişisel projeler, redesign konseptleri veya hayali projeler de case study olarak yazılabilir. Önemli olan sürecin ve düşünce yapısının gösterilmesidir. Ancak bunun gerçek bir proje olmadığını belirtmek gerekir.",
               },
             },
           ],
