@@ -261,6 +261,61 @@ function KutuphaneContent() {
     setDisplayLimit(8);
   };
 
+  // Google Analytics page view tracking
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'page_view', {
+        page_title: 'Kütüphane',
+        page_location: window.location.href,
+        page_path: '/kutuphane',
+      });
+    }
+  }, []);
+
+  // Track search events
+  useEffect(() => {
+    if (debouncedSearchQuery && typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'search', {
+        search_term: debouncedSearchQuery,
+        page_location: window.location.href,
+      });
+    }
+  }, [debouncedSearchQuery]);
+
+  // Track category filter events
+  useEffect(() => {
+    if (selectedCategory !== 'all' && typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'filter', {
+        filter_type: 'category',
+        filter_value: selectedCategory,
+        page_location: window.location.href,
+      });
+    }
+  }, [selectedCategory]);
+
+  // Track sort events
+  useEffect(() => {
+    if (sortBy !== 'newest' && typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'sort', {
+        sort_type: sortBy,
+        page_location: window.location.href,
+      });
+    }
+  }, [sortBy]);
+
+  // Track article clicks
+  const handleArticleClick = (articleId: string, articleTitle: string, articleSlug: string) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'click', {
+        event_category: 'Article',
+        event_label: articleTitle,
+        article_id: articleId,
+        article_slug: articleSlug,
+        page_location: window.location.href,
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-black">
       <Header />
@@ -396,6 +451,7 @@ function KutuphaneContent() {
                           key={article.id}
                           href={`/kutuphane/${article.slug}`}
                           className="group block bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden hover:border-[#DEFF37]/50 transition-all duration-300 hover:-translate-y-1"
+                          onClick={() => handleArticleClick(article.id, article.title, article.slug)}
                         >
                           {article.heroImage && (
                             <div className="w-full h-48 overflow-hidden">
@@ -462,6 +518,7 @@ function KutuphaneContent() {
                     key={article.id}
                     href={`/kutuphane/${article.slug}`}
                     className="group bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-[#DEFF37]/50 transition-all duration-300 hover:-translate-y-1"
+                    onClick={() => handleArticleClick(article.id, article.title, article.slug)}
                   >
                     <div className="flex items-center gap-3 mb-3">
                       <span

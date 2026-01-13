@@ -1554,6 +1554,21 @@ export default function ArticlePage() {
 
   const article = ARTICLE_DATA[slug];
 
+  // Google Analytics page view tracking
+  useEffect(() => {
+    if (article && typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'page_view', {
+        page_title: article.title,
+        page_location: window.location.href,
+        page_path: `/kutuphane/${article.slug}`,
+        article_title: article.title,
+        article_slug: article.slug,
+        article_category: article.category,
+        reading_time: article.readingTime,
+      });
+    }
+  }, [article]);
+
   useEffect(() => {
     if (!article) return;
 
