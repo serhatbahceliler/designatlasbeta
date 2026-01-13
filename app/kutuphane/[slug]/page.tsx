@@ -1151,7 +1151,7 @@ Bu outline'ı birine gösterdiğinde, projenin ne olduğunu ve senin katkını 2
 
 **Önceki:** [Kullanıcı Görüşmesi Nasıl Yapılır?](/kutuphane/kullanici-gorusmesi)
 
-**Sonraki:** UX Mülakat Soruları ve Cevapları *(yakında)*
+**Sonraki:** [User Flow ve Task Flow: Fark ve Kullanım](/kutuphane/user-flow-task-flow)
 
 **İlgili Roadmap:** [UX Designer Roadmap → Kariyer](/roadmap/ux-designer)
 
@@ -1164,6 +1164,369 @@ Derinleşmek istersen:
 - [How to Write a UX Case Study - NNGroup](https://www.nngroup.com/articles/ux-case-study-guide/) (İngilizce, 12 dk)
 - [Case Study Club](https://www.casestudy.club/) (Örnek case study'ler, İngilizce)
 - [Bestfolios](https://www.bestfolios.com/) (Portfolio örnekleri, İngilizce)
+`,
+  },
+  "user-flow-task-flow": {
+    id: "user-flow-task-flow",
+    title: "User Flow ve Task Flow: Fark ve Kullanım",
+    subtitle: "İki Kavramı Doğru Anla, Doğru Kullan",
+    titleEn: "User Flow vs Task Flow",
+    slug: "user-flow-task-flow",
+    description: "User flow ve task flow nedir, aralarındaki fark ne? Hangisini ne zaman kullanmalısın? Pratik örnekler ve şablonlarla akış diyagramı rehberi.",
+    category: "ux-design",
+    readingTime: 10,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# User Flow ve Task Flow: Fark ve Kullanım Rehberi
+
+**Seviye:** Başlangıç  
+**Kategori:** UX Design  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+"User flow çizer misin?" dedi lead designer. Figma'yı açtın, kutular çizdin, oklar ekledin. Ama aslında ne çizdiğinden emin değilsin. User flow mı, task flow mu, wireflow mu?
+
+Bu kavramlar sıkça karıştırılıyor. Hatta bazen birbirinin yerine kullanılıyor. Ama her birinin farklı amacı ve kullanım alanı var.
+
+Yanlış diyagram çizmek sadece zaman kaybı değil. Ekiple yanlış iletişime, eksik tasarımlara ve gözden kaçan senaryolara yol açar.
+
+Bu yazıda user flow ve task flow arasındaki farkı, her birini ne zaman kullanacağını ve nasıl çizeceğini öğreneceksin.
+
+---
+
+## Task Flow Nedir?
+
+Task flow, **tek bir görevin** tamamlanması için gereken adımları gösteren **lineer** diyagramdır.
+
+**Özellikleri:**
+- Tek bir kullanıcı tipi varsayar
+- Tek bir yol gösterir (dallanma yok)
+- Karar noktaları içermez
+- "Happy path" yani ideal senaryoyu gösterir
+
+[CALLOUT]
+**Task flow şudur:**
+A noktasından B noktasına giden tek bir çizgi. Kullanıcının görevi tamamlamak için atacağı ideal adımlar.
+[/CALLOUT]
+
+**Örnek: Şifre sıfırlama task flow**
+[Giriş ekranı] → [Şifremi unuttum tıkla] → [Email gir] → [Gönder] → [Email kontrol et] → [Linke tıkla] → [Yeni şifre gir] → [Onayla] → [Başarılı]
+
+Gördüğün gibi: Tek yol, tek senaryo, dallanma yok.
+
+---
+
+## User Flow Nedir?
+
+User flow, bir kullanıcının **belirli bir hedefe** ulaşmak için üründe izleyebileceği **tüm yolları** gösteren diyagramdır.
+
+**Özellikleri:**
+- Farklı kullanıcı tiplerini içerebilir
+- Birden fazla yol gösterir
+- Karar noktaları içerir (if/else)
+- Alternatif senaryoları ve hata durumlarını kapsar
+
+[CALLOUT]
+**User flow şudur:**
+Kullanıcının ürüne girişinden hedefe ulaşmasına kadar tüm olası yolların haritası. Dallanmalar, kararlar ve alternatifler dahil.
+[/CALLOUT]
+
+**Örnek: E-ticaret satın alma user flow**
+[Ana sayfa]
+↓
+[Ürün listesi] ←→ [Arama] ←→ [Kategori filtre]
+↓
+[Ürün detay]
+↓
+[Sepete ekle]
+↓
+[Sepet] → [Alışverişe devam] → [Ürün listesi]
+↓
+[Checkout]
+↓
+┌─ [Üye mi?] ─┐
+↓ Evet       ↓ Hayır
+[Giriş]      [Misafir devam] veya [Kayıt ol]
+↓             ↓
+└─────────────┘
+↓
+[Adres seç/ekle]
+↓
+[Ödeme yöntemi]
+↓
+┌─ [Ödeme başarılı?] ─┐
+↓ Evet               ↓ Hayır
+[Onay sayfası]       [Hata → Tekrar dene]
+
+Gördüğün gibi: Birden fazla yol, karar noktaları, alternatif senaryolar.
+
+---
+
+## Temel Farklar
+
+[TABLE]
+| Özellik | Task Flow | User Flow |
+|---------|-----------|-----------|
+| **Yapı** | Lineer (tek çizgi) | Dallanmalı (ağaç/ağ) |
+| **Karar noktası** | Yok | Var |
+| **Alternatif yollar** | Yok | Var |
+| **Kullanıcı tipi** | Tek tip varsayar | Farklı tipler olabilir |
+| **Kapsam** | Tek görev | Tüm yolculuk |
+| **Detay seviyesi** | Düşük | Yüksek |
+| **Çizim süresi** | Hızlı | Daha uzun |
+| **Kullanım amacı** | Adımları netleştirme | Tüm senaryoları görme |
+[/TABLE]
+
+[COMPARISON]
+**Task Flow:** "Kullanıcı bu görevi nasıl tamamlar?"
+**User Flow:** "Kullanıcı bu hedefe ulaşmak için hangi yolları izleyebilir?"
+[/COMPARISON]
+
+---
+
+## Hangisini Ne Zaman Kullanmalısın?
+
+### Task Flow Kullan:
+
+- Tek bir özelliği veya görevi tasarlarken
+- Ekibe basit bir akışı anlatırken
+- Developer'a lineer bir süreci aktarırken
+- İlk konsept aşamasında hızlıca fikir paylaşırken
+
+**Örnek senaryolar:**
+- Şifre sıfırlama
+- Profil fotoğrafı değiştirme
+- Bildirim ayarlarını güncelleme
+- Tek bir form doldurma
+
+### User Flow Kullan:
+
+- Yeni bir özellik veya ürün tasarlarken
+- Tüm kullanıcı senaryolarını görmek istediğinde
+- Edge case'leri ve hata durumlarını planlarken
+- Stakeholder'lara kapsamlı sunum yaparken
+- QA ekibine test senaryoları verirken
+
+**Örnek senaryolar:**
+- Onboarding deneyimi
+- Checkout süreci
+- Kayıt ve giriş akışları
+- Çok adımlı form süreçleri
+
+[TIP]
+💡 **Pratik kural:** Eğer akışta "ya bu olursa?" sorusu soruyorsan, user flow çizmelisin. Tek bir "mutlu yol" yeterliyse, task flow yeter.
+[/TIP]
+
+---
+
+## Nasıl Çizilir?
+
+### Task Flow Çizimi
+
+**Adımlar:**
+
+[STEPS]
+1. Görevi tanımla
+   "Kullanıcı şifresini sıfırlayacak"
+
+2. Başlangıç noktasını belirle
+   Kullanıcı nereden başlıyor? (örn: giriş ekranı)
+
+3. Bitiş noktasını belirle
+   Başarılı tamamlanma neye benziyor? (örn: yeni şifreyle giriş)
+
+4. Adımları listele
+   Sırayla her adımı yaz
+
+5. Oklarla bağla
+   Soldan sağa veya yukarıdan aşağı
+[/STEPS]
+
+**Kullanılan şekiller:**
+[Dikdörtgen] → Ekran veya sayfa
+(Oval) → Başlangıç/bitiş
+→ → Akış yönü
+
+### User Flow Çizimi
+
+**Adımlar:**
+
+[STEPS]
+1. Kullanıcı hedefini tanımla
+   "Kullanıcı ürün satın alacak"
+
+2. Giriş noktalarını belirle
+   Kullanıcı nerelerden gelebilir? (ana sayfa, reklam, email link)
+
+3. Ana yolu (happy path) çiz
+   İdeal senaryo task flow gibi
+
+4. Karar noktalarını ekle
+   "Üye mi?", "Ödeme başarılı mı?" gibi
+
+5. Alternatif yolları çiz
+   Her karar için farklı dallar
+
+6. Hata durumlarını ekle
+   Başarısız ödeme, geçersiz email vs.
+
+7. Çıkış noktalarını işaretle
+   Başarılı tamamlanma, vazgeçme, hata
+[/STEPS]
+
+**Kullanılan şekiller:**
+[Dikdörtgen] → Ekran veya sayfa
+(Oval) → Başlangıç/bitiş
+<Baklava> → Karar noktası (evet/hayır)
+→ → Akış yönü
+[Dikdörtgen kesik köşe] → Sistem aksiyonu
+
+---
+
+## User Flow Sembolleri
+
+Standart flowchart sembolleri kullanılır:
+
+[TABLE]
+| Sembol | İsim | Kullanım |
+|--------|------|----------|
+| ⬭ (Oval) | Terminal | Başlangıç ve bitiş noktaları |
+| ▭ (Dikdörtgen) | Process | Ekran, sayfa, adım |
+| ◇ (Baklava) | Decision | Karar noktası (if/else) |
+| ▱ (Parallelogram) | Input/Output | Kullanıcı girişi, sistem çıktısı |
+| → (Ok) | Flow line | Akış yönü |
+| ⬡ (Altıgen) | Preparation | Hazırlık adımı |
+[/TABLE]
+
+[TIP]
+💡 Sembol ezberlemek zorunda değilsin. Önemli olan tutarlılık. Aynı proje içinde aynı sembolleri aynı anlam için kullan.
+[/TIP]
+
+---
+
+## Araçlar
+
+### Dijital Araçlar
+
+| Araç | Ücretsiz | En İyi Yön |
+|------|----------|------------|
+| **FigJam** | ✓ | Figma entegrasyonu |
+| **Miro** | Kısmen | İş birliği |
+| **Whimsical** | Kısmen | Hız ve basitlik |
+| **Lucidchart** | Kısmen | Profesyonel flowchart |
+| **Overflow** | ✗ | UI ekranlarıyla flow |
+
+### Analog
+
+Kalem kağıt her zaman işe yarar. Özellikle beyin fırtınası ve ilk eskizler için whiteboard veya post-it kullan.
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Her şeyi tek diyagrama sığdırmak
+
+[COMPARISON]
+Hata: "50 kutulu, okunmaz bir diyagram"
+Doğrusu: "Büyük akışları parçalara böl, her biri için ayrı diyagram"
+[/COMPARISON]
+
+### 2. Hata durumlarını unutmak
+
+User flow'da sadece happy path göstermek eksik kalır. "Ya ödeme başarısız olursa?", "Ya email zaten kayıtlıysa?" sorularını da kapsa.
+
+### 3. Kullanıcı perspektifini kaybetmek
+
+[COMPARISON]
+Sistem odaklı: "Veritabanı sorgusu → API response → Cache güncelle"
+Kullanıcı odaklı: "Ara butonuna tıkla → Sonuçları gör → Ürün seç"
+[/COMPARISON]
+
+Flow diyagramı kullanıcının gördüklerini göstermeli, arka plan teknik süreçleri değil.
+
+### 4. Detayda boğulmak
+
+İlk aşamada her küçük adımı göstermeye çalışma. Önce ana akışı çiz, sonra gerekirse detaylandır.
+
+### 5. Güncel tutmamak
+
+Tasarım değişti ama flow aynı kaldı? Bu, ekibi yanıltır. Flow diyagramlarını tasarımla senkron tut.
+
+---
+
+## Wireflow: Üçüncü Bir Seçenek
+
+User flow ve wireframe'in birleşimi. Akış diyagramındaki her kutuya basit wireframe eklersin.
+
+**Ne zaman kullanılır:**
+- Akışı görselleştirmek istediğinde
+- Stakeholder'lara sunum yaparken
+- Geliştirme öncesi detaylı dokümantasyon için
+
+**Örnek:**
+[Wireframe: Giriş ekranı] → [Wireframe: Email formu] → [Wireframe: Onay mesajı]
+
+Dezavantajı: Hazırlaması daha uzun sürer.
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**20 dakika**
+
+**Senaryo:** Bir müzik streaming uygulaması için "Playlist oluşturma" özelliğini tasarlıyorsun.
+
+**Görev 1 - Task Flow:**
+Playlist oluşturmanın en basit yolunu task flow olarak çiz. Sadece happy path, dallanma yok.
+
+**Görev 2 - User Flow:**
+Aynı özellik için user flow çiz. Şu durumları da dahil et:
+- Kullanıcı giriş yapmamışsa ne olur?
+- Playlist ismi zaten varsa ne olur?
+- Şarkı eklemeden playlist kaydedilirse ne olur?
+
+**Karşılaştır:**
+İki diyagramı yan yana koy. Task flow kaç kutu? User flow kaç kutu? Fark ne kadar?
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- **Task flow** tek bir görevi lineer olarak gösterir, dallanma yoktur
+- **User flow** tüm olası yolları gösterir, karar noktaları ve alternatifler içerir
+- Task flow hızlı iletişim için, user flow kapsamlı planlama için kullan
+- Standart flowchart sembollerini tutarlı kullan
+- Hata durumlarını ve edge case'leri unutma
+- Büyük akışları parçalara böl, okunabilir tut
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Portfolio Case Study Nasıl Yazılır?](/kutuphane/portfolio-case-study)
+
+**Sonraki:** UX Nedir? *(yakında)*
+
+**İlgili Roadmap:** [UX Designer Roadmap → Tasarım Çıktıları](/roadmap/ux-designer)
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Task Flows vs User Flows - NNGroup](https://www.nngroup.com/articles/user-flows/) (İngilizce, 8 dk)
+- [User Flow - IxDF](https://www.interaction-design.org/literature/topics/user-flows) (İngilizce, 10 dk)
+- [The Guide to User Flow Diagrams - CareerFoundry](https://careerfoundry.com/en/blog/ux-design/what-are-user-flows/) (İngilizce, 12 dk)
 `,
   },
 };
@@ -1484,6 +1847,40 @@ export default function ArticlePage() {
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "Evet, kişisel projeler, redesign konseptleri veya hayali projeler de case study olarak yazılabilir. Önemli olan sürecin ve düşünce yapısının gösterilmesidir. Ancak bunun gerçek bir proje olmadığını belirtmek gerekir.",
+              },
+            },
+          ],
+          "user-flow-task-flow": [
+            {
+              "@type": "Question",
+              name: "User flow nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "User flow, bir kullanıcının belirli bir hedefe ulaşmak için üründe izlediği tüm yolu gösteren diyagramdır. Giriş noktasından hedefe kadar tüm ekranları, kararları ve alternatif yolları içerir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Task flow nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Task flow, tek bir görevin tamamlanması için gereken adımları gösteren lineer diyagramdır. Karar noktaları ve alternatif yollar içermez, sadece ideal yolu gösterir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "User flow ve task flow arasındaki fark nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Task flow tek bir görevi lineer olarak gösterir, dallanma yoktur. User flow ise kullanıcının tüm yolculuğunu gösterir, karar noktaları ve alternatif yollar içerir. Task flow daha basit ve spesifik, user flow daha kapsamlıdır.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "User flow nasıl çizilir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "User flow çizmek için önce kullanıcı hedefini belirle, giriş noktasını tanımla, adımları ve ekranları listele, karar noktalarını ekle, alternatif yolları çiz. Figma, FigJam, Miro veya Whimsical gibi araçlar kullanabilirsin.",
               },
             },
           ],
