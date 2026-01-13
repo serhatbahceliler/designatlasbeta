@@ -85,7 +85,7 @@ const MOCK_ARTICLES: Article[] = [
     readingTime: 15,
     featured: true,
     publishedAt: "2025-01-13",
-    heroImage: "",
+    heroImage: "https://r.resimlink.com/MiVUPTfO.png",
     author: "DesignAtlas",
     views: 2100,
   },
