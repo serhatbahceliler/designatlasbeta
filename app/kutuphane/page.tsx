@@ -170,6 +170,21 @@ const MOCK_ARTICLES: Article[] = [
     author: "Serhat Bahçeliler",
     views: 0,
   },
+  {
+    id: "persona-olusturma",
+    title: "Persona Oluşturma Rehberi",
+    subtitle: "Kullanıcılarını Somutlaştırmanın Yolu",
+    titleEn: "Creating Personas",
+    slug: "persona-olusturma",
+    description: "Persona nedir, nasıl oluşturulur? Kullanıcı araştırmasından persona çıkarma, persona şablonu ve kullanım rehberi. Örneklerle adım adım anlatım.",
+    category: "ux-research",
+    readingTime: 13,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    views: 0,
+  },
 ];
 
 type SortOption = "newest" | "popular" | "az";

@@ -3337,6 +3337,467 @@ Derinleşmek istersen:
 - [The Guide to Wireframing - UXPin](https://www.uxpin.com/studio/blog/what-is-a-wireframe-designing-your-ux-backbone/) (İngilizce, 10 dk)
 `,
   },
+  "persona-olusturma": {
+    id: "persona-olusturma",
+    title: "Persona Oluşturma Rehberi",
+    subtitle: "Kullanıcılarını Somutlaştırmanın Yolu",
+    titleEn: "Creating Personas",
+    slug: "persona-olusturma",
+    description: "Persona nedir, nasıl oluşturulur? Kullanıcı araştırmasından persona çıkarma, persona şablonu ve kullanım rehberi. Örneklerle adım adım anlatım.",
+    category: "ux-research",
+    readingTime: 13,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    content: `# Persona Oluşturma Rehberi: Kullanıcılarını Somutlaştır
+
+**Seviye:** Başlangıç  
+**Kategori:** UX Research  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+"Kullanıcılarımız kim?" sorusuna "herkes" cevabını veriyorsan, aslında kimseyi hedeflemiyorsun demektir.
+
+Tasarım yaparken kafanda somut bir kullanıcı olması gerekir. 35 yaşında, İstanbul'da yaşayan, iki çocuklu, zamanı kısıtlı bir anne mi? Yoksa 24 yaşında, yeni mezun, ilk işini arayan, teknolojiye meraklı biri mi?
+
+İkisi için aynı ürünü aynı şekilde tasarlayamazsın.
+
+**Persona**, kullanıcılarını somutlaştırmanın yolu. Gerçek araştırmaya dayanan, ama kurgusal bir karakter. Tasarım kararlarında "Bu özellik Ayşe'nin işine yarar mı?" diye sorabilirsin.
+
+Bu yazıda persona'nın ne olduğunu, nasıl oluşturulacağını ve etkili kullanımını öğreneceksin.
+
+---
+
+## Persona Nedir?
+
+[CALLOUT]
+**Persona:**
+Hedef kullanıcı grubunu temsil eden, araştırma verilerine dayanan kurgusal karakter profili. Demografik bilgiler, davranışlar, hedefler, motivasyonlar ve sorunları içerir.
+[/CALLOUT]
+
+Persona gerçek bir kişi değil. Ama gerçek kullanıcılardan toplanan verilerin sentezi. Bir ismi, yüzü, hikayesi var. Bu sayede soyut "kullanıcı" kavramı somutlaşıyor.
+
+**Persona şu DEĞİLDİR:**
+
+- Demografik segment (25-34 yaş kadınlar)
+- Pazar araştırması profili
+- Gerçek bir müşteri
+- Varsayıma dayalı tahmin
+
+---
+
+## Neden Persona Oluşturulur?
+
+### 1. Empati kurmayı sağlar
+
+"Kullanıcı" soyut bir kavram. "Elif, 32 yaşında, çalışan anne, sabah koşuşturmacasında 2 dakikada sipariş vermek istiyor" somut bir insan. İkincisiyle empati kurmak çok daha kolay.
+
+### 2. Odak sağlar
+
+Persona olmadan herkes kendi kafasındaki kullanıcıyı hayal eder. Persona, ekibin aynı kullanıcıyı düşünmesini sağlar.
+
+### 3. "Herkes için" tuzağından kaçındırır
+
+Her özellik herkese hitap edemez. Persona, kimin için tasarladığını netleştirir. "Bu özellik Elif için mi, Ahmet için mi?"
+
+### 4. Karar vermeyi kolaylaştırır
+
+Tasarım tartışmalarında "Kullanıcı bunu ister mi?" yerine "Elif bunu kullanır mı?" diye sorarsın. Daha somut, daha kolay.
+
+### 5. Stakeholder iletişimini güçlendirir
+
+PM'e veya CEO'ya "kullanıcılar" demek yerine "Elif" demek, mesajı daha etkili iletir.
+
+[INFO]
+2-4 persona
+Çoğu proje için ideal sayı. Daha fazlası odağı dağıtır.
+[/INFO]
+
+---
+
+## Persona Türleri
+
+### Primary Persona (Ana Persona)
+
+En önemli hedef kullanıcı. Tasarım öncelikle bu kişi için yapılır.
+
+### Secondary Persona (İkincil Persona)
+
+Önemli ama birincil olmayan kullanıcı grupları. Primary persona'nın ihtiyaçları karşılandıktan sonra düşünülür.
+
+### Negative Persona (Anti-Persona)
+
+Hedeflemediğin kullanıcı. "Bu ürün bu kişi için değil" demek de önemli.
+
+### Proto-Persona
+
+Araştırma öncesi varsayımlara dayanan geçici persona. Araştırma sonrası gerçek personalarla değiştirilir.
+
+[TABLE]
+| Tür | Veri Kaynağı | Kullanım |
+|-----|--------------|----------|
+| **Primary** | Araştırma | Ana tasarım hedefi |
+| **Secondary** | Araştırma | İkincil özellikler |
+| **Negative** | Araştırma + iş kararı | Kapsam dışı tanımı |
+| **Proto** | Varsayım | Araştırma planlaması |
+[/TABLE]
+
+---
+
+## Persona Nasıl Oluşturulur?
+
+### Adım 1: Veri Topla
+
+Persona araştırmaya dayanmalı. Veri kaynakları:
+
+**Birincil kaynaklar (en değerli):**
+- Kullanıcı görüşmeleri
+- Gözlem (contextual inquiry)
+- Anketler
+- Kullanılabilirlik testleri
+
+**İkincil kaynaklar:**
+- Analitik veriler
+- Müşteri destek kayıtları
+- Satış ekibi feedback'i
+- Sosyal medya yorumları
+- Sektör araştırmaları
+
+[TIP]
+💡 İdeal: 5-10 kullanıcı görüşmesi + analitik veri. Minimum: Mevcut veriler + stakeholder görüşmeleri. Sıfır veriyle persona oluşturma.
+[/TIP]
+
+### Adım 2: Paternleri Bul
+
+Topladığın verilerde tekrar eden kalıpları ara:
+
+- Benzer hedefler
+- Benzer sorunlar
+- Benzer davranışlar
+- Benzer motivasyonlar
+
+Bu kalıplar, persona gruplarını oluşturur.
+
+**Örnek paternler:**
+- "Zamanı kısıtlı, hızlı çözüm arıyor" → Grup A
+- "Detaylı araştırma yapıyor, karşılaştırıyor" → Grup B
+- "Fiyat odaklı, indirim bekliyor" → Grup C
+
+### Adım 3: Grupları Tanımla
+
+Her pattern grubu için karakteristikleri listele:
+
+- Kim bunlar? (demografik)
+- Ne istiyorlar? (hedefler)
+- Neden istiyorlar? (motivasyonlar)
+- Ne engel oluyor? (sorunlar)
+- Nasıl davranıyorlar? (davranışlar)
+
+### Adım 4: Personayı Oluştur
+
+Her grup için bir persona karakteri yarat:
+
+[STEPS]
+1. İsim ve fotoğraf
+   Gerçekçi bir isim ve stok fotoğraf. Persona'yı "gerçek" hissettirir.
+
+2. Demografik bilgiler
+   Yaş, meslek, lokasyon, eğitim, aile durumu
+
+3. Bio/Arka plan
+   1-2 paragraflık hikaye. Kim bu kişi?
+
+4. Hedefler
+   Bu kişi ürününle ne başarmak istiyor?
+
+5. Motivasyonlar
+   Neden bu hedefe ulaşmak istiyor?
+
+6. Sorunlar (Pain points)
+   Şu an ne zorlanıyor? Frustrasyonları ne?
+
+7. Davranışlar
+   Ürünü nasıl kullanıyor/kullanır? Alışkanlıkları ne?
+
+8. Araçlar ve teknoloji
+   Hangi cihazları, uygulamaları kullanıyor?
+
+9. Alıntı
+   Persona'yı özetleyen tek bir cümle, kendi ağzından.
+[/STEPS]
+
+### Adım 5: Doğrula ve Rafine Et
+
+Oluşturduğun personaları ekiple paylaş:
+- Araştırma verilerini yansıtıyor mu?
+- Gerçekçi mi?
+- Tasarım kararlarında kullanılabilir mi?
+
+---
+
+## Persona Şablonu
+
+Bir persona kartı şu bilgileri içermeli:
+
+┌─────────────────────────────────────────────────────────────┐
+│ [FOTOĞRAF]                                                  │
+│                                                             │
+│ İSİM: Elif Yılmaz                                          │
+│ YAŞ: 32                                                     │
+│ MESLEK: Pazarlama Müdürü                                   │
+│ LOKASYON: İstanbul, Kadıköy                                │
+│ AİLE: Evli, 1 çocuk (4 yaş)                                │
+│                                                             │
+│ ALINTI:                                                     │
+│ "Zamanım çok kısıtlı, her şeyin hızlı ve kolay olmasını    │
+│ istiyorum."                                                 │
+│                                                             │
+├─────────────────────────────────────────────────────────────┤
+│ BIO:                                                        │
+│ Elif, büyük bir FMCG şirketinde pazarlama müdürü olarak    │
+│ çalışıyor. Sabah 7'de evden çıkıp akşam 7'de dönüyor.      │
+│ Hafta içi alışveriş için zaman bulamıyor, çoğu işini       │
+│ mobil üzerinden, yolda veya öğle arasında hallediyor.      │
+│                                                             │
+├─────────────────────────────────────────────────────────────┤
+│ HEDEFLER:                              │ SORUNLAR:          │
+│ • Hızlı alışveriş yapmak               │ • Zaman yetersiz   │
+│ • Güvenilir ürün bulmak                │ • Çok seçenek var  │
+│ • Zamandan tasarruf                    │ • Karşılaştırma zor│
+│                                                             │
+├─────────────────────────────────────────────────────────────┤
+│ MOTİVASYONLAR:                         │ DAVRANIŞLAR:       │
+│ • Ailesine zaman ayırmak              │ • Mobil öncelikli  │
+│ • İşte başarılı olmak                 │ • Favorilere ekler │
+│ • Stresi azaltmak                     │ • Yorumlara bakar  │
+│                                                             │
+├─────────────────────────────────────────────────────────────┤
+│ ARAÇLAR: iPhone 14, Instagram, LinkedIn, WhatsApp          │
+│ TERCİH ETTİĞİ KANALLAR: Mobil app, push notification       │
+└─────────────────────────────────────────────────────────────┘
+
+---
+
+## Persona Örneği
+
+### Primary Persona: Elif Yılmaz
+
+**Demografik:**
+- 32 yaşında, kadın
+- Pazarlama Müdürü, FMCG sektörü
+- İstanbul, Kadıköy'da yaşıyor
+- Evli, 4 yaşında bir kızı var
+- Üniversite mezunu
+
+**Alıntı:**
+> "Zamanım çok kısıtlı. Alışveriş yapmak için mağaza mağaza gezemiyorum. Her şeyin hızlı ve kolay olmasını istiyorum."
+
+**Bio:**
+Elif, kariyerine odaklı ama aynı zamanda iyi bir anne olmak isteyen bir profesyonel. Haftada 50+ saat çalışıyor. Sabah koşuşturmacası, akşam ev işleri derken kendine ve alışverişe vakit ayıramıyor. Çoğu alışverişini telefonundan, metro'da veya öğle arasında yapıyor.
+
+**Hedefler:**
+- Minimum zamanla alışverişi tamamlamak
+- Güvenilir, kaliteli ürünler bulmak
+- Ailesinin ihtiyaçlarını aksatmamak
+
+**Sorunlar (Pain Points):**
+- Çok fazla seçenek, karar vermek zor
+- Ürün karşılaştırması zahmetli
+- Teslimat zamanı belirsiz
+- Mobil deneyimler genelde kötü
+
+**Davranışlar:**
+- Sabah metro'da uygulamaları kontrol eder
+- Favorilere ekleyip sonra satın alır
+- Yorumlara ve puanlara güvenir
+- Hızlı checkout tercih eder, misafir kullanıcı olmayı sever
+
+**Teknoloji:**
+- iPhone 14 Pro
+- Günlük uygulamalar: Instagram, LinkedIn, WhatsApp, Netflix
+- E-ticaret: Trendyol, Hepsiburada, Amazon
+
+---
+
+## Persona Kullanımı
+
+Persona oluşturdun. Şimdi ne yapacaksın?
+
+### Tasarım kararlarında
+
+[COMPARISON]
+❌ "Kullanıcılar bu özelliği ister mi?"
+✅ "Elif bu özelliği kullanır mı? Onun sorununu çözer mi?"
+[/COMPARISON]
+
+### User story yazarken
+Elif olarak,
+Hızlıca sepetime ürün ekleyebilmek istiyorum,
+Böylece metro'da kısa sürede alışverişimi tamamlayabilirim.
+
+### Önceliklendirmede
+
+"Bu özellik Elif için mi Ahmet için mi?" sorusu, önceliklendirmeye yardımcı olur. Primary persona'nın ihtiyaçları önce gelir.
+
+### Stakeholder sunumlarında
+
+"Kullanıcılarımız hızlı checkout istiyor" yerine "Elif, sabah metro'da 2 dakikada sipariş vermek istiyor ama şu an 5 adım geçmesi gerekiyor" demek daha etkili.
+
+### Kullanılabilirlik testlerinde
+
+Test senaryolarını persona'ya göre yaz. "Elif olarak bu görevi tamamla."
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Araştırma olmadan persona oluşturmak
+
+[COMPARISON]
+❌ Hata: "Bence kullanıcılarımız böyle" deyip persona yazmak
+✅ Doğrusu: En az mevcut veriler ve stakeholder görüşmeleriyle desteklemek
+[/COMPARISON]
+
+Varsayıma dayanan persona, yanlış yönlendirebilir.
+
+### 2. Çok fazla persona oluşturmak
+
+5-6-7 persona odağı dağıtır. 2-4 persona yeterli. Daha fazlası gerekiyorsa, ürün kapsamı çok geniş olabilir.
+
+### 3. Demografiye takılmak
+
+Yaş, cinsiyet, lokasyon önemli ama yeterli değil. Asıl önemli olan: hedefler, motivasyonlar, davranışlar, sorunlar.
+
+### 4. Persona'yı bir kez yapıp unutmak
+
+Persona yaşayan bir döküman. Yeni araştırmalarla güncellenmeli, tasarım sürecinde aktif kullanılmalı.
+
+### 5. Gerçekçi olmayan persona
+
+"35 yaşında, 3 dil bilen, maratona hazırlanan, startup kuran, 2 çocuklu CEO" gerçekçi değil. Ortalama kullanıcıyı yansıt.
+
+### 6. Personayı kutuda bırakmak
+
+En büyük hata: Persona oluşturup kimseyle paylaşmamak, kararlarda kullanmamak. Persona duvar süsü değil, araç.
+
+---
+
+## Persona vs Diğer Araçlar
+
+### Persona vs Segment
+
+| Segment | Persona |
+|---------|---------|
+| Demografik gruplandırma | Karakter profili |
+| "25-34 yaş kadınlar" | "Elif, 32, çalışan anne" |
+| Pazarlama odaklı | Tasarım odaklı |
+| Nicel | Nitel |
+
+### Persona vs User Journey Map
+
+Persona kim olduğunu söyler, journey map ne yaptığını gösterir. İkisi birbirini tamamlar.
+
+### Persona vs Empathy Map
+
+Empathy map, persona'nın bir bölümü gibidir. Tek bir kullanıcının düşüncelerini, duygularını, söylediklerini ve yaptıklarını haritalandırır.
+
+---
+
+## Ne Zaman Persona Oluşturulmalı?
+
+**Kesinlikle oluştur:**
+- Yeni ürün tasarımı
+- Büyük redesign
+- Yeni pazara giriş
+- Ekip içi hizalama sorunu varsa
+
+**İsteğe bağlı:**
+- Küçük özellik güncellemeleri
+- Mevcut persona hâlâ geçerliyse
+- Çok sıkı deadline
+
+[WARNING]
+⚠️ Proto-persona ile başlamak, hiç persona olmamaktan iyidir. Sonra araştırmayla doğrula ve güncelle.
+[/WARNING]
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**30 dakika**
+
+**Görev:** Bir fitness uygulaması için proto-persona oluştur.
+
+**Senaryo:** Evde egzersiz yapmak isteyen kullanıcılar için mobil fitness uygulaması tasarlıyorsun.
+
+**Adımlar:**
+
+1. **Kullanıcı tipi belirle**
+   - Yeni başlayan mı, deneyimli mi?
+   - Motivasyonu ne? (kilo vermek, kas yapmak, sağlık)
+   - Ne kadar zamanı var?
+
+2. **Persona kartı oluştur:**
+   - İsim ve yaş
+   - Meslek
+   - 2-3 cümlelik bio
+   - 3 hedef
+   - 3 sorun (pain point)
+   - 1 alıntı
+
+3. **Kontrol soruları:**
+   - Bu persona gerçekçi mi?
+   - Tasarım kararlarında kullanabilir misin?
+   - "Bu özellik [persona adı] için uygun mu?" sorusunu sorabilir misin?
+
+**Bonus:** İkinci bir persona oluştur (farklı kullanıcı tipi) ve ikisini karşılaştır.
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Persona, hedef kullanıcıyı temsil eden araştırmaya dayalı kurgusal karakterdir
+- Empati kurmayı, odaklanmayı ve karar vermeyi kolaylaştırır
+- 2-4 persona çoğu proje için yeterli (1 primary + 1-3 secondary)
+- Demografiden çok hedefler, motivasyonlar ve sorunlar önemli
+- Araştırma verisine dayanmalı, varsayımla oluşturulmamalı
+- Oluşturup kutuda bırakma, aktif kullan ve güncelle
+- Proto-persona ile başlamak, hiç olmamasından iyidir
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Wireframe Nedir?](/kutuphane/wireframe-nedir)
+
+**Sonraki:** UX Mülakat Soruları ve Cevapları *(yakında)*
+
+**İlgili konular:**
+- [Kullanıcı Görüşmesi Nasıl Yapılır?](/kutuphane/kullanici-gorusmesi)
+- Empathy Map Oluşturma *(yakında)*
+- User Journey Map Oluşturma *(yakında)*
+
+**İlgili Roadmap:** [UX Designer Roadmap → Research](/roadmap/ux-designer)
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Personas - NNGroup](https://www.nngroup.com/articles/persona/) (İngilizce, 8 dk)
+- [Personas - IxDF](https://www.interaction-design.org/literature/topics/personas) (İngilizce, 10 dk)
+- [Just Enough Research - Erika Hall](https://abookapart.com/products/just-enough-research) (Kitap, araştırma temelleri)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
