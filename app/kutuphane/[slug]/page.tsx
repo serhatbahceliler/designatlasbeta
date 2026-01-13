@@ -330,19 +330,19 @@ Derinleşmek istersen:
   },
 };
 
-const CATEGORY_COLORS = {
+const CATEGORY_COLORS: Record<string, string> = {
   "ux-research": "#3B82F6",
   "ux-design": "#10B981",
   "kariyer": "#8B5CF6",
   "araclar-ipucu": "#F59E0B",
-} as const;
+};
 
-const CATEGORY_LABELS = {
+const CATEGORY_LABELS: Record<string, string> = {
   "ux-research": "UX Research",
   "ux-design": "UX Design",
   "kariyer": "Kariyer",
   "araclar-ipucu": "Araçlar & İpucu",
-} as const;
+};
 
 
 export default function ArticlePage() {
@@ -439,12 +439,12 @@ export default function ArticlePage() {
             <span
               className="px-4 py-2 rounded-full text-sm font-semibold inline-block"
               style={{
-                backgroundColor: `${CATEGORY_COLORS[article.category]}20`,
-                color: CATEGORY_COLORS[article.category],
-                border: `1px solid ${CATEGORY_COLORS[article.category]}40`,
+                backgroundColor: `${CATEGORY_COLORS[article.category] || "#3B82F6"}20`,
+                color: CATEGORY_COLORS[article.category] || "#3B82F6",
+                border: `1px solid ${CATEGORY_COLORS[article.category] || "#3B82F6"}40`,
               }}
             >
-              {CATEGORY_LABELS[article.category]}
+              {CATEGORY_LABELS[article.category] || "UX Research"}
             </span>
           </div>
 
