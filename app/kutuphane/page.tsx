@@ -6,9 +6,10 @@ import { useSearchParams, useRouter } from "next/navigation";
 import Header from "@/components/Header";
 
 // Article type definition
-interface Article {
+export interface Article {
   id: string;
   title: string;
+  subtitle?: string;
   titleEn: string;
   slug: string;
   description: string;
@@ -16,6 +17,8 @@ interface Article {
   readingTime: number;
   featured: boolean;
   publishedAt: string;
+  heroImage?: string;
+  author?: string;
   views?: number; // For popularity sorting
 }
 
@@ -45,15 +48,18 @@ const CATEGORY_LABELS = {
 // Mock articles data
 const MOCK_ARTICLES: Article[] = [
   {
-    id: "1",
+    id: "kullanilabilirlik-testi",
     title: "Kullanılabilirlik Testi Nedir?",
+    subtitle: "Adım Adım Uygulama Rehberi",
     titleEn: "Usability Testing",
     slug: "kullanilabilirlik-testi",
-    description: "Tasarımlarınızı gerçek kullanıcılarla test etmenin en etkili yolu. Adım adım test süreci, soru hazırlama teknikleri ve sonuçları yorumlama rehberi.",
+    description: "Tasarımlarını gerçek kullanıcılarla test etmenin en etkili yolu. Kullanılabilirlik testinin ne olduğunu, neden önemli olduğunu ve adım adım nasıl uygulayacağını öğren.",
     category: "ux-research",
     readingTime: 12,
     featured: true,
     publishedAt: "2025-01-13",
+    heroImage: "https://r.resimlink.com/76fDGw31VzEL.png",
+    author: "DesignAtlas",
     views: 1250,
   },
   {
@@ -359,10 +365,20 @@ function KutuphaneContent() {
                   </h2>
                   <Link
                     href={`/kutuphane/${featuredArticle.slug}`}
-                    className="group block bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 hover:border-[#DEFF37]/50 transition-all duration-300 hover:-translate-y-1"
+                    className="group block bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden hover:border-[#DEFF37]/50 transition-all duration-300 hover:-translate-y-1"
                   >
-                    <div className="flex flex-col md:flex-row gap-6">
-                      <div className="flex-1">
+                    {featuredArticle.heroImage && (
+                      <div className="w-full h-64 overflow-hidden">
+                        <img
+                          src={featuredArticle.heroImage}
+                          alt={featuredArticle.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    )}
+                    <div className="p-8">
+                      <div className="flex flex-col md:flex-row gap-6">
+                        <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
                           <span
                             className="px-3 py-1 rounded-full text-sm font-semibold"
@@ -388,6 +404,7 @@ function KutuphaneContent() {
                         </p>
                       </div>
                     </div>
+                  </div>
                   </Link>
                 </section>
               )}
