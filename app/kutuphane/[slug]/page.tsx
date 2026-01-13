@@ -3309,6 +3309,40 @@ export default function ArticlePage() {
               },
             },
           ],
+          "ux-ui-farki": [
+            {
+              "@type": "Question",
+              name: "UX ve UI arasındaki temel fark nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "UX (User Experience) ürünün nasıl çalıştığını ve kullanıcıya nasıl hissettirdiğini tasarlar. UI (User Interface) ise ürünün nasıl göründüğünü tasarlar. UX yapı ve deneyim, UI görsel ve estetiktir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "UX/UI Designer ne demek?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "UX/UI Designer, hem kullanıcı deneyimi hem de kullanıcı arayüzü tasarımı yapan kişidir. Özellikle küçük ekiplerde ve startuplarda yaygın bir roldür. İki farklı beceri setini tek kişide birleştirir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "UX mi UI mi önce gelir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Genel olarak UX önce gelir. Önce kullanıcı ihtiyaçları araştırılır, akışlar ve yapı belirlenir (UX), sonra bu yapı görsel olarak tasarlanır (UI). Ancak pratikte ikisi paralel ve iteratif olarak ilerler.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "UX olmadan UI olur mu?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Teknik olarak evet, görsel tasarım yapılabilir. Ancak UX düşünülmeden yapılan UI, güzel görünse de kullanılamaz olabilir. İyi ürünler için ikisi birlikte düşünülmelidir.",
+              },
+            },
+          ],
         };
 
         const faqs = faqData[slug];
