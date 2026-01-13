@@ -1959,6 +1959,484 @@ Derinleşmek istersen:
 - [Don Norman: The term "UX"](https://www.youtube.com/watch?v=9BdtGjoIN4E) (Video, İngilizce, 2 dk)
 `,
   },
+  "ui-nedir": {
+    id: "ui-nedir",
+    title: "UI Nedir?",
+    subtitle: "Kullanıcı Arayüzü Tasarımına Giriş",
+    titleEn: "What is UI?",
+    slug: "ui-nedir",
+    description: "UI (User Interface) nedir? Kullanıcı arayüzü tasarımı ne anlama gelir, UI Designer ne yapar ve iyi bir arayüz nasıl olmalı? Başlangıç seviyesi rehberi.",
+    category: "temel-kavramlar",
+    readingTime: 11,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    content: `# UI Nedir? Kullanıcı Arayüzü Tasarımına Giriş
+
+**Seviye:** Başlangıç  
+**Kategori:** Temel Kavramlar  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Bir uygulamayı açtığında gördüğün her şey: butonlar, renkler, yazı tipleri, ikonlar, menüler. Hepsi bir tasarımcının kararı. Bu kararların toplamına **UI** yani **kullanıcı arayüzü** diyoruz.
+
+UI, kullanıcının ürünle fiziksel olarak etkileşime girdiği katman. Bir butona tıklıyorsun, bir form dolduruyorsun, bir menüyü açıyorsun. Tüm bu etkileşimlerin görsel ve davranışsal tasarımı UI Designer'ın işi.
+
+Güzel görünen ama kullanılamayan arayüzler var. Çirkin ama son derece işlevsel olanlar da. İyi UI, ikisini dengeler: hem estetik hem kullanılabilir.
+
+Bu yazıda UI'ın ne olduğunu, UI Designer'ların ne yaptığını ve iyi bir arayüzün özelliklerini öğreneceksin.
+
+---
+
+## UI Ne Demek?
+
+UI, **User Interface** yani **Kullanıcı Arayüzü** kelimelerinin kısaltmasıdır.
+
+[CALLOUT]
+**Kullanıcı Arayüzü (UI):**
+Kullanıcının bir dijital ürünle etkileşime girdiği görsel ve etkileşimli yüzey. Ekranda gördüğün ve dokunduğun her şey: butonlar, menüler, formlar, ikonlar, renkler, tipografi.
+[/CALLOUT]
+
+UI, ürünün "yüzü". Kullanıcı arka plandaki kodu, veritabanını, sunucuları görmez. Sadece arayüzü görür ve onunla etkileşir. Bu yüzden arayüz tasarımı kritik.
+
+---
+
+## Arayüz Tipleri
+
+UI sadece ekranlardan ibaret değil. Farklı arayüz tipleri var:
+
+### 1. Grafik Kullanıcı Arayüzü (GUI)
+
+En yaygın tip. Görsel elementlerle etkileşim:
+- Masaüstü uygulamaları
+- Mobil uygulamalar
+- Web siteleri
+
+### 2. Ses Kullanıcı Arayüzü (VUI)
+
+Sesle etkileşim:
+- Siri, Alexa, Google Assistant
+- Sesli asistanlar
+- IVR sistemleri (telefon menüleri)
+
+### 3. Dokunmatik Arayüz
+
+Fiziksel dokunuşla etkileşim:
+- Kiosk'lar
+- ATM'ler
+- Akıllı ev panelleri
+
+### 4. Hareket Tabanlı Arayüz
+
+Vücut hareketleriyle etkileşim:
+- Xbox Kinect
+- VR/AR sistemleri
+
+[TIP]
+💡 Bu yazıda GUI (Grafik Kullanıcı Arayüzü) odağındayız çünkü UI Designer dendiğinde genellikle bu kastedilir.
+[/TIP]
+
+---
+
+## UI'ın Temel Elementleri
+
+Bir arayüz şu temel yapı taşlarından oluşur:
+
+### 1. Layout (Yerleşim)
+
+Elementlerin ekranda nasıl konumlandığı:
+- Grid sistemleri
+- Spacing (boşluklar)
+- Alignment (hizalama)
+- Responsive davranış
+
+### 2. Tipografi
+
+Metin tasarımı:
+- Font seçimi
+- Font boyutları (hiyerarşi)
+- Satır aralığı (line-height)
+- Metin renkleri
+
+### 3. Renk
+
+Renk paleti ve kullanımı:
+- Primary, secondary, accent renkler
+- Background ve surface renkleri
+- Text renkleri
+- Durum renkleri (success, error, warning)
+
+### 4. Görsel Elementler
+
+- İkonlar
+- İllüstrasyonlar
+- Fotoğraflar
+- Grafikler ve çizelgeler
+
+### 5. Bileşenler (Components)
+
+Tekrar kullanılan UI parçaları:
+- Butonlar
+- Input alanları
+- Kartlar
+- Modallar
+- Navigation elementleri
+- Tablolar
+
+### 6. Etkileşim Tasarımı
+
+Elementlerin davranışı:
+- Hover durumları
+- Tıklama efektleri
+- Animasyonlar
+- Geçişler (transitions)
+
+[TABLE]
+| Element | Görevi | Örnek |
+|---------|--------|-------|
+| **Buton** | Aksiyon tetikleme | "Kaydet", "Gönder" |
+| **Input** | Veri girişi | Text field, checkbox |
+| **Navigation** | Yönlendirme | Tab bar, sidebar |
+| **Kart** | İçerik gruplama | Ürün kartı, profil kartı |
+| **Modal** | Odaklanmış etkileşim | Onay diyalogu |
+| **Toast** | Geri bildirim | "Kaydedildi" mesajı |
+[/TABLE]
+
+---
+
+## UI Designer Ne Yapar?
+
+UI Designer'ın temel amacı:
+
+**Kullanılabilir, tutarlı ve estetik arayüzler tasarlamak.**
+
+### Günlük işler
+
+[STEPS]
+1. Görsel Tasarım
+   Ekranların görsel tasarımını oluşturma: renkler, tipografi, spacing
+
+2. Bileşen Tasarımı
+   Tekrar kullanılabilir UI bileşenleri tasarlama: butonlar, formlar, kartlar
+
+3. Design System
+   Tutarlılık için tasarım sistemi oluşturma ve sürdürme
+
+4. Responsive Tasarım
+   Farklı ekran boyutları için uyarlama
+
+5. Prototipleme
+   Etkileşimli prototipler oluşturma
+
+6. Etkileşim Tasarımı
+   Hover, active, disabled durumları ve animasyonlar
+
+7. Developer Handoff
+   Tasarımları geliştirici ekibe aktarma
+
+8. Görsel QA
+   Geliştirilen ürünün tasarıma uygunluğunu kontrol etme
+[/STEPS]
+
+### Kullanılan araçlar
+
+| Kategori | Araçlar |
+|----------|---------|
+| Tasarım | Figma, Sketch, Adobe XD |
+| Prototip | Figma, ProtoPie, Principle, Framer |
+| Animasyon | After Effects, Lottie |
+| Handoff | Figma Dev Mode, Zeplin |
+| Design System | Figma, Storybook |
+
+### Çalışma şekli
+
+UI Designer genellikle şu kişilerle birlikte çalışır:
+- UX Designer (deneyim tasarımı)
+- Developer (uygulama)
+- Product Manager (ürün kararları)
+- Brand Designer (marka uyumu)
+
+---
+
+## İyi UI'ın Özellikleri
+
+### 1. Tutarlılık (Consistency)
+
+Aynı elementler her yerde aynı görünmeli ve davranmalı.
+
+[COMPARISON]
+❌ Kötü: Bir sayfada mavi buton, diğerinde yeşil buton aynı işlev için
+✅ İyi: Primary buton her yerde aynı renk, boyut ve davranış
+[/COMPARISON]
+
+**Tutarlılık tipleri:**
+- Görsel tutarlılık (renkler, fontlar)
+- Fonksiyonel tutarlılık (aynı element = aynı davranış)
+- Dış tutarlılık (platform conventions'a uyum)
+
+### 2. Görsel Hiyerarşi
+
+Önemli elementler öne çıkmalı, ikincil elementler geri planda kalmalı.
+
+**Hiyerarşi araçları:**
+- Boyut (büyük = önemli)
+- Renk (kontrast = dikkat çeker)
+- Konum (üst ve sol = önce görülür)
+- Boşluk (etrafında boşluk = öne çıkar)
+
+### 3. Anlaşılırlık (Clarity)
+
+Kullanıcı neyin tıklanabilir olduğunu, nerede olduğunu, ne yapması gerektiğini hemen anlamalı.
+
+[COMPARISON]
+❌ Belirsiz: Flat, tıklanabilir mi belli olmayan text
+✅ Anlaşılır: Buton görünümünde, hover'da feedback veren element
+[/COMPARISON]
+
+### 4. Geri Bildirim (Feedback)
+
+Kullanıcı bir aksiyon aldığında, sistem cevap vermeli.
+
+**Geri bildirim örnekleri:**
+- Butona tıklayınca renk değişimi
+- Form gönderilince başarı mesajı
+- Yükleme sırasında spinner
+- Hata durumunda kırmızı border ve mesaj
+
+### 5. Erişilebilirlik (Accessibility)
+
+Herkes için kullanılabilir tasarım:
+- Yeterli renk kontrastı
+- Okunabilir font boyutları
+- Ekran okuyucu uyumu
+- Keyboard navigation desteği
+
+[INFO]
+4.5:1 minimum kontrast oranı
+Normal metin için WCAG AA standardı
+[/INFO]
+
+### 6. Estetik
+
+Görsel olarak çekici, modern ve profesyonel görünüm.
+
+**Ama dikkat:** Estetik, kullanılabilirliği engellememelidir. Güzel ama kullanılamaz UI, kötü UI'dır.
+
+---
+
+## UI Tasarım Prensipleri
+
+### Yakınlık (Proximity)
+
+İlişkili elementler birbirine yakın olmalı.
+
+[COMPARISON]
+❌ Form label'ı inputtan uzakta
+✅ Label, input'un hemen üstünde veya yanında
+[/COMPARISON]
+
+### Hizalama (Alignment)
+
+Elementler görünmez çizgiler üzerinde hizalı olmalı.
+
+### Tekrar (Repetition)
+
+Aynı görsel pattern'ler tekrar kullanılmalı. Bu tutarlılık yaratır.
+
+### Kontrast (Contrast)
+
+Farklı elementler arasında yeterli görsel fark olmalı. Bu hem hiyerarşi hem erişilebilirlik için önemli.
+
+[TIP]
+💡 Bu 4 prensip Robin Williams'ın "The Non-Designer's Design Book" kitabından gelir. CRAP (Contrast, Repetition, Alignment, Proximity) olarak bilinir.
+[/TIP]
+
+---
+
+## Design System Nedir?
+
+UI Designer'ların en önemli çıktılarından biri design system'dır.
+
+[CALLOUT]
+**Design System:**
+Bir ürün veya şirketin tüm dijital ürünlerinde kullanılan, tekrar kullanılabilir bileşenler, stiller ve kurallar bütünü. Tek bir doğruluk kaynağı (single source of truth).
+[/CALLOUT]
+
+**Design system içerir:**
+- Renk paleti
+- Tipografi sistemi
+- Spacing sistemi
+- Icon set
+- UI bileşenleri (butonlar, inputlar, kartlar...)
+- Kullanım kuralları ve dokümantasyon
+
+**Neden önemli:**
+- Tutarlılık sağlar
+- Hızlı tasarım ve geliştirme
+- Kolay güncelleme
+- Ekipler arası ortak dil
+
+**Popüler design system'lar:**
+- Material Design (Google)
+- Human Interface Guidelines (Apple)
+- Carbon (IBM)
+- Polaris (Shopify)
+
+---
+
+## UI vs UX: Tekrar Hatırlayalım
+
+[COMPARISON]
+**UI:** Ürün nasıl görünüyor?
+**UX:** Ürün nasıl çalışıyor ve hissettiriyor?
+[/COMPARISON]
+
+**Ev benzetmesi:**
+- **UX:** Evin planı, odaların yerleşimi, kapıların açılış yönü, elektrik prizlerinin konumu
+- **UI:** Duvar renkleri, mobilya seçimi, aydınlatma armatürleri, dekorasyon
+
+[TABLE]
+| Özellik | UI Design | UX Design |
+|---------|-----------|-----------|
+| **Soru** | Nasıl görünmeli? | Nasıl çalışmalı? |
+| **Odak** | Görsel, estetik | Deneyim, akış |
+| **Çıktılar** | Mockup, style guide | Wireframe, persona |
+| **Araçlar** | Figma, Illustrator | FigJam, Miro |
+| **Test** | Görsel A/B test | Kullanılabilirlik testi |
+[/TABLE]
+
+[WARNING]
+⚠️ Küçük ekiplerde UX ve UI aynı kişi tarafından yapılabilir. Ama bunlar farklı becerilerdir. "UX/UI Designer" title'ı yaygın olsa da, iki farklı disiplini temsil eder.
+[/WARNING]
+
+---
+
+## Sık Yapılan UI Hataları
+
+### 1. Tutarsız tasarım
+
+Aynı işlev için farklı görünümler, farklı renkler, farklı boyutlar.
+
+### 2. Yetersiz kontrast
+
+Açık gri text beyaz arka planda. Kullanıcılar (özellikle görme zorluğu olanlar) okuyamaz.
+
+### 3. Çok küçük tıklama alanları
+
+44x44px altı butonlar mobilde tıklanamaz.
+
+### 4. Belirsiz etkileşimler
+
+Neyin tıklanabilir, neyin tıklanamaz olduğu belli değil.
+
+### 5. Aşırı tasarım
+
+Her yere animasyon, gradient, gölge. Basitlik yerine karmaşıklık.
+
+### 6. Platform kurallarını görmezden gelmek
+
+iOS uygulamasında Android pattern'leri veya tam tersi. Kullanıcılar platform conventions'a alışkındır.
+
+---
+
+## UI Designer Olmak İçin
+
+### Gerekli beceriler
+
+**Hard skills:**
+- Görsel tasarım prensipleri
+- Tipografi
+- Renk teorisi
+- Layout ve grid sistemleri
+- Design system oluşturma
+- Figma veya benzeri araçlar
+- Temel animasyon
+
+**Soft skills:**
+- Detaylara dikkat
+- Estetik algı
+- İş birliği
+- Geri bildirim alma ve verme
+- Trend takibi
+
+### Nasıl gelişirsin?
+
+1. **Günlük UI incele:** Kullandığın uygulamaları eleştirel gözle bak
+2. **Replika yap:** Beğendiğin UI'ları Figma'da kopyala
+3. **Daily UI challenge:** 100 günlük tasarım challengeına katıl
+4. **Design system öğren:** Material Design, HIG incele
+5. **Portfolio oluştur:** Yaptıklarını göster
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**20 dakika**
+
+**Görev:** Bir mobil uygulamanın ana ekranını UI elementleri açısından analiz et.
+
+**Adımlar:**
+
+1. Telefonunda sık kullandığın bir uygulamayı aç (Spotify, Instagram, banka uygulaması vs.)
+
+2. Ana ekranı incele ve şunları listele:
+   - Kaç farklı buton tipi var?
+   - Kaç farklı font boyutu kullanılmış?
+   - Primary renk ne? Nerelerde kullanılmış?
+   - Spacing tutarlı mı?
+   - Görsel hiyerarşi nasıl kurulmuş?
+
+3. Şu soruları cevapla:
+   - En önemli aksiyon ne? Nasıl öne çıkarılmış?
+   - Tutarsız gördüğün bir element var mı?
+   - Erişilebilirlik açısından sorun var mı?
+
+**Bonus:** Aynı kategoriden başka bir uygulamayla karşılaştır. Hangisinin UI'ı daha iyi? Neden?
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- UI (User Interface), kullanıcının ürünle etkileşime girdiği görsel yüzeydir
+- UI elementleri: layout, tipografi, renk, ikonlar, bileşenler
+- İyi UI: tutarlı, anlaşılır, erişilebilir ve estetik
+- UI Designer görsel tasarım yapar, design system oluşturur, bileşenler tasarlar
+- UI görsel katman, UX deneyim katmanı - ikisi birbirini tamamlar
+- Tutarlılık için design system kritik önemde
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [UX Nedir?](/kutuphane/ux-nedir)
+
+**Sonraki:** UX ve UI Arasındaki Fark *(yakında)*
+
+**İlgili konular:**
+- Design System Temelleri *(yakında)*
+- Visual Hierarchy Prensipleri *(yakında)*
+
+**İlgili Roadmap:** [UI Designer Roadmap → Temeller](/roadmap/ui-designer)
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [User Interface Design Basics - Usability.gov](https://www.usability.gov/what-and-why/user-interface-design.html) (İngilizce, 6 dk)
+- [UI Design - IxDF](https://www.interaction-design.org/literature/topics/ui-design) (İngilizce, 10 dk)
+- [Material Design](https://material.io/design) (Google'ın design system'ı, İngilizce)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
