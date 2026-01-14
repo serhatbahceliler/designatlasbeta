@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
+import { trackMixpanelEvent } from "@/lib/mixpanel";
 
 interface Resource {
   category: string;
@@ -45,17 +46,26 @@ export default function RoadmapClient({ sections, credits, roadmapSlug }: Roadma
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  // Google Analytics page view tracking
+  // Google Analytics & Mixpanel page view tracking
   useEffect(() => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+    if (typeof window !== 'undefined') {
       const roadmapType = roadmapSlug === 'ux-designer' ? 'UX Designer' :
                          roadmapSlug === 'ui-designer' ? 'UI Designer' :
                          roadmapSlug === 'product-designer' ? 'Product Designer' :
                          'Roadmap';
       
-      (window as any).gtag('event', 'page_view', {
-        page_title: roadmapType + ' Roadmap',
-        page_location: window.location.href,
+      // Google Analytics
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'page_view', {
+          page_title: roadmapType + ' Roadmap',
+          page_location: window.location.href,
+          page_path: window.location.pathname,
+        });
+      }
+      // Mixpanel
+      trackMixpanelEvent('roadmap_viewed', {
+        roadmap_type: roadmapType,
+        roadmap_slug: roadmapSlug,
         page_path: window.location.pathname,
       });
     }

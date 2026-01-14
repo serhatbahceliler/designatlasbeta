@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
 import { getAuthHeaders } from "@/lib/api-client";
 import ReactMarkdown from "react-markdown";
+import { trackMixpanelEvent } from "@/lib/mixpanel";
 
 interface CaseThread {
   id: string;
@@ -125,8 +126,13 @@ export default function CaseAtolyesiContent() {
 
   // Helper function to track analytics events
   const trackEvent = (eventName: string, params: Record<string, any>) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', eventName, params);
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if ((window as any).gtag) {
+        (window as any).gtag('event', eventName, params);
+      }
+      // Mixpanel
+      trackMixpanelEvent(eventName, params);
     }
   };
 
@@ -231,6 +237,13 @@ export default function CaseAtolyesiContent() {
     const isFirstMount = prevPathnameRef.current === null;
     
     if (isRouteChange || isFirstMount) {
+      // Track page view on first mount or route change to case-atolyesi
+      if (pathname === '/case-atolyesi') {
+        trackMixpanelEvent('case_atolyesi_viewed', {
+          page_path: pathname,
+        });
+      }
+      
       // Route changed or first mount - reset state
       setThreads([]);
       setSelectedThreadId(null);

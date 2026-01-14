@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 import { MarkdownRenderer } from "@/components/kutuphane/MarkdownRenderer";
+import { trackMixpanelEvent } from "@/lib/mixpanel";
 
 // Article data - In production, this would come from a CMS or API
 const ARTICLE_DATA: Record<string, any> = {
@@ -7142,17 +7143,29 @@ export default function ArticlePage() {
 
   const article = ARTICLE_DATA[slug];
 
-  // Google Analytics page view tracking
+  // Google Analytics & Mixpanel page view tracking
   useEffect(() => {
-    if (article && typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'page_view', {
-        page_title: article.title,
-        page_location: window.location.href,
-        page_path: `/kutuphane/${article.slug}`,
+    if (article && typeof window !== 'undefined') {
+      // Google Analytics
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'page_view', {
+          page_title: article.title,
+          page_location: window.location.href,
+          page_path: `/kutuphane/${article.slug}`,
+          article_title: article.title,
+          article_slug: article.slug,
+          article_category: article.category,
+          reading_time: article.readingTime,
+        });
+      }
+      // Mixpanel
+      trackMixpanelEvent('article_viewed', {
+        article_id: article.id,
         article_title: article.title,
         article_slug: article.slug,
         article_category: article.category,
         reading_time: article.readingTime,
+        page_path: `/kutuphane/${article.slug}`,
       });
     }
   }, [article]);

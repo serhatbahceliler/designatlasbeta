@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect, useRef, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import Header from "@/components/Header";
+import { trackMixpanelEvent } from "@/lib/mixpanel";
 
 // Article type definition
 export interface Article {
@@ -447,13 +448,21 @@ function KutuphaneContent() {
     setDisplayLimit(8);
   };
 
-  // Google Analytics page view tracking
+  // Google Analytics & Mixpanel page view tracking
   useEffect(() => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'page_view', {
-        page_title: 'Kütüphane',
-        page_location: window.location.href,
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'page_view', {
+          page_title: 'Kütüphane',
+          page_location: window.location.href,
+          page_path: '/kutuphane',
+        });
+      }
+      // Mixpanel
+      trackMixpanelEvent('library_page_view', {
         page_path: '/kutuphane',
+        page_title: 'Kütüphane',
       });
     }
   }, []);
@@ -490,13 +499,24 @@ function KutuphaneContent() {
   }, [sortBy]);
 
   // Track article clicks
-  const handleArticleClick = (articleId: string, articleTitle: string, articleSlug: string) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'click', {
-        event_category: 'Article',
-        event_label: articleTitle,
+  const handleArticleClick = (articleId: string, articleTitle: string, articleSlug: string, articleCategory?: string) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'click', {
+          event_category: 'Article',
+          event_label: articleTitle,
+          article_id: articleId,
+          article_slug: articleSlug,
+          page_location: window.location.href,
+        });
+      }
+      // Mixpanel
+      trackMixpanelEvent('article_clicked', {
         article_id: articleId,
+        article_title: articleTitle,
         article_slug: articleSlug,
+        article_category: articleCategory,
         page_location: window.location.href,
       });
     }
@@ -647,7 +667,7 @@ function KutuphaneContent() {
                           key={article.id}
                           href={`/kutuphane/${article.slug}`}
                           className="group block bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden hover:border-[#DEFF37]/50 transition-all duration-300 hover:-translate-y-1"
-                          onClick={() => handleArticleClick(article.id, article.title, article.slug)}
+                          onClick={() => handleArticleClick(article.id, article.title, article.slug, article.category)}
                         >
                           {article.heroImage && (
                             <div className="w-full h-48 overflow-hidden">
