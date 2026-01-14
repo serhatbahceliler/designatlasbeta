@@ -1,10 +1,6 @@
 // Mixpanel helper functions for event tracking
 
-declare global {
-  interface Window {
-    mixpanel?: any;
-  }
-}
+import mixpanel from 'mixpanel-browser';
 
 export const MIXPANEL_TOKEN = 'f6c4e96428d53c44776d7a54fcac42fb';
 
@@ -12,9 +8,9 @@ export const MIXPANEL_TOKEN = 'f6c4e96428d53c44776d7a54fcac42fb';
  * Track an event in Mixpanel
  */
 export function trackMixpanelEvent(eventName: string, properties?: Record<string, any>) {
-  if (typeof window !== 'undefined' && window.mixpanel) {
+  if (typeof window !== 'undefined') {
     try {
-      window.mixpanel.track(eventName, properties || {});
+      mixpanel.track(eventName, properties || {});
     } catch (error) {
       console.error('Mixpanel track error:', error);
     }
@@ -25,11 +21,11 @@ export function trackMixpanelEvent(eventName: string, properties?: Record<string
  * Identify a user in Mixpanel
  */
 export function identifyMixpanelUser(userId: string, userProperties?: Record<string, any>) {
-  if (typeof window !== 'undefined' && window.mixpanel) {
+  if (typeof window !== 'undefined') {
     try {
-      window.mixpanel.identify(userId);
+      mixpanel.identify(userId);
       if (userProperties) {
-        window.mixpanel.people.set(userProperties);
+        mixpanel.people.set(userProperties);
       }
     } catch (error) {
       console.error('Mixpanel identify error:', error);
@@ -41,9 +37,9 @@ export function identifyMixpanelUser(userId: string, userProperties?: Record<str
  * Reset Mixpanel user (on logout)
  */
 export function resetMixpanelUser() {
-  if (typeof window !== 'undefined' && window.mixpanel) {
+  if (typeof window !== 'undefined') {
     try {
-      window.mixpanel.reset();
+      mixpanel.reset();
     } catch (error) {
       console.error('Mixpanel reset error:', error);
     }
@@ -54,9 +50,9 @@ export function resetMixpanelUser() {
  * Set user properties in Mixpanel
  */
 export function setMixpanelUserProperties(properties: Record<string, any>) {
-  if (typeof window !== 'undefined' && window.mixpanel) {
+  if (typeof window !== 'undefined') {
     try {
-      window.mixpanel.people.set(properties);
+      mixpanel.people.set(properties);
     } catch (error) {
       console.error('Mixpanel set user properties error:', error);
     }
