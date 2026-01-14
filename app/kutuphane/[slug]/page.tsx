@@ -6652,7 +6652,7 @@ Ekiple birlikte journey map oluşturmak için workshop formatı:
 
 **Önceki:** [Information Architecture Temelleri](/kutuphane/information-architecture)
 
-**Sonraki:** Empathy Map Oluşturma *(yakında)*
+**Sonraki:** [Empathy Map Oluşturma](/kutuphane/empathy-map)
 
 **İlgili konular:**
 - [Persona Oluşturma Rehberi](/kutuphane/persona-olusturma)
@@ -6670,6 +6670,449 @@ Derinleşmek istersen:
 - [Customer Journey Mapping - NNGroup](https://www.nngroup.com/articles/customer-journey-mapping/) (İngilizce, 10 dk)
 - [Journey Mapping 101 - NNGroup](https://www.nngroup.com/articles/journey-mapping-101/) (İngilizce, 8 dk)
 - [Service Design Tools - Journey Map](https://servicedesigntools.org/tools/customer-journey-map) (İngilizce, şablonlar)
+`,
+  },
+  "empathy-map": {
+    id: "empathy-map",
+    title: "Empathy Map Oluşturma",
+    subtitle: "Kullanıcını Derinlemesine Anlamanın Yolu",
+    titleEn: "Empathy Mapping",
+    slug: "empathy-map",
+    description: "Empathy Map nedir, nasıl oluşturulur? Kullanıcının düşüncelerini, duygularını ve davranışlarını anlamak için empati haritası rehberi.",
+    category: "ux-research",
+    readingTime: 11,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    content: `# Empathy Map Oluşturma: Kullanıcını Derinlemesine Anlamanın Yolu
+
+**Seviye:** Başlangıç  
+**Kategori:** UX Research  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Kullanıcı görüşmesi yaptın, notlar aldın. Şimdi bu bilgileri nasıl anlamlı hale getireceksin?
+
+Sayfalar dolusu not arasında kaybolmak yerine, kullanıcıyı tek bir görselde özetleyebilirsin. Ne söylüyor, ne düşünüyor, ne yapıyor, ne hissediyor?
+
+**Empathy Map**, kullanıcıyı anlamanın en hızlı ve etkili yollarından biri. 15-20 dakikada oluşturabilirsin, ama sağladığı içgörüler tasarım kararlarını aylarca yönlendirebilir.
+
+Bu yazıda empathy map'in ne olduğunu, nasıl oluşturulacağını ve etkili kullanımını öğreneceksin.
+
+---
+
+## Empathy Map Nedir?
+
+[CALLOUT]
+**Empathy Map:**
+Bir kullanıcının ne söylediğini, düşündüğünü, yaptığını ve hissettiğini dört kadrana ayırarak görselleştiren araç. Araştırma verilerini sentezlemek ve kullanıcıyla empati kurmak için kullanılır.
+[/CALLOUT]
+
+Empathy map, Dave Gray tarafından XPLANE'de geliştirildi. Basit ama güçlü bir çerçeve sunuyor.
+
+Temel fikir: Kullanıcıyı dışarıdan (söyledikleri, yaptıkları) ve içeriden (düşündükleri, hissettikleri) anlamak.
+
+---
+
+## Empathy Map Ne İşe Yarar?
+
+### 1. Araştırma Verilerini Sentezler
+
+Dağınık notları organize eder. "Bu kullanıcı hakkında ne biliyoruz?" sorusuna yapılandırılmış cevap verir.
+
+### 2. Empati Oluşturur
+
+Ekibin kullanıcıyı gerçek bir insan olarak görmesini sağlar. Soyut "kullanıcı" kavramı somutlaşır.
+
+### 3. Boşlukları Gösterir
+
+Hangi kadran boş kaldı? Orada bilgi eksikliği var demektir. Daha fazla araştırma gerekebilir.
+
+### 4. Hızlı ve Kolay
+
+Persona kadar kapsamlı değil ama çok daha hızlı. Workshop'ta 20 dakikada oluşturulabilir.
+
+### 5. İş Birliğini Destekler
+
+Ekiple birlikte doldurulabilir. Farklı bakış açıları tek görselde birleşir.
+
+[INFO]
+20 dakika
+Bir empathy map oluşturmak için yeterli süre
+[/INFO]
+
+---
+
+## Empathy Map'in Yapısı
+
+### Klasik Dört Kadran
+
+**1. Says (Söylüyor)**
+Kullanıcının doğrudan söylediği şeyler. Görüşmelerden alıntılar.
+
+Örnek notlar:
+- "Bu çok karmaşık"
+- "Hızlı bir şekilde işimi halletmek istiyorum"
+- "Fiyatları karşılaştırmak zor"
+
+**2. Thinks (Düşünüyor)**
+Kullanıcının kafasından geçenler. Söylemedikleri ama düşündükleri.
+
+Örnek notlar:
+- "Acaba güvenilir mi?"
+- "Daha iyi bir alternatif var mı?"
+- "Bu kadar kişisel bilgi vermek zorunda mıyım?"
+
+**3. Does (Yapıyor)**
+Kullanıcının gözlemlenen davranışları. Aksiyonlar, alışkanlıklar.
+
+Örnek notlar:
+- Fiyatları not defterine yazıyor
+- Yorumları okuyor ama yazmıyor
+- Birden fazla sekme açıyor
+
+**4. Feels (Hissediyor)**
+Kullanıcının duyguları. Kaygılar, mutluluklar, frustrasyonlar.
+
+Örnek notlar:
+- Kaygılı (doğru seçimi yapmaktan)
+- Sabırsız (yavaş yükleme)
+- Güvensiz (ödeme güvenliği)
+
+### Güncellenmiş Versiyon
+
+NNGroup'un güncellediği versiyonda iki ek bölüm var:
+
+**5. Goals (Hedefler)**
+Kullanıcı ne başarmak istiyor?
+
+**6. Pains (Acılar)**
+Kullanıcının engelleri, frustrasyonları ne?
+
+---
+
+## Says vs Thinks: Fark Nedir?
+
+Bu iki kadran en çok karıştırılan bölüm.
+
+[TABLE]
+| Says (Söylüyor) | Thinks (Düşünüyor) |
+|-----------------|-------------------|
+| Doğrudan alıntı | Çıkarım, varsayım |
+| Sesli ifade edilmiş | İçsel, söylenmemiş |
+| "Bu butonu bulamıyorum" | "Bu site profesyonel görünmüyor" |
+| Objektif | Subjektif |
+[/TABLE]
+
+[COMPARISON]
+**Says:** "Teslimat süresi çok uzun" (kullanıcı bunu söyledi)
+**Thinks:** "Bu kadar bekleyemem, başka yerden alayım" (bunu söylemedi ama muhtemelen düşünüyor)
+[/COMPARISON]
+
+[TIP]
+💡 "Thinks" kadranı için dikkatli ol. Bunlar senin yorumların, kullanıcının gerçekten ne düşündüğünü bilemezsin. Araştırma verilerine dayandır.
+[/TIP]
+
+---
+
+## Empathy Map Nasıl Oluşturulur?
+
+### Adım 1: Amacı Belirle
+
+Kimin için empathy map yapıyorsun? Hangi bağlamda?
+
+- Belirli bir persona için
+- Belirli bir senaryo/görev için
+- Belirli bir araştırma sonrası
+
+### Adım 2: Veri Topla
+
+Empathy map araştırmaya dayanmalı:
+
+- Kullanıcı görüşmesi notları
+- Gözlem notları
+- Anket açık uçlu cevapları
+- Müşteri destek kayıtları
+- Sosyal medya yorumları
+
+### Adım 3: Şablonu Hazırla
+
+Dört (veya altı) kadranı çiz:
+- Whiteboard
+- Kağıt
+- FigJam/Miro
+- Post-it'ler
+
+### Adım 4: Kadranları Doldur
+
+Her veri parçasını uygun kadrana yerleştir:
+
+- Doğrudan alıntı → Says
+- Gözlemlenen davranış → Does
+- Yorumlanan düşünce → Thinks
+- Tespit edilen duygu → Feels
+
+### Adım 5: Paternleri Bul
+
+Doldurduktan sonra:
+- Tekrar eden temalar ne?
+- En güçlü duygular hangileri?
+- Söyledikleri ile yaptıkları tutarlı mı?
+- Boşluklar nerede?
+
+### Adım 6: İçgörüleri Çıkar
+
+Empathy map'ten ne öğrendik?
+- Ana pain point'ler
+- Gizli ihtiyaçlar
+- Tasarım fırsatları
+
+---
+
+## Empathy Map Örneği
+
+**Kullanıcı:** Online banka müşterisi, ilk kez kredi başvurusu yapıyor
+
+**Senaryo:** Mobil uygulamadan kredi başvurusu
+
+[TABLE]
+| Kadran | İçerik |
+|--------|--------|
+| **Says** | "Neden bu kadar çok belge istiyor?", "Faiz oranını anlamadım", "Ne kadar sürede onaylanır?" |
+| **Thinks** | "Acaba reddedilir miyim?", "Başka bankada daha düşük faiz var mı?", "Kredi notum yeterli mi?" |
+| **Does** | Diğer bankaların faizlerini karşılaştırıyor, hesap makinesinde ödeme tutarı hesaplıyor, eşine danışıyor |
+| **Feels** | Kaygılı (reddedilme), Kararsız (doğru seçim mi?), Sabırsız (uzun form), Güvensiz (kişisel bilgi paylaşımı) |
+| **Goals** | Hızlı onay almak, en düşük faizi bulmak, süreci anlamak |
+| **Pains** | Belirsiz süre, karmaşık terimler, çok fazla belge |
+[/TABLE]
+
+**Çıkarılan içgörüler:**
+- Kullanıcı faiz oranını anlamakta zorlanıyor → Basit açıklama/görselleştirme gerekli
+- Reddedilme kaygısı yüksek → Ön onay özelliği değerli olabilir
+- Süre belirsizliği frustrasyona yol açıyor → Tahmini süre göstermek önemli
+
+---
+
+## Empathy Map vs Persona
+
+İkisi farklı araçlar:
+
+[TABLE]
+| Özellik | Empathy Map | Persona |
+|---------|-------------|---------|
+| **Kapsam** | Anlık durum odaklı | Kapsamlı profil |
+| **İçerik** | Düşünce, duygu, davranış | Demografik, hedef, hikaye |
+| **Süre** | 15-30 dakika | Saatler/günler |
+| **Derinlik** | Yüzeysel ama hızlı | Derin ama yavaş |
+| **Kullanım** | Araştırma sentezi | Referans döküman |
+[/TABLE]
+
+[COMPARISON]
+**Empathy Map:** "Bu kullanıcı şu an ne yaşıyor?"
+**Persona:** "Bu kullanıcı kim?"
+[/COMPARISON]
+
+**Birlikte kullanım:**
+- Empathy map → Persona oluşturmak için girdi
+- Persona varsa → Empathy map ile belirli senaryoyu derinleştir
+
+---
+
+## Empathy Map Workshop
+
+Ekiple birlikte empathy map oluşturmak için:
+
+[STEPS]
+1. Hazırlık (5 dk)
+   - Araştırma verilerini paylaş
+   - Kullanıcı ve senaryoyu tanıt
+
+2. Bireysel doldurum (10 dk)
+   - Herkes post-it'lere yazar
+   - Her kadran için en az 3-4 not
+
+3. Paylaşım (10 dk)
+   - Sırayla post-it'leri yapıştır
+   - Kısa açıklama yap
+
+4. Gruplama (5 dk)
+   - Benzer notları grupla
+   - Tekrarları birleştir
+
+5. Tartışma (10 dk)
+   - Şaşırtıcı olan ne?
+   - Eksik ne?
+   - En önemli içgörü ne?
+
+6. Sonuç (5 dk)
+   - 3 ana içgörü belirle
+   - Sonraki adımları planla
+[/STEPS]
+
+**Toplam süre:** 45 dakika
+
+---
+
+## Tek Kullanıcı vs Segment
+
+Empathy map iki şekilde kullanılabilir:
+
+### Tek Kullanıcı İçin
+
+Bir görüşme sonrası, o kullanıcıyı anlamak için. Daha spesifik, daha detaylı.
+
+### Segment/Persona İçin
+
+Birden fazla kullanıcının verilerini birleştirerek, kullanıcı grubunu temsil eden empathy map. Daha genel, pattern odaklı.
+
+[TIP]
+💡 Her iki yaklaşım da geçerli. Tek kullanıcı empathy map'i araştırma notu gibi, segment empathy map'i ise persona alternatifi gibi kullanılabilir.
+[/TIP]
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Araştırma olmadan doldurmak
+
+[COMPARISON]
+❌ "Bence kullanıcı şöyle hissediyordur"
+✅ "Görüşmede kullanıcı 'çok stresli' dedi ve ses tonu gergin idi"
+[/COMPARISON]
+
+### 2. Says ve Thinks'i karıştırmak
+
+Says = doğrudan alıntı, Thinks = çıkarım. İkisini ayır.
+
+### 3. Yüzeysel doldurmak
+
+"Mutlu", "Üzgün" gibi genel ifadeler yerine spesifik ol. "Teslimat süresinin belirsizliğinden kaygılı" daha değerli.
+
+### 4. Tek kadrana yığılmak
+
+Dört kadran dengeli olmalı. Biri çok dolu, diğeri boşsa, araştırmada eksiklik var.
+
+### 5. Bir kez yapıp bırakmak
+
+Empathy map yaşayan döküman. Yeni verilerle güncelle.
+
+---
+
+## Empathy Map Kullanım Alanları
+
+### Araştırma Sonrası Sentez
+
+Görüşme veya gözlem sonrası verileri organize etmek için.
+
+### Workshop Aktivitesi
+
+Ekibin kullanıcıyı birlikte anlaması için.
+
+### Persona Geliştirme
+
+Persona oluşturmadan önce veya mevcut personayı derinleştirmek için.
+
+### Tasarım Sprintleri
+
+Hızlı kullanıcı anlayışı oluşturmak için.
+
+### Stakeholder Sunumu
+
+Kullanıcı perspektifini paylaşmak için.
+
+---
+
+## Araçlar
+
+[TABLE]
+| Araç | Ücretsiz | Özellik |
+|------|----------|---------|
+| **Miro** | Kısmen | Hazır şablonlar, iş birliği |
+| **FigJam** | Evet | Figma entegrasyonu |
+| **Mural** | Sınırlı | Workshop odaklı |
+| **Canva** | Evet | Görsel şablonlar |
+| **Post-it + Whiteboard** | Evet | Yüz yüze için ideal |
+| **Google Slides** | Evet | Basit, erişilebilir |
+[/TABLE]
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**20 dakika**
+
+**Görev:** Bir e-ticaret müşterisi için empathy map oluştur.
+
+**Senaryo:** Kullanıcı online ayakkabı siparişi veriyor ama beden konusunda endişeli.
+
+**Adımlar:**
+
+1. **Dört kadranı çiz** (kağıt veya dijital)
+
+2. **Her kadran için en az 4 madde yaz:**
+
+   **Says:** Kullanıcı ne söyler?
+   - Örnek: "Beden tablosu var mı?"
+
+   **Thinks:** Ama ne düşünür?
+   - Örnek: "Ya küçük gelirse iade süreci nasıl?"
+
+   **Does:** Ne yapar?
+   - Örnek: Yorumlarda beden bilgisi arar
+
+   **Feels:** Ne hisseder?
+   - Örnek: Kararsız
+
+3. **İçgörü çıkar:**
+   - Bu kullanıcının en büyük kaygısı ne?
+   - Tasarımla nasıl yardımcı olabilirsin?
+
+**Kontrol:** Empathy map'ine bakan biri, bu kullanıcının deneyimini anlayabilmeli.
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Empathy Map, kullanıcının söylediğini, düşündüğünü, yaptığını ve hissettiğini görselleştirir
+- Dört kadran: Says, Thinks, Does, Feels (+ Goals, Pains)
+- Araştırma verilerini sentezlemek için hızlı ve etkili
+- Says = doğrudan alıntı, Thinks = çıkarım - ikisini karıştırma
+- Persona'dan daha hızlı, daha az kapsamlı
+- Workshop formatında ekiple birlikte oluşturulabilir
+- Araştırma verisi olmadan varsayımla doldurma
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [User Journey Map Oluşturma](/kutuphane/user-journey-map)
+
+**Sonraki:** Anket Tasarımı: Doğru Soru Sorma *(yakında)*
+
+**İlgili konular:**
+- [Persona Oluşturma Rehberi](/kutuphane/persona-olusturma)
+- [Kullanıcı Görüşmesi Nasıl Yapılır?](/kutuphane/kullanici-gorusmesi)
+- [User Journey Map Oluşturma](/kutuphane/user-journey-map)
+
+**İlgili Roadmap:** UX Designer Roadmap → Research
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Empathy Mapping - NNGroup](https://www.nngroup.com/articles/empathy-mapping/) (İngilizce, 8 dk)
+- [Updated Empathy Map - NNGroup](https://www.nngroup.com/articles/empathy-mapping/) (İngilizce, güncel versiyon)
+- [Empathy Map Canvas - Dave Gray](https://gamestorming.com/empathy-mapping/) (İngilizce, orijinal kaynak)
 `,
   },
 };

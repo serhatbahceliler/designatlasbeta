@@ -275,6 +275,21 @@ const MOCK_ARTICLES: Article[] = [
     author: "Serhat Bahçeliler",
     views: 0,
   },
+  {
+    id: "empathy-map",
+    title: "Empathy Map Oluşturma",
+    subtitle: "Kullanıcını Derinlemesine Anlamanın Yolu",
+    titleEn: "Empathy Mapping",
+    slug: "empathy-map",
+    description: "Empathy Map nedir, nasıl oluşturulur? Kullanıcının düşüncelerini, duygularını ve davranışlarını anlamak için empati haritası rehberi.",
+    category: "ux-research",
+    readingTime: 11,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    views: 0,
+  },
 ];
 
 type SortOption = "newest" | "popular" | "az";
