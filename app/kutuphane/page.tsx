@@ -469,31 +469,56 @@ function KutuphaneContent() {
 
   // Track search events
   useEffect(() => {
-    if (debouncedSearchQuery && typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'search', {
+    if (debouncedSearchQuery && typeof window !== 'undefined') {
+      // Google Analytics
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'search', {
+          search_term: debouncedSearchQuery,
+          page_location: window.location.href,
+        });
+      }
+      // Mixpanel
+      trackMixpanelEvent('article_searched', {
         search_term: debouncedSearchQuery,
-        page_location: window.location.href,
+        page_path: window.location.pathname,
       });
     }
   }, [debouncedSearchQuery]);
 
   // Track category filter events
   useEffect(() => {
-    if (selectedCategory !== 'all' && typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'filter', {
+    if (selectedCategory !== 'all' && typeof window !== 'undefined') {
+      // Google Analytics
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'filter', {
+          filter_type: 'category',
+          filter_value: selectedCategory,
+          page_location: window.location.href,
+        });
+      }
+      // Mixpanel
+      trackMixpanelEvent('article_filtered', {
         filter_type: 'category',
         filter_value: selectedCategory,
-        page_location: window.location.href,
+        page_path: window.location.pathname,
       });
     }
   }, [selectedCategory]);
 
   // Track sort events
   useEffect(() => {
-    if (sortBy !== 'newest' && typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'sort', {
+    if (sortBy !== 'newest' && typeof window !== 'undefined') {
+      // Google Analytics
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'sort', {
+          sort_type: sortBy,
+          page_location: window.location.href,
+        });
+      }
+      // Mixpanel
+      trackMixpanelEvent('article_sorted', {
         sort_type: sortBy,
-        page_location: window.location.href,
+        page_path: window.location.pathname,
       });
     }
   }, [sortBy]);
