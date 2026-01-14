@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 import { User } from "@supabase/supabase-js";
 import { supabase } from "@/lib/supabase";
+import { identifyMixpanelUser, resetMixpanelUser } from "@/lib/mixpanel";
 
 interface Profile {
   id: string;
@@ -52,16 +53,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   };
 
+  // Identify user in Mixpanel when both user and profile are available
+  useEffect(() => {
+    if (user && profile) {
+      identifyMixpanelUser(user.id, {
+        email: user.email,
+        first_name: profile.first_name,
+        last_name: profile.last_name,
+        created_at: profile.created_at,
+      });
+    }
+  }, [user, profile]);
+
   const signOut = async () => {
     try {
       const { error } = await supabase.auth.signOut();
       if (error) throw error;
+      
+      // Reset Mixpanel user on logout
+      resetMixpanelUser();
       
       setUser(null);
       setProfile(null);
     } catch (error) {
       console.error("Error signing out:", error);
       // Still clear local state even if signout fails
+      resetMixpanelUser();
       setUser(null);
       setProfile(null);
     }
@@ -141,6 +158,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         // Always refresh profile after creating/checking
         await refreshProfile();
       } else {
+        // Reset Mixpanel user on logout
+        resetMixpanelUser();
         setProfile(null);
       }
     });
