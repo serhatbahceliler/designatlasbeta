@@ -245,6 +245,21 @@ const MOCK_ARTICLES: Article[] = [
     author: "Serhat Bahçeliler",
     views: 0,
   },
+  {
+    id: "information-architecture",
+    title: "Information Architecture Temelleri",
+    subtitle: "İçeriği Organize Etmenin Sanatı",
+    titleEn: "Information Architecture",
+    slug: "information-architecture",
+    description: "Information Architecture (IA) nedir? Bilgi mimarisi nasıl oluşturulur? Site haritası, navigasyon ve içerik organizasyonu rehberi.",
+    category: "ux-design",
+    readingTime: 13,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    views: 0,
+  },
 ];
 
 type SortOption = "newest" | "popular" | "az";

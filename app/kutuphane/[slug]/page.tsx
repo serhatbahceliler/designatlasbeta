@@ -5707,7 +5707,7 @@ Aynı yapıyı:
 
 **Önceki:** [Prototype Nedir?](/kutuphane/prototype-nedir)
 
-**Sonraki:** Information Architecture Temelleri *(yakında)*
+**Sonraki:** [Information Architecture Temelleri](/kutuphane/information-architecture)
 
 **İlgili konular:**
 - [Wireframe Nedir?](/kutuphane/wireframe-nedir)
@@ -5725,6 +5725,460 @@ Derinleşmek istersen:
 - [Wireframes vs Mockups vs Prototypes - UXPin](https://www.uxpin.com/studio/blog/wireframe-vs-mockup-vs-prototype/) (İngilizce, 8 dk)
 - [Fidelity in Design - NNGroup](https://www.nngroup.com/articles/ux-prototype-hi-lo-fidelity/) (İngilizce, 6 dk)
 - [Design Fidelity - IxDF](https://www.interaction-design.org/literature/article/design-fidelity-what-it-is-and-why-it-matters) (İngilizce, 10 dk)
+`,
+  },
+  "information-architecture": {
+    id: "information-architecture",
+    title: "Information Architecture Temelleri",
+    subtitle: "İçeriği Organize Etmenin Sanatı",
+    titleEn: "Information Architecture",
+    slug: "information-architecture",
+    description: "Information Architecture (IA) nedir? Bilgi mimarisi nasıl oluşturulur? Site haritası, navigasyon ve içerik organizasyonu rehberi.",
+    category: "ux-design",
+    readingTime: 13,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    content: `# Information Architecture Temelleri: İçeriği Organize Etmenin Sanatı
+
+**Seviye:** Başlangıç - Orta  
+**Kategori:** UX Design  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Bir e-ticaret sitesinde "laptop çantası" arıyorsun. Nereye bakarsın?
+
+- Elektronik → Bilgisayar Aksesuarları?
+- Moda → Çantalar?
+- Ofis → Laptop Aksesuarları?
+
+Eğer siteye bağlı olarak farklı yerlere bakıyorsan, bu bir **Information Architecture** problemi.
+
+IA, kullanıcıların içeriği nasıl bulduğunu, anladığını ve gezindiğini belirleyen görünmez iskelet. Kötü IA, güzel UI'ı bile kullanılamaz kılar. "Aradığımı bulamıyorum" şikayetinin arkasında genellikle IA sorunları yatar.
+
+Bu yazıda Information Architecture'ın ne olduğunu, temel bileşenlerini ve nasıl oluşturulacağını öğreneceksin.
+
+---
+
+## Information Architecture Nedir?
+
+[CALLOUT]
+**Information Architecture (IA):**
+İçeriğin ve bilginin nasıl organize edileceğini, yapılandırılacağını, etiketleneceğini ve sunulacağını belirleyen disiplin. Kullanıcıların bilgiyi bulmasını, anlamasını ve kullanmasını kolaylaştırır.
+[/CALLOUT]
+
+IA terimi 1976'da Richard Saul Wurman tarafından ortaya atıldı. Dijital dünyada ise özellikle web sitelerinin karmaşıklaşmasıyla önem kazandı.
+
+**IA'nın temel sorusu:** "Kullanıcı aradığını nasıl bulacak?"
+
+---
+
+## IA Neden Önemli?
+
+### 1. Bulunabilirlik (Findability)
+
+Kullanıcılar aradıklarını bulamazsa, site ne kadar güzel olursa olsun işe yaramaz. IA, içeriği bulunabilir kılar.
+
+### 2. Anlaşılabilirlik (Understandability)
+
+"Bu link nereye götürür?", "Bu kategori neyi içerir?" sorularının cevabı net olmalı. İyi IA, belirsizliği azaltır.
+
+### 3. Ölçeklenebilirlik (Scalability)
+
+Bugün 50 ürün var, yarın 5000 olacak. İyi IA, büyümeye hazır yapı sağlar.
+
+### 4. SEO Etkisi
+
+Arama motorları da IA'yı anlar. Mantıklı URL yapısı, breadcrumb, site haritası SEO'yu güçlendirir.
+
+[INFO]
+%50 kullanıcı
+Kötü navigasyon nedeniyle siteyi terk ediyor (Forrester Research)
+[/INFO]
+
+---
+
+## IA'nın Dört Bileşeni
+
+Information Architecture dört temel sistemden oluşur:
+
+### 1. Organizasyon Sistemleri (Organization Systems)
+
+İçeriğin nasıl gruplandığı ve sınıflandırıldığı.
+
+**Organizasyon şemaları:**
+
+[TABLE]
+| Şema Tipi | Açıklama | Örnek |
+|-----------|----------|-------|
+| **Alfabetik** | A'dan Z'ye sıralama | Sözlük, telefon rehberi |
+| **Kronolojik** | Zamana göre sıralama | Blog yazıları, haber arşivi |
+| **Coğrafi** | Lokasyona göre | Mağaza bulucu, hava durumu |
+| **Konu bazlı** | Temaya göre gruplama | E-ticaret kategorileri |
+| **Görev bazlı** | Yapılacak işe göre | Online bankacılık |
+| **Hedef kitleye göre** | Kullanıcı tipine göre | Bireysel / Kurumsal |
+[/TABLE]
+
+**Organizasyon yapıları:**
+
+- **Hiyerarşik:** Ağaç yapısı, ana kategoriler ve alt kategoriler
+- **Veritabanı:** Metadata bazlı, filtreleme ve arama
+- **Hipertekst:** İçerikler arası çapraz linkler, wiki tarzı
+
+### 2. Etiketleme Sistemleri (Labeling Systems)
+
+İçeriğin nasıl adlandırıldığı. Menü isimleri, buton metinleri, kategori başlıkları.
+
+**İyi etiketleme özellikleri:**
+
+- Açık ve anlaşılır
+- Tutarlı (aynı şey için aynı terim)
+- Kullanıcının dilinde (jargon değil)
+- Kısa ama açıklayıcı
+
+[COMPARISON]
+❌ Kötü etiket: "Çözümlerimiz", "Kaynaklar", "Daha Fazla"
+✅ İyi etiket: "Ürünler", "Yardım Merkezi", "Fiyatlandırma"
+[/COMPARISON]
+
+### 3. Navigasyon Sistemleri (Navigation Systems)
+
+Kullanıcının içerik içinde nasıl hareket ettiği.
+
+**Navigasyon tipleri:**
+
+[TABLE]
+| Tip | Açıklama | Örnek |
+|-----|----------|-------|
+| **Global** | Her sayfada aynı, ana menü | Header navigation |
+| **Lokal** | Bölüme özel alt menü | Sidebar, category nav |
+| **Contextual** | İçerik içi linkler | "İlgili ürünler", inline link |
+| **Supplemental** | Yardımcı navigasyon | Site haritası, index |
+| **Breadcrumb** | Konum göstergesi | Ana Sayfa > Kategori > Ürün |
+[/TABLE]
+
+### 4. Arama Sistemleri (Search Systems)
+
+Kullanıcının içeriği arayarak bulması.
+
+**Arama bileşenleri:**
+
+- Arama kutusu konumu ve tasarımı
+- Arama sonuçları sayfası
+- Filtreleme ve sıralama
+- Öneri ve otomatik tamamlama
+- "Sonuç bulunamadı" durumu
+
+[TIP]
+💡 Navigasyon ve arama birbirini tamamlar. Bazı kullanıcılar gezinmeyi, bazıları aramayı tercih eder. İkisini de iyi tasarla.
+[/TIP]
+
+---
+
+## IA Nasıl Oluşturulur?
+
+### Adım 1: İçerik Envanteri
+
+Mevcut içeriği listele. Ne var, ne yok?
+
+**İçerik envanteri tablosu:**
+
+| Sayfa/İçerik | URL | Kategori | Durum | Notlar |
+|--------------|-----|----------|-------|--------|
+| Ana sayfa | / | - | Aktif | - |
+| Hakkımızda | /hakkimizda | Kurumsal | Güncel değil | Güncelleme gerek |
+| Ürün A | /urunler/a | Ürünler | Aktif | - |
+
+### Adım 2: İçerik Denetimi (Audit)
+
+Mevcut içeriği değerlendir:
+- Güncel mi?
+- Değerli mi?
+- Duplicate var mı?
+- Eksik ne var?
+
+### Adım 3: Kullanıcı Araştırması
+
+Kullanıcılar içeriği nasıl düşünüyor? İki temel yöntem:
+
+**Card Sorting:**
+Kullanıcılara içerik kartları verip gruplamalarını istersin.
+
+- **Açık card sort:** Kullanıcı grupları ve isimleri kendisi belirler
+- **Kapalı card sort:** Kategoriler sabit, kullanıcı kartları yerleştirir
+- **Hibrit:** İkisinin karışımı
+
+**Tree Testing:**
+Oluşturduğun yapıyı test edersin. "X'i bul" görevi verip, kullanıcının doğru yolu izleyip izlemediğini ölçersin.
+
+### Adım 4: Yapıyı Oluştur
+
+Araştırma bulgularına göre:
+- Ana kategorileri belirle
+- Alt kategorileri oluştur
+- Çapraz ilişkileri düşün
+- Derinliği dengele (çok derin = kaybolma, çok sığ = kalabalık)
+
+### Adım 5: Site Haritası Çiz
+
+Yapıyı görselleştir. Tüm sayfalar ve ilişkileri.
+
+### Adım 6: Test Et ve İtere Et
+
+Tree testing ile yapıyı doğrula. Sorunları düzelt, tekrar test et.
+
+---
+
+## Site Haritası Oluşturma
+
+Site haritası, IA'nın görsel temsili. Tüm sayfaları ve hiyerarşiyi gösterir.
+
+### Site Haritası İçeriği
+
+Her sayfa için:
+- Sayfa adı
+- Sayfa ID veya URL
+- Hiyerarşik konum
+- Sayfa tipi (landing, content, form vs.)
+
+### Site Haritası Formatları
+
+**Liste formatı:**
+
+Ana Sayfa
+1.1 Ürünler
+1.1.1 Kategori A
+1.1.2 Kategori B
+1.2 Hakkımızda
+1.3 İletişim
+
+**Görsel format:**
+Figma, Miro veya özel sitemap araçlarıyla kutular ve bağlantılar şeklinde.
+
+### Site Haritası İpuçları
+
+- Tutarlı isimlendirme kullan
+- Derinliği 3-4 seviyeyle sınırla
+- Büyük sitelerde bölümlere ayır
+- Versiyon kontrolü yap
+
+---
+
+## Navigasyon Tasarımı
+
+### Navigasyon Prensipleri
+
+**1. Tutarlılık**
+Global navigasyon her sayfada aynı yerde, aynı görünümde olmalı.
+
+**2. Netlik**
+Her link nereye gittiğini açıkça belirtmeli.
+
+**3. Bağlam**
+Kullanıcı nerede olduğunu bilmeli (aktif state, breadcrumb).
+
+**4. Erişilebilirlik**
+Klavye navigasyonu, ekran okuyucu uyumu.
+
+### Navigasyon Kararları
+
+**Kaç ana menü öğesi?**
+5-7 öğe ideal. Daha fazlası göz karmaşası yaratır.
+
+**Mega menü gerekli mi?**
+Çok içerik varsa faydalı, az içerik için overkill.
+
+**Hamburger menü ne zaman?**
+Mobilde yaygın, desktop'ta tartışmalı. Kritik linkleri gizlememeli.
+
+**Footer navigasyon ne içermeli?**
+Yasal linkler, secondary sayfalar, site haritası linki.
+
+---
+
+## Card Sorting Detayları
+
+Card sorting, IA için en değerli araştırma yöntemi.
+
+### Nasıl Yapılır?
+
+[STEPS]
+1. İçerik kartları hazırla
+   Her içerik/sayfa için bir kart. 30-60 kart ideal.
+
+2. Katılımcı bul
+   5-15 katılımcı yeterli veri sağlar.
+
+3. Seansı yürüt
+   Fiziksel kartlar veya online araç (OptimalSort, Maze).
+
+4. Sonuçları analiz et
+   Hangi kartlar sıkça birlikte gruplandı?
+   Hangi isimler verildi?
+
+5. Paternleri bul
+   Ortak gruplamalar ve isimlendirmeler.
+[/STEPS]
+
+### Araçlar
+
+[TABLE]
+| Araç | Ücretsiz | Özellik |
+|------|----------|---------|
+| **OptimalSort** | Sınırlı | Kapsamlı analiz |
+| **Maze** | Sınırlı | Kullanıcı testi entegrasyonu |
+| **UXtweak** | Sınırlı | Tree testing dahil |
+| **Miro** | Kısmen | Manuel analiz gerekir |
+| **Fiziksel kartlar** | Evet | Yüz yüze seanslar için |
+[/TABLE]
+
+---
+
+## Tree Testing Detayları
+
+Oluşturduğun yapıyı test etmenin yolu.
+
+### Nasıl Yapılır?
+
+1. Site yapısını araca yükle (sadece yapı, görsel yok)
+2. Görevler oluştur: "X'i nerede ararsın?"
+3. Katılımcıları yönlendir
+4. Başarı oranını ve yolu analiz et
+
+### Metrikler
+
+- **Başarı oranı:** Doğru yeri bulan yüzdesi
+- **Doğrudanlık:** İlk denemede bulanlar
+- **Zaman:** Görevi tamamlama süresi
+- **Yol:** Kullanıcının izlediği rota
+
+[TIP]
+💡 Tree testing, card sorting'den sonra yapılır. Önce yapıyı keşfet (card sort), sonra doğrula (tree test).
+[/TIP]
+
+---
+
+## IA Hataları
+
+### 1. Organizasyon bazlı yapı
+
+[COMPARISON]
+❌ Şirket organizasyonuna göre: "Pazarlama", "Satış", "Operasyon"
+✅ Kullanıcı ihtiyacına göre: "Ürünler", "Destek", "Hesabım"
+[/COMPARISON]
+
+Kullanıcı şirketin iç yapısını bilmez, bilmek zorunda da değil.
+
+### 2. Çok derin hiyerarşi
+
+4+ seviye derinlik kullanıcıyı kaybettirir. "3 tık kuralı" tam doğru olmasa da, derinliği sınırla.
+
+### 3. Tutarsız etiketleme
+
+Bir yerde "Ürünler", başka yerde "Çözümler", başka yerde "Hizmetler". Aynı şey için aynı terim.
+
+### 4. Arama ve navigasyon ayrımı
+
+İkisi birbirini tamamlamalı. Sadece arama veya sadece navigasyon yetmez.
+
+### 5. Test etmemek
+
+"Bence mantıklı" yetersiz. Kullanıcılarla test et.
+
+---
+
+## IA Dökümanları
+
+### Site Haritası
+
+Tüm sayfalar ve hiyerarşi.
+
+### Navigasyon Spec
+
+Menü yapısı, dropdown davranışı, mobile adaptasyon.
+
+### Taksonomi
+
+Kategori ve etiket listesi, tanımlarıyla.
+
+### URL Yapısı
+
+URL patternleri ve kuralları.
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**25 dakika**
+
+**Görev:** Bir online kütüphane için basit IA oluştur.
+
+**Senaryo:** Kullanıcılar kitap arayabiliyor, ödünç alabiliyor, listeler oluşturabiliyor.
+
+**Adım 1 - İçerik listesi (5 dk)**
+Bu sitede hangi sayfalar/içerikler olmalı? Listele (en az 15 öğe).
+
+**Adım 2 - Gruplama (10 dk)**
+Listelediğin öğeleri mantıklı kategorilere ayır. Her kategoriye isim ver.
+
+**Adım 3 - Hiyerarşi (5 dk)**
+Ana menüde ne olacak? Alt sayfalar nasıl organize olacak?
+
+**Adım 4 - Navigasyon (5 dk)**
+- Global nav'da hangi öğeler?
+- Kullanıcı giriş yapmışsa ne değişir?
+- Footer'da ne olmalı?
+
+**Kontrol soruları:**
+- Kullanıcı "Tarih kitapları"nı kaç tıkta bulur?
+- "Ödünç aldıklarım" nerede?
+- Arama sonuçlarında filtreleme var mı?
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- IA, içeriğin nasıl organize edildiğini, etiketlendiğini ve sunulduğunu belirler
+- Dört bileşen: Organizasyon, etiketleme, navigasyon, arama sistemleri
+- İçerik envanteri → kullanıcı araştırması → yapı oluşturma → test akışı
+- Card sorting kullanıcıların içeriği nasıl grupladığını gösterir
+- Tree testing oluşturduğun yapının çalışıp çalışmadığını doğrular
+- Site haritası IA'nın görsel temsilidir
+- Organizasyon yapısına göre değil, kullanıcı ihtiyacına göre tasarla
+- Test etmeden canlıya alma
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Wireframe vs Mockup vs Prototype](/kutuphane/wireframe-mockup-prototype)
+
+**Sonraki:** User Journey Map Oluşturma *(yakında)*
+
+**İlgili konular:**
+- [User Flow ve Task Flow](/kutuphane/user-flow-task-flow)
+- Card Sorting Nedir? *(yakında)*
+- Tree Testing Nedir? *(yakında)*
+
+**İlgili Roadmap:** UX Designer Roadmap → Yapı ve Mimari
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Information Architecture - NNGroup](https://www.nngroup.com/articles/ia-vs-navigation/) (İngilizce, 8 dk)
+- [Information Architecture - IxDF](https://www.interaction-design.org/literature/topics/information-architecture) (İngilizce, 12 dk)
+- [Information Architecture for the Web and Beyond - Rosenfeld & Morville](https://www.oreilly.com/library/view/information-architecture-4th/9781491913529/) (Kitap, IA'nın kutsal kitabı)
 `,
   },
 };
@@ -6337,6 +6791,40 @@ export default function ArticlePage() {
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "UX ve UI tasarım becerilerinin yanı sıra, ürün düşüncesi, iş metrikleri anlayışı, iletişim ve iş birliği becerileri gerekir. Teknik olarak araştırma, wireframing, prototyping, visual design ve temel analitik bilgisi önemlidir.",
+              },
+            },
+          ],
+          "information-architecture": [
+            {
+              "@type": "Question",
+              name: "Information Architecture nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Information Architecture (Bilgi Mimarisi), içeriğin ve bilginin nasıl organize edileceğini, yapılandırılacağını ve etiketleneceğini belirleyen disiplindir. Kullanıcıların ihtiyaçlarını bulmalarını ve anlamalarını kolaylaştırır.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Information Architecture ne işe yarar?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "IA, kullanıcıların içerik içinde kaybolmamasını sağlar. İyi bir IA ile kullanıcılar aradıklarını hızlıca bulur, nerede olduklarını bilir ve bir sonraki adımı tahmin edebilir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Site haritası ve IA aynı şey mi?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Hayır. Site haritası, IA'nın bir çıktısıdır. IA daha geniş bir kavram olup organizasyon sistemleri, etiketleme, navigasyon ve arama sistemlerini kapsar. Site haritası sadece sayfa hiyerarşisini gösterir.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Card sorting nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Card sorting, kullanıcıların içeriği nasıl grupladığını ve adlandırdığını anlamak için kullanılan bir IA araştırma yöntemidir. Kullanıcılara içerik kartları verilir ve mantıklı gelen şekilde gruplamalarını istersiniz.",
               },
             },
           ],
