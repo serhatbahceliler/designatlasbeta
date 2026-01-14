@@ -260,6 +260,21 @@ const MOCK_ARTICLES: Article[] = [
     author: "Serhat Bahçeliler",
     views: 0,
   },
+  {
+    id: "user-journey-map",
+    title: "User Journey Map Oluşturma",
+    subtitle: "Kullanıcı Yolculuğunu Görselleştirme Rehberi",
+    titleEn: "User Journey Mapping",
+    slug: "user-journey-map",
+    description: "User Journey Map nedir, nasıl oluşturulur? Kullanıcı yolculuğu haritası adım adım rehberi. Şablon, örnekler ve en iyi pratikler.",
+    category: "ux-design",
+    readingTime: 14,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    views: 0,
+  },
 ];
 
 type SortOption = "newest" | "popular" | "az";

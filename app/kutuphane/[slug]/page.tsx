@@ -6161,7 +6161,7 @@ Ana menüde ne olacak? Alt sayfalar nasıl organize olacak?
 
 **Önceki:** [Wireframe vs Mockup vs Prototype](/kutuphane/wireframe-mockup-prototype)
 
-**Sonraki:** User Journey Map Oluşturma *(yakında)*
+**Sonraki:** [User Journey Map Oluşturma](/kutuphane/user-journey-map)
 
 **İlgili konular:**
 - [User Flow ve Task Flow](/kutuphane/user-flow-task-flow)
@@ -6179,6 +6179,497 @@ Derinleşmek istersen:
 - [Information Architecture - NNGroup](https://www.nngroup.com/articles/ia-vs-navigation/) (İngilizce, 8 dk)
 - [Information Architecture - IxDF](https://www.interaction-design.org/literature/topics/information-architecture) (İngilizce, 12 dk)
 - [Information Architecture for the Web and Beyond - Rosenfeld & Morville](https://www.oreilly.com/library/view/information-architecture-4th/9781491913529/) (Kitap, IA'nın kutsal kitabı)
+`,
+  },
+  "user-journey-map": {
+    id: "user-journey-map",
+    title: "User Journey Map Oluşturma",
+    subtitle: "Kullanıcı Yolculuğunu Görselleştirme Rehberi",
+    titleEn: "User Journey Mapping",
+    slug: "user-journey-map",
+    description: "User Journey Map nedir, nasıl oluşturulur? Kullanıcı yolculuğu haritası adım adım rehberi. Şablon, örnekler ve en iyi pratikler.",
+    category: "ux-design",
+    readingTime: 14,
+    featured: false,
+    publishedAt: "2025-01-14",
+    heroImage: "",
+    author: "Serhat Bahçeliler",
+    content: `# User Journey Map Oluşturma: Kullanıcı Yolculuğunu Görselleştirme Rehberi
+
+**Seviye:** Başlangıç - Orta  
+**Kategori:** UX Design  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Kullanıcın ürününle ilk karşılaştığı andan, hedefine ulaştığı ana kadar neler yaşıyor?
+
+Sadece uygulamadaki adımlar değil. Öncesinde ne düşünüyordu? Hangi alternatifleri değerlendirdi? Nereden geldi? Hangi anlarda mutlu oldu, hangi anlarda sinirlenedi? Müşteri desteğini aradı mı? Sosyal medyada ne gördü?
+
+Tüm bu yolculuğu tek bir görselde anlamak - işte **User Journey Map** bunu sağlar.
+
+Journey map, kullanıcı deneyiminin büyük resmini gösterir. Pain point'leri ortaya çıkarır, fırsatları görünür kılar, tüm ekibi aynı sayfaya getirir.
+
+Bu yazıda journey map'in ne olduğunu, nasıl oluşturulacağını ve etkili kullanımını öğreneceksin.
+
+---
+
+## User Journey Map Nedir?
+
+[CALLOUT]
+**User Journey Map:**
+Bir kullanıcının belirli bir hedefe ulaşmak için geçtiği tüm aşamaları, bu aşamalardaki eylemlerini, düşüncelerini, duygularını ve temas noktalarını kronolojik olarak görselleştiren diyagram.
+[/CALLOUT]
+
+Journey map, kullanıcının hikayesini anlatır. Sadece "ne yaptı" değil, "ne hissetti", "ne düşündü", "neyle karşılaştı" sorularına da cevap verir.
+
+---
+
+## Journey Map Ne İşe Yarar?
+
+### 1. Pain Point'leri Görünür Kılar
+
+Kullanıcının nerede zorlandığını, hayal kırıklığı yaşadığını gösterir. Sayılarla görünmeyen problemler journey map'te ortaya çıkar.
+
+### 2. Fırsatları Ortaya Çıkarır
+
+"Burada kullanıcıya yardımcı olabilir miyiz?" sorusuna cevap verir. Geliştirilecek alanları gösterir.
+
+### 3. Empati Oluşturur
+
+Tüm ekip, kullanıcının gözünden dünyayı görür. Developer'dan CEO'ya herkes aynı hikayeyi anlar.
+
+### 4. Silo'ları Kırar
+
+Farklı departmanlar (pazarlama, satış, ürün, destek) kullanıcının yolculuğundaki kendi rollerini görür. İş birliği artar.
+
+### 5. Önceliklendirme Sağlar
+
+Hangi problem daha kritik? Journey map'teki duygu eğrisi, önceliklendirmeye yardımcı olur.
+
+[INFO]
+2x daha etkili
+Journey map kullanan ekipler, müşteri memnuniyetinde 2 kat daha fazla iyileşme sağlıyor (Forrester)
+[/INFO]
+
+---
+
+## Journey Map Bileşenleri
+
+Bir journey map tipik olarak şu katmanları içerir:
+
+### 1. Persona
+
+Journey map belirli bir kullanıcı tipi için oluşturulur. Kim bu yolculuğu yapıyor?
+
+### 2. Senaryo
+
+Hangi hedef için yolculuk? "Yeni müşterinin ilk satın alımı" veya "Mevcut müşterinin abonelik iptali" gibi.
+
+### 3. Aşamalar (Phases)
+
+Yolculuğun ana bölümleri. Genellikle 4-7 aşama.
+
+Örnek aşamalar:
+- Farkındalık
+- Değerlendirme
+- Satın Alma
+- Kullanım
+- Destek
+- Sadakat/Terk
+
+### 4. Eylemler (Actions)
+
+Her aşamada kullanıcı ne yapıyor? Somut davranışlar.
+
+### 5. Düşünceler (Thoughts)
+
+Kullanıcının kafasından neler geçiyor? Sorular, beklentiler.
+
+### 6. Duygular (Emotions)
+
+Kullanıcı ne hissediyor? Mutlu, kaygılı, sinirli, şaşkın?
+
+### 7. Temas Noktaları (Touchpoints)
+
+Kullanıcı hangi kanallarla etkileşiyor? Web, mobil, mağaza, telefon, email, sosyal medya...
+
+### 8. Pain Points
+
+Nerede sorun yaşıyor? Frustrasyonlar, engeller.
+
+### 9. Fırsatlar (Opportunities)
+
+Ne yapabiliriz? İyileştirme önerileri.
+
+---
+
+## Journey Map Türleri
+
+### Current State (Mevcut Durum)
+
+Şu anki deneyimi gösterir. Problemleri tespit için kullanılır.
+
+### Future State (Gelecek Durum)
+
+İdeal deneyimi gösterir. Vizyon belirleme için kullanılır.
+
+### Day in the Life
+
+Ürün odaklı değil, kullanıcının günü odaklı. Daha geniş bağlamı anlamak için.
+
+### Service Blueprint
+
+Journey map + arka plan süreçleri. Kullanıcının görmediği operasyonları da içerir. Daha teknik.
+
+[TABLE]
+| Tür | Odak | Ne Zaman Kullan |
+|-----|------|-----------------|
+| **Current State** | Mevcut deneyim | Problem tespiti |
+| **Future State** | İdeal deneyim | Vizyon/strateji |
+| **Day in the Life** | Kullanıcının günü | Bağlam anlama |
+| **Service Blueprint** | Arka plan dahil | Operasyon tasarımı |
+[/TABLE]
+
+---
+
+## Journey Map Nasıl Oluşturulur?
+
+### Adım 1: Hazırlık
+
+**Persona belirle:**
+Hangi kullanıcı tipi için? Tek bir persona seç.
+
+**Senaryo tanımla:**
+Hangi yolculuk? Başlangıç ve bitiş noktası ne?
+
+**Kapsam belirle:**
+Sadece dijital mi? Tüm temas noktaları mı?
+
+### Adım 2: Veri Topla
+
+Journey map araştırmaya dayanmalı. Veri kaynakları:
+
+- Kullanıcı görüşmeleri
+- Anketler
+- Analitik veriler
+- Müşteri destek kayıtları
+- Sosyal medya yorumları
+- Satış ekibi feedback'i
+
+[WARNING]
+⚠️ Varsayımla journey map oluşturma. Masa başında "bence kullanıcı şöyle hisseder" demek tehlikeli. Araştırma verisi kullan.
+[/WARNING]
+
+### Adım 3: Aşamaları Belirle
+
+Yolculuğu mantıksal bölümlere ayır.
+
+**Örnek - E-ticaret yolculuğu:**
+1. İhtiyaç Farkındalığı
+2. Araştırma
+3. Değerlendirme
+4. Satın Alma
+5. Teslimat Bekleme
+6. Ürün Kullanımı
+7. Destek (gerekirse)
+
+### Adım 4: Her Aşamayı Doldur
+
+Her aşama için şu bilgileri ekle:
+
+**Eylemler:** Kullanıcı ne yapıyor?
+- "Google'da arama yapıyor"
+- "Ürün yorumlarını okuyor"
+- "Sepete ekliyor"
+
+**Düşünceler:** Ne düşünüyor?
+- "Acaba bu ürün işimi görür mü?"
+- "Fiyat makul mü?"
+- "Kargo ne zaman gelir?"
+
+**Duygular:** Ne hissediyor?
+- Heyecanlı, kaygılı, kararsız, mutlu, sinirli...
+
+**Temas noktaları:** Nerede etkileşiyor?
+- Google, web sitesi, mobil app, email, müşteri hizmetleri...
+
+### Adım 5: Pain Point ve Fırsatları İşaretle
+
+Her aşamada:
+- Kırmızı: Pain point'ler, sorunlar
+- Yeşil: Fırsatlar, iyileştirme alanları
+
+### Adım 6: Duygu Eğrisi Çiz
+
+Aşamalar boyunca kullanıcının duygusal yolculuğunu çiz. Yukarı = pozitif, aşağı = negatif.
+
+Bu eğri, en kritik problemleri görsel olarak gösterir.
+
+### Adım 7: Görselleştir ve Paylaş
+
+- Temiz ve okunabilir format
+- Ekiple paylaş
+- Duvara as veya dijital olarak erişilebilir tut
+
+---
+
+## Journey Map Şablonu
+
+Temel bir journey map şablonu:
+
+[TABLE]
+| Katman | Aşama 1 | Aşama 2 | Aşama 3 | Aşama 4 |
+|--------|---------|---------|---------|---------|
+| **Aşama Adı** | Farkındalık | Araştırma | Satın Alma | Kullanım |
+| **Eylemler** | ... | ... | ... | ... |
+| **Düşünceler** | ... | ... | ... | ... |
+| **Duygular** | 😐 | 🙂 | 😟 | 😊 |
+| **Temas Noktaları** | ... | ... | ... | ... |
+| **Pain Points** | ... | ... | ... | ... |
+| **Fırsatlar** | ... | ... | ... | ... |
+[/TABLE]
+
+---
+
+## Journey Map vs User Flow
+
+İkisi farklı amaçlara hizmet eder:
+
+[TABLE]
+| Özellik | User Flow | Journey Map |
+|---------|-----------|-------------|
+| **Odak** | Ürün içi adımlar | Tüm deneyim |
+| **Kapsam** | Tek akış | Uçtan uca yolculuk |
+| **İçerik** | Ekranlar, tıklamalar | Duygular, düşünceler |
+| **Bakış açısı** | Teknik | İnsan odaklı |
+| **Temas noktaları** | Sadece ürün | Tüm kanallar |
+| **Çıktı formatı** | Akış diyagramı | Görsel hikaye |
+[/TABLE]
+
+[COMPARISON]
+**User Flow:** "Kullanıcı ürünümde hangi adımları izliyor?"
+**Journey Map:** "Kullanıcı bu süreçte neler yaşıyor, hissediyor, düşünüyor?"
+[/COMPARISON]
+
+---
+
+## Journey Map Araçları
+
+[TABLE]
+| Araç | Ücretsiz | En İyi Yön |
+|------|----------|------------|
+| **Miro** | Kısmen | İş birliği, şablonlar |
+| **FigJam** | Evet | Figma entegrasyonu |
+| **Smaply** | Sınırlı | Journey map özelleşmiş |
+| **UXPressia** | Sınırlı | Persona + journey map |
+| **Lucidchart** | Sınırlı | Profesyonel diyagramlar |
+| **Canva** | Evet | Görsel tasarım |
+| **PowerPoint/Slides** | Evet | Sunum için |
+[/TABLE]
+
+[TIP]
+💡 Araç önemli değil, içerik önemli. Kalem kağıtla da etkili journey map oluşturabilirsin. Önemli olan araştırma verisi ve doğru yapı.
+[/TIP]
+
+---
+
+## Journey Map Örneği
+
+**Persona:** Ayşe, 32, çalışan anne, online market alışverişi yapıyor
+
+**Senaryo:** İlk kez online market siparişi verme
+
+**Aşamalar:**
+
+**1. İhtiyaç Farkındalığı**
+- Eylem: Markete gidecek zamanı olmadığını fark ediyor
+- Düşünce: "Online sipariş versem acaba kaliteli ürün gelir mi?"
+- Duygu: Kaygılı
+- Temas: -
+- Pain: Online market güvenilirliği konusunda şüphe
+
+**2. Araştırma**
+- Eylem: Google'da "online market" arıyor, arkadaşlarına soruyor
+- Düşünce: "Hangisi daha güvenilir? Hangisinin teslimatı hızlı?"
+- Duygu: Kararsız
+- Temas: Google, WhatsApp, Instagram
+- Pain: Çok fazla seçenek, karşılaştırma zor
+
+**3. Uygulama İndirme**
+- Eylem: App Store'dan indiriyor, kayıt oluyor
+- Düşünce: "Umarım çok karmaşık değildir"
+- Duygu: Meraklı
+- Temas: App Store, mobil uygulama
+- Pain: Uzun kayıt formu
+
+**4. Ürün Seçimi**
+- Eylem: Kategorileri geziyor, ürün ekliyor
+- Düşünce: "Bu elma taze mi acaba? Gramajı ne kadar?"
+- Duygu: Şüpheli → sonra güvenen
+- Temas: Mobil uygulama
+- Pain: Taze ürünleri görmeden seçmek zor
+
+**5. Ödeme**
+- Eylem: Sepeti kontrol, adres giriyor, ödeme yapıyor
+- Düşünce: "Teslimat ücreti ne kadar? Minimum sepet tutarı var mı?"
+- Duygu: Hafif kaygılı
+- Temas: Mobil uygulama
+- Pain: Teslimat ücreti sürprizi
+
+**6. Teslimat Bekleme**
+- Eylem: Sipariş durumunu kontrol ediyor
+- Düşünce: "Ne zaman gelecek? Evde olmalı mıyım?"
+- Duygu: Sabırsız
+- Temas: Mobil uygulama, SMS
+- Pain: Teslimat saati belirsiz
+
+**7. Ürün Teslim Alma**
+- Eylem: Ürünleri kontrol ediyor
+- Düşünce: "Acaba eksik veya bozuk ürün var mı?"
+- Duygu: Endişeli → sonra memnun
+- Temas: Kurye, mobil uygulama
+- Fırsat: İlk sipariş sonrası teşekkür mesajı
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Araştırma olmadan oluşturmak
+
+[COMPARISON]
+❌ "Bence kullanıcı burada mutlu oluyor"
+✅ "Görüşmelerde 6/8 kullanıcı bu adımda hayal kırıklığı yaşadığını söyledi"
+[/COMPARISON]
+
+### 2. Çok detaya girmek
+
+Her küçük adımı dahil etmek yerine, ana aşamalara odaklan. Okunabilirliği koru.
+
+### 3. Sadece ürünü göstermek
+
+Journey map, ürün dışı temas noktalarını da kapsar. Google araması, arkadaş tavsiyesi, müşteri hizmetleri...
+
+### 4. Duyguları ihmal etmek
+
+Sadece eylemler yetmez. Kullanıcının duygusal yolculuğu journey map'in kalbi.
+
+### 5. Bir kez yapıp bırakmak
+
+Journey map yaşayan döküman. Ürün ve kullanıcı değiştikçe güncellenmeli.
+
+### 6. Paylaşmamak
+
+Çekmecede duran journey map işe yaramaz. Ekiple paylaş, duvara as, toplantılarda referans ver.
+
+---
+
+## Journey Map Workshop
+
+Ekiple birlikte journey map oluşturmak için workshop formatı:
+
+[STEPS]
+1. Hazırlık (Workshop öncesi)
+   - Araştırma verilerini derle
+   - Persona ve senaryoyu belirle
+   - Katılımcıları davet et (cross-functional)
+
+2. Giriş (15 dk)
+   - Journey map nedir, neden yapıyoruz
+   - Persona ve senaryo tanıtımı
+
+3. Aşamaları belirleme (20 dk)
+   - Beyin fırtınası: Hangi aşamalar var?
+   - Oylama ve seçim
+
+4. Aşamaları doldurma (60 dk)
+   - Gruplar halinde her aşama için post-it'ler
+   - Eylemler, düşünceler, duygular, temas noktaları
+
+5. Pain point ve fırsatlar (20 dk)
+   - Sorunları işaretle
+   - Fırsatları tartış
+
+6. Sentez (15 dk)
+   - Tüm içeriği birleştir
+   - Duygu eğrisini çiz
+
+7. Sonraki adımlar (10 dk)
+   - En önemli 3 insight
+   - Aksiyon planı
+[/STEPS]
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**30 dakika**
+
+**Görev:** Bir fitness uygulaması için basit journey map oluştur.
+
+**Persona:** Can, 28, ofis çalışanı, kilo vermek istiyor, daha önce spor salonu deneyip bırakmış.
+
+**Senaryo:** İlk kez fitness uygulaması indirip, ilk antrenmanını tamamlama.
+
+**Adımlar:**
+
+1. **Aşamaları belirle (5 dk)**
+   Yolculuğu 4-5 aşamaya böl.
+
+2. **Her aşama için doldur (20 dk)**
+   - 2-3 eylem
+   - 1-2 düşünce
+   - Duygu (emoji veya kelime)
+   - Temas noktaları
+   - Pain point (varsa)
+
+3. **Fırsatları belirle (5 dk)**
+   Her pain point için bir iyileştirme önerisi yaz.
+
+**Kontrol:** Journey map'ine bakan biri Can'ın yolculuğunu anlayabilmeli.
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Journey map, kullanıcının tüm yolculuğunu görselleştirir: eylemler, düşünceler, duygular, temas noktaları
+- Pain point'leri tespit eder, fırsatları ortaya çıkarır, ekip hizalaması sağlar
+- Araştırma verisine dayanmalı, varsayımla değil
+- Current state, future state, service blueprint gibi türleri var
+- User flow teknik odaklı (ürün adımları), journey map insan odaklı (deneyim)
+- Workshop formatıyla cross-functional ekiple birlikte oluşturulabilir
+- Yaşayan döküman: güncelle, paylaş, referans ver
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Information Architecture Temelleri](/kutuphane/information-architecture)
+
+**Sonraki:** Empathy Map Oluşturma *(yakında)*
+
+**İlgili konular:**
+- [Persona Oluşturma Rehberi](/kutuphane/persona-olusturma)
+- [User Flow ve Task Flow](/kutuphane/user-flow-task-flow)
+- [Kullanıcı Görüşmesi Nasıl Yapılır?](/kutuphane/kullanici-gorusmesi)
+
+**İlgili Roadmap:** UX Designer Roadmap → Research & Strateji
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Customer Journey Mapping - NNGroup](https://www.nngroup.com/articles/customer-journey-mapping/) (İngilizce, 10 dk)
+- [Journey Mapping 101 - NNGroup](https://www.nngroup.com/articles/journey-mapping-101/) (İngilizce, 8 dk)
+- [Service Design Tools - Journey Map](https://servicedesigntools.org/tools/customer-journey-map) (İngilizce, şablonlar)
 `,
   },
 };
@@ -6825,6 +7316,40 @@ export default function ArticlePage() {
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "Card sorting, kullanıcıların içeriği nasıl grupladığını ve adlandırdığını anlamak için kullanılan bir IA araştırma yöntemidir. Kullanıcılara içerik kartları verilir ve mantıklı gelen şekilde gruplamalarını istersiniz.",
+              },
+            },
+          ],
+          "user-journey-map": [
+            {
+              "@type": "Question",
+              name: "User Journey Map nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "User Journey Map, bir kullanıcının belirli bir hedefe ulaşmak için geçtiği tüm aşamaları, bu aşamalardaki eylemlerini, düşüncelerini, duygularını ve temas noktalarını görselleştiren bir diyagramdır.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Journey map ne işe yarar?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Journey map, kullanıcı deneyimindeki pain point'leri tespit etmeye, fırsatları görmeye, ekibin kullanıcı perspektifini anlamasına ve departmanlar arası hizalamaya yardımcı olur.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "User flow ile journey map arasındaki fark nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "User flow, kullanıcının üründe izlediği adımları ve ekranları gösterir - teknik ve ürün odaklıdır. Journey map ise kullanıcının duygularını, düşüncelerini ve tüm temas noktalarını (ürün dışı dahil) kapsar - deneyim odaklıdır.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Journey map nasıl oluşturulur?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Önce persona ve senaryo belirle, araştırma verilerini topla, aşamaları tanımla, her aşama için eylemler, düşünceler, duygular ve temas noktalarını ekle, pain point ve fırsatları işaretle, görselleştir ve paylaş.",
               },
             },
           ],
