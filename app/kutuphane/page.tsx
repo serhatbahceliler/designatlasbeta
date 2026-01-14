@@ -50,7 +50,7 @@ const CATEGORY_LABELS = {
 } as const;
 
 // Mock articles data
-const MOCK_ARTICLES: Article[] = [
+export const MOCK_ARTICLES: Article[] = [
   {
     id: "kullanilabilirlik-testi",
     title: "Kullanılabilirlik Testi Nedir?",
