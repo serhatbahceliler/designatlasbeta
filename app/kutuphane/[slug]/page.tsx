@@ -7116,6 +7116,497 @@ Derinleşmek istersen:
 - [Empathy Map Canvas - Dave Gray](https://gamestorming.com/empathy-mapping/) (İngilizce, orijinal kaynak)
 `,
   },
+  "anket-tasarimi": {
+    id: "anket-tasarimi",
+    title: "Anket Tasarımı: Doğru Soru Sorma",
+    subtitle: "Etkili UX Anketi Oluşturma Rehberi",
+    titleEn: "Survey Design",
+    slug: "anket-tasarimi",
+    description: "UX anketi nasıl tasarlanır? Doğru soru sorma teknikleri, soru tipleri, yaygın hatalar ve anket best practice'leri. Kapsamlı anket rehberi.",
+    category: "ux-research",
+    readingTime: 14,
+    featured: false,
+    publishedAt: "2025-01-15",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Anket Tasarımı: Doğru Soru Sorma Sanatı
+
+**Seviye:** Başlangıç - Orta  
+**Kategori:** UX Research  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+"Kullanıcılarımızın %78'i memnun" diyor rapor. Ama bu sayı gerçeği yansıtıyor mu?
+
+Anket tasarımı, görünenden çok daha zor bir iş. Yanlış soru sormak, yanlış cevap almak demek. Yönlendirici bir soru, verileri tamamen çarpıtabilir. Çok uzun bir anket, tamamlama oranını düşürür ve sadece en sabırlı kullanıcıların cevaplarını alırsın.
+
+İyi bir anket, doğru soruları, doğru sırayla, doğru formatta sorar. Ve en önemlisi: gerçekten cevap verilmesi gereken soruları sorar.
+
+Bu yazıda etkili anket tasarımının temellerini, soru tiplerini ve kaçınılması gereken hataları öğreneceksin.
+
+---
+
+## Anket Ne Zaman Kullanılır?
+
+Anketler her araştırma sorusu için uygun değil.
+
+### Anket İçin Uygun
+
+- Geniş kitleden nicel veri toplama
+- Kullanıcı memnuniyeti ölçme (CSAT, NPS)
+- Demografik bilgi toplama
+- Özellik önceliklendirme
+- Kullanım sıklığı ve paternleri
+- Pazar araştırması
+
+### Anket İçin Uygun Değil
+
+- "Neden" sorusuna cevap arama
+- Derinlemesine kullanıcı anlayışı
+- Karmaşık davranışları anlama
+- Keşif aşaması araştırması
+- Kullanılabilirlik sorunları tespiti
+
+[COMPARISON]
+**Anket:** "Kaç kullanıcı bu özelliği kullanıyor?" (nicel)
+**Görüşme:** "Neden bu özelliği kullanmıyorlar?" (nitel)
+[/COMPARISON]
+
+[TIP]
+💡 Anketler "ne" ve "ne kadar" sorularını cevaplar. "Neden" için kullanıcı görüşmesi veya gözlem daha etkili.
+[/TIP]
+
+---
+
+## Anket Tasarım Süreci
+
+### Adım 1: Hedefi Belirle
+
+Anketle ne öğrenmek istiyorsun? Spesifik ol.
+
+[COMPARISON]
+❌ Genel: "Kullanıcıları tanımak istiyoruz"
+✅ Spesifik: "Checkout'u terk eden kullanıcıların nedenlerini anlamak istiyoruz"
+[/COMPARISON]
+
+### Adım 2: Hedef Kitleyi Tanımla
+
+Kim cevap verecek? Nasıl ulaşacaksın?
+
+- Mevcut kullanıcılar mı, potansiyel mi?
+- Hangi segmentler?
+- Minimum kaç cevap gerekli?
+
+### Adım 3: Soruları Tasarla
+
+Her soru hedefe hizmet etmeli. "Nice to have" soruları çıkar.
+
+### Adım 4: Sıralamayı Belirle
+
+- Kolay sorularla başla
+- Hassas sorular sona
+- Mantıksal akış
+
+### Adım 5: Test Et
+
+Anketi yayınlamadan önce:
+- 3-5 kişiyle pilot test
+- Süreyi ölç
+- Anlaşılmayan soruları tespit et
+
+### Adım 6: Yayınla ve İzle
+
+- Cevap oranını takip et
+- Yarıda bırakma noktalarını analiz et
+- Gerekirse düzeltme yap
+
+---
+
+## Soru Tipleri
+
+### 1. Kapalı Uçlu Sorular
+
+Önceden belirlenmiş seçeneklerden seçim.
+
+**Tek seçimli (Single choice):**
+Ürünümüzü ne sıklıkla kullanıyorsunuz?
+○ Her gün
+○ Haftada birkaç kez
+○ Ayda birkaç kez
+○ Nadiren
+○ Hiç kullanmıyorum
+
+**Çok seçimli (Multiple choice):**
+Hangi özellikleri kullanıyorsunuz? (Birden fazla seçebilirsiniz)
+☐ Dashboard
+☐ Raporlar
+☐ Entegrasyonlar
+☐ API
+☐ Hiçbiri
+
+**Avantajları:** Analizi kolay, cevaplamasi hızlı
+**Dezavantajları:** Seçenekler dışında cevap alamazsın
+
+### 2. Likert Ölçeği
+
+Katılım veya memnuniyet derecesi ölçer.
+"Uygulamanın kullanımı kolay" ifadesine ne kadar katılıyorsunuz?
+1 - Kesinlikle katılmıyorum
+2 - Katılmıyorum
+3 - Ne katılıyorum ne katılmıyorum
+4 - Katılıyorum
+5 - Kesinlikle katılıyorum
+
+**5'li vs 7'li ölçek:**
+
+[TABLE]
+| Ölçek | Avantaj | Dezavantaj |
+|-------|---------|------------|
+| **5'li** | Basit, hızlı | Daha az hassas |
+| **7'li** | Daha hassas | Seçim zorluğu |
+[/TABLE]
+
+[TIP]
+💡 Çoğu UX araştırması için 5'li ölçek yeterli. 7'li ölçek akademik araştırmalarda tercih edilir.
+[/TIP]
+
+### 3. NPS (Net Promoter Score)
+
+Tavsiye etme olasılığını ölçer.
+Bu ürünü bir arkadaşınıza veya meslektaşınıza tavsiye etme olasılığınız nedir?
+0 -------- 5 -------- 10
+Hiç olası değil    Çok olası
+
+**Hesaplama:**
+- 0-6: Detractors (Eleştirenler)
+- 7-8: Passives (Pasifler)
+- 9-10: Promoters (Destekçiler)
+- NPS = %Promoters - %Detractors
+
+### 4. Açık Uçlu Sorular
+
+Serbest metin cevabı.
+Bu özelliği geliştirmek için öneriniz var mı?
+[________________]
+
+**Avantajları:** Zengin içgörü, beklenmedik cevaplar
+**Dezavantajları:** Analizi zor, düşük cevap oranı
+
+### 5. Derecelendirme (Rating)
+
+Yıldız, emoji veya sayısal değerlendirme.
+Bugünkü deneyiminizi nasıl değerlendirirsiniz?
+☆ ☆ ☆ ☆ ☆
+
+### 6. Sıralama (Ranking)
+
+Seçenekleri önem sırasına koyma.
+Aşağıdaki özellikleri önem sırasına göre sıralayın:
+
+[___]
+[___]
+[___]
+
+
+---
+
+## İyi Soru Yazma Kuralları
+
+### 1. Net ve Kısa Ol
+
+[COMPARISON]
+❌ "Genel olarak düşündüğünüzde, ürünümüzü kullanırken yaşadığınız deneyim hakkında ne söylersiniz?"
+
+✅ "Ürünümüzü kullanmak kolay mı?"
+[/COMPARISON]
+
+### 2. Tek Konu Sor
+
+[COMPARISON]
+❌ "Ürünümüz hızlı ve kullanımı kolay mı?" (iki soru bir arada)
+
+✅ "Ürünümüz hızlı mı?"
+✅ "Ürünümüzün kullanımı kolay mı?"
+[/COMPARISON]
+
+### 3. Yönlendirici Olma
+
+[COMPARISON]
+❌ "Bu harika yeni özelliği ne kadar beğendiniz?"
+
+✅ "Bu yeni özellik hakkında ne düşünüyorsunuz?"
+[/COMPARISON]
+
+### 4. Varsayımda Bulunma
+
+[COMPARISON]
+❌ "Karanlık mod özelliğini ne sıklıkla kullanıyorsunuz?" (kullandığını varsayıyor)
+
+✅ "Karanlık mod özelliğini kullanıyor musunuz?" → Evetse: "Ne sıklıkla?"
+[/COMPARISON]
+
+### 5. Jargondan Kaçın
+
+[COMPARISON]
+❌ "API entegrasyonlarımızın UX'i hakkında ne düşünüyorsunuz?"
+
+✅ "Diğer uygulamalarla bağlantı kurma deneyiminiz nasıldı?"
+[/COMPARISON]
+
+### 6. Negatif Soru Sorma
+
+[COMPARISON]
+❌ "Ürünümüzün kullanımının zor olmadığını düşünmüyor musunuz?"
+
+✅ "Ürünümüzü kullanmak kolay mı?"
+[/COMPARISON]
+
+---
+
+## Anket Yapısı
+
+### Giriş
+
+- Anketi kimin yaptığını
+- Amacı
+- Tahmini süreyi
+- Gizlilik bilgisi
+Bu anket [Şirket Adı] tarafından ürün deneyiminizi
+iyileştirmek amacıyla hazırlanmıştır.
+Yaklaşık 5 dakika sürecektir.
+Cevaplarınız anonim tutulacaktır.
+
+### Isınma Soruları
+
+Kolay, tehditkâr olmayan sorularla başla.
+Ürünümüzü ne kadar süredir kullanıyorsunuz?
+
+### Ana Sorular
+
+Asıl öğrenmek istediğin konular.
+
+### Demografik Sorular
+
+Sona bırak. Hassas bilgiler içerebilir.
+Yaş aralığınız:
+○ 18-24
+○ 25-34
+...
+
+### Kapanış
+
+Teşekkür ve (opsiyonel) iletişim fırsatı.
+Anketimizi tamamladığınız için teşekkür ederiz!
+Daha fazla görüş paylaşmak isterseniz: [email]
+
+---
+
+## Yaygın Anket Metrikleri
+
+### CSAT (Customer Satisfaction Score)
+
+Genel memnuniyet ölçümü.
+Bu deneyimden ne kadar memnunsunuz?
+1 (Hiç memnun değilim) - 5 (Çok memnunun)
+
+**Hesaplama:** (Memnun cevaplar / Toplam cevap) x 100
+
+### NPS (Net Promoter Score)
+
+Tavsiye olasılığı (yukarıda detaylandırıldı).
+
+**Benchmark:** +50 üzeri çok iyi, +70 üzeri mükemmel.
+
+### CES (Customer Effort Score)
+
+Görev tamamlama kolaylığı.
+[Görev] yapmak ne kadar kolaydı?
+1 (Çok zor) - 7 (Çok kolay)
+
+### SUS (System Usability Scale)
+
+10 soruluk standart kullanılabilirlik ölçeği.
+
+---
+
+## Anket Uzunluğu
+
+[TABLE]
+| Süre | Soru Sayısı | Tamamlama Oranı |
+|------|-------------|-----------------|
+| 1-2 dk | 5-7 soru | %90+ |
+| 3-5 dk | 8-12 soru | %80+ |
+| 5-10 dk | 13-20 soru | %60-70 |
+| 10+ dk | 20+ soru | %50 altı |
+[/TABLE]
+
+[WARNING]
+⚠️ Her ek soru tamamlama oranını düşürür. Gerçekten gerekli olmayan soruları çıkar.
+[/WARNING]
+
+---
+
+## Yaygın Hatalar
+
+### 1. Çok Uzun Anket
+
+Problem: Tamamlama oranı düşer, kalite düşer.
+Çözüm: Maksimum 10-15 soru, 5-10 dakika.
+
+### 2. Yönlendirici Sorular
+
+Problem: Veriyi çarpıtır.
+Çözüm: Nötr dil kullan, pilot test yap.
+
+### 3. Çift Anlamlı Sorular
+
+Problem: Hangi konuya cevap verdiği belirsiz.
+Çözüm: Her soru tek konu.
+
+### 4. Eksik Seçenekler
+
+Problem: Kullanıcı kendini bulamıyor.
+Çözüm: "Diğer" seçeneği ekle, "Hiçbiri" ekle.
+
+### 5. Zorunlu Tüm Sorular
+
+Problem: Cevaplamak istemeyenler anketi terk eder.
+Çözüm: Sadece kritik soruları zorunlu yap.
+
+### 6. Açık Uçlu Soru Abartısı
+
+Problem: Analiz zorlaşır, cevap oranı düşer.
+Çözüm: 1-2 açık uçlu soru yeterli.
+
+### 7. Mantık Hataları
+
+Problem: Alakasız sorular gösterilir.
+Çözüm: Skip logic kullan (cevaba göre dallanma).
+
+---
+
+## Anket Araçları
+
+[TABLE]
+| Araç | Ücretsiz Plan | En İyi Yön |
+|------|---------------|------------|
+| **Typeform** | 10 soru/ay | Güzel tasarım, UX |
+| **Google Forms** | Sınırsız | Ücretsiz, basit |
+| **SurveyMonkey** | 10 soru | Gelişmiş analiz |
+| **Maze** | Sınırlı | UX araştırma entegre |
+| **Hotjar** | Sınırlı | Site içi anket |
+| **Tally** | Sınırsız | Notion benzeri, ücretsiz |
+| **Airtable Forms** | Sınırlı | Veritabanı entegre |
+[/TABLE]
+
+---
+
+## Cevap Oranını Artırma
+
+### Dağıtımda
+
+- Doğru zamanda gönder (iş saatleri, haftaiçi)
+- Kişiselleştirilmiş davet
+- Hatırlatma gönder (1 kez)
+- Mobil uyumlu olduğundan emin ol
+
+### Anket İçinde
+
+- Kısa tut
+- İlerleme göster
+- Zorunlu soruları minimize et
+- "Bilmiyorum" seçeneği ekle
+
+### Motivasyon
+
+- Amacı açıkla
+- Sonuçları paylaşacağını söyle
+- (Dikkatli) Teşvik sun (çekiliş, indirim)
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**25 dakika**
+
+**Görev:** Bir mobil uygulama için kısa kullanıcı memnuniyeti anketi tasarla.
+
+**Senaryo:** E-ticaret uygulaması, son 30 günde alışveriş yapmış kullanıcılara gönderilecek.
+
+**Gereksinimler:**
+- Maksimum 8 soru
+- 3 dakikada tamamlanabilmeli
+- Hem nicel hem nitel veri toplamalı
+
+**Adımlar:**
+
+1. **Hedef belirle** (1 dk)
+   Bu anketle ne öğrenmek istiyorsun? 2-3 madde yaz.
+
+2. **Soru listesi oluştur** (10 dk)
+   - 1 NPS sorusu
+   - 2-3 Likert ölçeği sorusu
+   - 1-2 çoktan seçmeli soru
+   - 1 açık uçlu soru
+
+3. **Sıralamayı belirle** (5 dk)
+   Kolay → Zor, Genel → Spesifik
+
+4. **Kontrol et** (5 dk)
+   - Yönlendirici soru var mı?
+   - Çift anlamlı soru var mı?
+   - Jargon var mı?
+
+5. **Giriş ve kapanış yaz** (4 dk)
+
+**Test:** Anketi bir arkadaşına göster, anlaşılmayan yer var mı?
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Anketler nicel veri toplamak için ideal, "neden" için yetersiz
+- Soru tipleri: kapalı uçlu, Likert, NPS, açık uçlu, sıralama
+- İyi soru: net, tek konulu, yönlendirici olmayan, jargonsuz
+- Anket yapısı: giriş → ısınma → ana sorular → demografik → kapanış
+- İdeal uzunluk: 5-10 dakika, 10-15 soru
+- Yaygın metrikler: CSAT, NPS, CES, SUS
+- Her ek soru tamamlama oranını düşürür - sadece gerekli olanı sor
+- Yayınlamadan önce pilot test yap
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Empathy Map Oluşturma](/kutuphane/empathy-map)
+
+**Sonraki:** A/B Test Temelleri *(yakında)*
+
+**İlgili konular:**
+- [Kullanıcı Görüşmesi Nasıl Yapılır?](/kutuphane/kullanici-gorusmesi)
+- [Kullanılabilirlik Testi Nedir?](/kutuphane/kullanilabilirlik-testi)
+- NPS Nedir ve Nasıl Kullanılır? *(yakında)*
+
+**İlgili Roadmap:** UX Designer Roadmap → Research
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Survey Design - NNGroup](https://www.nngroup.com/articles/survey-best-practices/) (İngilizce, 10 dk)
+- [Writing Survey Questions - Pew Research](https://www.pewresearch.org/our-methods/u-s-surveys/writing-survey-questions/) (İngilizce, kapsamlı)
+- [Just Enough Research - Erika Hall](https://abookapart.com/products/just-enough-research) (Kitap, anket bölümü mükemmel)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
