@@ -5005,10 +5005,10 @@ Figma en popüler prototipleme aracı. Temel adımlar:
 ### Adım 1: Ekranları Hazırla
 
 Her ekranı ayrı frame olarak tasarla. Frame isimlendirmesi önemli:
-- \`01-Home\`
-- \`02-Product-List\`
-- \`03-Product-Detail\`
-- \`04-Cart\`
+- ${'`'}01-Home${'`'}
+- ${'`'}02-Product-List${'`'}
+- ${'`'}03-Product-Detail${'`'}
+- ${'`'}04-Cart${'`'}
 
 ### Adım 2: Prototype Moduna Geç
 
@@ -9186,8 +9186,8 @@ Klavye kullanıcıları için odak göstergesi:
 - Özel focus stili tasarla
 
 [COMPARISON]
-❌ Kötü: \`outline: none;\` ve alternatif yok
-✅ İyi: \`outline: none;\` ama \`box-shadow\` veya \`border\` ile alternatif
+❌ Kötü: ${'`'}outline: none;${'`'} ve alternatif yok
+✅ İyi: ${'`'}outline: none;${'`'} ama ${'`'}box-shadow${'`'} veya ${'`'}border${'`'} ile alternatif
 [/COMPARISON]
 
 ### Form Tasarımı
@@ -9201,7 +9201,7 @@ Klavye kullanıcıları için odak göstergesi:
 ### Görsel İçerik
 
 - Tüm görsellerde alt text
-- Dekoratif görseller: boş alt (\`alt=""\`)
+- Dekoratif görseller: boş alt (${'`'}alt=""${'`'})
 - Karmaşık görseller: uzun açıklama
 - Video: altyazı ve transcript
 
@@ -9237,23 +9237,23 @@ Screen reader'lar HTML yapısını okur. Doğru element, doğru anlam.
 [TABLE]
 | Yanlış | Doğru | Neden |
 |--------|-------|-------|
-| \`<div onclick>\` | \`<button>\` | Keyboard focus, role |
-| \`<div class="title">\` | \`<h1>\` | Heading hiyerarşisi |
-| \`<span class="link">\` | \`<a href>\` | Link davranışı |
-| \`<div>\` ile liste | \`<ul><li>\` | Liste yapısı |
-| \`<b>\` | \`<strong>\` | Semantic önem |
+| ${'`'}<div onclick>${'`'} | ${'`'}<button>${'`'} | Keyboard focus, role |
+| ${'`'}<div class="title">${'`'} | ${'`'}<h1>${'`'} | Heading hiyerarşisi |
+| ${'`'}<span class="link">${'`'} | ${'`'}<a href>${'`'} | Link davranışı |
+| ${'`'}<div>${'`'} ile liste | ${'`'}<ul><li>${'`'} | Liste yapısı |
+| ${'`'}<b>${'`'} | ${'`'}<strong>${'`'} | Semantic önem |
 [/TABLE]
 
 ### Heading Hiyerarşisi
 
-\`\`\`
+${'```'}
 <h1>Sayfa Başlığı (tek)
   <h2>Bölüm 1
     <h3>Alt bölüm
     <h3>Alt bölüm
   <h2>Bölüm 2
     <h3>Alt bölüm
-\`\`\`
+${'```'}
 
 Seviye atlama ❌ (h1 → h3)
 
@@ -9265,18 +9265,18 @@ ARIA (Accessible Rich Internet Applications), HTML'in yetersiz kaldığı duruml
 
 **Temel ARIA özellikleri:**
 
-- \`aria-label\`: Görünmez etiket
-- \`aria-labelledby\`: Başka elemente referans
-- \`aria-describedby\`: Ek açıklama
-- \`aria-hidden\`: Screen reader'dan gizle
-- \`role\`: Element rolünü belirt
+- ${'`'}aria-label${'`'}: Görünmez etiket
+- ${'`'}aria-labelledby${'`'}: Başka elemente referans
+- ${'`'}aria-describedby${'`'}: Ek açıklama
+- ${'`'}aria-hidden${'`'}: Screen reader'dan gizle
+- ${'`'}role${'`'}: Element rolünü belirt
 
 **Örnek:**
-\`\`\`html
+${'```'}html
 <button aria-label="Menüyü kapat">
   <svg>...</svg>
 </button>
-\`\`\`
+${'```'}
 
 [WARNING]
 ⚠️ ARIA son çare. Önce semantic HTML kullan. Yanlış ARIA, erişilebilirliği bozar. "No ARIA is better than bad ARIA."
@@ -9346,7 +9346,7 @@ Yap: Klavye navigasyonu çalışıyor, Screen reader ile test edildi, Otomatik t
 
 ### 3. Alt text eksikliği
 
-Her anlamlı görselin alt text'i olmalı. Dekoratif ise alt="".
+Her anlamlı görselin alt text'i olmalı. Dekoratif ise ${'`'}alt=""${'`'}.
 
 ### 4. Placeholder'ı label olarak kullanmak
 
@@ -9768,13 +9768,13 @@ Animasyonun hız eğrisi.
 ### GPU-Friendly Özellikler
 
 Sadece şu özellikleri animasyonla:
-- \`transform\` (translate, scale, rotate)
-- \`opacity\`
+- ${'`'}transform${'`'} (translate, scale, rotate)
+- ${'`'}opacity${'`'}
 
 Kaçınılması gerekenler:
-- \`width\`, \`height\` (layout tetikler)
-- \`top\`, \`left\` (layout tetikler)
-- \`box-shadow\` (pahalı)
+- ${'`'}width${'`'}, ${'`'}height${'`'} (layout tetikler)
+- ${'`'}top${'`'}, ${'`'}left${'`'} (layout tetikler)
+- ${'`'}box-shadow${'`'} (pahalı)
 
 ### 60fps Hedefi
 
@@ -9783,14 +9783,14 @@ Akıcı animasyon için 60fps gerekli. Her frame 16ms.
 ### prefers-reduced-motion
 
 Animasyon hassasiyeti olan kullanıcılar için:
-\`\`\`css
+${'```'}css
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
     transition-duration: 0.01ms !important;
   }
 }
-\`\`\`
+${'```'}
 
 ---
 
