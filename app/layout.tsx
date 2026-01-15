@@ -78,12 +78,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
-      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
-      { url: "/favicon.ico", sizes: "16x16", type: "image/x-icon" },
+      { url: "https://r.resimlink.com/ZTzbek.png", sizes: "48x48", type: "image/png" },
+      { url: "https://r.resimlink.com/ZTzbek.png", sizes: "32x32", type: "image/png" },
+      { url: "https://r.resimlink.com/ZTzbek.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
     ],
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    shortcut: "https://r.resimlink.com/ZTzbek.png",
+    apple: "https://r.resimlink.com/ZTzbek.png",
   },
   verification: {
     // Google Search Console verification code'u buraya eklenecek (gerekirse)
