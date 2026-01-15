@@ -7607,6 +7607,433 @@ Derinleşmek istersen:
 - [Just Enough Research - Erika Hall](https://abookapart.com/products/just-enough-research) (Kitap, anket bölümü mükemmel)
 `,
   },
+  "ab-test-temelleri": {
+    id: "ab-test-temelleri",
+    title: "A/B Test Temelleri",
+    subtitle: "Veriyle Tasarım Kararı Alma Rehberi",
+    titleEn: "A/B Testing Basics",
+    slug: "ab-test-temelleri",
+    description: "A/B test nedir, nasıl yapılır? Hipotez oluşturma, sample size, istatistiksel anlamlılık. Tasarımcılar için A/B test rehberi.",
+    category: "ux-research",
+    readingTime: 13,
+    featured: false,
+    publishedAt: "2025-01-15",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# A/B Test Temelleri: Veriyle Tasarım Kararı Alma Rehberi
+
+**Seviye:** Orta  
+**Kategori:** UX Research  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+"Mavi buton mu, yeşil buton mu?"
+
+Bu soruyu toplantıda tartışarak çözemezsin. Herkesin bir fikri var, kimse kanıtlayamıyor. HiPPO (Highest Paid Person's Opinion) kazanıyor.
+
+Ya da... gerçek kullanıcılara sorarsın.
+
+**A/B test**, tasarım kararlarını fikirlerden değil, veriden almayı sağlar. İki versiyonu gerçek kullanıcılara gösterirsin, hangisi daha iyi performans gösteriyorsa o kazanır.
+
+Basit görünür ama doğru yapmak zor. Yanlış hipotez, yetersiz sample size, erken durdurma - hepsi yanlış sonuçlara götürür.
+
+Bu yazıda A/B testin temellerini, nasıl yapılacağını ve dikkat edilmesi gerekenleri öğreneceksin.
+
+---
+
+## A/B Test Nedir?
+
+[CALLOUT]
+**A/B Test:**
+İki farklı versiyonu (A ve B) rastgele kullanıcı gruplarına gösterip hangisinin belirlenen metrikte daha iyi performans gösterdiğini ölçen kontrollü deneysel araştırma yöntemi.
+[/CALLOUT]
+
+**Temel mantık:**
+- Versiyon A (Control): Mevcut tasarım
+- Versiyon B (Variant): Yeni tasarım
+- Kullanıcılar rastgele ikisinden birine yönlendirilir
+- Belirlenen metrik karşılaştırılır
+- İstatistiksel olarak anlamlı fark varsa, kazanan belirlenir
+
+---
+
+## A/B Test Ne Zaman Kullanılır?
+
+### Uygun Durumlar
+
+- Buton rengi, metin, konum değişiklikleri
+- CTA (Call to Action) optimizasyonu
+- Sayfa layout'u karşılaştırması
+- Fiyatlandırma sayfası varyasyonları
+- Onboarding akışı alternatifleri
+- Email konu satırı testi
+
+### Uygun Olmayan Durumlar
+
+- Yeterli trafik yoksa (sample size)
+- Çok büyük değişiklikler (A/B yerine kullanıcı testi)
+- "Neden" sorusu soruluyorsa (nitel araştırma gerek)
+- Marka veya strateji kararları
+- Uzun satın alma döngüsü olan ürünler
+
+[TIP]
+💡 A/B test "hangisi daha iyi" sorusuna cevap verir. "Neden daha iyi" için kullanılabilirlik testi veya görüşme gerekir.
+[/TIP]
+
+---
+
+## A/B Test Süreci
+
+### Adım 1: Hipotez Oluştur
+
+Test rastgele yapılmaz. Bir hipotezle başlar.
+
+**Hipotez yapısı:**
+"Eğer [değişiklik] yaparsak, [metrik]'te [yön] göreceğiz, çünkü [neden]."
+
+[COMPARISON]
+❌ Kötü: "Yeşil buton daha iyi olur"
+
+✅ İyi: "Eğer CTA butonunu yeşil yaparsak, tıklama oranında %10 artış göreceğiz, çünkü yeşil renk 'devam et' mesajı veriyor ve sayfadaki diğer elementlerden ayrışıyor."
+[/COMPARISON]
+
+### Adım 2: Metrik Belirle
+
+Ne ölçüyorsun? Tek bir primary metrik seç.
+
+**Yaygın metrikler:**
+- Conversion rate (dönüşüm oranı)
+- Click-through rate (CTR)
+- Bounce rate (hemen çıkma)
+- Time on page
+- Revenue per user
+- Sign-up rate
+
+[WARNING]
+⚠️ Tek primary metrik seç. Çok metrik takip edersen, birinde tesadüfen anlamlı sonuç bulma olasılığın artar (multiple testing problem).
+[/WARNING]
+
+### Adım 3: Sample Size Hesapla
+
+Kaç kullanıcı gerekli? Bu, testin gücünü belirler.
+
+**Etkileyen faktörler:**
+- Mevcut conversion rate (baseline)
+- Tespit etmek istediğin minimum fark (MDE)
+- İstatistiksel güven seviyesi (genellikle %95)
+- İstatistiksel güç (genellikle %80)
+
+[FORMÜL KUTUSU]
+Başlık: Sample Size Hesaplama
+Formül: Calculatorler kullanılır (Evan Miller, Optimizely)
+Açıklama: Baseline %5, MDE %20 relatif artış (%5 → %6) için yaklaşık 25.000 kullanıcı/varyant gerekir
+Örnek: %2 baseline, %50 relatif MDE → ~6.000 kullanıcı/varyant
+[/FORMÜL KUTUSU]
+
+**Online hesaplayıcılar:**
+- Evan Miller Sample Size Calculator
+- Optimizely Sample Size Calculator
+- AB Test Guide Calculator
+
+### Adım 4: Testi Kur
+
+- A ve B versiyonlarını hazırla
+- Rastgele yönlendirmeyi kur
+- Tracking'i doğrula
+- QA yap
+
+### Adım 5: Testi Çalıştır
+
+- Belirlenen sample size'a ulaşana kadar bekle
+- Minimum 1-2 tam hafta (hafta içi/sonu etkisi)
+- Erken bakmaktan kaçın (peeking)
+
+### Adım 6: Sonuçları Analiz Et
+
+- İstatistiksel anlamlılık kontrol et
+- Güven aralığına bak
+- Segment bazlı analiz yap
+- Sonucu dokümante et
+
+---
+
+## İstatistiksel Kavramlar
+
+### İstatistiksel Anlamlılık (Statistical Significance)
+
+Gözlemlenen farkın şans eseri olma olasılığının düşük olduğunu gösterir.
+
+**p-value:**
+- p < 0.05: %95 güvenle anlamlı
+- p < 0.01: %99 güvenle anlamlı
+
+**Örnek:** p = 0.03 demek, bu farkın şans eseri olma olasılığı %3.
+
+### Güven Aralığı (Confidence Interval)
+
+Gerçek değerin hangi aralıkta olduğunu gösterir.
+
+**Örnek:** Conversion artışı %15, güven aralığı [%8, %22]
+Gerçek artış %95 olasılıkla %8 ile %22 arasında.
+
+### İstatistiksel Güç (Statistical Power)
+
+Gerçek bir fark varsa, onu tespit etme olasılığı. Genellikle %80 hedeflenir.
+
+### Minimum Detectable Effect (MDE)
+
+Tespit edilebilecek en küçük fark. Küçük MDE = daha çok sample gerekir.
+
+---
+
+## A/B Test Tipleri
+
+### Klasik A/B Test
+
+İki versiyon karşılaştırması.
+
+### A/B/n Test
+
+İkiden fazla versiyon (A, B, C, D...). Daha çok sample gerektirir.
+
+### Multivariate Test (MVT)
+
+Birden fazla element kombinasyonu test edilir. Örneğin: 2 başlık × 2 görsel × 2 buton = 8 kombinasyon. Çok trafik gerektirir.
+
+### Split URL Test
+
+Tamamen farklı sayfalar karşılaştırılır. Büyük değişiklikler için.
+
+[TABLE]
+| Test Tipi | Ne Zaman | Sample İhtiyacı |
+|-----------|----------|-----------------|
+| **A/B** | Tek değişken | Orta |
+| **A/B/n** | Birkaç alternatif | Yüksek |
+| **MVT** | Kombinasyon optimizasyonu | Çok yüksek |
+| **Split URL** | Büyük değişiklik | Orta |
+[/TABLE]
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Erken Durdurmak (Peeking)
+
+[COMPARISON]
+❌ Hata: "3 günde B %20 önde, testi bitirelim!"
+✅ Doğrusu: Sample size'a ulaşana kadar bekle
+[/COMPARISON]
+
+Erken bakmak ve "iyi görünüyor" diye durdurmak, false positive oranını artırır.
+
+### 2. Yetersiz Sample Size
+
+Az kullanıcıyla test yapmak, güvenilir sonuç vermez. Hesaplayıcı kullan.
+
+### 3. Çok Değişken Test Etmek
+
+[COMPARISON]
+❌ Hata: Hem buton rengini hem metni hem konumu değiştirmek
+✅ Doğrusu: Tek değişken test et, hangisinin etkili olduğunu bil
+[/COMPARISON]
+
+### 4. Yanlış Metrik
+
+Primary metrik iş hedefiyle uyumlu olmalı. CTR artıp conversion düşebilir.
+
+### 5. Segmentleri İhmal Etmek
+
+Genel sonuç "fark yok" dese de, belirli segmentlerde fark olabilir (mobil vs desktop).
+
+### 6. Sezonalite
+
+Bayram, kampanya dönemleri sonuçları etkiler. Normal dönemde test et veya bunu hesaba kat.
+
+### 7. Novelty Effect
+
+Yeni olan dikkat çeker, zamanla etkisi azalır. Uzun süreli testler daha güvenilir.
+
+---
+
+## Test Edilecek Şeyler
+
+### Yüksek Etki Potansiyeli
+
+- CTA metni ve konumu
+- Headline / değer önerisi
+- Form uzunluğu
+- Fiyatlandırma sunumu
+- Checkout adım sayısı
+- Onboarding akışı
+
+### Orta Etki Potansiyeli
+
+- Buton rengi ve boyutu
+- Görsel seçimi
+- Sosyal kanıt yerleşimi
+- Navigasyon yapısı
+
+### Düşük Etki Potansiyeli
+
+- Minor metin değişiklikleri
+- İkon değişiklikleri
+- Küçük renk ayarlamaları
+
+[TIP]
+💡 Önce büyük değişiklikleri test et. %1'lik iyileştirmeler için zaman harcamak yerine, %20 potansiyeli olan testlere odaklan.
+[/TIP]
+
+---
+
+## A/B Test Araçları
+
+[TABLE]
+| Araç | Segment | Fiyat |
+|------|---------|-------|
+| **Google Optimize** | Ücretsiz (kapatıldı, alternatif: GA4 experiments) | Ücretsiz |
+| **Optimizely** | Enterprise | $$$ |
+| **VWO** | Mid-market | $$ |
+| **AB Tasty** | Mid-market | $$ |
+| **LaunchDarkly** | Feature flags + test | $$ |
+| **Amplitude Experiment** | Analytics entegre | $$ |
+| **PostHog** | Açık kaynak | Ücretsiz+ |
+[/TABLE]
+
+---
+
+## Sonuç Yorumlama
+
+### Kazanan Var
+
+B versiyonu istatistiksel olarak anlamlı şekilde daha iyi:
+- Değişikliği uygula
+- Öğrenileni dokümante et
+- Sonraki test için insight kullan
+
+### Fark Yok (Inconclusive)
+
+İstatistiksel anlamlılık yok:
+- Değişiklik etkisiz olabilir
+- Sample size yetersiz olabilir
+- Daha uzun test veya farklı hipotez dene
+
+### Control Kazandı
+
+A (mevcut) daha iyi:
+- Değişikliği yapma
+- Neden işe yaramadığını analiz et
+- Farklı yaklaşım dene
+
+---
+
+## Tasarımcının A/B Test Rolü
+
+Tasarımcı olarak:
+
+**Test öncesi:**
+- Hipotez oluşturmaya katkı ver
+- Araştırma insight'larını paylaş
+- Varyasyonları tasarla
+- Edge case'leri düşün
+
+**Test sırasında:**
+- Sonuçlara erken müdahale etme
+- Sabırlı ol
+
+**Test sonrası:**
+- Sonuçları öğrenmeye dönüştür
+- Kazanırsa uygula
+- Kaybederse neden olduğunu anla
+- Sonraki test fikirlerini geliştir
+
+---
+
+## A/B Test Olmadan Karar Alma
+
+Her şeyi test edemezsin. Ne zaman test etmeden ilerleyebilirsin?
+
+- Trafik yetersizse
+- Acil düzeltme gerekiyorsa (bug, kritik UX sorunu)
+- Kullanıcı araştırması zaten net cevap verdiyse
+- Değişiklik riski düşükse
+- Test maliyeti faydayı aşıyorsa
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**20 dakika**
+
+**Görev:** Bir e-ticaret checkout sayfası için A/B test hipotezi oluştur.
+
+**Senaryo:** Checkout'ta %40 abandon rate var. Adres formu en uzun adım.
+
+**Adımlar:**
+
+1. **Problem analizi (5 dk)**
+   - Neden kullanıcılar terk ediyor olabilir?
+   - 3 olası neden listele
+
+2. **Hipotez yaz (5 dk)**
+   Format: "Eğer [değişiklik] yaparsak, [metrik]'te [yön] göreceğiz, çünkü [neden]."
+
+3. **Test tasarımı (5 dk)**
+   - Control (A): Mevcut ne?
+   - Variant (B): Ne değişecek?
+   - Primary metrik ne?
+
+4. **Başarı kriteri (5 dk)**
+   - Minimum ne kadar iyileşme anlamlı?
+   - Tahmini sample size ne olur? (calculator kullan)
+
+**Örnek hipotez:**
+"Eğer adres formunda otomatik tamamlama eklersek, checkout completion rate'te %15 artış göreceğiz, çünkü kullanıcılar daha az yazacak ve hata yapma olasılığı azalacak."
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- A/B test, iki versiyonu karşılaştırarak veriyle karar almayı sağlar
+- Süreç: Hipotez → Metrik → Sample size → Test → Analiz
+- İstatistiksel anlamlılık: p < 0.05 genellikle yeterli
+- Sample size hesapla, erken durdurma (peeking)
+- Tek değişken test et, çok değişken için MVT kullan
+- Kazanan varsa uygula, yoksa öğren ve devam et
+- Her şeyi test etmek gerekmez, büyük etki potansiyeline odaklan
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Anket Tasarımı: Doğru Soru Sorma](/kutuphane/anket-tasarimi)
+
+**Sonraki:** Heuristic Evaluation Nedir? *(yakında)*
+
+**İlgili konular:**
+- [Kullanılabilirlik Testi Nedir?](/kutuphane/kullanilabilirlik-testi)
+- Conversion Rate Optimization *(yakında)*
+- UX Metrikleri Rehberi *(yakında)*
+
+**İlgili Roadmap:** UX Designer Roadmap → Research & Data
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [A/B Testing - NNGroup](https://www.nngroup.com/articles/ab-testing-and-ux-research/) (İngilizce, 8 dk)
+- [Evan Miller Sample Size Calculator](https://www.evanmiller.org/ab-testing/sample-size.html) (Araç)
+- [Trustworthy Online Controlled Experiments - Kohavi](https://www.amazon.com/Trustworthy-Online-Controlled-Experiments-Practical/dp/1108724264) (Kitap, A/B test kitabı)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {

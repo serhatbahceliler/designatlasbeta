@@ -290,6 +290,21 @@ export const MOCK_ARTICLES: Article[] = [
     author: "DesignAtlas",
     views: 0,
   },
+  {
+    id: "ab-test-temelleri",
+    title: "A/B Test Temelleri",
+    subtitle: "Veriyle Tasarım Kararı Alma Rehberi",
+    titleEn: "A/B Testing Basics",
+    slug: "ab-test-temelleri",
+    description: "A/B test nedir, nasıl yapılır? Hipotez oluşturma, sample size, istatistiksel anlamlılık. Tasarımcılar için A/B test rehberi.",
+    category: "ux-research",
+    readingTime: 13,
+    featured: false,
+    publishedAt: "2025-01-15",
+    heroImage: "",
+    author: "DesignAtlas",
+    views: 0,
+  },
 ];
 
 type SortOption = "newest" | "popular" | "az";

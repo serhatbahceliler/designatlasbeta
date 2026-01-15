@@ -224,3 +224,40 @@ export function SummaryBox({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
+
+// Formula Box Component
+export function FormulaBox({
+  title,
+  formula,
+  description,
+  example,
+}: {
+  title?: string;
+  formula?: string;
+  description?: string;
+  example?: string;
+}) {
+  return (
+    <div className="my-6 p-6 rounded-lg bg-[#F8F9FA] border-l-4 border-[#6B7280]">
+      {title && (
+        <h4 className="text-lg font-semibold text-gray-900 mb-3">{title}</h4>
+      )}
+      {formula && (
+        <div className="mb-4">
+          <div className="text-2xl font-mono text-gray-900 font-semibold">
+            {formula}
+          </div>
+        </div>
+      )}
+      {description && (
+        <p className="text-gray-700 mb-3 leading-relaxed">{description}</p>
+      )}
+      {example && (
+        <div className="mt-4 pt-4 border-t border-gray-300">
+          <p className="text-sm font-semibold text-gray-600 mb-1">Örnek:</p>
+          <p className="text-gray-800 font-mono">{example}</p>
+        </div>
+      )}
+    </div>
+  );
+}

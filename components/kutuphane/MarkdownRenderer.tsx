@@ -12,6 +12,7 @@ import {
   Checklist,
   ExerciseBox,
   SummaryBox,
+  FormulaBox,
 } from "./ContentComponents";
 
 interface MarkdownRendererProps {
@@ -257,6 +258,38 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
               key={`table-${lastIndex}`}
               headers={headers}
               rows={rows}
+            />
+          );
+        },
+      },
+      {
+        regex: /\[FORMÜL KUTUSU\]([\s\S]*?)\[\/FORMÜL KUTUSU\]/g,
+        component: (match: string, content: string) => {
+          const lines = content.trim().split("\n").filter((l) => l.trim());
+          let title = "";
+          let formula = "";
+          let description = "";
+          let example = "";
+
+          lines.forEach((line) => {
+            if (line.startsWith("Başlık:")) {
+              title = line.replace(/^Başlık:\s*/, "").trim();
+            } else if (line.startsWith("Formül:")) {
+              formula = line.replace(/^Formül:\s*/, "").trim();
+            } else if (line.startsWith("Açıklama:")) {
+              description = line.replace(/^Açıklama:\s*/, "").trim();
+            } else if (line.startsWith("Örnek:")) {
+              example = line.replace(/^Örnek:\s*/, "").trim();
+            }
+          });
+
+          return (
+            <FormulaBox
+              key={`formula-${lastIndex}`}
+              title={title || undefined}
+              formula={formula || undefined}
+              description={description || undefined}
+              example={example || undefined}
             />
           );
         },
