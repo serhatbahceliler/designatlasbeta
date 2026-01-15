@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import { trackMixpanelEvent } from "@/lib/mixpanel";
 
 // Article type definition
-export interface Article {
+interface Article {
   id: string;
   title: string;
   subtitle?: string;
@@ -50,7 +50,7 @@ const CATEGORY_LABELS = {
 } as const;
 
 // Mock articles data
-export const MOCK_ARTICLES: Article[] = [
+const MOCK_ARTICLES: Article[] = [
   {
     id: "kullanilabilirlik-testi",
     title: "Kullanılabilirlik Testi Nedir?",
