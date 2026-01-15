@@ -8034,6 +8034,2357 @@ Derinleşmek istersen:
 - [Trustworthy Online Controlled Experiments - Kohavi](https://www.amazon.com/Trustworthy-Online-Controlled-Experiments-Practical/dp/1108724264) (Kitap, A/B test kitabı)
 `,
   },
+  "heuristic-evaluation": {
+    id: "heuristic-evaluation",
+    title: "Heuristic Evaluation Nedir?",
+    subtitle: "Uzman Değerlendirmesiyle UX Sorunlarını Tespit Etme",
+    titleEn: "Heuristic Evaluation",
+    slug: "heuristic-evaluation",
+    description: "Heuristic evaluation nedir, nasıl yapılır? Nielsen'in 10 sezgisel ilkesi, değerlendirme süreci ve şablon. Uzman UX denetimi rehberi.",
+    category: "ux-research",
+    readingTime: 14,
+    featured: false,
+    publishedAt: "2025-01-15",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Heuristic Evaluation Nedir? Uzman Değerlendirmesiyle UX Sorunlarını Tespit Etme
+
+**Seviye:** Orta  
+**Kategori:** UX Research  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Kullanılabilirlik testi için bütçe yok. Kullanıcı bulmak zor. Zaman kısıtlı.
+
+Peki UX sorunlarını nasıl tespit edeceksin?
+
+**Heuristic evaluation**, uzmanların belirlenmiş ilkelere göre bir arayüzü değerlendirdiği hızlı ve ekonomik bir yöntem. Kullanıcı gerekmiyor, birkaç saatte yapılabilir, ve ciddi sorunları ortaya çıkarır.
+
+1990'larda Jakob Nielsen tarafından popülerleştirilen bu yöntem, hâlâ UX araç kutusunun temel parçalarından. Kullanılabilirlik testinin yerini almaz ama onu tamamlar.
+
+Bu yazıda heuristic evaluation'ın ne olduğunu, Nielsen'in 10 ilkesini ve nasıl uygulanacağını öğreneceksin.
+
+---
+
+## Heuristic Evaluation Nedir?
+
+[CALLOUT]
+**Heuristic Evaluation:**
+Uzmanların bir arayüzü önceden belirlenmiş kullanılabilirlik ilkelerine (heuristics) göre sistematik olarak değerlendirdiği UX denetim yöntemi. "Usability inspection" kategorisindedir.
+[/CALLOUT]
+
+**Heuristic** kelimesi Yunanca "bulmak, keşfetmek" anlamına gelir. Bu bağlamda, tasarım sorunlarını bulmak için kullanılan genel ilkeler/kurallar demek.
+
+---
+
+## Neden Heuristic Evaluation?
+
+### Avantajları
+
+- **Hızlı:** Birkaç saatte tamamlanabilir
+- **Ekonomik:** Kullanıcı recruit maliyeti yok
+- **Erken aşamada:** Wireframe'de bile yapılabilir
+- **Kolay organize:** Uzman bul, değerlendir
+- **Somut çıktı:** İlkelere bağlı, spesifik sorunlar
+
+### Dezavantajları
+
+- **Gerçek kullanıcı değil:** Uzman tahmini, gerçek davranış değil
+- **False positive:** Olmayan sorunları bulabilir
+- **False negative:** Gerçek sorunları kaçırabilir
+- **Uzman kalitesine bağlı:** Deneyimsiz uzman az bulur
+- **Bağlam eksikliği:** Kullanıcının gerçek ortamı yok
+
+[INFO]
+%75 sorun tespiti
+5 uzman, kullanılabilirlik sorunlarının yaklaşık %75'ini bulur
+[/INFO]
+
+---
+
+## Nielsen'in 10 Sezgisel İlkesi
+
+1994'te Jakob Nielsen tarafından tanımlanan ve hâlâ geçerli olan 10 temel ilke:
+
+### 1. Sistem Durumu Görünürlüğü (Visibility of System Status)
+
+Sistem, kullanıcıya neler olduğunu her zaman makul sürede bildirmelidir.
+
+**Kontrol et:**
+- Yükleme göstergeleri var mı?
+- İşlem tamamlandığında geri bildirim var mı?
+- Kullanıcı nerede olduğunu biliyor mu?
+- Progress indicator'lar var mı?
+
+[COMPARISON]
+❌ Kötü: Form gönderildi, hiçbir şey olmadı
+✅ İyi: "Formunuz gönderildi" mesajı + onay ekranı
+[/COMPARISON]
+
+### 2. Sistem ve Gerçek Dünya Uyumu (Match Between System and Real World)
+
+Sistem, kullanıcının dilini kullanmalı. Teknik jargon yerine tanıdık kelimeler, kavramlar.
+
+**Kontrol et:**
+- Teknik terimler var mı?
+- İkonlar anlaşılır mı?
+- Metaforlar gerçek dünyayla uyumlu mu?
+- Bilgi mantıksal sırada mı?
+
+[COMPARISON]
+❌ Kötü: "Exception 404: Resource not found"
+✅ İyi: "Aradığınız sayfa bulunamadı"
+[/COMPARISON]
+
+### 3. Kullanıcı Kontrolü ve Özgürlüğü (User Control and Freedom)
+
+Kullanıcılar yanlış yere tıklar. Kolay çıkış, geri alma seçenekleri olmalı.
+
+**Kontrol et:**
+- Geri butonu çalışıyor mu?
+- İptal seçeneği var mı?
+- Undo/Redo mümkün mü?
+- Modal'lardan çıkış kolay mı?
+
+[COMPARISON]
+❌ Kötü: Email gönderildi, geri alamazsın
+✅ İyi: Gmail'in "Gönderimi geri al" özelliği
+[/COMPARISON]
+
+### 4. Tutarlılık ve Standartlar (Consistency and Standards)
+
+Aynı şeyler aynı görünmeli ve çalışmalı. Platform kurallarına uy.
+
+**Kontrol et:**
+- Aynı aksiyon her yerde aynı mı?
+- Terminoloji tutarlı mı?
+- Görsel dil tutarlı mı?
+- Platform standartlarına uyuyor mu?
+
+[COMPARISON]
+❌ Kötü: Bir yerde "Kaydet", başka yerde "Sakla"
+✅ İyi: Her yerde "Kaydet"
+[/COMPARISON]
+
+### 5. Hata Önleme (Error Prevention)
+
+Hata mesajından önce, hatanın olmasını engelle.
+
+**Kontrol et:**
+- Tehlikeli aksiyonlarda onay var mı?
+- Input'larda format ipucu var mı?
+- Kısıtlamalar (constraints) var mı?
+- Akıllı varsayılanlar var mı?
+
+[COMPARISON]
+❌ Kötü: Yanlış tarih formatı girince hata
+✅ İyi: Tarih seçici (date picker) ile format zorla
+[/COMPARISON]
+
+### 6. Hatırlamak Yerine Tanıma (Recognition Rather Than Recall)
+
+Kullanıcıyı hatırlamaya zorlamak yerine, seçenekleri göster.
+
+**Kontrol et:**
+- Son aramalar/işlemler görünüyor mu?
+- Seçenekler listesi var mı?
+- Yardım bağlamsal mı?
+- Gerekli bilgi görünür mü?
+
+[COMPARISON]
+❌ Kötü: "Ürün kodunu girin"
+✅ İyi: Ürün listesinden seçim
+[/COMPARISON]
+
+### 7. Esneklik ve Kullanım Verimliliği (Flexibility and Efficiency of Use)
+
+Hem yeni başlayanlar hem uzmanlar için uygun olmalı.
+
+**Kontrol et:**
+- Kısayollar var mı?
+- Sık işlemler hızlandırılmış mı?
+- Kişiselleştirme mümkün mü?
+- Gelişmiş özellikler gizli mi?
+
+[COMPARISON]
+❌ Kötü: Her işlem için 5 tıklama
+✅ İyi: Sık kullanılanlar için kısayol + hızlı erişim
+[/COMPARISON]
+
+### 8. Estetik ve Minimalist Tasarım (Aesthetic and Minimalist Design)
+
+Gereksiz bilgi görünmemeli. Her ekstra element, önemli olanla rekabet eder.
+
+**Kontrol et:**
+- Gereksiz element var mı?
+- Görsel gürültü var mı?
+- Öncelik hiyerarşisi net mi?
+- İçerik odaklı mı?
+
+[COMPARISON]
+❌ Kötü: 15 farklı CTA, hepsi önemli
+✅ İyi: 1 primary CTA, net hiyerarşi
+[/COMPARISON]
+
+### 9. Hataları Tanıma, Teşhis ve Kurtarma (Help Users Recognize, Diagnose, and Recover from Errors)
+
+Hata mesajları anlaşılır olmalı ve çözüm önermelidir.
+
+**Kontrol et:**
+- Hata mesajı anlaşılır mı?
+- Sorunun ne olduğu belirtilmiş mi?
+- Çözüm önerisi var mı?
+- Teknik kod yerine insan dili mi?
+
+[COMPARISON]
+❌ Kötü: "Error 500"
+✅ İyi: "Bir sorun oluştu. Lütfen birkaç dakika sonra tekrar deneyin. Sorun devam ederse destek@site.com adresine yazın."
+[/COMPARISON]
+
+### 10. Yardım ve Dokümantasyon (Help and Documentation)
+
+İdeal sistem yardıma ihtiyaç duymaz ama gerektiğinde erişilebilir olmalı.
+
+**Kontrol et:**
+- Yardım bölümü var mı?
+- Aranabilir mi?
+- Bağlamsal yardım var mı?
+- Göreve odaklı mı?
+
+---
+
+## Heuristic Evaluation Nasıl Yapılır?
+
+### Adım 1: Hazırlık
+
+**Kapsamı belirle:**
+- Tüm uygulama mı, belirli akış mı?
+- Hangi platformlar? (web, mobil, desktop)
+- Hangi kullanıcı senaryoları?
+
+**Değerlendiricileri seç:**
+- 3-5 uzman ideal
+- UX deneyimi olan kişiler
+- Mümkünse domain bilgisi
+
+**Materyalleri hazırla:**
+- Değerlendirilecek ürün/prototype
+- Heuristic listesi
+- Değerlendirme şablonu
+- Senaryo listesi (opsiyonel)
+
+### Adım 2: Bireysel Değerlendirme
+
+Her uzman bağımsız olarak değerlendirir:
+
+[STEPS]
+1. Genel tanışma (10-15 dk)
+   Ürünü genel olarak gez, yapıyı anla
+
+2. Detaylı değerlendirme (1-2 saat)
+   Her ekranı/özelliği heuristic'lere göre değerlendir
+
+3. Sorunları kaydet
+   Her sorun için: konum, açıklama, ihlal edilen heuristic, şiddet
+[/STEPS]
+
+### Adım 3: Şiddet Derecelendirmesi
+
+Her sorun için şiddet puanı:
+
+[TABLE]
+| Puan | Şiddet | Açıklama |
+|------|--------|----------|
+| 0 | Sorun değil | Kullanılabilirlik sorunu yok |
+| 1 | Kozmetik | Sadece zaman varsa düzelt |
+| 2 | Minor | Düşük öncelik |
+| 3 | Major | Yüksek öncelik, düzeltilmeli |
+| 4 | Catastrophic | Çıkmadan önce mutlaka düzelt |
+[/TABLE]
+
+### Adım 4: Bulguları Birleştir
+
+Tüm uzmanların bulguları toplanır:
+- Duplicate'ler birleştirilir
+- Şiddet puanları ortalaması alınır
+- Öncelik sırası belirlenir
+
+### Adım 5: Raporla
+
+Rapor içeriği:
+- Yönetici özeti
+- Yöntem açıklaması
+- Bulgular listesi (öncelik sırasına göre)
+- Her bulgu için: ekran görüntüsü, açıklama, heuristic, şiddet, öneri
+
+---
+
+## Değerlendirme Şablonu
+
+Her sorun için kaydet:
+
+[TABLE]
+| Alan | Açıklama |
+|------|----------|
+| **ID** | Sorun numarası (örn: H-001) |
+| **Konum** | Nerede? (sayfa, ekran, element) |
+| **Açıklama** | Sorun ne? |
+| **Heuristic** | Hangi ilke ihlal ediliyor? |
+| **Şiddet** | 0-4 arası puan |
+| **Ekran görüntüsü** | Sorunu gösteren görsel |
+| **Öneri** | Nasıl düzeltilebilir? |
+[/TABLE]
+
+---
+
+## Heuristic Evaluation vs Kullanılabilirlik Testi
+
+[TABLE]
+| Özellik | Heuristic Evaluation | Kullanılabilirlik Testi |
+|---------|---------------------|------------------------|
+| **Kim yapar** | Uzmanlar | Gerçek kullanıcılar |
+| **Süre** | Saatler | Günler/haftalar |
+| **Maliyet** | Düşük | Orta-yüksek |
+| **Bulgu tipi** | Potansiyel sorunlar | Gerçek sorunlar |
+| **Aşama** | Erken dahil geç | Prototype sonrası |
+| **"Neden" açıklar mı** | Sınırlı | Evet |
+| **Öğrenme eğrisi** | Uzmanlık gerekir | Yönetim gerekir |
+[/TABLE]
+
+[TIP]
+💡 İkisi birbirinin alternatifi değil, tamamlayıcısı. Önce heuristic evaluation ile bariz sorunları bul, sonra kullanılabilirlik testiyle doğrula ve derinleştir.
+[/TIP]
+
+---
+
+## Alternatif Heuristic Setleri
+
+Nielsen'in 10 ilkesi en yaygın ama tek seçenek değil:
+
+**Shneiderman's 8 Golden Rules:**
+Benzer ilkeler, farklı organizasyon
+
+**Gerhardt-Powals' Cognitive Principles:**
+Bilişsel yük odaklı
+
+**ISO 9241 Dialogue Principles:**
+Uluslararası standart
+
+**Domain-spesifik heuristic'ler:**
+E-ticaret, mobil, erişilebilirlik için özel setler
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Tek uzmanla yapmak
+
+Tek uzman sorunların sadece ~%35'ini bulur. Minimum 3 uzman kullan.
+
+### 2. Uzmanların birlikte çalışması
+
+[COMPARISON]
+❌ Hata: Uzmanlar birlikte değerlendirip tartışıyor
+✅ Doğrusu: Önce bağımsız değerlendir, sonra birleştir
+[/COMPARISON]
+
+### 3. Şiddet derecelendirmesini atlamak
+
+Tüm sorunlar eşit değil. Şiddet olmadan önceliklendirme yapılamaz.
+
+### 4. Kullanıcı testi yerine kullanmak
+
+Heuristic evaluation kullanıcı testinin yerini almaz. İkisi farklı şeyler bulur.
+
+### 5. Öneri vermemek
+
+Sadece sorun listelemek yetmez. Her sorun için çözüm önerisi sun.
+
+---
+
+## Ne Zaman Kullanılır?
+
+**İdeal durumlar:**
+- Bütçe veya zaman kısıtlı
+- Erken tasarım aşaması
+- Hızlı geri bildirim gerekli
+- Kullanıcı testi öncesi ön değerlendirme
+- Rakip analizi
+
+**Dikkatli olunması gereken durumlar:**
+- Çok yenilikçi ürünler (standart heuristic'ler yetersiz)
+- Domain-spesifik ürünler (uzman bilgisi gerekir)
+- Kritik kararlar (kullanıcı testiyle doğrula)
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**30 dakika**
+
+**Görev:** Bir web sitesinin ana sayfasını Nielsen'in 10 ilkesine göre değerlendir.
+
+**Seçenekler:**
+- Kendi şirketinin ürünü
+- Sık kullandığın bir e-ticaret sitesi
+- Herhangi bir SaaS ürünü
+
+**Adımlar:**
+
+1. **Siteyi seç ve gez** (5 dk)
+   Genel yapıyı anla
+
+2. **Her ilke için değerlendir** (20 dk)
+   Her 10 ilke için:
+   - Bu ilke karşılanıyor mu?
+   - Sorun varsa ne?
+   - Şiddet derecesi (0-4)
+
+3. **Top 3 sorun** (5 dk)
+   En kritik 3 sorunu seç ve öneri yaz
+
+**Şablon:**
+
+| Heuristic | Sorun | Şiddet | Öneri |
+|-----------|-------|--------|-------|
+| 1. Görünürlük | ... | X | ... |
+| 2. Gerçek dünya | ... | X | ... |
+| ... | ... | ... | ... |
+
+**Not:** İlk denemede her ilkede sorun bulmak zorunda değilsin. Bazı siteler bazı ilkelerde iyi olabilir.
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Heuristic evaluation, uzmanların ilkelere göre arayüz değerlendirdiği hızlı UX denetimi
+- Nielsen'in 10 ilkesi: görünürlük, gerçek dünya uyumu, kontrol, tutarlılık, hata önleme, tanıma, esneklik, minimalizm, hata kurtarma, yardım
+- 3-5 uzman ideal, bağımsız değerlendirme sonra birleştirme
+- Şiddet derecelendirmesi: 0 (sorun yok) - 4 (felaket)
+- Kullanılabilirlik testinin yerini almaz, tamamlar
+- Erken aşamada, düşük bütçede, hızlı geri bildirim için ideal
+- Her sorun için konum, açıklama, heuristic, şiddet ve öneri kaydet
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [A/B Test Temelleri](/kutuphane/ab-test-temelleri)
+
+**Sonraki:** Design System Nedir? *(yakında)*
+
+**İlgili konular:**
+- [Kullanılabilirlik Testi Nedir?](/kutuphane/kullanilabilirlik-testi)
+- Cognitive Walkthrough Nedir? *(yakında)*
+- UX Audit Nasıl Yapılır? *(yakında)*
+
+**İlgili Roadmap:** UX Designer Roadmap → Research & Evaluation
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [10 Usability Heuristics - NNGroup](https://www.nngroup.com/articles/ten-usability-heuristics/) (İngilizce, orijinal kaynak)
+- [How to Conduct a Heuristic Evaluation - NNGroup](https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/) (İngilizce, 10 dk)
+- [Severity Ratings for Usability Problems - NNGroup](https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/) (İngilizce, şiddet derecelendirme)
+`,
+  },
+  "design-system-nedir": {
+    id: "design-system-nedir",
+    title: "Design System Nedir?",
+    subtitle: "Tutarlı Tasarımın Temeli",
+    titleEn: "What is Design System?",
+    slug: "design-system-nedir",
+    description: "Design system nedir, neden önemli? Component library, style guide ve design token kavramları. Design system oluşturma ve kullanma rehberi.",
+    category: "ux-design",
+    readingTime: 15,
+    featured: true,
+    publishedAt: "2025-01-15",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Design System Nedir? Tutarlı Tasarımın Temeli
+
+**Seviye:** Orta  
+**Kategori:** UX Design  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Aynı ürünün farklı sayfalarında farklı buton stilleri. Bir yerde 16px padding, başka yerde 20px. Mavi tonları birbiriyle uyumsuz. Mobilde farklı, desktop'ta farklı.
+
+Tanıdık geldi mi?
+
+Ekip büyüdükçe, ürün genişledikçe tutarlılık kayboluyor. Her tasarımcı kendi kararlarını veriyor. Her developer farklı yorumluyor. Sonuç: Frankenstein ürün.
+
+**Design system**, bu kaosa son veren sistemdir. Ortak dil, ortak kurallar, ortak component'ler. Herkes aynı yapı taşlarını kullanır, tutarlılık garanti.
+
+Bu yazıda design system'ın ne olduğunu, bileşenlerini ve nasıl başlayacağını öğreneceksin.
+
+---
+
+## Design System Nedir?
+
+[CALLOUT]
+**Design System:**
+Bir ürün veya ürün ailesinin tutarlı tasarımını sağlamak için kullanılan yeniden kullanılabilir component'ler, stil kuralları, pattern'ler, ilkeler ve dokümantasyondan oluşan kapsamlı ekosistem.
+[/CALLOUT]
+
+Design system sadece bir dosya veya kütüphane değil. Üç ayağı var:
+
+**1. Tasarım varlıkları:** Figma component'leri, stiller, token'lar
+**2. Kod varlıkları:** React/Vue/Swift component'leri
+**3. Dokümantasyon:** Kurallar, kullanım rehberleri, ilkeler
+
+Bu üçü senkronize çalıştığında design system işlevsel olur.
+
+---
+
+## Neden Design System?
+
+### 1. Tutarlılık
+
+Aynı component her yerde aynı görünür ve çalışır. Kullanıcı deneyimi birleşik olur.
+
+### 2. Verimlilik
+
+Sıfırdan tasarlamak yerine, hazır component'leri birleştir. Tasarım süresi kısalır.
+
+### 3. Ölçeklenebilirlik
+
+Yeni sayfa, yeni özellik eklemek kolaylaşır. Temel yapı hazır.
+
+### 4. İş birliği
+
+Tasarımcı ve developer aynı dili konuşur. "Primary button" deyince herkes aynı şeyi anlar.
+
+### 5. Bakım kolaylığı
+
+Bir değişiklik merkezi olarak yapılır, her yere yayılır. Mavi tonu değişecek? Token'ı güncelle, bitti.
+
+### 6. Kalite
+
+Test edilmiş, erişilebilir, responsive component'ler. Her seferinde baştan düşünmek yok.
+
+[INFO]
+%47 daha hızlı
+Design system kullanan ekipler, tasarım ve geliştirme süresinde ortalama %47 tasarruf sağlıyor
+[/INFO]
+
+---
+
+## Design System Bileşenleri
+
+### 1. Design Tokens
+
+Tasarım kararlarının en küçük birimi. Platform-agnostik değişkenler.
+
+**Token kategorileri:**
+
+[TABLE]
+| Kategori | Örnekler |
+|----------|----------|
+| **Color** | color-primary, color-background, color-text |
+| **Typography** | font-size-lg, font-weight-bold, line-height-tight |
+| **Spacing** | spacing-xs, spacing-md, spacing-xl |
+| **Border** | border-radius-sm, border-width-default |
+| **Shadow** | shadow-sm, shadow-lg |
+| **Animation** | duration-fast, easing-default |
+[/TABLE]
+
+**Token yapısı örneği:**
+color-primary-500: #6366F1
+color-primary-600: #4F46E5
+spacing-4: 16px
+spacing-8: 32px
+font-size-base: 16px
+border-radius-md: 8px
+
+[TIP]
+💡 Token isimlendirmesinde anlamlı ve tutarlı ol. "blue-500" yerine "color-primary-500" kullan. Böylece mavi yeşile dönse bile isim mantıklı kalır.
+[/TIP]
+
+### 2. Foundation / Style Guide
+
+Token'ların nasıl kullanılacağını tanımlar.
+
+**İçerir:**
+- Renk paleti ve kullanım kuralları
+- Tipografi sistemi (scale, hierarchy)
+- Spacing sistemi (grid, margin, padding)
+- İkonografi kuralları
+- Görsel dil (fotoğraf, illüstrasyon)
+
+### 3. Component Library
+
+Yeniden kullanılabilir UI elementleri.
+
+**Temel component'ler:**
+- Button (primary, secondary, ghost, disabled)
+- Input (text, email, password, error state)
+- Select / Dropdown
+- Checkbox / Radio
+- Card
+- Modal / Dialog
+- Toast / Notification
+- Navigation (header, sidebar, tabs)
+- Table
+- Form
+
+**Her component için:**
+- Tüm varyasyonlar (size, state, type)
+- Responsive davranış
+- Erişilebilirlik gereksinimleri
+- Kullanım rehberi
+- Do's and don'ts
+
+### 4. Patterns
+
+Component'lerin birlikte nasıl kullanılacağını gösteren şablonlar.
+
+**Örnek pattern'ler:**
+- Form pattern (label + input + error + help text)
+- Card grid pattern
+- Empty state pattern
+- Loading state pattern
+- Error page pattern
+- Navigation pattern
+
+### 5. Dokümantasyon
+
+Her şeyin nasıl kullanılacağını anlatan rehber.
+
+**İçerir:**
+- Genel ilkeler (tone of voice, accessibility)
+- Token referansı
+- Component kataloğu
+- Pattern örnekleri
+- Contribution guide
+- Changelog
+
+---
+
+## Atomic Design
+
+Brad Frost'un Atomic Design metodolojisi, design system yapılandırmasında yaygın kullanılır.
+
+**5 seviye:**
+
+[TABLE]
+| Seviye | Açıklama | Örnek |
+|--------|----------|-------|
+| **Atoms** | En küçük birim, bölünemez | Button, input, label, icon |
+| **Molecules** | Atom grupları, basit fonksiyon | Search bar (input + button) |
+| **Organisms** | Molecule grupları, bölüm | Header (logo + nav + search + user) |
+| **Templates** | Sayfa iskeletleri | Blog post template |
+| **Pages** | Gerçek içerikli sayfalar | Specific blog post |
+[/TABLE]
+
+---
+
+## Design System vs Diğerleri
+
+### Design System vs UI Kit
+
+[TABLE]
+| Özellik | UI Kit | Design System |
+|---------|--------|---------------|
+| **İçerik** | Görsel component'ler | Component + kural + kod + döküman |
+| **Yaşam döngüsü** | Statik dosya | Yaşayan ekosistem |
+| **Kod** | Genellikle yok | Dahil |
+| **Dokümantasyon** | Minimal | Kapsamlı |
+| **Governance** | Yok | Süreç ve sahiplik var |
+[/TABLE]
+
+### Design System vs Style Guide
+
+Style guide, design system'ın bir parçası. Sadece stil kurallarını içerir (renk, tipografi). Design system bunun üzerine component'ler, pattern'ler ve kod ekler.
+
+### Design System vs Component Library
+
+Component library, design system'ın bir parçası. UI component koleksiyonu. Design system bunun üzerine token'lar, kurallar ve dokümantasyon ekler.
+
+---
+
+## Popüler Design System Örnekleri
+
+### Material Design (Google)
+
+- En kapsamlı ve detaylı
+- Android'in temeli
+- Web için Material UI (React)
+- [material.io](https://material.io)
+
+### Human Interface Guidelines (Apple)
+
+- iOS, macOS, watchOS için
+- Platform-spesifik kurallar
+- [developer.apple.com/design](https://developer.apple.com/design)
+
+### Carbon (IBM)
+
+- Enterprise odaklı
+- Erişilebilirlik güçlü
+- React, Vue, Angular desteği
+- [carbondesignsystem.com](https://carbondesignsystem.com)
+
+### Polaris (Shopify)
+
+- E-ticaret odaklı
+- İçerik rehberleri güçlü
+- [polaris.shopify.com](https://polaris.shopify.com)
+
+### Ant Design (Alibaba)
+
+- Enterprise React component'leri
+- Çin pazarı odaklı
+- [ant.design](https://ant.design)
+
+### Atlassian Design System
+
+- Jira, Confluence için
+- [atlassian.design](https://atlassian.design)
+
+---
+
+## Design System Nasıl Başlanır?
+
+### Küçük Başla
+
+Tam teşekküllü sistem hemen gelmez. Önce:
+
+[STEPS]
+1. Token'larla başla
+   Renk, tipografi, spacing tanımla
+
+2. Temel component'leri oluştur
+   Button, input, card - en sık kullanılanlar
+
+3. Dokümante et
+   Basit de olsa kullanım rehberi yaz
+
+4. Pilot proje
+   Bir projede dene, feedback al
+
+5. İtere et
+   Eksikleri tamamla, genişlet
+[/STEPS]
+
+### Audit ile Başla
+
+Mevcut ürünü audit et:
+- Kaç farklı buton stili var?
+- Kaç farklı renk kullanılıyor?
+- Tutarsızlıklar nerede?
+
+Bu audit, design system'ın kapsamını belirler.
+
+### Önceliklendir
+
+Her şeyi aynı anda yapamazsın. Öncelik:
+1. En sık kullanılan component'ler
+2. En çok tutarsızlık olan alanlar
+3. En kritik kullanıcı akışları
+
+---
+
+## Design System Araçları
+
+### Tasarım
+
+[TABLE]
+| Araç | Özellik |
+|------|---------|
+| **Figma** | Component, variant, auto layout, token plugin'leri |
+| **Sketch** | Library, symbol, shared styles |
+| **Adobe XD** | Component, design token desteği |
+[/TABLE]
+
+### Token Yönetimi
+
+- **Tokens Studio (Figma plugin):** Figma'da token yönetimi
+- **Style Dictionary (Amazon):** Token'ları koda çevirme
+- **Theo (Salesforce):** Token build tool
+
+### Dokümantasyon
+
+- **Storybook:** Component dokümantasyonu, interactive playground
+- **Zeroheight:** Design system dokümantasyon platformu
+- **Notion/Confluence:** Basit döküman için
+
+### Kod
+
+- **Storybook:** React, Vue, Angular component geliştirme
+- **Bit:** Component paylaşımı
+- **Lerna/Nx:** Monorepo yönetimi
+
+---
+
+## Design System Governance
+
+Sistem var, peki kim sahip? Nasıl güncellenir?
+
+### Sahiplik Modelleri
+
+**Centralized (Merkezi):**
+Dedicated design system ekibi var. Tüm kararlar bu ekipten geçer.
+
+**Federated (Dağıtık):**
+Farklı ekiplerden temsilciler bir araya gelir. Kararlar ortaklaşa alınır.
+
+**Hybrid:**
+Core ekip temel sistemi yönetir, diğer ekipler katkıda bulunur.
+
+### Contribution Süreci
+
+1. Öneri/talep oluştur
+2. Review ve tartışma
+3. Tasarım + geliştirme
+4. Test
+5. Dokümantasyon
+6. Release
+
+### Versiyonlama
+
+Design system'lar semantic versioning kullanır:
+- **Major (1.0 → 2.0):** Breaking change
+- **Minor (1.0 → 1.1):** Yeni özellik, geriye uyumlu
+- **Patch (1.0.0 → 1.0.1):** Bug fix
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Çok erken genişlemek
+
+[COMPARISON]
+❌ Hata: İlk günden 100 component hedeflemek
+✅ Doğrusu: 10-15 temel component ile başla, ihtiyaç oldukça ekle
+[/COMPARISON]
+
+### 2. Tasarım ve kod senkronizasyonu
+
+Figma'daki component ile koddaki farklıysa, sistem işe yaramaz. Sync mekanizması kur.
+
+### 3. Dokümantasyon eksikliği
+
+Component var ama nasıl kullanılacağı yok. Dokümantasyon olmadan adoption düşer.
+
+### 4. Adoption zorlamak
+
+Ekibi zorla değil, değer göstererek ikna et. "Bak ne kadar hızlı" daha etkili.
+
+### 5. Güncellememek
+
+Design system yaşayan organizma. Güncel tutulmazsa ölür.
+
+### 6. Edge case'leri görmezden gelmek
+
+"Standart dışı" ihtiyaçlar olacak. Bunları nasıl ele alacağını planla.
+
+---
+
+## Küçük Ekipler İçin
+
+Tam teşekküllü design system lüks görünebilir. Ama küçük ekipler de faydalanabilir:
+
+**Minimum viable design system:**
+- Renk token'ları (5-10 renk)
+- Tipografi scale (4-5 boyut)
+- Spacing scale (4-6 değer)
+- 5-10 temel component
+- Basit bir Notion sayfası dokümantasyon
+
+Bu kadar bile tutarlılığı artırır ve tekrar eden işleri azaltır.
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**30 dakika**
+
+**Görev:** Mini design system token seti oluştur.
+
+**Senaryo:** Yeni bir SaaS ürünü için temel token'ları tanımla.
+
+**Adımlar:**
+
+1. **Renk token'ları (10 dk)**
+   - Primary renk (5 ton: 100, 300, 500, 700, 900)
+   - Neutral/Gray (5 ton)
+   - Semantic: success, warning, error
+   - Background, surface, text renkleri
+
+2. **Tipografi token'ları (10 dk)**
+   - Font family (1-2 font)
+   - Font size scale (xs, sm, base, lg, xl, 2xl)
+   - Font weight (regular, medium, bold)
+   - Line height (tight, normal, relaxed)
+
+3. **Spacing token'ları (5 dk)**
+   - 4px base ile scale: 4, 8, 12, 16, 24, 32, 48, 64
+
+4. **Diğer token'lar (5 dk)**
+   - Border radius: sm, md, lg, full
+   - Shadow: sm, md, lg
+
+**Çıktı:** Figma'da veya Notion'da token listesi oluştur.
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Design system = component'ler + kurallar + kod + dokümantasyon
+- Token'lar en küçük birim: renk, tipografi, spacing değişkenleri
+- Atomic design: atom → molecule → organism → template → page
+- UI kit statik, design system yaşayan ekosistem
+- Küçük başla: token + temel component + basit döküman
+- Governance önemli: sahiplik, contribution, versiyonlama
+- Tasarım-kod senkronizasyonu kritik
+- Popüler örnekler: Material, Carbon, Polaris, Ant Design
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Heuristic Evaluation Nedir?](/kutuphane/heuristic-evaluation)
+
+**Sonraki:** Accessibility (Erişilebilirlik) Temelleri *(yakında)*
+
+**İlgili konular:**
+- [UI Nedir?](/kutuphane/ui-nedir)
+- Component Tasarım İlkeleri *(yakında)*
+- Figma'da Design System Kurma *(yakında)*
+
+**İlgili Roadmap:** UI Designer Roadmap → Design Systems
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Design Systems 101 - NNGroup](https://www.nngroup.com/articles/design-systems-101/) (İngilizce, 10 dk)
+- [Atomic Design - Brad Frost](https://atomicdesign.bradfrost.com/) (Kitap, ücretsiz online)
+- [Design Systems Handbook - InVision](https://www.designbetter.co/design-systems-handbook) (Kitap, ücretsiz)
+- [Design Tokens W3C](https://design-tokens.github.io/community-group/format/) (Standart taslağı)
+`,
+  },
+  "accessibility-temelleri": {
+    id: "accessibility-temelleri",
+    title: "Accessibility (Erişilebilirlik) Temelleri",
+    subtitle: "Herkes İçin Tasarım",
+    titleEn: "Accessibility Basics",
+    slug: "accessibility-temelleri",
+    description: "Erişilebilirlik nedir, neden önemli? WCAG standartları, erişilebilir tasarım ilkeleri ve pratik kontrol listesi. A11y rehberi.",
+    category: "ux-design",
+    readingTime: 14,
+    featured: false,
+    publishedAt: "2025-01-15",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Accessibility (Erişilebilirlik) Temelleri: Herkes İçin Tasarım
+
+**Seviye:** Başlangıç - Orta  
+**Kategori:** UX Design  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Dünya nüfusunun %15'i bir tür engele sahip. Bu, 1 milyardan fazla insan demek.
+
+Ama erişilebilirlik sadece "engelliler için" değil. Güneş altında telefonuna bakmaya çalışan sen de, tek elle bebek tutarken scroll yapan anne de, gözlüğünü unutan yaşlı amca da erişilebilirlikten faydalanır.
+
+**Accessibility** (erişilebilirlik), ürünlerin herkes tarafından, her koşulda kullanılabilir olmasını sağlar. Etik bir sorumluluk olduğu kadar, iş mantığı açısından da önemli: daha geniş kitle, daha fazla kullanıcı.
+
+Bu yazıda erişilebilirliğin ne olduğunu, WCAG standartlarını ve tasarımcı olarak dikkat etmen gerekenleri öğreneceksin.
+
+---
+
+## Accessibility Nedir?
+
+[CALLOUT]
+**Accessibility (A11y):**
+Dijital ürünlerin, fiziksel, duyusal, bilişsel veya durumsal engeli olan bireyler dahil herkes tarafından algılanabilir, kullanılabilir ve anlaşılabilir olmasını sağlayan tasarım ve geliştirme pratiği.
+[/CALLOUT]
+
+**A11y neden?**
+"Accessibility" kelimesinde A ile Y arasında 11 harf var: a-ccessibilit-y → a11y
+
+Benzer kısaltmalar:
+- i18n = internationalization
+- l10n = localization
+
+---
+
+## Neden Erişilebilirlik?
+
+### 1. Etik sorumluluk
+
+İnternet artık temel bir hak. Bankacılık, eğitim, sağlık, iletişim - hepsi dijitalde. Erişilemezlik, dışlama demek.
+
+### 2. Yasal gereklilik
+
+Birçok ülkede erişilebilirlik yasal zorunluluk:
+- ABD: ADA, Section 508
+- AB: European Accessibility Act
+- Türkiye: 5378 sayılı Engelliler Kanunu
+
+### 3. Daha geniş kitle
+
+%15 engelli nüfus + yaşlanan nüfus + geçici/durumsal engeller = büyük pazar.
+
+### 4. SEO faydası
+
+Erişilebilir siteler genellikle SEO dostu: semantic HTML, alt text, düzgün başlık yapısı.
+
+### 5. İyi UX = erişilebilir UX
+
+Erişilebilirlik için yapılan iyileştirmeler, herkes için deneyimi iyileştirir.
+
+[INFO]
+%15+
+Dünya nüfusunun engelli oranı. 1 milyardan fazla potansiyel kullanıcı.
+[/INFO]
+
+---
+
+## Engel Türleri
+
+### Görme Engeli
+
+- **Körlük:** Ekran okuyucu kullanır
+- **Az görme:** Büyütme, yüksek kontrast
+- **Renk körlüğü:** Renk dışı ipuçları gerekir
+
+### İşitme Engeli
+
+- **Sağırlık:** Altyazı, transcript gerekir
+- **Az işitme:** Ses kontrolü, görsel uyarılar
+
+### Motor (Hareket) Engeli
+
+- **Kısıtlı hareket:** Klavye navigasyonu
+- **Titreme:** Büyük tıklama alanları
+- **Geçici:** Kırık kol, bebekli anne
+
+### Bilişsel Engel
+
+- **Dikkat eksikliği:** Basit, net tasarım
+- **Öğrenme güçlüğü:** Anlaşılır dil
+- **Hafıza sorunları:** Tutarlı navigasyon
+
+### Durumsal Engel
+
+- **Parlak güneş:** Yüksek kontrast
+- **Gürültülü ortam:** Altyazı
+- **Tek el meşgul:** Büyük butonlar
+- **Yavaş internet:** Hafif sayfa
+
+[TIP]
+💡 Kalıcı, geçici ve durumsal engeller aynı çözümlerden faydalanır. Tek kolunu kaybetmiş biri, kolu kırık biri ve bebek tutan biri - hepsi tek elle kullanım ister.
+[/TIP]
+
+---
+
+## WCAG Standartları
+
+**WCAG (Web Content Accessibility Guidelines)**, W3C tarafından yayınlanan uluslararası erişilebilirlik standardı.
+
+### Dört Temel İlke (POUR)
+
+**1. Perceivable (Algılanabilir)**
+İçerik en az bir duyuyla algılanabilmeli.
+- Görsellerin alt text'i
+- Video altyazıları
+- Yeterli renk kontrastı
+
+**2. Operable (Kullanılabilir)**
+Arayüz kontrol edilebilmeli.
+- Klavye erişimi
+- Yeterli zaman
+- Nöbet tetiklemeyen içerik
+
+**3. Understandable (Anlaşılabilir)**
+İçerik ve arayüz anlaşılır olmalı.
+- Okunabilir metin
+- Tahmin edilebilir davranış
+- Hata önleme ve düzeltme
+
+**4. Robust (Sağlam)**
+Farklı teknolojilerle uyumlu olmalı.
+- Geçerli HTML
+- Yardımcı teknoloji uyumu
+
+### Uyumluluk Seviyeleri
+
+[TABLE]
+| Seviye | Açıklama | Hedef Kitle |
+|--------|----------|-------------|
+| **A** | Minimum | Temel erişilebilirlik |
+| **AA** | Orta | Çoğu yasal gereklilik, önerilen hedef |
+| **AAA** | Maksimum | En yüksek erişilebilirlik, tüm içerik için zor |
+[/TABLE]
+
+**Hedef:** Çoğu proje için WCAG 2.1 AA seviyesi.
+
+---
+
+## Tasarımcı İçin Erişilebilirlik
+
+### Renk ve Kontrast
+
+**Minimum kontrast oranları (WCAG AA):**
+- Normal metin: 4.5:1
+- Büyük metin (18px+ veya 14px bold+): 3:1
+- UI bileşenleri ve grafikler: 3:1
+
+[COMPARISON]
+❌ Kötü: Açık gri metin (#999) beyaz üzerinde → 2.8:1
+✅ İyi: Koyu gri metin (#595959) beyaz üzerinde → 7:1
+[/COMPARISON]
+
+**Renk körlüğü:**
+- Sadece renge dayanma
+- Renk + ikon, renk + pattern kullan
+- Hata için sadece kırmızı değil, ikon de ekle
+
+### Tipografi
+
+- Minimum 16px body text
+- Satır yüksekliği en az 1.5
+- Paragraf spacing en az 2x font size
+- Okunabilir font seçimi (sans-serif genellikle daha iyi)
+
+### Touch Target (Dokunma Alanı)
+
+- Minimum 44x44 pixel (WCAG)
+- İdeal: 48x48 pixel
+- Butonlar arası yeterli boşluk
+
+### Focus State
+
+Klavye kullanıcıları için odak göstergesi:
+- Her interaktif elementte görünür focus
+- Sadece outline kaldırma ❌
+- Özel focus stili tasarla
+
+[COMPARISON]
+❌ Kötü: \`outline: none;\` ve alternatif yok
+✅ İyi: \`outline: none;\` ama \`box-shadow\` veya \`border\` ile alternatif
+[/COMPARISON]
+
+### Form Tasarımı
+
+- Her input'un label'ı olmalı
+- Placeholder label yerine kullanılmamalı
+- Hata mesajları açık ve yardımcı
+- Required alanlar belirtilmeli
+- Grup label'ları (fieldset/legend)
+
+### Görsel İçerik
+
+- Tüm görsellerde alt text
+- Dekoratif görseller: boş alt (\`alt=""\`)
+- Karmaşık görseller: uzun açıklama
+- Video: altyazı ve transcript
+
+---
+
+## Screen Reader (Ekran Okuyucu)
+
+Görme engelli kullanıcıların en temel aracı.
+
+**Nasıl çalışır:**
+- HTML'i okur, sese çevirir
+- Semantic HTML kritik
+- Heading hiyerarşisi önemli
+- Alt text'ler okunur
+- ARIA etiketleri yardımcı olur
+
+**Popüler screen reader'lar:**
+- NVDA (Windows, ücretsiz)
+- JAWS (Windows, ücretli)
+- VoiceOver (macOS/iOS, dahili)
+- TalkBack (Android, dahili)
+
+[TIP]
+💡 En az bir screen reader'ı dene. VoiceOver macOS'ta dahili. Ürününü dinleyerek deneyimle, neler eksik görürsün.
+[/TIP]
+
+---
+
+## Semantic HTML
+
+Screen reader'lar HTML yapısını okur. Doğru element, doğru anlam.
+
+[TABLE]
+| Yanlış | Doğru | Neden |
+|--------|-------|-------|
+| \`<div onclick>\` | \`<button>\` | Keyboard focus, role |
+| \`<div class="title">\` | \`<h1>\` | Heading hiyerarşisi |
+| \`<span class="link">\` | \`<a href>\` | Link davranışı |
+| \`<div>\` ile liste | \`<ul><li>\` | Liste yapısı |
+| \`<b>\` | \`<strong>\` | Semantic önem |
+[/TABLE]
+
+### Heading Hiyerarşisi
+
+\`\`\`
+<h1>Sayfa Başlığı (tek)
+  <h2>Bölüm 1
+    <h3>Alt bölüm
+    <h3>Alt bölüm
+  <h2>Bölüm 2
+    <h3>Alt bölüm
+\`\`\`
+
+Seviye atlama ❌ (h1 → h3)
+
+---
+
+## ARIA
+
+ARIA (Accessible Rich Internet Applications), HTML'in yetersiz kaldığı durumlarda erişilebilirlik bilgisi ekler.
+
+**Temel ARIA özellikleri:**
+
+- \`aria-label\`: Görünmez etiket
+- \`aria-labelledby\`: Başka elemente referans
+- \`aria-describedby\`: Ek açıklama
+- \`aria-hidden\`: Screen reader'dan gizle
+- \`role\`: Element rolünü belirt
+
+**Örnek:**
+\`\`\`html
+<button aria-label="Menüyü kapat">
+  <svg>...</svg>
+</button>
+\`\`\`
+
+[WARNING]
+⚠️ ARIA son çare. Önce semantic HTML kullan. Yanlış ARIA, erişilebilirliği bozar. "No ARIA is better than bad ARIA."
+[/WARNING]
+
+---
+
+## Erişilebilirlik Kontrol Listesi
+
+### Tasarım Aşaması
+
+[CHECKLIST]
+Yap: Renk kontrastı minimum 4.5:1 (metin), Sadece renge dayanan bilgi yok, Touch target minimum 44x44px, Focus state tasarlandı, Form label'ları tasarlandı, Hata state'leri tasarlandı, Heading hiyerarşisi planlandı, Alt text notları eklendi
+[/CHECKLIST]
+
+### Geliştirme Sonrası
+
+[CHECKLIST]
+Yap: Klavye navigasyonu çalışıyor, Screen reader ile test edildi, Otomatik test araçları çalıştırıldı, Manuel test yapıldı, Zoom %200'de düzgün görünüyor, Animasyonlar kapatılabiliyor
+[/CHECKLIST]
+
+---
+
+## Test Araçları
+
+### Otomatik Test
+
+[TABLE]
+| Araç | Tip | Özellik |
+|------|-----|---------|
+| **axe DevTools** | Browser extension | En kapsamlı, ücretsiz |
+| **WAVE** | Browser extension | Görsel gösterim |
+| **Lighthouse** | Chrome dahili | Genel audit |
+| **Pa11y** | CLI | CI/CD entegrasyonu |
+[/TABLE]
+
+### Kontrast Kontrolü
+
+- **WebAIM Contrast Checker**
+- **Stark (Figma plugin)**
+- **Color Contrast Analyzer**
+
+### Screen Reader Test
+
+- VoiceOver (macOS: Cmd + F5)
+- NVDA (Windows, ücretsiz download)
+- Chrome Screen Reader extension
+
+[TIP]
+💡 Otomatik testler sorunların sadece %30-40'ını bulur. Manuel test ve gerçek kullanıcı testi şart.
+[/TIP]
+
+---
+
+## Yaygın Hatalar
+
+### 1. Sadece renge güvenmek
+
+[COMPARISON]
+❌ Hata: Hata = kırmızı border
+✅ Doğrusu: Hata = kırmızı border + hata ikonu + hata mesajı
+[/COMPARISON]
+
+### 2. Focus outline kaldırmak
+
+"Çirkin" diye outline kaldırıp, alternatif koymamak klavye kullanıcılarını kaybettirir.
+
+### 3. Alt text eksikliği
+
+Her anlamlı görselin alt text'i olmalı. Dekoratif ise alt="".
+
+### 4. Placeholder'ı label olarak kullanmak
+
+Placeholder yazı girince kaybolur. Label her zaman görünür olmalı.
+
+### 5. Auto-play video/ses
+
+Otomatik başlayan medya, screen reader kullanıcılarını rahatsız eder.
+
+### 6. Yetersiz touch target
+
+Küçük butonlar, yakın linkler - mobilde kabus.
+
+### 7. Hareket azaltma seçeneği yok
+
+Animasyonlar bazı kullanıcılarda baş dönmesine neden olur. prefers-reduced-motion kullan.
+
+---
+
+## İş Case'i
+
+Erişilebilirlik "nice to have" değil:
+
+- **Yasal risk:** Erişilemez siteler için davalar artıyor (ABD'de 2023'te 4.000+ dava).
+- **Pazar büyüklüğü:** Engelli nüfusun harcama gücü trilyonlarca dolar.
+- **SEO:** Erişilebilir siteler genellikle daha iyi sıralanır.
+- **Marka:** Inclusive tasarım, pozitif marka algısı.
+- **Verimlilik:** Erişilebilirlik baştan düşünülürse, sonradan düzeltmekten ucuz.
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**25 dakika**
+
+**Görev:** Bir web sayfasının erişilebilirlik auditi yap.
+
+**Araçlar:**
+- axe DevTools veya WAVE extension
+- WebAIM Contrast Checker
+- Klavye (Tab, Enter, Space)
+
+**Adımlar:**
+
+1. **Otomatik test (5 dk)**
+   axe veya WAVE ile sayfayı tara, hataları listele
+
+2. **Kontrast kontrolü (5 dk)**
+   Ana metin ve butonların kontrastını kontrol et
+
+3. **Klavye testi (10 dk)**
+   - Sadece Tab ile gezin
+   - Tüm interaktif elementlere ulaşabiliyor musun?
+   - Focus görünür mü?
+   - Mantıklı sırada mı?
+
+4. **Sonuçları raporla (5 dk)**
+   - Bulunan sorunlar
+   - Şiddet (kritik/major/minor)
+   - Öneriler
+
+**Bonus:** VoiceOver veya NVDA ile sayfayı dinle.
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Erişilebilirlik = herkes için kullanılabilir tasarım
+- A11y herkes için faydalı: engelli, yaşlı, durumsal engelli
+- WCAG standartları: POUR ilkeleri, A/AA/AAA seviyeleri
+- Hedef: WCAG 2.1 AA
+- Tasarımda: kontrast, touch target, focus state, form label, alt text
+- Semantic HTML, ARIA son çare
+- Otomatik test %30-40, manuel test şart
+- Yasal, etik ve iş açısından önemli
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Design System Nedir?](/kutuphane/design-system-nedir)
+
+**Sonraki:** Micro-interactions Tasarımı *(yakında)*
+
+**İlgili konular:**
+- [UI Nedir?](/kutuphane/ui-nedir)
+- Color Theory ve Renk Kullanımı *(yakında)*
+- Inclusive Design Nedir? *(yakında)*
+
+**İlgili Roadmap:** UI Designer Roadmap → Erişilebilirlik
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [WCAG 2.1 - W3C](https://www.w3.org/WAI/WCAG21/quickref/) (İngilizce, resmi kaynak)
+- [WebAIM](https://webaim.org/) (İngilizce, pratik rehberler)
+- [A11y Project](https://www.a11yproject.com/) (İngilizce, checklist ve kaynaklar)
+- [Inclusive Components - Heydon Pickering](https://inclusive-components.design/) (İngilizce, component örnekleri)
+`,
+  },
+  "micro-interactions": {
+    id: "micro-interactions",
+    title: "Micro-interactions Tasarımı",
+    subtitle: "Küçük Detaylar, Büyük Farklar",
+    titleEn: "Micro-interactions Design",
+    slug: "micro-interactions",
+    description: "Micro-interaction nedir? Tetikleyiciler, kurallar, feedback ve döngüler. Kullanıcı deneyimini zenginleştiren küçük animasyonlar rehberi.",
+    category: "ux-design",
+    readingTime: 12,
+    featured: false,
+    publishedAt: "2025-01-15",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Micro-interactions Tasarımı: Küçük Detaylar, Büyük Farklar
+
+**Seviye:** Orta  
+**Kategori:** UX Design  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Facebook'ta like butonuna tıkladığında kalp animasyonu. iPhone'da sessize alırken hafif titreşim. Gmail'de email gönderince "Gönderildi" mesajı ve geri alma seçeneği.
+
+Bunların hepsi **micro-interaction**.
+
+Küçük, fark edilmesi zor detaylar. Ama olmadığında bir şeylerin eksik olduğunu hissedersin. Buton tıkladın ama hiçbir şey olmadı mı? Gerçekten tıklandı mı, bilmiyorsun. Form gönderdin ama feedback yok mu? Tekrar mı denemeliyim?
+
+Micro-interaction'lar bu boşlukları doldurur. Kullanıcıya "evet, seni duydum" der.
+
+Bu yazıda micro-interaction'ların ne olduğunu, nasıl tasarlanacağını ve iyi örneklerini öğreneceksin.
+
+---
+
+## Micro-interaction Nedir?
+
+[CALLOUT]
+**Micro-interaction:**
+Tek bir görevi tamamlamak için tasarlanmış küçük, odaklı etkileşimler. Kullanıcıya geri bildirim verir, durumu gösterir, aksiyonu yönlendirir ve deneyimi zenginleştirir.
+[/CALLOUT]
+
+Terim Dan Saffer'ın 2013'teki "Microinteractions" kitabından popülerleşti.
+
+**Micro-interaction örnekleri:**
+- Like/favorite butonu
+- Toggle switch
+- Pull-to-refresh
+- Password strength indicator
+- Form validation feedback
+- Loading spinner
+- Hover state
+- Swipe to delete
+
+---
+
+## Neden Micro-interaction?
+
+### 1. Geri bildirim sağlar
+
+Kullanıcı aksiyon aldı, sistem ne yaptı? Micro-interaction cevap verir.
+
+### 2. Durumu gösterir
+
+Yükleniyor mu, tamamlandı mı, hata mı? Görsel ipucu verir.
+
+### 3. Yönlendirir
+
+Bir sonraki adımı gösterir, dikkat çeker.
+
+### 4. Hataları önler
+
+Yanlış yapılmadan önce uyarır (password strength gibi).
+
+### 5. Karakter katar
+
+Marka kişiliğini yansıtır, deneyimi keyifli kılar.
+
+### 6. Algılanan hızı artırır
+
+Güzel loading animasyonu, beklemeyi daha az sıkıcı yapar.
+
+[INFO]
+400ms
+Çoğu micro-interaction için ideal animasyon süresi
+[/INFO]
+
+---
+
+## Micro-interaction'ın Dört Bileşeni
+
+Dan Saffer'ın framework'ü:
+
+### 1. Trigger (Tetikleyici)
+
+Micro-interaction'ı başlatan şey.
+
+**Kullanıcı tetikleyicisi:**
+- Tıklama/dokunma
+- Hover
+- Scroll
+- Swipe
+- Ses komutu
+- Gesture
+
+**Sistem tetikleyicisi:**
+- Zaman (alarm)
+- Konum (yaklaştığında)
+- Data değişimi (yeni mesaj)
+- Hata oluşması
+
+### 2. Rules (Kurallar)
+
+Tetikleyici aktive olunca ne olacak?
+
+- Ne değişecek?
+- Sınırlar ne?
+- Sıralama nasıl?
+- Süre ne kadar?
+
+### 3. Feedback (Geri Bildirim)
+
+Kullanıcının kuralları anlaması için görsel/işitsel yanıt.
+
+**Feedback türleri:**
+- Görsel (renk, animasyon, ikon değişimi)
+- İşitsel (ses efekti)
+- Dokunsal (titreşim)
+
+### 4. Loops & Modes (Döngüler ve Modlar)
+
+Micro-interaction'ın meta-kuralları:
+
+**Loops:**
+- İlk kullanımda farklı mı?
+- Tekrarlarda değişiyor mu?
+- Süresi doluyor mu?
+
+**Modes:**
+- Farklı durumlarda farklı davranış
+- Gece/gündüz modu
+- Acemi/uzman modu
+
+---
+
+## Yaygın Micro-interaction Türleri
+
+### Button Feedback
+
+Buton tıklandığında görsel yanıt.
+
+**Beklenen davranışlar:**
+- Hover: Hafif renk değişimi
+- Active/pressed: Bastırılma efekti
+- Focus: Outline/glow
+- Loading: Spinner veya progress
+- Success: Renk değişimi, ikon, checkmark
+
+### Toggle/Switch
+
+On/off durumu değiştirme.
+
+**İyi toggle özellikleri:**
+- Mevcut durumu net gösterir
+- Geçiş animasyonu akıcı (200-300ms)
+- Renk + pozisyon ile durum belirtir
+- Tıklama alanı yeterli büyük
+
+### Form Validation
+
+Input doğrulama feedback'i.
+
+**Zamanlama seçenekleri:**
+- On submit: Form gönderilince
+- On blur: Alandan çıkınca
+- Real-time: Yazarken (dikkatli kullan)
+
+**Feedback elementleri:**
+- Border rengi (kırmızı/yeşil)
+- İkon (✓ veya ✕)
+- Hata mesajı
+- Helper text
+
+### Loading States
+
+Bekleme süresini gösterme.
+
+**Türler:**
+- Spinner: Belirsiz süre
+- Progress bar: Belirli süre
+- Skeleton: İçerik önizlemesi
+- Percentage: Yüzde gösterimi
+
+[TIP]
+💡 2 saniyeden kısa işlemler için spinner yeterli. Daha uzun işlemler için progress veya skeleton kullan. 10+ saniye için açıklayıcı mesaj ekle.
+[/TIP]
+
+### Pull-to-Refresh
+
+Aşağı çekince yenileme.
+
+**Aşamalar:**
+1. Pull başlangıç: İkon görünür
+2. Pull threshold: "Bırak" mesajı
+3. Release: Loading animasyonu
+4. Complete: İçerik güncellenir
+
+### Swipe Actions
+
+Kaydırarak aksiyon alma.
+
+**Örnekler:**
+- Swipe to delete (mail, todo)
+- Swipe to archive
+- Swipe to reveal options
+- Swipe to navigate (onboarding)
+
+### Toast/Snackbar
+
+Geçici bildirim mesajı.
+
+**İyi toast özellikleri:**
+- Otomatik kaybolur (3-5 saniye)
+- Manuel kapatılabilir
+- Aksiyon içerebilir (Geri al)
+- Ekranı engellemez
+
+---
+
+## Animasyon Prensipleri
+
+### Timing (Zamanlama)
+
+[TABLE]
+| Süre | Kullanım |
+|------|----------|
+| 100-150ms | Hover, active state |
+| 200-300ms | Toggle, checkbox |
+| 300-400ms | Modal açılış |
+| 400-500ms | Sayfa geçişi |
+| 500ms+ | Dikkatli kullan |
+[/TABLE]
+
+### Easing
+
+Animasyonun hız eğrisi.
+
+**Yaygın easing'ler:**
+- **ease-out:** Hızlı başla, yavaş bitir (önerilen)
+- **ease-in:** Yavaş başla, hızlı bitir (çıkışlar için)
+- **ease-in-out:** Yavaş başla, yavaş bitir (döngüler için)
+- **linear:** Sabit hız (genellikle kaçın)
+
+[COMPARISON]
+❌ Linear: Robotik, doğal değil
+✅ ease-out: Doğal, responsive hisseder
+[/COMPARISON]
+
+### 12 Disney Prensibi (UX'e Uyarlanmış)
+
+1. **Squash & Stretch:** Element büyür/küçülür
+2. **Anticipation:** Hareketten önce hazırlık
+3. **Staging:** Dikkat yönlendirme
+4. **Follow Through:** Hareket sonrası momentum
+5. **Slow In/Out:** Easing kullanımı
+6. **Arcs:** Doğrusal değil, eğrisel hareket
+7. **Secondary Action:** Ana hareketle destekleyici
+8. **Timing:** Süre ve hız
+9. **Exaggeration:** Abartı (dikkatli)
+10. **Solid Drawing:** Tutarlı görsel
+11. **Appeal:** Çekicilik
+
+---
+
+## İyi Örnekler
+
+### Facebook Like
+
+- Trigger: Tıklama
+- Feedback: Kalp animasyonu, renk değişimi
+- Karakter: Eğlenceli, keyifli
+
+### Slack Mesaj Gönderme
+
+- Trigger: Enter veya tıklama
+- Feedback: Mesaj yukarı kayar, timestamp görünür
+- Durum: Gönderiliyor → Gönderildi
+
+### iPhone Silent Mode
+
+- Trigger: Fiziksel switch
+- Feedback: Titreşim + görsel banner
+- Multimodal: Dokunsal + görsel
+
+### Gmail Geri Al
+
+- Trigger: Email gönder
+- Feedback: "Gönderildi" toast + "Geri al" butonu
+- Loop: 5 saniye içinde geri alınabilir
+
+### Stripe Ödeme Formu
+
+- Real-time validation
+- Kart tipi otomatik algılama
+- Smooth error feedback
+- Success animasyonu
+
+---
+
+## Performans Dikkat Noktaları
+
+### GPU-Friendly Özellikler
+
+Sadece şu özellikleri animasyonla:
+- \`transform\` (translate, scale, rotate)
+- \`opacity\`
+
+Kaçınılması gerekenler:
+- \`width\`, \`height\` (layout tetikler)
+- \`top\`, \`left\` (layout tetikler)
+- \`box-shadow\` (pahalı)
+
+### 60fps Hedefi
+
+Akıcı animasyon için 60fps gerekli. Her frame 16ms.
+
+### prefers-reduced-motion
+
+Animasyon hassasiyeti olan kullanıcılar için:
+\`\`\`css
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+\`\`\`
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Fazla animasyon
+
+[COMPARISON]
+❌ Her element animasyonlu, göz yorucu
+✅ Önemli aksiyonlarda, ölçülü animasyon
+[/COMPARISON]
+
+### 2. Çok yavaş animasyon
+
+500ms+ animasyonlar sabırsızlık yaratır. Hızlı olsun.
+
+### 3. Tutarsız timing
+
+Bir yerde 200ms, başka yerde 600ms. Tutarlı ol.
+
+### 4. Feedback eksikliği
+
+Buton tıklandı ama hiçbir şey olmadı. Her aksiyona yanıt ver.
+
+### 5. Erişilebilirliği unutmak
+
+Animasyon hassasiyeti olanları düşün. reduced-motion desteği ekle.
+
+### 6. Amaçsız animasyon
+
+"Cool görünüyor" yetmez. Her animasyonun amacı olmalı.
+
+---
+
+## Tasarım Araçları
+
+[TABLE]
+| Araç | Özellik |
+|------|---------|
+| **Figma** | Smart Animate, prototype |
+| **Principle** | Detaylı animasyon |
+| **ProtoPie** | Sensör ve logic desteği |
+| **After Effects** | Export için Lottie |
+| **Framer** | Kod + tasarım |
+[/TABLE]
+
+### Handoff için
+
+- Lottie (JSON animasyon)
+- Protopie (spec export)
+- Video/GIF referans
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**25 dakika**
+
+**Görev:** Bir "Add to Cart" butonu için micro-interaction tasarla.
+
+**Senaryo:** E-ticaret sitesinde ürün detay sayfasındaki sepete ekle butonu.
+
+**Adımlar:**
+
+1. **State'leri tanımla (5 dk)**
+   - Default
+   - Hover
+   - Active/Pressed
+   - Loading
+   - Success
+   - (Opsiyonel) Already in cart
+
+2. **Her state için feedback belirle (10 dk)**
+   - Görsel değişim (renk, boyut, ikon)
+   - Metin değişimi
+   - Animasyon süresi ve easing
+   
+3. **Figma'da prototype (10 dk)**
+   - State'leri tasarla
+   - Smart Animate ile bağla
+   - Test et
+
+**Kontrol soruları:**
+- Kullanıcı her state'te ne olduğunu anlıyor mu?
+- Timing doğal hissediyor mu?
+- Success feedback yeterince net mi?
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Micro-interaction = tek göreve odaklı küçük etkileşimler
+- Dört bileşen: Trigger, Rules, Feedback, Loops & Modes
+- Geri bildirim verir, durum gösterir, yönlendirir, karakter katar
+- Timing: 100-400ms arası, ease-out tercih et
+- Sadece transform ve opacity animasyonla (performans)
+- Her aksiyona feedback ver, ama abartma
+- prefers-reduced-motion desteği ekle
+- Amaçsız animasyon kaçın, her birinin işlevi olsun
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Accessibility Temelleri](/kutuphane/accessibility-temelleri)
+
+**Sonraki:** UX Writing Temelleri *(yakında)*
+
+**İlgili konular:**
+- [Prototype Nedir?](/kutuphane/prototype-nedir)
+- UI Animasyon Prensipleri *(yakında)*
+- Motion Design Temelleri *(yakında)*
+
+**İlgili Roadmap:** UI Designer Roadmap → Interaction Design
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Microinteractions - Dan Saffer](https://www.microinteractions.com/) (Kitap, temel kaynak)
+- [The Role of Animation in UX - NNGroup](https://www.nngroup.com/articles/animation-usability/) (İngilizce, 8 dk)
+- [Material Motion - Google](https://material.io/design/motion/) (İngilizce, motion ilkeleri)
+- [UI Animation Newsletter](https://uianimationnewsletter.com/) (İngilizce, haftalık ilham)
+`,
+  },
+  "ux-writing-temelleri": {
+    id: "ux-writing-temelleri",
+    title: "UX Writing Temelleri",
+    subtitle: "Kullanıcıyla Doğru Kelimelerle Konuşma",
+    titleEn: "UX Writing Basics",
+    slug: "ux-writing-temelleri",
+    description: "UX Writing nedir? Microcopy, hata mesajları, CTA yazımı ve ton of voice. Kullanıcı odaklı içerik yazma rehberi.",
+    category: "ux-design",
+    readingTime: 13,
+    featured: false,
+    publishedAt: "2025-01-15",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# UX Writing Temelleri: Kullanıcıyla Doğru Kelimelerle Konuşma
+
+**Seviye:** Başlangıç - Orta  
+**Kategori:** UX Design  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+"Bir hata oluştu" vs "Bağlantın kesildi. İnterneti kontrol edip tekrar dene."
+
+İkisi de hata mesajı. Ama biri kullanıcıyı çaresiz bırakır, diğeri ne yapacağını söyler.
+
+Arayüzdeki her kelime bir tasarım kararı. Buton metni, placeholder, hata mesajı, onboarding metni - hepsi kullanıcı deneyiminin parçası. Yanlış kelime kafa karışıklığı yaratır, doğru kelime yönlendirir.
+
+**UX Writing**, bu kelimeleri bilinçli şekilde seçme disiplini. "Lorem ipsum" ile tasarım bitmiyor, asıl iş kelimelerle başlıyor.
+
+Bu yazıda UX Writing'in ne olduğunu, temel prensiplerini ve pratik ipuçlarını öğreneceksin.
+
+---
+
+## UX Writing Nedir?
+
+[CALLOUT]
+**UX Writing:**
+Dijital ürünlerdeki tüm metinlerin kullanıcı deneyimini iyileştirecek şekilde stratejik olarak yazılması disiplini. Amaç: kullanıcıyı yönlendirmek, bilgilendirmek ve görevini kolaylaştırmak.
+[/CALLOUT]
+
+**UX Writing kapsamı:**
+- Buton ve link metinleri
+- Menü ve navigasyon
+- Form label ve placeholder'lar
+- Hata ve başarı mesajları
+- Onboarding ve yardım metinleri
+- Boş durum (empty state) metinleri
+- Tooltip ve açıklamalar
+- Bildirim metinleri
+
+---
+
+## Microcopy Nedir?
+
+[CALLOUT]
+**Microcopy:**
+Arayüzdeki küçük, genellikle göz ardı edilen metin parçaları. Buton metni, placeholder, tooltip, hata mesajı gibi. Küçük ama etkisi büyük.
+[/CALLOUT]
+
+Microcopy örnekleri:
+- "Sepete Ekle" (buton)
+- "ornek@email.com" (placeholder)
+- "Şifren en az 8 karakter olmalı" (helper text)
+- "Değişiklikler kaydedildi" (toast)
+
+---
+
+## Neden UX Writing Önemli?
+
+### 1. Yönlendirme
+
+Kullanıcı ne yapacağını bilmiyorsa, metin söyler. "Devam" yerine "Ödemeye Geç" daha net.
+
+### 2. Güven oluşturma
+
+Profesyonel, tutarlı metin güven verir. Yazım hatası, belirsiz ifade güveni zedeler.
+
+### 3. Dönüşüm artırma
+
+Doğru CTA metni dönüşümü artırır. "Ücretsiz Dene" vs "Gönder" arasında ciddi fark olabilir.
+
+### 4. Destek yükü azaltma
+
+Net açıklamalar, daha az "bu ne demek?" sorusu demek.
+
+### 5. Marka kişiliği
+
+Metin tonu markayı yansıtır. Resmi mi, samimi mi, eğlenceli mi?
+
+[INFO]
+%90 kullanıcı
+Kötü microcopy nedeniyle form terk ettiğini söylüyor
+[/INFO]
+
+---
+
+## UX Writing Prensipleri
+
+### 1. Net Ol (Clear)
+
+Anlaşılması için düşünmeye gerek kalmamalı.
+
+[COMPARISON]
+❌ "İşlem gerçekleştirilemedi"
+✅ "Kartından ödeme alınamadı. Kart bilgilerini kontrol et."
+[/COMPARISON]
+
+### 2. Kısa Tut (Concise)
+
+Her kelime anlam taşımalı. Gereksiz kelimeleri çıkar.
+
+[COMPARISON]
+❌ "Lütfen aşağıdaki butona tıklayarak kayıt işleminizi tamamlayınız"
+✅ "Kaydı tamamla"
+[/COMPARISON]
+
+### 3. Faydalı Ol (Useful)
+
+Sadece bilgi verme, ne yapılacağını da söyle.
+
+[COMPARISON]
+❌ "Hata 404"
+✅ "Bu sayfa bulunamadı. Ana sayfaya dön veya arama yap."
+[/COMPARISON]
+
+### 4. İnsan Gibi Konuş
+
+Kurumsal jargon yerine doğal dil.
+
+[COMPARISON]
+❌ "Talebiniz işleme alınmıştır"
+✅ "Talebini aldık, 24 saat içinde dönüş yapacağız"
+[/COMPARISON]
+
+### 5. Tutarlı Ol
+
+Aynı şey için aynı kelime. Bir yerde "Kaydet", başka yerde "Sakla" olmasın.
+
+---
+
+## CTA (Call to Action) Yazımı
+
+CTA, kullanıcıyı harekete geçiren buton/link metni.
+
+### İyi CTA Özellikleri
+
+**1. Aksiyon fiili ile başla**
+- ❌ "Devam"
+- ✅ "Sepete Ekle"
+
+**2. Spesifik ol**
+- ❌ "Gönder"
+- ✅ "Mesaj Gönder"
+
+**3. Değer vaat et**
+- ❌ "Kaydol"
+- ✅ "Ücretsiz Hesap Oluştur"
+
+**4. Kısa tut**
+- 2-5 kelime ideal
+- Maksimum 7-8 kelime
+
+### CTA Örnekleri
+
+[TABLE]
+| Kötü | İyi | Neden |
+|------|-----|-------|
+| Gönder | Ücretsiz Dene | Değer vaat ediyor |
+| Tıklayın | Planını Seç | Aksiyon spesifik |
+| İleri | Ödemeye Geç | Ne olacağı net |
+| Onayla | Siparişi Tamamla | Bağlam veriyor |
+| Başla | 14 Gün Ücretsiz Başla | Risk azaltıyor |
+[/TABLE]
+
+### Primary vs Secondary CTA
+
+**Primary:** Ana aksiyon, dikkat çekici
+- "Satın Al", "Ücretsiz Dene"
+
+**Secondary:** Alternatif, daha az vurgulu
+- "Daha Fazla Bilgi", "Belki Sonra"
+
+---
+
+## Hata Mesajları
+
+Hata mesajı kullanıcıyı en hassas anda yakalar. Kötü mesaj frustrasyonu artırır.
+
+### İyi Hata Mesajı Özellikleri
+
+**1. Ne olduğunu söyle**
+Teknik kod değil, anlaşılır açıklama.
+
+**2. Neden olduğunu açıkla (mümkünse)**
+Kullanıcının hatası mı, sistem mi?
+
+**3. Nasıl düzeltileceğini söyle**
+Çözüm önerisi sun.
+
+**4. Suçlama**
+"Hatalı giriş" değil, "Şifre eşleşmedi"
+
+### Hata Mesajı Formülü
+[Ne oldu] + [Neden oldu (opsiyonel)] + [Ne yapılabilir]
+
+### Örnekler
+
+[COMPARISON]
+❌ Kötü: "Error 500: Internal Server Error"
+✅ İyi: "Bir sorun oluştu. Sayfayı yenile veya birkaç dakika sonra tekrar dene."
+[/COMPARISON]
+
+[COMPARISON]
+❌ Kötü: "Geçersiz email"
+✅ İyi: "Email adresi geçersiz görünüyor. Formatı kontrol et (örn: ad@email.com)"
+[/COMPARISON]
+
+[COMPARISON]
+❌ Kötü: "Şifre hatalı"
+✅ İyi: "Şifre eşleşmedi. Tekrar dene veya şifreni sıfırla."
+[/COMPARISON]
+
+---
+
+## Form Metinleri
+
+### Label
+
+- Net ve kısa
+- Soru formatından kaçın (genellikle)
+- "Email Adresi" yeterli, "Email Adresiniz Nedir?" gereksiz
+
+### Placeholder
+
+- Label yerine kullanma
+- Örnek format göster
+- Kaybolunca bilgi kaybı olmasın
+
+[COMPARISON]
+❌ Placeholder as label: Sadece "Email" placeholder'da
+✅ Doğru: Label: "Email" + Placeholder: "ornek@email.com"
+[/COMPARISON]
+
+### Helper Text
+
+- Label altında ek bilgi
+- Gereksinimi açıkla
+- Format ipucu ver
+
+**Örnek:**
+Şifre
+[________________]
+En az 8 karakter, 1 büyük harf ve 1 rakam içermeli
+
+### Validation Mesajları
+
+- Hemen göster (blur veya real-time)
+- Spesifik ol
+- Pozitif feedback de ver (✓)
+
+---
+
+## Empty States
+
+İçerik olmadığında gösterilen durum.
+
+### İyi Empty State
+
+**1. Ne olduğunu açıkla**
+"Henüz favori eklemedin"
+
+**2. Değer öner**
+"Favorilerin burada görünecek"
+
+**3. Aksiyon ver**
+"Keşfetmeye Başla" butonu
+
+### Örnek
+[İllüstrasyon]
+Sepetinde henüz ürün yok
+Beğendiğin ürünleri sepete ekle ve alışverişe başla.
+[Alışverişe Başla]
+
+---
+
+## Tone of Voice
+
+Metnin "kişiliği". Marka ile tutarlı olmalı.
+
+### Tone Spektrumu
+
+[TABLE]
+| Boyut | Örnek Aralık |
+|-------|--------------|
+| Formalite | Resmi ↔ Samimi |
+| Ciddiyet | Ciddi ↔ Eğlenceli |
+| Saygı | Saygılı ↔ Sıra dışı |
+| Coşku | Sakin ↔ Heyecanlı |
+[/TABLE]
+
+### Tone Tutarlılığı
+
+Hata mesajında eğlenceli, onboarding'de resmi olma. Tutarlı ol.
+
+**Ama:** Bağlama göre ayarla. Ciddi hata (ödeme başarısız) çok eğlenceli olmamalı.
+
+### Örnek Tone Kılavuzu
+
+**Biz:** Samimi ama profesyonel
+- "Sen" diye hitap ederiz
+- Emoji ölçülü kullanırız
+- Jargondan kaçınırız
+- Hatalarda empatik ve çözüm odaklıyız
+
+---
+
+## Lokalizasyon Düşüncesi
+
+Metin başka dillere çevrilecekse:
+
+- Kısa tut (çeviri genellikle uzar)
+- Kültürel referanstan kaçın
+- Değişken için yer bırak (isim, sayı)
+- Cinsiyet varsayımı yapma
+
+---
+
+## UX Writing Süreci
+
+[STEPS]
+1. Bağlamı anla
+   Kullanıcı kim? Nerede? Ne yapıyor? Nasıl hissediyor?
+
+2. İlk draft yaz
+   Mükemmel olmasına gerek yok, başla
+
+3. Düzenle ve kısalt
+   Her kelimeyi sorgula. Gerekli mi?
+
+4. Sesli oku
+   Doğal geliyor mu? Takılıyor musun?
+
+5. Test et
+   Kullanıcılar anlıyor mu? A/B test yap
+[/STEPS]
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Placeholder'ı label olarak kullanmak
+
+Yazı girince placeholder kaybolur, kullanıcı ne istediğini unutur.
+
+### 2. Jargon kullanmak
+
+[COMPARISON]
+❌ "Authentication failed"
+✅ "Giriş yapılamadı"
+[/COMPARISON]
+
+### 3. Çok uzun yazmak
+
+Kimse paragraf okumak istemiyor. Kısa ve öz.
+
+### 4. Suçlayıcı dil
+
+[COMPARISON]
+❌ "Hatalı şifre girdiniz"
+✅ "Şifre eşleşmedi"
+[/COMPARISON]
+
+### 5. Tutarsız terminoloji
+
+"Kaydet", "Sakla", "Onayla" aynı iş için farklı yerler.
+
+### 6. Lorem ipsum bırakmak
+
+Gerçek metin olmadan tasarım eksik. Metin de tasarımın parçası.
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**20 dakika**
+
+**Görev:** Aşağıdaki kötü UX metinlerini iyileştir.
+
+**Senaryolar:**
+
+1. **Hata mesajı:**
+   - Kötü: "Error: Invalid input"
+   - İyileştir: ___
+
+2. **CTA butonu:**
+   - Kötü: "Gönder"
+   - Bağlam: Email bültene kayıt formu
+   - İyileştir: ___
+
+3. **Empty state:**
+   - Kötü: "Sonuç bulunamadı"
+   - Bağlam: E-ticaret arama sonucu
+   - İyileştir: ___
+
+4. **Form helper text:**
+   - Kötü: (yok)
+   - Bağlam: Şifre alanı
+   - Ekle: ___
+
+5. **Onay mesajı:**
+   - Kötü: "İşlem başarılı"
+   - Bağlam: Sipariş tamamlama
+   - İyileştir: ___
+
+**Her biri için:** Net, kısa, faydalı ve insan gibi yaz.
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- UX Writing = arayüzdeki tüm metinleri stratejik yazma
+- Microcopy küçük ama etkisi büyük
+- Dört prensip: Net, kısa, faydalı, insan gibi
+- CTA: Aksiyon fiili + spesifik + değer vaat et
+- Hata mesajı: Ne oldu + neden + nasıl düzeltilir
+- Form: Label ≠ placeholder, helper text kullan
+- Empty state: Açıkla + değer öner + aksiyon ver
+- Tone of voice tutarlı olmalı
+- Test et, iterate et
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Micro-interactions Tasarımı](/kutuphane/micro-interactions)
+
+**Sonraki:** Gestalt İlkeleri ve Görsel Algı *(yakında)*
+
+**İlgili konular:**
+- [Accessibility Temelleri](/kutuphane/accessibility-temelleri)
+- Content Strategy Nedir? *(yakında)*
+- Tone of Voice Rehberi *(yakında)*
+
+**İlgili Roadmap:** UX Designer Roadmap → Content & Writing
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Writing is Designing - Michael Metts & Andy Welfle](https://rosenfeldmedia.com/books/writing-is-designing/) (Kitap)
+- [Strategic Writing for UX - Torrey Podmajersky](https://www.oreilly.com/library/view/strategic-writing-for/9781492049395/) (Kitap)
+- [UX Writing Hub](https://uxwritinghub.com/) (İngilizce, kurs ve kaynaklar)
+- [Google's UX Writing Guidelines](https://developers.google.com/style) (İngilizce, stil rehberi)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
