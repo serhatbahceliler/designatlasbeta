@@ -41,7 +41,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         .single();
 
       if (error) {
-        console.error("Error fetching profile:", error);
+        // PGRST205: Table not found - Supabase migration might not be run yet
+        // This is expected if profiles table doesn't exist, so we silently handle it
+        if (error.code !== 'PGRST205') {
+          console.error("Error fetching profile:", error);
+        }
         setProfile(null);
         return;
       }
@@ -139,7 +143,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             ]);
 
           if (insertError) {
-            console.error("Error creating profile:", insertError);
+            // PGRST205: Table not found - Supabase migration might not be run yet
+            if (insertError.code !== 'PGRST205') {
+              console.error("Error creating profile:", insertError);
+            }
             // Try update in case it was created by trigger in the meantime
             const { error: updateError } = await supabase
               .from("profiles")
@@ -150,7 +157,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
               .eq("id", session.user.id);
 
             if (updateError) {
-              console.error("Error updating profile:", updateError);
+              // PGRST205: Table not found - Supabase migration might not be run yet
+              if (updateError.code !== 'PGRST205') {
+                console.error("Error updating profile:", updateError);
+              }
             }
           }
         }
