@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { MOCK_ARTICLES } from "./kutuphane/page";
+import { MOCK_ARTICLES } from "@/lib/articles";
 
 const roadmaps = [
   "ux-designer",
