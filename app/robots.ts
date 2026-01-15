@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/auth/", "/api/", "/case-atolyesi"],
+      disallow: ["/auth/", "/api/"],
     },
     sitemap: "https://www.designatlas.io/sitemap.xml",
   };

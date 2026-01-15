@@ -394,7 +394,7 @@ const TERM_CONTENTS: Record<string, TermContent> = {
       'Gerçek ürün erişimi yoksa',
       'Düşünme süreci göstermek istendiğinde'
     ],
-    relatedConcepts: ['UX Case Study', 'Problem Statement', 'Case Atölyesi']
+    relatedConcepts: ['UX Case Study', 'Problem Statement']
   },
   'edge-case': {
     shortDefinition: 'Edge case, çoğu kullanıcı için nadir gerçekleşen ama gerçekleştiğinde önemli etkiler yaratan durumlardır.',

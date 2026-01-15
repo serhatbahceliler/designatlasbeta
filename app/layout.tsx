@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     default: "Design Atlas - UX, UI ve Product Design Öğrenme Platformu",
     template: "%s | Design Atlas",
   },
-  description: "Design Atlas - UX, UI ve Product Designer'lar için net, açık roadmap'ler ve öğrenme yolları. UX Sözlük, Case Atölyesi ve kapsamlı tasarım rehberleri. Kayıt yok. Boş laf yok. Net öğrenme yolları.",
+  description: "Design Atlas - UX, UI ve Product Designer'lar için net, açık roadmap'ler ve öğrenme yolları. UX Sözlük ve kapsamlı tasarım rehberleri. Kayıt yok. Boş laf yok. Net öğrenme yolları.",
   keywords: [
     "Design Atlas",
     "design atlas",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     url: "https://www.designatlas.io",
     siteName: "Design Atlas",
     title: "Design Atlas - UX, UI ve Product Design Öğrenme Platformu",
-    description: "Design Atlas - UX, UI ve Product Designer'lar için net, açık roadmap'ler ve öğrenme yolları. UX Sözlük, Case Atölyesi ve kapsamlı tasarım rehberleri.",
+    description: "Design Atlas - UX, UI ve Product Designer'lar için net, açık roadmap'ler ve öğrenme yolları. UX Sözlük ve kapsamlı tasarım rehberleri.",
     images: [
       {
         url: "https://r.resimlink.com/Tp-aXNqbWR.png",
