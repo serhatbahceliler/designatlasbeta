@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { sanitizeTitle } from '@/lib/sanitize';
 
 export const dynamic = 'force-dynamic';
 
@@ -73,8 +74,16 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { title } = body;
 
-    if (!title || typeof title !== "string" || title.trim().length === 0) {
+    if (!title || typeof title !== "string") {
       return NextResponse.json({ error: "Title gereklidir" }, { status: 400 });
+    }
+
+    // Sanitize title input
+    let sanitizedTitle: string;
+    try {
+      sanitizedTitle = sanitizeTitle(title);
+    } catch (error: any) {
+      return NextResponse.json({ error: error.message || "Geçersiz title" }, { status: 400 });
     }
 
     // Use service role client for insert (bypasses RLS)
@@ -91,7 +100,7 @@ export async function POST(request: NextRequest) {
       .insert([
         {
           user_id: user.id,
-          title: title.trim(),
+          title: sanitizedTitle,
         },
       ])
       .select()

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { sanitizeUUID, sanitizeRole, sanitizeMessage } from '@/lib/sanitize';
 
 export const dynamic = 'force-dynamic';
 
@@ -13,6 +14,14 @@ export async function GET(
 ) {
   try {
     const { id: threadId } = await params;
+
+    // Sanitize thread ID
+    let sanitizedThreadId: string;
+    try {
+      sanitizedThreadId = sanitizeUUID(threadId);
+    } catch (error: any) {
+      return NextResponse.json({ error: "Geçersiz thread ID" }, { status: 400 });
+    }
     
     // Get auth token from Authorization header
     const authHeader = request.headers.get('authorization');
@@ -42,7 +51,7 @@ export async function GET(
     const { data: thread, error: threadError } = await supabaseService
       .from("case_threads")
       .select("id, user_id")
-      .eq("id", threadId)
+      .eq("id", sanitizedThreadId)
       .eq("user_id", user.id)
       .single();
 
@@ -54,7 +63,7 @@ export async function GET(
     const { data: messages, error } = await supabaseService
       .from("case_messages")
       .select("*")
-      .eq("thread_id", threadId)
+      .eq("thread_id", sanitizedThreadId)
       .eq("user_id", user.id)
       .order("created_at", { ascending: true })
       .limit(20);
@@ -77,6 +86,14 @@ export async function POST(
 ) {
   try {
     const { id: threadId } = await params;
+
+    // Sanitize thread ID
+    let sanitizedThreadId: string;
+    try {
+      sanitizedThreadId = sanitizeUUID(threadId);
+    } catch (error: any) {
+      return NextResponse.json({ error: "Geçersiz thread ID" }, { status: 400 });
+    }
     
     // Get auth token from Authorization header
     const authHeader = request.headers.get('authorization');
@@ -106,7 +123,7 @@ export async function POST(
     const { data: thread, error: threadError } = await supabaseService
       .from("case_threads")
       .select("id, user_id")
-      .eq("id", threadId)
+      .eq("id", sanitizedThreadId)
       .eq("user_id", user.id)
       .single();
 
@@ -117,12 +134,20 @@ export async function POST(
     const body = await request.json();
     const { role, content } = body;
 
-    if (!role || !['user', 'assistant'].includes(role)) {
-      return NextResponse.json({ error: "Geçersiz role" }, { status: 400 });
+    // Sanitize role
+    let sanitizedRole: 'user' | 'assistant';
+    try {
+      sanitizedRole = sanitizeRole(role);
+    } catch (error: any) {
+      return NextResponse.json({ error: error.message || "Geçersiz role" }, { status: 400 });
     }
 
-    if (!content || typeof content !== "string" || content.trim().length === 0) {
-      return NextResponse.json({ error: "Content gereklidir" }, { status: 400 });
+    // Sanitize content
+    let sanitizedContent: string;
+    try {
+      sanitizedContent = sanitizeMessage(content);
+    } catch (error: any) {
+      return NextResponse.json({ error: error.message || "Geçersiz content" }, { status: 400 });
     }
 
     // Insert message
@@ -130,10 +155,10 @@ export async function POST(
       .from("case_messages")
       .insert([
         {
-          thread_id: threadId,
+          thread_id: sanitizedThreadId,
           user_id: user.id,
-          role,
-          content: content.trim(),
+          role: sanitizedRole,
+          content: sanitizedContent,
         },
       ])
       .select()

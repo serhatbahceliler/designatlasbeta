@@ -3,6 +3,7 @@ import { createClient } from '@supabase/supabase-js';
 import { checkRateLimit } from '@/lib/rate-limit';
 import { generateChatCompletion, generateTitleFromFirstMessage } from '@/lib/openai';
 import { MENTOR_SYSTEM_PROMPT } from '@/lib/mentor-prompt';
+import { sanitizeUUID, sanitizeMessage } from '@/lib/sanitize';
 
 export const dynamic = 'force-dynamic';
 
@@ -51,19 +52,27 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { threadId, message, isFirstMessage } = body;
 
-    if (!threadId || typeof threadId !== "string") {
-      return NextResponse.json({ error: "Thread ID gereklidir" }, { status: 400 });
+    // Sanitize thread ID
+    let sanitizedThreadId: string;
+    try {
+      sanitizedThreadId = sanitizeUUID(threadId);
+    } catch (error: any) {
+      return NextResponse.json({ error: error.message || "Geçersiz thread ID" }, { status: 400 });
     }
 
-    if (!message || typeof message !== "string" || message.trim().length === 0) {
-      return NextResponse.json({ error: "Mesaj gereklidir" }, { status: 400 });
+    // Sanitize message
+    let sanitizedMessage: string;
+    try {
+      sanitizedMessage = sanitizeMessage(message);
+    } catch (error: any) {
+      return NextResponse.json({ error: error.message || "Geçersiz mesaj" }, { status: 400 });
     }
 
     // Verify thread belongs to user
     const { data: thread, error: threadError } = await supabaseService
       .from("case_threads")
       .select("id, user_id, title")
-      .eq("id", threadId)
+      .eq("id", sanitizedThreadId)
       .eq("user_id", user.id)
       .single();
 
@@ -74,11 +83,11 @@ export async function POST(request: NextRequest) {
     // If first message, update thread title
     let updatedTitle: string | null = null;
     if (isFirstMessage && thread.title === "Yeni Case") {
-      updatedTitle = generateTitleFromFirstMessage(message);
+      updatedTitle = generateTitleFromFirstMessage(sanitizedMessage);
       await supabaseService
         .from("case_threads")
         .update({ title: updatedTitle })
-        .eq("id", threadId);
+        .eq("id", sanitizedThreadId);
     }
 
     // Save user message
@@ -86,10 +95,10 @@ export async function POST(request: NextRequest) {
       .from("case_messages")
       .insert([
         {
-          thread_id: threadId,
+          thread_id: sanitizedThreadId,
           user_id: user.id,
           role: "user",
-          content: message.trim(),
+          content: sanitizedMessage,
         },
       ])
       .select()
@@ -104,7 +113,7 @@ export async function POST(request: NextRequest) {
     const { data: messages, error: messagesError } = await supabaseService
       .from("case_messages")
       .select("role, content")
-      .eq("thread_id", threadId)
+      .eq("thread_id", sanitizedThreadId)
       .eq("user_id", user.id)
       .order("created_at", { ascending: true })
       .limit(20);
@@ -159,7 +168,7 @@ export async function POST(request: NextRequest) {
       .from("case_messages")
       .insert([
         {
-          thread_id: threadId,
+          thread_id: sanitizedThreadId,
           user_id: user.id,
           role: "assistant",
           content: assistantResponse,
