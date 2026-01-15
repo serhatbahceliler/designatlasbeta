@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import AuthProviderWrapper from "@/components/AuthProviderWrapper";
 import MixpanelProvider from "@/components/MixpanelProvider";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: {
@@ -75,9 +76,11 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "https://r.resimlink.com/Tp-aXNqbWR.png",
-    shortcut: "https://r.resimlink.com/Tp-aXNqbWR.png",
-    apple: "https://r.resimlink.com/Tp-aXNqbWR.png",
+    icon: [
+      { url: "https://r.resimlink.com/ZTzbek.png", sizes: "48x48", type: "image/png" },
+    ],
+    shortcut: "https://r.resimlink.com/ZTzbek.png",
+    apple: "https://r.resimlink.com/ZTzbek.png",
   },
   verification: {
     // Google Search Console verification code'u buraya eklenecek (gerekirse)
@@ -110,6 +113,7 @@ export default function RootLayout({
 
         <MixpanelProvider>
           <AuthProviderWrapper>
+            <GoogleAnalytics />
             {children}
           </AuthProviderWrapper>
         </MixpanelProvider>

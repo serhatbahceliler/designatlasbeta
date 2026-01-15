@@ -1,0 +1,26 @@
+'use client';
+
+import { useEffect } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
+
+const GA_MEASUREMENT_ID = 'G-TJKJ1NRBSF';
+
+export default function GoogleAnalytics() {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '');
+
+    // Send pageview to Google Analytics
+    if ((window as any).gtag) {
+      (window as any).gtag('config', GA_MEASUREMENT_ID, {
+        page_path: url,
+      });
+    }
+  }, [pathname, searchParams]);
+
+  return null;
+}
