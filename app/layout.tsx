@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: "Design Atlas - UX, UI ve Product Design Öğrenme Platformu",
     template: "%s | Design Atlas",
   },
-  description: "Design Atlas - UX, UI ve Product Designer'lar için net, açık roadmap'ler ve öğrenme yolları. UX Sözlük ve kapsamlı tasarım rehberleri. Kayıt yok. Boş laf yok. Net öğrenme yolları.",
+  description: "UX, UI ve Product Designer'lar için adım adım roadmap'ler, UX Sözlük ve güvenilir kaynaklarla desteklenmiş tasarım rehberleri. Türkçe, ücretsiz, reklamsız.",
   keywords: [
     "Design Atlas",
     "design atlas",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     url: "https://www.designatlas.io",
     siteName: "Design Atlas",
     title: "Design Atlas - UX, UI ve Product Design Öğrenme Platformu",
-    description: "Design Atlas - UX, UI ve Product Designer'lar için net, açık roadmap'ler ve öğrenme yolları. UX Sözlük ve kapsamlı tasarım rehberleri.",
+    description: "UX, UI ve Product Designer'lar için adım adım roadmap'ler, UX Sözlük ve güvenilir kaynaklarla desteklenmiş tasarım rehberleri. Türkçe, ücretsiz, reklamsız.",
     images: [
       {
         url: "https://r.resimlink.com/Tp-aXNqbWR.png",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Design Atlas - UX, UI ve Product Design Öğrenme Platformu",
-    description: "Design Atlas - UX, UI ve Product Designer'lar için net, açık roadmap'ler ve öğrenme yolları.",
+    description: "UX, UI ve Product Designer'lar için adım adım roadmap'ler, UX Sözlük ve güvenilir kaynaklarla desteklenmiş tasarım rehberleri.",
     images: ["https://r.resimlink.com/Tp-aXNqbWR.png"],
   },
   robots: {
@@ -78,10 +78,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "https://r.resimlink.com/ZTzbek.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/favicon.ico", sizes: "16x16", type: "image/x-icon" },
     ],
-    shortcut: "https://r.resimlink.com/ZTzbek.png",
-    apple: "https://r.resimlink.com/ZTzbek.png",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   verification: {
     // Google Search Console verification code'u buraya eklenecek (gerekirse)
