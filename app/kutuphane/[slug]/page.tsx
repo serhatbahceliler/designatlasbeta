@@ -10415,16 +10415,15 @@ export default function ArticlePage() {
   // Google Analytics & Mixpanel page view tracking
   useEffect(() => {
     if (article && typeof window !== 'undefined') {
-      // Google Analytics
+      // Google Analytics - Send custom event with article details
+      // Note: GoogleAnalytics component handles standard pageview tracking
       if ((window as any).gtag) {
-        (window as any).gtag('event', 'page_view', {
-          page_title: article.title,
-          page_location: window.location.href,
-          page_path: `/kutuphane/${article.slug}`,
+        (window as any).gtag('event', 'article_view', {
           article_title: article.title,
           article_slug: article.slug,
           article_category: article.category,
           reading_time: article.readingTime,
+          page_path: `/kutuphane/${article.slug}`,
         });
       }
       // Mixpanel

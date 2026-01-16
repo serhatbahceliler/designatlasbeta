@@ -14,12 +14,20 @@ export default function GoogleAnalytics() {
 
     const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '');
 
-    // Send pageview to Google Analytics
-    if ((window as any).gtag) {
-      (window as any).gtag('config', GA_MEASUREMENT_ID, {
-        page_path: url,
-      });
-    }
+    // Wait for gtag to be available, then send pageview
+    const sendPageview = () => {
+      if ((window as any).gtag) {
+        (window as any).gtag('config', GA_MEASUREMENT_ID, {
+          page_path: url,
+          page_location: window.location.href,
+        });
+      } else {
+        // Retry after a short delay if gtag is not ready
+        setTimeout(sendPageview, 100);
+      }
+    };
+
+    sendPageview();
   }, [pathname, searchParams]);
 
   return null;
