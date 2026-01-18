@@ -15213,6 +15213,496 @@ Derinleşmek istersen:
 - [UX Competitor Analysis - Jaime Levy](https://www.uxstrategy.com/) (Kitap: UX Strategy)
 `,
   },
+  "card-sorting-tree-testing": {
+    id: "card-sorting-tree-testing",
+    title: "Card Sorting ve Tree Testing",
+    subtitle: "Bilgi Mimarisini Kullanıcıyla Test Etme",
+    titleEn: "Card Sorting and Tree Testing",
+    slug: "card-sorting-tree-testing",
+    description: "Card sorting ve tree testing nedir? Açık, kapalı ve hibrit card sorting, tree testing uygulama rehberi. Bilgi mimarisi test yöntemleri.",
+    category: "ux-research",
+    readingTime: 14,
+    featured: false,
+    publishedAt: "2025-01-17",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Card Sorting ve Tree Testing: Bilgi Mimarisini Kullanıcıyla Test Etme
+
+**Seviye:** Orta
+**Kategori:** UX Research
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+"Ayarlar nerede?"
+"Bu özellik hangi menüde?"
+"Bulamıyorum, nereden ulaşacağım?"
+
+Bu şikayetler, bilgi mimarisinin kullanıcı beklentileriyle uyuşmadığını gösterir. Tasarımcı mantıklı bulsa da, kullanıcı farklı düşünebilir.
+
+**Card sorting** ve **tree testing**, bilgi mimarisini kullanıcılarla birlikte tasarlama ve test etme yöntemleri. Varsayımlara değil, gerçek kullanıcı davranışına dayalı navigasyon yapısı oluşturmak için.
+
+Bu yazıda her iki yöntemi, türlerini, nasıl uygulanacağını ve sonuçların nasıl analiz edileceğini öğreneceksin.
+
+---
+
+## Card Sorting Nedir?
+
+[CALLOUT]
+**Card Sorting:**
+Kullanıcıların içerik öğelerini (kartlar olarak temsil edilen) kendi zihin modellerine göre grupladığı ve isimlendirdiği bir UX araştırma yöntemi. Bilgi mimarisini kullanıcı perspektifinden tasarlamak için kullanılır.
+[/CALLOUT]
+
+**Temel fikir:** Kullanıcılara içerik kartları ver, onlardan mantıklı gruplar oluşturmalarını iste. Ortaya çıkan pattern'ler, navigasyon yapısını şekillendirir.
+
+---
+
+## Card Sorting Türleri
+
+### Açık Card Sorting (Open)
+
+Kullanıcılar hem grupları oluşturur hem isimlendirirler.
+
+**Ne zaman kullanılır:**
+- Yeni bir ürün/site tasarımı
+- Bilgi mimarisi sıfırdan oluşturulacaksa
+- Keşif aşamasında
+
+**Avantajları:**
+- Kullanıcı zihin modelini doğrudan öğrenirsin
+- Beklenmedik kategoriler ortaya çıkabilir
+- Kullanıcı terminolojisini öğrenirsin
+
+**Dezavantajları:**
+- Analizi daha karmaşık
+- Çok farklı sonuçlar çıkabilir
+- Daha fazla katılımcı gerekebilir
+
+### Kapalı Card Sorting (Closed)
+
+Kategoriler önceden belirli, kullanıcılar sadece kartları yerleştirir.
+
+**Ne zaman kullanılır:**
+- Mevcut kategori yapısını doğrulamak
+- Yeni içerik ekleme (mevcut yapıya)
+- A/B testi (iki yapıyı karşılaştırma)
+
+**Avantajları:**
+- Analizi kolay
+- Sonuçlar daha tutarlı
+- Hızlı uygulama
+
+**Dezavantajları:**
+- Kullanıcı yaratıcılığını kısıtlar
+- Kötü kategori yapısını doğrulayabilir
+- "Hiçbirine uymayan" sorunu
+
+### Hibrit Card Sorting
+
+Önceden kategoriler var ama kullanıcı yeni kategori de ekleyebilir.
+
+**Ne zaman kullanılır:**
+- Mevcut yapıyı geliştirmek
+- Hem doğrulama hem keşif
+
+**Avantajları:**
+- Her iki yaklaşımın faydaları
+- Esnek
+
+---
+
+## Card Sorting Nasıl Yapılır?
+
+### Hazırlık
+
+**1. Amaç belirleme**
+Ne öğrenmek istiyorsun? Hangi kararı destekleyecek?
+
+**2. Kart hazırlama**
+- 30-60 kart ideal (çok fazla = yorucu)
+- Her kart tek bir içerik öğesi
+- Net, anlaşılır isimler
+- Jargondan kaçın
+
+**3. Katılımcı seçimi**
+- Hedef kullanıcı profili
+- 15-20 kişi (moderated)
+- 30-50 kişi (unmoderated)
+
+**4. Format seçimi**
+- Fiziksel (yüz yüze, post-it)
+- Dijital (online araçlar)
+
+### Uygulama (Moderated)
+
+[STEPS]
+1. **Giriş (5 dk)**
+   Amacı açıkla, doğru/yanlış yok de
+
+2. **Kartları tanıt (5 dk)**
+   Kartları göster, soru varsa cevapla
+
+3. **Gruplama (15-25 dk)**
+   Kullanıcı kartları gruplar
+   Sesli düşünmesini iste
+   Müdahale etme, izle
+
+4. **İsimlendirme (5-10 dk)**
+   Açık sorting ise grupları isimlendirmesini iste
+
+5. **Açıklama (5-10 dk)**
+   Neden bu şekilde grupladı?
+   Zorlanan kartlar hangileri?
+
+6. **Kapanış (3 dk)**
+   Teşekkür, varsa ödül
+[/STEPS]
+
+### Uygulama (Unmoderated/Online)
+
+1. Online araç seç (OptimalSort, Maze, UXtweak)
+2. Kartları ve talimatları yükle
+3. Katılımcılara link gönder
+4. Tamamlanmayı bekle
+5. Sonuçları analiz et
+
+[TIP]
+💡 Unmoderated'da "neden" sorusu soramıyorsun. Opsiyonel yorum alanı ekle: "Bu kartı yerleştirmekte zorlandıysan, nedenini yaz."
+[/TIP]
+
+---
+
+## Card Sorting Analiz
+
+### Benzerlik Matrisi (Similarity Matrix)
+
+Hangi kartlar sıklıkla birlikte gruplanmış?
+
+Yüksek benzerlik = aynı kategoride olmalı
+Düşük benzerlik = farklı kategorilerde olabilir
+
+### Dendogram
+
+Hiyerarşik kümeleme görselleştirmesi. Hangi kartlar/gruplar birbirine yakın?
+
+### Popüler Kategoriler
+
+Açık sorting'de:
+- En sık oluşturulan kategoriler
+- Kategori isimleri ve varyasyonları
+- Kullanıcı terminolojisi
+
+### Zor Kartlar
+
+- Farklı kategorilere yerleştirilen kartlar
+- Tek başına kalan kartlar
+- "Diğer" kategorisine atılanlar
+
+Zor kartlar = bilgi mimarisinde dikkat edilmesi gereken noktalar
+
+---
+
+## Tree Testing Nedir?
+
+[CALLOUT]
+**Tree Testing (Reverse Card Sorting):**
+Mevcut bir bilgi mimarisinin (navigasyon yapısı) kullanıcılar tarafından ne kadar iyi anlaşıldığını test eden yöntem. Kullanıcılara görev verilir, sadece metin tabanlı hiyerarşide doğru konumu bulmaya çalışırlar.
+[/CALLOUT]
+
+**Fark:** Card sorting yapı oluşturur, tree testing yapıyı doğrular.
+
+**Neden görsel tasarım yok?**
+Görsel ipuçları (renk, ikon, boyut) olmadan, sadece kategori isimleri ve hiyerarşinin işe yarayıp yaramadığını test edersin.
+
+---
+
+## Tree Testing Nasıl Yapılır?
+
+### Hazırlık
+
+**1. Ağaç yapısını oluştur**
+Site haritasını metin tabanlı hiyerarşi olarak hazırla.
+${'```'}
+Ana Sayfa
+├── Ürünler
+│   ├── Elektronik
+│   │   ├── Telefonlar
+│   │   └── Bilgisayarlar
+│   └── Ev & Yaşam
+├── Hesabım
+│   ├── Siparişlerim
+│   └── Adreslerim
+└── Yardım
+    ├── SSS
+    └── İletişim
+${'```'}
+
+**2. Görevler oluştur**
+Kullanıcının bulması gereken şeyler.
+
+**İyi görev özellikleri:**
+- Gerçekçi senaryo
+- Cevabı içermeyen ifade
+- Tek doğru konum
+
+[COMPARISON]
+❌ Kötü görev: "Telefonlar kategorisini bul"
+✅ İyi görev: "Yeni bir iPhone satın almak istiyorsun. Nereye gidersin?"
+[/COMPARISON]
+
+**3. 8-12 görev**
+Çok fazla = yorucu, çok az = yetersiz veri
+
+**4. Katılımcı sayısı**
+50+ kişi önerilir (nicel veri için)
+
+### Uygulama
+
+Çoğunlukla online araçlarla:
+
+1. Araç seç (Treejack/OptimalSort, UXtweak, Maze)
+2. Ağaç yapısını yükle
+3. Görevleri ekle
+4. Pilot test (3-5 kişi)
+5. Katılımcılara gönder
+6. Sonuçları analiz et
+
+---
+
+## Tree Testing Metrikleri
+
+### Success Rate (Başarı Oranı)
+
+Görevi doğru tamamlayan kullanıcı yüzdesi.
+
+**Hedef:** %80+ ideal, %60 altı sorunlu
+
+### Directness (Doğrudanlık)
+
+İlk denemede doğru yere giden kullanıcı yüzdesi.
+
+Düşük directness = kullanıcı "geziniyor", emin değil
+
+### Time to Complete
+
+Görevi tamamlama süresi.
+
+Uzun süre = zorluk işareti
+
+### First Click
+
+İlk tıklanan kategori. Doğru yönde mi?
+
+**İlk tık doğruysa:** Başarı şansı yüksek
+**İlk tık yanlışsa:** Muhtemelen başarısız
+
+### Path Analysis
+
+Kullanıcının izlediği yol.
+
+- Doğrudan mı gitti?
+- Geri dönüşler var mı?
+- Hangi yanlış yollara saptı?
+
+---
+
+## Card Sorting vs Tree Testing
+
+[TABLE]
+| Özellik | Card Sorting | Tree Testing |
+|---------|--------------|--------------|
+| Amaç | Yapı oluşturma | Yapıyı doğrulama |
+| Timing | Tasarım öncesi | Tasarım sonrası |
+| Input | İçerik kartları | Mevcut hiyerarşi |
+| Output | Kategori önerileri | Başarı/hata oranları |
+| Soru | "Nasıl organize etmeliyiz?" | "Bu yapı işe yarıyor mu?" |
+[/TABLE]
+
+**İdeal süreç:**
+1. Açık card sorting → İlk yapı taslağı
+2. Kapalı card sorting → Yapıyı rafine et
+3. Tree testing → Yapıyı doğrula
+4. İterasyon gerekirse tekrarla
+
+---
+
+## Araçlar
+
+### Card Sorting Araçları
+
+[TABLE]
+| Araç | Özellik | Fiyat |
+|------|---------|-------|
+| **OptimalSort** | Endüstri standardı, güçlü analiz | Ücretli |
+| **UXtweak** | Card sorting + tree testing | Ücretsiz plan var |
+| **Maze** | Card sorting dahil çeşitli testler | Ücretsiz plan var |
+| **UserZoom** | Enterprise çözüm | Ücretli |
+| **Miro/FigJam** | Manuel, workshop için | Ücretsiz/ücretli |
+[/TABLE]
+
+### Tree Testing Araçları
+
+[TABLE]
+| Araç | Özellik |
+|------|---------|
+| **Treejack (Optimal Workshop)** | En popüler, detaylı analiz |
+| **UXtweak** | Tree testing dahil |
+| **Maze** | Tree testing dahil |
+| **PlaybookUX** | Çeşitli test türleri |
+[/TABLE]
+
+---
+
+## Sonuçları Kullanma
+
+### Card Sorting'den
+
+1. **Kategori yapısı önerisi oluştur**
+   Benzerlik matrisine göre grupla
+
+2. **Kategori isimleri belirle**
+   Kullanıcı terminolojisini kullan
+
+3. **Belirsiz kartları ele al**
+   - Birden fazla yerde mi olmalı?
+   - İsmi mi değişmeli?
+   - Cross-link mi gerekiyor?
+
+### Tree Testing'den
+
+1. **Başarılı görevler**
+   Yapı işe yarıyor, değiştirme
+
+2. **Başarısız görevler**
+   - Kategori ismi sorunlu mu?
+   - Hiyerarşi seviyesi yanlış mı?
+   - İçerik yanlış yerde mi?
+
+3. **Düşük directness**
+   Kullanıcı emin değil, daha net isimler gerek
+
+4. **Path analysis**
+   Hangi yanlış yollara sapılıyor? Oraları düzelt
+
+---
+
+## Sık Yapılan Hatalar
+
+### Card Sorting
+
+**1. Çok fazla kart**
+60+ kart = yorucu, düşük kalite sonuç
+
+**2. Belirsiz kart isimleri**
+Kart ne anlama geliyor belli değilse sonuç yanıltıcı
+
+**3. Yanlış katılımcılar**
+Hedef kitle değilse sonuçlar işe yaramaz
+
+**4. Sonuçları direkt uygulamak**
+Kullanıcı önerisi = tek doğru değil. Diğer faktörlerle birleştir
+
+### Tree Testing
+
+**1. Yönlendirici görevler**
+Cevabı görev içinde vermek
+
+**2. Çok derin hiyerarşi**
+5+ seviye genellikle problem
+
+**3. Yetersiz katılımcı**
+50 altı = istatistiksel güvensiz
+
+**4. Tek seferde bırakmak**
+Düşük başarı = düzelt ve tekrar test et
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**30 dakika**
+
+**Görev:** Bir e-ticaret sitesi için mini card sorting ve tree testing planla.
+
+**Senaryo:** Moda e-ticaret sitesi, ürün kategorileri düzenlenecek.
+
+**Adımlar:**
+
+**Part 1: Card Sorting Hazırlık (15 dk)**
+
+1. **20 ürün kartı oluştur**
+   Örnek: Kot pantolon, Blazer ceket, Spor ayakkabı, Gece elbisesi...
+   
+2. **Sorting türünü seç ve gerekçele**
+   Açık mı, kapalı mı, hibrit mi? Neden?
+
+3. **3 olası analiz sorusu yaz**
+   Bu card sorting'den ne öğrenmek istiyorsun?
+
+**Part 2: Tree Testing Hazırlık (15 dk)**
+
+1. **Basit bir kategori ağacı oluştur**
+   Ana Sayfa altında 3-4 ana kategori, her birinin altında 2-3 alt kategori
+
+2. **5 görev yaz**
+   Kullanıcının bulması gereken ürünler için senaryo
+
+3. **Her görev için başarı kriteri belirle**
+   Doğru cevap hangisi?
+
+**Kontrol:**
+- Görevler yönlendirici değil mi?
+- Kartlar net mi?
+- Ağaç yapısı 3-4 seviye ile sınırlı mı?
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Card sorting = kullanıcıların içeriği grupladığı yöntem
+- Üç tür: Açık (keşif), Kapalı (doğrulama), Hibrit
+- 30-60 kart, 15-50 katılımcı ideal
+- Analiz: benzerlik matrisi, dendogram, zor kartlar
+- Tree testing = mevcut yapıyı test etme
+- Görsel tasarım olmadan, sadece metin hiyerarşisi
+- Metrikler: success rate, directness, time, first click
+- İdeal akış: Card sorting → Yapı oluştur → Tree testing → Doğrula
+- Araçlar: OptimalSort, Treejack, UXtweak, Maze
+- Sonuçları direkt uygulamak yerine diğer verilerle birleştir
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Competitive Analysis](/kutuphane/competitive-analysis)
+
+**Sonraki:** Usability Metrics ve KPI'lar *(yakında)*
+
+**İlgili konular:**
+- [Information Architecture Temelleri](/kutuphane/information-architecture-temelleri)
+- [Kullanılabilirlik Testi](/kutuphane/kullanilabilirlik-testi)
+- [User Journey Map](/kutuphane/user-journey-map)
+
+**İlgili Roadmap:** UX Designer Roadmap → Research Methods
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Card Sorting - NNGroup](https://www.nngroup.com/articles/card-sorting-definition/) (İngilizce, 10 dk)
+- [Tree Testing - NNGroup](https://www.nngroup.com/articles/tree-testing/) (İngilizce, 8 dk)
+- [Optimal Workshop Blog](https://blog.optimalworkshop.com/) (İngilizce, pratik rehberler)
+- [Card Sorting - Donna Spencer](https://rosenfeldmedia.com/books/card-sorting/) (Kitap)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
