@@ -13169,6 +13169,621 @@ Derinleşmek istersen:
 - [Responsive Design - NNGroup](https://www.nngroup.com/articles/responsive-web-design-definition/) (İngilizce, 8 dk)
 `,
   },
+  "figma-temelleri": {
+    id: "figma-temelleri",
+    title: "Figma Temelleri",
+    subtitle: "Sıfırdan Figma Öğrenme Rehberi",
+    titleEn: "Figma Basics",
+    slug: "figma-temelleri",
+    description: "Figma nedir, nasıl kullanılır? Arayüz, temel araçlar, frame, component, auto layout. Başlangıç seviyesi Figma rehberi.",
+    category: "araclar-ipucu",
+    readingTime: 15,
+    featured: true,
+    publishedAt: "2025-01-16",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Figma Temelleri: Sıfırdan Figma Öğrenme Rehberi
+
+**Seviye:** Başlangıç
+**Kategori:** Araçlar & İpucu
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Figma, modern UI/UX tasarımının standart aracı haline geldi. Tarayıcıda çalışıyor, gerçek zamanlı iş birliği sunuyor, ücretsiz planı var.
+
+Sketch, Adobe XD, InVision... Hepsi bir zamanlar popülerdi. Ama Figma, iş birliği odaklı yaklaşımıyla pazarı domine etti. Artık iş ilanlarında "Figma bilgisi" neredeyse zorunlu.
+
+Bu yazıda Figma'nın temellerini öğreneceksin. Arayüzü tanıyacak, temel araçları kullanacak, ilk tasarımını yapacaksın.
+
+---
+
+## Figma Nedir?
+
+[CALLOUT]
+**Figma:**
+Tarayıcı tabanlı, bulut üzerinde çalışan UI/UX tasarım aracı. Gerçek zamanlı iş birliği, component sistemi, prototyping ve developer handoff özellikleri sunar.
+[/CALLOUT]
+
+**Temel özellikler:**
+- Tarayıcıda çalışır (desktop app da var)
+- Gerçek zamanlı iş birliği (Google Docs gibi)
+- Component ve variant sistemi
+- Auto layout
+- Prototyping
+- Developer handoff (Dev Mode)
+- Plugin ekosistemi
+- FigJam (whiteboard)
+
+---
+
+## Figma vs Alternatifler
+
+[TABLE]
+| Özellik | Figma | Sketch | Adobe XD |
+|---------|-------|--------|----------|
+| Platform | Web + Desktop | macOS only | Desktop |
+| İş birliği | Gerçek zamanlı | Plugin ile | Sınırlı |
+| Fiyat (başlangıç) | Ücretsiz | $12/ay | Ücretsiz (sınırlı) |
+| Component sistemi | Güçlü | Güçlü | Orta |
+| Prototyping | Dahili | Plugin | Dahili |
+| Öğrenme eğrisi | Düşük | Orta | Düşük |
+| Pazar payı | Dominant | Azalıyor | Azalıyor |
+[/TABLE]
+
+---
+
+## Hesap Oluşturma ve Planlar
+
+### Ücretsiz Plan (Starter)
+
+- 3 Figma dosyası
+- 3 FigJam dosyası
+- Sınırsız kişisel draft
+- 30 gün versiyon geçmişi
+- Sınırsız viewer/commenter
+
+Başlangıç için yeterli. Öğrenme aşamasında ücretsiz plan kullan.
+
+### Profesyonel Plan
+
+- Sınırsız dosya
+- Sınırsız versiyon geçmişi
+- Shared library
+- Team features
+- Dev Mode
+
+### Nasıl Başlanır?
+
+1. figma.com'a git
+2. Google veya email ile kayıt ol
+3. Hemen tasarlamaya başla
+
+---
+
+## Arayüz Tanıtımı
+
+Figma'yı açtığında beş ana alan görürsün:
+
+### 1. Toolbar (Üst)
+
+Sol tarafta araçlar:
+- Move (V): Seçme ve taşıma
+- Frame (F): Frame oluşturma
+- Shape tools: Rectangle (R), Ellipse (O), Line (L)
+- Pen (P): Vektör çizim
+- Text (T): Metin ekleme
+- Hand (H): Canvas'ta gezinme
+- Comment (C): Yorum ekleme
+
+Sağ tarafta:
+- Share butonu
+- Play butonu (prototype)
+- Zoom kontrolü
+
+### 2. Left Sidebar - Layers Panel
+
+Tüm layer'ların listesi. Hiyerarşik yapı.
+- Page'ler (üstte)
+- Frame'ler ve içerikleri
+- Sürükle-bırak ile düzenleme
+- Göz ikonu ile gizleme
+- Kilit ikonu ile kilitleme
+
+### 3. Canvas (Orta)
+
+Tasarım alanı. Sonsuz canvas, istediğin yere frame koy.
+
+### 4. Right Sidebar - Design Panel
+
+Seçili elementin özellikleri:
+- Position (X, Y)
+- Size (W, H)
+- Rotation
+- Fill (renk, gradient)
+- Stroke (border)
+- Effects (shadow, blur)
+- Auto layout ayarları
+
+### 5. Assets Panel (Sol)
+
+Component'lere erişim. Team library'den veya local component'ler.
+
+---
+
+## Temel Kavramlar
+
+### Frame
+
+Figma'nın temel container'ı. Artboard gibi düşün ama daha güçlü.
+
+**Frame özellikleri:**
+- Sabit boyut
+- İçerik taşabilir (clip content ile kontrol)
+- Auto layout uygulanabilir
+- Constraint'ler çalışır
+- Prototip için başlangıç noktası
+
+**Frame oluşturma:**
+- F tuşu veya toolbar'dan
+- Sürükle-bırak ile boyut
+- Sağ panelden preset boyutlar (iPhone, Desktop vs.)
+
+### Group vs Frame
+
+[TABLE]
+| Özellik | Frame | Group |
+|---------|-------|-------|
+| Boyut | Bağımsız, sabit | İçeriğe göre |
+| Taşma | Clip edilebilir | Taşar |
+| Auto layout | Uygulanabilir | Uygulanamaz |
+| Constraints | Çalışır | Çalışmaz |
+| Kullanım | UI container | Geçici gruplama |
+[/TABLE]
+
+[TIP]
+💡 UI tasarımda neredeyse her zaman Frame kullan. Group sadece geçici seçim kolaylığı için.
+[/TIP]
+
+### Layer Hiyerarşisi
+
+Figma'da her şey layer. Üstteki layer, alttakinin üzerinde görünür.
+
+**Sıralama:**
+- Üst layer = Görsel olarak üstte
+- Sürükle-bırak ile sıralama değiştir
+- Cmd/Ctrl + ] = Bir üste
+- Cmd/Ctrl + [ = Bir alta
+
+---
+
+## Temel Araçlar
+
+### Move Tool (V)
+
+Varsayılan araç. Seçme, taşıma, boyutlandırma.
+
+**İpuçları:**
+- Shift + sürükle = Orantılı boyutlandırma
+- Alt + sürükle = Kopyala
+- Shift + tıklama = Çoklu seçim
+
+### Frame Tool (F)
+
+Frame oluşturma. Sürükle veya tıkla.
+
+**Preset boyutlar:**
+Sağ panelden cihaz boyutları seç (iPhone 14, Desktop vb.)
+
+### Shape Tools
+
+**Rectangle (R):** Dikdörtgen
+- Shift ile kare
+- Corner radius sağ panelden
+
+**Ellipse (O):** Daire/Elips
+- Shift ile tam daire
+
+**Line (L):** Çizgi
+- Shift ile 45° açılar
+
+**Polygon/Star:** Toolbar'dan seç
+- Kenar sayısı ayarlanabilir
+
+### Text Tool (T)
+
+Metin ekleme. Tıkla ve yaz veya alan çiz.
+
+**Metin kutusu türleri:**
+- Auto width: Metin genişliğine göre
+- Auto height: Sabit genişlik, yükseklik metne göre
+- Fixed: Sabit boyut
+
+### Pen Tool (P)
+
+Vektör çizim. Bezier eğrileri.
+
+Başlangıçta zor gelebilir, pratik gerektirir.
+
+---
+
+## Renk ve Stil
+
+### Fill (Dolgu)
+
+Elementin içi.
+
+**Türler:**
+- Solid: Tek renk
+- Linear gradient: Çizgisel geçiş
+- Radial gradient: Dairesel geçiş
+- Image: Görsel dolgu
+
+**Renk seçimi:**
+- Color picker
+- HEX kodu
+- RGB/HSL değerleri
+- Eyedropper (I tuşu)
+
+### Stroke (Çerçeve)
+
+Elementin border'ı.
+
+**Ayarlar:**
+- Renk
+- Kalınlık
+- Position: Inside, Center, Outside
+- Dash (kesikli çizgi)
+
+### Effects
+
+**Drop shadow:** Dış gölge
+**Inner shadow:** İç gölge
+**Layer blur:** Element bulanıklığı
+**Background blur:** Arkasını bulanıklaştırma (glassmorphism)
+
+---
+
+## Auto Layout
+
+Figma'nın en güçlü özelliklerinden biri. Elementleri otomatik düzenler.
+
+### Auto Layout Nedir?
+
+Frame içindeki elementleri belirli kurallara göre otomatik hizalar ve boşluklar.
+
+**Avantajları:**
+- İçerik değişince layout adapte olur
+- Spacing tutarlı
+- Responsive davranış
+- Buton, kart gibi component'ler için ideal
+
+### Auto Layout Ekleme
+
+1. Frame veya elementleri seç
+2. Shift + A
+3. Veya sağ tık > Add auto layout
+
+### Auto Layout Ayarları
+
+**Direction:**
+- Horizontal (yatay dizi)
+- Vertical (dikey dizi)
+- Wrap (satır dolunca alt satıra geç)
+
+**Gap:** Elementler arası boşluk
+
+**Padding:** Frame içi boşluk (4 yön ayrı ayarlanabilir)
+
+**Alignment:** Elementlerin hizalanması
+
+**Sizing:**
+- Hug: İçeriğe göre boyutlan
+- Fill: Parent'ı doldur
+- Fixed: Sabit boyut
+
+### Auto Layout Örnek: Buton
+
+1. Text yaz: "Kaydet"
+2. Shift + A ile auto layout ekle
+3. Padding: 12px vertical, 24px horizontal
+4. Fill color ekle
+5. Corner radius: 8px
+
+Artık metin değişince buton otomatik genişler.
+
+---
+
+## Components
+
+Tekrar kullanılabilir tasarım elementleri.
+
+### Component Nedir?
+
+Ana element (Main Component) oluştur, kopyalarını (Instance) kullan. Ana'yı güncelle, tümü güncellenir.
+
+### Component Oluşturma
+
+1. Element(ler)i seç
+2. Cmd/Ctrl + Alt + K
+3. Veya sağ tık > Create component
+
+Main component mor elmas ikonu alır.
+
+### Instance Kullanma
+
+1. Main component'i kopyala (Cmd/Ctrl + D veya Alt + sürükle)
+2. Instance mavi elmas ikonu alır
+3. Instance'da override yapabilirsin (metin, renk vb.)
+
+### Neden Component?
+
+- **Tutarlılık:** Aynı element her yerde aynı
+- **Verimlilik:** Bir kez tasarla, her yerde kullan
+- **Güncelleme:** Tek yerden güncelle, her yere yansısın
+- **Organizasyon:** Library olarak paylaş
+
+---
+
+## Variants
+
+Aynı component'in farklı durumları.
+
+### Variant Nedir?
+
+Butonun default, hover, disabled halleri gibi. Tek component, birden fazla varyasyon.
+
+### Variant Oluşturma
+
+1. Component'i seç
+2. Sağ panelde "+" ile property ekle
+3. Variant'ları oluştur
+
+**Örnek buton variant'ları:**
+- State: Default, Hover, Pressed, Disabled
+- Size: Small, Medium, Large
+- Type: Primary, Secondary, Tertiary
+
+### Variant Kullanma
+
+Instance'da sağ panelden variant seç. Dropdown ile değiştir.
+
+---
+
+## Prototyping
+
+Tasarımları interaktif hale getirme.
+
+### Prototype Mode
+
+Sağ üstte "Prototype" sekmesine geç.
+
+### Bağlantı Oluşturma
+
+1. Kaynak elementi seç (buton gibi)
+2. Mavi daire görünür (sağda)
+3. Sürükle, hedef frame'e bırak
+4. Interaction ayarlarını yap
+
+### Interaction Ayarları
+
+**Trigger:** Ne zaman tetiklensin?
+- On click
+- On hover
+- On drag
+- While pressing
+- After delay
+
+**Action:** Ne olsun?
+- Navigate to (sayfa geçişi)
+- Open overlay (modal)
+- Scroll to
+- Back
+- Open link
+
+**Animation:** Nasıl geçiş?
+- Instant
+- Dissolve
+- Move in/out
+- Push
+- Slide in/out
+- Smart animate
+
+### Preview
+
+Play butonu (▶) veya Cmd/Ctrl + Alt + Enter ile prototip önizleme.
+
+---
+
+## Kısayollar
+
+[TABLE]
+| Kısayol | İşlev |
+|---------|-------|
+| V | Move tool |
+| F | Frame tool |
+| R | Rectangle |
+| O | Ellipse |
+| T | Text |
+| P | Pen |
+| I | Eyedropper |
+| H | Hand (pan) |
+| Space + drag | Geçici pan |
+| Cmd/Ctrl + D | Duplicate |
+| Cmd/Ctrl + G | Group |
+| Cmd/Ctrl + Alt + G | Frame selection |
+| Shift + A | Auto layout |
+| Cmd/Ctrl + Alt + K | Create component |
+| Cmd/Ctrl + / | Quick actions |
+| Cmd/Ctrl + Z | Undo |
+| Cmd/Ctrl + Shift + Z | Redo |
+| Cmd/Ctrl + + | Zoom in |
+| Cmd/Ctrl + - | Zoom out |
+| Cmd/Ctrl + 0 | Zoom 100% |
+| Cmd/Ctrl + 1 | Zoom to fit |
+| Cmd/Ctrl + 2 | Zoom to selection |
+[/TABLE]
+
+[TIP]
+💡 Cmd/Ctrl + / ile Quick Actions aç. İstediğin komutu yaz, hızlıca ulaş.
+[/TIP]
+
+---
+
+## İlk Proje: Basit Buton
+
+Öğrendiklerini uygula.
+
+[STEPS]
+1. **Yeni dosya oluştur**
+   Figma'da "New design file"
+
+2. **Frame ekle**
+   F tuşu, 200x60 boyutunda frame çiz
+
+3. **Renk ver**
+   Fill: #6366F1 (mor)
+
+4. **Corner radius**
+   Sağ panelde: 8px
+
+5. **Text ekle**
+   T tuşu, frame içine tıkla, "Kaydet" yaz
+
+6. **Text stil**
+   Font: Inter, Size: 16, Weight: Medium, Color: White
+
+7. **Text ortala**
+   Frame ve text'i seç, Align center (yatay ve dikey)
+
+8. **Auto layout ekle**
+   Frame'i seç, Shift + A
+   Padding: 16px vertical, 32px horizontal
+
+9. **Component yap**
+   Cmd/Ctrl + Alt + K
+
+10. **Instance oluştur**
+    Alt + sürükle ile kopyala
+    Metni "İptal" olarak değiştir
+[/STEPS]
+
+Tebrikler! İlk component'ini oluşturdun.
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Group yerine Frame kullanmamak
+
+Frame'in avantajlarını kaçırırsın. Auto layout, constraints çalışmaz.
+
+### 2. Component oluşturmamak
+
+Aynı elementi 10 kez kopyalayıp sonra hepsini tek tek güncellemek.
+
+### 3. Auto layout kullanmamak
+
+Manuel spacing, içerik değişince bozulur.
+
+### 4. Naming yapmamak
+
+"Frame 234", "Rectangle 12" isimleri developer'ı çıldırtır.
+
+### 5. Organize etmemek
+
+Her şey tek page'de, binlerce layer. Page ve section kullan.
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**30 dakika**
+
+**Görev:** Basit bir login kartı tasarla.
+
+**Gereksinimler:**
+- Kart container (beyaz, gölgeli)
+- Başlık: "Giriş Yap"
+- 2 input alanı (Email, Şifre)
+- "Giriş Yap" butonu (component)
+- "Şifremi Unuttum" linki
+
+**Adımlar:**
+
+1. **Desktop frame oluştur** (1440x900)
+
+2. **Kart frame'i** (400px genişlik)
+   - Fill: White
+   - Corner radius: 12px
+   - Shadow: 0, 4, 24, rgba(0,0,0,0.1)
+
+3. **Başlık ekle**
+   - "Giriş Yap"
+   - 24px, Semibold
+
+4. **Input alanları** (Auto layout kullan)
+   - Label + Input grupları
+   - Input: Border, padding, placeholder
+
+5. **Buton** (Önceki egzersizden component)
+
+6. **Link**
+   - "Şifremi Unuttum"
+   - Küçük, mavi, underline
+
+7. **Tümünü auto layout ile düzenle**
+   - Kartın içi vertical auto layout
+   - Uygun gap değerleri
+
+**Bonus:** Prototip ekle - buton tıklayınca başka frame'e geçiş.
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Figma tarayıcı tabanlı, gerçek zamanlı iş birlikli tasarım aracı
+- Ücretsiz plan başlangıç için yeterli
+- Frame = Temel container, Group'tan daha güçlü
+- Auto layout = Otomatik spacing ve boyutlandırma
+- Component = Tekrar kullanılabilir element, instance'lar ile kullan
+- Variant = Aynı component'in farklı durumları
+- Prototyping = Interaktif demo oluşturma
+- Kısayolları öğren, hız kazan
+- Naming ve organizasyon önemli
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Responsive Design Temelleri](/kutuphane/responsive-design-temelleri)
+
+**Sonraki:** Figma Auto Layout Detaylı Rehber *(yakında)*
+
+**İlgili konular:**
+- [Design System Nedir?](/kutuphane/design-system-nedir)
+- [Prototype Nedir?](/kutuphane/prototype-nedir)
+- Figma Component Best Practices *(yakında)*
+
+**İlgili Roadmap:** UI Designer Roadmap → Araçlar
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Figma Help Center](https://help.figma.com/) (Resmi döküman)
+- [Figma YouTube](https://www.youtube.com/figma) (Resmi video eğitimler)
+- [Figma Community](https://www.figma.com/community) (Ücretsiz kaynaklar, template'ler)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
