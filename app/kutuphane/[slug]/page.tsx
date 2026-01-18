@@ -10820,6 +10820,443 @@ Derinleşmek istersen:
 - [Universal Principles of Design](https://www.amazon.com/Universal-Principles-of-Design-Revised-Updated/dp/1592535879) (Kitap, 125 tasarım prensibi)
 `,
   },
+  "renk-teorisi": {
+    id: "renk-teorisi",
+    title: "Renk Teorisi ve UI'da Renk Kullanımı",
+    subtitle: "Etkili Renk Paleti Oluşturma Rehberi",
+    titleEn: "Color Theory for UI",
+    slug: "renk-teorisi",
+    description: "Renk teorisi nedir? Renk çarkı, renk harmonileri, UI'da renk kullanımı. Erişilebilir ve etkili renk paleti oluşturma rehberi.",
+    category: "temel-kavramlar",
+    readingTime: 14,
+    featured: false,
+    publishedAt: "2025-01-16",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Renk Teorisi ve UI'da Renk Kullanımı: Etkili Renk Paleti Oluşturma Rehberi
+
+**Seviye:** Başlangıç - Orta  
+**Kategori:** Temel Kavramlar  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Mavi neden güven veriyor? Kırmızı neden dikkat çekiyor? Bir uygulamada 15 farklı renk kullanınca neden kaotik görünüyor?
+
+Renk, tasarımın en güçlü araçlarından biri. Doğru kullanıldığında yönlendirir, duygu uyandırır, marka kimliği oluşturur. Yanlış kullanıldığında kafa karışıklığı yaratır, erişilebilirliği bozar, amatör görünüm verir.
+
+**Renk teorisi**, renkleri bilinçli ve etkili kullanmanın temelidir. Sanat eğitiminden gelen bu ilkeler, dijital tasarımda da geçerli.
+
+Bu yazıda renk teorisinin temellerini ve UI tasarımda nasıl uygulanacağını öğreneceksin.
+
+---
+
+## Renk Temelleri
+
+### Renk Özellikleri
+
+Her rengin üç temel özelliği var:
+
+**1. Hue (Ton)**
+Rengin kendisi. Kırmızı, mavi, yeşil gibi. Renk çarkındaki pozisyon.
+
+**2. Saturation (Doygunluk)**
+Rengin yoğunluğu. Canlı mı, soluk mu? %100 doygunluk = en canlı, %0 = gri.
+
+**3. Lightness/Brightness (Parlaklık)**
+Rengin açıklık-koyuluk değeri. %100 = beyaz, %0 = siyah.
+
+### Renk Modelleri
+
+**RGB (Red, Green, Blue)**
+Ekranlar için. Işık karışımı. Kırmızı + Yeşil + Mavi = Beyaz.
+
+**HEX**
+RGB'nin web formatı. #FF5733 gibi 6 karakterli kod.
+
+**HSL (Hue, Saturation, Lightness)**
+Tasarımcı dostu. Rengi, doygunluğu, parlaklığı ayrı kontrol et.
+
+**HSB/HSV (Hue, Saturation, Brightness)**
+HSL'e benzer, Figma ve diğer araçlarda yaygın.
+
+[TIP]
+💡 HSL ile çalışmak daha sezgisel. Aynı hue'yu koruyup, farklı doygunluk ve parlaklıkla varyasyonlar üretebilirsin.
+[/TIP]
+
+---
+
+## Renk Çarkı
+
+Renk çarkı, renklerin ilişkisini gösteren dairesel diyagram.
+
+### Birincil Renkler (Primary)
+
+Diğer renklerden oluşturulamaz: Kırmızı, Sarı, Mavi.
+
+### İkincil Renkler (Secondary)
+
+İki birincil rengin karışımı: Turuncu (kırmızı+sarı), Yeşil (sarı+mavi), Mor (mavi+kırmızı).
+
+### Üçüncül Renkler (Tertiary)
+
+Birincil ve ikincil renk karışımı: Kırmızı-turuncu, Sarı-yeşil gibi.
+
+---
+
+## Renk Harmonileri
+
+Renk çarkını kullanarak uyumlu paletler oluşturma yöntemleri.
+
+### Monokromatik (Monochromatic)
+
+Tek hue, farklı doygunluk ve parlaklık değerleri.
+
+**Örnek:** Mavi ailesinden açık mavi, orta mavi, koyu mavi.
+
+**Avantaj:** Kolay, tutarlı, zarif
+**Dezavantaj:** Monoton olabilir, kontrast sınırlı
+
+**UI kullanımı:** Minimal tasarımlar, tek marka rengi etrafında sistem.
+
+### Analogous (Komşu)
+
+Renk çarkında yan yana olan renkler.
+
+**Örnek:** Mavi, mavi-yeşil, yeşil.
+
+**Avantaj:** Doğal, uyumlu, rahatlatıcı
+**Dezavantaj:** Kontrast düşük olabilir
+
+**UI kullanımı:** Doğa temalı uygulamalar, rahatlatıcı deneyimler.
+
+### Komplementer (Complementary)
+
+Renk çarkında karşılıklı renkler.
+
+**Örnek:** Mavi ve turuncu, kırmızı ve yeşil.
+
+**Avantaj:** Yüksek kontrast, dikkat çekici
+**Dezavantaj:** Aşırı kullanımda yorucu
+
+**UI kullanımı:** CTA vurgulama, accent renk.
+
+### Split-Complementary
+
+Bir renk + karşısındaki rengin iki yanındaki renkler.
+
+**Örnek:** Mavi + sarı-turuncu + kırmızı-turuncu.
+
+**Avantaj:** Komplementerden daha yumuşak, hâlâ kontrastlı
+**UI kullanımı:** Daha sofistike paletler.
+
+### Triadik (Triadic)
+
+Renk çarkında eşit mesafedeki üç renk (120° arayla).
+
+**Örnek:** Kırmızı, sarı, mavi.
+
+**Avantaj:** Canlı, dengeli
+**Dezavantaj:** Dengelemesi zor
+
+**UI kullanımı:** Oyun arayüzleri, çocuk uygulamaları.
+
+### Tetradik (Square/Rectangle)
+
+Dört renk, dikdörtgen veya kare formasyonunda.
+
+**Avantaj:** Zengin palet
+**Dezavantaj:** Dengelemesi en zor
+
+---
+
+## Renk Psikolojisi
+
+Renkler duygusal çağrışımlar yapar. Kültüre göre değişebilir ama bazı genel eğilimler var.
+
+[TABLE]
+| Renk | Çağrışımlar | UI Kullanımı |
+|------|-------------|--------------|
+| **Mavi** | Güven, profesyonellik, sakinlik | Finans, kurumsal, sağlık |
+| **Yeşil** | Doğa, büyüme, başarı | Sürdürülebilirlik, onay mesajları |
+| **Kırmızı** | Enerji, aciliyet, hata | Uyarılar, hatalar, satış |
+| **Turuncu** | Enerji, sıcaklık, eylem | CTA, eğlence |
+| **Sarı** | İyimserlik, dikkat, uyarı | Uyarı mesajları, vurgulama |
+| **Mor** | Lüks, yaratıcılık, gizemler | Premium, yaratıcı sektörler |
+| **Siyah** | Sofistike, güç, elegans | Lüks markalar, minimal |
+| **Beyaz** | Temizlik, sadelik, alan | Arka plan, boşluk |
+| **Gri** | Nötr, profesyonel, denge | UI temeli, metin |
+[/TABLE]
+
+[WARNING]
+⚠️ Renk psikolojisi kültüre göre değişir. Batı'da beyaz saflık, Doğu Asya'da yas rengi olabilir. Hedef kitlenizi düşünün.
+[/WARNING]
+
+---
+
+## UI İçin Renk Paleti Oluşturma
+
+### Temel Palet Yapısı
+
+**1. Primary (Birincil)**
+Marka rengi. CTA'lar, ana aksiyonlar.
+
+**2. Secondary (İkincil)**
+Destekleyici renk. İkincil aksiyonlar.
+
+**3. Accent**
+Vurgu rengi. Küçük detaylar, dikkat çekme.
+
+**4. Neutral (Nötr)**
+Gri skalası. Metin, border, arka plan.
+
+**5. Semantic (Anlamsal)**
+Duruma göre renkler: success (yeşil), warning (sarı), error (kırmızı), info (mavi).
+
+### 60-30-10 Kuralı
+
+**%60 Dominant:** Arka plan, büyük alanlar (genellikle nötr)
+**%30 Secondary:** Kartlar, bölümler, destekleyici
+**%10 Accent:** CTA, vurgular, dikkat çekici detaylar
+
+Bu oran görsel denge sağlar.
+
+### Renk Tonları Oluşturma
+
+Her ana renk için ton skalası oluştur:
+**Primary:**
+- 50   - En açık (hover, subtle)
+- 100  - Çok açık
+- 200  - Açık
+- 300  - Orta açık
+- 400  - Orta
+- 500  - Ana ton (base)
+- 600  - Orta koyu
+- 700  - Koyu
+- 800  - Çok koyu
+- 900  - En koyu (pressed state)
+
+Bu sistem Tailwind CSS ve birçok design system'da kullanılır.
+
+---
+
+## Erişilebilirlik ve Kontrast
+
+### WCAG Kontrast Gereksinimleri
+
+[TABLE]
+| Metin Tipi | AA Seviyesi | AAA Seviyesi |
+|------------|-------------|--------------|
+| Normal metin | 4.5:1 | 7:1 |
+| Büyük metin (18px+) | 3:1 | 4.5:1 |
+| UI bileşenleri | 3:1 | - |
+[/TABLE]
+
+### Renk Körlüğü
+
+Dünya nüfusunun yaklaşık %8'i (erkeklerde daha yüksek) bir tür renk körlüğü yaşıyor.
+
+**Türler:**
+- Deuteranopia (yeşil körlüğü) - En yaygın
+- Protanopia (kırmızı körlüğü)
+- Tritanopia (mavi körlüğü) - Nadir
+
+**Tasarım önerileri:**
+
+[COMPARISON]
+❌ Kötü: Sadece kırmızı/yeşil ile hata/başarı gösterme
+✅ İyi: Kırmızı + ✕ ikonu, Yeşil + ✓ ikonu
+[/COMPARISON]
+
+- Sadece renge güvenme, ikon/pattern/metin ekle
+- Kırmızı-yeşil kombinasyonuna dikkat
+- Simülatörlerle test et
+
+### Test Araçları
+
+- **WebAIM Contrast Checker** - Kontrast oranı
+- **Stark (Figma plugin)** - Kontrast + renk körlüğü
+- **Color Oracle** - Renk körlüğü simülatörü
+- **Coblis** - Online renk körlüğü simülatörü
+
+---
+
+## Dark Mode Renkleri
+
+Dark mode için renkleri doğrudan tersine çevirme. Özel düzenleme gerekir.
+
+### Dark Mode İlkeleri
+
+**1. Saf siyah kullanma**
+#000000 yerine #121212 veya koyu gri. Saf siyah ekranda "delik" etkisi yapar.
+
+**2. Doygunluğu azalt**
+Canlı renkler karanlık arka planda göz yorar. Primary rengin doygunluğunu düşür.
+
+**3. Depth için gölge yerine elevation**
+Karanlıkta gölge görünmez. Yükselen yüzeyler daha açık ton alır.
+
+**4. Beyaz metin için kontrast**
+Saf beyaz (${'`'}#FFFFFF${'`'}) çok parlak olabilir. ${'`'}#E0E0E0${'`'} gibi hafif gri daha rahat.
+
+---
+
+## Renk Seçim Araçları
+
+[TABLE]
+| Araç | Özellik |
+|------|---------|
+| **Coolors** | Hızlı palet üretimi, export |
+| **Adobe Color** | Harmoni kuralları, trend paletler |
+| **Realtime Colors** | Paleti gerçek UI'da önizle |
+| **Happy Hues** | Hazır palet + uygulama örneği |
+| **ColorHunt** | Topluluk paletleri |
+| **Figma Plugins** | Coolors, Stark, Color Palettes |
+[/TABLE]
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Çok fazla renk
+
+[COMPARISON]
+❌ Kötü: 10 farklı renk, her biri farklı ton
+✅ İyi: Primary, secondary, nötrler, semantic - tutarlı sistem
+[/COMPARISON]
+
+### 2. Yetersiz kontrast
+
+Açık gri metin beyaz üzerinde okunmaz. Kontrast kontrol et.
+
+### 3. Sadece renge güvenmek
+
+Renk körlüğü olan kullanıcıları dışlar. İkon, metin, pattern ekle.
+
+### 4. Doygunluk abartısı
+
+Her şey canlı renk olunca göz yorulur. Nötrler denge sağlar.
+
+### 5. Dark mode'u unutmak
+
+Light için tasarlayıp dark'ı sonradan eklemek zor. Baştan düşün.
+
+### 6. Kültürel farkları görmezden gelmek
+
+Global ürün için renk çağrışımlarını araştır.
+
+---
+
+## Pratik İpuçları
+
+**Başlarken:**
+1. Marka rengi varsa onunla başla
+2. Yoksa hedef kitleye uygun primary seç
+3. Komplementer veya split-complementary ile accent belirle
+4. Gri skalası oluştur (5-9 ton)
+5. Semantic renkler ekle (standart: yeşil, sarı, kırmızı, mavi)
+
+**Palet oluştururken:**
+- Gerçek UI'da test et (Realtime Colors)
+- Metin, buton, kart, form - hepsinde dene
+- Kontrast kontrolü yap
+- Renk körlüğü simülasyonu yap
+
+**Token olarak kaydet:**
+${'```'}
+color-primary-500: #6366F1
+color-primary-600: #4F46E5
+color-neutral-100: #F3F4F6
+color-neutral-900: #111827
+color-success-500: #10B981
+color-error-500: #EF4444
+${'```'}
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**25 dakika**
+
+**Görev:** Bir fintech uygulaması için renk paleti oluştur.
+
+**Gereksinimler:**
+- Güven veren, profesyonel his
+- Erişilebilir (WCAG AA)
+- Light ve dark mode uyumlu düşün
+
+**Adımlar:**
+
+1. **Primary renk seç (5 dk)**
+   - Fintech için uygun ton (mavi, yeşil, mor?)
+   - Coolors veya Adobe Color kullan
+
+2. **Ton skalası oluştur (5 dk)**
+   - 50'den 900'e kadar en az 5 ton
+   
+3. **Nötr palet (5 dk)**
+   - Gri skalası: 5-7 ton
+   - Metin için koyu, arka plan için açık
+
+4. **Semantic renkler (5 dk)**
+   - Success, Warning, Error, Info
+
+5. **Kontrast testi (5 dk)**
+   - Primary buton üzerinde beyaz metin: 4.5:1 üzeri mi?
+   - Body text arka plan üzerinde: 4.5:1 üzeri mi?
+
+**Çıktı:** 
+- Primary: 5 ton
+- Neutral: 5-7 ton  
+- Semantic: 4 renk
+- Her birinin HEX kodu
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Rengin üç özelliği: hue (ton), saturation (doygunluk), lightness (parlaklık)
+- Renk harmonileri: monokromatik, analogous, komplementer, triadik
+- UI paleti: primary, secondary, neutral, semantic renkler
+- 60-30-10 kuralı: dominant, secondary, accent oranı
+- Kontrast: normal metin 4.5:1, büyük metin 3:1 minimum
+- Renk körlüğü için: sadece renge güvenme, ikon/metin ekle
+- Dark mode: saf siyah kullanma, doygunluğu azalt
+- Her renk için ton skalası oluştur (50-900)
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Gestalt İlkeleri ve Görsel Algı](/kutuphane/gestalt-ilkeleri)
+
+**Sonraki:** Tipografi Temelleri *(yakında)*
+
+**İlgili konular:**
+- [Design System Nedir?](/kutuphane/design-system-nedir)
+- [Accessibility Temelleri](/kutuphane/accessibility-temelleri)
+- Dark Mode Tasarımı *(yakında)*
+
+**İlgili Roadmap:** UI Designer Roadmap → Görsel Tasarım Temelleri
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Color in UI Design - NNGroup](https://www.nngroup.com/articles/color-enhance-design/) (İngilizce, 8 dk)
+- [Refactoring UI - Color](https://www.refactoringui.com/) (Kitap, pratik renk tavsiyeleri)
+- [Realtime Colors](https://www.realtimecolors.com/) (Araç, palet önizleme)
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) (Araç)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
