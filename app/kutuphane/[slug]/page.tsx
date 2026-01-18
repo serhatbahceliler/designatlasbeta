@@ -12179,6 +12179,490 @@ Derinleşmek istersen:
 - [Refactoring UI](https://www.refactoringui.com/) (Kitap, pratik hiyerarşi tavsiyeleri)
 `,
   },
+  "spacing-layout-sistemleri": {
+    id: "spacing-layout-sistemleri",
+    title: "Spacing ve Layout Sistemleri",
+    subtitle: "Tutarlı Boşluk ve Düzen Oluşturma",
+    titleEn: "Spacing and Layout Systems",
+    slug: "spacing-layout-sistemleri",
+    description: "Spacing sistemi nedir? 4px/8px grid, margin ve padding kuralları, layout grid kullanımı. Tutarlı ve ölçeklenebilir UI düzeni rehberi.",
+    category: "ux-design",
+    readingTime: 13,
+    featured: false,
+    publishedAt: "2025-01-16",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Spacing ve Layout Sistemleri: Tutarlı Boşluk ve Düzen Oluşturma
+
+**Seviye:** Başlangıç - Orta
+**Kategori:** UX Design
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Neden bazı tasarımlar "temiz" görünürken, bazıları dağınık hissettiriyor?
+
+Çoğu zaman cevap: spacing. Bir yerde 12px, başka yerde 17px, başka yerde 23px. Tutarsız boşluklar kaos yaratır. Göz düzen arar, bulamazsa rahatsız olur.
+
+**Spacing sistemi**, boşlukları rastgele değil, belirli kurallara göre belirleme yaklaşımı. 8px grid, 4px grid, spacing scale - hepsi aynı amaca hizmet eder: tutarlılık.
+
+**Layout sistemi** ise sayfanın genel yapısını düzenler. Kolonlar, gutterlar, marginler. İçeriğin nereye oturacağını belirler.
+
+Bu yazıda spacing ve layout sistemlerinin temellerini ve nasıl uygulanacağını öğreneceksin.
+
+---
+
+## Spacing Neden Önemli?
+
+### 1. Tutarlılık
+
+Aynı ilişkideki elementler aynı boşluğa sahip olmalı. Kullanıcı pattern'i öğrenir.
+
+### 2. Hiyerarşi
+
+Boşluk, gruplama ve ayırma için kullanılır. Yakın = ilişkili, uzak = ayrı (Gestalt yakınlık ilkesi).
+
+### 3. Okunabilirlik
+
+Yeterli boşluk göz yorgunluğunu azaltır, içeriği sindirilebilir kılar.
+
+### 4. Profesyonellik
+
+Tutarlı spacing, tasarımın kalitesini gösterir. Detaylara dikkat = güven.
+
+### 5. Geliştirme Kolaylığı
+
+Sistematik spacing, CSS/kod yazımını kolaylaştırır.
+
+[INFO]
+**8px**
+En yaygın kullanılan spacing base değeri
+[/INFO]
+
+---
+
+## Spacing Terminolojisi
+
+### Padding
+
+Elementin **içindeki** boşluk. İçerik ile border arasındaki mesafe.
+
+**Örnek:** Butonun içindeki metin etrafındaki boşluk.
+
+### Margin
+
+Elementin **dışındaki** boşluk. Element ile diğer elementler arasındaki mesafe.
+
+**Örnek:** İki kart arasındaki mesafe.
+
+### Gap
+
+Flex veya grid container'da çocuk elementler arasındaki boşluk.
+
+**Örnek:** Grid içindeki kartlar arası mesafe.
+
+### Gutter
+
+Layout grid'de kolonlar arasındaki boşluk.
+
+### Whitespace
+
+Genel boşluk terimi. İçerik olmayan alanlar.
+
+---
+
+## 8px Grid Sistemi
+
+En yaygın spacing sistemi. Tüm değerler 8'in katları.
+
+### Neden 8?
+
+- Çoğu ekran boyutuna temiz bölünür
+- Yeterince küçük (hassas kontrol)
+- Yeterince büyük (çok fazla seçenek yok)
+- Yaygın standart, developer'lar bilir
+
+### 8px Spacing Scale
+
+[TABLE]
+| Token | Değer | Kullanım |
+|-------|-------|----------|
+| spacing-1 | 8px | Çok sıkı, ikon-metin arası |
+| spacing-2 | 16px | Sıkı, form elemanları arası |
+| spacing-3 | 24px | Normal, paragraflar arası |
+| spacing-4 | 32px | Geniş, section içi gruplar |
+| spacing-5 | 40px | Çok geniş, bölümler arası |
+| spacing-6 | 48px | Section arası |
+| spacing-7 | 64px | Büyük bölümler arası |
+| spacing-8 | 80px | Hero, major sections |
+| spacing-9 | 96px | Sayfa bölümleri |
+| spacing-10 | 128px | Çok büyük ayrımlar |
+[/TABLE]
+
+### 4px Seçeneği
+
+Bazı durumlar 8px çok büyük olabilir. 4px base kullanılabilir:
+
+4, 8, 12, 16, 20, 24, 32, 40, 48, 64...
+
+Veya hybrid: Base 8px ama 4px de mevcut (ince ayarlar için).
+
+[TIP]
+💡 Tailwind CSS 4px base kullanır: 1=4px, 2=8px, 3=12px, 4=16px... Figma'da da 4px grid popüler.
+[/TIP]
+
+---
+
+## Spacing Kullanım Kuralları
+
+### İlişki Kuralı
+
+İlişkili elementler arası boşluk < İlişkisiz elementler arası boşluk
+
+**Örnek:**
+- Label ile input arası: 4-8px (çok yakın, ilişkili)
+- Input grupları arası: 16-24px (ayrı ama aynı form)
+- Form bölümleri arası: 32-48px (farklı konular)
+
+### Tutarlılık Kuralı
+
+Aynı ilişki = aynı boşluk.
+
+[COMPARISON]
+❌ Kötü: Bir yerde label-input arası 6px, başka yerde 12px
+✅ İyi: Tüm label-input araları 8px
+[/COMPARISON]
+
+### Hiyerarşi Kuralı
+
+Daha önemli ayrımlar = daha büyük boşluk.
+
+- Element içi: 4-8px
+- Element arası: 8-16px
+- Grup arası: 16-32px
+- Bölüm arası: 32-64px
+- Section arası: 48-96px
+
+### Orantı Kuralı
+
+Büyük elementler etrafında daha fazla boşluk.
+
+- Küçük buton padding: 8px 16px
+- Büyük buton padding: 16px 32px
+- Hero başlık margin: 64px+
+
+---
+
+## Component İçi Spacing
+
+### Buton
+
+[TABLE]
+| Boyut | Padding (dikey) | Padding (yatay) |
+|-------|-----------------|-----------------|
+| Small | 8px | 12px |
+| Medium | 10px-12px | 16px-20px |
+| Large | 14px-16px | 24px-32px |
+[/TABLE]
+
+### Input
+
+- Label ile input arası: 4-8px
+- Input padding: 12px 16px (veya 8px 12px small)
+- Helper text ile input arası: 4-8px
+- Input grupları arası: 16-24px
+
+### Kart
+
+- Kart padding: 16px-24px
+- İç elementler arası: 8px-16px
+- Başlık ile içerik arası: 8px-12px
+- Kartlar arası (grid): 16px-24px
+
+### Liste
+
+- Liste item'ları arası: 8px-12px (sıkı liste)
+- Liste item'ları arası: 16px-24px (ayrık liste)
+- Liste item padding: 12px-16px (tıklanabilirse)
+
+---
+
+## Layout Grid Sistemi
+
+Sayfa düzenini organize eden kolon sistemi.
+
+### Grid Bileşenleri
+
+**Kolonlar (Columns):** Dikey şeritler. Genellikle 12 kolon (bölünebilirlik).
+
+**Gutter:** Kolonlar arası boşluk. 16px-32px arası yaygın.
+
+**Margin:** Sayfa kenarlarındaki boşluk. Responsive değişir.
+
+**Container:** İçeriğin maksimum genişliği.
+
+### 12 Kolon Grid
+
+Neden 12?
+- 1, 2, 3, 4, 6, 12'ye bölünebilir
+- Esnek layout seçenekleri
+- Endüstri standardı
+
+**Örnek bölümler:**
+- 12/12 = Tam genişlik
+- 6/6 = İki eşit kolon
+- 4/4/4 = Üç eşit kolon
+- 3/3/3/3 = Dört eşit kolon
+- 8/4 = Ana içerik + sidebar
+- 3/6/3 = Ortalanmış içerik
+
+### Responsive Grid
+
+[TABLE]
+| Breakpoint | Ekran | Kolonlar | Margin | Gutter |
+|------------|-------|----------|--------|--------|
+| Mobile | <640px | 4 | 16px | 16px |
+| Tablet | 640-1024px | 8 | 24px | 24px |
+| Desktop | 1024-1440px | 12 | 32px | 24px |
+| Large | >1440px | 12 | auto | 24px |
+[/TABLE]
+
+---
+
+## Figma'da Grid Kullanımı
+
+### Layout Grid Ekleme
+
+1. Frame seç
+2. Design panelinde "Layout grid" → "+"
+3. Grid tipini seç: Columns, Rows, veya Grid
+
+### Kolon Grid Ayarları
+
+- **Count:** Kolon sayısı (12)
+- **Type:** Stretch (esnek) veya Fixed (sabit genişlik)
+- **Margin:** Kenar boşluğu
+- **Gutter:** Kolonlar arası
+
+### Spacing Grid
+
+Kolon grid'e ek olarak, spacing kontrolü için 8px grid:
+
+1. Frame'e ikinci grid ekle
+2. Tip: Grid
+3. Size: 8px
+4. Opacity düşük tut (referans için)
+
+[TIP]
+💡 Figma'da "Snap to grid" aktif olursa elementler otomatik 8px'e yaslanır. Hızlı ve tutarlı çalışma sağlar.
+[/TIP]
+
+---
+
+## Auto Layout (Figma)
+
+Modern spacing yaklaşımı. Manuel yerleştirme yerine otomatik düzen.
+
+### Auto Layout Avantajları
+
+- Spacing bir kez tanımla, otomatik uygula
+- İçerik değişince layout adapte olur
+- Responsive davranış
+- Padding ve gap kontrolü
+
+### Auto Layout Ayarları
+
+- **Direction:** Horizontal veya Vertical
+- **Gap:** Elementler arası boşluk (spacing scale'den)
+- **Padding:** İç boşluk (her yön ayrı ayarlanabilir)
+- **Alignment:** Hizalama
+
+### Nested Auto Layout
+
+Karmaşık layoutlar için iç içe auto layout:
+
+- Sayfa = Vertical auto layout (section'lar)
+- Section = Vertical auto layout (içerik grupları)
+- Grup = Horizontal auto layout (elementler)
+
+---
+
+## Spacing Token'ları
+
+Design system'da spacing değerlerini token olarak tanımla.
+
+### Token Tanımları
+${'```'}
+spacing-0: 0px
+spacing-1: 4px
+spacing-2: 8px
+spacing-3: 12px
+spacing-4: 16px
+spacing-5: 20px
+spacing-6: 24px
+spacing-8: 32px
+spacing-10: 40px
+spacing-12: 48px
+spacing-16: 64px
+spacing-20: 80px
+spacing-24: 96px
+${'```'}
+
+### Semantic Token'lar
+
+Değer yerine anlam:
+${'```'}
+spacing-component-padding-sm: 8px
+spacing-component-padding-md: 16px
+spacing-component-padding-lg: 24px
+spacing-section-gap: 64px
+spacing-page-margin-mobile: 16px
+spacing-page-margin-desktop: 32px
+${'```'}
+
+---
+
+## Yaygın Hatalar
+
+### 1. Rastgele değerler
+
+[COMPARISON]
+❌ Kötü: 13px, 17px, 22px, 29px - rastgele
+✅ İyi: 8px, 16px, 24px, 32px - sistemli
+[/COMPARISON]
+
+### 2. Tutarsız ilişkiler
+
+Aynı ilişki farklı spacing almamalı.
+
+### 3. Çok sıkışık
+
+Boşluk eklemekten korkmak. Breathing room gerekli.
+
+### 4. Çok gevşek
+
+Aşırı boşluk da sorun. İlişkili elementler kopuk görünür.
+
+### 5. Responsive düşünmemek
+
+Desktop spacing'i mobilde çok büyük olabilir. Breakpoint'lere göre ayarla.
+
+### 6. Grid'i görmezden gelmek
+
+Kolon grid varsa kullan. Elementler havada kalmasın.
+
+---
+
+## Pratik Spacing Rehberi
+
+### Hızlı Referans
+
+[TABLE]
+| Ne İçin | Değer |
+|---------|-------|
+| İkon-metin arası | 4-8px |
+| Label-input arası | 4-8px |
+| Input içi padding | 8-12px (dikey), 12-16px (yatay) |
+| Buton padding | 8-12px (dikey), 16-24px (yatay) |
+| Liste item arası | 8-16px |
+| Kart içi padding | 16-24px |
+| Kart-kart arası | 16-24px |
+| Form grupları arası | 24-32px |
+| Section içi gruplar | 32-48px |
+| Sectionlar arası | 48-96px |
+| Sayfa kenar margin (mobil) | 16px |
+| Sayfa kenar margin (desktop) | 32-64px |
+[/TABLE]
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**25 dakika**
+
+**Görev:** Bir signup form için spacing sistemi tanımla.
+
+**Form elementleri:**
+- Form başlığı
+- Ad Soyad (label + input)
+- Email (label + input)
+- Şifre (label + input + helper text)
+- Checkbox (şartları kabul)
+- Submit butonu
+- "Zaten hesabın var mı?" linki
+
+**Adımlar:**
+
+1. **Spacing scale belirle (3 dk)**
+   8px base ile scale oluştur: 8, 16, 24, 32, 48
+
+2. **Element içi spacing (7 dk)**
+   - Input padding: ?
+   - Buton padding: ?
+   - Checkbox-text arası: ?
+
+3. **Element arası spacing (10 dk)**
+   - Label ile input arası: ?
+   - Input ile helper text arası: ?
+   - Form grupları (ad, email, şifre) arası: ?
+   - Son grup ile checkbox arası: ?
+   - Checkbox ile buton arası: ?
+   - Buton ile link arası: ?
+
+4. **Form container (5 dk)**
+   - Form padding: ?
+   - Başlık ile ilk input arası: ?
+   - Max width: ?
+
+**Kontrol:** Tüm değerler scale'den mi? İlişkili elementler yakın mı?
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Spacing sistemi tutarlılık ve profesyonellik sağlar
+- 8px grid yaygın standart: 8, 16, 24, 32, 40, 48, 64...
+- 4px daha hassas kontrol için, hybrid kullanılabilir
+- Padding = iç boşluk, Margin = dış boşluk, Gap = container içi
+- İlişkili elementler yakın, ilişkisiz elementler uzak
+- Layout grid: 12 kolon, gutter (kolon arası), margin (kenar)
+- Responsive: Mobilde margin/gutter küçülür, kolon sayısı azalır
+- Figma'da Auto Layout ile spacing kontrolü
+- Token'lar ile spacing değerlerini standartlaştır
+- Rastgele değerlerden kaçın, scale'den seç
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Görsel Hiyerarşi Oluşturma](/kutuphane/gorsel-hiyerarsi)
+
+**Sonraki:** Responsive Design Temelleri *(yakında)*
+
+**İlgili konular:**
+- [Design System Nedir?](/kutuphane/design-system-nedir)
+- [Gestalt İlkeleri](/kutuphane/gestalt-ilkeleri)
+- Figma Auto Layout Rehberi *(yakında)*
+
+**İlgili Roadmap:** UI Designer Roadmap → Layout & Grid
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Space in Design Systems - Nathan Curtis](https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62) (İngilizce, 15 dk)
+- [The 8-Point Grid - Spec.fm](https://spec.fm/specifics/8-pt-grid) (İngilizce, detaylı)
+- [Layout Grid - Figma](https://help.figma.com/hc/en-us/articles/360040450513-Create-layout-grids-with-grids-columns-and-rows) (Resmi döküman)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
