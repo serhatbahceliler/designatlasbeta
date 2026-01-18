@@ -13784,6 +13784,463 @@ Derinleşmek istersen:
 - [Figma Community](https://www.figma.com/community) (Ücretsiz kaynaklar, template'ler)
 `,
   },
+  "design-critique": {
+    id: "design-critique",
+    title: "Design Critique Nasıl Yapılır?",
+    subtitle: "Yapıcı Geri Bildirim Verme ve Alma Rehberi",
+    titleEn: "How to Give Design Critique",
+    slug: "design-critique",
+    description: "Design critique nedir? Etkili geri bildirim verme teknikleri, critique oturumu yönetimi ve yapıcı feedback kültürü oluşturma rehberi.",
+    category: "kariyer",
+    readingTime: 12,
+    featured: false,
+    publishedAt: "2025-01-16",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Design Critique Nasıl Yapılır? Yapıcı Geri Bildirim Verme ve Alma Rehberi
+
+**Seviye:** Orta
+**Kategori:** Kariyer
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+"Bu rengi beğenmedim."
+"Bence buton daha büyük olmalı."
+"Güzel olmuş."
+
+Bu tür geri bildirimler tasarımı geliştirmez. Kişisel tercihler, belirsiz yorumlar ve yüzeysel övgüler - hepsi critique değil, sadece görüş.
+
+**Design critique**, yapılandırılmış bir geri bildirim sürecidir. Tasarımı belirli hedefler ve kriterler çerçevesinde değerlendirir. Amaç tasarımcıyı yargılamak değil, tasarımı birlikte geliştirmek.
+
+İyi critique becerisi, tasarımcının kariyerinde kritik. Hem vermek hem almak öğrenilmeli. Bu yazıda etkili critique'in nasıl yapılacağını öğreneceksin.
+
+---
+
+## Design Critique Nedir?
+
+[CALLOUT]
+**Design Critique:**
+Bir tasarımın belirli hedefler, kullanıcı ihtiyaçları ve tasarım prensipleri çerçevesinde yapılandırılmış şekilde değerlendirildiği geri bildirim oturumu. Amaç: tasarımı geliştirmek, tasarımcıyı değil.
+[/CALLOUT]
+
+**Critique ne değildir:**
+- Kişisel beğeni yarışması
+- Tasarımcıyı yargılama
+- "Ben olsam..." senaryoları
+- Onay toplantısı
+
+---
+
+## Critique vs Feedback
+
+[TABLE]
+| Özellik | Feedback | Critique |
+|---------|----------|----------|
+| Yapı | Informal, spontan | Yapılandırılmış, planlı |
+| Odak | Genel izlenim | Belirli hedefler |
+| Kriter | Kişisel tercih | Objektif prensipler |
+| Format | Anlık yorum | Oturum formatı |
+| Amaç | Görüş bildirme | Tasarımı geliştirme |
+[/TABLE]
+
+Her ikisi de değerli. Ama critique daha derinlikli ve etkili.
+
+---
+
+## Neden Critique Önemli?
+
+### 1. Kör noktaları görme
+
+Tasarımcı kendi işine çok yakın. Başkaları farklı perspektif sunar.
+
+### 2. Varsayımları sorgulama
+
+"Neden böyle yaptın?" sorusu, bilinçaltı kararları yüzeye çıkarır.
+
+### 3. Kaliteyi artırma
+
+Daha fazla göz, daha az hata. Erken aşamada düzeltme, sonra düzeltmekten ucuz.
+
+### 4. Öğrenme
+
+Hem veren hem alan öğrenir. Farklı yaklaşımlar, yeni teknikler.
+
+### 5. Takım hizalaması
+
+Herkes aynı kriterleri ve öncelikleri anlar.
+
+[INFO]
+**70%**
+Erken critique ile yakalanan tasarım problemlerinin oranı (geç aşamaya göre)
+[/INFO]
+
+---
+
+## Geri Bildirim Verme İlkeleri
+
+### 1. Tasarıma odaklan, kişiye değil
+
+[COMPARISON]
+❌ Kötü: "Bu kötü olmuş" / "Sen hep bu hatayı yapıyorsun"
+✅ İyi: "Bu bölüm hedef X'e ulaşmakta zorlanıyor çünkü..."
+[/COMPARISON]
+
+### 2. Spesifik ol
+
+[COMPARISON]
+❌ Kötü: "Bu biraz karışık"
+✅ İyi: "Kullanıcı bu ekranda 3 farklı CTA görüyor, hangisine tıklayacağını bilemeyebilir"
+[/COMPARISON]
+
+### 3. Hedefler çerçevesinde değerlendir
+
+[COMPARISON]
+❌ Kötü: "Mavi rengi tercih ederdim"
+✅ İyi: "Hedefiniz güven vermekti, yeşil renk bu sektörde güven yerine 'başarı' çağrışımı yapabilir"
+[/COMPARISON]
+
+### 4. Soru sor
+
+Varsaymak yerine sor. Tasarımcının düşünce sürecini anla.
+
+"Bu butonun burada olma sebebi nedir?"
+"Kullanıcının bu noktada ne hissetmesini istiyorsun?"
+"Alternatif yaklaşımları değerlendirdin mi?"
+
+### 5. Alternatif öner (zorunlu değil)
+
+Çözüm sunmak zorunda değilsin ama varsa paylaş. "Şunu deneyebilirsin" formatında.
+
+### 6. Önceliklendir
+
+Her şeyi söyleme. En önemli 2-3 noktaya odaklan. Aşırı feedback bunaltır.
+
+### 7. Pozitifi de söyle
+
+Sadece sorunlar değil, işe yarayan şeyleri de belirt. Motivasyon ve öğrenme için önemli.
+
+---
+
+## Geri Bildirim Çerçeveleri
+
+### I Like, I Wish, What If
+
+Yapılandırılmış, pozitif ton.
+
+**I Like:** Neyi beğendin? Neyin işe yaradığını düşünüyorsun?
+**I Wish:** Ne farklı olsaydı iyi olurdu?
+**What If:** Alternatif fikirler, denemeler?
+
+**Örnek:**
+- "I Like: Onboarding akışının basitliği, kullanıcıyı bunaltmıyor."
+- "I Wish: İlerleme göstergesi olsa, kullanıcı nerede olduğunu bilse."
+- "What If: Son adımda özet ekranı olsa?"
+
+### Situation-Behavior-Impact (SBI)
+
+Daha formal, net yapı.
+
+**Situation:** Hangi bağlamda/ekranda?
+**Behavior:** Ne görüyoruz/tasarım ne yapıyor?
+**Impact:** Bunun kullanıcıya/hedefe etkisi ne?
+
+**Örnek:**
+"Ödeme ekranında (situation) 5 farklı CTA var (behavior), bu kullanıcının karar vermesini zorlaştırabilir ve terk oranını artırabilir (impact)."
+
+### Strengths, Weaknesses, Opportunities
+
+SWOT benzeri yapı.
+
+**Strengths:** Tasarımın güçlü yönleri
+**Weaknesses:** Geliştirilmesi gereken alanlar
+**Opportunities:** Kaçırılmış fırsatlar, ek fikirler
+
+---
+
+## Critique Oturumu Yönetimi
+
+### Hazırlık (Önce)
+
+**Tasarımcı olarak:**
+- Bağlamı paylaş (problem, kullanıcı, hedefler)
+- Hangi aşamada olduğunu belirt (erken konsept? detay aşaması?)
+- Ne tür feedback istediğini söyle
+- Materyalleri önceden paylaş
+
+**Katılımcı olarak:**
+- Materyalleri önceden incele
+- Bağlamı anla
+- Notlar al
+
+### Oturum Yapısı
+
+[STEPS]
+1. **Giriş (5 dk)**
+   Tasarımcı bağlamı sunar: Problem, kullanıcı, hedefler, kısıtlar
+
+2. **Tasarımı göster (5-10 dk)**
+   Tasarımcı çözümü sunar, minimal açıklama
+
+3. **Sessiz inceleme (3-5 dk)**
+   Herkes sessizce inceler, not alır
+
+4. **Geri bildirim turu (15-20 dk)**
+   Sırayla herkes konuşur, moderatör yönetir
+
+5. **Tartışma (5-10 dk)**
+   Açık sorular, derinleşme
+
+6. **Özet (3-5 dk)**
+   Ana noktalar, action item'lar
+[/STEPS]
+
+### Moderatör Rolü
+
+- Zamanı yönetir
+- Herkese söz hakkı verir
+- Konuyu odakta tutar
+- Kişisel saldırıları engeller
+- Notları özetler
+
+### İdeal Katılımcı Sayısı
+
+3-6 kişi ideal. Daha az = yetersiz perspektif. Daha fazla = kaos.
+
+---
+
+## Geri Bildirim Alma
+
+Vermek kadar almak da beceri ister.
+
+### 1. Defansif olma
+
+İlk tepki savunmak olabilir. Dur, dinle, anla.
+
+[COMPARISON]
+❌ Kötü: "Ama sen anlamadın, aslında bu..."
+✅ İyi: "Anlıyorum, bu endişeyi daha iyi ele almam gerekiyor."
+[/COMPARISON]
+
+### 2. Açıklama vs savunma
+
+Neden yaptığını açıklamak iyi. Ama her kritik için savunma moduna geçme.
+
+### 3. Netleştirici sorular sor
+
+"Bu konu hakkında biraz daha açar mısın?"
+"Hangi kullanıcı senaryosunu düşünüyorsun?"
+
+### 4. Not al
+
+Her şeyi hatırlayamazsın. Not al, sonra değerlendir.
+
+### 5. Teşekkür et
+
+Feedback zaman ve emek gerektirir. Değer ver.
+
+### 6. Hepsini uygulamak zorunda değilsin
+
+Feedback öneri, emir değil. Değerlendir, filtrele, kararı sen ver.
+
+---
+
+## Uzaktan Critique
+
+Remote çalışmada critique farklı dinamikler gerektirir.
+
+### Araçlar
+
+- **Figma:** Yorum özelliği, gerçek zamanlı
+- **Loom:** Asenkron video feedback
+- **Miro/FigJam:** Sticky note'larla feedback
+- **Slack/Teams:** Yazılı tartışma
+
+### Asenkron Critique
+
+Herkes aynı anda olmak zorunda değil.
+
+**Avantajları:**
+- Zaman farkı sorunu yok
+- Düşünüp yazma şansı
+- Yazılı kayıt
+
+**Dezavantajları:**
+- Anlık tartışma zor
+- Ton kaybolabilir
+- Daha yavaş
+
+### Senkron Critique (Video)
+
+Zoom/Meet üzerinden canlı oturum.
+
+**İpuçları:**
+- Ekran paylaşımı
+- Herkes kamerayı açsın (bağlantı için)
+- Chat'i de kullan
+- Sessiz inceleme süresi ver
+
+---
+
+## Stakeholder Feedback
+
+Tasarımcı olmayan paydaşlardan feedback almak farklı.
+
+### Zorluklar
+
+- Tasarım dili bilmeyebilirler
+- Kişisel tercihlerini söyleyebilirler
+- Çözüm sunmak isteyebilirler (problem yerine)
+- HiPPO etkisi (Highest Paid Person's Opinion)
+
+### Stratejiler
+
+**1. Soruları yönlendir**
+"Beğendiniz mi?" yerine "Bu tasarım X hedefe ulaşıyor mu?"
+
+**2. Kriterleri önceden belirle**
+"Bugün şu 3 kriteri değerlendireceğiz..."
+
+**3. Kullanıcıyı hatırlat**
+"Kullanıcı araştırmamız şunu gösterdi..."
+
+**4. Data kullan**
+"A/B testimizde bu yaklaşım %X daha iyi performans gösterdi."
+
+**5. Tercih vs gereksinim ayır**
+"Bu bir tercih mi yoksa bir iş gereksinimi mi?"
+
+---
+
+## Critique Kültürü Oluşturma
+
+### Takımda
+
+- Düzenli critique oturumları (haftalık/2 haftalık)
+- Herkes katılır, herkes sunar
+- Psikolojik güvenlik ortamı
+- Hata yapma özgürlüğü
+- Kıdemden bağımsız görüş alma
+
+### Bireysel
+
+- Erken ve sık feedback iste
+- Farklı perspektiflerden al (tasarımcı, developer, PM, kullanıcı)
+- Feedback'e açık ol, savunmacı olma
+- Öğrenmeyi öncelikle
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Kişiselleştirme
+
+Tasarımı eleştirmek, tasarımcıyı eleştirmek değil.
+
+### 2. Belirsiz feedback
+
+"Biraz garip" = işe yaramaz. Spesifik ol.
+
+### 3. Çözüm dayatma
+
+"Bence şöyle yapmalısın" yerine problemi belirt.
+
+### 4. Sadece negatif
+
+Sadece sorunlara odaklanmak moral bozar.
+
+### 5. Her şeyi söyleme
+
+10 sorun varsa hepsini söyleme. Öncelikli 2-3 tane.
+
+### 6. Bağlamı bilmeden konuşma
+
+Hedefleri, kısıtları bilmeden feedback anlamsız.
+
+### 7. Feedback almamak
+
+"Ben kıdemliyim, biliyorum" = öğrenmeyi durdurma.
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**20 dakika**
+
+**Görev:** Aşağıdaki kötü feedback'leri yapıcı hale getir.
+
+**Senaryo:** E-ticaret checkout sayfası tasarımı
+
+**Kötü feedback'ler:**
+
+1. "Bu çok karışık."
+   → Yapıcı versiyon: ___
+
+2. "Renkleri beğenmedim."
+   → Yapıcı versiyon: ___
+
+3. "Ben olsam sidebar koyardım."
+   → Yapıcı versiyon: ___
+
+4. "Güzel olmuş."
+   → Yapıcı versiyon: ___
+
+5. "Kullanıcılar bunu anlamaz."
+   → Yapıcı versiyon: ___
+
+**Formül:**
+- Spesifik ol
+- Hedefe bağla
+- Soru formatı dene
+- "Ben" yerine "kullanıcı" de
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Critique = yapılandırılmış, hedef odaklı geri bildirim
+- Tasarıma odaklan, kişiye değil
+- Spesifik ol, belirsiz yorumlardan kaçın
+- Hedefler ve kriterler çerçevesinde değerlendir
+- Soru sor, varsayma
+- "I Like, I Wish, What If" veya SBI çerçevesi kullan
+- Oturum yapısı: bağlam → gösterim → inceleme → feedback → özet
+- Feedback alırken: defansif olma, not al, filtrele
+- Hepsini uygulamak zorunlu değil
+- Düzenli critique = takım gelişimi
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Figma Temelleri](/kutuphane/figma-temelleri)
+
+**Sonraki:** Stakeholder Yönetimi *(yakında)*
+
+**İlgili konular:**
+- [UX Mülakat Soruları](/kutuphane/ux-mulakat-sorulari)
+- [Portfolio Case Study Hazırlama](/kutuphane/portfolio-case-study)
+- Sunum ve Storytelling *(yakında)*
+
+**İlgili Roadmap:** UX Designer Roadmap → Soft Skills
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Discussing Design - Adam Connor & Aaron Irizarry](https://www.oreilly.com/library/view/discussing-design/9781491902394/) (Kitap, temel kaynak)
+- [Design Critiques - NNGroup](https://www.nngroup.com/articles/design-critiques/) (İngilizce, 8 dk)
+- [How to Run a Design Critique - Google Design](https://design.google/library/how-to-run-a-design-critique) (İngilizce)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
