@@ -11257,6 +11257,515 @@ Derinleşmek istersen:
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) (Araç)
 `,
   },
+  "tipografi-temelleri": {
+    id: "tipografi-temelleri",
+    title: "Tipografi Temelleri",
+    subtitle: "UI'da Yazı Tipi Seçimi ve Kullanımı",
+    titleEn: "Typography Basics",
+    slug: "tipografi-temelleri",
+    description: "Tipografi nedir? Font seçimi, type scale, line height, letter spacing. UI tasarımda okunabilir ve estetik tipografi rehberi.",
+    category: "temel-kavramlar",
+    readingTime: 13,
+    featured: false,
+    publishedAt: "2025-01-16",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Tipografi Temelleri: UI'da Yazı Tipi Seçimi ve Kullanımı
+
+**Seviye:** Başlangıç - Orta
+**Kategori:** Temel Kavramlar
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Bir web sitesinin %95'i tipografi. Metin her yerde: başlıklar, paragraflar, butonlar, menüler, form alanları, hata mesajları.
+
+Yanlış font seçimi veya kötü tipografik ayarlar, tasarımı amatör gösterir ve okunabilirliği yok eder. Doğru tipografi ise görünmezdir - kullanıcı içeriğe odaklanır, fontun kendisini fark etmez.
+
+**Tipografi**, sadece "güzel font seçmek" değil. Boyut, ağırlık, satır aralığı, harf aralığı, hiyerarşi - hepsi bilinçli kararlar gerektirir.
+
+Bu yazıda tipografinin temellerini ve UI tasarımda nasıl uygulanacağını öğreneceksin.
+
+---
+
+## Tipografi Terminolojisi
+
+### Font vs Typeface
+
+**Typeface (Yazı tipi):** Tasarım ailesi. Örnek: Helvetica, Inter, Roboto.
+
+**Font:** Typeface'in belirli bir varyasyonu. Örnek: Inter Bold 16px.
+
+Günlük kullanımda ikisi karıştırılır, çoğu durumda sorun değil.
+
+### Temel Kavramlar
+
+**Baseline:** Harflerin oturduğu çizgi.
+
+**X-height:** Küçük harflerin yüksekliği (x harfi referans). Yüksek x-height = daha okunabilir.
+
+**Cap height:** Büyük harflerin yüksekliği.
+
+**Ascender:** Baseline üzerine çıkan kısım (b, d, h gibi).
+
+**Descender:** Baseline altına inen kısım (g, p, y gibi).
+
+**Kerning:** İki harf arasındaki mesafe ayarı.
+
+**Tracking (Letter spacing):** Tüm harfler arasındaki genel mesafe.
+
+**Leading (Line height):** Satırlar arası mesafe.
+
+---
+
+## Font Kategorileri
+
+### Serif
+
+Harflerin uçlarında küçük çıkıntılar (tırnaklar) var.
+
+**Özellikler:** Geleneksel, resmi, güvenilir, klasik.
+
+**Örnekler:** Times New Roman, Georgia, Playfair Display, Merriweather.
+
+**UI kullanımı:** Editoryal içerik, lüks markalar, uzun form okuma.
+
+### Sans-serif
+
+Tırnaksız, temiz harfler.
+
+**Özellikler:** Modern, minimal, temiz, nötr.
+
+**Örnekler:** Helvetica, Inter, Roboto, Open Sans, SF Pro.
+
+**UI kullanımı:** Çoğu dijital arayüz, uygulama UI, web.
+
+### Monospace
+
+Her harf aynı genişlikte.
+
+**Özellikler:** Teknik, kod görünümü.
+
+**Örnekler:** Fira Code, JetBrains Mono, Consolas.
+
+**UI kullanımı:** Kod blokları, teknik veriler, terminaller.
+
+### Display / Decorative
+
+Dikkat çekici, özel tasarım.
+
+**Özellikler:** Etkileyici, kişilikli ama okunması zor olabilir.
+
+**UI kullanımı:** Sadece başlıklar, logo, hero section. Body text için asla.
+
+---
+
+## Font Seçimi
+
+### UI İçin İyi Font Özellikleri
+
+**1. Okunabilirlik**
+- Yüksek x-height
+- Açık harf formları (a, e, g, s net ayrışmalı)
+- Tutarlı stroke kalınlığı
+
+**2. Karakter seti**
+- Türkçe karakterler (ğ, ü, ş, ı, ö, ç)
+- Sayılar, semboller
+- Farklı weight'ler (regular, medium, bold minimum)
+
+**3. Performans**
+- Web font olarak optimize edilmiş
+- Makul dosya boyutu
+
+**4. Lisans**
+- Ticari kullanıma uygun
+
+### Popüler UI Fontları
+
+[TABLE]
+| Font | Tip | Özellik | Lisans |
+|------|-----|---------|--------|
+| **Inter** | Sans-serif | UI için tasarlandı, geniş karakter seti | Ücretsiz |
+| **Roboto** | Sans-serif | Google'ın Material font'u | Ücretsiz |
+| **SF Pro** | Sans-serif | Apple ekosistemi | Apple cihazlar |
+| **Open Sans** | Sans-serif | Nötr, okunabilir | Ücretsiz |
+| **Nunito** | Sans-serif | Yumuşak, samimi | Ücretsiz |
+| **Poppins** | Sans-serif | Geometrik, modern | Ücretsiz |
+| **Lato** | Sans-serif | Sıcak, profesyonel | Ücretsiz |
+| **Source Sans Pro** | Sans-serif | Adobe, temiz | Ücretsiz |
+[/TABLE]
+
+[TIP]
+💡 Inter, UI tasarımı için özel olarak tasarlandı. Türkçe desteği var, ücretsiz ve çok sayıda weight içeriyor. Emin değilsen Inter ile başla.
+[/TIP]
+
+---
+
+## Type Scale (Boyut Sistemi)
+
+Rastgele boyutlar yerine, tutarlı bir ölçek kullan.
+
+### Modüler Scale
+
+Bir oran ile çarparak boyutlar oluşturulur.
+
+**Yaygın oranlar:**
+- 1.125 (Major Second)
+- 1.200 (Minor Third)
+- 1.250 (Major Third) - Popüler
+- 1.333 (Perfect Fourth)
+- 1.414 (Augmented Fourth)
+- 1.618 (Golden Ratio)
+
+**Örnek (1.25 oran, 16px base):**
+
+[TABLE]
+| İsim | Boyut | Kullanım |
+|------|-------|----------|
+| xs | 12px | Caption, helper text |
+| sm | 14px | Secondary text, label |
+| base | 16px | Body text |
+| lg | 20px | Lead paragraph |
+| xl | 24px | H4 |
+| 2xl | 30px | H3 |
+| 3xl | 38px | H2 |
+| 4xl | 48px | H1 |
+| 5xl | 60px | Display |
+[/TABLE]
+
+### Pratik Type Scale
+
+Modüler hesaplama yerine, yaygın kullanılan değerler:
+
+12 - 14 - 16 - 18 - 20 - 24 - 30 - 36 - 48 - 60 - 72
+
+Bu değerler çoğu tasarım sisteminde karşına çıkar.
+
+---
+
+## Font Weight
+
+Yazının kalınlığı. Hiyerarşi ve vurgu için kullanılır.
+
+[TABLE]
+| Weight | Değer | Kullanım |
+|--------|-------|----------|
+| Thin | 100 | Dekoratif, dikkatli kullan |
+| Light | 300 | Büyük başlıklarda |
+| Regular | 400 | Body text |
+| Medium | 500 | Vurgu, subtitle |
+| Semibold | 600 | Başlıklar, butonlar |
+| Bold | 700 | Güçlü vurgu |
+| Black | 900 | Display, çok dikkatli kullan |
+[/TABLE]
+
+**Öneriler:**
+- Body text için Regular (400)
+- Başlıklar için Semibold (600) veya Bold (700)
+- Çok fazla weight karıştırma (2-3 yeterli)
+- İnce fontlar küçük boyutlarda okunmaz
+
+---
+
+## Line Height (Satır Aralığı)
+
+Satırlar arası mesafe. Okunabilirlik için kritik.
+
+**Genel kurallar:**
+
+[TABLE]
+| İçerik Tipi | Line Height | Açıklama |
+|-------------|-------------|----------|
+| Body text | 1.5 - 1.7 | Rahat okuma |
+| Başlıklar | 1.1 - 1.3 | Sıkı, kompakt |
+| Büyük display | 1.0 - 1.1 | Çok sıkı |
+| Uzun paragraf | 1.6 - 1.8 | Daha rahat |
+[/TABLE]
+
+[COMPARISON]
+❌ Kötü: Body text'te 1.0 line-height, satırlar birbirine yapışık
+✅ İyi: Body text'te 1.5-1.6 line-height, rahat okuma
+[/COMPARISON]
+
+**Hesaplama:**
+Line height = font size × oran
+16px × 1.5 = 24px satır yüksekliği
+
+---
+
+## Letter Spacing (Harf Aralığı)
+
+Harfler arası genel mesafe.
+
+**Genel kurallar:**
+
+- Body text: Genellikle 0 veya çok minimal (font'un default'u yeterli)
+- Büyük başlıklar: Negatif değer (-0.02em) daha sıkı görünüm
+- Küçük text, all caps: Pozitif değer (+0.05em - +0.1em) daha okunabilir
+- All caps metin: Her zaman letter-spacing artır
+
+[COMPARISON]
+❌ Kötü: ALL CAPS text normal letter-spacing, harfler yapışık
+✅ İyi: ALL CAPS text'te +0.05em letter-spacing, okunabilir
+[/COMPARISON]
+
+---
+
+## Satır Uzunluğu (Measure)
+
+Bir satırdaki karakter sayısı. Çok kısa veya çok uzun satırlar okumayı zorlaştırır.
+
+**İdeal aralık:** 45-75 karakter (boşluklar dahil)
+
+**Optimum:** 66 karakter
+
+**Pratik uygulama:**
+- max-width kullan
+- Paragraflar için 600-800px genişlik genellikle uygun
+- Mobilde tam genişlik olabilir ama padding ile dengele
+
+---
+
+## Tipografik Hiyerarşi
+
+Görsel önem sırası oluşturma. Kullanıcı nereye bakacağını bilmeli.
+
+### Hiyerarşi Araçları
+
+**1. Boyut**
+Büyük = önemli, küçük = secondary
+
+**2. Weight**
+Bold = vurgu, regular = normal
+
+**3. Renk**
+Koyu = önemli, açık = secondary
+
+**4. Konum**
+Üst = önce görülür
+
+**5. Boşluk**
+Etrafında boşluk olan element dikkat çeker
+
+### Örnek Hiyerarşi
+
+[TABLE]
+| Element | Boyut | Weight | Renk |
+|---------|-------|--------|------|
+| H1 | 48px | Bold | #111827 |
+| H2 | 36px | Semibold | #111827 |
+| H3 | 24px | Semibold | #111827 |
+| Body | 16px | Regular | #374151 |
+| Secondary | 14px | Regular | #6B7280 |
+| Caption | 12px | Regular | #9CA3AF |
+[/TABLE]
+
+---
+
+## Font Pairing (Font Eşleştirme)
+
+İki farklı font kullanacaksan uyum önemli.
+
+### Eşleştirme İlkeleri
+
+**1. Kontrast oluştur**
+Benzer fontlar yerine farklı karakterde fontlar. Serif başlık + Sans-serif body klasik kombinasyon.
+
+**2. X-height'ı eşleştir**
+İki fontun x-height'ı benzer olmalı, yan yana dengesiz durmasın.
+
+**3. Çok farklı kaçınma**
+İki display font birlikte kaotik görünür.
+
+### Güvenli Kombinasyonlar
+
+- Playfair Display (başlık) + Lato (body)
+- Poppins (başlık) + Inter (body)
+- Merriweather (başlık) + Open Sans (body)
+- Roboto Slab (başlık) + Roboto (body)
+
+[TIP]
+💡 Emin değilsen tek font ailesi kullan. Inter'in farklı weight'leri çoğu ihtiyacı karşılar.
+[/TIP]
+
+---
+
+## Web Font Performansı
+
+Fontlar sayfa yükleme süresini etkiler.
+
+### Optimizasyon İpuçları
+
+**1. Sadece kullanılan weight'leri yükle**
+Regular, Medium, Bold yeterli. 9 weight yükleme.
+
+**2. Subset kullan**
+Latin-extended veya sadece Türkçe karakterler.
+
+**3. Font-display: swap**
+Metin hemen görünsün, font yüklenince değişsin.
+
+**4. Preload kritik fontlar**
+İlk görünen fontları önceden yükle.
+
+**5. Sistem fontları düşün**
+-apple-system, BlinkMacSystemFont, 'Segoe UI' - sıfır yükleme süresi.
+
+### System Font Stack
+${'```'}
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+${'```'}
+
+Her cihaz kendi sistem fontunu kullanır. Hızlı, tutarlı.
+
+---
+
+## Responsive Tipografi
+
+Farklı ekran boyutlarında tipografi ayarı.
+
+### Yaklaşımlar
+
+**1. Breakpoint bazlı**
+Mobil, tablet, desktop için farklı boyutlar.
+
+**2. Fluid typography**
+Viewport genişliğine göre sürekli değişen boyut (clamp() ile).
+
+**3. Hibrit**
+Base boyut sabit, başlıklar fluid.
+
+### Örnek Fluid Typography
+${'```'}
+font-size: clamp(1rem, 0.5rem + 2vw, 2rem);
+${'```'}
+
+Minimum 1rem, maksimum 2rem, arada viewport'a göre ayarlanır.
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Çok küçük font
+
+[COMPARISON]
+❌ Kötü: Body text 12px, okunması zor
+✅ İyi: Body text minimum 16px
+[/COMPARISON]
+
+### 2. Yetersiz kontrast
+
+Açık gri metin beyaz üzerinde okunmaz.
+
+### 3. Çok fazla font
+
+5 farklı font = kaos. 1-2 font yeterli.
+
+### 4. Tutarsız scale
+
+Rastgele boyutlar: 13px, 17px, 22px. Sistem oluştur.
+
+### 5. Dar line-height
+
+Body text'te 1.0-1.2 satır aralığı okumayı zorlaştırır.
+
+### 6. Çok uzun satırlar
+
+100+ karakter satırlar göz yorar. Max-width kullan.
+
+### 7. All caps'te letter-spacing unutmak
+
+Büyük harfler birbirine yapışık görünür.
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**20 dakika**
+
+**Görev:** Bir blog sayfası için tipografi sistemi oluştur.
+
+**Gereksinimler:**
+- Başlıklar ve body text
+- Okunabilir, modern görünüm
+- Türkçe karakter desteği
+
+**Adımlar:**
+
+1. **Font seç (5 dk)**
+   - Google Fonts'tan bir font seç
+   - Weight'leri belirle (hangileri lazım?)
+
+2. **Type scale oluştur (5 dk)**
+   - H1, H2, H3, body, small için boyutlar
+   - 1.25 oran kullanabilirsin
+
+3. **Line height belirle (3 dk)**
+   - Başlıklar için
+   - Body text için
+
+4. **Hiyerarşi tablosu yap (5 dk)**
+
+| Element | Font Size | Weight | Line Height | Color |
+|---------|-----------|--------|-------------|-------|
+| H1 | ? | ? | ? | ? |
+| H2 | ? | ? | ? | ? |
+| Body | ? | ? | ? | ? |
+| Caption | ? | ? | ? | ? |
+
+5. **Kontrol (2 dk)**
+   - Body en az 16px mi?
+   - Line height 1.5+ mı?
+   - Kontrast yeterli mi?
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Tipografi UI'ın %95'i, bilinçli kararlar gerektirir
+- Sans-serif fontlar dijital UI için genellikle daha uygun
+- Body text minimum 16px, line-height 1.5-1.7
+- Type scale kullan, rastgele boyutlardan kaçın
+- 1-2 font ailesi yeterli, weight'lerle hiyerarşi kur
+- Satır uzunluğu 45-75 karakter ideal
+- All caps'te letter-spacing artır
+- Web font performansını düşün, sadece gereken weight'leri yükle
+- Responsive tipografi için fluid veya breakpoint yaklaşımı
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Renk Teorisi ve UI'da Renk Kullanımı](/kutuphane/renk-teorisi)
+
+**Sonraki:** Görsel Hiyerarşi Oluşturma *(yakında)*
+
+**İlgili konular:**
+- [Design System Nedir?](/kutuphane/design-system-nedir)
+- [Accessibility Temelleri](/kutuphane/accessibility-temelleri)
+- [UX Writing Temelleri](/kutuphane/ux-writing-temelleri)
+
+**İlgili Roadmap:** UI Designer Roadmap → Görsel Tasarım Temelleri
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Practical Typography - Matthew Butterick](https://practicaltypography.com/) (İngilizce, online kitap)
+- [Typewolf](https://www.typewolf.com/) (İngilizce, font önerileri)
+- [Google Fonts](https://fonts.google.com/) (Ücretsiz fontlar)
+- [Type Scale](https://type-scale.com/) (Araç, scale hesaplama)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
