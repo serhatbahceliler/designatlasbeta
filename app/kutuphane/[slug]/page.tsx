@@ -10385,6 +10385,441 @@ Derinleşmek istersen:
 - [Google's UX Writing Guidelines](https://developers.google.com/style) (İngilizce, stil rehberi)
 `,
   },
+  "gestalt-ilkeleri": {
+    id: "gestalt-ilkeleri",
+    title: "Gestalt İlkeleri ve Görsel Algı",
+    subtitle: "Tasarımın Psikolojik Temelleri",
+    titleEn: "Gestalt Principles",
+    slug: "gestalt-ilkeleri",
+    description: "Gestalt ilkeleri nedir? Yakınlık, benzerlik, süreklilik, kapalılık ve diğer görsel algı prensipleri. UI tasarımda Gestalt kullanımı.",
+    category: "temel-kavramlar",
+    readingTime: 12,
+    featured: false,
+    publishedAt: "2025-01-15",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Gestalt İlkeleri ve Görsel Algı: Tasarımın Psikolojik Temelleri
+
+**Seviye:** Başlangıç  
+**Kategori:** Temel Kavramlar  
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Neden bazı tasarımlar "düzgün" görünürken, bazıları kaotik hissettiriyor?
+
+Cevap beynimizde. İnsan beyni görsel bilgiyi rastgele işlemez; belirli kalıplar arar, gruplar oluşturur, anlamlı bütünler kurar. Bu doğal eğilimleri anlayan tasarımcı, kullanıcının zihninde düzen yaratabilir.
+
+**Gestalt ilkeleri**, 1920'lerde Alman psikologların keşfettiği görsel algı kuralları. "Gestalt" Almanca'da "biçim" veya "bütün" anlamına gelir. Temel fikir: "Bütün, parçaların toplamından fazladır."
+
+Bu yazıda Gestalt ilkelerini ve UI tasarımda nasıl kullanıldığını öğreneceksin.
+
+---
+
+## Gestalt Nedir?
+
+[CALLOUT]
+**Gestalt:**
+İnsan beyninin görsel bilgiyi nasıl organize ettiğini ve algıladığını açıklayan psikolojik prensipler bütünü. Beyin, ayrı parçaları anlamlı bütünler halinde algılamaya çalışır.
+[/CALLOUT]
+
+**Temel önerme:**
+Beyin, görsel ögeleri:
+- Gruplayarak
+- Basitleştirerek
+- Tamamlayarak
+- Düzenleyerek
+
+...algılar. Bu doğal eğilimleri kullanarak daha etkili tasarımlar yapabiliriz.
+
+---
+
+## Temel Gestalt İlkeleri
+
+### 1. Yakınlık (Proximity)
+
+**İlke:** Birbirine yakın olan elementler, bir grup olarak algılanır.
+
+Mesafe, ilişki sinyali verir. Yakın = ilişkili, uzak = ayrı.
+
+**UI'da kullanım:**
+
+- Form alanı ile label'ı yakın tut
+- İlişkili butonları grupla
+- Kartlar arası boşluk ile ayırım yap
+- Section'lar arası daha fazla boşluk
+
+[COMPARISON]
+❌ Kötü: Label ile input arası çok uzak, hangi label hangi input'a ait belirsiz
+✅ İyi: Label hemen input'un üstünde, ilişki net
+[/COMPARISON]
+
+**Örnek:**
+[Label A]     [Label B]     ← Uzak, ayrı gruplar
+[Input A]     [Input B]
+vs.
+[Label A]                    ← Yakın, aynı grup
+[Input A]
+[Label B]                    ← Yakın, aynı grup
+[Input B]
+
+### 2. Benzerlik (Similarity)
+
+**İlke:** Görsel olarak benzer elementler, bir grup olarak algılanır.
+
+Benzerlik faktörleri: renk, boyut, şekil, yön, doku.
+
+**UI'da kullanım:**
+
+- Aynı işlev = aynı stil (tüm primary butonlar aynı)
+- Farklı işlev = farklı stil (primary vs secondary)
+- Kategori renkleri
+- İkon stilleri tutarlılığı
+
+[COMPARISON]
+❌ Kötü: Her buton farklı renk, hangisi ne belirsiz
+✅ İyi: Primary hep mavi, secondary hep gri, destructive hep kırmızı
+[/COMPARISON]
+
+**Örnek:**
+- Tüm "Sil" butonları kırmızı
+- Tüm "Kaydet" butonları mavi
+- Kullanıcı pattern'i öğrenir, hızlanır
+
+### 3. Süreklilik (Continuity)
+
+**İlke:** Göz, kesintisiz çizgileri ve eğrileri takip etmeyi tercih eder.
+
+Düzgün akış, doğal yol izleme.
+
+**UI'da kullanım:**
+
+- Progress step'leri çizgiyle bağla
+- Timeline tasarımı
+- Scroll yönü
+- Görsel hiyerarşi akışı
+
+**Örnek:**
+○────○────○────●────○
+1    2    3    4    5
+Step 1 → Step 2 → Step 3 → Step 4
+
+Gözümüz doğal olarak çizgiyi takip eder.
+
+### 4. Kapalılık (Closure)
+
+**İlke:** Beyin, eksik şekilleri tamamlama eğilimindedir.
+
+Tam olmayan şekilleri "kapatır", bütün olarak görür.
+
+**UI'da kullanım:**
+
+- Kartlar (kenarlar tam çizilmese de kart olarak algılanır)
+- İkonlar (basitleştirilmiş, eksik detay)
+- Carousel'de kesilmiş kartlar (daha fazla içerik var sinyali)
+- Logo tasarımı
+
+**Örnek:**
+Carousel'de sağda yarım görünen kart → "scroll edersem daha var" mesajı.
+
+### 5. Figür-Zemin (Figure-Ground)
+
+**İlke:** Beyin, görsel alanı figür (ön plan) ve zemin (arka plan) olarak ayırır.
+
+Bir şey öne çıkar, geri kalan arka plan olur.
+
+**UI'da kullanım:**
+
+- Modal/overlay (karartılmış arka plan)
+- Dropdown menü (zemin üzerinde figür)
+- Focus state (diğerlerini soluklaştırma)
+- Kartlar ve gölgeler
+
+[COMPARISON]
+❌ Kötü: Modal açıldı ama arka plan aynı parlaklıkta, odak belirsiz
+✅ İyi: Modal açıldı, arka plan karartıldı, odak nette
+[/COMPARISON]
+
+### 6. Ortak Bölge (Common Region)
+
+**İlke:** Aynı sınırlı alan içindeki elementler, bir grup olarak algılanır.
+
+Çerçeve, kutu, arka plan rengi = gruplama aracı.
+
+**UI'da kullanım:**
+
+- Kart tasarımı
+- Form bölümleri
+- Well/container
+- Grouped settings
+
+**Örnek:**
+${'```'}
+┌─────────────────────┐
+│  Kişisel Bilgiler   │
+│  [Ad]  [Soyad]      │
+│  [Email]            │
+└─────────────────────┘
+┌─────────────────────┐
+│  Adres Bilgileri    │
+│  [Şehir]  [İlçe]    │
+│  [Adres]            │
+└─────────────────────┘
+${'```'}
+
+### 7. Ortak Kader (Common Fate)
+
+**İlke:** Aynı yönde hareket eden elementler, bir grup olarak algılanır.
+
+Hareket birliği = ilişki.
+
+**UI'da kullanım:**
+
+- Paralel animasyonlar
+- Slider'da birlikte kayan içerik
+- Accordion açılışı
+- Drag-and-drop sırasında grup hareketi
+
+**Örnek:**
+Bir kartı sürüklerken, içindeki tüm elementler birlikte hareket eder → tek birim algısı.
+
+### 8. Bağlantılılık (Connectedness / Uniform Connectedness)
+
+**İlke:** Fiziksel olarak bağlı elementler, bir grup olarak algılanır.
+
+Çizgi, ok, bağlantı = ilişki.
+
+**UI'da kullanım:**
+
+- Flowchart bağlantıları
+- Step indicator çizgileri
+- Breadcrumb ayırıcıları
+- Org chart
+
+**Örnek:**
+[Başla] ───→ [İşlem] ───→ [Bitir]
+
+---
+
+## Ek İlkeler
+
+### Simetri (Symmetry)
+
+Simetrik şekiller daha düzenli ve dengeli algılanır.
+
+**UI'da:** Ortalanmış modal, dengeli layout.
+
+### Basitlik / Prägnanz (Simplicity)
+
+Beyin, en basit yorumu tercih eder.
+
+**UI'da:** Minimal tasarım, gereksiz element çıkarma.
+
+### Ortak Deneyim (Past Experience)
+
+Önceki deneyimler algıyı etkiler.
+
+**UI'da:** Alışılmış pattern'ler kullan (hamburger menu = menu demek).
+
+---
+
+## UI Tasarımda Gestalt Uygulamaları
+
+### Form Tasarımı
+
+**Yakınlık:**
+- Label ile input yakın (8px)
+- Input grupları arası uzak (24-32px)
+
+**Ortak bölge:**
+- İlişkili alanları container'a al
+
+**Benzerlik:**
+- Tüm input'lar aynı stil
+- Required göstergesi tutarlı
+
+### Kart Tasarımı
+
+**Kapalılık:**
+- Border veya shadow ile sınır
+
+**Ortak bölge:**
+- İçerik tek birim olarak algılanır
+
+**Figür-zemin:**
+- Gölge ile derinlik
+
+### Navigasyon
+
+**Yakınlık:**
+- Alt menü öğeleri ana öğeye yakın
+
+**Benzerlik:**
+- Aynı seviye linkler aynı stil
+
+**Süreklilik:**
+- Breadcrumb ok/çizgi ile akış
+
+### Modal/Overlay
+
+**Figür-zemin:**
+- Arka plan karartma
+- Modal öne çıkıyor
+
+**Ortak bölge:**
+- Modal içeriği tek birim
+
+### Dashboard
+
+**Yakınlık:**
+- İlişkili metrikler yakın
+
+**Ortak bölge:**
+- Widget kartları
+
+**Benzerlik:**
+- Aynı tip grafik aynı stil
+
+---
+
+## Gestalt İhlalleri ve Sonuçları
+
+### Yakınlık İhlali
+
+**Problem:** Label ile input arası çok uzak veya eşit mesafe
+**Sonuç:** Kullanıcı yanlış label'ı okur, hata yapar
+
+### Benzerlik İhlali
+
+**Problem:** Farklı işlevli butonlar aynı görünüyor
+**Sonuç:** Kullanıcı yanlış butona tıklar
+
+### Figür-Zemin İhlali
+
+**Problem:** Modal açıldı ama arka plan hâlâ aktif görünüyor
+**Sonuç:** Kullanıcı nereye odaklanacağını bilemiyor
+
+### Kapalılık İhlali
+
+**Problem:** Kart sınırları belirsiz
+**Sonuç:** İçeriklerin ilişkisi anlaşılmıyor
+
+---
+
+[INFO]
+100+ yıl
+Gestalt ilkeleri 1920'lerden beri geçerli
+[/INFO]
+
+---
+
+## Pratik Kontrol Listesi
+
+Form tasarlarken:
+
+[CHECKLIST]
+✓ Label, input'a input'lar arasındaki mesafeden daha yakın mı?
+✓ İlişkili alanlar gruplanmış mı?
+✓ Aynı tip input'lar aynı stilde mi?
+✓ Bölümler görsel olarak ayrılmış mı?
+[/CHECKLIST]
+
+Genel UI için:
+
+[CHECKLIST]
+✓ İlişkili elementler yakın mı?
+✓ Aynı işlev = aynı görünüm mü?
+✓ Modal/dropdown için figür-zemin ayrımı net mi?
+✓ Progress göstergeleri süreklilik sağlıyor mu?
+✓ Görsel hiyerarşi net mi?
+[/CHECKLIST]
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**20 dakika**
+
+**Görev:** Bir web sayfasını Gestalt ilkeleri açısından analiz et.
+
+**Adımlar:**
+
+1. **Sayfa seç** (2 dk)
+   - Sık kullandığın bir site (e-ticaret, SaaS, haber)
+
+2. **Her ilke için örnek bul** (15 dk)
+   
+   Şu soruları cevapla:
+   
+   **Yakınlık:**
+   - İlişkili elementler yakın mı?
+   - Gruplamada mesafe kullanılmış mı?
+   
+   **Benzerlik:**
+   - Aynı işlevli elementler aynı stilde mi?
+   - Renk/boyut tutarlı mı?
+   
+   **Kapalılık:**
+   - Kartlar nasıl tanımlanmış?
+   - Sınırlar net mi?
+   
+   **Figür-zemin:**
+   - Odak noktası net mi?
+   - Modal/dropdown varsa arka plan nasıl?
+   
+   **Süreklilik:**
+   - Göz akışı doğal mı?
+   - Progress indicator var mı?
+
+3. **İyileştirme öner** (3 dk)
+   - 1-2 Gestalt ihlali bulduysan, nasıl düzeltirdin?
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Gestalt = beynin görsel bilgiyi organize etme prensipleri
+- "Bütün, parçaların toplamından fazladır"
+- Temel ilkeler: yakınlık, benzerlik, süreklilik, kapalılık, figür-zemin
+- Ek ilkeler: ortak bölge, ortak kader, bağlantılılık
+- Yakınlık: birbirine yakın = ilişkili
+- Benzerlik: aynı görünüm = aynı işlev
+- Kapalılık: beyin eksik şekilleri tamamlar
+- Figür-zemin: ön plan ve arka plan ayrımı
+- UI'da: form gruplama, kart tasarımı, modal, navigasyon
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [UX Writing Temelleri](/kutuphane/ux-writing-temelleri)
+
+**Sonraki:** Renk Teorisi ve UI'da Renk Kullanımı *(yakında)*
+
+**İlgili konular:**
+- [UI Nedir?](/kutuphane/ui-nedir)
+- [Design System Nedir?](/kutuphane/design-system-nedir)
+- Görsel Hiyerarşi Oluşturma *(yakında)*
+
+**İlgili Roadmap:** UI Designer Roadmap → Tasarım Temelleri
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Gestalt Principles - NNGroup](https://www.nngroup.com/articles/gestalt-proximity/) (İngilizce, seri halinde)
+- [Laws of UX - Jon Yablonski](https://lawsofux.com/) (İngilizce, interaktif site)
+- [Universal Principles of Design](https://www.amazon.com/Universal-Principles-of-Design-Revised-Updated/dp/1592535879) (Kitap, 125 tasarım prensibi)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
