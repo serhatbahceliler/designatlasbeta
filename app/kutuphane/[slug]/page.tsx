@@ -14700,6 +14700,519 @@ Derinleşmek istersen:
 - [How to Talk to Stakeholders - NNGroup](https://www.nngroup.com/articles/talking-to-stakeholders/) (İngilizce)
 `,
   },
+  "competitive-analysis": {
+    id: "competitive-analysis",
+    title: "Competitive Analysis (Rakip Analizi)",
+    subtitle: "Rakiplerden Öğrenme ve Farklılaşma",
+    titleEn: "Competitive Analysis",
+    slug: "competitive-analysis",
+    description: "Competitive analysis nedir? Rakip belirleme, UX benchmarking, feature karşılaştırma ve fırsat tespiti. Rakip analizi yapma rehberi.",
+    category: "ux-research",
+    readingTime: 13,
+    featured: false,
+    publishedAt: "2025-01-17",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Competitive Analysis (Rakip Analizi): Rakiplerden Öğrenme ve Farklılaşma
+
+**Seviye:** Başlangıç - Orta
+**Kategori:** UX Research
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Tekerleği yeniden icat etmeye gerek yok.
+
+Çözmek istediğin problemi başkaları da çözüyor. Rakiplerin neyi iyi yapıyor, neyi kötü yapıyor? Hangi kalıplar işe yarıyor, hangileri kullanıcıları frustrasyona uğratıyor?
+
+**Competitive analysis**, rakip ürünleri sistematik olarak inceleyerek bu soruları cevaplayabileceğin bir araştırma yöntemi. Kopyalamak için değil, öğrenmek ve farklılaşmak için.
+
+Bu yazıda rakip analizinin nasıl yapılacağını, nelere bakılacağını ve bulguların nasıl kullanılacağını öğreneceksin.
+
+---
+
+## Competitive Analysis Nedir?
+
+[CALLOUT]
+**Competitive Analysis:**
+Rakip ürünlerin güçlü ve zayıf yönlerini, stratejilerini, feature'larını ve kullanıcı deneyimlerini sistematik olarak inceleme süreci. Amaç: pazar anlayışı geliştirmek, fırsatları belirlemek ve farklılaşma stratejisi oluşturmak.
+[/CALLOUT]
+
+**UX odaklı competitive analysis şunları inceler:**
+- Kullanıcı akışları ve deneyim
+- Feature set ve önceliklendirme
+- Tasarım kalıpları ve UI çözümleri
+- Onboarding ve ilk kullanım deneyimi
+- Hata yönetimi ve edge case'ler
+- Performans ve erişilebilirlik
+
+---
+
+## Neden Competitive Analysis?
+
+### 1. Pazar anlayışı
+
+Mevcut çözümleri ve standartları bil.
+
+### 2. Best practice keşfi
+
+Neyin işe yaradığını gör, kendi tasarımına uygula.
+
+### 3. Fırsat tespiti
+
+Rakiplerin zayıf olduğu noktalar = senin fırsatın.
+
+### 4. Farklılaşma
+
+Aynı şeyi yapmak yerine, farklı/daha iyi olmak için strateji.
+
+### 5. Stakeholder ikna
+
+"Rakip X bunu yapıyor" güçlü bir argüman.
+
+### 6. Benchmark
+
+Kendi ürününü karşılaştıracağın referans nokta.
+
+[INFO]
+**4-8**
+Etkili analiz için ideal rakip sayısı
+[/INFO]
+
+---
+
+## Rakip Türleri
+
+### Doğrudan Rakipler (Direct)
+
+Aynı problemi benzer çözümle adresliyor.
+
+**Örnek:** Spotify için Apple Music, YouTube Music, Deezer
+
+**Analiz önceliği:** Yüksek
+
+### Dolaylı Rakipler (Indirect)
+
+Aynı kullanıcı ihtiyacını farklı yolla karşılıyor.
+
+**Örnek:** Spotify için radyo, podcast platformları, sosyal medya
+
+**Analiz önceliği:** Orta
+
+### Aspirasyonel Markalar
+
+Farklı sektörde ama ilham alınabilecek UX kalitesi.
+
+**Örnek:** Fintech için Airbnb'nin onboarding'i, Nike'ın kişiselleştirmesi
+
+**Analiz önceliği:** Düşük ama değerli
+
+### Yeni Girenler (Emerging)
+
+Pazara yeni giren, disrupt edebilecek oyuncular.
+
+**Örnek:** Startup'lar, büyük şirketlerin yeni ürünleri
+
+**Analiz önceliği:** İzle, trend göstergesi
+
+---
+
+## Rakip Belirleme
+
+### Nereden Bulunur?
+
+**1. Arama motorları**
+"[ürün kategorisi] alternatives"
+"best [ürün tipi] apps"
+
+**2. App Store / Play Store**
+Kategori listeleri, "benzer uygulamalar"
+
+**3. Review siteleri**
+G2, Capterra, Trustpilot, Product Hunt
+
+**4. Sosyal medya**
+Reddit, Twitter, LinkedIn tartışmaları
+
+**5. Kullanıcı araştırması**
+"Daha önce ne kullandınız?" sorusu
+
+**6. Stakeholder görüşü**
+Satış ve müşteri destek ekibi rakipleri bilir
+
+### Kaç Rakip?
+
+**Önerilen:** 4-8 rakip
+
+- 2-3 doğrudan rakip
+- 2-3 dolaylı rakip
+- 1-2 aspirasyonel
+
+Çok fazla = odak kaybı, çok az = eksik perspektif
+
+---
+
+## Analiz Boyutları
+
+### 1. Genel Bilgiler
+
+- Şirket/ürün adı
+- Kuruluş tarihi
+- Hedef kitle
+- Fiyatlandırma modeli
+- Platform (web, iOS, Android)
+- Pazar pozisyonu
+
+### 2. Value Proposition
+
+- Ana değer önerisi nedir?
+- Hangi problemi çözüyor?
+- Nasıl farklılaşıyor?
+
+### 3. Feature Analizi
+
+[TABLE]
+| Feature | Rakip A | Rakip B | Rakip C | Bizim Ürün |
+|---------|---------|---------|---------|------------|
+| Feature 1 | ✓ | ✓ | ✗ | ? |
+| Feature 2 | ✓ | ✗ | ✓ | ? |
+| Feature 3 | ✗ | ✓ | ✓ | ? |
+[/TABLE]
+
+Sadece var/yok değil, kalitesini de not et.
+
+### 4. UX Analizi
+
+**Onboarding:**
+- İlk kullanım deneyimi
+- Kayıt süreci
+- Değer gösterme hızı
+
+**Navigasyon:**
+- Bilgi mimarisi
+- Menü yapısı
+- Arama deneyimi
+
+**Temel akışlar:**
+- Ana task'ların tamamlanması
+- Adım sayısı, süre
+- Friction noktaları
+
+**Görsel tasarım:**
+- UI kalitesi
+- Tutarlılık
+- Marka uyumu
+
+**Mikro-etkileşimler:**
+- Feedback
+- Animasyonlar
+- Hata yönetimi
+
+### 5. Güçlü ve Zayıf Yönler
+
+Her rakip için:
+- 3-5 güçlü yön
+- 3-5 zayıf yön/fırsat
+
+---
+
+## Analiz Yöntemleri
+
+### Heuristic Evaluation
+
+Rakip ürünü Nielsen'ın 10 sezgisel ilkesine göre değerlendir.
+
+Her ilke için 1-5 puan ver, notlar al.
+
+### Task-Based Analysis
+
+Belirli görevleri rakip ürünlerde tamamla:
+- Kayıt ol
+- Ana görevi tamamla
+- Ayarları değiştir
+- Destek al
+
+Her task için not et:
+- Adım sayısı
+- Süre
+- Zorluklar
+- İyi çözümler
+
+### Screenshots ve Annotasyon
+
+Ekran görüntüleri al, notlar ekle.
+
+**Kategori bazlı organizasyon:**
+- Onboarding ekranları
+- Ana sayfa
+- Profil/ayarlar
+- Checkout/conversion
+- Hata ekranları
+
+### User Review Mining
+
+App Store, Play Store, G2 yorumlarını incele.
+
+**Ara:**
+- Sık şikayet edilen noktalar
+- Övülen özellikler
+- İstenen feature'lar
+- Rakiplerle karşılaştırma
+
+[TIP]
+💡 1-2 yıldız yorumları özellikle değerli. Kullanıcı pain point'lerini doğrudan söylüyor.
+[/TIP]
+
+---
+
+## Analiz Şablonu
+
+### Rakip Profil Kartı
+${'```'}
+RAKIP ADI: _______________
+
+Genel Bilgiler:
+- Website: 
+- Platform: 
+- Hedef kitle: 
+- Fiyatlandırma: 
+
+Value Proposition:
+- Ana mesaj: 
+- Farklılaşma: 
+
+UX Değerlendirmesi (1-5):
+- Onboarding: _/5
+- Navigasyon: _/5
+- Görsel tasarım: _/5
+- Performans: _/5
+- Genel deneyim: _/5
+
+Güçlü Yönler:
+1.
+2.
+3.
+
+Zayıf Yönler:
+1.
+2.
+3.
+
+Öğrenilenler:
+-
+-
+
+Fırsatlar:
+-
+-
+${'```'}
+
+### Feature Matrix
+
+Tüm rakipleri tek tabloda karşılaştır:
+
+[TABLE]
+| Kriter | Rakip A | Rakip B | Rakip C | Sektör Avg |
+|--------|---------|---------|---------|------------|
+| Onboarding süresi | 3 dk | 5 dk | 2 dk | 3.3 dk |
+| Mobile app | ✓ | ✓ | ✗ | - |
+| Free trial | 14 gün | 7 gün | 30 gün | - |
+| Türkçe dil | ✗ | ✓ | ✗ | - |
+[/TABLE]
+
+---
+
+## Bulguları Kullanma
+
+### 1. Pattern Tespiti
+
+Çoğu rakipte tekrar eden çözümler = endüstri standardı.
+
+Kullanıcılar bu pattern'lere alışık, sebebsiz bozmak riskli.
+
+### 2. Gap Analizi
+
+Hiçbir rakibin iyi yapmadığı alan = fırsat.
+
+"Tüm rakiplerin onboarding'i uzun ve karmaşık" = kısa onboarding ile farklılaş.
+
+### 3. Best Practice Adoption
+
+Rakipte gördüğün iyi çözümü adapte et (kopyala değil).
+
+Neden işe yarıyor, kendi bağlamına nasıl uyarlar?
+
+### 4. Farklılaşma Stratejisi
+
+Herkes X yapıyorsa:
+- X'i çok daha iyi yap
+- Y ile farklılaş
+- X'i tamamen atlayıp Z'ye odaklan
+
+### 5. Stakeholder Sunumu
+
+Bulgulardan sunum hazırla:
+- Executive summary
+- Key insight'lar (3-5)
+- Fırsatlar ve öneriler
+- Detaylı appendix
+
+---
+
+## Zamanlama
+
+### Ne Zaman Yapılır?
+
+**1. Proje başlangıcı**
+Discovery aşamasında, yön belirlemeden önce.
+
+**2. Yeni feature tasarımı**
+"Başkaları bu problemi nasıl çözmüş?"
+
+**3. Redesign öncesi**
+Mevcut durumu ve alternatifleri anlamak için.
+
+**4. Düzenli güncelleme**
+6-12 ayda bir, pazar değişiyor.
+
+### Ne Kadar Sürer?
+
+- Hızlı scan: 1-2 gün (4-5 rakip, yüzeysel)
+- Orta derinlik: 1 hafta (6-8 rakip, detaylı)
+- Kapsamlı: 2-3 hafta (çok rakip, derin analiz)
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Kopyalamak
+
+[COMPARISON]
+❌ Kötü: "Rakip böyle yapmış, biz de yapalım"
+✅ İyi: "Rakip böyle yapmış, neden işe yarıyor? Bize uyar mı?"
+[/COMPARISON]
+
+### 2. Sadece feature saymak
+
+Feature listesi yetmez. Deneyim kalitesi, execution önemli.
+
+### 3. Tek seferlik yapmak
+
+Pazar değişiyor. Düzenli güncelle.
+
+### 4. Kullanıcıyı unutmak
+
+Rakip analizi kullanıcı araştırmasının yerini tutmaz. İkisi de gerekli.
+
+### 5. Çok fazla rakip
+
+10+ rakip analizi odağı dağıtır. 4-8 yeterli.
+
+### 6. Yüzeysel inceleme
+
+Sadece homepage'e bakmak yetmez. Kayıt ol, kullan, satın almayı dene.
+
+### 7. Bias
+
+"Bizimki daha iyi" önyargısı. Objektif ol.
+
+---
+
+## Araçlar
+
+[TABLE]
+| Araç | Kullanım |
+|------|----------|
+| **Notion/Airtable** | Analiz dokümantasyonu, database |
+| **Figma/FigJam** | Screenshot organizasyonu, mapping |
+| **SimilarWeb** | Traffic ve engagement verileri |
+| **App Annie** | Mobil app verileri |
+| **BuiltWith** | Teknoloji stack tespiti |
+| **Wayback Machine** | Tarihsel değişimleri görme |
+| **UserTesting** | Rakip ürünlerde test yaptırma |
+[/TABLE]
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**30 dakika**
+
+**Görev:** Bir ürün kategorisi için mini rakip analizi yap.
+
+**Kategori seç:** (örnek: not alma uygulaması, fitness app, e-ticaret)
+
+**Adımlar:**
+
+1. **3 doğrudan rakip belirle (5 dk)**
+   - İsim, website, platform
+   
+2. **Her rakipte kayıt ol ve temel akışı dene (15 dk)**
+   Her biri için not et:
+   - Onboarding deneyimi (1-5 puan)
+   - Ana task'ı tamamlama kolaylığı
+   - 1 güçlü yön
+   - 1 zayıf yön
+
+3. **Feature matrix oluştur (5 dk)**
+   En az 5 feature karşılaştır
+
+4. **3 ana insight çıkar (5 dk)**
+   - Pattern/standart olan şey
+   - Fırsat (gap)
+   - Best practice
+
+**Çıktı formatı:**
+- 3 rakip profil özeti
+- 1 feature matrix
+- 3 insight bullet point
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Competitive analysis = rakipleri sistematik inceleme
+- Amaç: kopyalamak değil, öğrenmek ve farklılaşmak
+- Rakip türleri: doğrudan, dolaylı, aspirasyonel
+- 4-8 rakip ideal, fazlası odağı dağıtır
+- İnceleme boyutları: feature, UX, onboarding, güçlü/zayıf yönler
+- Yöntemler: heuristic evaluation, task-based analysis, review mining
+- Bulgulardan: pattern, gap, best practice, farklılaşma stratejisi
+- Düzenli güncelle, pazar değişiyor
+- Kullanıcı araştırmasının yerini tutmaz, tamamlayıcı
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Stakeholder Yönetimi](/kutuphane/stakeholder-yonetimi)
+
+**Sonraki:** Card Sorting ve Tree Testing *(yakında)*
+
+**İlgili konular:**
+- [Heuristic Evaluation](/kutuphane/heuristic-evaluation)
+- [User Journey Map](/kutuphane/user-journey-map)
+- [Kullanıcı Görüşmesi](/kutuphane/kullanici-gorusmesi)
+
+**İlgili Roadmap:** UX Designer Roadmap → Research Methods
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Competitive Analysis - NNGroup](https://www.nngroup.com/articles/competitive-usability-evaluations/) (İngilizce, 10 dk)
+- [How to Conduct a Competitive Analysis - Interaction Design Foundation](https://www.interaction-design.org/literature/article/how-to-conduct-a-competitive-analysis) (İngilizce)
+- [UX Competitor Analysis - Jaime Levy](https://www.uxstrategy.com/) (Kitap: UX Strategy)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
