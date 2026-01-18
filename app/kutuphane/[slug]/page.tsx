@@ -11766,6 +11766,419 @@ Derinleşmek istersen:
 - [Type Scale](https://type-scale.com/) (Araç, scale hesaplama)
 `,
   },
+  "gorsel-hiyerarsi": {
+    id: "gorsel-hiyerarsi",
+    title: "Görsel Hiyerarşi Oluşturma",
+    subtitle: "Kullanıcının Gözünü Yönlendirme Sanatı",
+    titleEn: "Visual Hierarchy",
+    slug: "gorsel-hiyerarsi",
+    description: "Görsel hiyerarşi nedir? Boyut, renk, kontrast, boşluk ve konum ile dikkat yönetimi. UI'da etkili hiyerarşi oluşturma rehberi.",
+    category: "ux-design",
+    readingTime: 12,
+    featured: false,
+    publishedAt: "2025-01-16",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Görsel Hiyerarşi Oluşturma: Kullanıcının Gözünü Yönlendirme Sanatı
+
+**Seviye:** Başlangıç - Orta
+**Kategori:** UX Design
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Bir sayfaya baktığında gözün ilk nereye gidiyor?
+
+Bu tesadüf değil. İyi tasarımcılar, kullanıcının dikkatini bilinçli olarak yönlendirir. En önemli şey önce görülür, sonra ikinci önemli, sonra üçüncü. Bu sıralama net olmazsa sayfa kaotik görünür ve kullanıcı kaybolur.
+
+**Görsel hiyerarşi**, tasarım elementlerini önem sırasına göre düzenleme sanatı. Her element eşit dikkat çekerse, hiçbiri dikkat çekmez. Hiyerarşi olmadan tasarım, bağıran bir kalabalık gibidir.
+
+Bu yazıda görsel hiyerarşinin ne olduğunu, hangi araçlarla oluşturulduğunu ve nasıl uygulanacağını öğreneceksin.
+
+---
+
+## Görsel Hiyerarşi Nedir?
+
+[CALLOUT]
+**Görsel Hiyerarşi:**
+Tasarım elementlerini görsel önem sırasına göre düzenleme ve kullanıcının dikkatini kontrollü şekilde yönlendirme prensibi. Hangi elementin önce, hangisinin sonra görüleceğini belirler.
+[/CALLOUT]
+
+**Temel soru:** Kullanıcı bu sayfaya baktığında sırasıyla neyi görmeli?
+
+1. En önemli mesaj/aksiyon
+2. Destekleyici bilgi
+3. Detaylar
+4. Secondary içerik
+
+Bu sıralama net olmalı ve görsel araçlarla desteklenmeli.
+
+---
+
+## Neden Görsel Hiyerarşi Önemli?
+
+### 1. Yönlendirme
+
+Kullanıcı nereye bakacağını bilir. Kaybolmaz, kafası karışmaz.
+
+### 2. Taranabilirlik
+
+Çoğu kullanıcı okumaz, tarar. Hiyerarşi, tarama sırasında önemli noktaları yakalamasını sağlar.
+
+### 3. Dönüşüm
+
+CTA net bir şekilde öne çıkarsa, tıklanma olasılığı artar.
+
+### 4. Estetik
+
+Dengeli hiyerarşi, profesyonel ve düzenli görünüm sağlar.
+
+### 5. Erişilebilirlik
+
+Screen reader kullanıcıları için de mantıksal sıralama önemli.
+
+[INFO]
+**2.6 saniye**
+Kullanıcının bir sayfada ilk izlenimi oluşturma süresi
+[/INFO]
+
+---
+
+## Hiyerarşi Araçları
+
+### 1. Boyut (Size)
+
+En güçlü araç. Büyük = önemli, küçük = daha az önemli.
+
+**Uygulama:**
+- Başlıklar body text'ten büyük
+- Primary CTA secondary'den büyük
+- Hero başlığı diğer başlıklardan büyük
+
+[COMPARISON]
+❌ Kötü: Tüm metinler aynı boyutta, neyin önemli olduğu belirsiz
+✅ İyi: Başlık 48px, alt başlık 24px, body 16px - net hiyerarşi
+[/COMPARISON]
+
+### 2. Renk ve Kontrast (Color & Contrast)
+
+Dikkat çekici renkler öne çıkar. Yüksek kontrast dikkat çeker.
+
+**Uygulama:**
+- Primary CTA dikkat çekici renk
+- Önemli bilgi koyu metin
+- Secondary bilgi açık gri metin
+- Arka plandan ayrışan vurgular
+
+**Kontrast türleri:**
+- Renk kontrastı (mavi buton beyaz arka planda)
+- Ton kontrastı (koyu metin açık zemin)
+- Doygunluk kontrastı (canlı renk soluk ortamda)
+
+### 3. Boşluk (Whitespace)
+
+Etrafında boşluk olan element daha önemli görünür.
+
+**Uygulama:**
+- Başlıkların üstünde/altında fazla boşluk
+- CTA etrafında nefes alanı
+- Bölümler arası yeterli margin
+- Kalabalık değil, ferah tasarım
+
+[TIP]
+💡 Boşluk "boş alan" değil, tasarımın parçası. Boşluk eklemekten korkma.
+[/TIP]
+
+### 4. Konum (Position)
+
+Üst ve sol taraf önce görülür (soldan sağa okuyan dillerde).
+
+**Uygulama:**
+- En önemli içerik üstte
+- Logo sol üstte
+- Primary CTA göz hattında
+- Footer'da secondary bilgiler
+
+### 5. Ağırlık (Weight)
+
+Kalın metin ince metinden önce dikkat çeker.
+
+**Uygulama:**
+- Başlıklar bold
+- Body text regular
+- Vurgular semibold
+- Caption/secondary light veya regular
+
+### 6. Yoğunluk (Density)
+
+Sıkışık alanlar dikkat çeker ama okunabilirlik düşer. Denge önemli.
+
+**Uygulama:**
+- Önemli bilgi izole, etrafında boşluk
+- Liste/detay bilgisi daha yoğun olabilir
+
+### 7. Görsel Elementler
+
+İnsan yüzleri, fotoğraflar, ikonlar dikkat çeker.
+
+**Uygulama:**
+- Hero section'da görsel
+- Özellik listelerinde ikonlar
+- Testimonial'da yüz fotoğrafı
+- Görsel yönlendirme (ok, bakış yönü)
+
+---
+
+## Göz Tarama Kalıpları
+
+Kullanıcılar sayfaları belirli kalıplarda tarar.
+
+### F-Pattern
+
+Metin ağırlıklı sayfalarda (blog, haber, arama sonuçları).
+
+**Nasıl çalışır:**
+1. Üstte yatay tarama
+2. Biraz aşağı inip tekrar yatay
+3. Sol tarafta dikey tarama
+
+**UI uygulaması:**
+- Önemli bilgi sol üstte
+- Başlıklar sola yaslanmış
+- Sol tarafta anahtar kelimeler
+
+### Z-Pattern
+
+Az içerikli, görsel ağırlıklı sayfalarda (landing page, hero section).
+
+**Nasıl çalışır:**
+1. Sol üstten başla (logo)
+2. Sağa doğru yatay (navigation)
+3. Çapraz aşağı sola
+4. Sağa doğru yatay (CTA)
+
+**UI uygulaması:**
+- Logo sol üst
+- Navigation sağ üst
+- İçerik ortada
+- CTA sağ alt veya ortada
+
+### Gutenberg Diyagramı
+
+Sayfa dört bölgeye ayrılır:
+
+- Sol üst: Primary Optical Area (ilk bakış)
+- Sağ üst: Strong Fallow Area
+- Sol alt: Weak Fallow Area (en az dikkat)
+- Sağ alt: Terminal Area (son bakış, CTA için ideal)
+
+---
+
+## Hiyerarşi Seviyeleri
+
+Tipik bir sayfa için 3-4 hiyerarşi seviyesi yeterli.
+
+[TABLE]
+| Seviye | Ne İçerir | Görsel Özellikler |
+|--------|-----------|-------------------|
+| **1. Primary** | Ana başlık, hero mesajı | En büyük, en dikkat çekici |
+| **2. Secondary** | Alt başlıklar, önemli bilgi | Orta büyüklük, belirgin |
+| **3. Tertiary** | Body text, açıklamalar | Normal boyut, okunabilir |
+| **4. Quaternary** | Caption, metadata, footer | Küçük, subtle |
+[/TABLE]
+
+**Her seviye için:**
+- Boyut farkı net olmalı (en az 1.25x oran)
+- Renk/kontrast farkı görünür olmalı
+- Weight farkı algılanabilir olmalı
+
+---
+
+## UI Elementlerinde Hiyerarşi
+
+### Butonlar
+
+[TABLE]
+| Tip | Görünüm | Kullanım |
+|-----|---------|----------|
+| **Primary** | Solid, dikkat çekici renk | Ana aksiyon (Kaydet, Satın Al) |
+| **Secondary** | Outline veya subtle | İkincil aksiyon (İptal, Daha Fazla) |
+| **Tertiary** | Text link, minimal | Üçüncül aksiyon (Yardım, Detay) |
+| **Destructive** | Kırmızı tonu | Tehlikeli aksiyon (Sil) |
+[/TABLE]
+
+### Kart İçeriği
+
+Bir kart içinde de hiyerarşi olmalı:
+1. Görsel (varsa) - dikkat çekici
+2. Başlık - büyük, bold
+3. Açıklama - normal, gri
+4. Meta bilgi - küçük, subtle
+5. Aksiyon - belirgin ama başlıktan küçük
+
+### Form
+
+1. Section başlığı - büyük
+2. Label - medium, koyu
+3. Input - normal
+4. Helper text - küçük, açık renk
+5. Error - küçük ama dikkat çekici renk
+
+---
+
+## Hiyerarşi Test Etme
+
+### Squint Test (Kısık Göz Testi)
+
+Gözlerini kısarak tasarıma bak. Sadece ana şekilleri görürsün. Hâlâ hiyerarşi algılanıyor mu?
+
+### Blur Test
+
+Tasarımı blur'la (Figma'da efekt ekle). Önemli elementler hâlâ ayırt ediliyor mu?
+
+### 5 Saniye Testi
+
+Birine tasarımı 5 saniye göster. "Ne gördün?" diye sor. Önemli mesajları söyleyebiliyor mu?
+
+### İlk Tıklama
+
+Kullanıcıya bir görev ver. İlk nereye tıklıyor? Doğru yere mi?
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Her şey önemli
+
+[COMPARISON]
+❌ Kötü: 5 farklı CTA hepsi aynı vurguda, hepsi "önemli"
+✅ İyi: 1 primary CTA net öne çıkıyor, diğerleri secondary
+[/COMPARISON]
+
+Her şey önemli olunca hiçbir şey önemli değil.
+
+### 2. Yetersiz boyut farkı
+
+32px ve 28px arasındaki fark algılanmaz. En az 1.25-1.5x oran kullan.
+
+### 3. Boşluk korkusu
+
+Her yeri içerikle doldurmak kaos yaratır. Boşluk hiyerarşinin parçası.
+
+### 4. Tutarsız hiyerarşi
+
+Bir sayfada H2 36px, başka sayfada 28px. Tutarlı sistem kur.
+
+### 5. Renge çok güvenmek
+
+Renk körlüğü olan kullanıcılar için renk tek başına yetmez. Boyut ve weight de kullan.
+
+### 6. Mobili unutmak
+
+Desktop'ta çalışan hiyerarşi mobilde bozulabilir. Responsive düşün.
+
+---
+
+## Pratik Uygulama: Landing Page
+
+**Hiyerarşi sırası:**
+
+1. **Hero başlık** - En büyük, en dikkat çekici
+2. **Alt başlık/değer önerisi** - Başlıktan küçük, açıklayıcı
+3. **Primary CTA** - Dikkat çekici renk, belirgin boyut
+4. **Supporting visual** - Hero görsel
+5. **Feature başlıkları** - Orta boyut
+6. **Feature açıklamaları** - Normal body text
+7. **Secondary CTA** - Daha subtle
+8. **Footer** - En küçük, en az önemli
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**20 dakika**
+
+**Görev:** Bir pricing sayfası için hiyerarşi planla.
+
+**Senaryo:** SaaS ürünü, 3 plan (Basic, Pro, Enterprise). Pro planı öne çıkarmak istiyorsun.
+
+**Adımlar:**
+
+1. **Element listesi (3 dk)**
+   Sayfada hangi elementler olacak? Listele:
+   - Sayfa başlığı
+   - Plan kartları
+   - Plan isimleri
+   - Fiyatlar
+   - Özellik listeleri
+   - CTA butonları
+   - ...
+
+2. **Önem sırası (5 dk)**
+   Her elementi 1-4 arası önem seviyesine ata.
+
+3. **Görsel araçlar (7 dk)**
+   Her seviye için hangi araçları kullanacaksın?
+   
+   | Element | Seviye | Boyut | Renk | Weight | Boşluk |
+   |---------|--------|-------|------|--------|--------|
+   | Sayfa başlığı | ? | ? | ? | ? | ? |
+   | Pro plan kartı | ? | ? | ? | ? | ? |
+   | Pro plan CTA | ? | ? | ? | ? | ? |
+   | Diğer plan CTA | ? | ? | ? | ? | ? |
+
+4. **Pro planı nasıl öne çıkarırsın? (5 dk)**
+   - Boyut farkı?
+   - Renk vurgusu?
+   - Badge (Popular, Recommended)?
+   - Konum?
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Görsel hiyerarşi = elementleri önem sırasına göre düzenleme
+- Her şey eşit önemde olunca hiçbir şey önemli değil
+- Hiyerarşi araçları: boyut, renk/kontrast, boşluk, konum, ağırlık
+- F-pattern metin ağırlıklı, Z-pattern görsel ağırlıklı sayfalarda
+- 3-4 hiyerarşi seviyesi yeterli (primary, secondary, tertiary, quaternary)
+- Boyut farkı en az 1.25x olmalı
+- Squint test ve 5 saniye testiyle kontrol et
+- Tutarlı sistem kur, sayfa sayfa değişmesin
+- Mobil için de hiyerarşiyi kontrol et
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Tipografi Temelleri](/kutuphane/tipografi-temelleri)
+
+**Sonraki:** Spacing ve Layout Sistemleri *(yakında)*
+
+**İlgili konular:**
+- [Gestalt İlkeleri](/kutuphane/gestalt-ilkeleri)
+- [Renk Teorisi](/kutuphane/renk-teorisi)
+- [Design System Nedir?](/kutuphane/design-system-nedir)
+
+**İlgili Roadmap:** UI Designer Roadmap → Görsel Tasarım
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Visual Hierarchy - NNGroup](https://www.nngroup.com/articles/visual-hierarchy-ux-definition/) (İngilizce, 8 dk)
+- [F-Shaped Pattern - NNGroup](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/) (İngilizce, araştırma)
+- [Refactoring UI](https://www.refactoringui.com/) (Kitap, pratik hiyerarşi tavsiyeleri)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
