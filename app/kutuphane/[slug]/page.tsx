@@ -19149,6 +19149,578 @@ Derinleşmek istersen:
 - [404 Page Design - Awwwards](https://www.awwwards.com/inspiration/search?text=404) (İlham için)
 `,
   },
+  "loading-state-tasarimi": {
+    id: "loading-state-tasarimi",
+    title: "Loading State Tasarımı",
+    subtitle: "Bekleme Süresini Kullanıcı Dostu Hale Getirme",
+    titleEn: "Loading State Design",
+    slug: "loading-state-tasarimi",
+    description: "Loading state tasarımı nasıl yapılır? Spinner, skeleton screen, progress bar, optimistic UI. Bekleme deneyimini iyileştirme rehberi.",
+    category: "ux-design",
+    readingTime: 13,
+    featured: false,
+    publishedAt: "2025-01-18",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Loading State Tasarımı: Bekleme Süresini Kullanıcı Dostu Hale Getirme
+
+**Seviye:** Başlangıç - Orta
+**Kategori:** UX Design
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Bekleme kimse sevmez. Ama dijital dünyada bekleme kaçınılmaz: veri yükleniyor, dosya işleniyor, sayfa render ediliyor.
+
+Araştırmalar gösteriyor: 1 saniye gecikme, %7 dönüşüm kaybı. 3 saniye bekleme, kullanıcıların %40'ını kaybettirir.
+
+Ama önemli olan gerçek bekleme süresi değil, **algılanan bekleme süresi**. Doğru loading tasarımı ile 3 saniye 1 saniye gibi hissettirebilir.
+
+**Loading state**, bu bekleme süresini yönetme sanatı. Spinner, skeleton, progress bar, optimistic UI - her biri farklı durumlar için.
+
+Bu yazıda loading state tasarımının temellerini ve hangi durumda ne kullanacağını öğreneceksin.
+
+---
+
+## Loading State Nedir?
+
+[CALLOUT BOX]
+**Loading State:**
+İçerik veya işlem tamamlanana kadar kullanıcıya gösterilen geçici durum. Sistemin çalıştığını, kullanıcının beklemesi gerektiğini ve ne kadar bekleyeceğini (mümkünse) bildiren görsel feedback.
+[/CALLOUT BOX]
+
+**Neden gerekli:**
+- Sistemin donmadığını gösterir
+- Kullanıcıyı bilgilendirir
+- Algılanan beklemeyi azaltır
+- Frustrasyon önler
+
+---
+
+## Zaman Algısı Psikolojisi
+
+### Nielsen'ın Yanıt Süresi Kuralları
+
+[TABLO]
+| Süre | Kullanıcı Algısı | Gerekli Aksiyon |
+|------|------------------|-----------------|
+| 0-100ms | Anlık | Feedback gereksiz |
+| 100-1000ms | Akıcı | Minimal feedback (cursor değişimi) |
+| 1-10 saniye | Bekleme hissi | Loading indicator şart |
+| 10+ saniye | Dikkat kaybı | Progress + tahmini süre |
+[/TABLO]
+
+### Algılanan Süreyi Etkileyen Faktörler
+
+**Daha kısa hissettirenler:**
+- İlerleme göstergesi
+- Anlamlı animasyon
+- İçerik önizlemesi (skeleton)
+- Dikkat dağıtma
+
+**Daha uzun hissettirenler:**
+- Belirsizlik (ne kadar sürecek?)
+- Hareketsiz ekran
+- Boş beyaz sayfa
+- Anksiyete (işlem başarılı olacak mı?)
+
+[INFO]
+**%40**
+3 saniyeden fazla beklemede sayfayı terk eden kullanıcı oranı
+[/INFO]
+
+---
+
+## Loading Pattern'leri
+
+### 1. Spinner / Loader
+
+Dönen veya hareket eden basit animasyon.
+
+**Kullanım:**
+- Kısa bekleme süreleri (<3 saniye)
+- Belirsiz süre
+- Küçük alanlar (buton içi, ikon)
+
+**Türleri:**
+- Circular spinner (dönen daire)
+- Dots (hareket eden noktalar)
+- Bars (yükselen/alçalan çubuklar)
+- Custom brand animation
+
+**Avantajları:**
+- Basit implementasyon
+- Her yerde kullanılabilir
+- Tanınır pattern
+
+**Dezavantajları:**
+- İlerleme göstermez
+- Monoton
+- Uzun sürelerde frustrasyon
+
+### 2. Skeleton Screen (Shimmer)
+
+İçerik yapısının gri placeholder'larla gösterilmesi.
+
+**Kullanım:**
+- Sayfa/liste yüklemeleri
+- Bilinen içerik yapısı
+- Uzun bekleme süreleri
+
+**Örnek:**
+${'```'}
+[████████████]        <- Başlık
+[████████]            <- Alt başlık
+[██████████████████]  <- Paragraf
+[██████████████████]
+[████████████]
+
+[▓▓▓▓▓▓]  [████████]  <- Kart skeleton
+          [██████]
+${'```'}
+
+**Avantajları:**
+- Algılanan süreyi kısaltır
+- İçerik beklentisi oluşturur
+- Modern görünüm
+- Layout shift önler
+
+**Dezavantajları:**
+- Implementasyon daha karmaşık
+- Her içerik yapısı için ayrı skeleton
+- Belirsiz içerik için zor
+
+### 3. Progress Bar
+
+İlerleme gösteren çubuk.
+
+**Kullanım:**
+- Belirli süre/adım sayısı
+- Dosya yükleme/indirme
+- Çok adımlı işlemler
+- 10+ saniye beklemeler
+
+**Türleri:**
+- Determinate (belirli - %30, %50, %100)
+- Indeterminate (belirsiz - sonsuz hareket)
+
+**Avantajları:**
+- Net ilerleme bilgisi
+- Motivasyon sağlar
+- Uzun sürelerde etkili
+
+**Dezavantajları:**
+- Yanlış tahmin frustrasyon yaratır
+- Her duruma uygun değil
+
+### 4. Optimistic UI
+
+İşlemin başarılı olacağını varsayarak sonucu hemen gösterme.
+
+**Kullanım:**
+- Yüksek başarı oranlı işlemler
+- Like, yorum, toggle
+- Anlık feedback gereken durumlar
+
+**Örnek:**
+Kullanıcı like butonuna tıkladı → Hemen +1 göster → Arka planda API çağır → Başarısızsa geri al
+
+**Avantajları:**
+- Sıfır bekleme hissi
+- Anlık feedback
+- Akıcı deneyim
+
+**Dezavantajları:**
+- Başarısızlık yönetimi gerekli
+- Her işlem için uygun değil
+- Veri tutarlılığı riski
+
+### 5. Lazy Loading
+
+İçeriği ihtiyaç anında yükleme.
+
+**Kullanım:**
+- Uzun listeler
+- Görsel ağırlıklı sayfalar
+- Infinite scroll
+- Ekran dışı içerik
+
+**Örnek:**
+Sadece görünür alandaki görselleri yükle, scroll ettikçe devamını yükle.
+
+**Avantajları:**
+- İlk yükleme hızlı
+- Bant genişliği tasarrufu
+- Performans artışı
+
+**Dezavantajları:**
+- Scroll sırasında bekleme
+- SEO dikkat gerektirir
+
+### 6. Progressive Loading
+
+İçeriği aşamalı olarak gösterme.
+
+**Kullanım:**
+- Büyük görseller
+- Kompleks sayfalar
+- Öncelikli içerik var
+
+**Örnek:**
+- Önce metin, sonra görseller
+- Önce düşük çözünürlük, sonra yüksek
+- Önce above-the-fold, sonra below
+
+**Avantajları:**
+- Hızlı ilk içerik
+- Kullanıcı okumaya başlayabilir
+
+---
+
+## Hangi Pattern Ne Zaman?
+
+[TABLO]
+| Senaryo | Önerilen Pattern |
+|---------|------------------|
+| Buton tıklama (<1sn) | Spinner (buton içi) |
+| Sayfa yükleme | Skeleton screen |
+| Liste yükleme | Skeleton + lazy loading |
+| Dosya yükleme | Progress bar (determinate) |
+| Like/favorite | Optimistic UI |
+| Form gönderme | Spinner + disabled button |
+| Arama sonuçları | Skeleton veya spinner |
+| Görsel yükleme | Placeholder + progressive |
+| Infinite scroll | Spinner (liste sonunda) |
+| Uzun işlem (>10sn) | Progress bar + tahmini süre |
+[/TABLO]
+
+---
+
+## Spinner Tasarımı
+
+### Boyut
+
+[TABLO]
+| Kullanım | Boyut |
+|----------|-------|
+| Buton içi | 16-20px |
+| Inline (metin yanı) | 16-20px |
+| Card/section | 24-32px |
+| Tam sayfa | 40-64px |
+[/TABLO]
+
+### Animasyon
+
+**Hız:** 0.8-1.2 saniye döngü (çok hızlı stresli, çok yavaş durgun)
+
+**Easing:** Linear veya ease-in-out
+
+**Renk:** Brand rengi veya nötr gri
+
+### Buton Loading State
+${'```'}
+Default:  [  Kaydet  ]
+Loading:  [ ◌ Kaydediliyor... ]
+          (buton disabled, spinner + metin)
+${'```'}
+
+**Best practices:**
+- Buton genişliği değişmesin
+- Spinner + metin kombinasyonu
+- Disabled state
+- Çift tıklamayı engelle
+
+---
+
+## Skeleton Screen Tasarımı
+
+### Temel Prensipler
+
+1. **Gerçek içeriği yansıt**
+   Skeleton, yüklenecek içeriğin yapısını göstermeli
+
+2. **Doğru boyutlar**
+   Skeleton boyutları gerçek içeriğe yakın olmalı (layout shift önleme)
+
+3. **Animasyon ekle**
+   Shimmer/pulse efekti canlılık verir
+
+4. **Renk seçimi**
+   Açık gri (#E5E7EB, #F3F4F6) arka plan üzerinde
+
+### Skeleton Anatomisi
+${'```'}
+Kart Skeleton:
+
+┌─────────────────────┐
+│ [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] │  <- Görsel placeholder
+│                     │
+│ [████████████]      │  <- Başlık (kısa çizgi)
+│ [████████]          │  <- Alt başlık (daha kısa)
+│                     │
+│ [██████████████]    │  <- Açıklama satır 1
+│ [█████████████████] │  <- Açıklama satır 2
+│ [██████████]        │  <- Açıklama satır 3 (kısa)
+│                     │
+│ [████]  [████████]  │  <- Buton + meta bilgi
+└─────────────────────┘
+${'```'}
+
+### Shimmer Animasyonu
+
+Soldan sağa hareket eden parlak gradient.
+
+**CSS örneği:**
+${'```'}css
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+${'```'}
+
+---
+
+## Progress Bar Tasarımı
+
+### Determinate Progress
+
+Yüzde veya adım bazlı ilerleme.
+${'```'}
+Dosya yükleniyor...
+[████████░░░░░░░░] 45%
+${'```'}
+
+**Best practices:**
+- Yüzde veya "3/5 adım" göster
+- Gerçekçi ilerleme (takılmama)
+- Tamamlandığında success feedback
+
+### Indeterminate Progress
+
+Süre belirsiz, sadece "çalışıyor" gösterimi.
+${'```'}
+Aranıyor...
+[░░░████░░░░░░░░░] (kayar animasyon)
+${'```'}
+
+**Kullanım:** API çağrıları, arama, belirsiz işlemler
+
+### Progress Feedback
+
+Uzun işlemlerde ek bilgi:
+${'```'}
+Dosya yükleniyor... 45%
+Tahmini süre: ~2 dakika
+${'```'}
+
+---
+
+## Loading State Zamanlama
+
+### Delay Before Showing
+
+Çok hızlı işlemlerde loading göstermemek için kısa gecikme.
+
+**Önerilen:** 200-300ms bekle, sonra loading göster.
+
+**Neden:** Flash loading rahatsız edici.
+${'```'}javascript
+// Pseudo code
+setTimeout(() => {
+  if (stillLoading) showLoader();
+}, 300);
+${'```'}
+
+### Minimum Display Time
+
+Loading gösterildiyse çok hızlı kaybolmaması.
+
+**Önerilen:** En az 400-500ms göster.
+
+**Neden:** Çok kısa flash kötü görünür.
+
+---
+
+## Content Placeholder vs Spinner
+
+[COMPARISON]
+**Skeleton tercih et:**
+- Sayfa/liste yüklemelerinde
+- İçerik yapısı bilinen durumlarda
+- 1+ saniye beklemelerde
+- Modern, profesyonel görünüm için
+
+**Spinner tercih et:**
+- Çok kısa işlemlerde (<1sn)
+- Küçük alanlarda (buton, ikon)
+- İçerik yapısı belirsizse
+- Basitlik gerekiyorsa
+[/COMPARISON]
+
+---
+
+## Yaygın Hatalar
+
+### 1. Loading göstermemek
+
+[COMPARISON]
+❌ Kötü: Kullanıcı tıkladı, hiçbir şey olmadı (donmuş gibi)
+✅ İyi: Tıklama anında feedback (spinner, disabled state)
+[/COMPARISON]
+
+### 2. Layout shift
+
+[COMPARISON]
+❌ Kötü: İçerik yüklenince sayfa kayıyor
+✅ İyi: Skeleton doğru boyutlarda, içerik gelince aynı yerde
+[/COMPARISON]
+
+### 3. Çift tıklama
+
+[COMPARISON]
+❌ Kötü: Loading sırasında buton aktif, kullanıcı tekrar tıklıyor
+✅ İyi: Loading sırasında buton disabled
+[/COMPARISON]
+
+### 4. Yanlış progress
+
+[COMPARISON]
+❌ Kötü: %99'da 5 dakika takılı kalma
+✅ İyi: Gerçekçi ilerleme veya indeterminate kullan
+[/COMPARISON]
+
+### 5. Loading flash
+
+[COMPARISON]
+❌ Kötü: 100ms loading sonra hemen içerik (göz yorucu)
+✅ İyi: Delay + minimum display time
+[/COMPARISON]
+
+### 6. Tüm sayfayı bloklama
+
+[COMPARISON]
+❌ Kötü: Küçük bir işlem için tam sayfa spinner
+✅ İyi: Sadece ilgili alanı loading state'e al
+[/COMPARISON]
+
+---
+
+## Erişilebilirlik
+
+### Screen Reader
+
+- ${'`'}aria-busy="true"${'`'} loading sırasında
+- ${'`'}aria-live="polite"${'`'} tamamlandığında bildir
+- Loading metnini screen reader'a iletilebilir yap
+
+### Animasyon
+
+- ${'`'}prefers-reduced-motion${'`'} desteği
+- Hareket hassasiyeti olan kullanıcılar için statik alternatif
+
+### Kontrast
+
+- Loading indicator'ın görünür olması
+- Arka plan ile yeterli kontrast
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**25 dakika**
+
+**Görev:** Bir sosyal medya feed'i için loading state'leri tasarla.
+
+**Senaryolar:**
+
+1. **İlk sayfa yüklemesi (8 dk)**
+   Feed açılırken gösterilecek skeleton tasarla:
+   - Post kartı skeleton (görsel + metin + etkileşim butonları)
+   - Kaç kart göstereceksin?
+   - Shimmer animasyonu nasıl olacak?
+
+2. **Like butonu (5 dk)**
+   Kullanıcı like'a tıkladığında:
+   - Optimistic UI mi spinner mı?
+   - Görsel feedback nasıl?
+   - Hata durumunda ne olacak?
+
+3. **Infinite scroll (5 dk)**
+   Aşağı scroll edildiğinde:
+   - Ne göstereceksin? (spinner? skeleton?)
+   - Nerede göstereceksin?
+   - Kaç yeni post yüklenecek?
+
+4. **Yorum gönderme (5 dk)**
+   Kullanıcı yorum yazdı ve gönder'e tıkladı:
+   - Buton state'i nasıl?
+   - Yorum hemen mi görünecek?
+   - Başarı/hata feedback'i?
+
+5. **Timing kararları (2 dk)**
+   - Loading delay: ? ms
+   - Minimum display time: ? ms
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Loading state = sistemin çalıştığını gösteren geçici durum
+- 1 saniye üzeri beklemede mutlaka feedback ver
+- Skeleton screen: sayfa/liste için, algılanan süreyi kısaltır
+- Spinner: kısa işlemler, küçük alanlar için
+- Progress bar: belirli süre/adım, uzun işlemler için
+- Optimistic UI: hızlı, yüksek başarı oranlı işlemler için
+- Loading delay: 200-300ms bekle sonra göster
+- Minimum display: en az 400-500ms göster
+- Layout shift önle: skeleton boyutları doğru olmalı
+- Çift tıklamayı engelle: loading sırasında disable et
+- Erişilebilirlik: aria-busy, reduced motion desteği
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Error State Tasarımı](/kutuphane/error-state-tasarimi)
+
+**Sonraki:** Empty State Tasarımı *(yakında)*
+
+**İlgili konular:**
+- [Micro-interactions Tasarımı](/kutuphane/micro-interactions-tasarimi)
+- [Error State Tasarımı](/kutuphane/error-state-tasarimi)
+- [Onboarding UX Tasarımı](/kutuphane/onboarding-ux-tasarimi)
+
+**İlgili Roadmap:** UI Designer Roadmap → State Design
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Response Times - NNGroup](https://www.nngroup.com/articles/response-times-3-important-limits/) (İngilizce, klasik)
+- [Skeleton Screens - UX Collective](https://uxdesign.cc/what-you-should-know-about-skeleton-screens-a820c45a571a) (İngilizce)
+- [Optimistic UI - Apollo](https://www.apollographql.com/docs/react/performance/optimistic-ui/) (İngilizce, teknik)
+- [Everything You Need to Know About Skeleton Screens](https://uxdesign.cc/what-you-should-know-about-skeleton-screens-a820c45a571a) (İngilizce)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
