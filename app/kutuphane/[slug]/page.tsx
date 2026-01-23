@@ -17852,6 +17852,701 @@ Derinleşmek istersen:
 - [Growth.Design Case Studies](https://growth.design/case-studies) (İngilizce, görsel analizler)
 `,
   },
+  "form-tasarimi-best-practices": {
+    id: "form-tasarimi-best-practices",
+    title: "Form Tasarımı Best Practices",
+    subtitle: "Kullanıcı Dostu Form Oluşturma Rehberi",
+    titleEn: "Form Design Best Practices",
+    slug: "form-tasarimi-best-practices",
+    description: "Form UX tasarımı nasıl yapılır? Input türleri, validation, hata mesajları, erişilebilirlik ve dönüşüm optimizasyonu. Kapsamlı form tasarım rehberi.",
+    category: "ux-design",
+    readingTime: 16,
+    featured: false,
+    publishedAt: "2025-01-18",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Form Tasarımı Best Practices: Kullanıcı Dostu Form Oluşturma Rehberi
+
+**Seviye:** Başlangıç - Orta
+**Kategori:** UX Design
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Formlar her yerde: kayıt, login, checkout, iletişim, arama, ayarlar. Dijital ürünlerin en temel etkileşim noktası.
+
+Ama formlar aynı zamanda en çok terk edilen noktalar. Çok uzun form? Terk. Anlaşılmaz hata mesajı? Terk. Mobilde zor kullanım? Terk.
+
+**İyi form tasarımı = dönüşüm.** Kötü form tasarımı = kayıp kullanıcı, kayıp gelir.
+
+Form tasarımı basit görünür ama detaylar kritik: Label pozisyonu, placeholder kullanımı, validation zamanlaması, hata mesajı tonu... Her biri dönüşümü etkiler.
+
+Bu yazıda form tasarımının tüm detaylarını, best practice'leri ve sık yapılan hataları öğreneceksin.
+
+---
+
+## Form Anatomisi
+
+Bir formun temel bileşenleri:
+
+### 1. Label
+
+Input'un ne istediğini belirten metin.
+
+**Best practices:**
+- Her input'un label'ı olmalı
+- Kısa ve net ("Email" değil "Email Adresi")
+- Başlık formatı (Title Case veya Sentence case, tutarlı)
+
+### 2. Input Field
+
+Kullanıcının veri girdiği alan.
+
+**Türleri:**
+- Text input
+- Password
+- Email
+- Number
+- Tel
+- Date
+- Textarea
+- Select/Dropdown
+- Checkbox/Radio
+- File upload
+
+### 3. Placeholder
+
+Input içinde görünen ipucu metni.
+
+**Best practices:**
+- Label yerine kullanma
+- Örnek format göster ("ornek@email.com")
+- Açık gri renk (ama okunabilir)
+
+### 4. Helper Text
+
+Label altında veya input altında ek açıklama.
+
+**Kullanım:**
+- Format gereksinimleri ("En az 8 karakter")
+- Ek bilgi ("Bu bilgi paylaşılmaz")
+
+### 5. Validation Message
+
+Hata veya başarı durumu bildirimi.
+
+### 6. Required Indicator
+
+Zorunlu alan işareti (* veya "Zorunlu" etiketi).
+
+---
+
+## Label Tasarımı
+
+### Pozisyon: Üstte mi, Yanda mı?
+
+[TABLO]
+| Pozisyon | Avantaj | Dezavantaj |
+|----------|---------|------------|
+| **Üstte** | Hızlı tarama, mobil uyumlu, erişilebilir | Dikey alan kullanır |
+| **Yanda (sol)** | Kompakt görünüm | Uzun label sorunlu, mobilde bozulur |
+| **Yanda (sağ)** | Görsel hizalama | Tarama zorluğu |
+| **Floating** | Modern görünüm | Erişilebilirlik sorunları |
+[/TABLO]
+
+**Önerilen:** Üstte label (top-aligned)
+
+[COMPARISON]
+❌ Kaçınılması gereken: Floating label (accessibility sorunları)
+✅ Önerilen: Label üstte, her zaman görünür
+[/COMPARISON]
+
+### Floating Labels
+
+Popüler ama sorunlu:
+
+**Problemler:**
+- Yazarken label küçülür, okunması zor
+- Screen reader sorunları
+- Placeholder ile karışır
+- Helper text ile çakışır
+
+**Kullanacaksan:**
+- Kontrast yeterli olmalı (küçük halde de)
+- Aria-label ekle
+- Çok kısa formlarda düşün
+
+### Label Metni
+
+[COMPARISON]
+❌ Kötü: "Lütfen email adresinizi giriniz"
+✅ İyi: "Email"
+[/COMPARISON]
+
+- Kısa tut
+- Jargondan kaçın
+- Tutarlı format
+
+---
+
+## Placeholder Kullanımı
+
+### Placeholder ≠ Label
+
+[WARNING]
+⚠️ Placeholder'ı label yerine kullanma! Yazı başlayınca kaybolur, kullanıcı ne istediğini unutur, erişilebilirlik sorunu yaratır.
+[/WARNING]
+
+### Doğru Placeholder Kullanımı
+
+**İyi kullanım:**
+- Örnek format: "ornek@email.com"
+- Beklenen değer: "İstanbul"
+- İpucu: "Arama yapın..."
+
+**Kötü kullanım:**
+- Label yerine: "Email Adresi"
+- Talimat: "Email adresinizi girin"
+
+### Placeholder Styling
+
+- Açık gri renk (#9CA3AF gibi)
+- Ama yeterli kontrast (WCAG 4.5:1 zor ama 3:1 hedefle)
+- İtalik kullanma (okunabilirliği azaltır)
+
+---
+
+## Input Tasarımı
+
+### Boyut
+
+**Minimum touch target:** 44x44px (Apple), 48x48px (Google)
+
+**Önerilen input height:** 40-48px
+
+**Padding:** 12-16px horizontal
+
+### Border ve Arka Plan
+
+[TABLO]
+| Stil | Kullanım |
+|------|----------|
+| Border (outline) | En yaygın, net sınır |
+| Filled (arka plan) | Modern, Material Design |
+| Underline only | Minimal, ama sınır belirsiz |
+[/TABLO]
+
+**Önerilen:** Border style, net görünürlük
+
+### Focus State
+
+Focus state çok önemli (klavye navigasyonu, erişilebilirlik).
+
+**Best practices:**
+- Belirgin border rengi değişimi
+- Outline veya shadow ekleme
+- Sadece renk değişimi yetmez (renk körü kullanıcılar)
+${'```'}css
+Default: border-color: #D1D5DB
+Focus: border-color: #6366F1; box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2)
+${'```'}
+
+### Input Türleri (HTML5)
+
+Doğru input type kullan:
+
+[TABLO]
+| Veri | Input Type | Mobil Klavye |
+|------|------------|--------------|
+| Email | type="email" | @ işaretli klavye |
+| Telefon | type="tel" | Numpad |
+| Sayı | type="number" | Numpad |
+| URL | type="url" | .com kısayolu |
+| Arama | type="search" | Search butonu |
+| Tarih | type="date" | Native date picker |
+[/TABLO]
+
+---
+
+## Input State'leri
+
+Her input için tüm state'ler:
+
+### 1. Default (Empty)
+
+Boş, etkileşim yok.
+
+### 2. Focus
+
+Kullanıcı tıkladı/tab'ladı.
+- Border rengi değişir
+- Shadow eklenir
+
+### 3. Filled
+
+Değer girilmiş.
+- Default'tan farklı görünebilir (opsiyonel)
+
+### 4. Disabled
+
+Etkileşim kapalı.
+- Soluk görünüm (opacity: 0.5)
+- Cursor: not-allowed
+- Neden disabled olduğunu açıkla (mümkünse)
+
+### 5. Read-only
+
+Görüntülenebilir ama düzenlenemez.
+- Disabled'dan farklı (seçilebilir, kopyalanabilir)
+
+### 6. Error
+
+Validation hatası.
+- Kırmızı border
+- Hata mesajı
+- İkon (opsiyonel)
+
+### 7. Success
+
+Validation başarılı (opsiyonel).
+- Yeşil border veya tik ikonu
+- Pozitif feedback
+
+### 8. Loading
+
+Async validation sırasında.
+- Spinner ikonu
+
+---
+
+## Validation
+
+### Validation Zamanlaması
+
+[TABLO]
+| Zamanlama | Ne Zaman | Avantaj | Dezavantaj |
+|-----------|----------|---------|------------|
+| On submit | Form gönderildiğinde | Basit | Geç feedback |
+| On blur | Alan terk edildiğinde | Anında feedback | Her alandan sonra |
+| On change | Her tuş vuruşunda | Real-time | Agresif, rahatsız edici |
+| Hybrid | Blur + Submit | Dengeli | Karmaşık implementasyon |
+[/TABLO]
+
+**Önerilen:** On blur (alan terk edildiğinde) + On submit kombinasyonu
+
+### Inline Validation
+
+[COMPARISON]
+❌ Kötü: Yazarken sürekli "Geçersiz email" göstermek
+✅ İyi: Kullanıcı alanı terk edince kontrol etmek
+[/COMPARISON]
+
+### Pozitif Validation
+
+Sadece hata değil, başarı da göster:
+- ✓ Yeşil tik ikonu
+- "Kullanılabilir kullanıcı adı" mesajı
+
+---
+
+## Hata Mesajları
+
+### İyi Hata Mesajı Özellikleri
+
+1. **Spesifik:** Ne yanlış olduğunu söyle
+2. **Yapıcı:** Nasıl düzeltileceğini söyle
+3. **İnsan dilinde:** Teknik jargon yok
+4. **Kibar:** Suçlayıcı değil
+
+### Hata Mesajı Örnekleri
+
+[COMPARISON]
+❌ Kötü: "Geçersiz girdi"
+✅ İyi: "Geçerli bir email adresi girin (örn: ad@ornek.com)"
+
+❌ Kötü: "Error 422: Validation failed"
+✅ İyi: "Şifre en az 8 karakter olmalı"
+
+❌ Kötü: "Bu alan zorunludur"
+✅ İyi: "Email adresinizi girin"
+
+❌ Kötü: "Hatalı format"
+✅ İyi: "Telefon numarası 10 haneli olmalı (5XX XXX XX XX)"
+[/COMPARISON]
+
+### Hata Mesajı Konumu
+
+- Input'un hemen altında
+- Kırmızı renk
+- Hata ikonu (opsiyonel)
+- Input border'ı da kırmızı
+
+### Toplu Hata Gösterimi
+
+Uzun formlarda:
+- Form başında özet liste
+- Her alanda inline hata
+- Hatalı alana scroll/focus
+
+---
+
+## Zorunlu Alanlar
+
+### İşaretleme Yöntemleri
+
+1. **Asterisk (*)**: En yaygın
+2. **"Zorunlu" yazısı**: Daha net
+3. **Opsiyonel olanları işaretle**: Az zorunlu varsa
+
+### Best Practice
+
+[COMPARISON]
+Çok zorunlu alan varsa: Opsiyonelleri işaretle "(Opsiyonel)"
+Az zorunlu alan varsa: Zorunluları işaretle "*"
+[/COMPARISON]
+
+### Açıklama Ekle
+
+Form başında:
+"* ile işaretli alanlar zorunludur"
+
+---
+
+## Form Layout
+
+### Tek Kolon
+
+[COMPARISON]
+✅ Önerilen: Tek kolon layout
+- Tarama kolay
+- Mobil uyumlu
+- Net sıra
+[/COMPARISON]
+
+### Çok Kolon
+
+Sadece mantıksal olarak ilişkili alanlar için:
+- Ad + Soyad (yan yana olabilir)
+- Şehir + İlçe + Posta kodu
+
+### Gruplama
+
+İlişkili alanları grupla:
+- Kişisel bilgiler
+- Adres bilgileri
+- Ödeme bilgileri
+
+**Visual separator:** Başlık, çizgi veya boşluk
+
+### Adım Adım (Multi-step)
+
+Uzun formları adımlara böl:
+- Her adımda 3-5 alan
+- Progress indicator
+- Geri gitme imkanı
+- Veri kaybetmeme
+
+---
+
+## Spesifik Input Türleri
+
+### Password
+
+- Show/hide toggle
+- Strength indicator (opsiyonel)
+- Gereksinim listesi göster
+- Caps lock uyarısı
+
+### Tarih
+
+- Native date picker (type="date")
+- Veya özel date picker
+- Format açıkça belirt (GG/AA/YYYY)
+- Geçersiz tarih engelle
+
+### Telefon
+
+- Ülke kodu seçimi
+- Format maskesi (5XX XXX XX XX)
+- Sadece rakam kabul et
+
+### Adres
+
+- Autocomplete kullan (Google Places vb.)
+- Ülke → Şehir → İlçe sırası
+- Posta kodu validation
+
+### Dosya Yükleme
+
+- Kabul edilen formatları belirt
+- Maksimum boyut göster
+- Drag & drop desteği
+- Yükleme progress'i
+- Preview (görsel için)
+
+---
+
+## Select ve Dropdown
+
+### Native vs Custom
+
+[TABLO]
+| Tür | Avantaj | Dezavantaj |
+|-----|---------|------------|
+| Native select | Erişilebilir, mobil uyumlu | Stil sınırlı |
+| Custom dropdown | Tam kontrol | Erişilebilirlik zor |
+[/TABLO]
+
+### Ne Zaman Dropdown?
+
+- 5+ seçenek varsa dropdown
+- 2-4 seçenek varsa radio button düşün
+- Çok fazla seçenek (50+) varsa autocomplete
+
+### Dropdown Best Practices
+
+- Default seçenek: "Seçiniz..." (zorunluysa)
+- Alfabetik veya mantıksal sıralama
+- Arama/filtre (çok seçenek varsa)
+- Seçili değeri net göster
+
+---
+
+## Checkbox ve Radio
+
+### Checkbox
+
+Birden fazla seçilebilir.
+
+**Best practices:**
+- Label tıklanabilir olmalı
+- Minimum 44px touch target
+- Indeterminate state (gerekirse)
+
+### Radio Button
+
+Tek seçim.
+
+**Best practices:**
+- Grupla, fieldset kullan
+- Default seçili olabilir
+- Dikey liste önerilir
+
+### Toggle/Switch
+
+On/off durumları için.
+
+**Kullanım:**
+- Anlık efekt olan ayarlar
+- Boolean değerler
+- Checkbox yerine kullanılabilir
+
+---
+
+## Buton Tasarımı
+
+### Submit Butonu
+
+- Net aksiyon metni ("Kayıt Ol", "Gönder")
+- Primary style (dolgu rengi)
+- Form sonunda, sağda veya ortalı
+- Loading state
+- Disabled state (form geçersizse)
+
+### Buton Metni
+
+[COMPARISON]
+❌ Kötü: "Submit", "Gönder"
+✅ İyi: "Hesap Oluştur", "Siparişi Tamamla", "Mesaj Gönder"
+[/COMPARISON]
+
+### İkincil Aksiyonlar
+
+- "İptal" veya "Temizle"
+- Secondary style (outline)
+- Submit'ten az belirgin
+
+---
+
+## Erişilebilirlik
+
+### Label Association
+
+Her input'un programatik label'ı olmalı:
+${'```'}html
+Email
+
+${'```'}
+
+### Hata Bildirimi
+
+- ${'`'}aria-invalid="true"${'`'} hata durumunda
+- ${'`'}aria-describedby${'`'} ile hata mesajını bağla
+- Focus'u hatalı alana taşı
+
+### Klavye Navigasyonu
+
+- Tab sırası mantıklı
+- Enter ile submit
+- Escape ile iptal (modal'da)
+
+### Screen Reader
+
+- Fieldset ve legend kullan (gruplar için)
+- Required alanları belirt
+- Dinamik mesajları announce et
+
+---
+
+## Dönüşüm Optimizasyonu
+
+### Alan Sayısını Azalt
+
+Her ek alan dönüşümü düşürür.
+
+**Soru:** Bu bilgi gerçekten şimdi gerekli mi?
+
+### Progress Göster
+
+Uzun formlarda:
+- Adım sayısı
+- Progress bar
+- "2 dakika sürer" gibi tahmin
+
+### Güven Sinyalleri
+
+- SSL/güvenlik rozeti
+- Gizlilik bildirimi
+- Müşteri yorumları (checkout'ta)
+
+### Autofill Desteği
+
+Doğru autocomplete attribute'ları:
+${'```'}html
+
+
+
+${'```'}
+
+---
+
+## Mobil Form Tasarımı
+
+### Touch Target
+
+Minimum 44x44px, ideal 48x48px.
+
+### Klavye
+
+Doğru input type = doğru klavye.
+
+### Tek Kolon
+
+Mobilde her zaman tek kolon.
+
+### Sticky Submit
+
+Uzun formlarda submit butonu sticky/fixed olabilir.
+
+### Autofocus
+
+İlk input'a otomatik focus (dikkatli kullan, accessibility).
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**25 dakika**
+
+**Görev:** Bir iletişim formu tasarla.
+
+**Gerekli alanlar:**
+- Ad Soyad
+- Email
+- Telefon (opsiyonel)
+- Konu (dropdown)
+- Mesaj (textarea)
+
+**Adımlar:**
+
+1. **Layout çiz (5 dk)**
+   - Tek kolon
+   - Alan sıralaması
+   - Gruplama
+
+2. **Her input için state'leri tanımla (8 dk)**
+   - Default
+   - Focus
+   - Error
+   - Success (email için)
+
+3. **Hata mesajları yaz (5 dk)**
+   - Ad Soyad boş
+   - Email geçersiz
+   - Mesaj çok kısa
+
+4. **Validation stratejisi belirle (3 dk)**
+   - Ne zaman validate edilecek?
+   - Nasıl gösterilecek?
+
+5. **Submit butonu (2 dk)**
+   - Metin
+   - State'ler (default, hover, loading, disabled)
+
+6. **Erişilebilirlik checklist (2 dk)**
+   - Label association
+   - Required indicator
+   - Error announcement
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Label üstte, her zaman görünür (floating label riskli)
+- Placeholder label yerine kullanma, sadece örnek format
+- Doğru input type = mobilde doğru klavye
+- Tüm state'ler: default, focus, filled, disabled, error, success
+- Validation: on blur + on submit kombinasyonu
+- Hata mesajları: spesifik, yapıcı, insan dilinde
+- Tek kolon layout önerilir
+- Zorunlu alanları * ile işaretle, açıklama ekle
+- Her ek alan dönüşümü düşürür, minimum bilgi iste
+- Erişilebilirlik: label association, aria attributes, klavye
+- Mobilde 44-48px touch target
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Onboarding UX Tasarımı](/kutuphane/onboarding-ux-tasarimi)
+
+**Sonraki:** Error State Tasarımı *(yakında)*
+
+**İlgili konular:**
+- [UX Writing Temelleri](/kutuphane/ux-writing-temelleri)
+- [Accessibility Temelleri](/kutuphane/accessibility-temelleri)
+- [Micro-interactions Tasarımı](/kutuphane/micro-interactions-tasarimi)
+
+**İlgili Roadmap:** UI Designer Roadmap → Component Design
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Form Design Patterns - Adam Silver](https://formdesignpatterns.com/) (Kitap, kapsamlı)
+- [Web Form Design - Luke Wroblewski](https://www.lukew.com/resources/web_form_design.asp) (Klasik kaynak)
+- [Form Design - NNGroup](https://www.nngroup.com/articles/web-form-design/) (İngilizce)
+- [Baymard Institute - Form Usability](https://baymard.com/blog/form-field-usability) (İngilizce, araştırma bazlı)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
