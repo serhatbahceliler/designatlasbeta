@@ -15703,6 +15703,521 @@ Derinleşmek istersen:
 - [Card Sorting - Donna Spencer](https://rosenfeldmedia.com/books/card-sorting/) (Kitap)
 `,
   },
+  "usability-metrics-kpi": {
+    id: "usability-metrics-kpi",
+    title: "Usability Metrics ve KPI'lar",
+    subtitle: "UX Başarısını Ölçme ve Raporlama",
+    titleEn: "Usability Metrics and KPIs",
+    slug: "usability-metrics-kpi",
+    description: "Usability metrikleri nedir? Task success rate, time on task, SUS, NPS, error rate. UX KPI belirleme ve stakeholder'lara raporlama rehberi.",
+    category: "ux-research",
+    readingTime: 14,
+    featured: false,
+    publishedAt: "2025-01-17",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Usability Metrics ve KPI'lar: UX Başarısını Ölçme ve Raporlama
+
+**Seviye:** Orta
+**Kategori:** UX Research
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+"Tasarımı iyileştirdik."
+"Ne kadar iyileştirdiniz?"
+"Şey... daha iyi görünüyor?"
+
+Bu diyalog, UX'in en büyük sorunlarından birini gösteriyor: ölçümsüz çalışma. "Daha iyi" ne demek? Kim için? Ne kadar?
+
+**Usability metrics**, kullanıcı deneyimini rakamlarla ifade etmenin yolu. Subjektif "güzel/kötü" yerine, objektif veriler. Stakeholder'lara "trust me" demek yerine, kanıtla konuşmak.
+
+Bu yazıda temel usability metriklerini, nasıl ölçüleceğini ve sonuçların nasıl raporlanacağını öğreneceksin.
+
+---
+
+## Neden Ölçüm Önemli?
+
+### 1. Kanıta dayalı kararlar
+
+Varsayım yerine veri. "Bence" yerine "veriler gösteriyor ki".
+
+### 2. İlerlemeyi takip
+
+Başlangıç noktası (baseline) belirle, değişimi ölç.
+
+### 3. Stakeholder güveni
+
+Rakamlar ikna eder. "UX yatırımı işe yarıyor" demek için kanıt.
+
+### 4. Önceliklendirme
+
+Hangi sorun daha büyük? Veri, önceliklendirmeye yardımcı olur.
+
+### 5. Benchmark
+
+Rakiplerle, sektör ortalamasıyla karşılaştır.
+
+[INFO]
+**68**
+SUS skorunda "ortalama" kabul edilen değer
+[/INFO]
+
+---
+
+## Metrik Türleri
+
+### Davranışsal (Behavioral)
+
+Kullanıcının ne yaptığı.
+
+- Task success rate
+- Time on task
+- Error rate
+- Clicks/taps to complete
+- Navigation paths
+
+### Tutumsal (Attitudinal)
+
+Kullanıcının ne düşündüğü/hissettiği.
+
+- Satisfaction scores
+- SUS
+- NPS
+- CSAT
+- Ease of use ratings
+
+### Nicel (Quantitative)
+
+Rakamlarla ifade edilen, istatistiksel analiz yapılabilen.
+
+### Nitel (Qualitative)
+
+Derinlemesine anlayış sağlayan, "neden" sorusunu cevaplayan.
+
+---
+
+## Temel Usability Metrikleri
+
+### 1. Task Success Rate (Görev Başarı Oranı)
+
+Görevi başarıyla tamamlayan kullanıcı yüzdesi.
+
+[FORMÜL KUTUSU]
+Başlık: Task Success Rate
+Formül: Başarılı tamamlama sayısı / Toplam deneme sayısı × 100
+Açıklama: Görevi başarıyla tamamlayan kullanıcı yüzdesi
+Örnek: 15 kullanıcıdan 12'si görevi tamamladı = %80 success rate
+[/FORMÜL KUTUSU]
+
+**Türleri:**
+- Binary (tamamladı / tamamlamadı)
+- Levels (tam başarı / kısmi başarı / başarısız)
+
+**Hedefler:**
+- %78+ = kabul edilebilir
+- %90+ = iyi
+- %95+ = mükemmel
+
+### 2. Time on Task (Görev Süresi)
+
+Görevi tamamlama süresi.
+
+**Ölçüm:**
+- Ortalama süre
+- Medyan süre (aykırı değerlerden etkilenmez)
+- Optimal süre ile karşılaştırma
+
+**Dikkat:** Kısa her zaman iyi değil. Bazı görevlerde düşünme süresi gerekli.
+
+### 3. Error Rate (Hata Oranı)
+
+Kullanıcıların yaptığı hata sayısı.
+
+[FORMÜL KUTUSU]
+Başlık: Error Rate
+Formül: Toplam hata sayısı / Toplam görev denemesi
+Açıklama: Kullanıcıların yaptığı hata oranı
+Örnek: 20 görev denemesinde 5 hata = 0.25 error rate
+[/FORMÜL KUTUSU]
+
+**Hata türleri:**
+- Slip (dikkatsizlik hatası)
+- Mistake (yanlış anlama hatası)
+- Critical error (görevi engelleyen)
+- Non-critical error (düzeltilebilen)
+
+### 4. Learnability (Öğrenilebilirlik)
+
+İlk kullanım vs sonraki kullanımlar arasındaki fark.
+
+**Ölçüm:**
+- İlk deneme success rate vs 3. deneme
+- İlk deneme süresi vs 3. deneme
+- Öğrenme eğrisi
+
+### 5. Efficiency
+
+Deneyimli kullanıcının görevi ne kadar hızlı tamamladığı.
+
+**Ölçüm:**
+- Expert time vs novice time
+- Clicks/taps sayısı
+- Steps to completion
+
+---
+
+## Standart Anketler
+
+### SUS (System Usability Scale)
+
+1986'dan beri kullanılan, 10 soruluk standart anket.
+
+**Sorular (1-5 ölçek, Kesinlikle katılmıyorum - Kesinlikle katılıyorum):**
+
+1. Bu sistemi sık sık kullanmak isterim.
+2. Sistemi gereksiz yere karmaşık buldum.
+3. Sistemin kullanımının kolay olduğunu düşündüm.
+4. Bu sistemi kullanmak için teknik desteğe ihtiyacım olacağını düşünüyorum.
+5. Sistemdeki çeşitli işlevlerin iyi entegre edildiğini gördüm.
+6. Bu sistemde çok fazla tutarsızlık olduğunu düşündüm.
+7. Çoğu insanın bu sistemi çok çabuk kullanmayı öğreneceğini düşünüyorum.
+8. Sistemi kullanmayı çok hantal buldum.
+9. Sistemi kullanırken kendime çok güvendim.
+10. Bu sistemi kullanmaya başlamadan önce çok şey öğrenmem gerekti.
+
+**Hesaplama:**
+
+[FORMÜL KUTUSU]
+Başlık: SUS Hesaplama
+Formül: 
+1. Tek numaralı sorular (1,3,5,7,9): Her birinden 1 çıkar
+2. Çift numaralı sorular (2,4,6,8,10): Her birini 5'ten çıkar
+3. Tüm değerleri topla
+4. Toplamı 2.5 ile çarp
+Açıklama: Sonuç 0-100 arası skor
+Örnek: Toplam 28 → 28 × 2.5 = 70 SUS skoru
+[/FORMÜL KUTUSU]
+
+**Yorumlama:**
+- 0-50: Zayıf
+- 51-67: Ortanın altı
+- 68: Ortalama
+- 69-80: İyi
+- 81-100: Mükemmel
+
+[TIP]
+💡 SUS'un güçlü yanı: Sektörler arası benchmark yapabilirsin. 30+ yıllık veri var.
+[/TIP]
+
+### NPS (Net Promoter Score)
+
+Tek soruyla ölçülen tavsiye olasılığı.
+
+**Soru:**
+"Bu ürünü/hizmeti bir arkadaşınıza veya meslektaşınıza tavsiye etme olasılığınız nedir?" (0-10)
+
+**Kategoriler:**
+- 9-10: Promoters (destekçiler)
+- 7-8: Passives (pasifler)
+- 0-6: Detractors (eleştirmenler)
+
+[FORMÜL KUTUSU]
+Başlık: NPS Hesaplama
+Formül: NPS = %Promoters - %Detractors
+Açıklama: Tavsiye olasılığı skoru
+Örnek: %50 promoter, %30 passive, %20 detractor → NPS = 50 - 20 = +30
+[/FORMÜL KUTUSU]
+
+**Yorumlama:**
+- -100 ile 0: Kötü
+- 0-30: İyi
+- 30-70: Çok iyi
+- 70-100: Mükemmel
+
+### CSAT (Customer Satisfaction Score)
+
+Memnuniyet ölçümü.
+
+**Soru:**
+"Bu deneyimden ne kadar memnunsunuz?" (1-5 veya 1-7)
+
+[FORMÜL KUTUSU]
+Başlık: CSAT Hesaplama
+Formül: CSAT = (Memnun yanıtlar / Toplam yanıt) × 100
+Açıklama: Memnuniyet yüzdesi
+Örnek: 100 yanıttan 75'i memnun (4-5) → CSAT = 75%
+[/FORMÜL KUTUSU]
+
+### CES (Customer Effort Score)
+
+Efor ölçümü.
+
+**Soru:**
+"Bu görevi tamamlamak ne kadar kolaydı?" (1-7)
+
+Düşük efor = iyi UX
+
+### SEQ (Single Ease Question)
+
+Görev sonrası tek soru.
+
+**Soru:**
+"Bu görevi tamamlamak ne kadar kolaydı?" (1-7)
+
+Her görev sonrası sorulabilir, hızlı feedback.
+
+---
+
+## HEART Framework
+
+Google'ın geliştirdiği kapsamlı UX metrik çerçevesi.
+
+### Beş Boyut
+
+**H - Happiness (Memnuniyet)**
+Kullanıcının subjektif hissi.
+Metrikler: CSAT, NPS, SUS
+
+**E - Engagement (Etkileşim)**
+Kullanıcının ürünle etkileşim derinliği.
+Metrikler: Session süresi, sayfa/oturum, özellik kullanımı
+
+**A - Adoption (Benimseme)**
+Yeni kullanıcıların ürünü benimsemesi.
+Metrikler: Yeni kayıtlar, feature adoption rate
+
+**R - Retention (Tutundurma)**
+Kullanıcıların geri dönmesi.
+Metrikler: Churn rate, return rate, DAU/MAU
+
+**T - Task Success (Görev Başarısı)**
+Kullanıcının görevleri tamamlayabilmesi.
+Metrikler: Success rate, time on task, error rate
+
+### Goals-Signals-Metrics
+
+Her HEART boyutu için:
+
+1. **Goal:** Ne başarmak istiyoruz?
+2. **Signal:** Başarıyı/başarısızlığı gösteren kullanıcı davranışı
+3. **Metric:** Signal'i ölçen spesifik metrik
+
+**Örnek - Task Success:**
+- Goal: Kullanıcılar checkout'u kolayca tamamlasın
+- Signal: Tamamlama oranı, terk oranı
+- Metric: Checkout completion rate, cart abandonment rate
+
+---
+
+## Metrik Seçimi
+
+### Her Proje İçin Değil
+
+Tüm metrikleri her zaman ölçme. Amaca göre seç.
+
+**Yeni ürün lansmanı:**
+- Adoption, Retention, NPS
+
+**Redesign:**
+- Task success (önce/sonra), SUS, Time on task
+
+**Optimizasyon:**
+- Conversion rate, Error rate, CES
+
+### Actionable Metrikler
+
+Ölçtüğün metrik, aksiyon alınabilir olmalı.
+
+[COMPARISON]
+❌ Vanity metric: "Toplam kayıt sayısı arttı" (aktif mi?)
+✅ Actionable metric: "7 gün içinde geri dönen kullanıcı oranı" (retention)
+[/COMPARISON]
+
+### Leading vs Lagging
+
+**Leading indicators:** Gelecek performansı tahmin eden
+- Onboarding completion rate → Retention'ı tahmin eder
+
+**Lagging indicators:** Sonucu gösteren
+- Revenue, churn → olmuş bitmiş
+
+Her ikisi de gerekli, ama leading indicator'lar proaktif aksiyon için daha değerli.
+
+---
+
+## Baseline ve Benchmark
+
+### Baseline (Başlangıç Noktası)
+
+Değişiklik öncesi mevcut durum.
+
+Baseline olmadan "iyileştirdik" diyemezsin.
+
+**Nasıl oluşturulur:**
+1. Mevcut tasarımda test yap
+2. Metrikleri kaydet
+3. Değişiklik sonrası aynı metrikleri ölç
+4. Karşılaştır
+
+### Benchmark (Karşılaştırma Noktası)
+
+Dış referans: rakipler, sektör ortalaması.
+
+**Kaynaklar:**
+- Sektör raporları
+- SUS global ortalaması (68)
+- Rakip analizi bulguları
+- Kendi geçmiş veriler
+
+---
+
+## Raporlama
+
+### Stakeholder'a Göre Uyarla
+
+**Executive:**
+- Özet, tek sayfa
+- İş etkisi
+- Trend (yukarı/aşağı)
+
+**PM:**
+- Detaylı metrikler
+- Feature bazlı breakdown
+- Öncelikli sorunlar
+
+**Developer:**
+- Spesifik sorun alanları
+- Hata senaryoları
+
+### Görselleştirme
+
+- Trend grafikleri (zaman serisi)
+- Before/after karşılaştırma
+- Benchmark çizgisi
+- Renk kodlaması (yeşil/kırmızı)
+
+### Bağlam Ver
+
+Rakam tek başına anlamsız.
+
+[COMPARISON]
+❌ Kötü: "SUS skoru 72"
+✅ İyi: "SUS skoru 72 (sektör ortalaması 68'in üzerinde, geçen çeyrekten 8 puan artış)"
+[/COMPARISON]
+
+---
+
+## Sık Yapılan Hatalar
+
+### 1. Çok fazla metrik
+
+Her şeyi ölçmeye çalışmak = hiçbir şeyi iyi ölçememek.
+
+3-5 ana metrik yeterli.
+
+### 2. Baseline olmadan ölçüm
+
+"İyileştirdik" demek için önce başlangıç noktası lazım.
+
+### 3. Bağlamsız rakam
+
+"Task success %75" - iyi mi kötü mü? Hedef neydi? Daha önce neydi?
+
+### 4. Nicel-nitel dengesizliği
+
+Sadece rakamlar "neden" sorusunu cevaplamaz. Nitel veriyle destekle.
+
+### 5. Vanity metrics
+
+Etkileyici görünen ama aksiyon sağlamayan metrikler.
+
+### 6. Small sample size
+
+5 kullanıcıdan çıkan yüzde güvenilir değil.
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**25 dakika**
+
+**Görev:** Bir e-ticaret checkout akışı için metrik planı oluştur.
+
+**Senaryo:** Checkout terk oranı yüksek, iyileştirme projesi başlıyor.
+
+**Adımlar:**
+
+1. **HEART boyutlarından 3 tane seç (5 dk)**
+   Bu proje için en alakalı boyutlar hangileri? Neden?
+
+2. **Her boyut için GSM (10 dk)**
+   
+   | Boyut | Goal | Signal | Metric |
+   |-------|------|--------|--------|
+   | ? | ? | ? | ? |
+   | ? | ? | ? | ? |
+   | ? | ? | ? | ? |
+
+3. **Anket soruları belirle (5 dk)**
+   Checkout sonrası hangi soruları sorarsın?
+   - Task difficulty (SEQ)
+   - Overall satisfaction (CSAT)
+   - Başka?
+
+4. **Baseline planı (5 dk)**
+   - Hangi metrikleri şimdi ölçeceksin?
+   - Kaç kullanıcıdan veri toplaman gerek?
+   - Ne zaman "sonra" ölçümü yapacaksın?
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Usability metrikleri = UX'i rakamlarla ifade etme
+- Davranışsal (ne yaptı) vs Tutumsal (ne hissetti)
+- Temel metrikler: Task success rate, Time on task, Error rate
+- SUS: 10 soruluk standart anket, 0-100 skor, 68 ortalama
+- NPS: Tavsiye olasılığı, %Promoter - %Detractor
+- HEART: Happiness, Engagement, Adoption, Retention, Task Success
+- Goals → Signals → Metrics yaklaşımı
+- Baseline olmadan "iyileştirme" ölçülemez
+- 3-5 ana metrik yeterli, çok fazla = odak kaybı
+- Rakamları bağlamla sun: benchmark, trend, hedef
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Card Sorting ve Tree Testing](/kutuphane/card-sorting-tree-testing)
+
+**Sonraki:** Analytics ve UX *(yakında)*
+
+**İlgili konular:**
+- [Kullanılabilirlik Testi](/kutuphane/kullanilabilirlik-testi)
+- [A/B Test Temelleri](/kutuphane/ab-test-temelleri)
+- [Anket Tasarımı](/kutuphane/anket-tasarimi)
+
+**İlgili Roadmap:** UX Designer Roadmap → Research & Metrics
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Measuring the User Experience - Tom Tullis & Bill Albert](https://www.elsevier.com/books/measuring-the-user-experience/tullis/978-0-12-415781-1) (Kitap, temel kaynak)
+- [HEART Framework - Google](https://research.google/pubs/pub36299/) (İngilizce, orijinal paper)
+- [SUS - Usability.gov](https://www.usability.gov/how-to-and-tools/methods/system-usability-scale.html) (İngilizce)
+- [NPS - Bain & Company](https://www.netpromotersystem.com/) (İngilizce)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
