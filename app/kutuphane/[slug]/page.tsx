@@ -16756,6 +16756,539 @@ Derinleşmek istersen:
 - [Designer-Developer Collaboration - NNGroup](https://www.nngroup.com/articles/developer-designer-collaboration/) (İngilizce)
 `,
   },
+  "design-qa-review": {
+    id: "design-qa-review",
+    title: "Design QA ve Review",
+    subtitle: "Implementasyonu Tasarımla Karşılaştırma",
+    titleEn: "Design QA and Review",
+    slug: "design-qa-review",
+    description: "Design QA nedir? Implementasyon kontrolü, pixel-perfect review, bug raporlama ve developer iş birliği. Kaliteli çıktı için QA rehberi.",
+    category: "ux-design",
+    readingTime: 12,
+    featured: false,
+    publishedAt: "2025-01-17",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Design QA ve Review: Implementasyonu Tasarımla Karşılaştırma
+
+**Seviye:** Orta
+**Kategori:** UX Design
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Tasarımı teslim ettin, developer kodladı. İş bitti mi?
+
+Hayır. Arada kayıp yaşanabilir: Yanlış spacing, eksik state, farklı renk tonu, bozuk responsive davranış. Bunları yakalamak için **Design QA** gerekiyor.
+
+Design QA, "tasarladığım şey mi çıktı?" sorusunun cevabı. Pixel polisliği değil, kalite garantisi. Kullanıcıya ulaşan ürünün tasarım vizyonuna sadık olması için son kontrol.
+
+Bu yazıda Design QA sürecini, nelere bakılacağını ve etkili bug raporlamayı öğreneceksin.
+
+---
+
+## Design QA Nedir?
+
+[CALLOUT BOX]
+**Design QA (Quality Assurance):**
+Kodlanmış ürünün orijinal tasarıma ne kadar sadık olduğunu sistematik olarak kontrol etme süreci. Görsel, interaktif ve responsive açıdan implementasyonu tasarımla karşılaştırma.
+[/CALLOUT BOX]
+
+**QA kapsamı:**
+- Görsel doğruluk (spacing, color, typography)
+- Interaksiyon kalitesi (hover, focus, animasyon)
+- Responsive davranış (breakpoint'ler)
+- State'lerin varlığı (error, loading, empty)
+- Erişilebilirlik kontrolleri
+- Cross-browser/device uyumu
+
+---
+
+## Neden Design QA?
+
+### 1. Kalite garantisi
+
+Tasarım detaylarının korunması.
+
+### 2. Kullanıcı deneyimi
+
+Küçük hatalar bile UX'i bozabilir.
+
+### 3. Marka tutarlılığı
+
+Tutarsız implementasyon = tutarsız marka algısı.
+
+### 4. Teknik borç önleme
+
+Erken yakalamak, sonra düzeltmekten kolay.
+
+### 5. Tasarımcı-developer ilişkisi
+
+Geri bildirim döngüsü, karşılıklı öğrenme.
+
+[INFO]
+**15%**
+Ortalama bir projede tasarım-implementasyon uyumsuzluğu oranı
+[/INFO]
+
+---
+
+## Pixel-Perfect Tartışması
+
+### Gerçekçi Yaklaşım
+
+Kesin pixel-perfect çoğu zaman:
+- Pratik değil (farklı render engine'ler)
+- Zaman kaybı (1px için saatler)
+- Gereksiz sürtüşme
+
+### Kabul Edilebilir Toleranslar
+
+[TABLO]
+| Özellik | Kabul Edilebilir | Kabul Edilemez |
+|---------|------------------|----------------|
+| Spacing | ±2px | ±8px+ |
+| Font size | Doğru olmalı | Farklı boyut |
+| Color | Aynı token | Farklı renk |
+| Border radius | ±1px | ±4px+ |
+| Animasyon | Benzer hissiyat | Tamamen farklı |
+[/TABLO]
+
+### Önemli Olan
+
+- Görsel tutarlılık
+- Spacing sistemi uyumu
+- Design token doğruluğu
+- Interaksiyon kalitesi
+- Responsive davranış
+
+---
+
+## QA Kontrol Alanları
+
+### 1. Typography
+
+[CHECKLIST]
+✓ Font family doğru mu?
+✓ Font size doğru mu?
+✓ Font weight doğru mu?
+✓ Line height doğru mu?
+✓ Letter spacing doğru mu?
+✓ Renk doğru mu?
+✓ Truncation doğru çalışıyor mu?
+[/CHECKLIST]
+
+### 2. Spacing
+
+[CHECKLIST]
+✓ Padding değerleri doğru mu?
+✓ Margin değerleri doğru mu?
+✓ Gap'ler tutarlı mı?
+✓ Section spacing doğru mu?
+✓ 8px grid'e uyuyor mu?
+[/CHECKLIST]
+
+### 3. Renkler
+
+[CHECKLIST]
+✓ Brand color'lar doğru mu?
+✓ Semantic color'lar doğru mu? (error, success)
+✓ Opacity değerleri doğru mu?
+✓ Gradient'lar doğru mu?
+✓ Dark mode renkleri doğru mu?
+[/CHECKLIST]
+
+### 4. Component'ler
+
+[CHECKLIST]
+✓ Border radius doğru mu?
+✓ Shadow doğru mu?
+✓ Border style/width/color doğru mu?
+✓ İkon boyutları doğru mu?
+✓ İkon renkleri doğru mu?
+[/CHECKLIST]
+
+### 5. State'ler
+
+[CHECKLIST]
+✓ Default state doğru mu?
+✓ Hover state var mı ve doğru mu?
+✓ Focus state var mı ve doğru mu?
+✓ Active/pressed state doğru mu?
+✓ Disabled state doğru mu?
+✓ Error state doğru mu?
+✓ Loading state doğru mu?
+✓ Empty state doğru mu?
+[/CHECKLIST]
+
+### 6. Interaksiyon
+
+[CHECKLIST]
+✓ Animasyon timing doğru mu?
+✓ Animasyon easing doğru mu?
+✓ Transition smooth mu?
+✓ Micro-interaction'lar var mı?
+✓ Feedback anlaşılır mı?
+[/CHECKLIST]
+
+### 7. Responsive
+
+[CHECKLIST]
+✓ Mobile görünüm doğru mu?
+✓ Tablet görünüm doğru mu?
+✓ Desktop görünüm doğru mu?
+✓ Breakpoint geçişleri smooth mu?
+✓ Taşma/overflow var mı?
+✓ Touch target'lar yeterli mi?
+[/CHECKLIST]
+
+### 8. Erişilebilirlik
+
+[CHECKLIST]
+✓ Kontrast oranları yeterli mi?
+✓ Focus göstergesi görünür mü?
+✓ Klavye navigasyonu çalışıyor mu?
+✓ Alt text'ler var mı?
+✓ Form label'ları doğru mu?
+[/CHECKLIST]
+
+---
+
+## QA Süreci
+
+### Hazırlık
+
+1. **Tasarım dosyasını hazır tut**
+   Karşılaştırma için referans
+
+2. **Test ortamını belirle**
+   Staging URL, test hesapları
+
+3. **Cihaz/browser listesi**
+   Hangi kombinasyonlar test edilecek?
+
+4. **Checklist hazırla**
+   Kontrol edilecek alanlar
+
+### Uygulama
+
+[ADIM LİSTESİ]
+1. **Genel bakış (5 dk)**
+   İlk izlenim, büyük sorunlar var mı?
+
+2. **Ekran ekran karşılaştırma (değişken)**
+   Figma'yı yan yana açarak kontrol
+
+3. **State kontrolleri (10-15 dk)**
+   Her interaktif element için state'ler
+
+4. **Responsive test (10-15 dk)**
+   Farklı ekran boyutlarında kontrol
+
+5. **Interaction test (10 dk)**
+   Animasyonlar, geçişler, feedback
+
+6. **Cross-browser (değişken)**
+   Chrome, Safari, Firefox minimum
+
+7. **Bug listesi oluştur**
+   Tüm bulguları belgele
+[/ADIM LİSTESİ]
+
+### Raporlama
+
+Bulguları düzenli şekilde belgele ve paylaş.
+
+---
+
+## Bug Raporlama
+
+### İyi Bug Raporu İçeriği
+
+1. **Başlık:** Kısa, açıklayıcı
+2. **Konum:** Hangi sayfa, hangi element
+3. **Beklenen:** Tasarımda nasıl olmalı
+4. **Gerçek:** Şu an nasıl görünüyor
+5. **Screenshot:** Görsel kanıt (annotated)
+6. **Cihaz/browser:** Test ortamı bilgisi
+7. **Öncelik:** Severity level
+
+### Öncelik Seviyeleri
+
+[TABLO]
+| Seviye | Açıklama | Örnek |
+|--------|----------|-------|
+| **Critical** | Kullanılamaz, engelleyici | Buton çalışmıyor, sayfa açılmıyor |
+| **Major** | Ciddi görsel/fonksiyonel sorun | Yanlış renk, eksik state |
+| **Minor** | Küçük görsel fark | 4px spacing farkı, hafif ton farkı |
+| **Enhancement** | İyileştirme önerisi | Animasyon eklenebilir |
+[/TABLO]
+
+### Bug Raporu Şablonu
+${'```'}
+BUG BAŞLIĞI: [Kısa açıklama]
+
+Konum: [Sayfa > Section > Element]
+Cihaz/Browser: [örn. Chrome 120, macOS]
+Öncelik: [Critical / Major / Minor]
+
+Beklenen:
+[Tasarımda nasıl olmalı - screenshot veya açıklama]
+
+Gerçek:
+[Şu an nasıl görünüyor - screenshot]
+
+Not:
+[Ek bilgi varsa]
+${'```'}
+
+### Screenshot Best Practices
+
+**Karşılaştırmalı göster:**
+Sol: Beklenen (Figma)
+Sağ: Gerçek (implementasyon)
+
+**Annotate et:**
+- Sorunlu alanı işaretle
+- Ok veya daire ile vurgula
+- Değer farklarını yaz
+
+**Araçlar:**
+- macOS: Cmd+Shift+4
+- Windows: Snipping Tool
+- Chrome: DevTools screenshot
+- Markup: Skitch, Monosnap, CleanShot
+
+---
+
+## Karşılaştırma Teknikleri
+
+### Yan Yana Karşılaştırma
+
+Figma ve browser yan yana.
+
+**Yöntem:**
+1. Figma'da ekranı aç
+2. Browser'da aynı sayfa
+3. İkisini yan yana koy
+4. Detay detay karşılaştır
+
+### Overlay Karşılaştırma
+
+Tasarımı implementasyon üzerine koyma.
+
+**Araçlar:**
+- PixelSnap
+- PerfectPixel (Chrome extension)
+- xScope
+
+**Dikkat:** Tam eşleşme bekleme, kritik farklara odaklan.
+
+### DevTools Kullanımı
+
+Browser DevTools ile değerleri kontrol et.
+
+**Kontrol edilecekler:**
+- Computed styles (gerçek değerler)
+- Box model (padding, margin)
+- Typography values
+- Color values
+
+---
+
+## QA Araçları
+
+[TABLO]
+| Araç | Kullanım |
+|------|----------|
+| **PerfectPixel** | Overlay karşılaştırma (Chrome) |
+| **PixelSnap** | Ölçüm (macOS) |
+| **ColorZilla** | Renk değeri alma (Chrome) |
+| **WAVE** | Erişilebilirlik kontrolü |
+| **Responsively** | Multi-device preview |
+| **BrowserStack** | Cross-browser testing |
+| **Loom** | Video ile bug raporlama |
+[/TABLO]
+
+---
+
+## Developer İş Birliği
+
+### Yapıcı Yaklaşım
+
+[COMPARISON]
+❌ Kötü: "Bu tamamen yanlış olmuş"
+✅ İyi: "Burada spacing 24px yerine 16px görünüyor, design token'ı kontrol edebilir misin?"
+[/COMPARISON]
+
+### İletişim Tonu
+
+- Suçlama değil, çözüm odaklı
+- Spesifik ol, genelleme yapma
+- Önceliklendirmeyi paylaş
+- Kritik olmayanları bekletebileceğini söyle
+
+### Tradeoff Anlayışı
+
+Bazen teknik kısıtlar var:
+- Browser desteği sorunu
+- Performans endişesi
+- Zaman baskısı
+
+Anlayışlı ol, esnek ol. Her şey düzelmezse dünya yıkılmaz.
+
+### QA Review Toplantısı
+
+Büyük feature'larda yüz yüze review:
+
+1. Ekran paylaşarak beraber gez
+2. Bug listesini birlikte incele
+3. Önceliklendirmeyi tartış
+4. Timeline belirle
+
+---
+
+## QA Zamanlama
+
+### Ne Zaman?
+
+**İdeal:** Development bittikten hemen sonra, staging'de
+
+**Kaçınılması gereken:** Production'a çıktıktan sonra
+
+### Sprint İçinde QA
+
+1. Developer feature'ı bitirir
+2. Test ortamına deploy
+3. Designer QA yapar (aynı gün/ertesi gün)
+4. Bug'lar açılır
+5. Developer düzeltir
+6. Re-QA (gerekirse)
+7. Production'a çıkar
+
+### Continuous QA
+
+Her feature ayrı QA'den geçer. Sprint sonunda toplu QA yerine, sürekli kontrol.
+
+---
+
+## Yaygın Sorunlar
+
+### 1. Spacing tutarsızlıkları
+
+**Neden:** Hardcoded değerler, token kullanılmamış
+**Çözüm:** Token sistemine geçiş, component library
+
+### 2. Eksik state'ler
+
+**Neden:** Handoff'ta belirtilmemiş veya atlanmış
+**Çözüm:** Daha kapsamlı handoff, state checklist
+
+### 3. Animasyon farklılıkları
+
+**Neden:** Spec belirsiz veya teknik kısıt
+**Çözüm:** Animasyon spec'lerini detaylandır
+
+### 4. Responsive bozukluklar
+
+**Neden:** Tüm breakpoint'ler tasarlanmamış
+**Çözüm:** Responsive tasarımı tamamla
+
+### 5. Cross-browser farklılıklar
+
+**Neden:** Browser rendering farklılıkları
+**Çözüm:** Browser support listesi, fallback'ler
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**25 dakika**
+
+**Görev:** Bir web sayfasında design QA yap.
+
+**Senaryo:** Favori bir web sitesini (veya kendi projen varsa onu) QA et.
+
+**Adımlar:**
+
+1. **Sayfa seç ve screenshot al (3 dk)**
+   Bir landing page veya dashboard
+
+2. **Typography kontrolü (5 dk)**
+   - Font size'lar tutarlı mı?
+   - Hierarchy net mi?
+   - Renk kontrastı yeterli mi?
+
+3. **Spacing kontrolü (5 dk)**
+   - DevTools ile padding/margin kontrol et
+   - Tutarlı mı yoksa rastgele mi?
+
+4. **State kontrolü (5 dk)**
+   - Butonlara hover et
+   - Input'lara focus ver
+   - State'ler var mı?
+
+5. **Responsive test (5 dk)**
+   - DevTools'ta mobile boyuta getir
+   - Kırılan bir şey var mı?
+
+6. **3 bug/improvement yaz (2 dk)**
+   Bug şablonunu kullanarak 3 bulgu belgele
+
+**Format:**
+| # | Başlık | Konum | Öncelik | Açıklama |
+|---|--------|-------|---------|----------|
+| 1 | ? | ? | ? | ? |
+| 2 | ? | ? | ? | ? |
+| 3 | ? | ? | ? | ? |
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Design QA = implementasyonu tasarımla karşılaştırma
+- Pixel-perfect değil, görsel tutarlılık ve kalite odaklı
+- Kontrol alanları: typography, spacing, color, state, interaction, responsive
+- Bug raporu: konum, beklenen, gerçek, screenshot, öncelik
+- Öncelik: Critical > Major > Minor > Enhancement
+- Yan yana veya overlay karşılaştırma teknikleri
+- DevTools ile değer kontrolü
+- Yapıcı ve çözüm odaklı iletişim
+- Continuous QA, sprint sonunda değil sürekli
+- Tradeoff'ları anla, esnek ol
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Design Handoff](/kutuphane/design-handoff)
+
+**Sonraki:** Onboarding UX Tasarımı *(yakında)*
+
+**İlgili konular:**
+- [Design Handoff](/kutuphane/design-handoff)
+- [Design Critique](/kutuphane/design-critique)
+- [Accessibility Temelleri](/kutuphane/accessibility-temelleri)
+
+**İlgili Roadmap:** UX Designer Roadmap → Workflow & Process
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Design QA Best Practices - Figma](https://www.figma.com/best-practices/design-qa/) (İngilizce)
+- [Visual QA - Smashing Magazine](https://www.smashingmagazine.com/2021/03/visual-qa-checklist/) (İngilizce)
+- [PerfectPixel Extension](https://www.welldonecode.com/perfectpixel/) (Araç)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
