@@ -240,7 +240,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         },
       },
       {
-        regex: /\[TABLE\]([\s\S]*?)\[\/TABLE\]/g,
+        regex: /\[TABLO\]([\s\S]*?)\[\/TABLO\]/g,
         component: (match: string, content: string) => {
           const lines = content.trim().split("\n").filter((l) => l.trim());
           const headers = lines[0]
