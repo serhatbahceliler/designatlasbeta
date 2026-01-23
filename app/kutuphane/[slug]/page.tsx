@@ -18547,6 +18547,608 @@ Derinleşmek istersen:
 - [Baymard Institute - Form Usability](https://baymard.com/blog/form-field-usability) (İngilizce, araştırma bazlı)
 `,
   },
+  "error-state-tasarimi": {
+    id: "error-state-tasarimi",
+    title: "Error State Tasarımı",
+    subtitle: "Hata Durumlarını Kullanıcı Dostu Hale Getirme",
+    titleEn: "Error State Design",
+    slug: "error-state-tasarimi",
+    description: "Error state tasarımı nasıl yapılır? Hata mesajları, 404 sayfaları, form validation, sistem hataları ve graceful degradation. Hata UX rehberi.",
+    category: "ux-design",
+    readingTime: 13,
+    featured: false,
+    publishedAt: "2025-01-18",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Error State Tasarımı: Hata Durumlarını Kullanıcı Dostu Hale Getirme
+
+**Seviye:** Başlangıç - Orta
+**Kategori:** UX Design
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Hatalar kaçınılmaz. Kullanıcı yanlış giriş yapar, internet bağlantısı kopar, sunucu çöker, sayfa bulunamaz.
+
+Önemli olan hatanın olup olmaması değil, hata olduğunda ne yaptığın.
+
+**Kötü error handling:** "Error 500" mesajı, kullanıcı ne yapacağını bilemiyor, frustrasyon, terk.
+
+**İyi error handling:** Net açıklama, yapıcı yönlendirme, marka tutarlılığı, güven korunuyor.
+
+Hatalar aslında fırsat: Empati göstermek, yardımcı olmak, hatta marka kişiliğini yansıtmak için. Bu yazıda hata durumlarını nasıl tasarlayacağını öğreneceksin.
+
+---
+
+## Error State Nedir?
+
+[CALLOUT BOX]
+**Error State:**
+Bir şeylerin beklendiği gibi gitmediği durumda kullanıcıya gösterilen arayüz durumu. Kullanıcı hatası (yanlış input), sistem hatası (sunucu sorunu), veya beklenen durum (sayfa bulunamadı) olabilir.
+[/CALLOUT BOX]
+
+**Hata türleri:**
+- Form validation hataları
+- Sayfa hataları (404, 500)
+- Bağlantı hataları (offline)
+- İzin hataları (yetkisiz erişim)
+- Zaman aşımı hataları
+- Veri hataları (yüklenemedi)
+
+---
+
+## Neden Error UX Önemli?
+
+### 1. Güven koruma
+
+Hata anında doğru iletişim güveni korur.
+
+### 2. Frustrasyon azaltma
+
+İyi yönlendirme frustrasyon yerine çözüm sunar.
+
+### 3. Kullanıcı tutma
+
+Hata sonrası yönlendirme, kullanıcıyı sitede tutar.
+
+### 4. Support yükü azaltma
+
+Net hata mesajları = daha az "ne oldu?" sorusu.
+
+### 5. Marka algısı
+
+Hata anında bile profesyonel görünmek marka değeri.
+
+[INFO]
+**%88**
+Kötü deneyim sonrası geri dönmeyeceğini söyleyen kullanıcı oranı
+[/INFO]
+
+---
+
+## Hata Mesajı Anatomisi
+
+İyi bir hata mesajı şu soruları cevaplar:
+
+### 1. Ne oldu?
+
+Hatayı spesifik açıkla.
+
+[COMPARISON]
+❌ Kötü: "Hata oluştu"
+✅ İyi: "Email adresi geçersiz format içeriyor"
+[/COMPARISON]
+
+### 2. Neden oldu?
+
+Mümkünse sebebi açıkla.
+
+[COMPARISON]
+❌ Kötü: "Giriş yapılamadı"
+✅ İyi: "Şifreniz yanlış. 3 deneme hakkınız kaldı."
+[/COMPARISON]
+
+### 3. Ne yapılabilir?
+
+Çözümü veya alternatifi göster.
+
+[COMPARISON]
+❌ Kötü: "Bağlantı hatası"
+✅ İyi: "İnternet bağlantınızı kontrol edin ve tekrar deneyin."
+[/COMPARISON]
+
+---
+
+## Hata Mesajı Yazım İlkeleri
+
+### 1. İnsan dilinde konuş
+
+[COMPARISON]
+❌ Kötü: "Error 422: Unprocessable Entity"
+✅ İyi: "Girdiğiniz bilgilerde bir sorun var"
+[/COMPARISON]
+
+### 2. Suçlayıcı olma
+
+[COMPARISON]
+❌ Kötü: "Yanlış email girdiniz"
+✅ İyi: "Bu email adresi geçerli görünmüyor"
+[/COMPARISON]
+
+### 3. Spesifik ol
+
+[COMPARISON]
+❌ Kötü: "Geçersiz girdi"
+✅ İyi: "Şifre en az 8 karakter, 1 büyük harf ve 1 rakam içermeli"
+[/COMPARISON]
+
+### 4. Kısa tut
+
+[COMPARISON]
+❌ Kötü: "Sistemimizde bir hata oluştu ve isteğinizi şu anda işleyemiyoruz. Lütfen daha sonra tekrar deneyiniz veya müşteri hizmetlerimizle iletişime geçiniz."
+✅ İyi: "Bir sorun oluştu. Lütfen tekrar deneyin."
+[/COMPARISON]
+
+### 5. Aksiyon sun
+
+Her hatada mümkünse bir sonraki adımı belirt.
+
+---
+
+## Hata Türleri ve Tasarımları
+
+### 1. Form Validation Hataları
+
+Input seviyesinde gösterilen hatalar.
+
+**Görsel:**
+- Kırmızı border
+- Hata ikonu (⚠️ veya ✕)
+- Input altında hata mesajı
+- Kırmızı metin rengi
+
+**Konum:**
+Hatalı input'un hemen altında.
+
+**Örnek:**
+${'```'}
+[Email input - kırmızı border]
+⚠️ Geçerli bir email adresi girin (örn: ad@ornek.com)
+${'```'}
+
+### 2. Form Seviyesi Hatalar
+
+Birden fazla alan veya genel form hatası.
+
+**Görsel:**
+- Form başında veya sonunda alert kutusu
+- Hatalı alanlara link verilebilir
+- Özet liste
+
+**Örnek:**
+${'```'}
+[Kırmızı alert kutusu]
+⚠️ Lütfen aşağıdaki alanları düzeltin:
+- Email adresi geçersiz
+- Şifre çok kısa
+${'```'}
+
+### 3. 404 - Sayfa Bulunamadı
+
+Aranılan sayfa mevcut değil.
+
+**İçerik:**
+- Net başlık ("Sayfa bulunamadı")
+- Kısa açıklama
+- Arama kutusu
+- Ana sayfa linki
+- Popüler sayfalar
+
+**Örnek yapı:**
+${'```'}
+[İllüstrasyon - 404]
+
+Aradığınız sayfa bulunamadı
+
+Bu sayfa taşınmış veya silinmiş olabilir.
+
+[Arama kutusu]
+
+veya [Ana Sayfaya Dön]
+
+Popüler sayfalar:
+- Ürünler
+- Hakkımızda
+- İletişim
+${'```'}
+
+### 4. 500 - Sunucu Hatası
+
+Sistem kaynaklı hata.
+
+**İçerik:**
+- Özür dile
+- Geçici olduğunu belirt
+- Tekrar deneme seçeneği
+- Alternatif iletişim
+
+**Örnek:**
+${'```'}
+[İllüstrasyon - onarım]
+
+Bir sorun oluştu
+
+Ekibimiz sorunu çözmek için çalışıyor. 
+Lütfen birkaç dakika sonra tekrar deneyin.
+
+[Tekrar Dene] [Ana Sayfaya Dön]
+
+Acil mi? bize@ornek.com adresinden ulaşın.
+${'```'}
+
+### 5. Offline / Bağlantı Hatası
+
+İnternet bağlantısı yok.
+
+**İçerik:**
+- Durumu açıkla
+- Bağlantı kontrolü öner
+- Cached içerik göster (mümkünse)
+- Otomatik yeniden deneme
+
+**Örnek:**
+${'```'}
+[Offline ikonu]
+
+İnternet bağlantısı yok
+
+Bağlantınızı kontrol edin. 
+Bağlantı sağlandığında otomatik güncellenecek.
+
+[Tekrar Dene]
+${'```'}
+
+### 6. Yetkilendirme Hatası
+
+Erişim izni yok.
+
+**İçerik:**
+- Neden erişilemiyor açıkla
+- Giriş yapma seçeneği
+- Yetki isteme (gerekirse)
+
+**Örnek:**
+${'```'}
+[Kilit ikonu]
+
+Bu içeriğe erişim izniniz yok
+
+Bu sayfayı görmek için giriş yapmanız gerekiyor.
+
+[Giriş Yap] [Kayıt Ol]
+${'```'}
+
+### 7. Timeout Hatası
+
+İşlem zaman aşımına uğradı.
+
+**İçerik:**
+- Ne olduğunu açıkla
+- Tekrar deneme seçeneği
+- İşlemin kaydedilip kaydedilmediği bilgisi
+
+---
+
+## Görsel Tasarım
+
+### Renk Kullanımı
+
+[TABLO]
+| Durum | Renk | Hex (örnek) |
+|-------|------|-------------|
+| Error | Kırmızı | #EF4444 |
+| Warning | Turuncu/Sarı | #F59E0B |
+| Info | Mavi | #3B82F6 |
+| Success | Yeşil | #10B981 |
+[/TABLO]
+
+**Dikkat:** Sadece renge güvenme, ikon ve metin de kullan (renk körlüğü).
+
+### İkonlar
+
+[TABLO]
+| Durum | İkon |
+|-------|------|
+| Error | ✕ veya ⚠️ (daire içinde X, uyarı üçgeni) |
+| Warning | ⚠️ (uyarı üçgeni) |
+| Info | ℹ️ (bilgi) |
+| Success | ✓ (onay) |
+[/TABLO]
+
+### Alert Box Yapısı
+${'```'}
+[İkon] [Başlık]                    [Kapat X]
+       [Açıklama metni]
+       [Aksiyon butonu]
+${'```'}
+
+**Stiller:**
+- Filled (dolgu renkli)
+- Outlined (border'lı)
+- Light (açık arka plan)
+
+---
+
+## İnline vs Toast vs Modal
+
+### Inline Error
+
+Hatalı elementin yanında/altında.
+
+**Kullanım:** Form validation, field-level hatalar
+
+**Avantaj:** Bağlamsal, hemen görünür
+
+### Toast / Snackbar
+
+Ekranın köşesinde geçici bildirim.
+
+**Kullanım:** Sistem hataları, kaydetme hataları
+
+**Avantaj:** Non-intrusive, otomatik kapanır
+
+**Dikkat:** Kritik hatalar için uygun değil
+
+### Modal / Dialog
+
+Tam ekran veya overlay ile dikkat çekme.
+
+**Kullanım:** Kritik hatalar, kullanıcı kararı gerektiren
+
+**Avantaj:** Görmezden gelinemez
+
+**Dikkat:** Fazla kullanım frustrasyon yaratır
+
+---
+
+## Graceful Degradation
+
+Bir şey bozulduğunda tamamen çökmek yerine kısmi çalışma.
+
+### Örnekler
+
+**Görsel yüklenemedi:**
+- Placeholder göster
+- Alt text görünür olsun
+
+**API çalışmıyor:**
+- Cached veri göster
+- "Veriler güncel olmayabilir" uyarısı
+
+**Feature çalışmıyor:**
+- Alternatif sun
+- Manuel yol göster
+
+### Progressive Enhancement
+
+Temel işlevsellik her zaman çalışsın:
+- JS yüklenmezse HTML çalışsın
+- CSS yüklenmezse içerik okunabilir olsun
+- Eski browser'da temel özellikler çalışsın
+
+---
+
+## Error Prevention
+
+Hatayı düzeltmekten önce, hatayı önle.
+
+### Input Constraints
+
+- Max length
+- Pattern matching
+- Input maskeleri (telefon formatı)
+
+### Confirmation
+
+Tehlikeli işlemlerde onay iste:
+- "Silmek istediğinize emin misiniz?"
+- Undo seçeneği sun
+
+### Smart Defaults
+
+- Makul varsayılan değerler
+- Otomatik tamamlama
+- Öneri sunma
+
+### Real-time Feedback
+
+- Karakter sayacı
+- Şifre güç göstergesi
+- Anlık format kontrolü
+
+---
+
+## Error Recovery
+
+Hata sonrası kullanıcıya yardım.
+
+### Veri Koruma
+
+- Form verilerini kaybet etme (autosave)
+- Tarayıcı geri gittiğinde veriler kalsın
+- Session timeout öncesi uyar
+
+### Retry Mekanizması
+
+- "Tekrar Dene" butonu
+- Otomatik retry (arka planda)
+- Retry sayısı limiti
+
+### Alternatif Yollar
+
+- Farklı ödeme yöntemi
+- Manuel giriş seçeneği
+- Destek iletişimi
+
+---
+
+## Erişilebilirlik
+
+### Screen Reader
+
+- ${'`'}role="alert"${'`'} dinamik hatalar için
+- ${'`'}aria-invalid="true"${'`'} hatalı input için
+- ${'`'}aria-describedby${'`'} ile mesajı bağla
+
+### Renk Kontrastı
+
+- Metin: minimum 4.5:1 kontrast
+- Sadece renge güvenme
+
+### Focus Yönetimi
+
+- Hata oluştuğunda focus'u hatalı alana taşı
+- Modal hatasında focus modal'a
+
+### Klavye
+
+- Hata mesajlarına tab ile ulaşılabilmeli
+- Dismiss butonu klavye ile çalışmalı
+
+---
+
+## Marka ve Ton
+
+### Tutarlılık
+
+Hata sayfaları da marka kimliğine uygun olmalı:
+- Aynı tipografi
+- Aynı renkler (error renkleri hariç)
+- Aynı ton
+
+### Mizah (Dikkatli Kullan)
+
+404 sayfalarında mizah yaygın ama:
+- Herkes için uygun mu?
+- Ciddi durumlarda kaçın
+- Marka tonuyla uyumlu mu?
+
+**İyi örnek:** "Kaybolmuş görünüyorsunuz. Biz de bazen kayboluyoruz."
+
+**Kötü örnek:** Ödeme hatası sayfasında şaka yapmak
+
+---
+
+## Test ve İterasyon
+
+### Hata Senaryolarını Test Et
+
+- Tüm form validation'ları
+- 404, 500 sayfaları
+- Offline durumu
+- Timeout
+- Permission hatları
+
+### Gerçek Kullanıcıyla Test
+
+- Hata mesajları anlaşılıyor mu?
+- Çözüm bulabiliyorlar mı?
+- Frustrasyon seviyesi
+
+### Analytics
+
+- Hangi hatalarda terk var?
+- Hangi hata mesajları işe yarıyor?
+- Recovery oranı
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**25 dakika**
+
+**Görev:** Bir e-ticaret sitesi için error state'leri tasarla.
+
+**Senaryolar:**
+
+1. **Form error (5 dk)**
+   Checkout formunda kredi kartı numarası hatalı.
+   - Hata mesajı yaz
+   - Görsel tasarımı tanımla (renk, ikon, konum)
+
+2. **404 sayfası (8 dk)**
+   Ürün sayfası bulunamadı.
+   - Sayfa yapısını çiz
+   - İçerik elementlerini listele
+   - Kullanıcıyı nereye yönlendireceksin?
+
+3. **Ödeme hatası (7 dk)**
+   Ödeme işlemi başarısız oldu.
+   - Modal mı, sayfa mı?
+   - Ne mesaj vereceksin?
+   - Hangi alternatifleri sunacaksın?
+
+4. **Offline durumu (5 dk)**
+   Sepet sayfasındayken internet gitti.
+   - Kullanıcıya ne göstereceksin?
+   - Cached veri kullanabilir misin?
+
+**Her senaryo için:**
+- Başlık
+- Açıklama metni
+- Aksiyon butonları
+- Görsel element (ikon/illüstrasyon)
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Error state = bir şey ters gittiğinde gösterilen durum
+- İyi hata mesajı: ne oldu + neden + ne yapılabilir
+- İnsan dilinde konuş, teknik jargon yok
+- Suçlayıcı olma, yardımcı ol
+- Hata türleri: form validation, 404, 500, offline, timeout, permission
+- Renk: kırmızı ama sadece renge güvenme (ikon + metin)
+- İnline error: form alanları için
+- Toast: system notifications için
+- Modal: kritik hatalar için
+- Graceful degradation: kısmi işlevsellik sun
+- Error prevention: hata oluşmadan önle
+- Erişilebilirlik: aria attributes, focus yönetimi, kontrast
+- Marka tutarlılığı hata sayfalarında da önemli
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Form Tasarımı Best Practices](/kutuphane/form-tasarimi-best-practices)
+
+**Sonraki:** Loading State Tasarımı *(yakında)*
+
+**İlgili konular:**
+- [Form Tasarımı Best Practices](/kutuphane/form-tasarimi-best-practices)
+- [UX Writing Temelleri](/kutuphane/ux-writing-temelleri)
+- [Micro-interactions Tasarımı](/kutuphane/micro-interactions-tasarimi)
+
+**İlgili Roadmap:** UI Designer Roadmap → State Design
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [Error Message Guidelines - NNGroup](https://www.nngroup.com/articles/error-message-guidelines/) (İngilizce)
+- [How to Write Good Error Messages - UX Planet](https://uxplanet.org/how-to-write-good-error-messages-858e4551cd4) (İngilizce)
+- [404 Page Design - Awwwards](https://www.awwwards.com/inspiration/search?text=404) (İlham için)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
