@@ -17289,6 +17289,569 @@ Derinleşmek istersen:
 - [PerfectPixel Extension](https://www.welldonecode.com/perfectpixel/) (Araç)
 `,
   },
+  "onboarding-ux-tasarimi": {
+    id: "onboarding-ux-tasarimi",
+    title: "Onboarding UX Tasarımı",
+    subtitle: "İlk Kullanım Deneyimini Mükemmelleştirme",
+    titleEn: "Onboarding UX Design",
+    slug: "onboarding-ux-tasarimi",
+    description: "Onboarding UX nedir? İlk kullanıcı deneyimi tasarımı, activation, time-to-value ve retention. Etkili onboarding akışı oluşturma rehberi.",
+    category: "ux-design",
+    readingTime: 15,
+    featured: false,
+    publishedAt: "2025-01-17",
+    heroImage: "",
+    author: "DesignAtlas",
+    content: `# Onboarding UX Tasarımı: İlk Kullanım Deneyimini Mükemmelleştirme
+
+**Seviye:** Orta - İleri
+**Kategori:** UX Design
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+İlk izlenim tek şans.
+
+Kullanıcı ürününü indirdi veya kayıt oldu. Harika! Ama iş burada bitmiyor, burada başlıyor. İlk 5 dakikada kullanıcıyı kaybetmek çok kolay: karmaşık arayüz, ne yapacağını bilememe, değeri görememe.
+
+**Onboarding**, kullanıcıyı "bu ne?" anından "bu tam bana göre!" anına taşıyan süreç. İyi onboarding = yüksek retention. Kötü onboarding = kullanıcı kaybı.
+
+Araştırmalar gösteriyor: Kullanıcıların %25'i uygulamayı ilk kullanımdan sonra bir daha açmıyor. İlk deneyim her şeyi belirliyor.
+
+Bu yazıda etkili onboarding tasarımının temellerini, pattern'leri ve best practice'leri öğreneceksin.
+
+---
+
+## Onboarding Nedir?
+
+[CALLOUT BOX]
+**Onboarding:**
+Yeni kullanıcının ürünle ilk etkileşiminden, ürünün temel değerini deneyimleyip düzenli kullanıcı olmasına kadar olan süreç. Kayıt, kurulum, eğitim ve ilk başarılı kullanımı kapsar.
+[/CALLOUT BOX]
+
+**Onboarding aşamaları:**
+1. **Awareness:** Ürünü keşfetme
+2. **Signup:** Kayıt olma
+3. **First Use:** İlk kullanım
+4. **Activation:** Değeri deneyimleme (aha moment)
+5. **Habit:** Düzenli kullanım
+
+---
+
+## Neden Onboarding Önemli?
+
+### 1. Retention etkisi
+
+İlk hafta deneyimi, 90 günlük retention'ı belirliyor.
+
+### 2. Activation → Revenue
+
+Aktive olan kullanıcı, ödeme yapan kullanıcı oluyor.
+
+### 3. Support yükü
+
+İyi onboarding = daha az "bu nasıl çalışıyor?" sorusu.
+
+### 4. Word of mouth
+
+İlk deneyim iyi olan kullanıcı, ürünü tavsiye ediyor.
+
+### 5. Competitive advantage
+
+Benzer ürünlerde onboarding fark yaratıyor.
+
+[INFO]
+**%25**
+İlk kullanımdan sonra bir daha açılmayan uygulamaların oranı
+[/INFO]
+
+---
+
+## Temel Kavramlar
+
+### Aha Moment
+
+Kullanıcının ürünün değerini ilk kez deneyimlediği an.
+
+**Örnekler:**
+- **Spotify:** İlk şarkıyı keşfetme ve dinleme
+- **Slack:** İlk mesajı gönderme ve cevap alma
+- **Canva:** İlk tasarımı oluşturma
+- **Notion:** İlk sayfayı kendi içeriğiyle doldurma
+
+Onboarding'in amacı: Kullanıcıyı aha moment'e en hızlı şekilde ulaştırmak.
+
+### Time-to-Value (TTV)
+
+Kayıttan aha moment'e kadar geçen süre.
+
+**Kısa TTV = İyi onboarding**
+
+[COMPARISON]
+❌ Uzun TTV: 15 adımlık form, 10 dk setup, sonra ürünü gör
+✅ Kısa TTV: Hemen ürüne sok, yaparak öğret, minimum engel
+[/COMPARISON]
+
+### Activation Rate
+
+Kayıt olanların belirli bir değer eylemini tamamlama oranı.
+
+**Activation eylemleri örnekleri:**
+- Profil tamamlama
+- İlk içerik oluşturma
+- İlk etkileşim yapma
+- İlk bağlantı kurma
+
+### Activation Metric
+
+Her ürünün kendi "activation metric"i var:
+
+[TABLO]
+| Ürün | Activation Metric |
+|------|-------------------|
+| Twitter/X | İlk 30 kişiyi takip etme |
+| Facebook | 7 günde 10 arkadaş ekleme |
+| Dropbox | İlk dosyayı yükleme |
+| Slack | 2000 mesaj gönderilen workspace |
+| Zoom | İlk toplantıyı başlatma |
+[/TABLO]
+
+---
+
+## Onboarding Pattern'leri
+
+### 1. Welcome Screens / Slides
+
+Uygulama açıldığında görünen tanıtım ekranları.
+
+**Kullanım:**
+- Değer önerisini hızlıca ilet
+- 3-5 ekran maksimum
+- Skip seçeneği sun
+
+**Avantaj:** Basit, hızlı
+**Dezavantaj:** Okunmadan geçilebilir, pasif öğrenme
+
+### 2. Product Tour (Tooltip/Hotspot)
+
+Arayüzde adım adım yönlendirme.
+
+**Kullanım:**
+- Önemli öğeleri işaretle
+- Sıralı veya keşif odaklı
+- Bağlamsal açıklamalar
+
+**Avantaj:** Arayüz içinde, bağlamsal
+**Dezavantaj:** Rahatsız edici olabilir, skip edilebilir
+
+### 3. Setup Wizard
+
+Adım adım kurulum sihirbazı.
+
+**Kullanım:**
+- Hesap ayarları
+- Tercih belirleme
+- Veri import
+- Bağlantılar kurma
+
+**Avantaj:** Yapılandırılmış, net ilerleme
+**Dezavantaj:** Uzun olabilir, terk riski
+
+### 4. Progressive Onboarding
+
+Kullanım sırasında, ihtiyaç anında yönlendirme.
+
+**Kullanım:**
+- İlk kez bir özellik kullanıldığında göster
+- Zamanla derinleştir
+- Empty state'lerde yönlendir
+
+**Avantaj:** Az invasive, bağlamsal
+**Dezavantaj:** Kaçırılabilir, tutarsız deneyim
+
+### 5. Learn by Doing
+
+Örnek görev/proje ile öğretme.
+
+**Kullanım:**
+- Template veya örnek içerik
+- Guided task tamamlama
+- Sandbox ortam
+
+**Avantaj:** Aktif öğrenme, hafızada kalıcı
+**Dezavantaj:** Tasarımı zor, her ürüne uymaz
+
+### 6. Video Tutorial
+
+Video ile anlatım.
+
+**Kullanım:**
+- Karmaşık kavramlar
+- Opsiyonel, skip edilebilir
+- Kısa tutulmalı (< 2 dk)
+
+**Avantaj:** Detaylı açıklama
+**Dezavantaj:** Pasif, kullanıcı izlemeyebilir
+
+### 7. Checklist / Progress Bar
+
+Tamamlanacak görevler listesi.
+
+**Kullanım:**
+- Setup adımları
+- Profil tamamlama
+- Feature keşfi
+
+**Avantaj:** Net hedef, motivasyon
+**Dezavantaj:** Uzun liste bunaltıcı
+
+---
+
+## Onboarding Aşamaları
+
+### Aşama 1: Signup
+
+**Hedef:** Minimum sürtünme ile kayıt.
+
+**Best practices:**
+- Sadece gerekli bilgileri iste
+- Social login sun
+- Değer önerisini hatırlat
+- Progress indicator göster
+
+[COMPARISON]
+❌ Kötü: 10 alanlı form, email doğrulama zorunlu, sonra başla
+✅ İyi: Email + şifre, veya Google ile devam, hemen ürüne gir
+[/COMPARISON]
+
+### Aşama 2: Welcome
+
+**Hedef:** Karşılama, beklenti belirleme.
+
+**Best practices:**
+- Kişiselleştirilmiş selamlama
+- Kısa değer önerisi
+- Net sonraki adım
+- Süre beklentisi (örn: "2 dakikada hazır olacaksınız")
+
+### Aşama 3: Setup / Configuration
+
+**Hedef:** Ürünü kullanıma hazırlama.
+
+**Best practices:**
+- Minimum zorunlu adım
+- Default değerler sun
+- "Sonra yap" seçeneği
+- İlerleme göstergesi
+
+### Aşama 4: First Task / Aha Moment
+
+**Hedef:** Değeri deneyimletme.
+
+**Best practices:**
+- En önemli özelliğe yönlendir
+- Başarı anını kutla
+- Sonraki adımı öner
+
+### Aşama 5: Ongoing Education
+
+**Hedef:** Derinleştirme, feature keşfi.
+
+**Best practices:**
+- Progressive disclosure
+- Bağlamsal ipuçları
+- Help center erişimi
+- Email nurturing
+
+---
+
+## Onboarding Tasarım Prensipleri
+
+### 1. Show, Don't Tell
+
+Anlatmak yerine göster ve yaptır.
+
+[COMPARISON]
+❌ Kötü: "Buraya tıklayarak yeni proje oluşturabilirsiniz"
+✅ İyi: "İlk projenizi oluşturun" butonu + template seçenekleri
+[/COMPARISON]
+
+### 2. Değerle başla, form sonra
+
+Önce değer göster, sonra bilgi iste.
+
+[COMPARISON]
+❌ Kötü: Kayıt → 10 soru → Sonra ürünü gör
+✅ İyi: Ürünü dene → Değeri gör → Kayıt ol → Minimal bilgi
+[/COMPARISON]
+
+### 3. Hızlı kazan (Quick Win)
+
+İlk 5 dakikada bir başarı hissi ver.
+
+**Örnekler:**
+- İlk içeriği oluşturma
+- Profil tamamlandı rozeti
+- İlk etkileşim
+
+### 4. Kişiselleştir
+
+Kullanım amacına göre deneyimi uyarla.
+
+"Sizi tanıyalım" soruları → Farklı onboarding akışları
+
+### 5. Atlanabilir yap
+
+Zorunlu olmayan her şey skip edilebilir olmalı.
+
+"Sonra hatırlat" veya "Atla" seçenekleri.
+
+### 6. İlerleme göster
+
+Kullanıcı nerede, ne kaldı?
+
+Progress bar, checklist, adım sayısı.
+
+### 7. Kutla
+
+Başarıları kutla, pozitif pekiştirme.
+
+Konfeti, badge, tebrik mesajı.
+
+---
+
+## Empty States
+
+İlk kullanımda boş ekranlar kritik.
+
+### Empty State İçeriği
+
+1. **Ne olması gerektiğini açıkla**
+   "Henüz projeniz yok"
+
+2. **Değeri hatırlat**
+   "Projeler ile işlerinizi organize edin"
+
+3. **Aksiyon ver**
+   "İlk projenizi oluşturun" butonu
+
+4. **Alternatif sun**
+   "Template ile başla" veya "Örnek incele"
+
+### Empty State Örneği
+${'```'}
+[İllüstrasyon]
+
+Henüz hiç notunuz yok
+
+Notlarınız burada görünecek. 
+Düşüncelerinizi yakalayın, fikirlerinizi organize edin.
+
+[+ Yeni Not Oluştur]
+
+veya [Şablonlardan seç]
+${'```'}
+
+---
+
+## Onboarding Metrikleri
+
+### Activation Rate
+
+Kayıt olanların activation eylemini tamamlama oranı.
+
+**Hedef:** %40+ (ürüne göre değişir)
+
+### Completion Rate
+
+Onboarding akışını tamamlama oranı.
+
+**Her adım için:** Hangi adımda kayıp var?
+
+### Time-to-Value
+
+Kayıttan aha moment'e süre.
+
+**Hedef:** Mümkün olduğunca kısa.
+
+### Drop-off Points
+
+Kullanıcıların terk ettiği noktalar.
+
+Funnel analizi ile tespit.
+
+### Feature Adoption
+
+Onboarding sonrası hangi özellikler kullanılıyor?
+
+### Day 1 / Day 7 / Day 30 Retention
+
+İlk günler kritik.
+
+---
+
+## Yaygın Hatalar
+
+### 1. Çok fazla bilgi
+
+[COMPARISON]
+❌ Kötü: 10 ekranlık tur, her özelliği anlat
+✅ İyi: 3-4 ekran, sadece kritik değer
+[/COMPARISON]
+
+### 2. Değer yerine özellik odağı
+
+[COMPARISON]
+❌ Kötü: "Bu buton ile export edebilirsiniz"
+✅ İyi: "Çalışmanızı tek tıkla paylaşın"
+[/COMPARISON]
+
+### 3. Skip seçeneği yok
+
+Kullanıcı kontrol hissi istiyor. Zorunlu onboarding = frustrasyon.
+
+### 4. Tek seferlik düşünme
+
+Onboarding sadece ilk giriş değil. Yeni feature'lar, geri dönen kullanıcılar için de düşün.
+
+### 5. Mobili unutmak
+
+Mobile onboarding desktop'tan farklı olmalı. Ekran boyutu, touch, dikkat süresi.
+
+### 6. Test etmemek
+
+Onboarding'i gerçek kullanıcılarla test et. A/B test yap.
+
+### 7. Metrik takip etmemek
+
+Completion rate, drop-off'ları bilmeden iyileştirme yapılamaz.
+
+---
+
+## Sektörel Örnekler
+
+### B2C - Spotify
+
+- **Pattern:** Minimal signup + kişiselleştirme soruları
+- **Aha moment:** İlk kişisel playlist önerisi
+- **Güçlü yön:** Hızlı değer, müzik hemen başlıyor
+
+### B2B - Slack
+
+- **Pattern:** Workspace setup wizard + product tour
+- **Aha moment:** İlk takım mesajı
+- **Güçlü yön:** Takım davet etme odağı
+
+### Productivity - Notion
+
+- **Pattern:** Template seçimi + learn by doing
+- **Aha moment:** İlk sayfayı özelleştirme
+- **Güçlü yön:** Flexibility gösterimi, boş sayfa yok
+
+### E-commerce - Amazon
+
+- **Pattern:** Minimal signup + progressive profiling
+- **Aha moment:** İlk alışveriş
+- **Güçlü yön:** Hemen ürünlere erişim, sonra bilgi iste
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**30 dakika**
+
+**Görev:** Bir task management uygulaması için onboarding akışı tasarla.
+
+**Uygulama bilgisi:**
+- Bireysel kullanıcılar için
+- To-do listesi, proje, deadline özellikleri
+- Freemium model
+
+**Adımlar:**
+
+1. **Aha moment belirle (5 dk)**
+   Kullanıcının değeri deneyimleyeceği an nedir?
+
+2. **Activation metric belirle (3 dk)**
+   Hangi eylem "aktive oldu" sayılacak?
+
+3. **Signup akışı (5 dk)**
+   - Hangi bilgiler zorunlu?
+   - Social login var mı?
+   - Kaç adım?
+
+4. **Onboarding pattern seç (5 dk)**
+   - Welcome screens?
+   - Setup wizard?
+   - Product tour?
+   - Learn by doing?
+
+5. **Akış adımlarını çiz (10 dk)**
+   Signup'tan aha moment'e:
+${'```'}
+   Adım 1: ___
+   Adım 2: ___
+   Adım 3: ___
+   → Aha moment
+${'```'}
+
+6. **Empty state tasarla (2 dk)**
+   İlk açılışta görev listesi boşken ne göstereceksin?
+
+**Kontrol soruları:**
+- Time-to-value 5 dakikadan kısa mı?
+- Skip seçenekleri var mı?
+- Değer önden mi geliyor?
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Onboarding = kayıttan aha moment'e yolculuk
+- İlk izlenim tek şans, kullanıcıların %25'i ilk kullanımda ayrılıyor
+- Aha moment: Kullanıcının değeri deneyimlediği an
+- Time-to-value: Kayıttan değere süre, kısa tutulmalı
+- Pattern'ler: Welcome screens, product tour, wizard, progressive, learn by doing
+- Değerle başla, form sonra
+- Quick win: İlk 5 dakikada başarı hissi
+- Empty state'ler kritik, aksiyon yönlendir
+- Skip seçeneği sun, zorlama
+- Metrikler: Activation rate, completion rate, drop-off points
+- Test et, ölç, iterate et
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Design QA ve Review](/kutuphane/design-qa-review)
+
+**Sonraki:** Form Tasarımı Best Practices *(yakında)*
+
+**İlgili konular:**
+- [User Flow Nedir?](/kutuphane/user-flow-nedir)
+- [Empty State Tasarımı](/kutuphane/empty-state) *(yakında)*
+- [Micro-interactions Tasarımı](/kutuphane/micro-interactions-tasarimi)
+
+**İlgili Roadmap:** UX Designer Roadmap → Feature Design
+
+---
+
+## Kaynaklar
+
+Derinleşmek istersen:
+
+- [User Onboarding - Samuel Hulick](https://www.useronboard.com/) (İngilizce, teardown'lar)
+- [Onboarding UX - NNGroup](https://www.nngroup.com/articles/onboarding-ux/) (İngilizce)
+- [Intercom on Onboarding](https://www.intercom.com/books/onboarding) (Ücretsiz e-book)
+- [Growth.Design Case Studies](https://growth.design/case-studies) (İngilizce, görsel analizler)
+`,
+  },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
