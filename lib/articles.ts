@@ -632,4 +632,17 @@ export const MOCK_ARTICLES: Article[] = [
     author: "DesignAtlas",
     views: 0,
   },
+  {
+    id: "empty-state-tasarimi",
+    title: "Empty State Tasarımı",
+    subtitle: "Boş Ekranları Fırsata Çevirme",
+    titleEn: "Empty State Design",
+    slug: "empty-state-tasarimi",
+    description: "Empty state tasarımı nasıl yapılır? İlk kullanım, boş sonuç, silinen içerik durumları. Boş ekranları değerli deneyime dönüştürme rehberi.",
+    category: "ux-design",
+    readingTime: 12,
+    featured: false,
+    publishedAt: "2025-01-18",
+    author: "DesignAtlas",
+  },
 ];

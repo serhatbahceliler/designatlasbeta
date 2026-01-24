@@ -19700,7 +19700,7 @@ Loading gösterildiyse çok hızlı kaybolmaması.
 
 **Önceki:** [Error State Tasarımı](/kutuphane/error-state-tasarimi)
 
-**Sonraki:** Empty State Tasarımı *(yakında)*
+**Sonraki:** [Empty State Tasarımı](/kutuphane/empty-state-tasarimi)
 
 **İlgili konular:**
 - [Micro-interactions Tasarımı](/kutuphane/micro-interactions-tasarimi)
@@ -19719,6 +19719,194 @@ Derinleşmek istersen:
 - [Skeleton Screens - UX Collective](https://uxdesign.cc/what-you-should-know-about-skeleton-screens-a820c45a571a) (İngilizce)
 - [Optimistic UI - Apollo](https://www.apollographql.com/docs/react/performance/optimistic-ui/) (İngilizce, teknik)
 - [Everything You Need to Know About Skeleton Screens](https://uxdesign.cc/what-you-should-know-about-skeleton-screens-a820c45a571a) (İngilizce)
+`,
+  },
+  "empty-state-tasarimi": {
+    id: "empty-state-tasarimi",
+    title: "Empty State Tasarımı",
+    subtitle: "Boş Ekranları Fırsata Çevirme",
+    titleEn: "Empty State Design",
+    slug: "empty-state-tasarimi",
+    description: "Empty state tasarımı nasıl yapılır? İlk kullanım, boş sonuç, silinen içerik durumları. Boş ekranları değerli deneyime dönüştürme rehberi.",
+    category: "ux-design",
+    readingTime: 12,
+    featured: false,
+    publishedAt: "2025-01-18",
+    author: "DesignAtlas",
+    content: `# Empty State Tasarımı: Boş Ekranları Fırsata Çevirme
+
+**Seviye:** Başlangıç - Orta
+**Kategori:** UX Design
+**Son güncelleme:** Ocak 2025
+
+---
+
+## Giriş
+
+Kullanıcı uygulamanı açtı. Karşısında bomboş beyaz bir ekran var. "Şimdi ne yapacağım?" Bu an kritik. İyi tasarlanmış empty state kullanıcıyı yönlendirir, değer sunar, aksiyon aldırır. **Empty state** sadece "veri yok" demek değil. Bir fırsat: Onboarding yapmak, değer önerisi iletmek, kullanıcıyı motive etmek için.
+
+Bu yazıda farklı empty state türlerini, nasıl tasarlanacağını ve best practice'leri öğreneceksin.
+
+---
+
+## Empty State Nedir?
+
+[CALLOUT]
+**Empty State (Boş Durum):**
+Bir ekran veya bölümde gösterilecek içerik olmadığında kullanıcıya sunulan tasarım durumu. Boşluğu anlamlı mesaj, görsel ve aksiyonla dolduran, yönlendirici arayüz.
+[/CALLOUT]
+
+**Diğer isimleri:** Zero state, Blank slate, First-run experience, No data state.
+
+---
+
+## Empty State Türleri
+
+### 1. First Use (İlk Kullanım)
+Kullanıcı yeni, henüz hiç içerik oluşturmamış. **Amaç:** Karşıla, değer göster, ilk aksiyona yönlendir.
+
+### 2. No Results (Sonuç Yok)
+Arama veya filtreleme sonucu boş. **Amaç:** Durumu açıkla, alternatif öner.
+
+### 3. Cleared (Temizlenmiş)
+Kullanıcı içeriği sildi veya tamamladı. **Amaç:** Kutla (başarı), sonraki adımı öner.
+
+### 4. Error-Induced (Hata Kaynaklı)
+Teknik sorun nedeniyle veri yüklenemedi. **Amaç:** Durumu açıkla, çözüm öner.
+
+### 5. Permission (İzin Gerekli)
+İçerik var ama erişim izni yok. **Amaç:** Neden erişilemiyor açıkla, çözüm (giriş/upgrade) öner.
+
+---
+
+## Empty State Anatomisi
+
+Etkili bir empty state: Görsel element, Başlık, Açıklama metni, Birincil CTA, İkincil aksiyonlar (opsiyonel).
+
+---
+
+## Yazım Rehberi
+
+[COMPARISON]
+Kötü: "Veri yok" / "0 sonuç" / "Boş"
+İyi: "Henüz hiç projeniz yok" / "Aradığınız ürün bulunamadı"
+[/COMPARISON]
+
+[COMPARISON]
+Kötü: "Lütfen yeni içerik ekleyin"
+İyi: "Notlarınız burada görünecek. Düşüncelerinizi yakalayın, fikirlerinizi organize edin."
+[/COMPARISON]
+
+[COMPARISON]
+Kötü: "Ekle" / "Oluştur" / "Başla"
+İyi: "İlk Projenizi Oluşturun" / "Yeni Not Ekle" / "Alışverişe Başla"
+[/COMPARISON]
+
+---
+
+## Görsel Tasarım
+
+[TABLO]
+| Stil | Kullanım | Örnek |
+|------|----------|-------|
+| Spot illustration | Tek, odaklı görsel | Boş kutu, arama simgesi |
+| Scene illustration | Bağlamlı sahne | Çalışma masası, doğa |
+| Character | Marka maskotu | Kişilik katmak için |
+| Abstract | Minimal, soyut | Kurumsal, ciddi |
+| İkon | Basit, minimal | Küçük alanlar |
+[/TABLO]
+
+---
+
+## Yaygın Hatalar
+
+[COMPARISON]
+Kötü: Bomboş beyaz sayfa
+İyi: Tasarlanmış, yönlendirici empty state
+[/COMPARISON]
+
+[COMPARISON]
+Kötü: "null" / "No data available" / "Error: 0 results"
+İyi: "Henüz hiç kaydınız yok"
+[/COMPARISON]
+
+[COMPARISON]
+Kötü: Sadece "Liste boş" yazısı
+İyi: "Liste boş" + [Yeni Ekle] butonu
+[/COMPARISON]
+
+[COMPARISON]
+Kötü: Her durumda aynı mesaj
+İyi: First use, no results, cleared için farklı mesajlar
+[/COMPARISON]
+
+[COMPARISON]
+Kötü: 5 paragraf açıklama
+İyi: Başlık + 1-2 satır açıklama + CTA
+[/COMPARISON]
+
+[COMPARISON]
+Kötü: "Proje ekleyin"
+İyi: "Projelerle işlerinizi organize edin, takımınızla paylaşın. İlk projenizi oluşturun."
+[/COMPARISON]
+
+---
+
+[EXERCISE]
+## Şimdi Sen Dene
+
+**25 dakika**
+
+**Görev:** Bir fitness uygulaması için empty state'leri tasarla. Antrenman takibi, ilerleme grafikleri, başarı rozetleri, arkadaş sistemi.
+
+1. **First use - Antrenman listesi (6 dk)** İllüstrasyon, başlık, açıklama, CTA
+2. **No results - Arama (5 dk)** "Yoga" araması sonuç vermedi. Başlık, öneriler, alternatif aksiyonlar
+3. **Cleared - Bugünün görevleri (5 dk)** Kutlama tonu, başarı mesajı, sonraki adım
+4. **Empty friends - Arkadaş listesi (5 dk)** Sosyal motivasyon, ekleme aksiyonu
+5. **No data - İlerleme grafiği (4 dk)** Durumu açıkla, ne zaman görünecek
+[/EXERCISE]
+
+---
+
+[SUMMARY]
+## Özet
+
+- Empty state = içerik olmadığında gösterilen tasarım durumu
+- Türleri: First use, No results, Cleared, Error-induced, Permission
+- Anatomi: Görsel + Başlık + Açıklama + CTA + İkincil aksiyonlar
+- First use: Karşılayıcı, değer odaklı, teşvik edici
+- No results: Yardımcı, çözüm önerici
+- Cleared: Kutlayıcı, motive edici
+- İnsan dilinde yaz, teknik jargon yok
+- Her zaman aksiyon sun, çıkmaz sokak bırakma
+- Değer önerisi ilet, sadece "boş" deme
+- Farklı durumlar için farklı mesajlar
+- Mobilde daha kompakt, tek CTA
+[/SUMMARY]
+
+---
+
+## İlgili İçerikler
+
+**Önceki:** [Loading State Tasarımı](/kutuphane/loading-state-tasarimi)
+
+**Sonraki:** Navigation ve Menü Tasarımı *(yakında)*
+
+**İlgili konular:**
+- [Onboarding UX Tasarımı](/kutuphane/onboarding-ux-tasarimi)
+- [UX Writing Temelleri](/kutuphane/ux-writing-temelleri)
+- [Error State Tasarımı](/kutuphane/error-state-tasarimi)
+
+**İlgili Roadmap:** UI Designer Roadmap → State Design
+
+---
+
+## Kaynaklar
+
+- [Empty States - UI Patterns](https://ui-patterns.com/patterns/BlankSlate) (İngilizce)
+- [The Art of the Empty State - Invision](https://www.invisionapp.com/inside-design/empty-state-design/) (İngilizce)
+- [Empty State Inspiration - Mobbin](https://mobbin.com/browse/ios/apps?patterns=empty-state) (İlham için)
+- [Really Good UX - Empty States](https://www.reallygoodux.io/categories/empty-states) (Örnekler)
 `,
   },
 };
@@ -20410,6 +20598,40 @@ export default function ArticlePage() {
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "Önce persona ve senaryo belirle, araştırma verilerini topla, aşamaları tanımla, her aşama için eylemler, düşünceler, duygular ve temas noktalarını ekle, pain point ve fırsatları işaretle, görselleştir ve paylaş.",
+              },
+            },
+          ],
+          "empty-state-tasarimi": [
+            {
+              "@type": "Question",
+              name: "Empty state nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Empty state, bir ekranda gösterilecek içerik olmadığında kullanıcıya sunulan durumdur. İlk kullanım (henüz veri yok), boş arama sonucu, silinen içerik, filtreleme sonucu boş liste gibi durumları kapsar. Boş beyaz ekran yerine yönlendirici tasarım.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Empty state neden önemli?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Empty state kritik çünkü: İlk izlenimi etkiler (onboarding), kullanıcıyı yönlendirir (ne yapmalı?), değer önerisi iletir, engagement fırsatı yaratır, frustrasyon önler. Boş ekran = kayıp fırsat, iyi empty state = kullanıcı aksiyonu.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Empty state'te ne olmalı?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Etkili empty state içerir: Görsel element (ikon/illüstrasyon), açıklayıcı başlık (durum nedir), destekleyici metin (neden böyle, ne değer sunuyor), birincil aksiyon butonu (ne yapmalı), alternatif yollar (opsiyonel). Kullanıcıyı çıkmaz sokakta bırakma.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "First use ve no data empty state farkı nedir?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "First use: Kullanıcı yeni, henüz hiç içerik oluşturmamış. Ton: Karşılayıcı, teşvik edici, değer odaklı. No data: Veri vardı ama şimdi yok (silindi, filtrelendi). Ton: Bilgilendirici, çözüm odaklı. Mesaj ve CTA farklı olmalı.",
               },
             },
           ],
