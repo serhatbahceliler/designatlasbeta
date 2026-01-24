@@ -8509,7 +8509,7 @@ Derinleşmek istersen:
     readingTime: 15,
     featured: true,
     publishedAt: "2025-01-15",
-    heroImage: "",
+    heroImage: "https://r.resimlink.com/Wq1z6XKo.png",
     author: "DesignAtlas",
     content: `# Design System Nedir? Tutarlı Tasarımın Temeli
 
@@ -13180,7 +13180,7 @@ Derinleşmek istersen:
     readingTime: 15,
     featured: true,
     publishedAt: "2025-01-16",
-    heroImage: "",
+    heroImage: "https://r.resimlink.com/QGT5C.png",
     author: "DesignAtlas",
     content: `# Figma Temelleri: Sıfırdan Figma Öğrenme Rehberi
 
