@@ -223,7 +223,6 @@ export default function RoadmapClient({ sections, credits, roadmapSlug }: Roadma
 
               {/* Content */}
               <div className="space-y-6">
-                {/* Description - Only show if user is logged in */}
                 {selectedTopic.description && (
                   <div className="p-6 bg-zinc-800/50 border border-zinc-700 rounded-xl">
                     <div className="flex items-start gap-3 mb-3">
@@ -234,23 +233,14 @@ export default function RoadmapClient({ sections, credits, roadmapSlug }: Roadma
                       </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold text-white mb-2">Konu Hakkında</h3>
-                        {user ? (
-                          <p className="text-gray-300 leading-relaxed">
-                            {selectedTopic.description}
-                          </p>
-                        ) : (
-                          <div className="p-4 bg-zinc-900/50 border border-zinc-700 rounded-lg">
-                            <p className="text-gray-400 text-sm">
-                              Detayları görüntülemek için giriş yapmalısınız.
-                            </p>
-                          </div>
-                        )}
+                        <p className="text-gray-300 leading-relaxed">
+                          {selectedTopic.description}
+                        </p>
                       </div>
                     </div>
                   </div>
                 )}
 
-                {/* Resources - Only show if user is logged in */}
                 {selectedTopic.resources && selectedTopic.resources.length > 0 && (
                   <div className="p-6 bg-zinc-800/50 border border-zinc-700 rounded-xl">
                     <div className="flex items-start gap-3 mb-4">
@@ -261,50 +251,41 @@ export default function RoadmapClient({ sections, credits, roadmapSlug }: Roadma
                       </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold text-white mb-4">Öğrenme Kaynakları</h3>
-                        {user ? (
-                          <div className="space-y-5">
-                            {selectedTopic.resources.map((resourceGroup, idx) => (
-                              <div key={idx}>
-                                <h4 className="text-sm font-semibold text-gray-400 mb-2">{resourceGroup.category}</h4>
-                                <ul className="space-y-2">
-                                  {resourceGroup.items.map((item, itemIdx) => (
-                                    <li key={itemIdx}>
-                                      {item.url ? (
-                                        <a
-                                          href={item.url}
-                                          target="_blank"
-                                          rel="noopener noreferrer"
-                                          className="inline-flex items-center gap-1.5 text-gray-300 hover:text-[#DEFF37] transition-colors"
-                                        >
-                                          <span className="text-sm underline">{item.title}</span>
-                                          <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                          </svg>
-                                        </a>
-                                      ) : (
-                                        <div className="inline-flex items-center gap-2 text-gray-300">
-                                          <span className="text-sm">{item.title}</span>
-                                        </div>
-                                      )}
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ))}
-                          </div>
-                        ) : (
-                          <div className="p-4 bg-zinc-900/50 border border-zinc-700 rounded-lg">
-                            <p className="text-gray-400 text-sm">
-                              Kaynakları görüntülemek için giriş yapmalısınız.
-                            </p>
-                          </div>
-                        )}
+                        <div className="space-y-5">
+                          {selectedTopic.resources.map((resourceGroup, idx) => (
+                            <div key={idx}>
+                              <h4 className="text-sm font-semibold text-gray-400 mb-2">{resourceGroup.category}</h4>
+                              <ul className="space-y-2">
+                                {resourceGroup.items.map((item, itemIdx) => (
+                                  <li key={itemIdx}>
+                                    {item.url ? (
+                                      <a
+                                        href={item.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 text-gray-300 hover:text-[#DEFF37] transition-colors"
+                                      >
+                                        <span className="text-sm underline">{item.title}</span>
+                                        <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                      </a>
+                                    ) : (
+                                      <div className="inline-flex items-center gap-2 text-gray-300">
+                                        <span className="text-sm">{item.title}</span>
+                                      </div>
+                                    )}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
                 )}
 
-                {/* Practice - Only show if user is logged in */}
                 {selectedTopic.practice && (
                   <div className="p-6 bg-gradient-to-br from-[#DEFF37]/10 to-[#DEFF37]/5 border border-[#DEFF37]/20 rounded-xl">
                     <div className="flex items-start gap-3 mb-4">
@@ -315,22 +296,14 @@ export default function RoadmapClient({ sections, credits, roadmapSlug }: Roadma
                       </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold text-white mb-3">{selectedTopic.practice.title}</h3>
-                        {user ? (
-                          <ul className="space-y-2">
-                            {selectedTopic.practice.tasks.map((task, idx) => (
-                              <li key={idx} className="flex items-start gap-2">
-                                <span className="text-[#DEFF37] mt-1 font-bold">•</span>
-                                <span className="text-gray-300 text-sm">{task}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        ) : (
-                          <div className="p-4 bg-zinc-900/50 border border-zinc-700 rounded-lg">
-                            <p className="text-gray-400 text-sm">
-                              Pratik görevlerini görüntülemek için giriş yapmalısınız.
-                            </p>
-                          </div>
-                        )}
+                        <ul className="space-y-2">
+                          {selectedTopic.practice.tasks.map((task, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="text-[#DEFF37] mt-1 font-bold">•</span>
+                              <span className="text-gray-300 text-sm">{task}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   </div>
