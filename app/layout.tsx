@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import Script from "next/script";
 import "./globals.css";
-import AuthProviderWrapper from "@/components/AuthProviderWrapper";
 import MixpanelProvider from "@/components/MixpanelProvider";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
@@ -116,12 +115,10 @@ export default function RootLayout({
         </Script>
 
         <MixpanelProvider>
-          <AuthProviderWrapper>
-            <Suspense fallback={null}>
-              <GoogleAnalytics />
-            </Suspense>
-            {children}
-          </AuthProviderWrapper>
+          <Suspense fallback={null}>
+            <GoogleAnalytics />
+          </Suspense>
+          {children}
         </MixpanelProvider>
       </body>
     </html>

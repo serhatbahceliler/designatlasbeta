@@ -43,7 +43,7 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: https: blob:",
               "font-src 'self' data:",
-              "connect-src 'self' https://*.supabase.co https://api.openai.com https://www.googletagmanager.com https://api.mixpanel.com https://api-eu.mixpanel.com https://*.mxpnl.com wss://*.supabase.co",
+              "connect-src 'self' https://api.openai.com https://www.googletagmanager.com https://api.mixpanel.com https://api-eu.mixpanel.com https://*.mxpnl.com",
               "frame-ancestors 'self'",
               "base-uri 'self'",
               "form-action 'self'",

@@ -1,47 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
 import { checkRateLimit } from '@/lib/rate-limit';
 import { generateChatCompletion, generateTitleFromFirstMessage } from '@/lib/openai';
 import { MENTOR_SYSTEM_PROMPT } from '@/lib/mentor-prompt';
-import { sanitizeUUID, sanitizeMessage } from '@/lib/sanitize';
+import { sanitizeMessage } from '@/lib/sanitize';
 
 export const dynamic = 'force-dynamic';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || supabaseAnonKey; // Fallback to anon key if service key not set
+function getClientId(request: NextRequest): string {
+  const forwarded = request.headers.get('x-forwarded-for');
+  if (forwarded) {
+    return forwarded.split(',')[0]?.trim() || 'anonymous';
+  }
+  return request.headers.get('x-real-ip') || 'anonymous';
+}
 
 export async function POST(request: NextRequest) {
   try {
-    // Get auth token from Authorization header
-    const authHeader = request.headers.get('authorization');
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
-
-    const token = authHeader.replace('Bearer ', '');
-    const supabase = createClient(supabaseUrl, supabaseAnonKey);
-    
-    // Verify user with token
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
-    
-    if (authError || !user) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
-
-    // Use service role client for queries (bypasses RLS but we filter by user_id)
-    const supabaseService = createClient(supabaseUrl, supabaseServiceKey, {
-      auth: {
-        persistSession: false,
-        autoRefreshToken: false,
-      },
-    });
-
-    // Check rate limit
-    const rateLimit = checkRateLimit(user.id);
+    const rateLimit = checkRateLimit(getClientId(request));
     if (!rateLimit.allowed) {
       return NextResponse.json(
-        { 
+        {
           error: "Rate limit aşıldı. Lütfen daha sonra tekrar deneyin.",
           resetAt: rateLimit.resetAt,
         },
@@ -50,17 +28,8 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { threadId, message, isFirstMessage } = body;
+    const { message, history = [], isFirstMessage } = body;
 
-    // Sanitize thread ID
-    let sanitizedThreadId: string;
-    try {
-      sanitizedThreadId = sanitizeUUID(threadId);
-    } catch (error: any) {
-      return NextResponse.json({ error: error.message || "Geçersiz thread ID" }, { status: 400 });
-    }
-
-    // Sanitize message
     let sanitizedMessage: string;
     try {
       sanitizedMessage = sanitizeMessage(message);
@@ -68,68 +37,22 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: error.message || "Geçersiz mesaj" }, { status: 400 });
     }
 
-    // Verify thread belongs to user
-    const { data: thread, error: threadError } = await supabaseService
-      .from("case_threads")
-      .select("id, user_id, title")
-      .eq("id", sanitizedThreadId)
-      .eq("user_id", user.id)
-      .single();
+    const chatMessages = [
+      ...(Array.isArray(history) ? history : [])
+        .filter(
+          (msg: any) =>
+            msg &&
+            (msg.role === "user" || msg.role === "assistant") &&
+            typeof msg.content === "string"
+        )
+        .slice(-19)
+        .map((msg: any) => ({
+          role: msg.role as "user" | "assistant",
+          content: String(msg.content).slice(0, 10000),
+        })),
+      { role: "user" as const, content: sanitizedMessage },
+    ];
 
-    if (threadError || !thread) {
-      return NextResponse.json({ error: "Thread bulunamadı" }, { status: 404 });
-    }
-
-    // If first message, update thread title
-    let updatedTitle: string | null = null;
-    if (isFirstMessage && thread.title === "Yeni Case") {
-      updatedTitle = generateTitleFromFirstMessage(sanitizedMessage);
-      await supabaseService
-        .from("case_threads")
-        .update({ title: updatedTitle })
-        .eq("id", sanitizedThreadId);
-    }
-
-    // Save user message
-    const { data: userMessage, error: userMessageError } = await supabaseService
-      .from("case_messages")
-      .insert([
-        {
-          thread_id: sanitizedThreadId,
-          user_id: user.id,
-          role: "user",
-          content: sanitizedMessage,
-        },
-      ])
-      .select()
-      .single();
-
-    if (userMessageError) {
-      console.error("Error saving user message:", userMessageError);
-      return NextResponse.json({ error: "Mesaj kaydedilemedi" }, { status: 500 });
-    }
-
-    // Get last 20 messages for context (limit for OpenAI)
-    const { data: messages, error: messagesError } = await supabaseService
-      .from("case_messages")
-      .select("role, content")
-      .eq("thread_id", sanitizedThreadId)
-      .eq("user_id", user.id)
-      .order("created_at", { ascending: true })
-      .limit(20);
-
-    if (messagesError) {
-      console.error("Error fetching messages:", messagesError);
-      return NextResponse.json({ error: "Mesajlar alınamadı" }, { status: 500 });
-    }
-
-    // Convert messages to OpenAI format
-    const chatMessages = (messages || []).map(msg => ({
-      role: msg.role as "user" | "assistant",
-      content: msg.content,
-    }));
-
-    // Generate assistant response using OpenAI
     let assistantResponse: string;
     try {
       assistantResponse = await generateChatCompletion(chatMessages, MENTOR_SYSTEM_PROMPT);
@@ -139,52 +62,41 @@ export async function POST(request: NextRequest) {
         stack: openaiError.stack,
         error: openaiError,
       });
-      // Return more specific error message if it's an API key issue
       if (openaiError.message?.includes("API key") || openaiError.message?.includes("not configured")) {
         return NextResponse.json(
           { error: "OpenAI API yapılandırması eksik. Lütfen yöneticiye bildirin." },
           { status: 500 }
         );
       }
-      // Return specific message for quota/billing errors
-      if (openaiError.message?.includes("quota") || openaiError.message?.includes("insufficient_quota") || openaiError.message?.includes("billing")) {
+      if (
+        openaiError.message?.includes("quota") ||
+        openaiError.message?.includes("insufficient_quota") ||
+        openaiError.message?.includes("billing")
+      ) {
         return NextResponse.json(
           { error: "OpenAI API kotası doldu. Lütfen OpenAI hesabınızda billing ayarlarını kontrol edin." },
           { status: 429 }
         );
       }
-      // Return the actual error message for debugging
       return NextResponse.json(
-        { 
+        {
           error: "Şu an cevap üretemedim, tekrar dener misiniz?",
-          details: process.env.NODE_ENV === 'development' ? openaiError.message : undefined
+          details: process.env.NODE_ENV === 'development' ? openaiError.message : undefined,
         },
         { status: 500 }
       );
     }
 
-    // Save assistant message
-    const { data: assistantMessage, error: assistantMessageError } = await supabaseService
-      .from("case_messages")
-      .insert([
-        {
-          thread_id: sanitizedThreadId,
-          user_id: user.id,
-          role: "assistant",
-          content: assistantResponse,
-        },
-      ])
-      .select()
-      .single();
+    const updatedTitle =
+      isFirstMessage ? generateTitleFromFirstMessage(sanitizedMessage) : null;
 
-    if (assistantMessageError) {
-      console.error("Error saving assistant message:", assistantMessageError);
-      // Don't fail if message save fails, still return response
-    }
-
-    // Return response with optional thread title update
     return NextResponse.json({
-      message: assistantMessage || { role: "assistant", content: assistantResponse },
+      message: {
+        id: `assistant-${Date.now()}`,
+        role: "assistant",
+        content: assistantResponse,
+        created_at: new Date().toISOString(),
+      },
       remainingRequests: rateLimit.remaining,
       ...(updatedTitle && { threadTitle: updatedTitle }),
     });

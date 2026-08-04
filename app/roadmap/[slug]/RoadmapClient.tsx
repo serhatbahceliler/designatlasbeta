@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { useAuth } from "@/lib/auth-context";
 import { trackMixpanelEvent } from "@/lib/mixpanel";
 
 interface Resource {
@@ -41,12 +39,9 @@ interface RoadmapClientProps {
 }
 
 export default function RoadmapClient({ sections, credits, roadmapSlug }: RoadmapClientProps) {
-  const router = useRouter();
-  const { user, loading } = useAuth();
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  // Google Analytics & Mixpanel page view tracking
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const roadmapType = roadmapSlug === 'ux-designer' ? 'UX Designer' :
@@ -54,7 +49,6 @@ export default function RoadmapClient({ sections, credits, roadmapSlug }: Roadma
                          roadmapSlug === 'product-designer' ? 'Product Designer' :
                          'Roadmap';
       
-      // Google Analytics
       if ((window as any).gtag) {
         (window as any).gtag('event', 'page_view', {
           page_title: roadmapType + ' Roadmap',
@@ -62,7 +56,6 @@ export default function RoadmapClient({ sections, credits, roadmapSlug }: Roadma
           page_path: window.location.pathname,
         });
       }
-      // Mixpanel
       trackMixpanelEvent('roadmap_viewed', {
         roadmap_type: roadmapType,
         roadmap_slug: roadmapSlug,
@@ -71,62 +64,7 @@ export default function RoadmapClient({ sections, credits, roadmapSlug }: Roadma
     }
   }, [roadmapSlug]);
 
-  // When user successfully authenticates (returns from auth page), check for pending topic
-  useEffect(() => {
-    if (user && !loading) {
-      // Check sessionStorage for redirect recovery after auth
-      try {
-        const storedIntent = sessionStorage.getItem("auth-intent");
-        if (storedIntent) {
-          const { topicTitle } = JSON.parse(storedIntent);
-          // Find the topic by title and open it
-          for (const section of sections) {
-            const topic = section.topics.find((t) => t.title === topicTitle);
-            if (topic) {
-              setSelectedTopic(topic);
-              setIsDrawerOpen(true);
-              sessionStorage.removeItem("auth-intent");
-              break;
-            }
-          }
-        }
-      } catch (e) {
-        // Ignore if sessionStorage is not available or parse fails
-      }
-    }
-  }, [user, loading, sections]);
-
-  // Close drawer if user logs out while drawer is open
-  useEffect(() => {
-    if (!user && isDrawerOpen && selectedTopic) {
-      const requiresAuth = selectedTopic.description || selectedTopic.resources || selectedTopic.practice;
-      if (requiresAuth) {
-        closeDrawer();
-      }
-    }
-  }, [user, isDrawerOpen, selectedTopic]);
-
   const openTopicDrawer = (topic: Topic) => {
-    // Module details (resources, descriptions, practice) require login
-    const requiresAuth = topic.description || topic.resources || topic.practice;
-
-    if (requiresAuth && !user && !loading) {
-      // User is not logged in, redirect to login page with intent
-      try {
-        sessionStorage.setItem("auth-intent", JSON.stringify({ 
-          intent: "openModuleDetail", 
-          topicTitle: topic.title 
-        }));
-      } catch (e) {
-        // Ignore if sessionStorage is not available
-      }
-      // Get current path for redirect after login
-      const currentPath = window.location.pathname;
-      router.push(`/auth/login?redirect=${encodeURIComponent(currentPath)}&intent=openModuleDetail`);
-      return;
-    }
-
-    // User is logged in or topic doesn't require auth, open drawer directly
     setSelectedTopic(topic);
     setIsDrawerOpen(true);
   };

@@ -2,24 +2,18 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
-import { useAuth } from "@/lib/auth-context";
-import { getAuthHeaders } from "@/lib/api-client";
 import ReactMarkdown from "react-markdown";
 import { trackMixpanelEvent } from "@/lib/mixpanel";
+import {
+  loadCaseStorage,
+  saveCaseStorage,
+  createLocalThreadId,
+  type StoredCaseThread,
+  type StoredMessage,
+} from "@/lib/case-storage";
 
-interface CaseThread {
-  id: string;
-  title: string;
-  created_at: string;
-  updated_at: string;
-}
-
-interface Message {
-  id: string;
-  role: "user" | "assistant";
-  content: string;
-  created_at: string;
-}
+type CaseThread = StoredCaseThread;
+type Message = StoredMessage;
 
 const QUICK_PROMPTS = [
   "Fintech onboarding için bir case üretelim",
@@ -100,7 +94,6 @@ function ThinkingStepsAnimation() {
 }
 
 export default function CaseAtolyesiContent() {
-  const { user, profile } = useAuth();
   const pathname = usePathname();
   const prevPathnameRef = useRef<string | null>(null);
   
@@ -119,103 +112,63 @@ export default function CaseAtolyesiContent() {
   const charIndexRef = useRef(0);
   const isTypingRef = useRef(true);
 
-  const firstName = profile?.first_name || "Serhat";
   const hasThreads = threads.length > 0;
   const showSidebar = hasThreads && sidebarOpen;
   const abortControllerRef = useRef<AbortController | null>(null);
 
-  // Helper function to track analytics events
   const trackEvent = (eventName: string, params: Record<string, any>) => {
     if (typeof window !== 'undefined') {
-      // Google Analytics
       if ((window as any).gtag) {
         (window as any).gtag('event', eventName, params);
       }
-      // Mixpanel
       trackMixpanelEvent(eventName, params);
     }
   };
+
+  const persistThreadsAndMessages = useCallback(
+    (nextThreads: CaseThread[], nextMessagesByThread: Record<string, Message[]>) => {
+      saveCaseStorage({
+        threads: nextThreads,
+        messagesByThread: nextMessagesByThread,
+      });
+    },
+    []
+  );
 
   const loadThreads = useCallback(async () => {
     const loadStartTime = Date.now();
     try {
       setIsLoadingThreads(true);
       setError("");
-      
-      const headers = await getAuthHeaders();
-      
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000);
-      
-      const response = await fetch("/api/cases", {
-        headers,
-        signal: controller.signal,
-      });
 
-      clearTimeout(timeoutId);
-      
-      const loadTime = Date.now() - loadStartTime;
-      
-      // Track loading time
-      trackEvent('case_atolyesi_load_threads', {
-        load_time_ms: loadTime,
-        success: response.ok,
-        status: response.status,
-      });
-
-      // Handle 204 No Content
-      if (response.status === 204) {
-        console.warn("Received 204 No Content from /api/cases");
-        setThreads([]);
-        setIsLoadingThreads(false);
-        return;
-      }
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.error || `Threads yüklenemedi (${response.status})`);
-      }
-
-      // Check content-type before parsing
-      const contentType = response.headers.get("content-type");
-      if (!contentType || !contentType.includes("application/json")) {
-        console.error("Unexpected response type from /api/cases:", contentType);
-        setThreads([]);
-        setIsLoadingThreads(false);
-        return;
-      }
-
-      const data = await response.json();
-      const loadedThreads = data.threads || [];
+      const storage = loadCaseStorage();
+      const loadedThreads = storage.threads;
       setThreads(loadedThreads);
+
+      trackEvent('case_atolyesi_load_threads', {
+        load_time_ms: Date.now() - loadStartTime,
+        success: true,
+        status: 200,
+      });
 
       if (loadedThreads.length > 0) {
         setSidebarOpen(true);
       }
     } catch (err: any) {
       console.error("Error loading threads:", err);
-      const loadTime = Date.now() - loadStartTime;
-      
-      // Track error
       trackEvent('case_atolyesi_error', {
         error_type: 'load_threads',
         error_name: err.name || 'Unknown',
         error_message: err.message || 'Unknown error',
-        load_time_ms: loadTime,
+        load_time_ms: Date.now() - loadStartTime,
       });
-      
-      if (err.name === 'AbortError') {
-        setError("İstek zaman aşımına uğradı. Lütfen tekrar deneyin.");
-      } else {
-        setError(err.message || "Threads yüklenemedi");
-      }
+      setError(err.message || "Threads yüklenemedi");
       setThreads([]);
     } finally {
       setIsLoadingThreads(false);
     }
   }, []);
 
-  // Track loading screen time
   const loadingStartTimeRef = useRef<number | null>(null);
   
   useEffect(() => {
@@ -231,20 +184,17 @@ export default function CaseAtolyesiContent() {
     }
   }, [isLoadingThreads]);
 
-  // Reset state when navigating to this page or on mount
   useEffect(() => {
     const isRouteChange = prevPathnameRef.current !== null && prevPathnameRef.current !== pathname;
     const isFirstMount = prevPathnameRef.current === null;
     
     if (isRouteChange || isFirstMount) {
-      // Track page view on first mount or route change to case-atolyesi
       if (pathname === '/case-atolyesi') {
         trackMixpanelEvent('case_atolyesi_viewed', {
           page_path: pathname,
         });
       }
       
-      // Route changed or first mount - reset state
       setThreads([]);
       setSelectedThreadId(null);
       setMessages([]);
@@ -253,27 +203,11 @@ export default function CaseAtolyesiContent() {
       setError("");
       setIsLoadingThreads(true);
       setSidebarOpen(false);
-      
-      // Load threads if user is available
-      if (user) {
-        loadThreads();
-      } else {
-        setIsLoadingThreads(false);
-      }
+      loadThreads();
     }
     prevPathnameRef.current = pathname;
-  }, [pathname, user, loadThreads]);
+  }, [pathname, loadThreads]);
 
-  // Load threads when user is available (fallback for when route doesn't change)
-  useEffect(() => {
-    if (user && prevPathnameRef.current === pathname) {
-      loadThreads();
-    } else if (!user) {
-      setIsLoadingThreads(false);
-    }
-  }, [user, loadThreads, pathname]);
-
-  // Load messages when thread is selected (but not if we're in the middle of sending a message)
   const isSendingMessageRef = useRef(false);
   
   useEffect(() => {
@@ -284,21 +218,17 @@ export default function CaseAtolyesiContent() {
     }
   }, [selectedThreadId]);
 
-  // Scroll to bottom when messages change
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // Auto-open sidebar when threads exist
   useEffect(() => {
     if (hasThreads && !sidebarOpen) {
       setSidebarOpen(true);
     }
   }, [hasThreads, sidebarOpen]);
 
-  // Animated placeholder typing effect - only when no thread is selected and input is empty
   useEffect(() => {
-    // Stop animation if input has text or a thread is selected
     if (input !== "" || selectedThreadId) {
       setAnimatedPlaceholder("");
       if (placeholderTimeoutRef.current) {
@@ -313,13 +243,11 @@ export default function CaseAtolyesiContent() {
 
     const animate = () => {
       if (isTypingRef.current) {
-        // Typing phase
         if (charIndexRef.current <= currentPrompt.length) {
           setAnimatedPlaceholder(currentPrompt.slice(0, charIndexRef.current));
           charIndexRef.current++;
           placeholderTimeoutRef.current = setTimeout(animate, 50);
         } else {
-          // Wait before deleting
           placeholderTimeoutRef.current = setTimeout(() => {
             isTypingRef.current = false;
             charIndexRef.current = currentPrompt.length;
@@ -327,13 +255,11 @@ export default function CaseAtolyesiContent() {
           }, 2000);
         }
       } else {
-        // Deleting phase
         if (charIndexRef.current > 0) {
           charIndexRef.current--;
           setAnimatedPlaceholder(currentPrompt.slice(0, charIndexRef.current));
           placeholderTimeoutRef.current = setTimeout(animate, 30);
         } else {
-          // Move to next prompt
           setCurrentPromptIndex((prev) => (prev + 1) % QUICK_PROMPTS.length);
         }
       }
@@ -348,19 +274,10 @@ export default function CaseAtolyesiContent() {
     };
   }, [selectedThreadId, currentPromptIndex, input]);
 
-  const loadMessages = async (threadId: string) => {
+  const loadMessages = (threadId: string) => {
     try {
-      const headers = await getAuthHeaders();
-      const response = await fetch(`/api/cases/${threadId}/messages`, {
-        headers,
-      });
-
-      if (!response.ok) {
-        throw new Error("Mesajlar yüklenemedi");
-      }
-
-      const data = await response.json();
-      setMessages(data.messages || []);
+      const storage = loadCaseStorage();
+      setMessages(storage.messagesByThread[threadId] || []);
     } catch (err: any) {
       console.error("Error loading messages:", err);
       setError(err.message || "Mesajlar yüklenemedi");
@@ -371,21 +288,22 @@ export default function CaseAtolyesiContent() {
     try {
       setIsLoading(true);
       setError("");
-      const headers = await getAuthHeaders();
-      
-      const response = await fetch("/api/cases", {
-        method: "POST",
-        headers,
-        body: JSON.stringify({ title: "Yeni Case" }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Yeni case oluşturulamadı");
-      }
-
-      const data = await response.json();
-      await loadThreads();
-      setSelectedThreadId(data.thread.id);
+      const now = new Date().toISOString();
+      const newThread: CaseThread = {
+        id: createLocalThreadId(),
+        title: "Yeni Case",
+        created_at: now,
+        updated_at: now,
+      };
+      const storage = loadCaseStorage();
+      const nextThreads = [newThread, ...storage.threads];
+      const nextMessagesByThread = {
+        ...storage.messagesByThread,
+        [newThread.id]: [],
+      };
+      persistThreadsAndMessages(nextThreads, nextMessagesByThread);
+      setThreads(nextThreads);
+      setSelectedThreadId(newThread.id);
       setMessages([]);
       setSidebarOpen(true);
     } catch (err: any) {
@@ -396,71 +314,45 @@ export default function CaseAtolyesiContent() {
     }
   };
 
-  const handleQuickPrompt = async (prompt: string) => {
-    if (!hasThreads) {
-      await sendFirstMessage(prompt);
-    } else if (selectedThreadId) {
-      await sendMessage(prompt, selectedThreadId, false);
-    }
-  };
-
   const sendFirstMessage = async (messageText: string) => {
-    // Create new AbortController for this request
     const abortController = new AbortController();
     abortControllerRef.current = abortController;
     const apiStartTime = Date.now();
+    let threadId: string | null = null;
 
     try {
       setIsLoading(true);
       setError("");
-      isSendingMessageRef.current = true; // Prevent loadMessages from being called
+      isSendingMessageRef.current = true;
 
-      // Create new thread first
-      const headers = await getAuthHeaders();
-      const createResponse = await fetch("/api/cases", {
-        method: "POST",
-        headers,
-        body: JSON.stringify({ title: "Yeni Case" }),
-        signal: abortController.signal,
-      });
+      const now = new Date().toISOString();
+      const thread: CaseThread = {
+        id: createLocalThreadId(),
+        title: "Yeni Case",
+        created_at: now,
+        updated_at: now,
+      };
+      threadId = thread.id;
 
-      if (!createResponse.ok) {
-        throw new Error("Case oluşturulamadı");
-      }
-
-      const { thread } = await createResponse.json();
-      
-      // Add user message to UI immediately BEFORE setting selectedThreadId
       const userMessage: Message = {
-        id: `temp-${Date.now()}`,
+        id: `user-${Date.now()}`,
         role: "user",
         content: messageText,
-        created_at: new Date().toISOString(),
+        created_at: now,
       };
       setMessages([userMessage]);
       setInput("");
-      
-      // Set selected thread and show sidebar (this will trigger useEffect but isSendingMessageRef prevents loadMessages)
       setSelectedThreadId(thread.id);
       setSidebarOpen(true);
-      
-      // Update threads list optimistically
-      const newThread: CaseThread = {
-        id: thread.id,
-        title: thread.title || "Yeni Case",
-        created_at: thread.created_at || new Date().toISOString(),
-        updated_at: thread.updated_at || new Date().toISOString(),
-      };
-      setThreads((prev) => [newThread, ...prev]);
+      setThreads((prev) => [thread, ...prev]);
 
-      // Send message to API
       const chatApiStartTime = Date.now();
       const chatResponse = await fetch("/api/chat", {
         method: "POST",
-        headers,
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          threadId: thread.id,
           message: messageText,
+          history: [],
           isFirstMessage: true,
         }),
         signal: abortController.signal,
@@ -470,30 +362,20 @@ export default function CaseAtolyesiContent() {
 
       if (!chatResponse.ok) {
         const errorData = await chatResponse.json().catch(() => ({}));
-        console.error("Chat API error response:", {
-          status: chatResponse.status,
-          statusText: chatResponse.statusText,
-          errorData,
-        });
         throw new Error(errorData.error || `Mesaj gönderilemedi (${chatResponse.status})`);
       }
 
-      // Handle 204 No Content - response has no body
       if (chatResponse.status === 204) {
-        console.warn("Received 204 No Content - API returned no body");
         throw new Error("Yanıt alınamadı. Lütfen tekrar deneyin.");
       }
 
-      // Check if response has content before parsing
       const contentType = chatResponse.headers.get("content-type");
       if (!contentType || !contentType.includes("application/json")) {
-        console.error("Unexpected response type:", contentType);
         throw new Error("Geçersiz yanıt formatı. Lütfen tekrar deneyin.");
       }
 
       const chatData = await chatResponse.json();
       
-      // Track API response time
       trackEvent('case_atolyesi_api_response', {
         response_time_ms: chatApiResponseTime,
         response_time_seconds: Math.round(chatApiResponseTime / 1000),
@@ -501,7 +383,6 @@ export default function CaseAtolyesiContent() {
         success: true,
       });
       
-      // Add assistant message to UI with animation
       const assistantMessage: Message = {
         id: chatData.message.id || `assistant-${Date.now()}`,
         role: "assistant",
@@ -509,21 +390,33 @@ export default function CaseAtolyesiContent() {
         created_at: chatData.message.created_at || new Date().toISOString(),
       };
       
-      setMessages([userMessage, assistantMessage]);
+      const finalMessages = [userMessage, assistantMessage];
+      setMessages(finalMessages);
 
-      // Update thread title if it was generated
-      if (chatData.threadTitle) {
-        setThreads((prev) =>
-          prev.map((t) =>
-            t.id === thread.id ? { ...t, title: chatData.threadTitle } : t
-          )
-        );
-      }
+      const title = chatData.threadTitle || thread.title;
+      const updatedThread = {
+        ...thread,
+        title,
+        updated_at: new Date().toISOString(),
+      };
+
+      setThreads((prev) =>
+        prev.map((t) => (t.id === thread.id ? updatedThread : t))
+      );
+
+      const storage = loadCaseStorage();
+      const nextThreads = [
+        updatedThread,
+        ...storage.threads.filter((t) => t.id !== thread.id),
+      ];
+      persistThreadsAndMessages(nextThreads, {
+        ...storage.messagesByThread,
+        [thread.id]: finalMessages,
+      });
     } catch (err: any) {
       console.error("Error sending first message:", err);
       const totalTime = Date.now() - apiStartTime;
       
-      // Track error
       trackEvent('case_atolyesi_error', {
         error_type: 'send_first_message',
         error_name: err.name || 'Unknown',
@@ -534,20 +427,22 @@ export default function CaseAtolyesiContent() {
       
       if (err.name === 'AbortError') {
         setError("İstek iptal edildi");
-        setMessages([]);
       } else {
         setError(err.message || "Mesaj gönderilemedi");
-        setMessages([]);
+      }
+      setMessages([]);
+      setSelectedThreadId(null);
+      if (threadId) {
+        setThreads((prev) => prev.filter((t) => t.id !== threadId));
       }
     } finally {
       setIsLoading(false);
       abortControllerRef.current = null;
-      isSendingMessageRef.current = false; // Allow loadMessages to be called again
+      isSendingMessageRef.current = false;
     }
   };
 
   const sendMessage = async (messageText: string, threadId: string, isFirstMessage: boolean) => {
-    // Create new AbortController for this request
     const abortController = new AbortController();
     abortControllerRef.current = abortController;
     const apiStartTime = Date.now();
@@ -556,7 +451,6 @@ export default function CaseAtolyesiContent() {
       setIsLoading(true);
       setError("");
 
-      // Add user message to UI immediately
       const userMessage: Message = {
         id: `temp-${Date.now()}`,
         role: "user",
@@ -566,13 +460,14 @@ export default function CaseAtolyesiContent() {
       setMessages((prev) => [...prev, userMessage]);
       setInput("");
 
-      const headers = await getAuthHeaders();
+      const history = messages.map((m) => ({ role: m.role, content: m.content }));
+
       const response = await fetch("/api/chat", {
         method: "POST",
-        headers,
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          threadId,
           message: messageText,
+          history,
           isFirstMessage,
         }),
         signal: abortController.signal,
@@ -582,30 +477,20 @@ export default function CaseAtolyesiContent() {
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
-        console.error("Chat API error response:", {
-          status: response.status,
-          statusText: response.statusText,
-          errorData,
-        });
         throw new Error(errorData.error || `Mesaj gönderilemedi (${response.status})`);
       }
 
-      // Handle 204 No Content - response has no body
       if (response.status === 204) {
-        console.warn("Received 204 No Content - API returned no body");
         throw new Error("Yanıt alınamadı. Lütfen tekrar deneyin.");
       }
 
-      // Check if response has content before parsing
       const contentType = response.headers.get("content-type");
       if (!contentType || !contentType.includes("application/json")) {
-        console.error("Unexpected response type:", contentType);
         throw new Error("Geçersiz yanıt formatı. Lütfen tekrar deneyin.");
       }
 
       const data = await response.json();
       
-      // Track API response time
       trackEvent('case_atolyesi_api_response', {
         response_time_ms: apiResponseTime,
         response_time_seconds: Math.round(apiResponseTime / 1000),
@@ -613,7 +498,6 @@ export default function CaseAtolyesiContent() {
         success: true,
       });
       
-      // Add assistant message to UI with animation
       const assistantMessage: Message = {
         id: data.message.id || `assistant-${Date.now()}`,
         role: "assistant",
@@ -622,24 +506,31 @@ export default function CaseAtolyesiContent() {
       };
       
       setMessages((prev) => {
-        // Remove temp user message and add real ones
         const filtered = prev.filter((m) => !m.id.startsWith("temp"));
-        return [...filtered, userMessage, assistantMessage];
-      });
+        const next = [...filtered, userMessage, assistantMessage];
 
-      // Update thread title if it was generated (only for first message)
-      if (isFirstMessage && data.threadTitle) {
-        setThreads((prev) =>
-          prev.map((t) =>
-            t.id === threadId ? { ...t, title: data.threadTitle } : t
-          )
+        const storage = loadCaseStorage();
+        const nextThreads = storage.threads.map((t) =>
+          t.id === threadId
+            ? {
+                ...t,
+                title: data.threadTitle || t.title,
+                updated_at: new Date().toISOString(),
+              }
+            : t
         );
-      }
+        persistThreadsAndMessages(nextThreads, {
+          ...storage.messagesByThread,
+          [threadId]: next,
+        });
+        setThreads(nextThreads);
+
+        return next;
+      });
     } catch (err: any) {
       console.error("Error sending message:", err);
       const totalTime = Date.now() - apiStartTime;
       
-      // Track error
       trackEvent('case_atolyesi_error', {
         error_type: 'send_message',
         error_name: err.name || 'Unknown',
@@ -653,7 +544,6 @@ export default function CaseAtolyesiContent() {
       } else {
         setError(err.message || "Mesaj gönderilemedi");
       }
-      // Remove temp message on error
       setMessages((prev) => prev.filter((m) => !m.id.startsWith("temp")));
     } finally {
       setIsLoading(false);
@@ -667,7 +557,6 @@ export default function CaseAtolyesiContent() {
       abortControllerRef.current = null;
       setIsLoading(false);
       setError("İstek iptal edildi");
-      // Remove temp messages
       setMessages((prev) => prev.filter((m) => !m.id.startsWith("temp")));
     }
   };
@@ -678,7 +567,6 @@ export default function CaseAtolyesiContent() {
 
     const messageText = input.trim();
 
-    // If no thread is selected (new case screen), always create a new thread
     if (!selectedThreadId) {
       await sendFirstMessage(messageText);
     } else if (selectedThreadId) {
